@@ -1,0 +1,31 @@
+---
+permalink: config-windows/configure-multipath-software-task.html 
+sidebar: sidebar 
+keywords: multipath software for Windows, express Windows configuration, software configuration, Windows host, E2800, E5700, EF300, EF600, E-Series, eseries 
+summary: Instale o pacote DSM, que contém software multipath para Windows. 
+---
+= Configurar o software multipath
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Para fornecer um caminho redundante para a matriz de armazenamento, pode instalar o pacote SANtricity Windows DSM e utilizar o pacote multipath para Windows.
+
+.Antes de começar
+Certifique-se de que tem o seguinte:
+
+* O administrador ou superusuário correto Privileges.
+
+
+.Sobre esta tarefa
+O software multipath fornece um caminho redundante para o storage array no caso de um dos caminhos físicos ser interrompido. Antes de poder utilizar multipathing, tem de instalar o pacote SANtricity Windows DSM. Este pacote contém o software multipath para Windows.
+
+As instalações do Windows usam o driver MPIO Device Specific Module (DSM) nativo para failover. Quando instala e ativa o pacote SANtricity Windows DSM, não necessita de tomar mais medidas para utilizar o multipath.
+
+.Passos
+. Transfira o pacote *SANtricity Windows DSM* a partir do https://mysupport.netapp.com/site/products/all/details/eseries-santricityos/downloads-tab["Página do software SANtricity os"^]. Selecione a sua versão de software, aceite o contrato de licença e selecione *SANtricity Windows DSM* em Transferências adicionais.
+. Execute o instalador *SANtricity Windows DSM*. Clique duas vezes no pacote de instalação a ser executado.
+. Utilize o assistente de instalação para instalar o pacote na estação de gestão.
+

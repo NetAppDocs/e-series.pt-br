@@ -1,0 +1,104 @@
+---
+sidebar: sidebar 
+permalink: vcenter-plugin/vc-olh-change-the-settings-for-a-host.html 
+keywords: vCenter plugin, Plugin for vCenter, SANtricity plugin for vCenter 
+summary: É possível alterar o nome, o tipo de sistema operacional de host e os clusters de host associados a um cluster de host ou host. 
+---
+= Altere as configurações de um host
+:hardbreaks:
+:allow-uri-read: 
+:experimental: 
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./media/
+
+
+[role="lead"]
+É possível alterar o nome, o tipo de sistema operacional de host e os clusters de host associados a um cluster de host ou host.
+
+.Passos
+. Na página Gerenciar, selecione a matriz de armazenamento com a conexão do host.
+. Selecione menu:provisionamento[Configurar hosts].
++
+A página Configurar hosts será exibida.
+
+. Selecione o host que você deseja editar e clique em *Exibir/Editar configurações*.
++
+É apresentada uma caixa de diálogo que mostra as definições atuais do anfitrião.
+
+. Para alterar as propriedades do host, verifique se a guia *Propriedades* está selecionada e altere as configurações conforme apropriado.
++
+.Detalhes do campo
+[%collapsible]
+====
+[cols="25h,~"]
+|===
+| Definição | Descrição 
+
+
+ a| 
+Nome
+ a| 
+Você pode alterar o nome fornecido pelo usuário do host. É necessário especificar um nome para o host.
+
+
+
+ a| 
+Cluster de host associado
+ a| 
+Você pode escolher uma das seguintes opções:
+
+** *None* -- o host permanece um host autônomo. Se o host foi associado a um cluster de host, o sistema removerá o host do cluster.
+** *<Host Cluster>* -- o sistema associa o host ao cluster selecionado.
+
+
+
+
+ a| 
+Tipo de sistema operacional de host
+ a| 
+Você pode alterar o tipo de sistema operacional em execução no host que você definiu.
+
+|===
+====
+. Para alterar as configurações de porta, clique na guia *Host Ports* e altere as configurações conforme apropriado.
++
+.Detalhes do campo
+[%collapsible]
+====
+[cols="25h,~"]
+|===
+| Definição | Descrição 
+
+
+ a| 
+Porta do host
+ a| 
+Você pode escolher uma das seguintes opções:
+
+** *Add* -- Use Add para associar um novo identificador de porta de host ao host. O comprimento do nome do identificador da porta do host é determinado pela tecnologia da interface do host. Os nomes dos identificadores de porta de host Fibre Channel e Infiniband devem ter 16 carateres. Os nomes dos identificadores de porta de host iSCSI têm um máximo de 223 carateres. A porta deve ser única. Não é permitido um número de porta que já tenha sido configurado.
+** *Delete* -- Use Delete para remover (não associar) um identificador de porta de host. A opção Excluir não remove fisicamente a porta do host. Essa opção remove a associação entre a porta do host e o host. A menos que você remova o adaptador de barramento do host ou o iniciador iSCSI, a porta do host ainda é reconhecida pelo controlador.
+
+
+
+CAUTION: Se você excluir um identificador de porta do host, ele não estará mais associado a esse host. Além disso, o host perde o acesso a qualquer um de seus volumes atribuídos por meio desse identificador de porta do host.
+
+
+
+ a| 
+Etiqueta
+ a| 
+Para alterar o nome da etiqueta da porta, clique no ícone *Editar* (lápis). O nome da etiqueta da porta deve ser exclusivo. Não é permitido um nome de rótulo que já tenha sido configurado.
+
+
+
+ a| 
+Segredo de CHAP
+ a| 
+Aparece apenas para hosts iSCSI. Você pode definir ou alterar o segredo CHAP para os iniciadores (hosts iSCSI). O sistema utiliza o método CHAP (Challenge Handshake Authentication Protocol), que valida a identidade de alvos e iniciadores durante o link inicial. A autenticação é baseada em uma chave de segurança compartilhada chamada CHAP secret.
+
+|===
+====
+. Clique em *Salvar*.
+

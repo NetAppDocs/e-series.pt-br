@@ -1,0 +1,103 @@
+---
+sidebar: sidebar 
+permalink: vcenter-plugin/vc-olh-discover-storage-arrays.html 
+keywords: vCenter plugin, Plugin for vCenter, SANtricity plugin for vCenter 
+summary: Para exibir e gerenciar recursos de armazenamento no plug-in de armazenamento para vCenter, você deve descobrir os endereços IP dos storages em sua rede. 
+---
+= Descubra matrizes de armazenamento
+:hardbreaks:
+:allow-uri-read: 
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./media/
+
+
+[role="lead"]
+Para exibir e gerenciar recursos de armazenamento no plug-in de armazenamento para vCenter, você deve descobrir os endereços IP dos storages em sua rede.
+
+.Antes de começar
+* Você deve saber os endereços IP de rede (ou intervalo de endereços) dos controladores de matriz.
+* Os storages de armazenamento devem ser configurados e configurados corretamente.
+* As senhas do storage array devem ser configuradas usando o bloco Gerenciamento de Acesso do System Manager.
+
+
+.Sobre esta tarefa
+A descoberta de array é um procedimento de várias etapas:
+
+* <<Etapa 1: Insira endereços de rede para descoberta>>
+* <<Etapa 2: Resolva certificados não confiáveis durante a descoberta>>
+* <<Passo 3: Forneça senhas>>
+
+
+
+
+== Etapa 1: Insira endereços de rede para descoberta
+
+Como o primeiro passo para descobrir matrizes de armazenamento, introduza um único endereço IP ou um intervalo de endereços IP para pesquisar na sub-rede local. O recurso Adicionar/descobrir abre um assistente que orienta você pelo processo de descoberta.
+
+.Passos
+. Na página *Gerenciar*, selecione *Adicionar/descobrir*.
++
+A caixa de diálogo Enter Network Address Range (introduzir intervalo de endereços de rede) é apresentada.
+
+. Execute um dos seguintes procedimentos:
++
+** Para descobrir uma matriz, selecione o botão de opção *Discover a single storage array* e, em seguida, insira o endereço IP de um dos controladores na matriz de armazenamento.
+** Para descobrir vários storages de armazenamento, selecione o botão de opção *Discover all storage Arrays within a network range* (descobrir todos os storages de armazenamento dentro de um intervalo de rede) e, em seguida, insira o endereço de rede inicial e o endereço de rede final para pesquisar na sub-rede local.
+
+
+. Clique em *Iniciar descoberta*.
++
+À medida que o processo de descoberta começa, a caixa de diálogo exibe os storages de armazenamento à medida que são descobertos. O processo de descoberta pode levar vários minutos para ser concluído.
+
++
+
+NOTE: Se não forem detetados arrays gerenciáveis, verifique se os storages de armazenamento estão conetados corretamente à sua rede e se seus endereços atribuídos estão dentro do alcance. Clique em *New Discovery Parameters* (novos parâmetros de descoberta) para voltar à página Add/Discover (Adicionar/descobrir).
+
+. Marque a caixa de seleção ao lado de qualquer storage array que você deseja adicionar ao seu domínio de gerenciamento.
++
+O sistema executa uma verificação de credenciais em cada array que você está adicionando ao domínio de gerenciamento. Talvez seja necessário resolver quaisquer problemas com certificados não confiáveis antes de prosseguir.
+
+. Clique em *Next* (seguinte) para avançar para a próxima etapa do assistente.
+. Se os storages de armazenamento tiverem certificados válidos, vá para <<Passo 3: Forneça senhas>>. Se qualquer storage arrays não tiver certificados válidos, a caixa de diálogo resolver certificados autoassinados será exibida; vá para <<Etapa 2: Resolva certificados não confiáveis durante a descoberta>>. Se você quiser importar certificados assinados pela CA, cancele as caixas de diálogo de descoberta e vá para link:vc-olh-import-certificates-for-arrays.html["Importar certificados para matrizes"].
+
+
+
+
+== Etapa 2: Resolva certificados não confiáveis durante a descoberta
+
+Se necessário, você deve resolver quaisquer problemas de certificado antes de prosseguir com o processo de descoberta.
+
+Durante a descoberta, se algum storage arrays mostrar um status de "certificados não confiáveis", a caixa de diálogo resolver certificados autoassinados será exibida. Pode resolver certificados não fidedignos nesta caixa de diálogo ou pode importar certificados de CA (link:vc-olh-import-certificates-for-arrays.html["Importar certificados para matrizes"]consulte ).
+
+.Passos
+. Se a caixa de diálogo resolver certificados autoassinados for aberta, revise as informações exibidas para os certificados não confiáveis. Para obter mais informações, você também pode clicar nas elipses na extremidade da tabela e selecionar *Exibir* no menu pop-up.
+. Execute um dos seguintes procedimentos:
++
+** Se você confiar nas conexões com os storages de armazenamento descobertos, clique em *Next* e, em seguida, clique em *Yes* para confirmar e continuar para o próximo cartão no assistente. Os certificados autoassinados serão marcados como confiáveis e os storages de armazenamento serão adicionados ao plugin.
+** Se você não confiar nas conexões com os storages de armazenamento, selecione *Cancelar* e valide a estratégia de certificado de segurança de cada storage antes de adicionar qualquer um deles ao plugin.
+
+
+
+
+
+
+== Passo 3: Forneça senhas
+
+Como a última etapa para a descoberta, você deve inserir as senhas dos storages que deseja adicionar ao seu domínio de gerenciamento.
+
+.Passos
+. Opcionalmente, se você tiver grupos configurados anteriormente para os arrays, poderá usar o menu suspenso para selecionar um grupo para os arrays descobertos.
+. Para cada array descoberto, insira sua senha de administrador nos campos.
+. Clique em *Finish*.
+
+
+
+NOTE: Pode levar vários minutos para que o sistema se conete aos storages especificados.
+
+.Resultado
+Os storages de armazenamento são adicionados ao domínio de gerenciamento e associados ao grupo selecionado (se especificado).
+
+
+NOTE: Você pode usar a opção Iniciar para abrir o System Manager baseado em navegador para um ou mais arrays de storage quando quiser executar operações de gerenciamento.

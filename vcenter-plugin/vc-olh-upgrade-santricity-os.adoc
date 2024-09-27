@@ -1,0 +1,97 @@
+---
+sidebar: sidebar 
+permalink: vcenter-plugin/vc-olh-upgrade-santricity-os.html 
+keywords: vCenter plugin, Plugin for vCenter, SANtricity plugin for vCenter 
+summary: Atualize um ou mais storages de armazenamento com o software mais recente e NVSRAM para garantir que você tenha todos os recursos e correções de bugs mais recentes. 
+---
+= Atualize o SANtricity os
+:hardbreaks:
+:allow-uri-read: 
+:experimental: 
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./media/
+
+
+[role="lead"]
+Atualize um ou mais storages de armazenamento com o software mais recente e NVSRAM para garantir que você tenha todos os recursos e correções de bugs mais recentes. A NVSRAM da controladora é um arquivo de controladora que especifica as configurações padrão para os controladores.
+
+.Antes de começar
+Certifique-se de que:
+
+* Os arquivos mais recentes do SANtricity os estão disponíveis no sistema host onde o plugin está sendo executado.
+* Você sabe se deseja ativar a atualização de software agora ou mais tarde. Você pode optar por ativar mais tarde por estes motivos:
++
+** *Hora do dia* -- a ativação do software pode demorar muito tempo, então você pode querer esperar até que as cargas de e/S sejam mais leves. Os controladores fazem failover durante a ativação, portanto, o desempenho pode ser menor do que o normal até que a atualização seja concluída.
+** * Tipo de pacote* -- você pode querer testar o novo software do sistema operacional em uma matriz de armazenamento antes de atualizar os arquivos em outras matrizes de armazenamento.
+
+
+
+
+
+CAUTION: *Risco de perda de dados ou risco de danos à matriz de armazenamento* -- não faça alterações na matriz de armazenamento enquanto a atualização estiver ocorrendo. Mantenha o poder do storage array.
+
+.Passos
+. Se o storage array contiver apenas uma controladora ou um driver multipath não estiver em uso, interrompa a atividade de e/S no storage array para evitar erros de aplicativos. Se o seu storage array tiver duas controladoras e você tiver um driver multipath instalado, não será necessário interromper a atividade de e/S.
+. Na exibição principal, selecione *Gerenciar* e, em seguida, selecione um ou mais storages que você deseja atualizar.
+. Selecione menu:Centro de Atualização[Atualizar > SANtricity os > Software].
++
+A página Atualizar software SANtricity os é exibida.
+
+. Transfira o pacote de software mais recente do SANtricity os a partir do site de suporte para a sua máquina local.
++
+.. Clique em Adicionar novo arquivo ao repositório de software
+.. Clique no link para encontrar os downloads mais recentes do SANtricity os.
+.. Clique no link *Download Latest Release*.
+.. Siga as instruções restantes para transferir o ficheiro do SO e o ficheiro NVSRAM para a sua máquina local.
++
+
+NOTE: O firmware assinado digitalmente é necessário na versão 8,42 e superior. Se tentar transferir firmware não assinado, é apresentado um erro e a transferência é cancelada.
+
+
+
+. Selecione o arquivo de software do sistema operacional e o arquivo NVSRAM que você deseja usar para atualizar os controladores:
++
+.. Na lista suspensa, selecione o arquivo do sistema operacional que você baixou para sua máquina local.
++
+Se houver vários arquivos disponíveis, os arquivos serão classificados da data mais recente para a data mais antiga.
+
++
+
+NOTE: O repositório de software lista todos os arquivos de software associados ao plugin. Se você não vir o arquivo que deseja usar, clique no link *Adicionar novo arquivo ao repositório de software*, para navegar até o local onde reside o arquivo do sistema operacional que você deseja adicionar.
+
+.. Na lista suspensa *Selecione um arquivo NVSRAM*, selecione o arquivo do controlador que deseja usar.
++
+Se houver vários arquivos, os arquivos serão classificados da data mais recente para a data mais antiga.
+
+
+
+. Na tabela Matriz de armazenamento compatível, reveja os storages de armazenamento compatíveis com o arquivo de software do sistema operacional selecionado e selecione os storages que você deseja atualizar.
++
+** As matrizes de armazenamento selecionadas na vista gerir e compatíveis com o ficheiro de firmware selecionado são selecionadas por predefinição na tabela Matriz de armazenamento compatível.
+** As matrizes de armazenamento que não podem ser atualizadas com o ficheiro de firmware selecionado não são selecionáveis na tabela Matriz de armazenamento compatível, conforme indicado pelo estado *incompatível*.
+
+
+. (Opcional) para transferir o arquivo de software para os storages de armazenamento sem ativá-los, marque a caixa de seleção *Transferir o software do sistema operacional para os storages, marque-o como staged e ative posteriormente*.
+. Clique em *Iniciar*.
+. Dependendo se você escolheu ativar agora ou mais tarde, execute um dos seguintes procedimentos:
++
+** Digite `TRANSFER` para confirmar que deseja transferir as versões propostas de software do sistema operacional nos arrays que você selecionou para atualizar e clique em *Transferir*. Para ativar o software transferido, selecione menu:Centro de Atualização[Ativar software SANtricity os faseado].
+** Digite `UPGRADE` para confirmar que deseja transferir e ativar as versões propostas de software do sistema operacional nos arrays que você selecionou para atualizar e clique em *Upgrade*.
++
+O sistema transfere o ficheiro de software para cada matriz de armazenamento selecionada para atualizar e, em seguida, ativa esse ficheiro iniciando uma reinicialização.
+
++
+As seguintes ações ocorrem durante a operação de atualização:
+
+** Uma verificação de integridade de pré-atualização é executada como parte do processo de atualização. A verificação de integridade da pré-atualização avalia todos os componentes do storage array para garantir que a atualização possa prosseguir.
+** Se qualquer verificação de integridade falhar em um storage array, a atualização será interrompida. Você pode clicar nas reticências (...) e selecionar *Salvar Registro* para revisar os erros. Você também pode optar por substituir o erro de verificação de integridade e clicar em *continuar* para continuar com a atualização.
+** Você pode cancelar a operação de atualização após a verificação de integridade da pré-atualização.
+
+
+. (Opcional) depois que a atualização estiver concluída, você poderá ver uma lista do que foi atualizado para uma matriz de armazenamento específica clicando nas reticências (...) e selecionando *Salvar Registro*.
++
+O arquivo é salvo na pasta Downloads do navegador com o nome `upgrade_log-<date>. json`.
+
+

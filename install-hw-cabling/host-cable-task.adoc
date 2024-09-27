@@ -1,0 +1,42 @@
+---
+permalink: install-hw-cabling/host-cable-task.html 
+sidebar: sidebar 
+keywords: cabling, cables, host cabling, direct-attached topology, switch topology, E-Series, eseries, E2800, E5700, EF300, EF600, DE212C, DE224C, DE460C, 
+summary: Você pode enviar um host diretamente a um controlador ou usar switches. 
+---
+= Cabeamento de host
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Você pode vincular um host diretamente a um controlador (topologia de conexão direta) ou usar switches (topologia de switch) para conectar um host a um controlador.
+
+
+
+== Cabeamento para topologia de conexão direta
+
+Uma topologia com conexão direta conecta os adaptadores de host diretamente aos controladores do sistema de storage.
+
+A figura a seguir mostra um exemplo de conexão. Para ajudar a garantir o máximo desempenho, use todas as portas de adaptador de host disponíveis.
+
+.Dois hosts e dois controladores
+image::../media/topology_host_direct_generic_web_low.png[topologia host direto da web genérica baixa]
+
+*(1)* _Conete cada porta do adaptador de host diretamente às portas do host nos controladores._
+
+
+
+== Cabeamento para uma topologia de switch
+
+A topologia do switch usa switches para conectar hosts aos controladores no sistema de storage. O switch deve suportar o tipo de conexão usado entre o host e o controlador.
+
+A figura a seguir mostra um exemplo de conexão. Para switches que fornecem funcionalidade de provisionamento, você deve isolar cada iniciador e par de destino.
+
+.Dois hosts e dois switches
+image::../media/topology_host_fabric_generic.png[topologia de host fabric genérico]
+
+*(1)* _Conete cada adaptador de host diretamente ao switch._
+
+*(2)* _Conete cada switch diretamente às portas do host nos controladores. Para ajudar a garantir o máximo desempenho, use todas as portas de adaptador de host disponíveis._

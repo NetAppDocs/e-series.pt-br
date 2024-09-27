@@ -1,0 +1,334 @@
+---
+permalink: config-windows/iscsi-perform-specific-task.html 
+sidebar: sidebar 
+keywords: iSCSI, switches, IP network configuration, express Windows configuration, software configuration, Windows host, E2800, E5700, EF300, EF600, E-Series, eseries 
+summary: Para o protocolo iSCSI, configure os switches e configure a rede no lado da matriz e no lado do host. Em seguida, você verifica as conexões de rede IP. 
+---
+= Executar tarefas específicas de iSCSI
+:allow-uri-read: 
+:experimental: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Para o protocolo iSCSI, configure os switches, configure a rede no lado da matriz e no lado do host e, em seguida, verifique as conexões de rede IP.
+
+
+
+== Passo 1: Configurar os switches--iSCSI, Windows
+
+Você configura os switches de acordo com as recomendações do fornecedor para iSCSI. Essas recomendações podem incluir diretivas de configuração, bem como atualizações de código.
+
+.Antes de começar
+Certifique-se de que tem o seguinte:
+
+* Duas redes separadas para alta disponibilidade. Certifique-se de isolar o tráfego iSCSI para segmentos de rede separados usando VLANs ou duas redes separadas.
+* Controle de fluxo de hardware de envio e recebimento ativado *fim a fim*.
+* Controle de fluxo de prioridade desativado.
+* Se apropriado, habilitado quadros jumbo.
+
+
+
+NOTE: Os canais de porta/LACP não são suportados nas portas do switch do controlador. O LACP do lado do host não é recomendado; o multipathing oferece os mesmos benefícios ou melhores.
+
+.Passos
+Consulte a documentação do fornecedor do switch.
+
+
+
+== Passo 2: Configurar a rede--Windows iSCSI
+
+Pode configurar a sua rede iSCSI de várias formas, dependendo dos requisitos de armazenamento de dados. Consulte o administrador da rede para obter dicas sobre como selecionar a melhor configuração para o seu ambiente.
+
+Uma estratégia eficaz para configurar a rede iSCSI com redundância básica é conetar cada porta de host e uma porta de cada controlador a switches separados e particionar cada conjunto de portas de host e controladora em segmentos de rede separados usando VLANs.
+
+.Antes de começar
+Certifique-se de que tem o seguinte:
+
+* Controle de fluxo de hardware de envio e recebimento ativado *fim a fim*.
+* Controle de fluxo de prioridade desativado.
+* Se apropriado, habilitado quadros jumbo.
++
+Se você estiver usando quadros jumbo dentro da SAN IP por razões de desempenho, certifique-se de configurar o array, switches e hosts para usar quadros jumbo. Consulte a documentação do sistema operacional e do switch para obter informações sobre como habilitar quadros jumbo nos hosts e nos switches. Para ativar quadros jumbo na matriz, conclua o procedimento na Etapa 3.
+
+
+
+.Passos
+Consulte a documentação do fornecedor do switch.
+
+
+NOTE: Muitos switches de rede precisam ser configurados acima de 9.000 bytes para sobrecarga IP. Consulte a documentação do switch para obter mais informações.
+
+
+
+== Passo 3: Configurar rede do lado da matriz - iSCSI, Windows
+
+Você usa a GUI do Gerenciador de sistema do SANtricity para configurar a rede iSCSI no lado da matriz.
+
+.Antes de começar
+* O endereço IP ou nome de domínio de um dos controladores de storage array.
+* Uma senha para a GUI do System Manager, o controle de acesso baseado em função (RBAC) ou LDAP e um serviço de diretório configurado para o acesso de segurança apropriado ao storage array. Consulte a ajuda on-line do Gerenciador de sistemas do SANtricity para obter mais informações sobre o Gerenciamento de Acesso.
+
+
+.Sobre esta tarefa
+Esta tarefa descreve como aceder à configuração da porta iSCSI a partir da página hardware. Também pode aceder à configuração a partir do menu:sistema[Definições > Configurar portas iSCSI].
+
+.Passos
+. No seu navegador, insira o seguinte URL: `+https://<DomainNameOrIPAddress>+`
++
+`IPAddress` é o endereço de uma das controladoras de storage array.
+
++
+Na primeira vez que o Gerenciador do sistema SANtricity é aberto em uma matriz que não foi configurada, o prompt Definir senha do administrador é exibido. O gerenciamento de acesso baseado em função configura quatro funções locais: administração, suporte, segurança e monitor. Os três últimos papéis têm senhas aleatórias que não podem ser adivinhadas. Depois de definir uma senha para a função de administrador, você pode alterar todas as senhas usando as credenciais de administrador. Consulte a ajuda on-line do Gerenciador de sistema do SANtricity para obter mais informações sobre as quatro funções de usuário locais.
+
+. Introduza a palavra-passe do Gestor do sistema para a função de administrador nos campos Definir palavra-passe do administrador e confirmar palavra-passe e, em seguida, selecione o botão *Definir palavra-passe*.
++
+Quando você abre o System Manager e não há pools, grupos de volumes, cargas de trabalho ou notificações configuradas, o assistente de configuração é iniciado.
+
+. Feche o assistente de configuração.
++
+Você usará o assistente mais tarde para concluir tarefas de configuração adicionais.
+
+. Selecione *hardware*.
+. Se o gráfico mostrar as unidades, clique em *Mostrar parte traseira da prateleira*.
++
+O gráfico muda para mostrar os controladores em vez das unidades.
+
+. Clique no controlador com as portas iSCSI que pretende configurar.
++
+É apresentado o menu de contexto do controlador.
+
+. Selecione *Configurar portas iSCSI*.
++
+Abre-se a caixa de diálogo Configurar portas iSCSI.
+
+. Na lista suspensa, selecione a porta que deseja configurar e clique em *Avançar*.
+. Selecione as definições da porta de configuração e, em seguida, clique em *seguinte*.
++
+Para ver todas as configurações de porta, clique no link *Mostrar mais configurações de porta* à direita da caixa de diálogo.
+
++
+|===
+| Definição da porta | Descrição 
+
+
+ a| 
+Velocidade da porta ethernet configurada
+ a| 
+Selecione a velocidade pretendida. As opções que aparecem na lista suspensa dependem da velocidade máxima que sua rede pode suportar (por exemplo, 10 Gbps).
+
+
+NOTE: As placas de interface de host iSCSI opcionais nos controladores E5700 e EF570 não negociam automaticamente as velocidades. Você deve definir a velocidade de cada porta para 10 GB ou 25 GB. Todas as portas devem ser definidas para a mesma velocidade.
+
+
+
+ a| 
+Ativar IPv4 / ativar IPv6
+ a| 
+Selecione uma ou ambas as opções para ativar o suporte para redes IPv4G e IPv6G.
+
+
+
+ a| 
+Porta de escuta TCP (disponível clicando em *Mostrar mais configurações de porta*.)
+ a| 
+Se necessário, introduza um novo número de porta. A porta de escuta é o número da porta TCP que o controlador usa para ouvir logins iSCSI de iniciadores iSCSI do host. A porta de escuta padrão é 3260. Tem de introduzir 3260 ou um valor entre 49152 e 65535.
+
+
+
+ a| 
+Tamanho MTU (disponível clicando em *Mostrar mais configurações de porta*.)
+ a| 
+Se necessário, introduza um novo tamanho em bytes para a unidade máxima de transmissão (MTU). O tamanho padrão da unidade máxima de transmissão (MTU) é de 1500 bytes por quadro. Tem de introduzir um valor entre 1500 e 9000.
+
+
+
+ a| 
+Ative as respostas ICMP PING
+ a| 
+Selecione esta opção para ativar o ICMP (Internet Control Message Protocol). Os sistemas operativos dos computadores em rede utilizam este protocolo para enviar mensagens. Essas mensagens ICMP determinam se um host é acessível e quanto tempo leva para obter pacotes de e para esse host.
+
+|===
++
+Se você selecionou *Ativar IPv4*, uma caixa de diálogo será aberta para selecionar IPv4 configurações depois de clicar em *Avançar*. Se você selecionou *Ativar IPv6*, uma caixa de diálogo será aberta para selecionar IPv6 configurações depois de clicar em *Avançar*. Se você selecionou ambas as opções, a caixa de diálogo para configurações IPv4 será aberta primeiro e, depois de clicar em *Avançar*, a caixa de diálogo para configurações IPv6 será aberta.
+
+. Configure as definições IPv4 e/ou IPv6, automática ou manualmente. Para ver todas as configurações de porta, clique no link *Mostrar mais configurações* à direita da caixa de diálogo.
++
+|===
+| Definição da porta | Descrição 
+
+
+ a| 
+Obter automaticamente a configuração
+ a| 
+Selecione esta opção para obter a configuração automaticamente.
+
+
+
+ a| 
+Especifique manualmente a configuração estática
+ a| 
+Selecione esta opção e, em seguida, introduza um endereço estático nos campos. Para IPv4, inclua a máscara de sub-rede e o gateway. Para IPv6, inclua o endereço IP roteável e o endereço IP do roteador.
+
+
+
+ a| 
+Ative o suporte a VLAN (disponível clicando em *Mostrar mais configurações*.)
+ a| 
+
+NOTE: Esta opção só está disponível num ambiente iSCSI. Ele não está disponível em um ambiente NVMe em RoCE.
+
+Selecione esta opção para ativar uma VLAN e introduzir a respetiva ID. Uma VLAN é uma rede lógica que se comporta como se estivesse fisicamente separada de outras redes locais (LANs) físicas e virtuais suportadas pelos mesmos switches, os mesmos roteadores ou ambos.
+
+
+
+ a| 
+Ativar prioridade ethernet (disponível clicando em *Mostrar mais definições*.)
+ a| 
+
+NOTE: Esta opção só está disponível num ambiente iSCSI. Ele não está disponível em um ambiente NVMe em RoCE.
+
+Selecione esta opção para ativar o parâmetro que determina a prioridade de acesso à rede. Use o controle deslizante para selecionar uma prioridade entre 1 e 7. Em um ambiente de rede local compartilhada (LAN), como Ethernet, muitas estações podem competir pelo acesso à rede. O acesso é por ordem de chegada. Duas estações podem tentar acessar a rede ao mesmo tempo, o que faz com que ambas as estações voltem e esperem antes de tentar novamente. Este processo é minimizado para Ethernet comutada, onde apenas uma estação está conetada a uma porta de switch.
+
+|===
+. Clique em *Finish*.
+. Feche o System Manager.
+
+
+
+
+== Etapa 4: Configurar rede do lado do host--iSCSI
+
+Você deve configurar a rede iSCSI no lado do host para que o Microsoft iSCSI Initiator possa estabelecer sessões com o array.
+
+.Antes de começar
+Certifique-se de que tem o seguinte:
+
+* Switches totalmente configurados que serão usados para transportar tráfego de armazenamento iSCSI.
+* Controle de fluxo de hardware de envio e recebimento ativado *fim a fim*
+* Controle de fluxo de prioridade desativado.
+* Configuração iSCSI do lado da matriz concluída.
+* O endereço IP de cada porta no controlador.
+
+
+.Sobre esta tarefa
+Estas instruções pressupõem que duas portas NIC serão utilizadas para o tráfego iSCSI.
+
+.Passos
+. Desative protocolos de adaptador de rede não utilizados.
++
+Esses protocolos incluem, entre outros, QoS, compartilhamento de arquivos e impressão e NetBIOS.
+
+. Execute `> iscsicpl.exe` a partir de uma janela de terminal no host para abrir a caixa de diálogo *iSCSI Initiator Properties*.
+. No separador **Discovery**, selecione *Discover Portal* e, em seguida, introduza o endereço IP de uma das portas de destino iSCSI.
+. Na guia **Targets**, selecione o primeiro portal de destino que você descobriu e selecione *Connect*.
+. Selecione *Ativar multi-path*, selecione *Adicionar esta ligação à lista de destinos favoritos* e, em seguida, selecione **Avançado**.
+. Para *adaptador local*, selecione *Microsoft iSCSI Initiator*.
+. Para *Initiator IP*, selecione o endereço IP de uma porta na mesma sub-rede ou VLAN que um dos destinos iSCSI.
+. Para *Target IP*, selecione o endereço IP de uma porta na mesma sub-rede que o *Initiator IP* selecionado na etapa acima.
+. Guarde os valores padrão para as restantes caixas de seleção e selecione *OK*.
+. Selecione *OK* novamente à medida que retornar à caixa de diálogo *conetar ao destino*.
+. Repita este procedimento para cada porta e sessão do iniciador (caminho lógico) para a matriz de armazenamento que você deseja estabelecer.
++
+image::../media/82012_00.gif[82012 00]
+
+
+
+
+
+== Etapa 5: Verificar conexões de rede IP - iSCSI, Windows
+
+Você verifica as conexões de rede IP (Internet Protocol) usando testes de ping para garantir que o host e o array possam se comunicar.
+
+. Selecione menu:Iniciar[todos os programas > Acessórios > prompt de comando] e, em seguida, use a CLI do Windows para executar um dos seguintes comandos, dependendo se os quadros jumbo estão ativados:
++
+** Se os quadros jumbo não estiverem ativados, execute este comando:
++
+[listing]
+----
+ping -S <hostIP\> <targetIP\>
+----
+** Se os quadros jumbo estiverem ativados, execute o comando ping com um tamanho de carga útil de 8.972 bytes. Os cabeçalhos combinados IP e ICMP são 28 bytes, que quando adicionados à carga útil, equivale a 9.000 bytes. O interrutor -f define o `don’t fragment (DF)` bit. O interrutor -l permite-lhe definir o tamanho. Essas opções permitem que quadros jumbo de 9.000 bytes sejam transmitidos com sucesso entre o iniciador iSCSI e o destino.
++
+[listing]
+----
+ping -l 8972 -f <iSCSI_target_IP_address\>
+----
++
+Neste exemplo, o endereço IP de destino iSCSI é `192.0.2.8`.
+
++
+[listing]
+----
+C:\>ping -l 8972 -f 192.0.2.8
+Pinging 192.0.2.8 with 8972 bytes of data:
+Reply from 192.0.2.8: bytes=8972 time=2ms TTL=64
+Reply from 192.0.2.8: bytes=8972 time=2ms TTL=64
+Reply from 192.0.2.8: bytes=8972 time=2ms TTL=64
+Reply from 192.0.2.8: bytes=8972 time=2ms TTL=64
+Ping statistics for 192.0.2.8:
+  Packets: Sent = 4, Received = 4, Lost = 0 (0% loss),
+Approximate round trip times in milli-seconds:
+  Minimum = 2ms, Maximum = 2ms, Average = 2ms
+----
+
+
+. Emita um `ping` comando do endereço do iniciador de cada host (o endereço IP da porta Ethernet do host usada para iSCSI) para cada porta iSCSI do controlador. Execute esta ação a partir de cada servidor host na configuração, alterando os endereços IP conforme necessário.
++
+
+NOTE: Se o comando falhar (por exemplo, retorna `Packet needs to be fragmented but DF set`), verifique o tamanho da MTU (suporte a quadros jumbo) para as interfaces Ethernet no servidor host, no controlador de armazenamento e nas portas do switch.
+
+
+
+
+
+== Passo 6: Registre sua configuração
+
+Pode gerar e imprimir um PDF desta página e, em seguida, utilizar a seguinte folha de cálculo para registar informações de configuração de armazenamento iSCSI. Você precisa dessas informações para executar tarefas de provisionamento.
+
+
+
+=== Configuração recomendada
+
+As configurações recomendadas consistem em duas portas de iniciador e quatro portas de destino com uma ou mais VLANs.
+
+image::../media/50001_01_conf-win.gif[50001 01 conf win]
+
+
+
+=== Objetivo IQN
+
+|===
+| Legenda n.º | Conexão da porta de destino | IQN 
+
+
+ a| 
+2
+ a| 
+Porta de destino
+ a| 
+
+|===
+
+
+=== Mapeando o nome do host
+
+|===
+| Legenda n.º | Informações do host | Nome e tipo 
+
+
+ a| 
+1
+ a| 
+Mapeando o nome do host
+ a| 
+
+
+
+ a| 
+ a| 
+Tipo de SO de host
+ a| 
+
+|===

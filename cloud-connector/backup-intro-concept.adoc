@@ -1,0 +1,194 @@
+---
+permalink: cloud-connector/backup-intro-concept.html 
+sidebar: sidebar 
+keywords: Cloud Connector backup 
+summary: Você pode acessar a opção backups no painel de navegação esquerdo do aplicativo SANtricity Cloud Connector. A opção cópias de segurança apresenta a página cópias de segurança, que permite criar novos trabalhos de cópia de segurança baseados em imagens ou ficheiros. 
+---
+= Backups
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Você pode acessar a opção backups no painel de navegação esquerdo do aplicativo SANtricity Cloud Connector. A opção cópias de segurança apresenta a página cópias de segurança, que permite criar novos trabalhos de cópia de segurança baseados em imagens ou ficheiros.
+
+Use a página *backups* do aplicativo SANtricity Cloud Connector para criar e processar backups de volumes e-Series. Você pode criar backups baseados em imagens ou arquivos e, em seguida, executar essas operações imediatamente ou posteriormente. Além disso, você pode optar por executar backups completos ou backups incrementais com base no último backup completo realizado. Um máximo de seis backups incrementais podem ser executados com base no último backup completo realizado por meio do aplicativo SANtricity Cloud Connector.
+
+
+NOTE: Todos os carimbos de data/hora para trabalhos de backup e restauração listados no aplicativo SANtricity Cloud Connector usam a hora local.
+
+
+
+== Crie um novo backup baseado em imagem
+
+Você pode criar novos backups baseados em imagem por meio da função criar na página backups do aplicativo SANtricity Cloud Connector.
+
+.Antes de começar
+Certifique-se de que você tem matrizes de armazenamento do proxy de serviços da Web registradas no conetor da nuvem do SANtricity.
+
+.Passos
+. Na página backups, clique em *criar*.
++
+É apresentada a janela criar cópia de segurança.
+
+. Selecione *criar um backup baseado em imagem*.
+. Clique em *seguinte*.
++
+Uma lista de volumes e-Series disponíveis é exibida na janela criar backup.
+
+. Selecione o volume e-Series desejado e clique em *Next*.
++
+É apresentada a página *nomeie a cópia de segurança e forneça uma descrição* da janela de confirmação criar cópia de segurança.
+
+. Para modificar o nome da cópia de segurança gerada automaticamente, introduza o nome pretendido no campo *Nome da tarefa*.
+. Se necessário, adicione uma descrição para o backup no campo *Descrição do trabalho*.
++
+
+NOTE: Deve introduzir uma descrição do trabalho que permita identificar facilmente o conteúdo da cópia de segurança.
+
+. Clique em *seguinte*.
++
+Um resumo do backup baseado em imagem selecionado é exibido na página *Rever informações de backup* da janela criar backup.
+
+. Revise o backup selecionado e clique em *Finish*.
++
+É apresentada a página de confirmação da janela criar cópia de segurança.
+
+. Selecione uma das seguintes opções:
++
+** *YES* -- inicia um backup completo para o backup selecionado.
+** *NO* -- NÃO é realizado Um backup completo para o backup baseado em imagens selecionado.
++
+
+NOTE: Um backup completo para o backup baseado em imagem selecionado pode ser executado posteriormente através da função Executar na página backups.
+
+
+
+. Clique em *OK*.
++
+A cópia de segurança do volume e-Series selecionado é iniciada e o estado da tarefa é apresentado na secção Lista de resultados da página cópias de segurança.
+
+
+
+
+
+== Crie um novo backup baseado em pasta/arquivo
+
+Você pode criar novos backups baseados em pasta/arquivo por meio da função criar na página backups do aplicativo SANtricity Cloud Connector.
+
+.Antes de começar
+Certifique-se de que você tem matrizes de armazenamento do proxy de serviços da Web registradas no conetor da nuvem do SANtricity.
+
+Um backup baseado em arquivo faz backup incondicionalmente de todos os arquivos no sistema de arquivos que você especificar. No entanto, você pode executar uma restauração seletiva de arquivos e pastas.
+
+.Passos
+. Na página backups, clique em *criar*.
++
+É apresentada a janela criar cópia de segurança.
+
+. Selecione *criar uma cópia de segurança baseada em pasta/ficheiro*.
+. Clique em *seguinte*.
++
+Uma lista de volumes que contém sistemas de arquivos disponíveis para backup é exibida na janela criar backup.
+
+. Selecione o volume desejado e clique em *Next*.
++
+Uma lista de sistemas de arquivos disponíveis no volume selecionado é exibida na janela criar Backup.
+
++
+
+NOTE: Se o seu sistema de arquivos não aparecer, verifique se o seu tipo de sistema de arquivos é suportado pelo aplicativo SANtricity Cloud Connector. Para obter mais informações, link:learn-intro-concept.html#supported-file-systems["Sistemas de arquivos suportados"]consulte .
+
+. Selecione o sistema de arquivos desejado que contém a pasta ou os arquivos a serem copiados e clique em *Next*.
++
+É apresentada a página *nomeie a cópia de segurança e forneça uma descrição* da janela de confirmação criar cópia de segurança.
+
+. Para modificar o nome da cópia de segurança gerada automaticamente, introduza o nome pretendido no campo *Nome da tarefa*.
+. Se necessário, adicione uma descrição para o backup no campo *Descrição do trabalho*.
++
+
+NOTE: Deve introduzir uma descrição do trabalho que permita identificar facilmente o conteúdo da cópia de segurança.
+
+. Clique em *seguinte*.
++
+Um resumo da cópia de segurança baseada na pasta/ficheiro selecionada é apresentado na página *Review backup information* (Rever informações de cópia de segurança) da janela Create Backup (criar cópia de segurança).
+
+. Reveja a cópia de segurança baseada na pasta/ficheiro selecionada e clique em *Finish*.
++
+É apresentada a página de confirmação da janela criar cópia de segurança.
+
+. Selecione uma das seguintes opções:
++
+** *YES* -- inicia um backup completo para o backup selecionado.
+** *NO* -- NÃO é realizado um backup completo para o backup selecionado.
++
+
+NOTE: Um backup completo para o backup baseado em arquivo selecionado também pode ser executado posteriormente através da função Executar na página backups.
+
+
+
+. Clique em *Fechar*.
++
+A cópia de segurança para o volume selecionado da série e é iniciada e o estado da tarefa é apresentado na secção da lista de resultados da página cópia de segurança.
+
+
+
+
+
+== Execute backups completos e incrementais
+
+Você pode executar backups completos e incrementais através da função Executar na página backups. Backups incrementais estão disponíveis apenas para backups baseados em arquivos.
+
+.Antes de começar
+Certifique-se de que você criou uma tarefa de backup por meio do SANtricity Cloud Connector.
+
+.Passos
+. Na guia backups, selecione o trabalho de backup desejado e clique em *Executar*.
++
+
+NOTE: Um backup completo é executado automaticamente sempre que um trabalho de backup baseado em imagem ou um trabalho de backup sem um backup inicial realizado anteriormente é selecionado.
+
++
+É apresentada a janela Executar cópia de segurança.
+
+. Selecione uma das seguintes opções:
++
+** *Full* -- faz backup de todos os dados para o backup baseado em arquivo selecionado.
+** *Incremental* -- faz o backup das alterações feitas somente desde o último backup realizado.
++
+
+NOTE: Um número máximo de seis backups incrementais pode ser realizado com base no último backup completo realizado por meio do aplicativo SANtricity Cloud Connector.
+
+
+
+. Clique em *Executar*.
++
+A solicitação de backup é iniciada.
+
+
+
+
+
+== Eliminar um trabalho de cópia de segurança
+
+A função Delete (Eliminar) elimina os dados de cópia de segurança no local de destino especificado para a cópia de segurança selecionada juntamente com o conjunto de cópias de segurança.
+
+.Antes de começar
+Certifique-se de que existe uma cópia de segurança com o estado Concluído, Falha ou cancelado.
+
+.Passos
+. Na página backups, selecione o backup desejado e clique em *Excluir*.
++
+
+NOTE: Se um backup base completo for selecionado para exclusão, todos os backups incrementais associados também serão excluídos.
+
++
+É apresentada a janela Confirm Delete (confirmar eliminação).
+
+. No campo *Type delete*, digite `DELETE` para confirmar a ação delete.
+. Clique em *Excluir*.
++
+A cópia de segurança selecionada é eliminada.
+
+

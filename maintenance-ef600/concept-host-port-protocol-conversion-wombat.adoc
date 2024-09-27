@@ -1,0 +1,14 @@
+---
+permalink: maintenance-ef600/concept-host-port-protocol-conversion-wombat.html 
+sidebar: sidebar 
+keywords: convert, protocol, host, compatibility, connection, infrastructure, conversion 
+summary: Você pode converter o protocolo de um host para um protocolo diferente para que ele seja compatível e você pode converter o protocolo de suas conexões de host para um protocolo diferente para atender às suas necessidades de infraestrutura. 
+---
+= Conversão do protocolo da porta do host
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Você pode converter o protocolo de um host para um protocolo diferente para que ele seja compatível e você pode converter o protocolo de suas conexões de host para um protocolo diferente para atender às suas necessidades de infraestrutura.

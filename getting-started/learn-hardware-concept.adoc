@@ -1,0 +1,298 @@
+---
+permalink: getting-started/learn-hardware-concept.html 
+sidebar: sidebar 
+keywords: E-Series, eseries, E2800, E5700, EF300, EF600, hardware, all flash array, E-Series protocols, E-Series rack 
+summary: Os storage arrays e-Series estão disponíveis em várias configurações e modelos. 
+---
+= Visão geral do hardware e-Series
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Os storage arrays e-Series estão disponíveis em várias configurações e modelos.
+
+Um storage array inclui compartimentos, controladores, unidades, software e firmware. O array pode ser instalado em um rack ou gabinete, com hardware personalizável para um ou dois controladores, em um compartimento de 12, 24 ou 60 unidades. Você pode conectar o storage array a uma SAN de vários tipos de interface e a uma variedade de sistemas operacionais de host.
+
+Os arrays e-Series estão disponíveis nos seguintes modelos:
+
+* Série E2800 -- híbrido de nível básico
+* Série EF280 -- all flash de nível de entrada
+* Série EF300 -- all-flash de nível de entrada, All NVMe
+* Série E5700 -- híbrido midrange
+* Série EF570 -- all flash midrange
+* Série EF600 -- all-flash midrange, All NVMe
+
+
+
+NOTE: Para o SANtricity os 11,80GA e posterior, todas as portas USB são desativadas nos storages E2800, EF280, E5700, EF570, EF600 e EF300.
+
+
+
+== Modelos E2800D.
+
+[cols="35h,~"]
+|===
+| Componente | Especificação 
+
+
+ a| 
+Tamanhos de rack:
+ a| 
+* 2U12 (2 unidades de rack; 12 unidades)
+* 2U24 (2 unidades de rack; 24 unidades)
++
+image::../media/e2800_2u_front.gif[e2800 2u dianteira]
+
+* 4U60 (4 unidades de rack; 60 unidades)
++
+image::../media/e2860_front.gif[e2860 dianteira]
+
+
+
+
+
+ a| 
+Unidades:
+ a| 
+Suporta os seguintes tipos de unidade:
+
+* NL-SAS de 3,5" (até 180 TB)
+* SSD SAS de 2,5" (até 120 GB)
+* HDD SAS de 2,5" (até 180 GB)
+
+
+
+
+ a| 
+Interfaces:
+ a| 
+Disponível com as seguintes interfaces:
+
+* 12Gb SAS
+* ISCSI de 10Gb GB ou 25GB GB
+* Fibre Channel de 16GB GB ou 32GB GB
+
+
+|===
+
+
+== Modelos EF280D.
+
+[cols="35h,~"]
+|===
+| Componente | Especificação 
+
+
+ a| 
+Tamanhos de rack:
+ a| 
+2U24 (2 unidades de rack; 24 unidades)image:../media/ef570_front.gif[""]
+
+
+
+ a| 
+Unidades:
+ a| 
+Suporta até 96 unidades SSD de 2,5"
+
+
+
+ a| 
+Interfaces:
+ a| 
+Disponível com as seguintes interfaces:
+
+* 12Gb SAS
+* ISCSI de 10Gb GB ou 25GB GB
+* Fibre Channel de 16GB GB ou 32GB GB
+
+
+|===
+
+
+== Modelos EF300D.
+
+[cols="35h,~"]
+|===
+| Componente | Especificação 
+
+
+ a| 
+Tamanhos de rack:
+ a| 
+2U24 (2 unidades de rack; 24 unidades)image:../media/ef570_front.gif[""]
+
+
+
+ a| 
+Unidades e HICs:
+ a| 
+Suporta as seguintes unidades com uma única placa de interface de host (HIC) por controlador:
+
+* Unidades SSD NVMe: Até 24 unidades SSD NVMe no compartimento da controladora.
+* Unidades NL-SAS com compartimentos de expansão: Qualquer combinação de gavetas DE212C e DE460C não excederá um total de 240 slots de unidade NL-SAS e 4 gavetas de expansão, a menos que sejam usadas apenas DE212C gavetas, então 8 DE212C gavetas serão permitidas. Por exemplo, 4 DE460C gavetas, 8 DE212C gavetas ou 2 DE460C gavetas e 2 DE212 gavetas.
+* Unidades SSD SAS com compartimentos de expansão: Qualquer combinação de gavetas DE212C, DE224C e DE460C não excederá um total de 96 slots de unidade SSD SAS e 4 compartimentos de expansão, a menos que sejam usadas apenas DE212C gavetas, então 8 DE212C gavetas serão permitidas. Por exemplo, 1 DE460C gaveta mais 1 DE224C gaveta mais 1 DE212C gaveta, ou 4 DE224C gavetas ou 8 DE212C gavetas.
+
+
+
+NOTE: Para o SANtricity os 11,80GA e posterior, o EF300 é compatível com configurações de compartimento de expansão sem unidades na bandeja de base Ao usar essa configuração, verifique se as unidades estão preenchidas no compartimento de expansão e conetadas corretamente à bandeja de base antes de ligar o sistema.
+
+
+
+ a| 
+Interfaces:
+ a| 
+Disponível com as seguintes interfaces:
+
+* ISCSI de 25GB GB
+* NVMe/Fibre Channel de 32GB GB
+* 32GB SCSI/Fibre Channel
+* Iser/IB de 100GB GB
+* SRP/IB de 100GB GB
+* NVMe/IB de 100GB GB
+* NVMe/RoCE de 100GB GbE
+
+
+|===
+
+
+== Modelos E5700D.
+
+[cols="35h,~"]
+|===
+| Componente | Especificação 
+
+
+ a| 
+Tamanhos de rack:
+ a| 
+* 2U24 (2 unidades de rack; 24 unidades)
++
+image::../media/e2800_2u_front.gif[e2800 2u dianteira]
+
+* 4U60 (4 unidades de rack; 60 unidades)
++
+image::../media/e2860_front.gif[e2860 dianteira]
+
+
+
+
+
+ a| 
+Unidades:
+ a| 
+Suporta até 480 dos seguintes tipos de unidade:
+
+* Unidades NL-SAS de 3,5"
+* Unidades SSD SAS de 2,5"
+* Unidades HDD SAS de 2,5"
+
+
+
+
+ a| 
+Interfaces:
+ a| 
+Disponível com as seguintes interfaces:
+
+* 12Gb SAS
+* ISCSI de 10Gb GB ou 25GB GB
+* Fibre Channel de 16GB GB ou 32GB GB
+* NVMe/Fibre Channel de 32GB GB
+* Iser/IB de 100GB GB
+* SRP/IB de 100GB GB
+* NVMe/IB de 100GB GB
+* NVMe/RoCE de 100GB GbE
+
+
+|===
+
+
+== Modelos EF570D.
+
+[cols="35h,~"]
+|===
+| Componente | Especificação 
+
+
+ a| 
+Tamanhos de rack:
+ a| 
+2U24 (2 unidades de rack; 24 unidades)image:../media/ef570_front.gif[""]
+
+
+
+ a| 
+Unidades:
+ a| 
+Suporta até 120 unidades SSD de 2,5"
+
+
+
+ a| 
+Interfaces:
+ a| 
+Disponível com as seguintes interfaces:
+
+* 12Gb SAS
+* ISCSI de 10Gb GB ou 25GB GB
+* Fibre Channel de 16GB GB ou 32GB GB
+* NVMe/Fibre Channel de 32GB GB
+* Iser/IB de 100GB GB
+* SRP/IB de 100GB GB
+* NVMe/IB de 100GB GB
+* NVMe/RoCE de 100GB GbE
+
+
+|===
+
+
+== Modelos EF600D.
+
+[cols="35h,~"]
+|===
+| Componente | Especificação 
+
+
+ a| 
+Tamanhos de rack:
+ a| 
+2U24 (2 unidades de rack; 24 unidades)image:../media/ef570_front.gif[""]
+
+
+
+ a| 
+Unidades e HICs:
+ a| 
+Suporta as seguintes unidades com uma única placa de interface de host (HIC) por controlador:
+
+* Unidades SSD NVMe: Até 24 unidades SSD NVMe no compartimento da controladora.
+* Unidades NL-SAS com compartimentos de expansão: Qualquer combinação de gavetas DE212C e DE460C não excederá um total de 420 slots de unidade NL-SAS e 7 gavetas de expansão, a menos que sejam usadas apenas DE212C gavetas, então 8 DE212C gavetas serão permitidas. Por exemplo, 7 DE460C gavetas, 8 DE212C gavetas ou 5 DE460C gavetas e 2 DE212 gavetas.
+* Unidades SSD SAS com compartimentos de expansão: Qualquer combinação de gavetas DE212C, DE224C e DE460C não excederá um total de 96 slots de unidade SSD SAS e 7 compartimentos de expansão, a menos que sejam usadas apenas DE212C gavetas, então 8 DE212C gavetas serão permitidas. Por exemplo, 1 DE460C gaveta mais 1 DE224C gaveta mais 1 DE212C gaveta, ou 4 DE224C gavetas ou 8 DE212C gavetas
+
+
+
+NOTE: Para o SANtricity os 11,80GA e posterior, o EF600 é compatível com configurações de compartimento de expansão sem unidades na bandeja de base Ao usar essa configuração, verifique se as unidades estão preenchidas no compartimento de expansão e conetadas corretamente à bandeja de base antes de ligar o sistema.
+
+
+
+ a| 
+Interfaces:
+ a| 
+Disponível com as seguintes interfaces:
+
+* ISCSI de 25GB GB
+* NVMe/Fibre Channel de 32GB GB
+* 32GB SCSI/Fibre Channel
+* Iser/IB de 100GB GB
+* SRP/IB de 100GB GB
+* NVMe/IB de 100GB GB
+* NVMe/RoCE de 100GB GbE
+* Iser/IB de 200GB GB
+* NVMe/IB de 200GB GB
+* NVMe/RoCE de 200GB GbE
+
+
+|===

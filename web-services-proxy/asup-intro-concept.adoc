@@ -1,0 +1,172 @@
+---
+permalink: web-services-proxy/asup-intro-concept.html 
+sidebar: sidebar 
+keywords: ASUP configuration Web Services, AutoSupport Web Services Proxy, WSP ASUP config 
+summary: 'Você pode configurar o AutoSupport (ASUP), que coleta dados e envia esses dados automaticamente para o suporte técnico para solução de problemas remota e análise de problemas.' 
+---
+= Gerenciar o AutoSupport usando proxy de serviços da Web
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Você pode configurar o AutoSupport (ASUP), que coleta dados e envia esses dados automaticamente para o suporte técnico para solução de problemas remota e análise de problemas.
+
+
+
+== Visão geral do AutoSupport (ASUP)
+
+O recurso AutoSupport (ASUP) transmite automaticamente mensagens para o NetApp com base em critérios manuais e baseados em horários.
+
+Cada mensagem do AutoSupport é uma coleção de arquivos de log, dados de configuração, dados de estado e métricas de desempenho. Por padrão, o AutoSupport transmite os arquivos listados na tabela a seguir à equipe de suporte do NetApp uma vez por semana.
+
+[cols="35h,~"]
+|===
+| Nome do ficheiro | Descrição 
+
+
+ a| 
+x-headers-data.txt
+ a| 
+Um arquivo .txt contendo as informações do cabeçalho X.
+
+
+
+ a| 
+manifest.xml
+ a| 
+Um arquivo .xml detalhando o conteúdo da mensagem.
+
+
+
+ a| 
+arraydata.xml
+ a| 
+Um arquivo .xml contendo a lista de dados do cliente persistiu.
+
+
+
+ a| 
+appserver-config.txt
+ a| 
+Um arquivo .txt contendo dados de configuração do servidor de aplicativos.
+
+
+
+ a| 
+wsconfig.txt
+ a| 
+Um arquivo .txt contendo os dados de configuração do serviço da Web.
+
+
+
+ a| 
+host-info.txt
+ a| 
+Um arquivo .txt contendo informações sobre o ambiente host.
+
+
+
+ a| 
+server-logs.7z
+ a| 
+Um arquivo .7z contendo todos os arquivos de log do servidor web disponíveis.
+
+
+
+ a| 
+client-info.txt
+ a| 
+Um arquivo .txt com pares de chave/valor arbitrários para contadores específicos de aplicativos, como acessos de método e páginas da Web.
+
+
+
+ a| 
+webservices-profile.json
+ a| 
+Esses arquivos contêm dados de perfil Webservices e dados estatísticos de monitoramento Jersey. Por predefinição, as estatísticas de monitorização de Jersey estão ativadas. Você pode ativá-los e desativá-los no arquivo wsconfig.xml, da seguinte forma:
+
+* Ativar: `<env key="enable.jersey.statistics">true</env>`
+* Desativar: `<env key="enable.jersey.statistics">false</env>`
+
+
+|===
+
+
+== Configurar o AutoSupport
+
+O AutoSupport é ativado por padrão na instalação; no entanto, você pode alterar essa configuração ou modificar os tipos de entrega.
+
+
+
+=== Ative ou desative o AutoSupport
+
+O recurso AutoSupport está ativado ou desativado durante a instalação inicial do proxy de serviços da Web, mas você pode alterar essa configuração no arquivo ASUPConfig.
+
+Pode ativar ou desativar o AutoSupport através do ficheiro ASUPConfig.xml, conforme descrito nos passos abaixo. Alternativamente, você pode ativar ou desativar esse recurso através da API usando *Configuration* e *POST/asup* e, em seguida, inserir "true" ou "false".
+
+. Abra o arquivo ASUPConfig.xml no diretório de trabalho.
+. Localize as linhas para <asupdata enable="Boolean_value" timestamp="timestamp">
+. Introduza `true` (ativar) ou `false` (desativar). Por exemplo:
++
+[listing]
+----
+<asupdata enabled="false" timestamp="0">
+----
++
+
+NOTE: A entrada timestamp é supérflua.
+
+. Salve o arquivo.
+
+
+
+
+=== Configurar o método de entrega do AutoSupport
+
+Você pode configurar o recurso AutoSupport para usar os métodos de entrega HTTPS, HTTP ou SMTP. HTTPS é o método de entrega padrão.
+
+. Acesse o arquivo ASUPConfig.xml no diretório de trabalho.
+. Na cadeia de carateres `<delivery type="n">`, digite 1, 2 ou 3 conforme descrito na tabela:
++
+[cols="25h,~"]
+|===
+| Valor | Descrição 
+
+
+ a| 
+1
+ a| 
+*HTTPS* (padrão)
+
+<delivery type="1">
+
+
+
+ a| 
+2
+ a| 
+*HTTP*
+
+<delivery type="2">
+
+
+
+ a| 
+3
+ a| 
+*SMTP* -- para configurar corretamente o tipo de entrega AutoSupport para SMTP, você deve incluir o endereço do servidor de e-mail SMTP, juntamente com os e-mails do usuário do remetente e destinatário, semelhante ao seguinte exemplo:
+
+[listing]
+----
+<delivery type="3">
+<smtp>
+<mailserver>smtp.example.com</mailserver>
+<sender>user@example.com</sender>
+<replyto>user@example.com</replyto>
+</smtp>
+</delivery>
+----
+|===
+

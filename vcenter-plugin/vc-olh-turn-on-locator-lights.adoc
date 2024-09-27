@@ -1,0 +1,28 @@
+---
+sidebar: sidebar 
+permalink: vcenter-plugin/vc-olh-turn-on-locator-lights.html 
+keywords: vCenter plugin, Plugin for vCenter, SANtricity plugin for vCenter 
+summary: Você pode localizar unidades para identificar fisicamente todas as unidades que compõem um pool selecionado, grupo de volumes ou cache SSD. Um indicador LED acende-se em cada unidade no pool selecionado, grupo de volume ou cache SSD. 
+---
+= Ligue as luzes de localização
+:hardbreaks:
+:allow-uri-read: 
+:experimental: 
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./media/
+
+
+[role="lead"]
+Você pode localizar unidades para identificar fisicamente todas as unidades que compõem um pool selecionado, grupo de volumes ou cache SSD. Um indicador LED acende-se em cada unidade no pool selecionado, grupo de volume ou cache SSD.
+
+.Passos
+. Na página Gerenciar, selecione o storage array.
+. Selecione menu:provisionamento[Configurar pools e grupos de volume].
+. Selecione o pool, grupo de volume ou cache SSD que você deseja localizar e clique em menu:mais[Ativar luzes de localização].
++
+É exibida uma caixa de diálogo que indica que as luzes nas unidades que compõem o pool selecionado, o grupo de volume ou o cache SSD estão ativados.
+
+. Depois de localizar as unidades com êxito, clique em *Desligar*.
+

@@ -1,0 +1,116 @@
+---
+permalink: cloud-connector/restore-intro-concept.html 
+sidebar: sidebar 
+keywords: Cloud Connector restore, 
+summary: Você pode acessar a opção Restaurar no painel de navegação esquerdo do aplicativo SANtricity Cloud Connector. A opção Restaurar exibe a página Restaurar, que permite criar novos trabalhos de restauração baseados em imagens ou arquivos. 
+---
+= Restaurações
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Você pode acessar a opção Restaurar no painel de navegação esquerdo do aplicativo SANtricity Cloud Connector. A opção Restaurar exibe a página Restaurar, que permite criar novos trabalhos de restauração baseados em imagens ou arquivos.
+
+O SANtricity Cloud Connector usa o conceito de tarefas para executar a restauração real de um volume e-Series. Antes de executar uma restauração, você deve identificar qual volume do e-Series será usado para a operação. Depois de adicionar um volume e-Series para restauração ao host do SANtricity Cloud Connector, você pode usar a `Restore` página do aplicativo SANtricity Cloud Connector para criar e processar restaurações.
+
+
+NOTE: Todos os carimbos de data/hora para trabalhos de backup e restauração listados no aplicativo SANtricity Cloud Connector usam a hora local.
+
+
+
+== Crie uma nova restauração baseada em imagem
+
+Você pode criar novas restaurações baseadas em imagens por meio da função criar na página Restaurar do aplicativo SANtricity Cloud Connector.
+
+.Antes de começar
+Verifique se você tem um backup baseado em imagem disponível por meio do SANtricity Cloud Connector.
+
+.Passos
+. Na página Restaurar do aplicativo SANtricity Cloud Connector, clique em *criar*.
++
+A janela Restaurar é exibida.
+
+. Selecione a cópia de segurança pretendida.
+. Clique em *seguinte*.
++
+A página Selecionar ponto de backup é exibida na janela Restaurar.
+
+. Selecione a cópia de segurança concluída pretendida.
+. Clique em *seguinte*.
++
+A página Selecionar destino de restauração é exibida na janela Restaurar.
+
+. Selecione o volume de restauração e clique em *Next*.
++
+A página Review (Revisão) é apresentada na janela Restore (Restaurar).
+
+. Revise a operação de restauração selecionada e clique em *Finish*.
++
+A restauração do volume do host de destino selecionado é iniciada e o status da tarefa é exibido na seção de lista de resultados da página Restaurar.
+
+
+
+
+
+== Crie uma nova restauração baseada em arquivo
+
+Você pode criar novas restaurações baseadas em arquivos através da função criar na página Restaurar do aplicativo SANtricity Cloud Connector.
+
+.Antes de começar
+Verifique se você tem um backup baseado em arquivos disponível pelo SANtricity Cloud Connector.
+
+.Passos
+. Na página Restaurar do aplicativo SANtricity Cloud Connector, clique em *criar*.
++
+A janela Restaurar é exibida.
+
+. Na janela Restaurar, selecione o backup baseado em arquivo desejado.
+. Clique em *seguinte*.
++
+A página Selecionar ponto de backup é exibida na janela criar tarefa de restauração.
+
+. Na página Selecionar ponto de cópia de segurança, selecione a cópia de segurança concluída pretendida.
+. Clique em *seguinte*.
++
+Uma lista de sistemas de arquivos ou pastas/arquivos disponíveis é exibida na janela Restaurar.
+
+. Selecione as pastas ou ficheiros pretendidos para restaurar e clique em *seguinte*.
++
+A página Selecionar destino de restauração é exibida na janela Restaurar.
+
+. Selecione o volume de restauração e clique em *Next*.
++
+A página Review (Revisão) é apresentada na janela Restore (Restaurar).
+
+. Revise a operação de restauração selecionada e clique em *Finish*.
++
+A restauração do volume do host de destino selecionado é iniciada e o status da tarefa é exibido na seção de lista de resultados da página Restaurar.
+
+
+
+
+
+== Eliminar uma restauração
+
+Você pode usar a função Excluir para excluir um item de restauração selecionado da seção da lista de resultados da página Restaurar.
+
+.Antes de começar
+Certifique-se de que existe um trabalho de restauro com o estado Concluído, falhou ou cancelado.
+
+.Passos
+. Na página Restaurar, clique em *Excluir*.
++
+É apresentada a janela Confirm Delete (confirmar eliminação).
+
+. No campo *Type delete*, digite `delete` para confirmar a ação delete.
+. Clique em *Excluir*.
++
+
+NOTE: Não é possível eliminar uma restauração suspensa.
+
++
+A restauração selecionada é excluída.
+
+

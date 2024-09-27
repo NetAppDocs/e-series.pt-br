@@ -1,0 +1,35 @@
+---
+sidebar: sidebar 
+permalink: platform-tech-reports.html 
+keywords: platform technical reports, e-series, hardware, santricity, os 
+summary: Relatórios técnicos do e-Series 
+---
+= Navegue pelos relatórios técnicos da plataforma
+:allow-uri-read: 
+
+
+
+
+== Plataforma TRs
+
+[cols="9,9,9"]
+|===
+
+
+| https://www.netapp.com/pdf.html?item=/media/17026-tr4725pdf.pdf["*TR-4725: Visão geral dos storages E2800*"] | https://www.netapp.com/pdf.html?item=/media/17120-tr4724pdf.pdf["TR-4724: Os storages E5700 apresentam visão geral"] | https://www.netapp.com/pdf.html?item=/media/21363-tr-4877.pdf["TR-4877: Os storages EF300 apresentam visão geral"] 
+
+
+| Descreve os recursos de hardware e software do array híbrido E2800 e os recursos mais recentes do SANtricity os. | Descreve as informações do produto E5700, incluindo novos recursos de hardware e software introduzidos com a versão mais recente do SANtricity. | Descreve os recursos de hardware e software do array all-flash EF300 e os novos recursos do SANtricity os. 
+
+
+|  |  |  
+
+
+|  |  |  
+
+
+| https://www.netapp.com/pdf.html?item=/media/17009-tr4800pdf.pdf["*TR-4800: Visão geral dos storages EF600*"] |  |  
+
+
+| Descreve os recursos de hardware e software do array all-flash EF600 e os novos recursos do SANtricity os. |  |  
+|===

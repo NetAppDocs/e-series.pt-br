@@ -1,0 +1,280 @@
+---
+permalink: maintenance-ef600/hics-replace-supertask-task.html 
+sidebar: sidebar 
+keywords: replace EF300 HIC, replace EF600 HIC, host interface card failed, HIC failure 
+summary: 'Substitua uma placa de interface de host (HIC) EF300 ou EF600 com falha.' 
+---
+= Substitua a placa de interface do host (HIC) com falha em EF300 ou EF600
+:allow-uri-read: 
+:experimental: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Siga este procedimento para substituir uma placa de interface de host (HIC) com falha em um array EF300 ou EF600.
+
+.Sobre esta tarefa
+Quando você substitui um HIC com falha, você deve desligar o storage, substituir o HIC e reaplicar a energia.
+
+.Antes de começar
+* Revisão link:hics-overview-supertask-concept.html["Requisitos para atualizações HIC EF300 ou EF600"].
+* Agende uma janela de manutenção de tempo de inatividade para este procedimento. Não é possível aceder aos dados na matriz de armazenamento até concluir com êxito este procedimento. Como ambos os controladores devem ter a mesma configuração HIC quando são ligados, a energia deve estar desligada quando você instala HICs.
+* Certifique-se de que tem o seguinte:
++
+** Placas de rede compatíveis com os controladores.
+** Uma pulseira antiestática, ou você tomou outras precauções antiestáticas.
+** Uma área de trabalho plana e estática livre.
+** Etiquetas para identificar cada cabo que está ligado ao recipiente do controlador.
+** Uma chave de fendas Phillips nº 1.
+** Uma estação de gerenciamento com um navegador que pode acessar o Gerenciador de sistema do SANtricity para o controlador. (Para abrir a interface do System Manager, aponte o navegador para o nome de domínio ou endereço IP do controlador.)
++
+
+CAUTION: *Possível perda de acesso a dados* -- nunca instale um HIC em um recipiente de controlador EF300 ou EF600 se esse HIC foi projetado para outro controlador e-Series. Além disso, ambos os controladores e ambas as HICs devem ser idênticos. A presença de HICs incompatíveis ou incompatíveis faz com que os controladores bloqueiem quando você aplica energia.
+
+
+
+
+
+
+
+== Passo 1: Coloque o controlador offline
+
+Coloque o controlador afetado offline para que possa substituir as placas de rede (HICs) em segurança.
+
+.Passos
+. A partir do Gestor do sistema SANtricity, reveja os detalhes no Guru de recuperação para confirmar que existe um problema com uma bateria e para garantir que não é necessário resolver primeiro outros itens.
+. Na área Detalhes do Recovery Guru, determine qual bateria deve ser substituída.
+. Faça backup do banco de dados de configuração do storage usando o Gerenciador de sistema do SANtricity.
++
+Se ocorrer um problema ao remover um controlador, pode utilizar o ficheiro guardado para restaurar a configuração. O sistema salvará o estado atual do banco de dados de configuração RAID, que inclui todos os dados para grupos de volume e pools de discos na controladora.
+
++
+** Do System Manager:
++
+... Selecione menu:suporte[Centro de suporte > Diagnóstico].
+... Selecione *Collect Configuration Data*.
+... Clique em *Collect*.
++
+O arquivo é salvo na pasta Downloads do seu navegador com o nome *configurationData-<arrayName>-<dateTime>.7z*.
+
+
+
+
+
+. Se o controlador ainda não estiver offline, coloque-o offline agora usando o Gerenciador de sistema do SANtricity.
++
+.. Selecione *hardware*.
+.. Se o gráfico mostrar as unidades, selecione *Mostrar parte traseira da prateleira* para mostrar os controladores.
+.. Selecione o controlador que pretende colocar offline.
+.. No menu de contexto, selecione *colocar offline* e confirme que deseja executar a operação.
++
+
+NOTE: Se você estiver acessando o Gerenciador de sistema do SANtricity usando o controlador que você está tentando ficar offline, uma mensagem Gerenciador de sistema do SANtricity indisponível será exibida. Selecione *conetar-se a uma conexão de rede alternativa* para acessar automaticamente o Gerenciador de sistema do SANtricity usando o outro controlador.
+
+
+
+. Aguarde até que o Gerenciador de sistema do SANtricity atualize o status do controlador para offline.
++
+
+NOTE: Não inicie quaisquer outras operações até que o estado tenha sido atualizado.
+
+. Selecione *Reverifique* no Recovery Guru e confirme que o campo OK para remover na área Detalhes exibe Sim, indicando que é seguro remover este componente.
+
+
+
+
+== Etapa 2: Remova o recipiente do controlador
+
+Remova o recipiente do controlador para que você possa substituir a placa de interface do host com falha.
+
+.Passos
+. Identifique cada cabo que esteja conetado ao recipiente do controlador.
+. Desligue todos os cabos do recipiente do controlador.
++
+
+CAUTION: Para evitar um desempenho degradado, não torça, dobre, aperte ou pise nos cabos.
+
+. Se as portas HIC usarem transcetores SFP, remova-os.
++
+Dependendo do tipo de HIC para o qual você está atualizando, você pode ser capaz de reutilizar esses SFPs.
+
+. Confirme se o LED Cache ative na parte de trás do controlador está desligado.
+. Aperte as alças em ambos os lados do controlador e puxe para trás até que ele se solte da prateleira.
++
+image::../media/remove_controller_5.png[remova o controlador 5]
+
+. Utilizando as duas mãos e as pegas, deslize o recipiente do controlador para fora da prateleira. Quando a parte frontal do controlador estiver livre do compartimento, use duas mãos para puxá-lo completamente.
++
+
+CAUTION: Utilize sempre duas mãos para suportar o peso de um recipiente do controlador.
+
++
+image::../media/remove_controller_6.png[remova o controlador 6]
+
+. Coloque o recipiente do controlador numa superfície plana e sem estática.
+
+
+
+
+== Passo 3: Remova o HIC
+
+Remova o HIC original para que você possa substituí-lo por um atualizado.
+
+.Passos
+. Retire a tampa do recipiente do controlador desapertando o parafuso de aperto manual único e levantando a tampa aberta.
+. Confirme se o LED verde no interior do controlador está desligado.
++
+Se este LED verde estiver ligado, o controlador ainda está a utilizar a bateria. Deve aguardar que este LED se apague antes de remover quaisquer componentes.
+
+. Utilizando uma chave de fendas Phillips, retire os dois parafusos que fixam a placa frontal HIC ao recipiente do controlador.
++
+image::../media/hic_2.png[hic 2]
+
++
+
+NOTE: A imagem acima é um exemplo; a aparência do seu HIC pode diferir.
+
+. Retire a placa frontal do HIC.
+. Utilizando os dedos ou uma chave de fendas Phillips, desaperte o parafuso de aperto manual único que fixa o HIC à placa do controlador.
++
+image::../media/hic_3.png[hic 3]
+
++
+
+NOTE: O HIC vem com três localizações de parafuso na parte superior, mas é fixado com apenas um.
+
++
+
+NOTE: A imagem acima é um exemplo; a aparência do seu HIC pode diferir.
+
+. Solte cuidadosamente o HIC da placa controladora levantando-o para cima e para fora do controlador.
++
+
+CAUTION: Tenha cuidado para não arranhar ou bater os componentes na parte inferior do HIC ou na parte superior da placa controladora.
+
++
+image::../media/hic_4.png[hic 4]
+
++
+
+NOTE: A imagem acima é um exemplo; a aparência do seu HIC pode diferir.
+
+. Coloque o HIC sobre uma superfície plana e livre de estática.
+
+
+
+
+== Passo 4: Substitua o HIC
+
+Depois de remover o HIC antigo, instale um novo HIC.
+
+
+CAUTION: *Possível perda de acesso a dados* -- nunca instale um HIC em um recipiente de controlador EF300 ou EF600 se esse HIC foi projetado para outro controlador e-Series. Além disso, se você tiver uma configuração duplex, ambos os controladores e ambas as HICs devem ser idênticos. A presença de HICs incompatíveis ou incompatíveis faz com que os controladores bloqueiem quando você aplica energia.
+
+.Passos
+. Desembale o novo HIC e a nova placa frontal HIC.
+. Alinhe o parafuso de aperto manual único no HIC com os orifícios correspondentes no controlador e alinhe o conetor na parte inferior do HIC com o conetor de interface HIC na placa do controlador.
++
+Tenha cuidado para não arranhar ou bater os componentes na parte inferior do HIC ou na parte superior da placa controladora.
+
+. Baixe cuidadosamente o HIC para o devido lugar e assente o conetor HIC pressionando suavemente o HIC.
++
+
+CAUTION: **Possíveis danos ao equipamento** - tenha muito cuidado para não apertar o conetor de fita dourada para os LEDs do controlador entre o HIC e o parafuso de aperto manual.
+
++
+image::../media/hic_7.png[hic 7]
+
++
+
+NOTE: A imagem acima é um exemplo; a aparência do seu HIC pode diferir.
+
+. Aperte manualmente o parafuso manual HIC.
++
+Não use uma chave de fenda, ou você pode apertar demais os parafusos.
+
+. Utilizando uma chave de fendas Phillips nº 1, fixe a placa frontal HIC removida do HIC original com os três parafusos.
+
+
+
+
+== Etapa 5: Reinstale o recipiente do controlador
+
+Depois de substituir o HIC, reinstale o recipiente do controlador na prateleira do controlador.
+
+.Passos
+. Baixe a tampa do recipiente do controlador e fixe o parafuso de aperto manual.
+. Enquanto aperta as alças do controlador, deslize suavemente o recipiente do controlador até a prateleira do controlador.
++
+
+NOTE: O controlador clica audivelmente quando instalado corretamente na prateleira.
+
++
+image::../media/remove_controller_7.png[remova o controlador 7]
+
+. Instale os SFPs no novo HIC e volte a ligar todos os cabos.
++
+Se você estiver usando mais de um protocolo de host, certifique-se de instalar os SFPs nas portas de host corretas.
+
+
+
+
+
+== Passo 6: Substituição completa do HIC
+
+Coloque o controlador on-line, colete dados de suporte e retome as operações.
+
+.Passos
+. Coloque o controlador online.
++
+.. No System Manager, navegue até a página de hardware.
+.. Selecione *Mostrar parte posterior do controlador*.
+.. Selecione o controlador com a placa de interface do host substituída.
+.. Selecione *Place on-line* na lista suspensa.
+
+
+. À medida que o controlador arranca, verifique os LEDs do controlador.
++
+Quando a comunicação com o outro controlador é restabelecida:
+
++
+** O LED âmbar de atenção permanece aceso.
+** Os LEDs do Host Link podem estar ligados, piscando ou desligados, dependendo da interface do host.
+
+
+. Quando o controlador estiver novamente online, confirme se o seu estado é ideal e verifique os LEDs de atenção do compartimento do controlador.
++
+Se o estado não for o ideal ou se algum dos LEDs de atenção estiver aceso, confirme se todos os cabos estão corretamente encaixados e o recipiente do controlador está instalado corretamente. Se necessário, remova e reinstale o recipiente do controlador.
+
++
+
+NOTE: Se não conseguir resolver o problema, contacte o suporte técnico.
+
+. Clique em menu:hardware[suporte > Centro de Atualização] para garantir que a versão mais recente do SANtricity os esteja instalada.
++
+Conforme necessário, instale a versão mais recente.
+
+. Verifique se todos os volumes foram devolvidos ao proprietário preferido.
++
+.. Selecione menu:armazenamento[volumes]. Na página *todos os volumes*, verifique se os volumes são distribuídos aos seus proprietários preferidos. Selecione menu:mais[alterar propriedade] para ver os proprietários de volume.
+.. Se todos os volumes forem propriedade do proprietário preferido, avance para o passo 6.
+.. Se nenhum dos volumes for retornado, você deverá retornar manualmente os volumes. Vá para menu:mais[redistribuir volumes].
+.. Se apenas alguns dos volumes forem devolvidos aos seus proprietários preferidos após a distribuição automática ou a distribuição manual, você deverá verificar o Recovery Guru para problemas de conetividade do host.
+.. Se não houver Recovery Guru presente ou se seguir as etapas do Recovery Guru, os volumes ainda não serão devolvidos aos seus proprietários preferenciais, entre em Contato com o suporte.
+
+
+. Colete dados de suporte para sua matriz de armazenamento usando o Gerenciador de sistema do SANtricity.
++
+.. Selecione menu:suporte[Centro de suporte > Diagnóstico].
+.. Selecione *coletar dados de suporte*.
+.. Clique em *Collect*.
++
+O arquivo é salvo na pasta Downloads do seu navegador com o nome *support-data.7z*.
+
+
+
+
+
+.O que se segue?
+A substituição da placa de interface do host está concluída. Pode retomar as operações normais.

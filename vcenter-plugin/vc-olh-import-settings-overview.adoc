@@ -1,0 +1,95 @@
+---
+sidebar: sidebar 
+permalink: vcenter-plugin/vc-olh-import-settings-overview.html 
+keywords: vCenter plugin, Plugin for vCenter, SANtricity plugin for vCenter 
+summary: 'O recurso Importar configurações é uma operação em lote que permite replicar as configurações em um único storage array (a origem) para vários arrays (os destinos).' 
+---
+= Descrição geral das definições de importação
+:hardbreaks:
+:allow-uri-read: 
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./media/
+
+
+[role="lead"]
+O recurso Importar configurações é uma operação em lote que permite replicar as configurações em um único storage array (a origem) para vários arrays (os destinos) no Storage Plugin for vCenter.
+
+
+
+== Definições disponíveis para importação
+
+As seguintes configurações podem ser importadas de uma matriz para outra:
+
+* *Alertas* -- métodos de alertas para enviar eventos importantes para administradores usando e-mail, um servidor syslog ou um servidor SNMP.
+* *AutoSupport* -- um recurso que monitora a integridade de um storage array e envia envios automáticos para o suporte técnico.
+* *Serviços de diretório* -- Um método de autenticação de usuário gerenciado por meio de um servidor LDAP (Lightweight Directory Access Protocol) e serviço de diretório, como o ative Directory da Microsoft.
+* *Configurações do sistema* -- Configurações relacionadas ao seguinte:
++
+** Definições de digitalização de multimédia para um volume
+** Definições SSD
+** Balanceamento de carga automático (não inclui relatórios de conectividade de host)
+
+
+* *Configuração de armazenamento* -- Configurações relacionadas ao seguinte:
++
+** Volumes (somente volumes espessos e não-repositórios)
+** Grupos de volume e pools
+** Atribuições de unidades hot spare
+
+
+
+
+
+
+== Fluxo de trabalho de configuração
+
+Para importar configurações, siga este fluxo de trabalho:
+
+. Em uma matriz de armazenamento a ser usada como origem, configure as configurações usando o System Manager.
+. Nos storages a serem usados como destinos, faça backup de sua configuração usando o System Manager.
+. Na interface do plugin, vá para a página *Manage* e importe as configurações.
+. Na página operações, reveja os resultados da operação Importar definições.
+
+
+
+
+== Requisitos para replicação de configurações de storage
+
+Antes de importar uma configuração de armazenamento de um storage array para outro, revise os requisitos e as diretrizes.
+
+
+
+=== Compartimentos
+
+* Os compartimentos em que os controladores residem devem ser idênticos nos arrays de origem e destino.
+* As IDs de gaveta devem ser idênticas nos arrays de origem e destino.
+* Os compartimentos de expansão devem ser preenchidos nos mesmos slots com os mesmos tipos de unidade (se a unidade for usada na configuração, o local das unidades não utilizadas não importa).
+
+
+
+
+=== Controladores
+
+* O tipo de controlador pode ser diferente entre os arrays de origem e destino, mas o tipo de compartimento RBOD deve ser idêntico.
+* As HICs, incluindo os recursos DA DO host, devem ser idênticas entre os arrays de origem e destino.
+* A importação de uma configuração duplex para simplex não é suportada; no entanto, a importação de simplex para duplex é permitida.
+* As definições FDE não estão incluídas no processo de importação.
+
+
+
+
+=== Estado
+
+* Os arrays de destino devem estar no status ideal.
+* O array de origem não precisa estar no status ideal.
+
+
+
+
+=== Armazenamento
+
+* A capacidade da unidade pode variar entre os arrays de origem e destino, desde que a capacidade de volume no destino seja maior do que a origem. (Um array de destino pode ter unidades de capacidade mais novas e maiores que não seriam totalmente configuradas em volumes pela operação de replicação.)
+* Volumes de pool de discos de 64 TB ou maiores no array de origem impedirão o processo de importação nos destinos.
+

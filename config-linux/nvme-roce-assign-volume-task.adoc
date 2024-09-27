@@ -1,0 +1,58 @@
+---
+permalink: config-linux/nvme-roce-assign-volume-task.html 
+sidebar: sidebar 
+keywords: assign volume Linux, assign namespace Linux, express linux configuration, linux host, 
+summary: Você deve atribuir um volume a um host ou cluster de host para que ele possa ser usado para operações de e/S. Essa atribuição concede a um host ou cluster de host acesso a um ou mais namespaces em um storage array. 
+---
+= Atribuir um volume
+:allow-uri-read: 
+:experimental: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+É necessário atribuir um volume (namespace) a um host ou cluster de host para que ele possa ser usado para operações de e/S. Essa atribuição concede a um host ou cluster de host acesso a um ou mais namespaces em um storage array.
+
+.Sobre esta tarefa
+Tenha estas diretrizes em mente quando atribuir volumes:
+
+* Você pode atribuir um volume a apenas um host ou cluster de host de cada vez.
+* Os volumes atribuídos são compartilhados entre controladores no storage array.
+* O mesmo ID de namespace (NSID) não pode ser usado duas vezes por um host ou um cluster de host para acessar um volume. Você deve usar um NSID exclusivo.
+
+
+A atribuição de um volume falha nestas condições:
+
+* Todos os volumes são atribuídos.
+* O volume já está atribuído a outro host ou cluster de host.
+
+
+A capacidade de atribuir um volume não está disponível nestas condições:
+
+* Não existem hosts ou clusters de host válidos.
+* Todas as atribuições de volume foram definidas.
+
+
+Todos os volumes não atribuídos são exibidos, mas as funções para hosts com ou sem Garantia de dados (DA) se aplicam da seguinte forma:
+
+* Para um host compatível com DA, você pode selecionar volumes habilitados PARA DA ou não habilitados PARA DA.
+* Para um host que não é capaz de DA, se você selecionar um volume que é habilitado PARA DA, um aviso indica que o sistema deve DESLIGAR automaticamente DA no volume antes de atribuir o volume ao host.
+
+
+.Passos
+. Selecione menu:armazenamento[hosts].
+. Selecione o host ou cluster de host ao qual você deseja atribuir volumes e clique em *atribuir volumes*.
++
+É apresentada uma caixa de diálogo que lista todos os volumes que podem ser atribuídos. Você pode classificar qualquer uma das colunas ou digitar algo na caixa *filtro* para facilitar a localização de volumes específicos.
+
+. Marque a caixa de seleção ao lado de cada volume que você deseja atribuir ou marque a caixa de seleção no cabeçalho da tabela para selecionar todos os volumes.
+. Clique em *Assign* para concluir a operação.
+
+
+.Resultado
+Depois de atribuir com êxito um volume ou volumes a um host ou a um cluster de host, o sistema executa as seguintes ações:
+
+* O volume atribuído recebe o próximo NSID disponível. O host usa o NSID para acessar o volume.
+* O nome do volume fornecido pelo usuário aparece nas listagens de volume associadas ao host.
+

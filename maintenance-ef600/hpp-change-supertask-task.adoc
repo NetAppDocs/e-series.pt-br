@@ -1,0 +1,676 @@
+---
+permalink: maintenance-ef600/hpp-change-supertask-task.html 
+sidebar: sidebar 
+keywords: host protocol change, EF300 host protocol, EF600 host protocol 
+summary: Altere o protocolo da porta do host para um array EF300 ou EF600. 
+---
+= Altere o protocolo de host para um EF300 ou EF600
+:allow-uri-read: 
+:experimental: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Siga este procedimento para alterar o protocolo da porta do host em um array EF300 ou EF600. Este procedimento aplica-se apenas a placas de interface de host (HICs) que usam Infiniband (IB) ou Fibre Channel (FC).
+
+
+
+== Passo 1: Obtenha a chave do pacote de recursos
+
+Para obter a chave do pacote de recursos, é necessário o número de série do compartimento do controlador, um Código de ativação de recursos e o Identificador de ativação de recursos para o storage array.
+
+.Passos
+. Localize o número de série.
++
+.. No Gerenciador do sistema do SANtricity, selecione menu:suporte[Centro de suporte].
+.. Com a guia *Support Resources* selecionada, role até a seção *View top storage array Properties*.
+.. Localize o *número de série do chassi* e copie esse valor para um arquivo de texto.
++
+image::../media/sam1130_ss_e2800_storage_array_profile_sn_smid_copy_maint-ef600.gif[sam1130 ss e2800 storage array profile sn smid copy mint ef600]
+
+
+
+. Localize o *ID do submodelo do pacote de recursos*.
++
+.. No Gerenciador do sistema SANtricity, selecione *suporte*.
+.. Selecione o mosaico *Centro de suporte*.
+.. Na guia recursos de suporte, localize e selecione o link *Storage Array Profile*.
+.. Digite *ID do submodelo do pacote de recursos* na caixa de texto e clique em *Localizar*.
+.. Localize a ID do submodelo do pacote de recursos para a configuração inicial.
++
+image::../media/storage_array_profile2_maint-ef600.gif[storage array profile2 manint ef600]
+
+
+
+. Usando o ID do submodelo do pacote de recursos, localize o ID do submodelo do controlador correspondente para a configuração inicial e localize o Código de ativação do recurso para a configuração final desejada na tabela a seguir. Em seguida, copie o código de ativação do recurso para um arquivo de texto.
++
+|===
+2+| A iniciar a configuração 2+| A terminar a configuração .2+| Código de ativação do recurso 
+
+
+| ID do submodelo do controlador | Portas HIC | ID do submodelo do controlador | Portas HIC 
+
+
+ a| 
+443
+ a| 
+NVMe/FC, NVMe/RoCE ou iSCSI
+ a| 
+444
+ a| 
+NVMe/FC ou NVMe/IB
+ a| 
+DH5-HB4-ZK9QH
+
+
+
+ a| 
+448
+ a| 
+FC
+ a| 
+JHX-UB4-ZGTP1
+
+
+
+ a| 
+491
+ a| 
+Iser/IB
+ a| 
+0H1-675-Z5SII
+
+
+
+ a| 
+492
+ a| 
+SRP/IB
+ a| 
+NHD-V75-ZB6ZX
+
+
+
+ a| 
+444
+ a| 
+NVMe/FC ou NVMe/IB
+ a| 
+443
+ a| 
+NVMe/FC, NVMe/RoCE ou iSCSI
+ a| 
+YH3-XB4-ZJRIZ
+
+
+
+ a| 
+448
+ a| 
+FC
+ a| 
+2HU-BB4-ZFCG5
+
+
+
+ a| 
+491
+ a| 
+Iser/IB
+ a| 
+2H3-P75-Z6AQG
+
+
+
+ a| 
+492
+ a| 
+SRP/IB
+ a| 
+5HG-G75-ZDNEZ
+
+
+
+ a| 
+448
+ a| 
+FC
+ a| 
+443
+ a| 
+NVMe/FC, NVMe/RoCE ou iSCSI
+ a| 
+7HZ-EB4-ZHAYW
+
+
+
+ a| 
+444
+ a| 
+NVMe/FC ou NVMe/IB
+ a| 
+LHS-RB4-ZDV29
+
+
+
+ a| 
+491
+ a| 
+Iser/IB
+ a| 
+FH6-975-Z7Q7H
+
+
+
+ a| 
+492
+ a| 
+SRP/IB
+ a| 
+0HI-Z75-ZE4L5
+
+
+
+ a| 
+491
+ a| 
+Iser/IB
+ a| 
+443
+ a| 
+NVMe/FC, NVMe/RoCE ou iSCSI
+ a| 
+MHQ-M85-ZIJNT
+
+
+
+ a| 
+444
+ a| 
+NVMe/FC ou NVMe/IB
+ a| 
+4HS-685-ZJZ1U
+
+
+
+ a| 
+448
+ a| 
+FC
+ a| 
+YHU-P85-ZLHCX
+
+
+
+ a| 
+465
+ a| 
+FC/PTL
+ a| 
+AHX-985-ZMXMI
+
+
+
+ a| 
+492
+ a| 
+SRP/IB
+ a| 
+ZHZ-S85-ZNF4J
+
+
+
+ a| 
+492
+ a| 
+SRP/IB
+ a| 
+443
+ a| 
+NVMe/FC, NVMe/RoCE ou iSCSI
+ a| 
+EH3-C85-Z0V93
+
+
+
+ a| 
+444
+ a| 
+NVMe/FC ou NVMe/IB
+ a| 
+BH5-V85-ZQDQJ
+
+
+
+ a| 
+448
+ a| 
+FC
+ a| 
+1H8-F85-ZRT1V
+
+
+
+ a| 
+465
+ a| 
+FC/PTL
+ a| 
+1HA-Y85-ZSB7S
+
+
+
+ a| 
+491
+ a| 
+Iser/IB
+ a| 
+KHD-I85-ZUSMI
+
+
+
+ a| 
+465
+ a| 
+FC/PTL
+ a| 
+491
+ a| 
+Iser
+ a| 
+6H8-S75-Z98FH
+
+
+
+ a| 
+492
+ a| 
+SRP
+ a| 
+NHL-J75-ZFL3W
+
+
+
+ a| 
+516
+ a| 
+NVMe/FC, NVMe/RoCE ou iSCSI
+ a| 
+517
+ a| 
+NVMe/IB ou NVMe/FC
+ a| 
+LHF-285-ZV9YZ
+
+
+
+ a| 
+518
+ a| 
+FC
+ a| 
+IHI-L85-ZXQEP
+
+
+
+ a| 
+519
+ a| 
+Iser/IB
+ a| 
+RHK-585-ZY7P5
+
+
+
+ a| 
+520
+ a| 
+FC-PTL
+ a| 
+NHN-095-ZZ0XF
+
+
+
+ a| 
+521
+ a| 
+SRP/IB
+ a| 
+GHP-895-Z25BD
+
+
+
+ a| 
+517
+ a| 
+NVMe/IB ou NVMe/FC
+ a| 
+516
+ a| 
+NVMe/FC, NVMe/RoCE ou iSCSI
+ a| 
+7HS-R95-Z3M06
+
+
+
+ a| 
+518
+ a| 
+FC
+ a| 
+UHU-B95-Z43X2
+
+
+
+ a| 
+519
+ a| 
+FC-PTL
+ a| 
+8HX-U95-Z5K6F
+
+
+
+ a| 
+520
+ a| 
+Iser/IB
+ a| 
+UHZ-E95-Z71LH
+
+
+
+ a| 
+521
+ a| 
+SRP/IB
+ a| 
+SH2-X95-Z8IVS
+
+
+
+ a| 
+518
+ a| 
+FC
+ a| 
+516
+ a| 
+NVMe/FC, NVMe/RoCE ou iSCSI
+ a| 
+UH5-H95-Z9Z58
+
+
+
+ a| 
+517
+ a| 
+NVMe/FC ou NVMe/IB
+ a| 
+XH7-195-ZBGJC
+
+
+
+ a| 
+519
+ a| 
+FC-PTL
+ a| 
+FHA-K95-ZCXX0
+
+
+
+ a| 
+520
+ a| 
+Iser/IB
+ a| 
+JHC-595-ZDE3X
+
+
+
+ a| 
+521
+ a| 
+SRP/IB
+ a| 
+0HF-095-ZFVFN
+
+
+
+ a| 
+519
+ a| 
+FC-PTL
+ a| 
+516
+ a| 
+NVMe/FC, NVMe/RoCE ou iSCSI
+ a| 
+YHH-895-ZGCXS
+
+
+
+ a| 
+517
+ a| 
+NVMe/FC ou NVMe/IB
+ a| 
+2HK-R95-ZHT83
+
+
+
+ a| 
+518
+ a| 
+FC
+ a| 
+1HM-BA5-ZJALA
+
+
+
+ a| 
+520
+ a| 
+Iser/IB
+ a| 
+YHP-UA5-ZKRXA
+
+
+
+ a| 
+521
+ a| 
+SRP/IB
+ a| 
+MHR-EA5-ZL83V
+
+
+
+ a| 
+520
+ a| 
+Iser/IB
+ a| 
+516
+ a| 
+NVMe/FC, NVMe/RoCE ou iSCSI
+ a| 
+HHU-XA5-ZNPLT
+
+
+
+ a| 
+517
+ a| 
+NVMe/FC ou NVMe/IB
+ a| 
+YHW-HA5-Z07QK
+
+
+
+ a| 
+518
+ a| 
+FC
+ a| 
+WHZ-1A5-ZPN4U
+
+
+
+ a| 
+519
+ a| 
+FC/PTL
+ a| 
+7H2-KA5-ZR5C3
+
+
+
+ a| 
+521
+ a| 
+SRP
+ a| 
+3H5-4A5-ZSLVX
+
+
+
+ a| 
+521
+ a| 
+SRP/IB
+ a| 
+516
+ a| 
+NVMe/FC, NVMe/RoCE ou iSCSI
+ a| 
+1H7-NA5-ZT31W
+
+
+
+ a| 
+517
+ a| 
+NVMe/FC ou NVMe/IB
+ a| 
+XHA-7A5-ZVJGC
+
+
+
+ a| 
+518
+ a| 
+FC
+ a| 
+KHC-QA5-ZW1P3
+
+
+
+ a| 
+519
+ a| 
+FC/PTL
+ a| 
+CHE-AA5-ZXH2F
+
+
+
+ a| 
+520
+ a| 
+Iser/IB
+ a| 
+SHH-TA5-ZZYHS
+
+|===
++
+
+NOTE: Se o ID do submodelo do controlador não estiver listado, https://mysupport.netapp.com/site/["Suporte à NetApp"^] contacte .
+
+. No System Manager, localize o identificador de ativação da funcionalidade.
++
+.. Aceda ao menu:Definições[sistema].
+.. Role para baixo até *Complementos*.
+.. Em *Change Feature Pack*, localize o *Feature Enable Identifier*.
+.. Copie e cole esse número de 32 dígitos em um arquivo de texto.
++
+image::../media/sam1130_ss_e2800_change_feature_pack_feature_enable_identifier_copy_maint-ef600.gif[sam1130 ss e2800 alterar o recurso de pacote de recursos ativar cópia do identificador ef600]
+
+
+
+. Aceda a http://partnerspfk.netapp.com["Ativação de licença do NetApp: Ativação do recurso Premium do storage array"^]e introduza as informações necessárias para obter o pacote de funcionalidades.
++
+** Número de série do chassis
+** Código de ativação do recurso
+** OBSERVAÇÃO: O site da ativação de recursos Premium inclui um link para "instruções de ativação de recursos Premium". Não tente usar essas instruções para este procedimento.
+
+
+. Escolha se deseja receber o arquivo-chave do pacote de recursos em um e-mail ou baixá-lo diretamente do site.
+
+
+
+
+== Etapa 2: Parar a e/S do host
+
+Pare todas as operações de e/S do host antes de converter o protocolo das portas do host.
+
+Não é possível acessar dados no storage array até concluir a conversão com êxito.
+
+.Passos
+. Certifique-se de que nenhuma operação de e/S esteja ocorrendo entre o storage array e todos os hosts conectados. Por exemplo, você pode executar estas etapas:
++
+** Parar todos os processos que envolvem os LUNs mapeados do armazenamento para os hosts.
+** Garantir que nenhuma aplicação esteja gravando dados em LUNs mapeados do storage para os hosts.
+** Desmonte todos os sistemas de arquivos associados a volumes no array.
++
+
+NOTE: As etapas exatas para interromper as operações de e/S do host dependem do sistema operacional do host e da configuração, que estão além do escopo dessas instruções. Se você não tiver certeza de como interromper as operações de e/S do host em seu ambiente, considere encerrar o host.
+
++
+
+CAUTION: *Possível perda de dados* -- se você continuar este procedimento enquanto as operações de e/S estão ocorrendo, você pode perder dados.
+
+
+
+. Aguarde até que quaisquer dados na memória cache sejam gravados nas unidades.
++
+O LED verde Cache ative na parte de trás de cada controlador fica aceso quando os dados em cache precisam ser gravados nas unidades. Tem de esperar que este LED se desligue.
+
+. Na página inicial do Gerenciador do sistema do SANtricity, selecione *Exibir operações em andamento*.
+. Aguarde que todas as operações sejam concluídas antes de continuar com o próximo passo.
+
+
+
+
+== Passo 3: Altere o pacote de recursos
+
+Altere o pacote de recursos para converter o protocolo de host de suas portas de host.
+
+.Passos
+. No Gerenciador do sistema SANtricity, selecione menu:Configurações[sistema].
+. Em *Add-ons*, selecione *Change Feature Pack*.
++
+image::../media/sam1130_ss_system_change_feature_pack_maint-ef600.gif[sam1130 ss troca do sistema manut pack de funcionalidades ef600]
+
+. Clique em *Procurar* e, em seguida, selecione o pacote de funcionalidades que pretende aplicar.
+. Digite *Change* no campo.
+. Clique em *alterar*.
++
+A migração do pacote de recursos começa. Ambos os controladores reiniciam automaticamente duas vezes para permitir que o novo pacote de recursos entre em vigor. O storage array retorna a um estado responsivo após a reinicialização ser concluída.
+
+. Confirme se as portas do host têm o protocolo que você espera.
++
+.. No Gerenciador do sistema SANtricity, selecione *hardware*.
+.. Clique em *Mostrar parte posterior da prateleira*.
+.. Selecione o gráfico para o controlador A ou controlador B.
+.. Selecione *View settings* no menu de contexto.
+.. Selecione a guia *interfaces de host*.
+.. Clique em *Mostrar mais configurações*.
+
+
+
+
+.O que se segue?
+Vá para link:hpp-complete-protocol-conversion-task.html["Conversão completa do protocolo de host"].

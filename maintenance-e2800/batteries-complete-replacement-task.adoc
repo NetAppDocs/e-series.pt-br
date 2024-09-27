@@ -1,0 +1,159 @@
+---
+permalink: maintenance-e2800/batteries-complete-replacement-task.html 
+sidebar: sidebar 
+keywords: E2800 battery fail, E2800 battery, E2800 battery replacement, replace E2800 battery, replacing E2800 battery, E2800, E-Series, eseries 
+summary: Complete uma substituição da bateria. 
+---
+= Substituição completa da bateria E2800
+:allow-uri-read: 
+:experimental: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+As etapas para concluir a substituição da bateria dependem se você tem uma configuração duplex (dois controladores) ou uma configuração simplex (um controlador).
+
+* Para configurações duplex, <<Colocar o controlador online (duplex)>>consulte .
+* Para configurações simplex, <<Controlador de ativação (simplex)>>consulte .
+
+
+
+
+== Colocar o controlador online (duplex)
+
+Coloque o controlador on-line para confirmar que o storage array está funcionando corretamente. Em seguida, você pode coletar dados de suporte e retomar as operações.
+
+
+NOTE: Execute esta tarefa somente se o storage array tiver dois controladores.
+
+.Passos
+. À medida que o controlador inicia, verifique os LEDs do controlador e o visor de sete segmentos.
++
+
+NOTE: A figura mostra um exemplo do recipiente do controlador. Seu controlador pode ter um número diferente e um tipo diferente de portas de host.
+
++
+Quando a comunicação com o outro controlador é restabelecida:
+
++
+** O visor de sete segmentos mostra a sequência repetida *os*, *OL*, *_blank_* para indicar que o controlador está offline.
+** O LED âmbar de atenção permanece aceso.
+** Os LEDs do Host Link podem estar ligados, piscando ou desligados, dependendo da interface do host. image:../media/28_dwg_attn_led_7s_display_maint-e2800.gif[""]
++
+*(1)* _LED de atenção (âmbar)_
+
++
+*(2)* _display de sete segmentos_
+
++
+*(3)* _Host Link LEDs_
+
+
+
+. Coloque o controlador on-line usando o Gerenciador de sistema do SANtricity.
++
+** A partir do SANtricity System Manager:
++
+... Selecione *hardware*.
+... Se o gráfico mostrar as unidades, selecione *Mostrar parte traseira da prateleira*.
+... Selecione o controlador que pretende colocar online.
+... Selecione *Place Online* no menu de contexto e confirme que deseja executar a operação.
++
+O sistema coloca o controlador online.
+
+
+
+** Como alternativa, você pode colocar o controlador novamente online usando os seguintes comandos CLI:
++
+*Para o controlador A:* `set controller [a] availability=online;`
+
++
+*Para o controlador B:* `set controller [b] availability=online;`
+
+
+
+. Quando o controlador estiver novamente online, confirme se o seu estado é o ideal e verifique os LEDs de atenção do compartimento do controlador.
++
+Se o estado não for o ideal ou se algum dos LEDs de atenção estiver aceso, confirme se todos os cabos estão corretamente encaixados e verifique se a bateria e o recipiente do controlador estão instalados corretamente. Se necessário, retire e volte a instalar o recipiente do controlador e a bateria.
+
++
+
+NOTE: Se não conseguir resolver o problema, contacte o suporte técnico.
+
+. Se necessário, colete dados de suporte para seu storage array usando o Gerenciador de sistema do SANtricity.
++
+.. Selecione menu:suporte[Centro de suporte > Diagnóstico].
+.. Selecione *coletar dados de suporte*.
+.. Clique em *Collect*.
++
+O arquivo é salvo na pasta Downloads do seu navegador com o nome *support-data.7z*.
+
+
+
+
+
+.O que se segue?
+A substituição da bateria está concluída. Pode retomar as operações normais.
+
+
+
+== Controlador de ativação (simplex)
+
+Ligue o compartimento do controlador para confirmar que está a funcionar corretamente. Em seguida, você pode coletar dados de suporte e retomar as operações.
+
+
+NOTE: Execute esta tarefa somente se o storage array tiver um controlador.
+
+.Passos
+. Ligue os dois interruptores de energia na parte de trás do compartimento do controlador.
++
+** Não desligue os interruptores de energia durante o processo de ativação, que normalmente leva 90 segundos ou menos para ser concluído.
+** Os ventiladores em cada prateleira são muito altos quando eles começam a funcionar. O ruído alto durante o arranque é normal.
+
+
+. À medida que o controlador inicia, verifique os LEDs do controlador e o visor de sete segmentos.
++
+** O visor de sete segmentos mostra a sequência de repetição *os*, *SD*, *_blank_* para indicar que o controlador está executando o processamento de Início do dia (SOD). Depois de um controlador ter inicializado com êxito, seu visor de sete segmentos deve mostrar o ID da bandeja.
+** O LED âmbar de atenção no controlador liga-se e desliga-se, a menos que haja um erro.
+** Os LEDs verdes do Host Link acendem-se.
++
+
+NOTE: A figura mostra um exemplo do recipiente do controlador. Seu controlador pode ter um número diferente e um tipo diferente de portas de host.
+
++
+image::../media/28_dwg_attn_led_7s_display_maint-e2800.gif[28 dwg attn led 7s display manint e2800]
+
++
+*(1)* _LED de atenção (âmbar)_
+
++
+*(2)* _display de sete segmentos_
+
++
+*(3)* _Host Link LEDs_
+
+
+
+. Confirme se o status do controlador é ideal e verifique os LEDs de atenção do compartimento do controlador.
++
+Se o estado não for o ideal ou se algum dos LEDs de atenção estiver aceso, confirme se todos os cabos estão corretamente encaixados e verifique se a bateria e o recipiente do controlador estão instalados corretamente. Se necessário, retire e volte a instalar o recipiente do controlador e a bateria.
+
++
+
+NOTE: Se não conseguir resolver o problema, contacte o suporte técnico.
+
+. Se necessário, colete dados de suporte para seu storage array usando o Gerenciador de sistema do SANtricity.
++
+.. Selecione menu:suporte[Centro de suporte > Diagnóstico].
+.. Selecione *coletar dados de suporte*.
+.. Clique em *Collect*.
++
+O arquivo é salvo na pasta Downloads do seu navegador com o nome *support-data.7z*.
+
+
+
+
+
+.O que se segue?
+A substituição da bateria está concluída. Pode retomar as operações normais.

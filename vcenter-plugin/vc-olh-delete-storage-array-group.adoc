@@ -1,0 +1,27 @@
+---
+sidebar: sidebar 
+permalink: vcenter-plugin/vc-olh-delete-storage-array-group.html 
+keywords: vCenter plugin, Plugin for vCenter, SANtricity plugin for vCenter 
+summary: Remova um ou mais grupos de storage que não sejam mais necessários. 
+---
+= Eliminar grupo de matrizes de armazenamento
+:hardbreaks:
+:allow-uri-read: 
+:experimental: 
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./media/
+
+
+[role="lead"]
+Você pode remover um ou mais grupos de storage que não são mais necessários.
+
+.Sobre esta tarefa
+Esta operação exclui apenas o grupo de matrizes de armazenamento. Os storage arrays associados ao grupo excluído permanecem acessíveis por meio da exibição Gerenciar tudo ou qualquer outro grupo ao qual está associado.
+
+.Passos
+. Na página Gerenciar, selecione menu:Gerenciar grupos[Excluir grupo de matrizes de armazenamento].
+. Selecione um ou mais grupos de matrizes de armazenamento que pretende eliminar.
+. Clique em *Excluir*.
+

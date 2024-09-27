@@ -1,0 +1,14 @@
+---
+permalink: maintenance-ef600/concept-dimms-wombat.html 
+sidebar: sidebar 
+keywords: replace, dimm, memory, mismatch, fail 
+summary: Você deve substituir um DIMM quando houver uma incompatibilidade de memória ou tiver um DIMM com falha. 
+---
+= DIMMs
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Você deve substituir um DIMM quando houver uma incompatibilidade de memória ou tiver um DIMM com falha.

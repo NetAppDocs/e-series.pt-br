@@ -1,0 +1,131 @@
+---
+permalink: web-services-proxy/certificates-intro-concept.html 
+sidebar: sidebar 
+keywords: Certificates Web Services Proxy, WSP certificates, 
+summary: Gerencie certificados usando os arquivos de configuração do Web Services Proxy, usando comandos API ou usando a interface do Unified Manager. 
+---
+= Gerenciar segurança e certificados no Web Services Proxy
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Para segurança no Proxy de serviços da Web, você pode especificar uma designação de porta SSL e gerenciar certificados. Os certificados identificam os proprietários de sites para conexões seguras entre clientes e servidores.
+
+
+
+== Ativar SSL
+
+O Web Services Proxy usa Secure Sockets Layer (SSL) para segurança, que é ativado durante a instalação. Você pode alterar a designação da porta SSL no arquivo wsconfig.xml.
+
+.Passos
+. Abra o arquivo wsconfig.xml, localizado em:
++
+** (Windows) -- C: Arquivos de programas/NetApp/SANtricity proxy de serviços da Web
+** (Linux) -- /opt/NetApp/SANtricity_web_services_proxy
+
+
+. Adicione ou altere o número da porta SSL, semelhante ao seguinte exemplo:
++
+[listing]
+----
+<sslport clientauth="request">8443</sslport>
+----
+
+
+.Resultado
+Quando o servidor é iniciado com SSL configurado, o servidor procura os arquivos keystore e truststore.
+
+* Se o servidor não encontrar um keystore, o servidor usará o endereço IP do primeiro endereço IPv4 não loopback detetado para gerar um keystore e, em seguida, adicionar um certificado autoassinado ao keystore.
+* Se o servidor não encontrar um armazenamento de confiança ou se o armazenamento de confiança não for especificado, o servidor usará o armazenamento de chaves como o armazenamento de confiança.
+
+
+
+
+== Ignorar a validação do certificado
+
+Para oferecer suporte a conexões seguras, o Web Services Proxy valida os certificados dos sistemas de armazenamento em relação aos seus próprios certificados confiáveis. Se necessário, você pode especificar que o proxy ignora essa validação antes de se conetar aos sistemas de storage.
+
+.Antes de começar
+* Todas as conexões do sistema de armazenamento devem estar seguras.
+
+
+.Passos
+. Abra o arquivo wsconfig.xml, localizado em:
++
+** (Windows) -- C: Arquivos de programas/NetApp/SANtricity proxy de serviços da Web
+** (Linux) -- /opt/NetApp/SANtricity_web_services_proxy
+
+
+. Introduza `true` a `trust.all.arrays` entrada, como mostrado no exemplo:
++
+[listing]
+----
+<env key="trust.all.arrays">true</env>
+----
+. Salve o arquivo.
+
+
+
+
+== Gerar e importar um certificado de gerenciamento de host
+
+Os certificados identificam os proprietários de sites para conexões seguras entre clientes e servidores. Para gerar e importar certificados de autoridade de certificação (CA) para o sistema host onde o Proxy de serviços da Web está instalado, você pode usar endpoints de API.
+
+Para gerenciar certificados para o sistema host, execute as seguintes tarefas usando a API:
+
+* Crie uma solicitação de assinatura de certificado (CSR) para o sistema host.
+* Envie o arquivo CSR para uma CA e aguarde até que eles enviem os arquivos de certificado.
+* Importe os certificados assinados para o sistema host.
+
+
+
+NOTE: Você também pode gerenciar certificados na interface do Unified Manager. Para obter mais informações, consulte a ajuda on-line disponível no Unified Manager.
+
+.Passos
+. Inicie sessão no link:install-login-task.html["Documentação interativa da API"].
+. Vá para o menu suspenso no canto superior direito e selecione *v2*.
+. Expanda o link *Administration* e role para baixo até os pontos finais */Certificates*.
+. Gerar o arquivo CSR:
++
+.. Selecione *POST:/Certificates* e, em seguida, selecione *Experimente*.
++
+O servidor da Web regenera um certificado autoassinado. Em seguida, você pode inserir informações nos campos para definir o nome comum, organização, unidade da organização, ID alternativo e outras informações usadas para gerar a CSR.
+
+.. Adicione as informações necessárias no painel *valores de exemplo* para gerar um certificado de CA válido e, em seguida, execute os comandos.
++
+
+NOTE: Não ligue novamente para *POST:/Certificates* ou *POST:/Certificates/RESET*, ou você deve regenerar o CSR. Quando você liga para *POST:/Certificates* ou *POST:/Certificates/reset*, você está gerando um novo certificado autoassinado com uma nova chave privada. Se você enviar um CSR gerado antes da última restauração da chave privada no servidor, o novo certificado de segurança não funcionará. Você deve gerar um novo CSR e solicitar um novo certificado de CA.
+
+.. Execute o endpoint *Get:/certificates/Server* para confirmar que o status atual do certificado é o certificado autoassinado com as informações adicionadas do comando *POST:/certificates*.
++
+O certificado do servidor (indicado pelo alias `jetty`) ainda está autoassinado neste momento.
+
+.. Expanda o endpoint *POST:/Certificates/Export*, selecione *Experimente*, insira um nome de arquivo para o arquivo CSR e clique em *Executar*.
+
+
+. Copie e cole o `fileUrl` em uma nova guia do navegador para baixar o arquivo CSR e envie o arquivo CSR para uma CA válida para solicitar uma nova cadeia de certificados do servidor da Web.
+. Quando a CA emitir uma nova cadeia de certificados, use uma ferramenta de gerenciador de certificados para separar os certificados raiz, intermediário e servidor Web e, em seguida, importá-los para o servidor Proxy de Serviços Web:
++
+.. Expanda o endpoint *POST:/sslconfig/Server* e selecione *Experimente*.
+.. Digite um nome para o certificado raiz da CA no campo *alias*.
+.. Selecione *false* no campo *replaceMainServerCertificate*.
+.. Procure e selecione o novo certificado raiz da CA.
+.. Clique em *Executar*.
+.. Confirme se o carregamento do certificado foi bem-sucedido.
+.. Repita o procedimento de carregamento do certificado CA para o certificado intermediário CA.
+.. Repita o procedimento de upload de certificado para o novo arquivo de certificado de segurança do servidor Web, exceto nesta etapa, selecione *true* na lista suspensa *replaceMainServerCertificate*.
+.. Confirme se a importação do certificado de segurança do servidor Web foi bem-sucedida.
+.. Para confirmar que os novos certificados de servidor raiz, intermediário e Web estão disponíveis no keystore, execute *Get:/certificates/Server*.
+
+
+. Selecione e expanda o endpoint *POST:/Certificates/reload* e selecione *Experimente*. Quando solicitado, se você deseja reiniciar os dois controladores ou não, selecione *false*. ("true" aplica-se apenas no caso de controladores de matriz dupla.) Clique em *Executar*.
++
+O endpoint */certificates/reload* geralmente retorna uma resposta http 202 bem-sucedida. No entanto, o recarregamento dos certificados de armazenamento de confiança do servidor web e keystore cria uma condição de corrida entre o processo de API e o processo de recarga de certificados do servidor web. Em casos raros, o recarregamento do certificado do servidor Web pode superar o processamento da API. Neste caso, o recarregamento parece falhar mesmo que tenha sido concluído com sucesso. Se isto ocorrer, avance para o passo seguinte de qualquer forma. Se a recarga realmente falhou, a próxima etapa também falha.
+
+. Feche a sessão atual do navegador para o Proxy de Serviços Web, abra uma nova sessão do navegador e confirme que uma nova conexão segura do navegador com o Proxy de Serviços Web pode ser estabelecida.
++
+Usando uma sessão de navegação anônima ou privada, você pode abrir uma conexão com o servidor sem usar dados salvos de sessões de navegação anteriores.
+
+

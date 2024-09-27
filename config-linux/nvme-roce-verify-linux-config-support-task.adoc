@@ -1,0 +1,57 @@
+---
+permalink: config-linux/nvme-roce-verify-linux-config-support-task.html 
+sidebar: sidebar 
+keywords: express linux configuration, software configuration, linux host, E2800, E5700, EF300, EF600, E-Series, eseries 
+summary: 'Para garantir uma operação confiável, você cria um plano de implementação e, em seguida, usa a ferramenta de Matriz de interoperabilidade (IMT) do NetApp para verificar se toda a configuração é suportada.' 
+---
+= Verifique o suporte do Linux e reveja as restrições
+:allow-uri-read: 
+:experimental: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Como primeira etapa, você deve verificar se sua configuração do Linux é suportada e também revisar as restrições de controladora, switch, host e recuperação.
+
+
+
+== Verifique se a configuração do Linux é suportada
+
+Para garantir uma operação confiável, você cria um plano de implementação e, em seguida, usa a ferramenta de Matriz de interoperabilidade (IMT) do NetApp para verificar se toda a configuração é suportada.
+
+.Passos
+. Vá para https://mysupport.netapp.com/matrix["Ferramenta de Matriz de interoperabilidade do NetApp"^] .
+. Clique no bloco *Pesquisa de solução*.
+. Na área menu:Protocolos[Host SAN], clique no botão *Add* ao lado de *e-Series SAN Host*.
+. Clique em *Exibir critérios de pesquisa de refino*.
++
+É apresentada a secção refinar critérios de pesquisa. Nesta seção, você pode selecionar o protocolo que se aplica, bem como outros critérios para a configuração, como sistema operacional, NetApp os e driver de vários caminhos de host.
+
+. Selecione os critérios que você sabe que deseja para sua configuração e veja quais elementos de configuração compatíveis se aplicam.
+. Conforme necessário, faça as atualizações para o seu sistema operativo e protocolo que são prescritas na ferramenta.
++
+As informações detalhadas para a configuração escolhida estão acessíveis na página Exibir configurações suportadas clicando na seta da página direita.
+
+
+
+
+
+== Verifique as restrições do NVMe sobre RoCE
+
+Antes de usar o NVMe em RoCE, consulte o https://mysupport.netapp.com/matrix["Ferramenta de Matriz de interoperabilidade do NetApp"^] para verificar as restrições mais recentes de controladora, host e recuperação.
+
+
+
+=== Restrições do interrutor
+
+
+CAUTION: *RISCO DE PERDA DE DADOS.* Você deve habilitar o controle de fluxo para uso com o Global Pause Control no switch para eliminar o risco de perda de dados em um ambiente NVMe sobre RoCE.
+
+
+
+=== Restrições de armazenamento e recuperação de desastres
+
+* Espelhamento assíncrono e síncrono não são compatíveis.
+* O thin Provisioning (a criação de thin volumes) não é suportado.
+

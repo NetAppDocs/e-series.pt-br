@@ -1,0 +1,35 @@
+---
+permalink: upgrade-controllers/index.html 
+sidebar: sidebar 
+keywords: E-Series, eseries, E2800, E5700, EF300, EF600, upgrade controller, upgrading controller, upgrade controller, upgrade DIMMs 
+summary: Visão geral da atualização de um array e-Series com a substituição de controladores. 
+---
+= Visão geral dos controladores de atualização
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Você pode atualizar seu storage array com a substituição de controladores existentes.
+
+
+
+== Componentes do controlador
+
+Um controlador consiste em uma placa, firmware e software. Ele controla as unidades e também implementa as funções do software de gerenciamento.
+
+
+
+== Quando utilizar este procedimento
+
+Normalmente, você usa esse procedimento quando deseja atualizar todos os controladores para um modelo ou plataforma diferente. Esse procedimento envolve a substituição de todos os controladores em uma bandeja de unidades e controlador
+
+Você também pode usar este procedimento nas seguintes situações:
+
+* Quando todos os controladores em uma bandeja de unidades e controlador encontram falhas de hardware e não estão mais funcionais.
+* Para atualizar os módulos de memória inline duplos (DIMMs) na bandeja de unidades e controlador substituindo ambos os controladores pelo mesmo modelo de controladores, mas com DIMMs diferentes.
+
+
+
+NOTE: Os cenários de atualização do HIC não são cobertos neste procedimento. Em vez disso, consulte os procedimentos de adição, atualização e substituição do HIC para o seu sistema e-Series.

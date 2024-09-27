@@ -1,0 +1,61 @@
+---
+permalink: web-services-proxy/overview-compat-concept.html 
+sidebar: sidebar 
+keywords: Web Services, WSP, SANtricity API, 
+summary: Compatibilidade e restrições para WSP. 
+---
+= Compatibilidade e restrições
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+A compatibilidade e as restrições a seguir se aplicam ao uso do proxy de serviços da Web.
+
+|===
+| Consideração | Compatibilidade ou restrição 
+
+
+ a| 
+Suporte HTTP
+ a| 
+O Proxy de Serviços Web permite o uso de HTTP ou HTTPS. (A versão incorporada dos Web Services requer HTTPS por motivos de segurança.)
+
+
+
+ a| 
+Sistemas de storage e firmware
+ a| 
+O Web Services Proxy pode gerenciar todos os sistemas de storage e-Series, incluindo uma combinação de sistemas mais antigos e os sistemas mais recentes das séries E2800, EF280, E5700, EF570, EF300 e EF600.
+
+
+
+ a| 
+Suporte IP
+ a| 
+O Web Services Proxy suporta o protocolo IPv4 ou o protocolo IPv6.
+
+
+NOTE: O protocolo IPv6 pode falhar quando o Proxy de Serviços Web tenta descobrir automaticamente o endereço de gerenciamento da configuração do controlador. As possíveis causas da falha incluem problemas durante o encaminhamento de endereços IP ou IPv6 ativado nos sistemas de armazenamento, mas não no servidor.
+
+
+
+ a| 
+Restrições de nome de arquivo NVSRAM
+ a| 
+O Web Services Proxy usa nomes de arquivo NVSRAM para identificar informações de versão com precisão. Portanto, você não pode alterar nomes de arquivos NVSRAM quando eles são usados com o Proxy de Serviços da Web. O Proxy de serviços da Web pode não reconhecer um arquivo NVSRAM renomeado como um arquivo de firmware válido.
+
+
+
+ a| 
+Symbol Web
+ a| 
+Symbol Web é um URL na API REST. Ele fornece acesso a quase todas as chamadas de símbolo. A função de símbolo faz parte do seguinte URL:
+
+`+http://host:port/devmgr/storage-system/storage array ID/symbol/symbol function+`
+
+
+NOTE: Os sistemas de armazenamento desabilitados por símbolos são suportados pelo Web Services Proxy.
+
+|===

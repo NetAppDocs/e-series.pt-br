@@ -1,0 +1,41 @@
+---
+sidebar: sidebar 
+permalink: vcenter-plugin/vc-olh-change-controller-ownership-of-a-volume.html 
+keywords: vCenter plugin, Plugin for vCenter, SANtricity plugin for vCenter 
+summary: Altere a propriedade preferida do controlador de um volume, de modo que a e/S para aplicativos de host seja direcionada pelo novo caminho. 
+---
+= Alterar a propriedade do controlador de um volume
+:hardbreaks:
+:allow-uri-read: 
+:experimental: 
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./media/
+
+
+[role="lead"]
+Você pode alterar a propriedade de um volume do controlador preferido, de modo que a e/S para aplicativos de host seja direcionada pelo novo caminho.
+
+.Antes de começar
+Se você não usar um driver multipath, quaisquer aplicativos de host que estejam usando o volume no momento devem ser desligados. Essa ação impede erros de aplicativo quando o caminho de e/S muda.
+
+.Sobre esta tarefa
+Você pode alterar a propriedade do controlador para um ou mais volumes em um pool ou grupo de volumes.
+
+.Passos
+. Na página Gerenciar, selecione o storage array que contém os volumes para os quais você deseja alterar a propriedade do controlador.
+. Selecione menu:provisionamento[Gerenciar volumes].
+. Selecione qualquer volume e, em seguida, selecione menu:mais[alterar propriedade].
++
+A caixa de diálogo alterar propriedade do volume é exibida. Todos os volumes na matriz de armazenamento aparecem nesta caixa de diálogo.
+
+. Use a lista suspensa *Preferred Owner* para alterar o controlador preferido para cada volume que você deseja alterar e confirme se deseja executar a operação.
+
+
+.Resultados
+* O sistema altera a propriedade do controlador do volume. E/S para o volume agora é direcionado através deste caminho de e/S.
+* O volume pode não usar o novo caminho de e/S até que o driver multipath reconfigure para reconhecer o novo caminho.
+
+
+Essa ação geralmente leva menos de cinco minutos.

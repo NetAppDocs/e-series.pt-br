@@ -1,0 +1,22 @@
+---
+permalink: install-hw-cabling/cable-overview-requirements-concept.html 
+sidebar: sidebar 
+keywords: cabling, cabling requirements, drive shelf cabling, controller cabling, E-Series, eseries, E2800, E5700, EF300, EF600, DE212C, DE224C, DE460C 
+summary: O cabeamento das gavetas e-Series requer vários componentes. 
+---
+= Requisitos
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Além das gavetas de unidades e gavetas de controladora, você pode precisar de alguns ou todos os componentes a seguir ao fazer o cabeamento do sistema de storage:
+
+* Cabos: SAS, Fibre Channel (FC), Ethernet, InfiniBand
+* Transcetores plugáveis de fator de forma pequeno (SFP) ou Quad SFP (QSFP)
+* Interrutores
+* Adaptadores de barramento do host (HBAs)
+* Adaptadores de canal de host (HCAs)
+* Placas de interface de rede (NICs)
+

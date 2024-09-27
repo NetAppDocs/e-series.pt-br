@@ -1,0 +1,74 @@
+---
+permalink: getting-started/getup-run-concept.html 
+sidebar: sidebar 
+keywords: E-Series, eseries, E2800, E5700, EF300, EF600, 
+summary: Para começar a trabalhar com sistemas e-Series, você instala componentes de hardware, configura sistemas host e configura o storage. 
+---
+= Início rápido para e-Series
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Para começar a trabalhar com sistemas e-Series, você instala componentes de hardware, configura sistemas host e configura o storage.
+
+.image:https://raw.githubusercontent.com/NetAppDocs/common/main/media/number-1.png["Um"] Instale o hardware
+[role="quick-margin-para"]
+Para instalar o hardware e-Series, acesse as instruções de instalação e configuração do storage array e do tipo de compartimento:
+
+[role="quick-margin-list"]
+* link:../install-hw-ef600/index.html["Séries EF600 ou EF300 com compartimento de 24 unidades"^]
+* https://library.netapp.com/ecm/ecm_download_file/ECMLP2842063["Série E2800/EF280 ou E5700/EF570 com compartimentos de 12 ou 24 unidades"^]
+* https://library.netapp.com/ecm/ecm_download_file/ECMLP2842061["Séries E2800 ou E5700 com compartimento de 60 unidades"^]
+
+
+.image:https://raw.githubusercontent.com/NetAppDocs/common/main/media/number-2.png["Dois"] Configure o gabinete
+[role="quick-margin-para"]
+Se você estiver configurando um novo gabinete para a matriz de armazenamento, você precisa mover o gabinete para seu local permanente, instalar o hardware e conectá-lo a uma fonte de alimentação. Para configurar o gabinete, acesse as seguintes instruções:
+
+[role="quick-margin-list"]
+* link:../install-hw-cabinet/index.html["Instale o gabinete 3040 40U"^]
+
+
+.image:https://raw.githubusercontent.com/NetAppDocs/common/main/media/number-3.png["Três"] Instale os trilhos
+[role="quick-margin-para"]
+Quando enviado, cada prateleira inclui hardware de montagem em rack. Para obter instruções detalhadas sobre a instalação dos trilhos, selecione seus tipos de trilho:
+
+[role="quick-margin-list"]
+* https://mysupport.netapp.com/ecm/ecm_download_file/ECMP1652045["Instale os trilhos de suporte ajustáveis"^]
+* https://mysupport.netapp.com/ecm/ecm_download_file/ECMLP2484194["Instale o gabinete 2U em um rack de quatro colunas"^]
+* https://mysupport.netapp.com/ecm/ecm_download_file/ECMM1280302["Instale uma gaveta de DE224C U em um rack de dois pilares"^]
+* http://docs.netapp.com/platstor/topic/com.netapp.doc.hw-rail-superrail/home.html["Instalar o SuperRail em um rack de quatro colunas (prateleiras DE224C/DE460C)"^]
+
+
+.image:https://raw.githubusercontent.com/NetAppDocs/common/main/media/number-4.png["Quatro"] Ligue os cabos
+[role="quick-margin-para"]
+As instruções de instalação e configuração (passo 1) incluem instruções para ligar cabos. No entanto, se você precisar de listas de cabos e transcetores suportados, práticas recomendadas para cabeamento e informações detalhadas sobre as portas do host para sua controladora, acesse as seguintes instruções:
+
+[role="quick-margin-list"]
+* link:../install-hw-cabling/index.html["Hardware do cabo e-Series"^]
+
+
+.image:https://raw.githubusercontent.com/NetAppDocs/common/main/media/number-5.png["Cinco"] Configurar hosts
+[role="quick-margin-para"]
+Para disponibilizar o armazenamento para um host, selecione um guia para o tipo de sistema operacional do host:
+
+[role="quick-margin-list"]
+* link:../config-linux/index.html["Configuração expressa do Linux"^]
+* link:../config-vmware/index.html["Configuração do VMware Express"^]
+* link:../config-windows/index.html["Configuração expressa do Windows"^]
+
+
+.image:https://raw.githubusercontent.com/NetAppDocs/common/main/media/number-6.png["Seis"] Configurar o armazenamento
+[role="quick-margin-para"]
+Para configurar o armazenamento, você pode acessar a interface baseada na Web, System Manager, apontando um navegador para o endereço IP do controlador. Um assistente de configuração ajuda você a começar com a configuração do sistema. Como alternativa, você também pode usar a interface de linha de comando (CLI).
+
+[role="quick-margin-para"]
+Selecione a interface que deseja usar:
+
+[role="quick-margin-list"]
+* https://docs.netapp.com/us-en/e-series-santricity/system-manager/index.html["Ajuda online do Gestor de sistema do SANtricity para 11,8x"^]
+* https://docs.netapp.com/us-en/e-series-santricity-117/system-manager/index.html["Ajuda online do Gestor de sistema do SANtricity para 11,7x"^]
+* https://docs.netapp.com/us-en/e-series-santricity-116/index.html["Ajuda online do Gestor de sistema do SANtricity para 11,6x"^]
+

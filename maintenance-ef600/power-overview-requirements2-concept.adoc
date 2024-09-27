@@ -1,0 +1,23 @@
+---
+permalink: maintenance-ef600/power-overview-requirements2-concept.html 
+sidebar: sidebar 
+keywords: replace EF300 power supply, replace EF600 power supply, 
+summary: Reveja os requisitos e considerações antes de substituir uma fonte de alimentação EF300 ou EF600. 
+---
+= Requisitos para a substituição da fonte de alimentação EF300 ou EF600
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Antes de substituir uma fonte de alimentação em uma matriz EF300 ou EF600, revise os seguintes requisitos.
+
+* Você precisa ter uma fonte de alimentação de substituição compatível com o modelo do compartimento de controladora ou do compartimento de unidade.
+
+
+
+NOTE: Não misture PSUs de diferentes tipos de tensão. Sempre substitua como por like.
+
+* Você deve ter uma pulseira antiestática ou ter tomado outras precauções antiestáticas.
+

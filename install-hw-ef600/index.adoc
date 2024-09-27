@@ -1,0 +1,27 @@
+---
+permalink: install-hw-ef600/index.html 
+sidebar: sidebar 
+keywords: EF300, EF600, installation 
+summary: Instale e configure o array EF300 e EF600. 
+---
+= Instalar e configurar sistemas de armazenamento EF300 e EF600
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+:pdfdir: ../pdf/
+
+
+[role="lead"]
+Saiba como instalar e configurar o sistema de armazenamento EF300 ou EF600.
+
+Você pode escolher um dos formatos a seguir para orientá-lo na instalação e configuração do seu novo sistema de armazenamento.
+
+* *PDF*
++
+Esta é https://library.netapp.com/ecm/ecm_download_file/ECMLP2851449["Poster em PDF"^] uma das instruções passo a passo com links ao vivo para conteúdo adicional.
+
+* *Instruções online*
++
+Estas são as instruções de configuração online descritas neste site. Comece com xref:prepare-for-install-task.adoc[Prepare-se para a instalação] para começar.
+
+

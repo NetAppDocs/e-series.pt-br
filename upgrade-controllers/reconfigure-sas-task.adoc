@@ -1,0 +1,105 @@
+---
+permalink: upgrade-controllers/reconfigure-sas-task.html 
+sidebar: sidebar 
+keywords: E-Series, eseries, E2800, E5700, EF300, EF600, upgrade controller, upgrading controller, reconfigure SAS-2, SAS-2, SAS-3, convert controller shelf, convert drive shelf, 
+summary: 'Você pode converter o compartimento da controladora em um array SAS-2 aprovado (DE224C, DE460C/E5700, E5600/EF560) em um compartimento de unidade e, em seguida, colocá-lo e quaisquer gavetas de unidade SAS-2 aprovadas associadas (DE1600, DE5600, DE6600) atrás de um novo array SAS-3 aprovado (E2800, EF5500/EF570) e gavetas de unidade SAS-3 aprovadas (DE212C, E2700, E550) sem preservação dos dados.' 
+---
+= Reconfigure um sistema SAS-2 por trás de um novo compartimento de controladora SAS-3
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Se necessário, você pode reconfigurar seu sistema SAS-2 para ser usado atrás de um novo compartimento de controladora SAS-3.
+
+Os storages SAS-2 aprovados incluem o E2700, E550/EF5500 e E5600/EF560. As gavetas de unidade SAS-2 aprovadas incluem o DE1600, DE5600 e DE6600. Os storages SAS-3 aprovados incluem o E2800 e o E5700/EF570. As gavetas de unidade SAS-3 aprovadas incluem DE212C, DE224C e DE460C.
+
+.Sobre esta tarefa
+Nesse procedimento, você converte o compartimento de controladora em um array SAS-2 aprovado em um compartimento de unidade e, em seguida, coloca esse compartimento atrás de um novo array e compartimentos de unidades SAS-3 aprovados, sem preservação de dados.
+
+Este procedimento se aplica aos compartimentos de unidades IOM12 e IOM12B.
+
+
+NOTE: Os módulos IOM12B só são suportados no SANtricity os 11.70.2 em diante. Certifique-se de que o firmware do controlador foi atualizado antes de instalar ou atualizar para um IOM12B.
+
+.Antes de começar
+Devido à complexidade deste procedimento, é necessário o seguinte:
+
+* Tem de ter um pedido de variação de produto (FPVR) de funcionalidade. Para arquivar um FPVR, entre em Contato com os Serviços profissionais da NetApp.
++
+
+NOTE: A não aquisição de um FPVR antes de tentar este procedimento pode resultar em falha da unidade e bloqueio do controlador.
+
+* Se você conseguir fazer backup de seus dados, poderá realizar este procedimento sem a ajuda dos Serviços profissionais da NetApp.
+* Se você não puder fazer backup de seus dados, entre em Contato com os Serviços profissionais da NetApp para obter assistência com este procedimento.
+* Certifique-se de que ambos os arrays estão preparados para o procedimento:
++
+** * Array existente*: Array existente com o SANtricity os 8,25 ou posterior que é ativado.
+** *New array*: Novo array descompactado e desativado.
+
+
+* Registre o número de série do compartimento da controladora SAS-2 que você estará convertendo para um compartimento de unidade.
+
+
+
+
+== Passo 1: Desligar os controladores (preservação não de dados)
+
+Todas as operações devem ser encerradas antes de poder desligar os controladores.
+
+.Passos
+. Se o storage SAS-2 existente ainda estiver acessível, exclua todos os grupos de volume, desligue os controladores e remova todos os cabos.
+. Registre o número de série do compartimento da controladora SAS-2 que você estará convertendo para um compartimento de unidade.
+. Se a segurança da unidade estiver em uso para o array existente, verifique se a chave de segurança está disponível.
+
+
+
+
+== Passo 2: Instalar os controladores (preservação não de dados)
+
+Após o encerramento bem-sucedido, você pode substituir os controladores no array.
+
+.Passos
+. Substitua ambas as controladoras no array existente por IOMs ou ESMs.
+. Se possível, use os cabos de host e os cabos de rede do storage existente e conete-os aos controladores do novo array.
++
+
+NOTE: Dependendo das conexões do host do novo array, podem ser necessários cabos diferentes.
+
+. Faça o cabeamento das gavetas de unidade atrás das controladoras no novo array.
++
+A bandeja de unidades e controlador existente e todas as bandejas de unidades anexas se tornam compartimentos de unidades e podem ser cabeadas para as controladoras no novo array.
+
++
+
+NOTE: A conexão do SAS-2 ao SAS-3 requer cabos SAS HD para mini-SAS. Para obter informações mais detalhadas de cabeamento para a configuração específica do seu compartimento de expansão e controlador, consulte link:../install-hw-cabling/index.html["Cabeamento"]ou o https://library.netapp.com/ecm/ecm_download_file/ECMLP2588749["Guia de cabeamento de hardware e-Series"^].
+
+
+
+
+
+== Passo 3: Ligar os controladores (preservação não de dados)
+
+Após a conclusão da instalação, ligue os controladores e envie as alterações de configuração para o suporte técnico da NetApp.
+
+.Passos
+. Ligue o novo array, incluindo quaisquer compartimentos de unidade anexados.
+. Configure a porta de gerenciamento e os endereços IP instalando o https://mysupport.netapp.com/tools/info/ECMLP2563821I.html["Conexão rápida do SANtricity"^] utilitário.
+. Se a segurança da unidade estiver em uso na matriz existente, importe a chave de segurança.
+. Se você não conseguiu excluir os grupos de volume de sua matriz existente antes de executar este procedimento, você deve definir todas as unidades estrangeiras para que apareçam como nativas. Para obter informações detalhadas sobre como definir unidades como nativas, consulte a Ajuda on-line do SANtricity.
+. Envie suas alterações de configuração para o suporte técnico da NetApp.
++
+.. Obtenha o número de série da bandeja de unidades e controlador antiga gravada na Etapa 2.
+.. Inicie sessão no http://mysupport.netapp.com/eservice/assistant["Site de suporte da NetApp"^].
+.. Na lista suspensa em *Categoria de feedback*, selecione *Produtos instalados > solicitação de desintegração*.
+.. Selecione *criar caso*. Digite o texto a seguir na caixa de texto *Comentários*, substituindo o número de série da bandeja de unidades e controlador por número de série:
++
+`Please decommission this serial number as the entitlement has been moved to another serial number in the system. Please reference this in the SN notes.`
+
+.. Selecione *Enviar*.
+
+
+
+
+As alterações de configuração do SAS-2 para o SAS-3 concluídas são enviadas ao suporte técnico da NetApp.

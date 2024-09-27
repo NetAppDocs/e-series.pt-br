@@ -1,0 +1,87 @@
+---
+sidebar: sidebar 
+permalink: vcenter-plugin/vc-olh-change-configuration-settings-for-a-pool.html 
+keywords: vCenter plugin, Plugin for vCenter, SANtricity plugin for vCenter 
+summary: Edite as configurações de um pool, incluindo seu nome, configurações de alertas de capacidade, prioridades de modificação e capacidade de preservação. 
+---
+= Altere as configurações de um pool
+:hardbreaks:
+:allow-uri-read: 
+:experimental: 
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./media/
+
+
+[role="lead"]
+Você pode editar as configurações de um pool, incluindo seu nome, configurações de alertas de capacidade, prioridades de modificação e capacidade de preservação.
+
+.Sobre esta tarefa
+Esta tarefa descreve como alterar as configurações de um pool.
+
+
+NOTE: Você não pode alterar o nível RAID de um pool usando a interface do plugin. O plugin configura automaticamente pools como RAID 6.
+
+.Passos
+. Na página Gerenciar, selecione o storage array com o pool.
+. Selecione menu:provisionamento[Configurar pools e grupos de volume].
+. Selecione o pool que você deseja editar e clique em *Exibir/Editar configurações*.
++
+A caixa de diálogo Configurações do pool é exibida.
+
+. Selecione a guia *Configurações* e edite as configurações do pool conforme apropriado.
++
+.Detalhes do campo
+[%collapsible]
+====
+[cols="25h,~"]
+|===
+| Definição | Descrição 
+
+
+ a| 
+Nome
+ a| 
+Você pode alterar o nome fornecido pelo usuário do pool. Especificar um nome para um pool é necessário.
+
+
+
+ a| 
+Alertas de capacidade
+ a| 
+Você pode enviar notificações de alerta quando a capacidade livre em um pool atingir ou exceder um limite especificado. Quando os dados armazenados no pool excedem o limite especificado, o plugin envia uma mensagem, permitindo que você adicione mais espaço de armazenamento ou exclua objetos desnecessários. Os alertas são exibidos na área notificações no Painel de instrumentos e podem ser enviados do servidor para administradores por e-mail e mensagens de intercetação SNMP. Você pode definir os seguintes alertas de capacidade:
+
+** *Alerta crítico* -- este alerta crítico notifica-o quando a capacidade livre no pool atinge ou excede o limite especificado. Utilize os controlos giratórios para ajustar a percentagem de limiar. Selecione a caixa de verificação para desativar esta notificação.
+** *Alerta antecipado* -- este alerta antecipado notifica você quando a capacidade livre em um pool está atingindo um limite especificado. Utilize os controlos giratórios para ajustar a percentagem de limiar. Selecione a caixa de verificação para desativar esta notificação.
+
+
+
+
+ a| 
+Prioridades de modificação
+ a| 
+Você pode especificar os níveis de prioridade para operações de modificação em um pool em relação ao desempenho do sistema. Uma prioridade mais alta para operações de modificação em um pool faz com que uma operação seja concluída mais rápido, mas pode diminuir o desempenho de e/S do host. Uma prioridade menor faz com que as operações demorem mais tempo, mas a performance de e/S do host é menos afetada. Você pode escolher entre cinco níveis de prioridade: Mais baixo, baixo, médio, alto e mais alto. Quanto maior for o nível de prioridade, maior será o impacto na e/S do host e no desempenho do sistema.
+
+** *Prioridade de reconstrução crítica* -- esta barra deslizante determina a prioridade de uma operação de reconstrução de dados quando várias falhas de unidade resultam em uma condição em que alguns dados não têm redundância e uma falha de unidade adicional pode resultar em perda de dados.
+** *Prioridade de reconstrução degradada* -- esta barra deslizante determina a prioridade da operação de reconstrução de dados quando ocorreu uma falha na unidade, mas os dados ainda têm redundância e uma falha adicional na unidade não resulta na perda de dados.
+** *Prioridade de operação em segundo plano* -- esta barra deslizante determina a prioridade das operações de fundo do pool que ocorrem enquanto o pool está em um estado ideal. Essas operações incluem expansão dinâmica de volume (DVE), formato de disponibilidade instantânea (IAF) e migração de dados para uma unidade substituída ou adicionada.
+
+
+
+
+ a| 
+Capacidade de preservação ("capacidade de otimização" para o EF600 ou EF300)
+ a| 
+*Capacidade de preservação* -- você pode definir o número de unidades para determinar a capacidade reservada no pool para dar suporte a possíveis falhas de unidade. Quando ocorre uma falha de unidade, a capacidade de preservação é utilizada para manter os dados reconstruídos. Os pools usam capacidade de preservação durante o processo de reconstrução de dados em vez de unidades hot spare, que são usadas em grupos de volume. Utilize os controlos giratórios para ajustar o número de unidades. Com base no número de unidades, a capacidade de preservação no pool aparece ao lado da caixa giratória. Tenha em mente as seguintes informações sobre a capacidade de preservação.
+
+** Como a capacidade de preservação é subtraída da capacidade livre total de um pool, a quantidade de capacidade que você reserva afeta a quantidade de capacidade livre disponível para criar volumes. Se você especificar 0 para a capacidade de preservação, toda a capacidade livre no pool será usada para a criação de volume.
+** Se você diminuir a capacidade de preservação, aumentará a capacidade que pode ser usada para volumes de pool.
+
+
+*Capacidade de otimização adicional (somente arrays EF600 e EF300)* -- quando um pool é criado, uma capacidade de otimização recomendada é gerada que fornece um equilíbrio entre capacidade disponível versus desempenho e vida útil do desgaste. Você pode ajustar esse equilíbrio movendo o controle deslizante para a direita para melhor desempenho e vida útil do desgaste à custa do aumento da capacidade disponível, ou movendo-o para a esquerda para maior capacidade disponível à custa de um melhor desempenho e vida útil do desgaste. As unidades SSD terão vida útil mais longa e melhor desempenho máximo de gravação quando uma parte de sua capacidade não for alocada. Para unidades associadas a um pool, a capacidade não alocada é composta pela capacidade de preservação de um pool, pela capacidade livre (capacidade não usada por volumes) e por uma parte da capacidade utilizável reservada como capacidade de otimização adicional. A capacidade de otimização adicional garante um nível mínimo de capacidade de otimização, reduzindo a capacidade utilizável, e, como tal, não está disponível para criação de volume.
+
+|===
+====
+. Clique em *Salvar*.
+

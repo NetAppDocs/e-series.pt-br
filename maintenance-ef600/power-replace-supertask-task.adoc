@@ -1,0 +1,96 @@
+---
+permalink: maintenance-ef600/power-replace-supertask-task.html 
+sidebar: sidebar 
+keywords: replace EF300 power supply, replace EF600 power supply, 
+summary: Substitua as fontes de alimentação quando falharem no controlador EF300 ou EF600. 
+---
+= Substitua uma fonte de alimentação EF300 ou EF600
+:allow-uri-read: 
+:experimental: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Você pode substituir uma fonte de alimentação quando ela falhar em seu controlador EF300 ou EF600.
+
+Se uma fonte de alimentação falhar, você deve substituí-la o mais rápido possível para que o compartimento da controladora tenha uma fonte de alimentação redundante.
+
+.Antes de começar
+* Reveja os detalhes no Recovery Guru para confirmar que existe um problema com a fonte de alimentação. Selecione *Reverifique* no Recovery Guru para garantir que nenhum outro item deve ser resolvido primeiro.
+* Verifique se o LED âmbar de atenção na fonte de alimentação está aceso, indicando que a fonte de alimentação ou a ventoinha integrada tem uma avaria.
+* Certifique-se de que tem o seguinte:
++
+** Uma fonte de alimentação de substituição compatível com o compartimento do controlador.
+** Uma pulseira antiestática, ou você tomou outras precauções antiestáticas.
+** Uma estação de gerenciamento com um navegador que pode acessar o Gerenciador de sistema do SANtricity para o controlador. (Para abrir a interface do System Manager, aponte o navegador para o nome de domínio ou endereço IP do controlador.)
+
+
+
+
+
+
+== Etapa 1: Remova a fonte de alimentação com falha
+
+Remova uma fonte de alimentação com falha para que você possa substituí-la por uma nova.
+
+.Passos
+. Desembale a nova fonte de alimentação e coloque-a numa superfície nivelada perto do compartimento de unidades.
++
+Guarde todos os materiais de embalagem para utilização quando devolver a fonte de alimentação com falha.
+
+. Desligue os cabos de alimentação:
++
+.. Abra o retentor do cabo de alimentação e, em seguida, desconete o cabo de alimentação da fonte de alimentação.
+.. Desconete o cabo de alimentação da fonte de alimentação.
+
+
+. Localize a patilha à direita da fonte de alimentação e prima-a em direção à unidade de fonte de alimentação.
++
+image::../media/psup_2.png[psup 2]
+
+. Localize a alça na parte frontal da fonte de alimentação.
+. Utilize a pega para deslizar a fonte de alimentação para fora do sistema.
++
+
+CAUTION: Ao remover uma fonte de alimentação, utilize sempre duas mãos para suportar o seu peso.
+
++
+image::../media/psup_3.png[psup 3]
+
+
+
+
+
+== Passo 2: Instale uma nova fonte de alimentação e complete a substituição
+
+Depois de remover a fonte de alimentação com falha, instale uma nova.
+
+.Passos
+. Utilizando ambas as mãos, apoie e alinhe as extremidades da fonte de alimentação com a abertura no chassis do sistema e, em seguida, empurre cuidadosamente a fonte de alimentação para o chassis utilizando a pega do excêntrico.
++
+As fontes de alimentação são chaveadas e só podem ser instaladas de uma forma.
+
++
+
+CAUTION: Não utilize força excessiva ao deslizar a fonte de alimentação para o sistema; pode danificar o conetor.
+
++
+image::../media/psup_4.png[psup 4]
+
+. Confirme se seu status é ideal e verifique os LEDs de atenção do compartimento do controlador.
++
+Se o estado não for o ideal ou se algum dos LEDs de atenção estiver aceso, confirme se todos os cabos estão corretamente encaixados e o recipiente do controlador está instalado corretamente. Se necessário, remova e reinstale o recipiente do controlador.
+
++
+
+NOTE: Se não conseguir resolver o problema, contacte o suporte técnico.
+
+. No Gerenciador de sistema do SANtricity, clique em menu:suporte[Centro de atualização] para garantir que a versão mais recente do SANtricity os esteja instalada.
++
+Conforme necessário, instale a versão mais recente.
+
+
+
+.O que se segue?
+A substituição da fonte de alimentação está concluída. Pode retomar as operações normais.

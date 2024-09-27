@@ -1,0 +1,168 @@
+---
+permalink: upgrade-controllers/overview-requirements-concept.html 
+sidebar: sidebar 
+keywords: E-Series, eseries, E2800, E5700, EF300, EF600, upgrade controller, upgrading controller, upgrade controller requirements, upgrade compatibility, upgrade SAS shelf, upgrade SAS shelves, upgrade SAS enclosures, SAS-2 to SAS-3 
+summary: Analisar os requisitos para atualização e substituição de controladores e-Series. 
+---
+= Considerações sobre a atualização
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Antes de atualizar controladores, reveja as seguintes considerações.
+
+
+
+== Requisitos de hardware e firmware
+
+* * Atualizações de controladores duplex e simplex*
++
+Para bandejas de unidades e controlador duplex, você substitui ambos os controladores. Para bandejas de unidades e controlador simplex, você substitui a controladora. Em ambos os casos, é necessário desligar a bandeja de unidades e controlador Como resultado, você não pode acessar dados na matriz de armazenamento até concluir a substituição com êxito.
+
+* *Bandejas e prateleiras*
++
+Os storage arrays com um compartimento de controladora E2800 ou E5700 geralmente são gerenciados com a interface de usuário do Gerenciador de sistemas do SANtricity. Você também pode usar a interface SANtricity Storage Manager para gerenciar gavetas de controladora E2800 ou E5700. Todas as outras bandejas de unidades e controlador mencionadas neste procedimento usam o SANtricity Storage Manager.
+
+* *Pilhas do controlador*
++
+Um novo controlador é enviado sem uma bateria instalada. Quando possível, deve remover a bateria do controlador antigo e, em seguida, instalar a bateria no novo controlador. No entanto, para algumas atualizações do controlador, a bateria do controlador antigo não é compatível com o novo controlador. Nesses casos, você deve solicitar uma bateria juntamente com o novo controlador e ter essa bateria disponível antes de iniciar essas tarefas.
+
+* *Identificação do fornecedor*
++
+Algumas atualizações de controladora fazem com que a ID do fornecedor no SCSI Inquiry Data mude de `LSI` para `NETAPP`. Quando a ID do fornecedor muda de `LSI` para `NETAPP`, etapas adicionais são necessárias nos sistemas operacionais Windows, VMware e AIX para recuperar dispositivos. Os passos para estes sistemas operativos estão incluídos neste procedimento de atualização.
+
+* *Espelhamento síncrono e Espelhamento assíncrono*
++
+Se o storage array participar do espelhamento síncrono, somente conexões iSCSI ou Fibre Channel serão suportadas entre o local principal e o local remoto. Se a configuração da placa de interface do host (HIC) em seus novos controladores não incluir conexões iSCSI ou Fibre Channel, o espelhamento síncrono não será suportado.
+
++
+Para espelhamento assíncrono, o storage array local e o storage array remoto podem executar diferentes versões de firmware. A versão mínima de firmware suportada é a versão 7,84 do firmware da SANtricity.
+
+* *Limites de objetos de armazenamento*
++
+Se você alterar seus controladores de modelos 5x00 para modelos 2x00, sua nova configuração de storage array oferecerá suporte a números menores de alguns objetos de armazenamento (por exemplo, volumes) no software de gerenciamento de armazenamento do que sua configuração antiga. Você deve garantir que sua configuração antiga não exceda os limites de objetos de armazenamento. Consulte http://hwu.netapp.com/home.aspx["Hardware Universe"^] para obter mais informações.
+
+
+
+
+
+== Atualize para modelos mais recentes
+
+Se você estiver substituindo os controladores para atualizar para um novo modelo, lembre-se de que seu storage array atual pode ter recursos premium instalados que o novo modelo não pode suportar. Por exemplo, os controladores E2700 não suportam o recurso premium herdado do Snapshots.
+
+Se você substituir os controladores E2600 por E2700 e o storage array estiver usando o recurso Snapshots herdado, desative esse recurso e exclua ou converta todos os volumes (ou seja, snapshots, repositórios) associados a esse recurso antes de substituir os controladores. Você pode converter snapshots legados para o recurso Snapshots atualizado. Antes de atualizar uma bandeja de unidades e controlador, desative todos os recursos premium usados em seu storage array que não sejam suportados nos novos controladores.
+
+
+
+== Compatibilidade de atualização
+
+[role="lead"]
+Revise os caminhos de atualização suportados para cada modelo de storage array.
+
+
+
+=== De E2x00 a E2x00
+
+* *Bateria*: Reutilize a bateria antiga.
+* *ID do fornecedor*: Etapas adicionais necessárias.
+* *Suporte a recursos*: Os snapshots legados não são suportados no E2700.
+* *Gavetas SAS-2*: Os controladores E2800 não podem ser colocados nas gavetas SAS-2.
+
+
+
+
+=== De E2x00 a E5x00
+
+* *Bateria*: Encomende uma nova bateria.
+* *ID do fornecedor*: Etapas adicionais são necessárias ao atualizar de E2600 para E5500 ou E5600, ou ao atualizar de E2700 para E5400.
+* *Suporte de recursos*:
++
+** Os snapshots legados não são suportados no E5500 ou no E5600.
+** O espelhamento remoto de volume legado (RVM) não é suportado no E5500 ou E5600 com HICs iSCSI.
+** O Data Assurance não é suportado no E5500 ou E5600 com HICs iSCSI.
+** Controladoras E5700 não devem ser colocadas nas gavetas SAS-2.
+
+
+* *Gavetas SAS-3*: As controladoras E5400, E5500 e E5600 não devem ser colocadas nas gavetas SAS-3.
+
+
+
+
+=== De E5x00 a E2x00
+
+* *Bateria*: Encomende uma nova bateria.
+* *ID do fornecedor*: Etapas adicionais são necessárias ao atualizar de E5500 ou E5600 para E2600, ou ao atualizar de E5400 para E2700.
+* *Suporte a recursos*: Os snapshots legados não são suportados no E2700.
+* *Gavetas SAS-3*: As controladoras E5400, E5500 e E5600 não devem ser colocadas nas gavetas SAS-3.
+
+
+
+
+=== De E5x00 a E5x00
+
+* *Bateria*: Reutilize a bateria antiga.
+* *ID do fornecedor*: Etapas adicionais necessárias ao atualizar de E5400 para E5500 ou E5600.
+* *Suporte de recursos*:
++
+** Os snapshots legados não são suportados no E5500 ou no E5600.
+** O espelhamento remoto de volume legado (RVM) não é suportado no E5400 ou E5500 com HICs iSCSI.
+** O Data Assurance não é suportado no E5400 ou E5500 com HICs iSCSI.
+** Controladoras E5700 não devem ser colocadas nas gavetas SAS-2.
+
+
+* *Gavetas SAS-3*: As controladoras E5400, E5500 e E5600 não devem ser colocadas nas gavetas SAS-3.
+
+
+
+
+=== De EF5x0 a EF5x0
+
+* *Bateria*: Reutilize a bateria antiga.
+* *ID do fornecedor*: Etapas adicionais necessárias ao atualizar de EF540 para EF550 ou EF560.
+* *Suporte de recursos*:
++
+** Nenhum Snapshots legado para EF550/EF560.
+** Sem garantia de dados para EF550/EF560 com iSCSI.
+** Controladoras EF570 não devem ser colocadas nas gavetas SAS-3.
+
+
+* *Gavetas SAS-3*: As controladoras EF540, EF550 e EF560 não devem ser colocadas nas gavetas SAS-3.
+
+
+
+
+=== Gabinetes SAS
+
+O E5700 suporta gabinetes SAS-2 de DE5600 GB e DE6600 GB através da atualização da cabeça. Quando uma controladora E5700 é instalada em gabinetes SAS-2, o suporte para portas de host base é desativado.
+
+|===
+| Gavetas SAS-2 | Gavetas SAS-3 
+
+
+ a| 
+As gavetas SAS-2 incluem os seguintes modelos:
+
+* Bandejas de unidades DE1600, DE5600 e DE6600
+* Bandejas de unidades e controlador E5400, E5500 e E5600
+* Flash arrays EF540, EF550 e EF560
+* Bandejas de unidades e controlador E2600 e E2700
+
+ a| 
+As gavetas SAS-3 incluem os seguintes modelos:
+
+* E2800 gavetas de controladora
+* E5700 gavetas de controladora
+* Compartimentos de unidades DE212C, DE224C e DE460C
+
+
+|===
+
+
+=== Proteção do investimento SAS-2 para SAS-3
+
+Você pode reconfigurar seu sistema SAS-2 para ser usado atrás de um novo compartimento de controladora SAS-3 (E57XX/EF570/E28XX).
+
+
+NOTE: Este procedimento requer um pedido de variação de produto (FPVR). Para arquivar um FPVR, entre em Contato com sua equipe de vendas.

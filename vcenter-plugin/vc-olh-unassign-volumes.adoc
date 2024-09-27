@@ -1,0 +1,44 @@
+---
+sidebar: sidebar 
+permalink: vcenter-plugin/vc-olh-unassign-volumes.html 
+keywords: vCenter plugin, Plugin for vCenter, SANtricity plugin for vCenter 
+summary: Se você não precisar mais de acesso de e/S a um volume, poderá desatribuí-lo a partir do cluster de host ou host. 
+---
+= Anular atribuição de volumes
+:hardbreaks:
+:allow-uri-read: 
+:experimental: 
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./media/
+
+
+[role="lead"]
+Se você não precisar mais de acesso de e/S a um volume, poderá desatribuí-lo a partir do cluster de host ou host.
+
+.Sobre esta tarefa
+Mantenha estas diretrizes em mente quando você anular a atribuição de um volume:
+
+* Se você estiver removendo o último volume atribuído de um cluster de host e o cluster de host também tiver hosts com volumes atribuídos específicos, certifique-se de remover ou mover essas atribuições antes de remover a última atribuição para o cluster de host.
+* Se um cluster de host, um host ou uma porta de host for atribuído a um volume registrado no sistema operacional, você deverá limpar esse Registro antes de remover esses nós.
+
+
+.Passos
+. Na página Gerenciar, selecione a matriz de armazenamento com a conexão do host.
+. Selecione menu:provisionamento[Configurar hosts].
++
+A página Configurar hosts será exibida.
+
+. Selecione o host ou cluster de host que você deseja editar e clique em *UnAssign volumes*.
++
+É apresentada uma caixa de diálogo que mostra todos os volumes que estão atualmente atribuídos.
+
+. Marque a caixa de seleção ao lado de cada volume que você deseja cancelar a atribuição ou marque a caixa de seleção no cabeçalho da tabela para selecionar todos os volumes.
+. Clique em *UnAssign*.
+
+
+.Resultados
+* Os volumes que não foram atribuídos estão disponíveis para uma nova atribuição.
+* Até que as alterações sejam configuradas no host, o volume ainda é reconhecido pelo sistema operacional do host.
+

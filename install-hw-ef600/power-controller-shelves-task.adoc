@@ -1,0 +1,55 @@
+---
+permalink: install-hw-ef600/power-controller-shelves-task.html 
+sidebar: sidebar 
+keywords: EF300, EF600, installation, power on, power cables 
+summary: Conete os cabos de alimentação e ligue as gavetas de unidade. 
+---
+= Alimente as gavetas da controladora
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Saiba como conectar os cabos de alimentação e ligar as gavetas de unidade.
+
+.Antes de começar
+Certifique-se de fazer o seguinte:
+
+* Instale o hardware.
+* Tome precauções antiestáticas.
+
+
+.Passos
+. Ligue os cabos de alimentação, um a cada controlador (EF600 ilustrado abaixo).
++
+|===
+
+
+ a| 
+image:../media/power_cable_inst-hw-ef600.png[""]
+ a| 
+*Cabos de alimentação*
+
+|===
++
+|===
+
+
+ a| 
+image:../media/cabling_power.png[""]
+
+|===
+. Conete os dois cabos de alimentação, um de cada controlador, a duas unidades de distribuição de energia (PDUs) separadas no gabinete ou no rack.
++
+
+CAUTION: O acesso a um recipiente de controlador EF300 ou EF600 a partir do compartimento pode ser bloqueado por PDUs de terceiros. Não utilize tomadas elétricas diretamente atrás do recipiente do controlador.
+
+. Permita que o controlador inicialize por cinco minutos antes de concluir a configuração e configuração do sistema de armazenamento.
+
+
+.Resultado
+O controlador arranca automaticamente. Os LEDs piscam e os ventiladores começam a indicar que o controlador está ligado.
+
+
+NOTE: Os fãs são muito barulhentos quando se ligam pela primeira vez.

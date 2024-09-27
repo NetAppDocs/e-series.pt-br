@@ -1,0 +1,41 @@
+---
+permalink: config-windows/index.html 
+sidebar: sidebar 
+keywords: express Windows configuration, software configuration, Windows host, E2800, E5700, EF300, EF600, E-Series, eseries 
+summary: Use a configuração expressa para um host Windows com um sistema e-Series. 
+---
+= Visão geral da configuração do Windows Express
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+O método Windows Express para instalar sua matriz de armazenamento e acessar o Gerenciador de sistema do SANtricity é apropriado para configurar um host autônomo do Windows em um sistema e-Series. Ele foi projetado para colocar o sistema de storage em funcionamento o mais rápido possível com pontos de decisão mínimos.
+
+
+
+== Descrição geral do procedimento
+
+O método expresso inclui as seguintes etapas, que também são descritas no link:understand-windows-concept.html["Fluxo de trabalho do Windows"].
+
+. Configure um dos seguintes ambientes de comunicação:
++
+** link:fc-perform-specific-task.html["Fibre Channel (FC)"]
+** link:iscsi-perform-specific-task.html["ISCSI"]
+** link:sas-perform-specific-task.html["SAS"]
+
+
+. Crie volumes lógicos no storage array.
+. Disponibilize os volumes para o host de dados.
+
+
+
+
+== Encontre mais informações
+
+* Ajuda on-line -- descreve como usar o Gerenciador de sistemas do SANtricity para concluir as tarefas de gerenciamento de storage e configuração. Está disponível dentro do produto.
+* https://kb.netapp.com/["Base de conhecimento da NetApp"^] (Um banco de dados de artigos) - fornece informações de solução de problemas, perguntas frequentes e instruções para uma ampla gama de produtos e tecnologias NetApp.
+* http://mysupport.netapp.com/matrix["Ferramenta de Matriz de interoperabilidade do NetApp"^] -- permite pesquisar configurações de produtos e componentes NetApp que atendam aos padrões e requisitos especificados pela NetApp.
+* http://mysupport.netapp.com/documentation/productlibrary/index.html?productID=61343["Documentação do NetApp: Utilitários do host"^] -- fornece documentação para a versão atual dos Utilitários do Windows Unified Host.
+

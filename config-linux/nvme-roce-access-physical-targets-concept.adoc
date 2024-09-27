@@ -1,0 +1,84 @@
+---
+permalink: config-linux/nvme-roce-access-physical-targets-concept.html 
+sidebar: sidebar 
+keywords: NVMe volume physical, express linux configuration, software configuration, linux host, E2800, E5700, EF300, EF600, E-Series, eseries 
+summary: Você pode configurar a e/S direcionada para o destino do dispositivo com base na versão Linux. 
+---
+= Acessar volumes NVMe para destinos de dispositivos NVMe físicos
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Você pode configurar a e/S direcionada para o destino do dispositivo com base no sistema operacional (e pelo método multipathing de extensão) que você está usando.
+
+Para RHEL 8, RHEL 9 e SLES 15, e/S é direcionado para os destinos de dispositivos NVMe físicos pelo host Linux. Uma solução de multipathing NVMe nativa gerencia os caminhos físicos subjacentes ao único dispositivo físico aparente exibido pelo host.
+
+
+
+== Dispositivos NVMe físicos são destinos de I/O.
+
+É melhor prática executar I/o para os links em `/dev/disk/by-id/nvme-eui.[uuid#]` vez de diretamente para o caminho físico do dispositivo nvme `/dev/nvme[subsys#]n[id#]` . O link entre esses dois locais pode ser encontrado usando o seguinte comando:
+
+[listing]
+----
+# ls /dev/disk/by-id/ -l
+lrwxrwxrwx 1 root root 13 Oct 18 15:14 nvme-eui.0000320f5cad32cf00a0980000af4112 -> ../../nvme0n1
+----
+A execução de e/S `/dev/disk/by-id/nvme-eui.[uuid#]` será passada diretamente pela `/dev/nvme[subsys#]n[id#]` qual tem todos os caminhos virtualizados por baixo dela usando a solução de multipathing NVMe nativa.
+
+Você pode exibir seus caminhos executando:
+
+[listing]
+----
+# nvme list-subsys
+----
+Exemplo de saída:
+
+[listing]
+----
+nvme-subsys0 - NQN=nqn.1992-08.com.netapp:5700.600a098000a522500000000589aa8a6
+\
++- nvme0 rdma traddr=192.4.21.131 trsvcid=4420 live
++- nvme1 rdma traddr=192.4.22.141 trsvcid=4420 live
+----
+Se você especificar um dispositivo de namespace ao usar o `nvme list-subsys` comando, ele fornecerá informações adicionais sobre os caminhos para esse namespace:
+
+[listing]
+----
+# nvme list-subsys /dev/nvme0n1
+nvme-subsys0 - NQN=nqn.1992-08.com.netapp:5700.600a098000af44620000000058d5dd96
+\
+ +- nvme0 rdma traddr=192.168.130.101 trsvcid=4420 live non-optimized
+ +- nvme1 rdma traddr=192.168.131.101 trsvcid=4420 live non-optimized
+ +- nvme2 rdma traddr=192.168.130.102 trsvcid=4420 live optimized
+ +- nvme3 rdma traddr=192.168.131.102 trsvcid=4420 live optimized
+----
+Também há ganchos nos comandos multipath para permitir que você visualize as informações de caminho para failover nativo por meio deles também:
+
+[listing]
+----
+#multipath -ll
+----
+
+NOTE: Para visualizar as informações do caminho, o seguinte deve ser definido em /etc/multipath.conf:
+
+[listing]
+----
+
+defaults {
+        enable_foreign nvme
+}
+----
+Exemplo de saída:
+
+[listing]
+----
+eui.0000a0335c05d57a00a0980000a5229d [nvme]:nvme0n9 NVMe,Netapp E-Series,08520001
+size=4194304 features='n/a' hwhandler='ANA' wp=rw
+|-+- policy='n/a' prio=50 status=optimized
+| `- 0:0:1 nvme0c0n1 0:0 n/a optimized    live
+`-+- policy='n/a' prio-10 status=non-optimized
+`- 0:1:1 nvme0c1n1 0:0 n/a non-optimized    live
+----

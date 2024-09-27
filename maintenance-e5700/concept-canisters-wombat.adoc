@@ -1,0 +1,14 @@
+---
+permalink: maintenance-e5700/concept-canisters-wombat.html 
+sidebar: sidebar 
+keywords: canister, power-fan, power, supplies, supply, redundant, source, cooling, 12-drive, 24-drive, drive, shelf, controller, power, redundancy, 60-drive, fan, prepare, replace, remove, fail, install, complete, replacement 
+summary:  
+---
+= Canisters
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Os coletores consistem em três tipos diferentes: Coletores de ventilador de energia (fontes de alimentação) que fornecem uma fonte de alimentação redundante e resfriamento adequado em um compartimento de controladora de 12 ou 24 unidades ou compartimento de unidades; coletores de energia usados para redundância de energia em um compartimento de controladora de 60 unidades ou compartimento de unidades; e coletores de ventilador usados para resfriamento do compartimento de controladora de 60 unidades ou compartimento de unidades.

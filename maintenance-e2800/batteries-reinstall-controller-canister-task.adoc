@@ -1,0 +1,41 @@
+---
+permalink: maintenance-e2800/batteries-reinstall-controller-canister-task.html 
+sidebar: sidebar 
+keywords: E2800 battery fail, E2800 battery, E2800 battery replacement, replace E2800 battery, replacing E2800 battery, E2800, E-Series, eseries 
+summary: Depois de instalar uma bateria nova, reinstale o recipiente do controlador na prateleira do controlador. 
+---
+= Volte a instalar o recipiente do controlador E2800
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Reinstale o recipiente do controlador na prateleira do controlador depois de instalar a nova bateria.
+
+.Passos
+. Volte a instalar a tampa no recipiente do controlador deslizando a tampa de trás para a frente até o botão clicar.
+. Vire o recipiente do controlador ao contrário, de forma a que a tampa amovível fique virada para baixo.
+. Com a alavanca do came na posição aberta, deslize o recipiente do controlador até a prateleira do controlador.
++
+image::../media/28_dwg_e2824_remove_controller_canister_maint-e2800.gif[28 dwg e2824 remover a manutenção do recipiente do controlador e2800]
+
++
+*(1)* _Controller canister_
+
++
+*(2)* _pega da câmara_
+
++
+image::../media/28_dwg_e2860_add_controller_canister_maint-e2800.gif[28 dwg e2860 adicionar o controlador canister manint e2800]
+
++
+*(1)* _Controller canister_
+
++
+*(2)* _pega da câmara_
+
+. Mova a alavanca do came para a esquerda para bloquear o recipiente do controlador no lugar.
+. Volte a ligar todos os cabos.
+. Vá para link:batteries-complete-replacement-task.html["Substituição completa da bateria E2800"].
+

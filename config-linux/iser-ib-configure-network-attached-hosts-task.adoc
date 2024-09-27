@@ -1,0 +1,171 @@
+---
+permalink: config-linux/iser-ib-configure-network-attached-hosts-task.html 
+sidebar: sidebar 
+keywords: configure network Linux, configure hosts linux, express linux configuration, linux host, 
+summary: A pilha de drivers OFED InfiniBand suporta a execução simultânea de iSER e SRP nas mesmas portas, portanto, não é necessário hardware adicional. 
+---
+= Configurar a rede para hosts conetados ao armazenamento
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Se a configuração usar o protocolo iSER over InfiniBand, execute as etapas nesta seção.
+
+A pilha de drivers OFED InfiniBand suporta a execução simultânea de iSER e SRP nas mesmas portas, portanto, não é necessário hardware adicional.
+
+.Antes de começar
+Certifique-se de que tem o seguinte:
+
+* Um OFED recomendado pela NetApp instalado no sistema. Para obter mais informações, consulte https://mysupport.netapp.com/matrix["Ferramenta de Matriz de interoperabilidade do NetApp"^] .
+
+
+.Passos
+. Ativar e iniciar serviços iSCSI no(s) host(s):
++
+*Red Hat Enterprise Linux 7, 8 e 9 (RHEL 7, RHEL 8 e RHEL 9)*
+
++
+[listing]
+----
+
+# systemctl start iscsi
+# systemctl start iscsid
+# systemctl enable iscsi
+# systemctl enable iscsid
+----
++
+*SUSE Linux Enterprise Server 12 e 15 (SLES 12 e SLES 15)*
+
++
+[listing]
+----
+
+# systemctl start iscsid.service
+# systemctl enable iscsid.service
+----
+. Configurar interfaces de rede da placa InfiniBand:
++
+.. Identifique as portas InfiniBand que serão usadas. Documente o endereço HW (endereço MAC) de cada porta.
+.. Configurar nomes persistentes para os dispositivos de interface de rede InfiniBand.
+.. Configurar o endereço IP e as informações de rede para as interfaces InfiniBand identificadas.
++
+A configuração de interface específica necessária pode variar dependendo do sistema operacional usado. Consulte a documentação do sistema operacional do seu fornecedor para obter informações específicas sobre a implementação.
+
+.. Inicie as interfaces de rede IB reiniciando o serviço de rede ou reiniciando manualmente cada interface. Por exemplo:
++
+[listing]
+----
+systemctl restart network
+----
+.. Verifique a conetividade com as portas de destino. A partir do host, faça ping nos endereços IP configurados quando você configurou conexões de rede.
+
+
+. Reinicie os serviços para carregar o módulo iSER.
+. Edite as configurações iSCSI em /etc/iSCSI/iscsid.conf.
++
+[listing]
+----
+node.startup = automatic
+replacement_timeout = 20
+----
+. Criar configurações de sessão iSCSI:
++
+.. Crie arquivos de configuração iface para cada interface InfiniBand.
++
+
+NOTE: A localização do diretório para os ficheiros iface iSCSI depende do sistema operativo. Este exemplo é para usar o Red Hat Enterprise Linux:
+
++
+[listing]
+----
+iscsiadm -m iface -I iser > /var/lib/iscsi/ifaces/iface-ib0
+iscsiadm -m iface -I iser > /var/lib/iscsi/ifaces/iface-ib1
+----
+.. Edite cada arquivo iface para definir o nome da interface e o iniciador IQN. Defina os seguintes parâmetros adequadamente para cada arquivo iface:
++
+|===
+| Opção | Valor 
+
+
+ a| 
+iface.net_ifacename
+ a| 
+O nome do dispositivo de interface (ex. ib0).
+
+
+
+ a| 
+iface.initiatorname
+ a| 
+O iniciador do host IQN documentado na Planilha.
+
+|===
+.. Crie sessões iSCSI para o destino.
++
+O método preferido para criar as sessões é usar o método de descoberta SendTargets. No entanto, este método não funciona em algumas versões do sistema operacional.
+
++
+
+NOTE: Use *método 2* para RHEL 6.x ou SLES 11,3 ou posterior.
+
++
+*** *Método 1 - descoberta SendTargets:* Use o mecanismo de descoberta SendTargets para um dos endereços IP do portal de destino. Isso criará sessões para cada um dos portais de destino.
++
+[listing]
+----
+iscsiadm -m discovery -t st -p 192.168.130.101 -I iser
+----
+*** *Método 2 - criação manual:* para cada endereço IP do portal de destino, crie uma sessão usando a configuração iface da interface de host apropriada. Neste exemplo, a interface ib0 está na sub-rede A e a interface IB1 está na sub-rede B. para essas variáveis, substitua o valor apropriado da Planilha:
++
+**** <Target IQN>: Destino do storage array IQN
+**** Endereço IP da porta de destino configurado na porta de destino especificada
+
+
+
+
+
+
++
+[listing]
+----
+# Controller A Port 1
+iscsiadm -m node --target <Target IQN> -I iface-ib0 -p <Target Port IP\> -l -o new
+# Controller B Port 1
+iscsiadm -m node --target <Target IQN> -I iface-ib0 -p <Target Port IP\> -l -o new
+# Controller A Port 2
+iscsiadm -m node --target <Target IQN> -I iface-ib1 -p <Target Port IP\> -l -o new
+# Controller B Port 2
+iscsiadm -m node --target <Target IQN> -I iface-ib1 -p <Target Port IP\> -l -o new
+----
+. Inicie sessão em sessões iSCSI.
++
+Para cada sessão, execute o comando iscsiadm para efetuar login na sessão.
+
++
+[listing]
+----
+# Controller A Port 1
+iscsiadm -m node --target <Target IQN> -I iface-ib0 -p <Target Port IP\> -l
+# Controller B Port 1
+iscsiadm -m node --target <Target IQN> -I iface-ib0 -p <Target Port IP\> -l
+# Controller A Port 2
+iscsiadm -m node --target <Target IQN> -I iface-ib1 -p <Target Port IP\> -l
+# Controller B Port 2
+iscsiadm -m node --target <Target IQN> -I iface-ib1 -p <Target Port IP\> -l
+----
+. Verifique as sessões iSER/iSCSI.
++
+.. Verifique o status da sessão iscsi do host:
++
+[listing]
+----
+iscsiadm -m session
+----
+.. Verifique o status da sessão iscsi da matriz. A partir do Gerenciador de sistemas SANtricity, navegue até *Matriz de armazenamento* > *iSER* > *Exibir/terminar sessões*.
+
+
+
+
+Quando o serviço OFED/RDMA é iniciado, o(s) módulo(s) do kernel iSER é(ão) carregado(s) por padrão quando os serviços iSCSI estão sendo executados. Para concluir a configuração da conexão iSER, os módulos iSER devem ser carregados. Atualmente, isso requer uma reinicialização do host.

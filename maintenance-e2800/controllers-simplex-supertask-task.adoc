@@ -1,0 +1,539 @@
+---
+permalink: maintenance-e2800/controllers-simplex-supertask-task.html 
+sidebar: sidebar 
+keywords: replace E2800 controller, replacing E2800 controller, simplex controller replacement, E2800, E-Series, eseries 
+summary: Você pode substituir um recipiente de controlador com falha em uma configuração simplex. 
+---
+= Substitua o controlador na configuração E2800 simplex
+:allow-uri-read: 
+:experimental: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Você pode substituir um canister de controladora com falha em uma configuração simplex (controlador único), para as seguintes gavetas de controladora:
+
+* Compartimento do controlador de E2812 TB
+* Compartimento do controlador de E2824 TB
+
+
+.Sobre esta tarefa
+O recipiente do controlador contém uma placa controladora, uma bateria e uma placa de interface do host (HIC) opcional. Quando substituir um recipiente do controlador com falha, tem de remover a bateria e o HIC, se estiverem instalados, do recipiente do controlador original e instalá-los no recipiente do controlador de substituição.
+
+.Antes de começar
+Certifique-se de que tem o seguinte:
+
+* Um recipiente do controlador de substituição com o mesmo número de peça que o recipiente do controlador que está a substituir.
+* Uma pulseira antiestática, ou você tomou outras precauções antiestáticas.
+* Etiquetas para identificar cada cabo que está ligado ao recipiente do controlador.
+* Chave de fendas Phillips nº 1.
+* Uma estação de gerenciamento com um navegador que pode acessar o Gerenciador de sistema do SANtricity para o controlador. (Para abrir a interface do System Manager, aponte o navegador para o nome de domínio ou endereço IP do controlador.)
+
+
+
+
+== Passo 1: Prepare-se para substituir o controlador (simplex)
+
+Prepare-se para substituir um recipiente de controlador salvando a chave de segurança da unidade, fazendo backup da configuração e coletando dados de suporte. Em seguida, você pode parar as operações de e/S do host e desligar o compartimento de controladora.
+
+.Passos
+. Se possível, anote qual versão do software SANtricity os está atualmente instalada no controlador. Abra o Gerenciador de sistema do SANtricity e selecione menu:suporte[Centro de atualização > Exibir inventário de software e firmware].
+. Se o recurso Segurança da unidade estiver ativado, verifique se existe uma chave salva e se você sabe a frase-passe necessária para instalá-la.
++
+
+CAUTION: *Possível perda de acesso a dados* -- se todas as unidades do storage estiverem habilitadas para segurança, o novo controlador não poderá acessar o storage até que você desbloqueie as unidades protegidas usando a janela Gerenciamento Empresarial no SANtricity Storage Manager.
+
++
+Para salvar a chave (pode não ser possível, dependendo do estado do controlador):
+
++
+.. No Gerenciador do sistema SANtricity, selecione menu:Configurações[sistema].
+.. Em *Gerenciamento de chaves de segurança da unidade*, selecione *Backup Key*.
+.. Nos campos *Definir uma frase-passe/voltar a introduzir frase-passe*, introduza e confirme uma frase-passe para esta cópia de segurança.
+.. Clique em *Backup*.
+.. Grave suas informações chave em um local seguro e clique em *Fechar*.
+
+
+. Faça backup do banco de dados de configuração do storage usando o Gerenciador de sistema do SANtricity.
++
+Se ocorrer um problema ao remover um controlador, pode utilizar o ficheiro guardado para restaurar a configuração. O sistema salvará o estado atual do banco de dados de configuração RAID, que inclui todos os dados para grupos de volume e pools de discos na controladora.
+
++
+** Do System Manager:
++
+... Selecione menu:suporte[Centro de suporte > Diagnóstico].
+... Selecione *Collect Configuration Data*.
+... Clique em *Collect*.
++
+O arquivo é salvo na pasta Downloads do seu navegador com o nome *configurationData-<arrayName>-<dateTime>.7z*.
+
+
+
+** Como alternativa, você pode fazer backup do banco de dados de configuração usando o seguinte comando CLI:
++
+`save storageArray dbmDatabase sourceLocation=onboard contentType=all file="filename";`
+
+
+
+. Colete dados de suporte para sua matriz de armazenamento usando o Gerenciador de sistema do SANtricity.
++
+Se ocorrer um problema ao remover um controlador, você pode usar o arquivo salvo para solucionar o problema. O sistema salvará os dados de inventário, status e desempenho sobre seu storage array em um único arquivo.
+
++
+.. Selecione menu:suporte[Centro de suporte > Diagnóstico].
+.. Selecione *coletar dados de suporte*.
+.. Clique em *Collect*.
++
+O arquivo é salvo na pasta Downloads do seu navegador com o nome *support-data.7z*.
+
+
+
+. Certifique-se de que nenhuma operação de e/S esteja ocorrendo entre o storage array e todos os hosts conectados. Por exemplo, você pode executar estas etapas:
++
+** Parar todos os processos que envolvem os LUNs mapeados do armazenamento para os hosts.
+** Garantir que nenhuma aplicação esteja gravando dados em LUNs mapeados do storage para os hosts.
+** Desmonte todos os sistemas de arquivos associados a volumes no array.
++
+
+NOTE: As etapas exatas para interromper as operações de e/S do host dependem do sistema operacional do host e da configuração, que estão além do escopo dessas instruções. Se você não tiver certeza de como interromper as operações de e/S do host em seu ambiente, considere encerrar o host.
+
++
+
+CAUTION: *Possível perda de dados* -- se você continuar este procedimento enquanto as operações de e/S estão ocorrendo, você pode perder dados.
+
+
+
+. Aguarde até que quaisquer dados na memória cache sejam gravados nas unidades.
++
+O LED verde Cache ative na parte de trás do controlador fica aceso quando os dados em cache precisam ser gravados nas unidades. Tem de esperar que este LED se desligue.
+
+. Na página inicial do Gerenciador do sistema do SANtricity, selecione *Exibir operações em andamento*.
+. Confirme se todas as operações foram concluídas antes de continuar com a próxima etapa.
+. Desligue ambos os interruptores de energia no compartimento do controlador.
+. Aguarde que todos os LEDs na prateleira do controlador se desliguem.
+. Selecione *Reverifique* no Recovery Guru e confirme se o campo *OK para remover* na área Detalhes exibe *Sim*, indicando que é seguro remover este componente.
++
+Os dados na matriz de armazenamento não estarão acessíveis até que você substitua o recipiente do controlador.
+
+
+
+
+
+== Passo 2: Remover controlador com falha (simplex)
+
+Substitua o recipiente com falha por um novo.
+
+
+
+=== Etapa 2a: Remover o recipiente do controlador (simplex)
+
+Remova um recipiente do controlador.
+
+.Passos
+. Coloque uma pulseira antiestática ou tome outras precauções antiestáticas.
+. Identifique cada cabo que esteja conetado ao recipiente do controlador.
+. Desligue todos os cabos do recipiente do controlador.
++
+
+CAUTION: Para evitar um desempenho degradado, não torça, dobre, aperte ou pise nos cabos.
+
+. Se as portas HIC no recipiente do controlador usarem transcetores SFP, remova os SFPs.
++
+Como você deve remover o HIC do recipiente do controlador com falha, você deve remover quaisquer SFPs das portas HIC. No entanto, você pode deixar quaisquer SFPs instalados nas portas de host da placa base. Quando você estiver pronto para enviar o novo controlador por cabo, você pode simplesmente mover esses SFPs para o novo recipiente do controlador. Esta abordagem é especialmente útil se você tem mais de um tipo de SFP.
+
+. Confirme se o LED Cache ative na parte de trás do controlador está desligado.
++
+O LED verde Cache ative na parte de trás do controlador fica aceso quando os dados em cache precisam ser gravados nas unidades. Tem de esperar que este LED se desligue antes de remover o recipiente do controlador.
+
++
+
+NOTE: A figura mostra um exemplo do recipiente do controlador. Seu controlador pode ter um número diferente e um tipo diferente de portas de host.
+
++
+image::../media/28_dwg_2800_controller_attn_led_maint-e2800.gif[28 dwg 2800 controlador attn led manint e2800]
+
++
+*(1)* _Cache ative LED_
+
+. Aperte o trinco na pega do excêntrico até que este se solte e, em seguida, abra a pega do excêntrico para a direita para libertar o recipiente do controlador do plano médio.
++
+image::../media/28_dwg_e2824_remove_controller_canister_simplex_maint-e2800.gif[28 dwg e2824 remover controlador canister simplex manint e2800]
+
++
+*(1)* _Controller canister_
+
++
+*(2)* _pega da câmara_
+
+. Utilizando as duas mãos e a pega do came, deslize o recipiente do controlador para fora da prateleira.
++
+
+CAUTION: Utilize sempre duas mãos para suportar o peso de um recipiente do controlador.
+
++
+Quando você remove o recipiente do controlador, uma aba se move para o lugar para bloquear o compartimento vazio, ajudando a manter o fluxo de ar e o resfriamento.
+
+. Vire o recipiente do controlador ao contrário, de forma a que a tampa amovível fique virada para cima.
+. Coloque o recipiente do controlador numa superfície plana e sem estática.
+
+
+
+
+=== Passo 2b: Remover a bateria (simplex)
+
+Depois de remover o recipiente do controlador da prateleira do controlador, retire a bateria.
+
+.Passos
+. Remova a tampa do recipiente do controlador pressionando o botão e deslizando a tampa para fora.
+. Confirme se o LED verde dentro do controlador (entre a bateria e os DIMMs) está desligado.
++
+Se este LED verde estiver ligado, o controlador ainda está a utilizar a bateria. Deve aguardar que este LED se apague antes de remover quaisquer componentes.
+
++
+image::../media/28_dwg_e2800_internal_cache_active_led_maint-e2800.gif[28 dwg e2800 cache interno ativo led mint e2800]
+
++
+*(1)* _Cache interno ativo_
+
++
+*(2)* _bateria_
+
+. Localize a trava de liberação azul da bateria.
+. Desengate a bateria empurrando a trava de liberação para baixo e afastando-a do recipiente do controlador.
++
+image::../media/28_dwg_e2800_remove_battery_maint-e2800.gif[28 dwg e2800 remover a manutenção da bateria e2800]
+
++
+*(1)* _trava de liberação da bateria_
+
++
+*(2)* _bateria_
+
+. Levante a bateria e deslize-a para fora do recipiente do controlador.
+
+
+
+
+=== Etapa 2c: Remover a placa de interface do host (simplex)
+
+Se o recipiente do controlador incluir uma placa de interface do host (HIC), remova o HIC do recipiente do controlador original para que você possa reutilizá-lo no novo recipiente do controlador.
+
+.Passos
+. Usando uma chave de fenda Phillips nº 1, remova os parafusos que prendem a placa frontal HIC ao recipiente do controlador.
++
+Há quatro parafusos: Um na parte superior, um na parte lateral e dois na parte frontal.
+
++
+image::../media/28_dwg_e2800_hic_faceplace_screws_maint-e2800.gif[28 dwg e2800 hic faceplace parafusos mint e2800]
+
+. Retire a placa frontal do HIC.
+. Utilizando os dedos ou uma chave de fendas Phillips, desaperte os três parafusos de aperto manual que fixam o HIC à placa do controlador.
+. Retire cuidadosamente o HIC da placa controladora levantando a placa para cima e deslizando-a para trás.
++
+
+CAUTION: Tenha cuidado para não arranhar ou bater os componentes na parte inferior do HIC ou na parte superior da placa controladora.
+
++
+image::../media/28_dwg_e2800_hic_thumbscrews_maint-e2800.gif[28 dwg e2800 hic parafusos de aperto manual e2800]
+
++
+*(1)* _placa de interface host_
+
++
+*(2)* _parafusos_
+
+. Coloque o HIC sobre uma superfície livre de estática.
+
+
+
+
+== Passo 3: Instale o novo controlador (simplex)
+
+Instale um novo recipiente do controlador para substituir o que falhou.
+
+
+
+=== Passo 3a: Instale a bateria (simplex)
+
+Instale a bateria no recipiente do controlador de substituição. Pode instalar a bateria que retirou do recipiente do controlador original ou instalar uma bateria nova que tenha encomendado.
+
+.Passos
+. Desembale o recipiente do controlador de substituição e coloque-o numa superfície plana e livre de estática, de modo a que a tampa amovível fique virada para cima.
++
+Guarde os materiais de embalagem a utilizar ao enviar o recipiente do controlador avariado.
+
+. Prima o botão da tampa para baixo e deslize a tampa para fora.
+. Oriente o recipiente do controlador de forma a que a ranhura da bateria fique voltada para si.
+. Introduza a bateria no recipiente do controlador a um ligeiro ângulo descendente.
++
+Deve inserir a flange metálica na parte frontal da bateria na ranhura na parte inferior do recipiente do controlador e deslizar a parte superior da bateria por baixo do pequeno pino de alinhamento no lado esquerdo do recipiente.
+
+. Desloque o trinco da bateria para cima para fixar a bateria.
++
+Quando a trava se encaixa no lugar, a parte inferior da trava se encaixa em uma ranhura metálica no chassi.
+
++
+image::../media/28_dwg_e2800_insert_battery_maint-e2800.gif[28 dwg e2800 inserir manutenção da bateria e2800]
+
++
+*(1)* _trava de liberação da bateria_
+
++
+*(2)* _bateria_
+
+. Vire o recipiente do controlador para confirmar que a bateria está instalada corretamente.
++
+
+CAUTION: *Possíveis danos ao hardware* -- a flange metálica na parte frontal da bateria deve ser completamente inserida na ranhura no recipiente do controlador (como mostrado na primeira figura). Se a bateria não estiver instalada corretamente (como mostrado na segunda figura), a flange metálica pode entrar em Contato com a placa controladora, causando danos ao controlador quando você aplicar energia.
+
++
+** *Correto* -- a flange de metal da bateria está completamente inserida na ranhura do controlador:
++
+image:../media/28_dwg_e2800_battery_flange_ok_maint-e2800.gif[""]
+
+** *Incorreto* -- a flange metálica da bateria não está inserida na ranhura do controlador:
++
+image:../media/28_dwg_e2800_battery_flange_not_ok_maint-e2800.gif[""]
+
+
+
+
+
+
+
+=== Passo 3b: Instale a placa de interface do host (simplex)
+
+Se você removeu uma placa de interface do host (HIC) do recipiente do controlador original, instale esse HIC no novo recipiente do controlador.
+
+.Passos
+. Usando uma chave de fenda Phillips nº 1, remova os quatro parafusos que prendem a placa frontal vazia ao recipiente do controlador de substituição e remova a placa frontal.
+. Alinhe os três parafusos de aperto manual no HIC com os orifícios correspondentes no controlador e alinhe o conetor na parte inferior do HIC com o conetor de interface HIC na placa do controlador.
++
+Tenha cuidado para não arranhar ou bater os componentes na parte inferior do HIC ou na parte superior da placa controladora.
+
+. Baixe cuidadosamente o HIC para o devido lugar e assente o conetor HIC pressionando suavemente o HIC.
++
+
+CAUTION: * Possíveis danos ao equipamento * - tenha muito cuidado para não apertar o conetor de fita dourada para os LEDs do controlador entre o HIC e os parafusos de aperto manual.
+
++
+image::../media/28_dwg_e2800_hic_thumbscrews_maint-e2800.gif[28 dwg e2800 hic parafusos de aperto manual e2800]
+
++
+*(1)* _placa de interface host_
+
++
+*(2)* _parafusos_
+
+. Aperte manualmente os parafusos de aperto manual do HIC.
++
+Não use uma chave de fenda, ou você pode apertar demais os parafusos.
+
+. Usando uma chave de fenda Phillips nº 1, prenda a placa frontal HIC que você removeu do recipiente do controlador original ao novo recipiente do controlador com quatro parafusos.
++
+image::../media/28_dwg_e2800_hic_faceplace_screws_maint-e2800.gif[28 dwg e2800 hic faceplace parafusos mint e2800]
+
+
+
+
+
+=== Passo 3c: Instale o novo recipiente do controlador (simplex)
+
+Depois de instalar a bateria e o HIC, se uma foi inicialmente instalada, você pode instalar o novo recipiente do controlador na prateleira do controlador.
+
+.Passos
+. Volte a instalar a tampa no recipiente do controlador deslizando a tampa de trás para a frente até o botão clicar.
+. Vire o recipiente do controlador ao contrário, de forma a que a tampa amovível fique virada para baixo.
+. Com a alavanca do came na posição aberta, deslize o recipiente do controlador até a prateleira do controlador.
++
+image::../media/28_dwg_e2824_remove_controller_canister_simplex_maint-e2800.gif[28 dwg e2824 remover controlador canister simplex manint e2800]
+
++
+*(1)* _Controller canister_
+
++
+*(2)* _pega da câmara_
+
+. Mova a alavanca do came para a esquerda para bloquear o recipiente do controlador no lugar.
+. Instale os SFPs do controlador original nas portas do host no novo controlador e reconete todos os cabos.
++
+Se você estiver usando mais de um protocolo de host, certifique-se de instalar os SFPs nas portas de host corretas.
+
+. Determine como você atribuirá um endereço IP ao controlador de substituição, com base se você conetou sua porta Ethernet 1 (identificada como P1) a uma rede com um servidor DHCP e se todas as unidades estão protegidas.
++
+|===
+| Usando o servidor DHCP? | Todas as unidades estão protegidas? | Passos 
+
+
+ a| 
+Sim
+ a| 
+Não
+ a| 
+O novo controlador obtém o seu endereço IP a partir do servidor DHCP. Este valor pode ser diferente do endereço IP do controlador original. Localize o endereço MAC na etiqueta na parte de trás do controlador de substituição e contacte o administrador da rede com estas informações para obter o endereço IP atribuído pelo servidor DHCP.
+
+
+
+ a| 
+Sim
+ a| 
+Sim
+ a| 
+O novo controlador obtém o seu endereço IP a partir do servidor DHCP. Este valor pode ser diferente do endereço IP do controlador original. Localize o endereço MAC na etiqueta na parte de trás do controlador de substituição e contacte o administrador da rede com estas informações para obter o endereço IP atribuído pelo servidor DHCP. Em seguida, você pode desbloquear as unidades usando a interface de linha de comando.
+
+
+
+ a| 
+Não
+ a| 
+Não
+ a| 
+O novo controlador adota o endereço IP do controlador que você removeu.
+
+
+
+ a| 
+Não
+ a| 
+Sim
+ a| 
+Tem de definir manualmente o endereço IP do novo controlador. (Você pode reutilizar o endereço IP do controlador antigo ou usar um novo endereço IP.) Quando o controlador tem um endereço IP, pode desbloquear as unidades utilizando a interface de linha de comando. Depois que as unidades forem desbloqueadas, o novo controlador reutilizará automaticamente o endereço IP do controlador original.
+
+|===
+
+
+
+
+== Passo 4: Substituição completa do controlador (simplex)
+
+Ligue o compartimento do controlador, colete dados de suporte e retome as operações.
+
+.Passos
+. Ligue os dois interruptores de energia na parte de trás do compartimento do controlador.
++
+** Não desligue os interruptores de energia durante o processo de ativação, que normalmente leva 90 segundos ou menos para ser concluído.
+** Os ventiladores em cada prateleira são muito altos quando eles começam a funcionar. O ruído alto durante o arranque é normal.
+
+
+. À medida que o controlador inicia, verifique os LEDs do controlador e o visor de sete segmentos.
++
+** O visor de sete segmentos mostra a sequência de repetição *os*, *SD*, *_blank_* para indicar que o controlador está executando o processamento de Início do dia (SOD). Depois de um controlador ter inicializado com êxito, seu visor de sete segmentos deve mostrar o ID da bandeja.
+** O LED âmbar de atenção no controlador liga-se e desliga-se, a menos que haja um erro.
+** Os LEDs verdes do Host Link acendem-se.
++
+
+NOTE: A figura mostra um exemplo do recipiente do controlador. Seu controlador pode ter um número diferente e um tipo diferente de portas de host.
+
++
+image::../media/28_dwg_attn_led_7s_display_maint-e2800.gif[28 dwg attn led 7s display manint e2800]
+
++
+*(1)* _LED de atenção (âmbar)_
+
++
+*(2)* _display de sete segmentos_
+
++
+*(3)* _Host Link LEDs_
+
+
+
+. Se algum dos LEDs de atenção do compartimento do controlador permanecer aceso, verifique se o recipiente do controlador foi instalado corretamente e se todos os cabos estão corretamente encaixados. Volte a instalar o recipiente do controlador, se necessário.
++
+
+NOTE: Se não conseguir resolver o problema, contacte o suporte técnico.
+
+. Se a matriz de armazenamento tiver unidades seguras, importe a chave de segurança da unidade; caso contrário, vá para a próxima etapa. Siga o procedimento apropriado abaixo para um storage de armazenamento com todas as unidades seguras ou uma combinação de unidades seguras e não seguras.
++
+
+NOTE: _Unidades não seguras_ são unidades não atribuídas, unidades hot spare globais ou unidades que fazem parte de um grupo de volumes ou de um pool que não é protegido pelo recurso de segurança da unidade. _Unidades seguras_ são unidades atribuídas que fazem parte de um grupo de volumes ou de um pool de discos protegido usando o Drive Security.
+
++
+** * Apenas unidades seguras (sem unidades não seguras)*:
++
+... Acesse a interface de linha de comando (CLI) do storage array.
+... Digite o seguinte comando para importar a chave de segurança:
++
+[listing]
+----
+import storageArray securityKey file="C:/file.slk"
+passPhrase="passPhrase";
+----
++
+local:
+
++
+**** `C:/file.slk` representa a localização do diretório e o nome da chave de segurança da unidade
+**** `passPhrase` É a frase-passe necessária para desbloquear o arquivo depois que a chave de segurança foi importada, o controlador reinicializa e o novo controlador adota as configurações salvas para a matriz de armazenamento.
+
+
+... Vá para o próximo passo para confirmar que o novo controlador é o ideal.
+
+
+** * Combinação de unidades seguras e inseguras*:
++
+... Colete o pacote de suporte e abra o perfil da matriz de armazenamento.
+... Encontre e grave todas as localizações das unidades não seguras, que são encontradas no pacote de suporte.
+... Desligue o sistema.
+... Remova as unidades não seguras.
+... Substitua o controlador.
+... Ligue o sistema e aguarde que o visor de sete segmentos mostre o número da bandeja.
+... No Gerenciador do sistema SANtricity, selecione menu:Configurações[sistema].
+... Na seção Gerenciamento de chaves de segurança, selecione *criar/alterar chave* para criar uma nova chave de segurança.
+... Selecione *Unlock Secure Drives* para importar a chave de segurança que você salvou.
+... Execute o `set allDrives nativeState` comando CLI.
++
+O controlador reiniciará automaticamente.
+
+... Aguarde que o controlador inicialize e que o visor de sete segmentos mostre o número da bandeja ou um L5 piscando.
+... Desligue o sistema.
+... Reinstale as unidades não seguras.
+... Reponha o controlador utilizando o Gestor do sistema SANtricity.
+... Ligue o sistema e aguarde que o visor de sete segmentos mostre o número da bandeja.
+... Vá para o próximo passo para confirmar que o novo controlador é o ideal.
+
+
+
+
+. No Gerenciador de sistemas do SANtricity, confirme se o novo controlador é o ideal.
++
+.. Selecione *hardware*.
+.. Para o compartimento do controlador, selecione *Mostrar parte posterior da prateleira*.
+.. Selecione o recipiente do controlador que você substituiu.
+.. Selecione *Ver definições*.
+.. Confirme se o *Status* do controlador é o ideal.
+.. Se o status não for ideal, realce o controlador e selecione *Place Online*.
+
+
+. Quando a controladora estiver novamente on-line, verifique se uma incompatibilidade de NVSRAM é relatada no Recovery Guru.
++
+.. Se uma incompatibilidade de NVSRAM for relatada, atualize a NVSRAM usando o seguinte comando SMcli:
++
+[listing]
+----
+SMcli <controller A IP> <controller B IP> -u admin -p <password> -k -c "download storageArray NVSRAM file=\"C:\Users\testuser\Downloads\NVSRAM .dlp file>\" forceDownload=TRUE;"
+----
++
+O `-k` parâmetro é necessário se o array não for https seguro.
+
+
+
++
+
+NOTE: Se o comando SMcli não puder ser concluído, contacte https://www.netapp.com/company/contact-us/support/["Suporte técnico da NetApp"^] ou inicie sessão no https://mysupport.netapp.com["Site de suporte da NetApp"^] para criar um caso.
+
+. Colete dados de suporte para sua matriz de armazenamento usando o Gerenciador de sistema do SANtricity.
++
+.. Selecione menu:suporte[Centro de suporte > *Diagnóstico].
+.. Selecione *coletar dados de suporte*.
+.. Clique em *Collect*.
++
+O arquivo é salvo na pasta Downloads do seu navegador com o nome *support-data.7z*.
+
+
+
+
+
+.O que se segue?
+A substituição do controlador está concluída. Pode retomar as operações normais.

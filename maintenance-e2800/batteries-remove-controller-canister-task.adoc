@@ -1,0 +1,71 @@
+---
+permalink: maintenance-e2800/batteries-remove-controller-canister-task.html 
+sidebar: sidebar 
+keywords: E2800 battery fail, E2800 battery, E2800 battery replacement, replace E2800 battery, replacing E2800 battery, E2800, E-Series, eseries 
+summary: Para remover a bateria, primeiro remova o recipiente do controlador da prateleira do controlador. 
+---
+= Remova o recipiente do controlador E2800
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Você precisa remover o recipiente do controlador da prateleira do controlador, para que você possa remover a bateria.
+
+Ao remover um recipiente do controlador, tem de desligar todos os cabos. Em seguida, você pode deslizar o recipiente do controlador para fora da prateleira do controlador.
+
+.Antes de começar
+Certifique-se de que tem o seguinte:
+
+* Uma pulseira antiestática, ou você tomou outras precauções antiestáticas.
+* Etiquetas para identificar cada cabo que está ligado ao recipiente do controlador.
+
+
+.Passos
+. Coloque uma pulseira antiestática ou tome outras precauções antiestáticas.
+. Identifique cada cabo que esteja conetado ao recipiente do controlador.
+. Desligue todos os cabos do recipiente do controlador.
++
+
+CAUTION: Para evitar um desempenho degradado, não torça, dobre, aperte ou pise nos cabos.
+
+. Se as portas do host no canister do controlador usarem transcetores SFP, deixe-as instaladas.
+. Confirme se o LED Cache ative na parte de trás do controlador está desligado.
+. Aperte a trava na alça do came até que ela se solte e, em seguida, abra a alça do came para a direita para liberar o recipiente do controlador da prateleira.
++
+A figura a seguir é um exemplo de um compartimento de controladora E2812, compartimento de controladora E2824 ou array Flash EF280:
+
++
+image::../media/28_dwg_e2824_remove_controller_canister_maint-e2800.gif[28 dwg e2824 remover a manutenção do recipiente do controlador e2800]
+
++
+*(1)* _Controller canister_
+
++
+*(2)* _pega da câmara_
+
++
+A figura a seguir é um exemplo de um compartimento de controladora E2860:
+
++
+image::../media/28_dwg_e2860_add_controller_canister_maint-e2800.gif[28 dwg e2860 adicionar o controlador canister manint e2800]
+
++
+*(1)* _Controller canister_
+
++
+*(2)* _pega da câmara_
+
+. Utilizando as duas mãos e a pega do came, deslize o recipiente do controlador para fora da prateleira.
++
+
+CAUTION: Utilize sempre duas mãos para suportar o peso de um recipiente do controlador.
+
++
+Se você estiver removendo o recipiente do controlador de um compartimento do controlador E2812, um compartimento do controlador E2824 ou um array flash EF280, uma aba se move para o lugar para bloquear o compartimento vazio, ajudando a manter o fluxo de ar e o resfriamento.
+
+. Vire o recipiente do controlador ao contrário, de forma a que a tampa amovível fique virada para cima.
+. Coloque o recipiente do controlador numa superfície plana e sem estática.
+. Vá para link:batteries-remove-failed-task.html["Remova a bateria E2800 com falha"].
+

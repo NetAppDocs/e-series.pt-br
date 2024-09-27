@@ -1,0 +1,296 @@
+---
+sidebar: sidebar 
+permalink: whats-new.html 
+keywords: whats new, new features, SANtricity 11.73 
+summary: Novos recursos no SANtricity os. 
+---
+= O que há de novo no SANtricity os
+:allow-uri-read: 
+:experimental: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+A tabela a seguir descreve novos recursos no SANtricity os 11,8 para gerenciamento incorporado de controladoras EF300, EF600, E2800/EF280 e E5700/EF570.
+
+
+
+== Novos recursos na versão 11.80.1R1
+
+[cols="35h,~"]
+|===
+| Novo recurso | Descrição 
+
+
+ a| 
+Aumento do tamanho da chave dos novos certificados de gerenciamento autoassinados e assinados pela CA.
+ a| 
+O comprimento do tamanho da chave do certificado de gerenciamento para o SANtricity System Manager e o certificado autoassinado pelos aplicativos do Unified Manager foi modificado de 2048 para 3072 bits. A alteração se aplica a certificados autoassinados e assinados pela CA recém-gerados dos aplicativos SANtricity. O comprimento da chave é fixo e não é afetado pelas definições de tamanho de chave padrão na NVSRAM.
+
+|===
+
+
+== Novos recursos na versão 11.80.1
+
+[cols="35h,~"]
+|===
+| Novo recurso | Descrição 
+
+
+ a| 
+`-identifyDevices` parâmetro
+ a| 
+Um novo `-identifyDevices` parâmetro está agora disponível no SMcli. Esse novo parâmetro permite que você procure todos os dispositivos de bloco nativo SCSI associados aos storages de armazenamento. Para obter mais informações, consulte o link: https://docs.NetApp.com/US-en/e-series-cli/get-started/downloadable-smcli-parameters.html.
+
+
+
+ a| 
+Estatísticas do Kernel Ethernet
+ a| 
+Uma nova opção de Estatísticas do Kernel Ethernet está agora disponível na página Ver Pacotes de Estatísticas iSCSI no System Manager. Esta nova opção permite visualizar estatísticas para os controladores de kernel da plataforma do dispositivo iSCSI. Para obter mais informações, consulte o link: https://docs.NetApp.com/US-en/e-series-SANtricity/sm-support/view-iscsi-statistics-packages-support.html.
+
+
+
+ a| 
+Adicionada capacidade de bloquear endereços IP por meio do endpoint da API REST
+ a| 
+Os usuários agora podem bloquear endereços IP específicos através do endpoint Configurações (`/devmgr/v2/settings`). Uma vez configurado através do endpoint Settings (Definições), apenas os endereços IP especificados através de uma lista branca podem comunicar com o dispositivo de armazenamento. Este novo recurso suporta listas de endereços IPv4 e IPv6.
+
+
+
+ a| 
+Plug-in do vCenter Storage
+ a| 
+O plug-in do vCenter Storage foi atualizado para compatibilidade com a versão e-Series 11.80.1.
+
+
+
+ a| 
+Proxy de serviços Web
+ a| 
+O Web Services Proxy foi atualizado para a versão 6,1 para compatibilidade com a versão e-Series 11.80.1.
+
+|===
+
+
+== Novos recursos na versão 11,80
+
+[cols="35h,~"]
+|===
+| Novo recurso | Descrição 
+
+
+ a| 
+Análise de paridade de volume melhorada
+ a| 
+A verificação de paridade de volume agora pode ser iniciada como um processo em segundo plano, seja através da API REST ou via CLI. A digitalização de paridade resultante será executada em segundo plano, desde que seja necessário para concluir a operação de digitalização. As operações de digitalização sobreviverão às reinicializações e operações de failover do controlador.
+
+
+
+ a| 
+Suporte a SAML para Unified Manager
+ a| 
+O Unified Manager agora é compatível com SAML (Security Assertion Markup Language). Depois que o SAML estiver habilitado para o Unified Manager, os usuários devem usar a autenticação multifator contra o provedor de identidade para interagir com a interface do usuário. Observe que uma vez que o SAML está habilitado no Unified Manager, a API REST não pode ser usada sem passar pelo IDP para autenticar solicitações.
+
+
+
+ a| 
+Funcionalidade de configuração automática
+ a| 
+Agora suporta a capacidade de definir o parâmetro tamanho do bloco de volume a ser usado com o recurso Configuração automática para configuração inicial do array. Este recurso está disponível na CLI apenas como um parâmetro "blocksize".
+
+
+
+ a| 
+Assinatura criptográfica do firmware do controlador
+ a| 
+O firmware da controladora é assinado criptograficamente. As assinaturas são verificadas durante o download inicial e em cada inicialização do controlador. Nenhum impactos esperado do usuário final. As assinaturas são apoiadas por um certificado de Validação estendida emitido pela CA.
+
+
+
+ a| 
+Assinatura criptográfica do firmware da unidade
+ a| 
+O firmware da unidade é assinado criptograficamente. As assinaturas são verificadas durante o download inicial e apoiadas por um certificado de Validação estendida emitido pela CA. O conteúdo do firmware da unidade agora é fornecido como um arquivo ZIP, que contém o firmware não assinado mais antigo, bem como o novo firmware assinado. O usuário deve escolher o arquivo apropriado com base na versão de lançamento do código que está sendo executado no sistema de destino.
+
+
+
+ a| 
+Gerenciamento do servidor de chaves externo - tamanho da chave do certificado
+ a| 
+O novo tamanho padrão da chave do certificado é de 3072 bits (de 2048). Tamanhos de chave até 4096 bits são suportados. Um bit NVSRAM deve ser alterado para suportar os tamanhos de chave não padrão.
+
+Os valores de seleção do tamanho da chave são os seguintes:
+
+* PADRÃO: 0
+* COMPRIMENTO 2048: 1CM
+* COMPRIMENTO 3072: 2CM
+* COMPRIMENTO 4096: 3CM
+
+
+Para alterar o tamanho da chave para 4096 através do SMcli:
+
+`set controller[b] globalnvsrambyte[0xc0]=3;`
+`set controller[a] globalnvsrambyte[0xc0]=3;`
+
+Interrogar o tamanho da chave:
+
+`show allcontrollers globalnvsrambyte[0xc0];`
+
+
+
+ a| 
+Melhorias no pool de discos
+ a| 
+Os pools de discos criados com controladores executando 11,80 ou acima serão _Version 1_ pools em vez de _Version 0_ pools. Uma operação de downgrade é restrita quando um pool de discos _Version 1_ existe.
+
+A versão de um pool de discos pode ser identificada no perfil do storage array.
+
+
+
+ a| 
+O System Manager e o Unified Manager não serão iniciados a menos que os requisitos mínimos do navegador sejam atendidos
+ a| 
+É necessária uma versão mínima do navegador antes de o System Manager ou o Unified Manager serem iniciados.
+
+A seguir estão as versões mínimas suportadas:
+
+* Firefox versão mínima 80
+* Chrome versão mínima 89
+* Edge versão mínima 90
+* Safari versão mínima 14
+
+
+
+
+ a| 
+Suporte para unidades SSD NVMe FIPS 140-3
+ a| 
+Agora, as unidades SSD NVMe FIPS 140-3 com certificação NetApp são compatíveis. Eles serão corretamente identificados como tal no perfil do storage array e no System Manager.
+
+
+
+ a| 
+Suporte para cache de leitura SSD em EF300 e EF600
+ a| 
+O cache de leitura SSD agora é suportado em controladores EF300 e EF600 usando HDD com expansão SAS.
+
+
+
+ a| 
+Suporte para espelhamento remoto assíncrono iSCSI e Fibre Channel em EF300 e EF600
+ a| 
+O espelhamento remoto assíncrono (ARVM) agora é compatível com controladoras EF300 e EF600 com volumes baseados em NVMe e SAS.
+
+
+
+ a| 
+Suporte a EF300 TB e EF600 TB sem unidades na bandeja de base
+ a| 
+As configurações de controladora EF300 e EF600 sem unidades NVMe na bandeja base agora são compatíveis.
+
+
+
+ a| 
+Portas USB desativadas para todas as plataformas
+ a| 
+As portas USB estão agora desativadas em todas as plataformas.
+
+
+
+ a| 
+Aumento do cache de leitura SSD máximo
+ a| 
+Cache de leitura de SSD máximo aumentado de 5TB para 8TB.
+
+
+
+ a| 
+Atribua o cache de leitura all flash a um único volume em configurações duplex
+ a| 
+Todo o cache de leitura SSD agora pode ser atribuído ao mesmo volume em sistemas duplex sempre que um único volume usa todo o cache SSD.
+
+
+
+ a| 
+Número de série da unidade adicionado à tabela de resumo da unidade do perfil da matriz de armazenamento
+ a| 
+O número de série da unidade foi adicionado à tabela de resumo da unidade no perfil Storage Array.
+
+
+
+ a| 
+Adicionado dom0-misc-loGS ao ASUP diário
+ a| 
+Os logs dom0-misc para os controladores A e B foram adicionados aos ASUPs diários.
+
+
+
+ a| 
+A porta 443 agora é usada por padrão para comunicação de aplicativos com serviços da Web incorporados
+ a| 
+A porta 443 agora é usada por padrão ao se comunicar com o servidor web incorporado. O  `-useLegacyTransferPort`comando CLI foi adicionado para aqueles que, em vez disso, querem usar a porta de transferência 8443 herdada. Para obter mais informações sobre o novo comando -useLegacyTransferPort CLI, consulte https://docs.netapp.com/us-en/e-series-cli/whats-new.html["SANtricity CLI Novidades"].
+
+
+
+ a| 
+Capacidade de progresso da paridade do volume de digitalização
+ a| 
+Os seguintes comandos CLI foram implementados para suportar operações de digitalização de paridade de volume baseadas na tarefa:
+
+* Iniciar a verificação de paridade do volume
+* Guardar erros de trabalho de paridade de volume de verificação
+* Parar trabalho de paridade de volume de verificação
+* Mostrar trabalho ou trabalhos de paridade de volume de verificação
+
+
+Para obter mais informações sobre os novos comandos de CLI de digitalização de paridade de volume baseados na tarefa, consulte https://docs.netapp.com/us-en/e-series-cli/whats-new.html["SANtricity CLI Novidades"].
+
+
+
+ a| 
+Suporte a MFA para Unified Manager
+ a| 
+O suporte à autenticação multifator (MFA) agora é compatível com o Unified Manager.
+
+
+
+ a| 
+Alternar ícone para a vista frontal do hardware
+ a| 
+Na exibição hardware do System Manager/Unified Manager, as duas guias a seguir estão disponíveis para controlar a exibição frontal e traseira:
+
+* Guia unidades
+* Separador Controladores e componentes
+
+
+
+
+ a| 
+Plug-in do vCenter Storage
+ a| 
+O plug-in do vCenter Storage foi atualizado para compatibilidade com a versão e-Series 11,80.
+
+
+
+ a| 
+Web Services Proxy 6,0
+ a| 
+O Web Services Proxy foi atualizado para a versão 6,0 para compatibilidade com a versão e-Series 11,80.
+
+
+
+ a| 
+Sinalizador de criação de casos ASUP removido para eventos de temperatura nominal e máxima ultrapassados da série e
+ a| 
+O sinalizador de criação de casos está agora desativado para eventos de temperatura nominal e máxima excedidos que não requerem qualquer ação.
+
+
+
+ a| 
+Sinalizador de criação de caso de prioridade ativado para o evento Mel 0x1209
+ a| 
+Um sinalizador de criação de caso agora é criado para o `MEL_EV_DEGRADE_CHANNEL 0x1209` evento mel.
+
+|===

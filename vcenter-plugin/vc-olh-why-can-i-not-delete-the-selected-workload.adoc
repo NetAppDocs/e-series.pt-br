@@ -1,0 +1,17 @@
+---
+sidebar: sidebar 
+permalink: vcenter-plugin/vc-olh-why-can-i-not-delete-the-selected-workload.html 
+keywords: vCenter plugin, Plugin for vCenter, SANtricity plugin for vCenter 
+summary: Os volumes nesse workload não são associados a um workload específico do aplicativo, portanto, o workload não pode ser excluído. 
+---
+= Por que não consigo excluir a carga de trabalho selecionada?
+:hardbreaks:
+:allow-uri-read: 
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./media/
+
+
+[role="lead"]
+Essa carga de trabalho consiste em um grupo de volumes que foram criados usando a interface de linha de comando (CLI) ou migrados (importados/exportados) de um storage array diferente. Como resultado, os volumes dessa carga de trabalho não são associados a uma carga de trabalho específica da aplicação, portanto, a carga de trabalho não pode ser excluída.

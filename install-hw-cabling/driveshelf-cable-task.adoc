@@ -1,0 +1,95 @@
+---
+permalink: install-hw-cabling/driveshelf-cable-task.html 
+sidebar: sidebar 
+keywords: cabling, cables, drive shelf cabling, controller shelf cabling, E-Series, eseries, E2800, E5700, EF300, EF600, DE212C, DE224C, DE460C 
+summary: 'Conectar cada controladora na gaveta de controladora a um módulo de e/S (IOM) em uma gaveta de unidade.' 
+---
+= Cabeamento do compartimento de unidades
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+É necessário conectar cada controladora na gaveta de controladora a um módulo de e/S (IOM) em uma gaveta de unidades.
+
+Este procedimento se aplica aos compartimentos de unidades IOM12 e IOM12B.
+
+
+NOTE: Os módulos IOM12B só são suportados no SANtricity os 11.70.2 em diante. Certifique-se de que o firmware do controlador foi atualizado antes de instalar ou atualizar para um IOM12B.
+
+
+NOTE: Esse procedimento é para hot-swaps ou substituições de IOM de gaveta semelhantes. Isto significa que só pode substituir um módulo IOM12 por outro módulo IOM12 ou substituir um módulo IOM12B por outro módulo IOM12B. (Sua prateleira pode ter dois módulos IOM12 ou ter dois módulos IOM12B.)
+
+Se você estiver fazendo o cabeamento de uma gaveta de controladora mais antiga para um DE212C, DE224C ou DE460, https://mysupport.netapp.com/ecm/ecm_download_file/ECMLP2859057["Adição de gavetas de unidade IOM a uma gaveta de controladora E27XX, E56XX ou EF560 existente"^] consulte .
+
+
+
+== Cabeamento E2800 e E5700
+
+As informações a seguir se aplicam ao cabeamento de um compartimento de controladora E2800, E2800B, EF280, E5700, EF5700B ou EF570 em um compartimento de unidades de DE212C, DE224C ou DE460.
+
+
+
+=== Fazer o cabeamento de uma gaveta de 12 ou 24 unidades
+
+Você pode vincular o compartimento de controladora a uma ou mais gavetas de 12 ou 24 unidades.
+
+A imagem a seguir mostra uma representação do compartimento de controladora e dos compartimentos de unidades. Para localizar as portas no modelo, https://hwu.netapp.com/Controller/Index?platformTypeId=2357027["Hardware Universe"^] consulte .
+
+
+
+==== Um compartimento de controladora e compartimentos de 12 ou 24 unidades
+
+image::../media/12_24_cabling.png[cabeamento de 12 24 gbe]
+
+
+
+=== Fazer o cabeamento de uma gaveta de 60 unidades
+
+Você pode vincular o compartimento de controladora a uma ou mais gavetas de 60 unidades.
+
+A imagem a seguir mostra uma representação do compartimento de controladora e dos compartimentos de unidades. Para localizar as portas no modelo, https://hwu.netapp.com/Controller/Index?platformTypeId=2357027["Hardware Universe"^] consulte .
+
+
+
+==== Um compartimento de controladora e compartimentos de 60 unidades
+
+image::../media/60_cabling.png[cabeamento de 60 gbe]
+
+
+
+== Cabeamento EF300 e EF600
+
+As informações a seguir se aplicam ao cabeamento de uma gaveta de controladora EF300 ou EF600U em um compartimento de unidades de DE212C, DE224C ou DE460 U.
+
+.Antes de começar
+Antes de fazer o cabeamento de um EF300 ou EF600, verifique se o firmware está atualizado para a versão mais recente. Para atualizar o firmware, siga as instruções em link:../upgrade-santricity/index.html["Atualizando o SANtricity os"^].
+
+
+
+=== Fazer o cabeamento de uma gaveta de 12 ou 24 unidades
+
+Você pode vincular o compartimento de controladora a uma ou mais gavetas de 12 ou 24 unidades.
+
+A imagem a seguir mostra uma representação do compartimento de controladora e dos compartimentos de unidades. Para localizar as portas no modelo, https://hwu.netapp.com/Controller/Index?platformTypeId=2357027["Hardware Universe"^] consulte .
+
+
+
+==== Um compartimento de controladora e compartimentos de 12 ou 24 unidades
+
+image::../media/ef_to_de224c_four_shelves.png[ef para de224c e quatro gavetas]
+
+
+
+=== Fazer o cabeamento de uma gaveta de 60 unidades
+
+Você pode vincular o compartimento de controladora a uma ou mais gavetas de 60 unidades.
+
+A imagem a seguir mostra uma representação do compartimento de controladora e dos compartimentos de unidades. Para localizar as portas no modelo, https://hwu.netapp.com/Controller/Index?platformTypeId=2357027["Hardware Universe"^] consulte .
+
+
+
+==== Um compartimento de controladora e compartimentos de 60 unidades
+
+image::../media/ef_to_de460c.png[ef a de460c mm]

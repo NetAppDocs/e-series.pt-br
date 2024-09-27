@@ -1,0 +1,58 @@
+---
+sidebar: sidebar 
+permalink: vcenter-plugin/vc-olh-import-alert-settings.html 
+keywords: vCenter plugin, Plugin for vCenter, SANtricity plugin for vCenter 
+summary: Importe configurações de alerta de um storage array para outros storage arrays. 
+---
+= Importar definições de alerta
+:hardbreaks:
+:allow-uri-read: 
+:experimental: 
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./media/
+
+
+[role="lead"]
+Você pode importar configurações de alerta de um storage array para outros storage arrays. Esta operação em lote economiza tempo quando você precisa configurar vários arrays na rede.
+
+.Antes de começar
+Certifique-se de que:
+
+* Os alertas são configurados no System Manager (menu:Configurações[Alertas]) para a matriz de armazenamento que você deseja usar como fonte.
+* A configuração existente para os storages de armazenamento de destino é feita com backup no System Manager (menu:Configurações[sistema > Salvar configuração da matriz de armazenamento]).
+* Você analisou os requisitos para replicação de configurações de storage no link:vc-olh-import-settings-overview.html["Descrição geral das definições de importação"].
+
+
+.Sobre esta tarefa
+Você pode selecionar alertas de e-mail, SNMP ou syslog para a operação de importação:
+
+* *Alertas por e-mail* -- Um endereço de servidor de e-mail e os endereços de e-mail dos destinatários do alerta.
+* *Alertas Syslog* -- Um endereço de servidor syslog e uma porta UDP.
+* *Alertas SNMP* -- Um nome de comunidade e endereço IP para o servidor SNMP.
+
+
+.Passos
+. Na página Gerenciar, clique em menu:ações[Importar configurações].
++
+O assistente Importar configurações é aberto.
+
+. Na caixa de diálogo Selecionar configurações, selecione *Email alerts*, *SNMP alerts* ou *Syslog alerts* e, em seguida, clique em *Next*.
++
+Abre-se uma caixa de diálogo para selecionar a matriz de origem.
+
+. Na caixa de diálogo Selecionar fonte, selecione a matriz com as configurações que deseja importar e clique em *Avançar*.
+. Na caixa de diálogo Selecionar destinos, selecione um ou mais arrays para receber as novas configurações.
++
+
+NOTE: Matrizes de armazenamento com firmware abaixo de 8,50 não estão disponíveis para seleção. Além disso, uma matriz não aparece nesta caixa de diálogo se o plugin não puder se comunicar com essa matriz (por exemplo, se estiver offline ou se tiver problemas de certificado, senha ou rede).
+
+. Clique em *Finish*.
++
+A página operações exibe os resultados da operação de importação. Se a operação falhar, você pode clicar em sua linha para ver mais informações.
+
+
+
+.Resultado
+Os storages de armazenamento de destino agora estão configurados para enviar alertas aos administradores por e-mail, SNMP ou syslog.

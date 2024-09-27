@@ -1,0 +1,26 @@
+---
+permalink: config-linux/iscsi-install-configure-host-utilities-task.html 
+sidebar: sidebar 
+keywords: Linux Unified Host Utilities, express linux configuration, software configuration, linux host, E2800, E5700, EF300, EF600, E-Series, eseries, SMcli, SMdevices 
+summary: Instale os Utilitários de host unificado do Linux ao usar iSCSI. 
+---
+= Instalar e configurar os utilitários do host unificado do Linux
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+As ferramentas de utilitários de host unificado Linux ajudam a gerenciar o storage do NetApp, incluindo políticas de failover e caminhos físicos.
+
+.Passos
+. Use o https://mysupport.netapp.com/matrix["Ferramenta de Matriz de interoperabilidade do NetApp"^] para determinar a versão apropriada dos Utilitários do Unified Host a ser instalada.
++
+As versões são listadas em uma coluna dentro de cada configuração suportada.
+
+. Faça download dos Utilitários do Unified Host em https://mysupport.netapp.com/site/["Suporte à NetApp"^].
++
+
+NOTE: Como alternativa, você pode usar o comando SMcli `-identifyDevices` para executar as mesmas funções da ferramenta Unified Host Utility. O SMcli está incluído no sistema operacional SANtricity e pode ser baixado através do Gerenciador de sistemas SANtricity. Para obter mais informações sobre como fazer o download do SMcli através do Gerenciador do sistema do SANtricity, consulte o https://docs.netapp.com/us-en/e-series-santricity/sm-settings/download-cli.html["Faça download do tópico interface de linha de comando (CLI) na Ajuda on-line do Gerenciador de sistema do SANtricity"^].
+
+

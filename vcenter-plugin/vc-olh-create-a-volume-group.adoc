@@ -1,0 +1,71 @@
+---
+sidebar: sidebar 
+permalink: vcenter-plugin/vc-olh-create-a-volume-group.html 
+keywords: vCenter plugin, Plugin for vCenter, SANtricity plugin for vCenter 
+summary: É possível criar um grupo de volumes para um ou mais volumes que estejam acessíveis ao host. 
+---
+= Crie um grupo de volumes
+:hardbreaks:
+:allow-uri-read: 
+:experimental: 
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./media/
+
+
+[role="lead"]
+É possível criar um grupo de volumes para um ou mais volumes que estejam acessíveis ao host. Um grupo de volumes é um contêiner para volumes com características compartilhadas, como nível e capacidade de RAID.
+
+.Antes de começar
+Reveja as seguintes diretrizes:
+
+* Você precisa de pelo menos uma unidade não atribuída.
+* Existem limites quanto à capacidade de unidade que você pode ter em um único grupo de volume. Esses limites variam de acordo com o tipo de host.
+* Para ativar a proteção contra perda de gaveta/gaveta, você deve criar um grupo de volumes que use unidades localizadas em pelo menos três gavetas ou gavetas, a menos que esteja usando RAID 1, em que duas gavetas sejam mínimas.
+* Ao configurar um storage de armazenamento EF600 ou EF300, verifique se cada controlador tem acesso a um número igual de unidades nos primeiros 12 slots e a um número igual de unidades nos últimos 12 slots. Essa configuração ajuda os controladores a usar os dois barramentos PCIe do lado da unidade de forma mais eficaz. Atualmente, o sistema permite a seleção de unidades no recurso Avançado ao criar um grupo de volumes.
+
+
+Analise como sua escolha de nível RAID afeta a capacidade resultante do grupo de volumes.
+
+* Se selecionar RAID 1, tem de adicionar duas unidades de cada vez para se certificar de que está selecionado um par espelhado. O espelhamento e o striping (conhecido como RAID 10 ou RAID 1-0) são alcançados quando quatro ou mais unidades são selecionadas.
+* Se selecionar RAID 5, tem de adicionar um mínimo de três unidades para criar o grupo de volumes.
+* Se selecionar RAID 6, tem de adicionar um mínimo de cinco unidades para criar o grupo de volumes.
+
+
+.Sobre esta tarefa
+Durante a criação do grupo de volumes, você determina as caraterísticas do grupo, como o número de unidades, a funcionalidade de segurança, a capacidade de garantia de dados (DA), a proteção contra perda de gaveta e a proteção contra perda de gaveta.
+
+Para storages EF600 e EF300, as configurações também incluem provisionamento de recursos, tamanhos de blocos de unidades e tamanhos de blocos de volume.
+
+
+NOTE: Com unidades de capacidade maior e a capacidade de distribuir volumes entre controladores, criar mais de um volume por grupo de volumes é uma boa maneira de usar sua capacidade de storage e proteger seus dados.
+
+.Passos
+. Na página Gerenciar, selecione a matriz de armazenamento para o grupo de volumes.
+. Selecione menu:provisionamento[Configurar pools e grupos de volume].
+. Clique em menu:criar[Grupo de volume].
++
+A caixa de diálogo criar grupo de volume é exibida.
+
+. Digite um nome para o grupo de volumes.
+. Selecione o nível RAID que melhor atende aos seus requisitos de armazenamento e proteção de dados. A tabela de candidatos ao grupo de volume é exibida e exibe apenas os candidatos que suportam o nível RAID selecionado.
+. (Opcional) se você tiver mais de um tipo de unidade em seu storage de armazenamento, selecione o tipo de unidade que você deseja usar.
++
+A tabela de candidatos ao grupo de volume é exibida e exibe apenas os candidatos que suportam o tipo de unidade selecionada e o nível RAID.
+
+. (Opcional) pode selecionar o método automático ou o método manual para definir quais unidades utilizar no grupo de volumes. O método Automático é a seleção padrão.
++
+
+CAUTION: Não use o método Manual a menos que você seja um especialista que entenda a redundância de unidades e as configurações ideais de unidade.
+
++
+Para selecionar as unidades manualmente, clique no link *manualmente Select Drives (Advanced)*. Quando clicado, ele muda para *automaticamente selecionar unidades (avançadas)*.
+
++
+O método Manual permite selecionar quais unidades específicas compõem o grupo de volumes. Você pode selecionar unidades específicas não atribuídas para obter a capacidade que você precisa. Se o storage de armazenamento contiver unidades com diferentes tipos de Mídia ou diferentes tipos de interface, você poderá escolher apenas a capacidade não configurada para um único tipo de unidade para criar o novo grupo de volumes.
+
+. Com base nas caraterísticas da unidade exibidas, selecione as unidades que deseja usar no grupo de volumes e clique em *criar*.
+
+
+As caraterísticas de condução apresentadas dependem da seleção do método automático ou do método manual. Para obter mais informações, consulte a documentação do Gerenciador de sistemas do SANtricity, https://docs.netapp.com/us-en/e-series-santricity/sm-storage/create-volume-group.html["Crie um grupo de volumes"^].

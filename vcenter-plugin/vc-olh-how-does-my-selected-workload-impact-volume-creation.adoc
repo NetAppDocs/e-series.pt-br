@@ -1,0 +1,33 @@
+---
+sidebar: sidebar 
+permalink: vcenter-plugin/vc-olh-how-does-my-selected-workload-impact-volume-creation.html 
+keywords: vCenter plugin, Plugin for vCenter, SANtricity plugin for vCenter 
+summary: Durante a criação de volume, você será solicitado a fornecer informações sobre o uso de uma carga de trabalho. 
+---
+= Como minha carga de trabalho selecionada afeta a criação de volume?
+:hardbreaks:
+:allow-uri-read: 
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./media/
+
+
+[role="lead"]
+Durante a criação de volume, você será solicitado a fornecer informações sobre o uso de uma carga de trabalho. O sistema usa essas informações para criar uma configuração de volume ideal para você, que pode ser editada conforme necessário. Opcionalmente, você pode pular esta etapa na sequência de criação de volume.
+
+Um workload é um objeto de storage compatível com uma aplicação. Você pode definir uma ou mais cargas de trabalho ou instâncias por aplicação. Para alguns aplicativos, o sistema configura a carga de trabalho para conter volumes com caraterísticas de volume subjacentes semelhantes. Essas características de volume são otimizadas com base no tipo de aplicação compatível com o workload. Por exemplo, se você criar uma carga de trabalho que suporte um aplicativo Microsoft SQL Server e, posteriormente, criar volumes para essa carga de trabalho, as caraterísticas de volume subjacentes serão otimizadas para oferecer suporte ao Microsoft SQL Server.
+
+* *Específico do aplicativo* -- quando você está criando volumes usando uma carga de trabalho específica do aplicativo, o sistema pode recomendar uma configuração de volume otimizada para minimizar a contenção entre e/S da carga de trabalho do aplicativo e outro tráfego da instância do aplicativo. As características de volume, como tipo de e/S, tamanho do segmento, propriedade da controladora e cache de leitura e gravação, são automaticamente recomendadas e otimizadas para cargas de trabalho criadas para os seguintes tipos de aplicativos.
++
+** Microsoft SQL Server
+** Microsoft Exchange Server
+** Aplicações de videovigilância
+** VMware ESXi (para volumes a serem usados com o Virtual Machine File System)
++
+Você pode revisar a configuração de volume recomendada e editar, adicionar ou excluir os volumes e caraterísticas recomendados pelo sistema usando a caixa de diálogo Adicionar/Editar volumes.
+
+
+
+* *Outros (ou aplicativos sem suporte específico à criação de volume)* -- outras cargas de trabalho usam uma configuração de volume que você deve especificar manualmente quando deseja criar uma carga de trabalho que não esteja associada a um aplicativo específico ou se não houver otimização integrada para o aplicativo que você pretende usar no storage array. Você deve especificar manualmente a configuração do volume usando a caixa de diálogo Adicionar/Editar volumes.
+

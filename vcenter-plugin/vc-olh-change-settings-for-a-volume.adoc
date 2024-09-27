@@ -1,0 +1,158 @@
+---
+sidebar: sidebar 
+permalink: vcenter-plugin/vc-olh-change-settings-for-a-volume.html 
+keywords: vCenter plugin, Plugin for vCenter, SANtricity plugin for vCenter 
+summary: Altere as configurações de um volume, como nome, atribuição de host, tamanho do segmento, prioridade de modificação, cache e assim por diante. 
+---
+= Altere as definições de um volume
+:hardbreaks:
+:allow-uri-read: 
+:experimental: 
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./media/
+
+
+[role="lead"]
+Você pode alterar as configurações de um volume, como nome, atribuição de host, tamanho do segmento, prioridade de modificação, cache e assim por diante.
+
+.Antes de começar
+Certifique-se de que o volume que pretende alterar está no estado ideal.
+
+.Passos
+. Na página Gerenciar, selecione a matriz de armazenamento que contém os volumes que você deseja alterar.
+. Selecione menu:provisionamento[Gerenciar volumes].
+. Selecione o volume que pretende alterar e, em seguida, selecione *Ver/Editar definições*.
++
+A caixa de diálogo Configurações de volume é exibida. As definições de configuração do volume selecionado são apresentadas nesta caixa de diálogo.
+
+. Selecione a guia *Basic* para alterar o nome do volume e a atribuição do host.
++
+.Detalhes do campo
+[%collapsible]
+====
+[cols="25h,~"]
+|===
+| Definição | Descrição 
+
+
+ a| 
+Nome
+ a| 
+Exibe o nome do volume. Altere o nome de um volume quando o nome atual não for mais significativo ou aplicável.
+
+
+
+ a| 
+Capacidades
+ a| 
+Apresenta a capacidade comunicada e alocada para o volume selecionado.
+
+
+
+ a| 
+Grupo de pool / volume
+ a| 
+Exibe o nome e o nível RAID do pool ou grupo de volumes. Indica se o pool ou grupo de volume é seguro e seguro.
+
+
+
+ a| 
+Host
+ a| 
+Exibe a atribuição de volume. Você atribui um volume a um host ou cluster de host para que ele possa ser acessado para operações de e/S. Essa atribuição concede a um host ou cluster de host acesso a um volume específico ou a um número de volumes em um storage array.
+
+** *Assigned to* -- identifica o cluster de host ou host que tem acesso ao volume selecionado.
+** *LUN* -- Um número de unidade lógica (LUN) é o número atribuído ao espaço de endereço que um host usa para acessar um volume. O volume é apresentado ao host como capacidade na forma de um LUN. Cada host tem seu próprio espaço de endereço LUN. Portanto, o mesmo LUN pode ser usado por diferentes hosts para acessar diferentes volumes.
+
+
+Para interfaces NVMe, essa coluna exibe o ID do namespace. Um namespace é o armazenamento NVM formatado para acesso a bloco. É análogo a uma unidade lógica em SCSI, que se relaciona a um volume no storage array. O ID do namespace é o identificador exclusivo da controladora NVMe para o namespace e pode ser definido como um valor entre 1 e 255. É análogo a um número de unidade lógica (LUN) no SCSI.
+
+
+
+ a| 
+Identificadores
+ a| 
+Exibe os identificadores para o volume selecionado.
+
+** Identificador mundial (WWID). Um identificador hexadecimal exclusivo para o volume.
+** Identificador exclusivo estendido (EUI). Um identificador EUI-64 para o volume.
+** Identificador do subsistema (SSID). O identificador do subsistema de storage array de um volume.
+
+
+|===
+====
+. Selecione a guia *Avançado* para alterar configurações adicionais de um volume em um pool ou em um grupo de volumes.
++
+.Detalhes do campo
+[%collapsible]
+====
+[cols="25h,~"]
+|===
+| Definição | Descrição 
+
+
+ a| 
+Informações sobre aplicações e workloads
+ a| 
+Durante a criação de volume, você pode criar workloads específicos da aplicação ou outros workloads. Se aplicável, o nome da carga de trabalho, o tipo de aplicativo e o tipo de volume serão exibidos para o volume selecionado. Você pode alterar o nome da carga de trabalho, se desejado.
+
+
+
+ a| 
+Definições de qualidade do serviço
+ a| 
+*Disable permanentemente data Assurance* -- esta configuração aparece somente se o volume estiver habilitado para Data Assurance (DA). O DA verifica e corrige erros que podem ocorrer à medida que os dados são transferidos através dos controladores para as unidades. Utilize esta opção para desativar permanentemente DA no volume selecionado. Quando desativado, não é possível reativar DA neste volume. *Ativar verificação de redundância de pré-leitura* -- esta definição aparece apenas se o volume for um volume espesso. As verificações de redundância de pré-leitura determinam se os dados em um volume são consistentes sempre que uma leitura é executada. Um volume que tenha esse recurso ativado retorna erros de leitura se os dados forem determinados como inconsistentes pelo firmware do controlador.
+
+
+
+ a| 
+Propriedade do controlador
+ a| 
+Define o controlador que é designado para ser o controlador proprietário, ou principal, do volume. A propriedade do controlador é muito importante e deve ser planejada cuidadosamente. Os controladores devem ser balanceados o mais próximo possível para e/S totais.
+
+
+
+ a| 
+Dimensionamento do segmento
+ a| 
+Mostra a definição para o dimensionamento de segmentos, que aparece apenas para volumes num grupo de volumes. Você pode alterar o tamanho do segmento para otimizar o desempenho. * Transições de tamanho de segmento permitidas* -- o sistema determina as transições de tamanho de segmento que são permitidas. Os tamanhos de segmento que são transições inadequadas do tamanho de segmento atual não estão disponíveis na lista suspensa. As transições permitidas geralmente são o dobro ou metade do tamanho atual do segmento. Por exemplo, se o tamanho atual do segmento de volume for 32 KiB, um novo tamanho de segmento de volume de 16 KiB ou 64 KiB será permitido. *Volumes habilitados para cache SSD* -- você pode especificar um tamanho de segmento de 4 KiB para volumes habilitados para cache SSD. Certifique-se de selecionar o tamanho de segmento de 4 KiB apenas para volumes habilitados para cache SSD que lidam com operações de e/S de bloco pequeno (por exemplo, tamanhos de bloco de e/S KiB 16 ou menores). O desempenho pode ser afetado se você selecionar 4 KiB como o tamanho do segmento para volumes habilitados para cache SSD que lidam com operações sequenciais de blocos grandes. * Quantidade de tempo para alterar o tamanho do segmento.* A quantidade de tempo para alterar o tamanho do segmento de um volume depende dessas variáveis:
+
+** A carga de e/S do host
+** A prioridade de modificação do volume
+** O número de unidades no grupo de volumes
+** O número de canais da unidade
+** O poder de processamento dos controladores do storage array
+
+
+Quando você altera o tamanho do segmento de um volume, o desempenho de e/S é afetado, mas seus dados permanecem disponíveis.
+
+
+
+ a| 
+Prioridade de modificação
+ a| 
+Mostra a definição de prioridade de modificação, que só aparece para volumes num grupo de volumes. A prioridade de modificação define quanto tempo de processamento é alocado para operações de modificação de volume em relação ao desempenho do sistema. Você pode aumentar a prioridade de modificação de volume, embora isso possa afetar o desempenho do sistema. Mova as barras deslizantes para selecionar um nível de prioridade. *Taxas de prioridade de modificação* -- a taxa de prioridade mais baixa beneficia o desempenho do sistema, mas a operação de modificação demora mais tempo. A taxa de prioridade mais alta beneficia a operação de modificação, mas o desempenho do sistema pode estar comprometido.
+
+
+
+ a| 
+Armazenamento em cache
+ a| 
+Mostra a configuração de armazenamento em cache, que pode ser alterada para afetar o desempenho geral de e/S de um volume.
+
+
+
+ a| 
+Cache SSD
+ a| 
+(Esse recurso não está disponível no sistema de armazenamento EF600 ou EF300.) Mostra a configuração cache SSD, que pode ser ativada em volumes compatíveis como forma de melhorar o desempenho somente leitura. Os volumes são compatíveis se compartilharem os mesmos recursos de segurança de unidade e garantia de dados. O recurso cache SSD usa um único ou vários discos de estado sólido (SSDs) para implementar um cache de leitura. O desempenho da aplicação é aprimorado devido aos tempos de leitura mais rápidos para SSDs. Como o cache de leitura está no storage array, o armazenamento em cache é compartilhado em todos os aplicativos que usam o storage array. Basta selecionar o volume que você deseja armazenar em cache e, em seguida, o armazenamento em cache é automático e dinâmico.
+
+|===
+====
+. Clique em *Salvar*.
+
+
+.Resultado
+As definições de volume são alteradas com base nas suas seleções.

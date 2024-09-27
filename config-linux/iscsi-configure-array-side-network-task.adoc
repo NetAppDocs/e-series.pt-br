@@ -1,0 +1,131 @@
+---
+permalink: config-linux/iscsi-configure-array-side-network-task.html 
+sidebar: sidebar 
+keywords: configure iSCSI networking, express linux configuration, software configuration, linux host, E2800, E5700, EF300, EF600, E-Series, eseries 
+summary: Configure a rede iSCSI no lado da matriz. 
+---
+= Configurar a rede do lado da matriz
+:allow-uri-read: 
+:experimental: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Você usa a GUI do Gerenciador de sistema do SANtricity para configurar a rede iSCSI no lado da matriz.
+
+.Antes de começar
+Certifique-se de que tem o seguinte:
+
+* O endereço IP ou nome de domínio de um dos controladores de storage array.
+* Uma senha para a GUI do System Manager, o controle de acesso baseado em função (RBAC) ou LDAP e um serviço de diretório configurado para o acesso de segurança apropriado ao storage array. Consulte a ajuda on-line do Gerenciador de sistemas do SANtricity para obter mais informações sobre o Gerenciamento de Acesso.
+
+
+.Sobre esta tarefa
+Esta tarefa descreve como aceder à configuração da porta iSCSI a partir da página hardware do System Manager. Também pode aceder à configuração a partir do menu:sistema[Definições > Configurar portas iSCSI].
+
+.Passos
+. No seu navegador, insira o seguinte URL: `+https://<DomainNameOrIPAddress>+`
++
+`IPAddress` é o endereço de uma das controladoras de storage array.
+
++
+Na primeira vez que o Gerenciador do sistema SANtricity é aberto em uma matriz que não foi configurada, o prompt Definir senha do administrador é exibido. O gerenciamento de acesso baseado em função configura quatro funções locais: administração, suporte, segurança e monitor. Os três últimos papéis têm senhas aleatórias que não podem ser adivinhadas. Depois de definir uma senha para a função de administrador, você pode alterar todas as senhas usando as credenciais de administrador. Para obter mais informações sobre as quatro funções de usuário local, consulte a ajuda on-line disponível na interface de usuário do Gerenciador de sistema do SANtricity.
+
+. Introduza a palavra-passe do Gestor do sistema para a função de administrador nos campos Definir palavra-passe do administrador e confirmar palavra-passe e, em seguida, clique em *Definir palavra-passe*.
++
+O assistente de configuração é iniciado se não houver pools, grupos de volumes, cargas de trabalho ou notificações configuradas.
+
+. Feche o assistente de configuração.
++
+Você usará o assistente mais tarde para concluir tarefas de configuração adicionais.
+
+. Selecione *hardware*.
+. Se o gráfico mostrar as unidades, clique em *Mostrar parte traseira da prateleira*.
++
+O gráfico muda para mostrar os controladores em vez das unidades.
+
+. Clique no controlador com as portas iSCSI que pretende configurar.
++
+É apresentado o menu de contexto do controlador.
+
+. Selecione *Configurar portas iSCSI*.
++
+Abre-se a caixa de diálogo Configurar portas iSCSI.
+
+. Na lista suspensa, selecione a porta que deseja configurar e clique em *Avançar*.
+. Selecione as definições da porta de configuração e, em seguida, clique em *seguinte*.
++
+Para ver todas as configurações de porta, clique no link *Mostrar mais configurações de porta* à direita da caixa de diálogo.
+
++
+|===
+| Definição da porta | Descrição 
+
+
+ a| 
+Velocidade da porta ethernet configurada
+ a| 
+Selecione a velocidade pretendida. As opções que aparecem na lista suspensa dependem da velocidade máxima que sua rede pode suportar (por exemplo, 10 Gbps).
+
+
+NOTE: As placas de interface de host iSCSI de 25GB GB opcionais disponíveis nos controladores não negociam automaticamente as velocidades. Você deve definir a velocidade de cada porta para 10 GB ou 25 GB. Todas as portas devem ser definidas para a mesma velocidade.
+
+
+
+ a| 
+Ativar IPv4 / ativar IPv6
+ a| 
+Selecione uma ou ambas as opções para ativar o suporte para redes IPv4G e IPv6G.
+
+
+
+ a| 
+Porta de escuta TCP (disponível clicando em *Mostrar mais configurações de porta*.)
+ a| 
+Se necessário, introduza um novo número de porta.
+
+A porta de escuta é o número da porta TCP que o controlador usa para ouvir logins iSCSI de iniciadores iSCSI do host. A porta de escuta padrão é 3260. Tem de introduzir 3260 ou um valor entre 49152 e 65535.
+
+
+
+ a| 
+Tamanho MTU (disponível clicando em *Mostrar mais configurações de porta*.)
+ a| 
+Se necessário, introduza um novo tamanho em bytes para a unidade máxima de transmissão (MTU).
+
+O tamanho padrão da unidade máxima de transmissão (MTU) é de 1500 bytes por quadro. Tem de introduzir um valor entre 1500 e 9000.
+
+
+
+ a| 
+Ative as respostas ICMP PING
+ a| 
+Selecione esta opção para ativar o ICMP (Internet Control Message Protocol). Os sistemas operativos dos computadores em rede utilizam este protocolo para enviar mensagens. Essas mensagens ICMP determinam se um host é acessível e quanto tempo leva para obter pacotes de e para esse host.
+
+|===
++
+Se você selecionou *Ativar IPv4*, uma caixa de diálogo será aberta para selecionar IPv4 configurações depois de clicar em *Avançar*. Se você selecionou *Ativar IPv6*, uma caixa de diálogo será aberta para selecionar IPv6 configurações depois de clicar em *Avançar*. Se você selecionou ambas as opções, a caixa de diálogo para configurações IPv4 será aberta primeiro e, depois de clicar em *Avançar*, a caixa de diálogo para configurações IPv6 será aberta.
+
+. Configure as definições IPv4 e/ou IPv6, automática ou manualmente. Para ver todas as configurações de porta, clique no link *Mostrar mais configurações* à direita da caixa de diálogo.
++
+|===
+| Definição da porta | Descrição 
+
+
+ a| 
+Obter automaticamente a configuração
+ a| 
+Selecione esta opção para obter a configuração automaticamente.
+
+
+
+ a| 
+Especifique manualmente a configuração estática
+ a| 
+Selecione esta opção e, em seguida, introduza um endereço estático nos campos. Para IPv4, inclua a máscara de sub-rede e o gateway. Para IPv6, inclua o endereço IP roteável e o endereço IP do roteador.
+
+|===
+. Clique em *Finish*.
+. Feche o System Manager.
+

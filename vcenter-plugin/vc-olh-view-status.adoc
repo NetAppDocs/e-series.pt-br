@@ -1,0 +1,65 @@
+---
+sidebar: sidebar 
+permalink: vcenter-plugin/vc-olh-view-status.html 
+keywords: vCenter plugin, Plugin for vCenter, SANtricity plugin for vCenter 
+summary: Exibir o status do sistema a partir do plug-in de armazenamento para vCenter ou do vSphere Client 
+---
+= Exibir status
+:hardbreaks:
+:allow-uri-read: 
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./media/
+
+
+[role="lead"]
+Você pode visualizar o status do sistema a partir do plug-in de armazenamento para vCenter ou do vSphere Client.
+
+. Abra o plugin a partir do vSphere Client.
+. Veja o status dos seguintes painéis:
++
+** *Estado da matriz de armazenamento* -- vá para o painel *Manage-All*. Para cada array descoberto, a linha fornece uma coluna Status.
+** *Operações em andamento* -- clique em *operações* no painel lateral para exibir todas as tarefas de longa duração, como importar configurações. Você também pode exibir operações de longa duração na lista suspensa provisionamento. Para cada operação listada na caixa de diálogo operações em andamento, uma porcentagem de conclusão e o tempo estimado restante para concluir a operação são mostrados. Em alguns casos, você pode parar uma operação ou colocá-la em uma prioridade maior ou menor. Se desejar, use os links na coluna ações para parar ou alterar a prioridade de uma operação.
+
+
+
+
+
+CAUTION: Leia todo o texto de advertência fornecido nas caixas de diálogo, particularmente ao parar uma operação.
+
+As operações que podem aparecer para o plugin estão listadas na tabela a seguir. Operações adicionais também podem aparecer na interface do System Manager.
+
+|===
+| Operação | Possível estado da operação | Ações que você pode tomar 
+
+
+| Criar volume (volumes de pool espessos maiores que 64TiB somente) | Em curso | nenhum 
+
+
+| Eliminação de volume (volumes de pool espessos maiores que 64TiB somente) | Em curso | nenhum 
+
+
+| Adicionar capacidade ao pool ou ao grupo de volumes | Em curso | nenhum 
+
+
+| Alterar um nível RAID para um volume | Em curso | nenhum 
+
+
+| Reduzir a capacidade de um pool | Em curso | nenhum 
+
+
+| Verifique o tempo restante em uma operação de formato de disponibilidade instantânea (IAF) para volumes de pool | Em curso | nenhum 
+
+
+| Verifique a redundância de dados de um grupo de volumes | Em curso | nenhum 
+
+
+| Inicialize um volume | Em curso | nenhum 
+
+
+| Aumentar a capacidade de um volume | Em curso | nenhum 
+
+
+| Altere o tamanho do segmento para um volume | Em curso | nenhum 
+|===

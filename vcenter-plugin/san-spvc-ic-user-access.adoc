@@ -1,0 +1,131 @@
+---
+sidebar: sidebar 
+permalink: vcenter-plugin/san-spvc-ic-user-access.html 
+keywords: user access vCenter plugin, user roles vCenter plugin, privileges vCenter plugin, access permissions vCenter plugin 
+summary: Configurar permissões de acesso para o Storage Plugin for vCenter. 
+---
+= Configurar permissões de acesso ao plugin
+:hardbreaks:
+:allow-uri-read: 
+:experimental: 
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./media/
+
+
+[role="lead"]
+Você pode configurar permissões de acesso para o plug-in de armazenamento para vCenter, que inclui usuários, funções e Privileges.
+
+
+
+== Revisão necessária do vSphere Privileges
+
+Para acessar o plugin dentro do vSphere Client, você deve ser atribuído a uma função que tenha o vSphere Privileges apropriado. Os usuários com o privilégio "Configurar datastore" vSphere têm acesso de leitura e gravação ao plug-in, enquanto os usuários com o privilégio "navegar datastore" têm acesso somente leitura. Se um usuário não tiver nenhum desses Privileges, o plugin exibirá uma mensagem "insuficiente Privileges".
+
+|===
+| Tipo de acesso ao plugin | Privilégio vSphere necessário 
+
+
+| Leitura-escrita (Configurar) | Datastore.Configure 
+
+
+| Apenas leitura (Vista) | Datastore.Browse 
+|===
+
+
+== Configurar funções de administrador de armazenamento
+
+Para fornecer Privileges de leitura/escrita para usuários de plugins, você pode criar, clonar ou editar uma função. Para obter mais informações sobre como configurar funções no vSphere Client, consulte o seguinte tópico no VMware Doc Center:
+
+* https://docs.vmware.com/en/VMware-vSphere/7.0/com.vmware.vsphere.security.doc/GUID-41E5E52E-A95B-4E81-9724-6AD6800BEF78.html["Crie uma função personalizada"^]
+
+
+
+
+=== Ações de função de acesso
+
+. Na página inicial do vSphere Client, selecione *Administrator* na área de controle de acesso.
+. Clique em *Roles* na área de controle de acesso.
+. Execute uma das seguintes ações:
++
+** *Criar nova função*: Clique no ícone de ação *criar função*.
+** *Clone Role*: Selecione uma função existente e clique no ícone de ação *Clone Role*.
+** *Editar função existente*: Selecione uma função existente e clique no ícone de ação *Editar função*.
+
+
+
+
+
+NOTE: A função Administrador não é editável.
+
+O assistente apropriado é exibido, dependendo da seleção acima.
+
+
+
+=== Crie uma nova função
+
+. Na lista Privileges (permissões de acesso), selecione as permissões de acesso a essa função.
++
+Para permitir o acesso somente leitura ao plugin, selecione menu:datastore[Browse datastore]. Para permitir o acesso de leitura-gravação, selecione menu:datastore[Configurar datastore].
+
+. Atribua outro Privileges para a lista, se necessário, e clique em *seguinte*.
+. Nomeie a função e forneça uma descrição.
+. Clique em *Finish*.
+
+
+
+
+=== Clonar uma função
+
+. Nomeie a função e forneça uma descrição.
+. Clique em *OK* para concluir o assistente.
+. Selecione a função clonada na lista e clique em *Editar função*.
+. Na lista Privileges (permissões de acesso), selecione as permissões de acesso a essa função.
++
+Para permitir o acesso somente leitura ao plugin, selecione menu:datastore[Browse datastore]. Para permitir o acesso de leitura-gravação, selecione menu:datastore[Configurar datastore].
+
+. Clique em *seguinte*.
+. Atualize o nome e a descrição, se desejado.
+. Clique em *Finish*.
+
+
+
+
+=== Editar uma função existente
+
+. Na lista Privileges (permissões de acesso), selecione as permissões de acesso a essa função.
++
+Para permitir o acesso somente leitura ao plugin, selecione menu:datastore[Browse datastore]. Para permitir o acesso de leitura-gravação, selecione menu:datastore[Configurar datastore].
+
+. Clique em *seguinte*.
+. Atualize o nome ou a descrição, se desejado.
+. Clique em *Finish*.
+
+
+
+
+== Definir permissões para o vCenter Server Appliance
+
+Depois de definir o Privileges para uma função, você deve adicionar uma permissão ao vCenter Server Appliance. Essa permissão permite que um determinado usuário ou grupo acesse o plugin.
+
+. Na lista suspensa do menu, selecione *hosts e clusters*.
+. Selecione o *vCenter Server Appliance* na área de controle de acesso.
+. Clique na guia *Permissions*.
+. Clique no ícone de ação *Adicionar permissão*.
+. Selecione o domínio e o usuário/grupo apropriados.
+. Selecione a função criada que permite o privilégio do plugin de leitura/escrita.
+. Ative a opção *Propagate to Children* (propagar para crianças), se necessário.
+. Clique em *OK*.
+
+
+
+NOTE: Você pode selecionar uma permissão existente e modificá-la para usar a função criada. *No entanto, esteja ciente de que a função deve ter o mesmo Privileges junto com o plugin Privileges de leitura/gravação para evitar uma regredir nas permissões.*
+
+Para acessar o plug-in, você deve fazer login no vSphere Client sob a conta de usuário que tem o Privileges de leitura/gravação para o plug-in.
+
+Para obter mais informações sobre como gerenciar permissões, consulte os tópicos a seguir no VMware Doc Center:
+
+* https://docs.vmware.com/en/VMware-vSphere/7.0/com.vmware.vsphere.security.doc/GUID-3B78EEB3-23E2-4CEB-9FBD-E432B606011A.html["Gerenciamento de permissões para componentes do vCenter"^]
+* https://docs.vmware.com/en/VMware-vSphere/7.0/com.vmware.vsphere.security.doc/GUID-FAA074CC-E8C9-4F13-ABCF-6CF7F15F04EE.html["Práticas recomendadas para funções e permissões"^]
+

@@ -1,0 +1,56 @@
+---
+sidebar: sidebar 
+permalink: vcenter-plugin/vc-olh-delete-volume.html 
+keywords: vCenter plugin, Plugin for vCenter, SANtricity plugin for vCenter 
+summary: Exclua um ou mais volumes para aumentar a capacidade livre de um pool ou grupo de volumes. 
+---
+= Eliminar volume
+:hardbreaks:
+:allow-uri-read: 
+:experimental: 
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./media/
+
+
+[role="lead"]
+Você pode excluir um ou mais volumes para aumentar a capacidade livre de um pool ou grupo de volumes.
+
+.Antes de começar
+Nos volumes que pretende eliminar, certifique-se de que:
+
+* É feito backup de todos os dados.
+* Todas as entradas/saídas (e/S) estão paradas.
+* Todos os dispositivos e sistemas de arquivos são desmontados.
+
+
+.Sobre esta tarefa
+Normalmente, você exclui volumes se os volumes foram criados com os parâmetros ou a capacidade errados, ou se eles não atenderem mais às necessidades de configuração de armazenamento. A exclusão de um volume aumenta a capacidade livre no pool ou grupo de volumes.
+
+
+CAUTION: A exclusão de um volume causa a perda de todos os dados nesses volumes.
+
+Esteja ciente de que você *não pode* excluir um volume que tenha uma destas condições:
+
+* O volume está a ser inicializado.
+* O volume está reconstruindo.
+* O volume faz parte de um grupo de volumes que contém uma unidade que está passando por uma operação de cópia.
+* O volume está passando por uma operação de modificação, como uma alteração do tamanho do segmento, a menos que o volume esteja agora no status Failed (Falha).
+* O volume está mantendo qualquer tipo de reserva persistente.
+* O volume é um volume de origem ou um volume de destino em um volume de cópia que tem um status de pendente, em andamento ou Falha.
+
+
+
+NOTE: Quando um volume excede um determinado tamanho (atualmente 128 TB), a operação de exclusão é executada em segundo plano e o espaço liberado pode não estar disponível imediatamente.
+
+.Passos
+. Na página *Gerenciar*, selecione a matriz de armazenamento que contém os volumes que deseja excluir.
+. Selecione menu:provisionamento[Gerenciar volumes].
+. Clique em *Excluir*.
++
+A caixa de diálogo Excluir volumes é exibida.
+
+. Selecione um ou mais volumes que pretende eliminar e, em seguida, confirme que pretende executar a operação.
+. Clique em *Excluir*.
+

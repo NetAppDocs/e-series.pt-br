@@ -1,0 +1,122 @@
+---
+sidebar: sidebar 
+permalink: vcenter-plugin/vc-olh-provisioning-overview.html 
+keywords: vCenter plugin, Plugin for vCenter, SANtricity plugin for vCenter 
+summary: Você pode criar contentores de dados, chamados volumes, para que o host possa acessar o storage no array. 
+---
+= Visão geral do provisionamento
+:hardbreaks:
+:allow-uri-read: 
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./media/
+
+
+[role="lead"]
+No Storage Plugin for vCenter, você pode criar contentores de dados, chamados volumes, para que o host possa acessar o storage no array.
+
+
+
+== Tipos de volume e caraterísticas
+
+Os volumes são recipientes de dados que gerenciam e organizam o espaço de armazenamento em seu storage array.
+
+Você cria volumes a partir da capacidade de armazenamento disponível em seu storage array, o que ajuda a organizar os recursos do sistema. O conceito de "volumes" é semelhante ao uso de pastas/diretórios em um computador para organizar arquivos para acesso rápido.
+
+Os volumes são a única camada de dados visível para os hosts. Em um ambiente SAN, os volumes são mapeados para números de unidade lógica (LUNs). Esses LUNs mantêm os dados de usuário acessíveis por meio de um ou mais protocolos de acesso ao host compatíveis com o storage array, incluindo FC, iSCSI e SAS.
+
+Cada volume em um pool ou grupo de volumes pode ter suas próprias caraterísticas individuais com base em que tipo de dados serão armazenados nele. Algumas dessas caraterísticas incluem:
+
+* *Tamanho do segmento* -- Um segmento é a quantidade de dados em kilobytes (KiB) que é armazenada em uma unidade antes que a matriz de armazenamento se mova para a próxima unidade na faixa (grupo RAID). O tamanho do segmento é igual ou inferior à capacidade do grupo de volume. O tamanho do segmento é fixo e não pode ser alterado para pools.
+* * Capacidade* -- você cria um volume a partir da capacidade gratuita disponível em um pool ou grupo de volume. Antes de criar um volume, o pool ou grupo de volumes já deve existir e deve ter capacidade livre suficiente para criar o volume.
+* *Propriedade do controlador* -- todos os storages de armazenamento podem ter um ou dois controladores. Em um array de controlador único, o workload de um volume é gerenciado por um único controlador. Em um array de controladora dupla, um volume terá uma controladora preferida (A ou B) que "possua" o volume. Em uma configuração de controladora dupla, a propriedade de volume é ajustada automaticamente usando o recurso balanceamento de carga automático para corrigir quaisquer problemas de balanceamento de carga quando as cargas de trabalho mudam entre os controladores. O balanceamento automático de carga fornece balanceamento automatizado de carga de trabalho de e/S e garante que o tráfego de e/S recebido dos hosts seja gerenciado e balanceado dinamicamente entre os dois controladores.
+* * Atribuição de volume* -- você pode dar aos hosts acesso a um volume quando você cria o volume ou em um momento posterior. Todo o acesso ao host é gerenciado por meio de um número de unidade lógica (LUN). Os hosts detetam LUNs que, por sua vez, estão atribuídos a volumes. Se você estiver atribuindo um volume a vários hosts, use o software de cluster para garantir que o volume esteja disponível para todos os hosts.
++
+O tipo de host pode ter limites específicos sobre quantos volumes o host pode acessar. Mantenha essa limitação em mente quando você cria volumes para uso por um host específico.
+
+* *Provisionamento de recursos* -- para storages EF600 ou EF300, você pode especificar que os volumes sejam colocados em uso imediatamente sem processo de inicialização em segundo plano. Um volume provisionado por recursos é um volume espesso em um grupo ou pool de volumes SSD, em que a capacidade da unidade é alocada (atribuída ao volume) quando o volume é criado, mas os blocos de unidades são deslocalizados (não mapeados).
+* * Nome descritivo* -- você pode nomear um volume qualquer que seja o nome que você gosta, mas recomendamos fazer o nome descritivo.
+
+
+Durante a criação do volume, cada volume é alocada a capacidade e recebe um nome, tamanho do segmento (somente grupos de volume), propriedade do controlador e atribuição de volume para host. Os dados de volume são balanceados automaticamente entre os controladores, conforme necessário.
+
+
+
+== Capacidade para volumes
+
+As unidades do seu storage array fornecem a capacidade de armazenamento físico para os seus dados. Antes de começar a armazenar dados, você deve configurar a capacidade alocada em componentes lógicos conhecidos como pools ou grupos de volume. Você usa esses objetos de storage para configurar, armazenar, manter e preservar dados em seu storage array.
+
+
+
+=== Capacidade para criar e expandir volumes
+
+Você pode criar volumes a partir da capacidade não atribuída ou da capacidade livre em um pool ou grupo de volumes.
+
+* Ao criar um volume a partir da capacidade não atribuída, você pode criar um pool ou grupo de volumes e o volume ao mesmo tempo.
+* Quando você cria um volume a partir da capacidade livre, você está criando um volume adicional em um pool ou grupo de volumes já existente. Depois de expandir a capacidade de volume, você deve aumentar manualmente o tamanho do sistema de arquivos para corresponder. A forma como você faz isso depende do sistema de arquivos que você está usando. Consulte a documentação do sistema operacional do host para obter detalhes.
+
+
+
+NOTE: A interface do plugin não fornece uma opção para criar volumes finos.
+
+
+
+=== Capacidade reportada para volumes
+
+A capacidade reportada do volume é igual à quantidade de capacidade de armazenamento físico alocada. Toda a quantidade de capacidade de armazenamento físico deve estar presente. O espaço fisicamente alocado é igual ao espaço que é relatado ao host.
+
+Normalmente, define a capacidade reportada do volume para ser a capacidade máxima para a qual pensa que o volume vai crescer. Os volumes fornecem performance alta e previsível para suas aplicações, principalmente porque toda a capacidade de usuário é reservada e alocada na criação.
+
+
+
+=== Limites de capacidade
+
+A capacidade mínima para um volume é de 1 MIB e a capacidade máxima é determinada pelo número e capacidade das unidades no pool ou grupo de volumes.
+
+Ao aumentar a capacidade reportada para um volume, tenha em mente as seguintes diretrizes:
+
+* Você pode especificar até três casas decimais (por exemplo, 65,375 GiB).
+* A capacidade precisa ser inferior (ou igual a) ao máximo disponível no grupo de volumes. Quando você cria um volume, alguma capacidade adicional é pré-alocada para migração de tamanho de segmento dinâmico (DSS). A migração DSS é um recurso do software que permite alterar o tamanho do segmento de um volume.
+* Volumes maiores que 2 TIB são suportados por alguns sistemas operacionais host (a capacidade máxima relatada é determinada pelo sistema operacional host). Na verdade, alguns sistemas operacionais host suportam até 128 volumes TIB. Consulte a documentação do sistema operacional do host para obter detalhes adicionais.
+
+
+
+
+== Workloads específicos da aplicação
+
+Ao criar um volume, você seleciona uma carga de trabalho para personalizar a configuração do storage array para um aplicativo específico.
+
+Um workload é um objeto de storage compatível com uma aplicação. Você pode definir uma ou mais cargas de trabalho ou instâncias por aplicação. Para alguns aplicativos, o sistema configura a carga de trabalho para conter volumes com caraterísticas de volume subjacentes semelhantes. Essas características de volume são otimizadas com base no tipo de aplicação compatível com o workload. Por exemplo, se você criar uma carga de trabalho que suporte um aplicativo Microsoft SQL Server e, posteriormente, criar volumes para essa carga de trabalho, as caraterísticas de volume subjacentes serão otimizadas para oferecer suporte ao Microsoft SQL Server.
+
+Durante a criação de volume, o sistema solicita que você responda a perguntas sobre o uso de uma carga de trabalho. Por exemplo, se você estiver criando volumes para o Microsoft Exchange, será perguntado quantas caixas de correio você precisa, quais são seus requisitos médios de capacidade de caixa de correio e quantas cópias do banco de dados deseja. O sistema usa essas informações para criar uma configuração de volume ideal para você, que pode ser editada conforme necessário. Opcionalmente, você pode pular esta etapa na sequência de criação de volume.
+
+
+
+=== Tipos de workloads
+
+Você pode criar dois tipos de workloads: Específicos da aplicação e outros.
+
+* *Específico do aplicativo* -- quando você está criando volumes usando uma carga de trabalho específica do aplicativo, o sistema pode recomendar uma configuração de volume otimizada para minimizar a contenção entre e/S da carga de trabalho do aplicativo e outro tráfego da instância do aplicativo. As características de volume, como tipo de e/S, tamanho do segmento, propriedade da controladora e cache de leitura e gravação, são automaticamente recomendadas e otimizadas para cargas de trabalho criadas para os seguintes tipos de aplicativos.
++
+** Microsoft SQL Server
+** Microsoft Exchange Server
+** Aplicações de vigilância por vídeo
+** VMware ESXi (para volumes a serem usados com o Virtual Machine File System)
++
+Você pode revisar a configuração de volume recomendada e editar, adicionar ou excluir os volumes e caraterísticas recomendados pelo sistema usando a caixa de diálogo Adicionar/Editar volumes.
+
+
+
+* *Outros (ou aplicativos sem suporte específico à criação de volume)* -- outras cargas de trabalho usam uma configuração de volume que você deve especificar manualmente quando deseja criar uma carga de trabalho que não esteja associada a um aplicativo específico ou se o sistema não tiver otimização integrada para o aplicativo que você pretende usar no storage array. Você deve especificar manualmente a configuração do volume usando a caixa de diálogo Adicionar/Editar volumes.
+
+
+
+
+=== Visualizações de aplicação e workload
+
+Para visualizar aplicações e workloads, inicie o System Manager. Nessa interface, você pode exibir informações associadas a uma carga de trabalho específica do aplicativo de algumas maneiras diferentes:
+
+* Você pode selecionar a guia aplicações e workloads no bloco volumes para visualizar os volumes do storage array agrupados por workload e o tipo de aplicação ao qual o workload está associado.
+* Você pode selecionar a guia aplicações e workloads no bloco desempenho para exibir métricas de desempenho (latência, IOPS e MBs) para objetos lógicos. Os objetos são agrupados por aplicativo e carga de trabalho associada. Ao coletar esses dados de desempenho em intervalos regulares, você pode estabelecer medições de linha de base e analisar tendências, o que pode ajudar a investigar problemas relacionados ao desempenho de e/S.
+

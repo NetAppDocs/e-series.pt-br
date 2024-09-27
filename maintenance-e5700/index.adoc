@@ -1,0 +1,50 @@
+---
+permalink: maintenance-e5700/index.html 
+sidebar: sidebar 
+keywords: E5700 maintenance, repair E5700, replace E5700 components, E5724, EF570, E5760 
+summary: Mantenha o hardware E5700 
+---
+= Mantenha o hardware E5700
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Para o sistema de armazenamento E5700, pode executar procedimentos de manutenção nos seguintes componentes.
+
+
+
+== Baterias
+
+Uma bateria é incluída com um recipiente do controlador e preserva os dados em cache se a energia CA falhar.
+
+
+
+== Controladores
+
+Um controlador consiste em uma placa, firmware e software. Controla as unidades e implementa as funções do System Manager.
+
+
+
+== Canisters
+
+Os coletores consistem em três tipos diferentes: Coletores de ventilador de energia (fontes de alimentação) que fornecem uma fonte de alimentação redundante e resfriamento adequado em um compartimento de controladora de 12 ou 24 unidades ou compartimento de unidades; coletores de energia usados para redundância de energia em um compartimento de controladora de 60 unidades ou compartimento de unidades; e coletores de ventilador usados para resfriamento do compartimento de controladora de 60 unidades ou compartimento de unidades.
+
+
+
+== Unidades
+
+Uma unidade é um dispositivo mecânico eletromagnético que fornece o meio de armazenamento físico para os dados.
+
+
+
+== Placas de interface de host (HICs)
+
+Uma placa de interface de host (HIC) pode ser instalada opcionalmente dentro de um recipiente de controlador. O controlador E5700 inclui portas de host integradas na própria placa controladora, bem como portas de host no HIC opcional. As portas de host que são incorporadas ao controlador são chamadas portas de host de placa base. As portas de host que são incorporadas ao HIC são chamadas portas HIC.
+
+
+
+== Protocolo de porta de host
+
+Você pode converter o protocolo de um host para um protocolo diferente para que a compatibilidade e a comunicação possam ser estabelecidas.

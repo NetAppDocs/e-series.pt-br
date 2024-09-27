@@ -1,0 +1,264 @@
+---
+permalink: cloud-connector/install-intro-concept.html 
+sidebar: sidebar 
+keywords: Cloud Connector installation, install Cloud Connector 
+summary: 'A solução empacotada do SANtricity Cloud Connector (arquivo .bin) está disponível apenas para as plataformas RedHat e SUSE Linux.' 
+---
+= Instale o SANtricity Cloud Connector
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+A solução empacotada do SANtricity Cloud Connector (arquivo .bin) está disponível apenas para as plataformas RedHat e SUSE Linux.
+
+Você pode instalar o aplicativo SANtricity Cloud Connector através do modo gráfico ou modo de console em um sistema operacional Linux compatível. Durante o processo de instalação, você deve especificar os números de portas não SSL e SSL para o conetor de nuvem SANtricity. Quando instalado, o SANtricity Cloud Connector é executado como um processo daemon.
+
+
+NOTE: A ferramenta SANtricity Cloud Connector está obsoleta e não está mais disponível para download.
+
+.Antes de começar
+Reveja as seguintes notas:
+
+* Se o proxy de serviços da Web do SANtricity já estiver instalado no mesmo servidor que o conetor da nuvem SANtricity, ocorrerão conflitos entre números de porta não SSL e conflitos de números de porta SSL. Nesse caso, escolha os números apropriados para a porta não SSL e para a porta SSL durante a instalação do SANtricity Cloud Connector.
+* Se alguma alteração de hardware for realizada no seu host, reinstale o aplicativo SANtricity Cloud Connector para garantir a consistência da criptografia.
+* Os backups criados através da versão 3,1 do aplicativo SANtricity Cloud Connector não são compatíveis com a versão 4,0 do aplicativo SANtricity Cloud Connector. Se você pretende manter esses backups, continue usando sua versão anterior do SANtricity Cloud Connector. Para garantir a instalação bem-sucedida de versões 3,1 e 4,0 separadas do conetor de nuvem SANtricity, números de porta exclusivos devem ser atribuídos para cada versão do aplicativo.
+
+
+
+
+== Instalar Multipath do Mapeador de dispositivos (DM-MP)
+
+Qualquer host que esteja executando o SANtricity Cloud Connector também deve executar o Mapper Multipath (DM-MP) e ter o pacote multipath-tools instalado.
+
+O processo de descoberta do SANtricity Cloud Connector conta com o pacote de ferramentas multipath para descoberta e reconhecimento de volumes e arquivos para backup ou restauração. Para obter mais informações sobre como configurar e configurar o Mapeador de dispositivos, consulte o _Guia de drivers multipath do SANtricity Storage Manager_ para a versão do SANtricity que você está usando no https://mysupport.netapp.com/info/web/ECMP1658252.html["Recursos de documentos e-Series e SANtricity"^].
+
+
+
+== Instale o Cloud Connector
+
+Você pode instalar o SANtricity Cloud Connector em sistemas operacionais Linux no modo gráfico ou no modo console.
+
+
+
+=== Modo gráfico
+
+Você pode usar o modo gráfico para instalar o SANtricity Cloud Connector em um sistema operacional Linux.
+
+.Antes de começar
+Designe um local de host para a instalação do SANtricity Cloud Connector.
+
+.Passos
+. Baixe o arquivo de instalação do SANtricity Cloud Connector para o local de host desejado.
+. Abra uma janela de terminal.
+. Navegue até o arquivo de diretório que contém o arquivo de instalação do SANtricity Cloud Connector.
+. Inicie o processo de instalação do SANtricity Cloud Connector:
++
+[listing]
+----
+./cloudconnector-xxxx.bin –i gui
+----
++
+Neste comando, `xxxx` designa o número da versão da aplicação.
+
++
+A janela Instalador é exibida.
+
+. Revise a instrução Introdução e clique em *Next*.
++
+O Contrato de Licença para o Software NetApp, Inc. É exibido na janela do instalador.
+
+. Aceite os termos do Contrato de Licença e, em seguida, clique em *seguinte*.
++
+Os backups criados com versões anteriores da página do SANtricity Cloud Connector são exibidos.
+
+. Para reconhecer os backups criados com versões anteriores da mensagem do SANtricity Cloud Connector, clique em *Avançar*.
++
+
+NOTE: Para instalar a versão 4,0 do SANtricity Cloud Connector enquanto mantém uma versão anterior, números de porta exclusivos devem ser atribuídos para cada versão do aplicativo.
+
++
+A página escolher instalação é exibida na janela Instalador. O campo onde deseja instalar exibe a seguinte pasta de instalação padrão: `opt/netapp/santricity_cloud_connector4/`
+
+. Escolha uma das seguintes opções:
++
+** Para aceitar a localização padrão, clique em *Next*.
+** Para alterar a localização predefinida, introduza uma nova localização da pasta. É apresentada a página Introduza o número da porta não SSL Jetty. Um valor padrão de 8080 é atribuído à porta não SSL.
+
+
+. Escolha uma das seguintes opções:
++
+** Para aceitar o número da porta SSL padrão, clique em *Next*.
+** Para alterar o número da porta SSL padrão, insira o novo valor de número da porta desejado.
+
+
+. Escolha uma das seguintes opções:
++
+** Para aceitar o número de porta não SSL padrão, clique em *Next*.
+** Para alterar o número de porta não SSL padrão, insira o novo valor de número de porta desejado. É apresentada a página Resumo de pré-instalação.
+
+
+. Revise o Resumo de pré-instalação exibido e clique em *Instalar*.
++
+A instalação do SANtricity Cloud Connector é iniciada e um prompt de configuração de Daemon do servidor Web é exibido.
+
+. Clique em *OK* para confirmar o prompt de configuração do Webserver Daemon.
++
+É apresentada a mensagem Instalação concluída.
+
+. Clique em *Done* para sair do instalador do SANtricity Cloud Connecter.
+
+
+
+
+=== Modo de consola
+
+Você pode usar o modo de console para instalar o SANtricity Cloud Connector em um sistema operacional Linux.
+
+.Antes de começar
+Designe um local de host para a instalação do SANtricity Cloud Connector.
+
+.Passos
+. Baixe o arquivo de instalação do SANtricity Cloud Connector para o local de host de e/S desejado.
+. Abra uma janela de terminal.
+. Navegue até o arquivo de diretório que contém o arquivo de instalação do SANtricity Cloud Connector.
+. Inicie o processo de instalação do SANtricity Cloud Connector:
++
+[listing]
+----
+./cloudconnector-xxxx.bin –i console
+----
++
+Neste comando, `xxxx` indica o número da versão da aplicação.
+
++
+O processo de instalação do SANtricity Cloud Connector é inicializado.
+
+. Pressione *Enter* para prosseguir com o processo de instalação.
++
+O Contrato de Licença de Usuário final para o Software NetApp, Inc. É exibido na janela do instalador.
+
++
+
+NOTE: Para cancelar o processo de instalação a qualquer momento, digite `quit` na janela do instalador.
+
+. Pressione *Enter* para prosseguir por cada parte do Contrato de Licença de Usuário final.
++
+A declaração de aceitação do Contrato de Licença é exibida sob a janela do instalador.
+
+. Para aceitar os termos do Contrato de Licença de Usuário final e prosseguir com a instalação do conetor de nuvem SANtricity, digite `Y` e pressione *Enter* sob a janela do instalador.
++
+Os backups criados com versões anteriores da página do SANtricity Cloud Connector são exibidos.
+
++
+
+NOTE: Se você não aceitar os termos do Contrato de Usuário final, digite `N` e pressione *Enter* para encerrar o processo de instalação do SANtricity Cloud Connector.
+
+. Para reconhecer os backups criados com versões anteriores da mensagem do SANtricity Cloud Connector, pressione *Enter*.
++
+
+NOTE: Para instalar a versão 4,0 do SANtricity Cloud Connector enquanto mantém uma versão anterior, números de porta exclusivos devem ser atribuídos para cada versão do aplicativo.
+
++
+É exibida a mensagem escolher Instalar pasta com a seguinte pasta de instalação padrão para o SANtricity Cloud Connector:``/opt/netapp/santricity_cloud_connector4/``.
+
+. Escolha uma das seguintes opções:
++
+** Para aceitar o local de instalação padrão, pressione *Enter*.
+** Para alterar a localização de instalação predefinida, introduza a nova localização da pasta. É apresentada a mensagem introduzir o número da porta não SSL Jetty. Um valor padrão de 8080 é atribuído à porta não SSL.
+
+
+. Escolha uma das seguintes opções:
++
+** Para aceitar o número da porta SSL padrão, pressione *Next*.
+** Para alterar o número da porta SSL padrão, insira o novo valor de número da porta desejado.
+
+
+. Escolha uma das seguintes opções:
++
+** Para aceitar o número de porta não SSL padrão, pressione *Enter*.
+** Para alterar o número da porta não SSL padrão, insira o novo valor do número da porta. O Resumo de pré-instalação do SANtricity Cloud Connector é exibido.
+
+
+. Reveja o Resumo de pré-instalação apresentado e prima *Enter*.
+. Pressione *Enter* para confirmar o prompt de configuração do Daemon do Webserver.
++
+É apresentada a mensagem Instalação concluída.
+
+. Pressione *Enter* para sair do instalador do SANtricity Cloud connecter.
+
+
+
+
+== Adicione certificado de servidor e certificado de CA em um keystore
+
+Para usar uma conexão segura https do navegador ao host do SANtricity Cloud Connector, você pode aceitar o certificado autoassinado do host do SANtricity Cloud Connector ou adicionar um certificado e uma cadeia de confiança reconhecidos pelo navegador e pelo aplicativo SANtricity Cloud Connector.
+
+.Antes de começar
+O aplicativo SANtricity Cloud Connector deve ser instalado em um host.
+
+.Passos
+. Pare o serviço usando o `systemctl` comando.
+. No local de instalação padrão, acesse o diretório de trabalho.
++
+
+NOTE: O local de instalação padrão do SANtricity Cloud Connector é `/opt/netapp/santricity_cloud_connector4`.
+
+. Usando o `keytool` comando, crie seu certificado de servidor e solicitação de assinatura de certificado (CSR).
++
+*EXEMPLO*
+
++
+[listing]
+----
+keytool -genkey -dname "CN=host.example.com, OU=Engineering, O=Company, L=<CITY>, S=<STATE>, C=<COUNTRY>" -alias cloudconnect -keyalg "RSA" -sigalg SHA256withRSA -keysize 2048 -validity 365 -keystore keystore_cloudconnect.jks -storepass changeit
+keytool -certreq -alias cloudconnect -keystore keystore_cloudconnect.jks -storepass changeit -file cloudconnect.csr
+----
+. Envie o CSR gerado para a autoridade de certificação (CA) de sua escolha.
++
+A autoridade de certificação assina a solicitação de certificado e retorna um certificado assinado. Além disso, você recebe um certificado da própria CA. Esse certificado de CA deve ser importado para o keystore.
+
+. Importe o certificado e a cadeia de certificados da CA para o armazenamento de chaves do aplicativo: `/<install Path>/working/keystore`
++
+*EXEMPLO*
+
++
+[listing]
+----
+keytool -import -alias ca-root -file root-ca.cer -keystore keystore_cloudconnect.jks -storepass <password> -noprompt
+keytool -import -alias ca-issuing-1 -file issuing-ca-1.cer -keystore keystore_cloudconnect.jks -storepass <password> -noprompt
+keytool -import -trustcacerts -alias cloudconnect -file certnew.cer -keystore keystore_cloudconnect.jks -storepass <password>
+----
+. Reinicie o serviço.
+
+
+
+
+== Adicione o certificado StorageGRID a um keystore
+
+Se você estiver configurando o StorageGRID como o tipo de destino para o aplicativo SANtricity Cloud Connector, primeiro adicione um certificado StorageGRID ao armazenamento de chaves do SANtricity Cloud Connector.
+
+.Antes de começar
+* Você tem um certificado StorageGRID assinado.
+* Você tem o aplicativo SANtricity Cloud Connector instalado em um host.
+
+
+.Passos
+. Pare o serviço usando o `systemctl` comando.
+. No local de instalação padrão, acesse o diretório de trabalho.
++
+
+NOTE: O local de instalação padrão do SANtricity Cloud Connector é `/opt/netapp/santricity_cloud_connector4`.
+
+. Importe o certificado StorageGRID para o armazenamento de chaves do aplicativo: `/<install Path>/working/keystore`
++
+*EXEMPLO*
+
++
+[listing]
+----
+opt/netapp/santricity_cloud_connector4/jre/bin/keytool -import -trustcacerts -storepass changeit -noprompt -alias StorageGrid_SSL -file /home/ictlabsg01.cer -keystore /opt/netapp/santricity_cloud_connector/jre/lib/security/cacerts
+----
+. Reinicie o serviço.
+

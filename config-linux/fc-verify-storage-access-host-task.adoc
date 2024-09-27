@@ -1,0 +1,29 @@
+---
+permalink: config-linux/fc-verify-storage-access-host-task.html 
+sidebar: sidebar 
+keywords: express linux configuration, software configuration, linux host, 
+summary: Antes de usar o volume, verifique se o host pode gravar dados no volume e lê-los de volta. 
+---
+= Verifique o acesso ao armazenamento no host
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Antes de usar o volume, verifique se o host pode gravar dados no volume e lê-los de volta.
+
+.Antes de começar
+Certifique-se de que tem o seguinte:
+
+* Um volume inicializado que é formatado com um sistema de arquivos.
+
+
+.Passos
+. No host, copie um ou mais arquivos para o ponto de montagem do disco.
+. Copie os arquivos de volta para uma pasta diferente no disco original.
+. Execute o `diff` comando para comparar os ficheiros copiados com os originais.
+
+
+.Depois de terminar
+Remova o arquivo e a pasta que você copiou.

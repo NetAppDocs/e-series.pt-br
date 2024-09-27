@@ -1,0 +1,261 @@
+---
+permalink: upgrade-santricity/upgrade-single-controller-task.html 
+sidebar: sidebar 
+keywords: E-Series, eseries, E2800, E5700, EF300, EF600, SANtricity, upgrade SANtricity, upgrade OS, upgrade E-Series, upgrade firmware, upgrading, upgrade IOM firmware, upgrade NVSRAM, upgrade controller 
+summary: Atualize o software e o firmware para uma única controladora e-Series. 
+---
+= Atualize o software e o firmware para uma única controladora
+:allow-uri-read: 
+:experimental: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Você pode atualizar um único controlador, o que garante que você tenha todos os recursos e correções mais recentes.
+
+Esse processo envolve a atualização do software do storage array e, opcionalmente, do firmware IOM e da NVSRAM (Static Random Access Memory) não volátil.
+
+.Antes de começar
+* Revisão link:overview-upgrade-consider-task.html["Considerações sobre a atualização"].
+* Determine se deseja atualizar o arquivo NVSRAM da controladora ao mesmo tempo que o firmware do SO.
++
+Normalmente, você deve atualizar todos os componentes ao mesmo tempo. No entanto, você pode decidir não atualizar o arquivo NVSRAM do controlador se o arquivo tiver sido corrigido ou for uma versão personalizada e você não quiser sobrescrevê-lo.
+
+* Determine se você deseja atualizar seu firmware IOM.
++
+Normalmente, você deve atualizar todos os componentes ao mesmo tempo. No entanto, você pode decidir não atualizar o firmware IOM se não quiser atualizá-lo como parte da atualização do software SANtricity os ou se o suporte técnico tiver instruído a fazer o downgrade do firmware IOM (você só pode fazer o downgrade do firmware usando a interface de linha de comando).
+
+* Decida se deseja ativar a atualização do sistema operacional agora ou mais tarde.
++
+As razões para ativar mais tarde podem incluir:
+
++
+** *Hora do dia* – a ativação do software e do firmware pode demorar muito tempo, então você pode querer esperar até que as cargas de e/S sejam mais leves. Os controladores fazem failover durante a ativação, portanto, o desempenho pode ser menor do que o normal até a atualização ser concluída.
+** *Tipo de pacote* – você pode querer testar o novo software e firmware em uma matriz de armazenamento antes de atualizar os arquivos em outras matrizes de armazenamento.
+
+
+
+
+
+
+== Passo 1: Baixe arquivos de software do site de suporte
+
+Nesta etapa, você acessa o site de suporte da NetApp para salvar os novos arquivos de software do pacote para download (DLP) no sistema host de gerenciamento.
+
+O tempo necessário para a atualização depende da configuração do storage array e dos componentes que você está atualizando.
+
+.Passos
+. Se o storage array contiver apenas uma controladora ou você não tiver um driver multipath instalado, interrompa a atividade de e/S para o storage array para evitar erros de aplicativos. Se o seu storage array tiver duas controladoras e você tiver um driver multipath instalado, não será necessário interromper a atividade de e/S.
++
+
+CAUTION: Se estiver a atualizar o SANtricity os num dispositivo StorageGRID (por exemplo, SG5612 ou SG5760), tem de parar a atividade de e/S colocando o dispositivo no modo de manutenção antes de continuar com este procedimento, ou poderá perder dados. Para obter instruções detalhadas, consulte as instruções de instalação e manutenção do seu dispositivo StorageGRID.
+
+. Na interface do System Manager, selecione menu:suporte[Centro de atualização].
+. Na área denominada "Atualização de software do sistema operacional SANtricity", clique em *Transferências do sistema operacional NetApp SANtricity* para abrir o site de suporte da NetApp.
+. Na página Downloads, selecione *Software do controlador SANtricity os* da série e.
++
+
+NOTE: O firmware assinado digitalmente é necessário na versão 8,42 e superior. Se tentar transferir firmware não assinado, é apresentado um erro e a transferência é cancelada.
+
+. Siga as instruções apresentadas no ecrã para transferir o software SO mais recente para o modelo do controlador. Se você também quiser atualizar a NVSRAM, baixe o arquivo NVSRAM para uma única controladora.
+
+
+
+
+== Passo 2: Transfira arquivos de software para os controladores
+
+Nesta etapa, você transfere os arquivos de software para seu controlador para que você possa iniciar o processo de atualização. Os componentes são copiados do cliente de gerenciamento para os controladores e colocados em uma área de teste na memória flash.
+
+
+CAUTION: *Risco de perda de dados ou risco de danos à matriz de armazenamento* -- não faça alterações na matriz de armazenamento enquanto a atualização estiver ocorrendo. Mantenha o poder do storage array.
+
+.Passos
+. (Opcional). Se você estiver planejando realizar uma atualização durante uma janela de manutenção específica, talvez queira executar uma verificação de integridade de pré-atualização para determinar se há algum problema importante no storage com antecedência. Se for esse o caso, selecione *verificação de integridade de pré-atualização* no Centro de Atualização no System Manager (menu:suporte[Centro de Atualização]) e siga as instruções na tela. Caso contrário, você pode pular esta etapa, porque uma verificação de integridade faz parte do processo de atualização.
+. Se NÃO pretender atualizar o firmware IOM neste momento, clique em *suspender a sincronização automática IOM* e siga as instruções na caixa de diálogo.
++
+Se você tiver um storage array com uma única controladora, o firmware IOM não será atualizado.
+
+. No Centro de Atualização do Gerenciador de sistema, clique em *Begin Upgrade* em "SANtricity os Software upgrade".
++
+A caixa de diálogo Atualizar software SANtricity os é exibida.
+
+. Selecione um ou mais arquivos para iniciar o processo de atualização:
++
+.. Selecione o arquivo de software do sistema operacional SANtricity clicando em *Procurar* e navegando até o arquivo de software do sistema operacional baixado do site de suporte.
+.. Selecione o arquivo NVSRAM da controladora clicando em *Procurar* e navegando até o arquivo NVSRAM baixado do site de suporte. Os arquivos NVSRAM do controlador têm um nome de arquivo semelhante `N2800-830000-000.dlp` ao .
+
+
++
+Estas ações ocorrem:
+
++
+** Por padrão, apenas os arquivos compatíveis com a configuração atual da matriz de armazenamento aparecem.
+** Quando você seleciona um arquivo para atualização, o nome e o tamanho do arquivo são exibidos.
+
+
+. (Opcional) se você selecionou um arquivo de software do SANtricity os para atualizar, você pode transferir os arquivos para o controlador sem ativá-los selecionando a caixa de seleção *Transferir arquivos agora, mas não atualizar (ativar atualização mais tarde)*.
+. Clique em *Start* (Iniciar) e confirme que deseja executar a operação.
++
+Pode cancelar a operação durante a verificação de estado de pré-atualização, mas não durante a transferência ou ativação.
+
+. (Opcional) para ver uma lista do que foi atualizado, clique em *Save Log*.
++
+O arquivo é salvo na pasta Downloads do navegador com o nome, `drive_upgrade_log-timestamp.txt`.
+
+
+
+Se já tiver ativado os ficheiros de software, aceda a <<Passo 4: Atualização completa de software e firmware>>; caso contrário, aceda <<Passo 3: Ative arquivos de software>>a .
+
+
+
+== Passo 3: Ative arquivos de software
+
+Siga este passo apenas se tiver software ou firmware transferido, mas não ativado. Para verificar esse estado, procure uma notificação na área notificações da página inicial do System Manager ou na página Centro de Atualização.
+
+Ao executar a operação de ativação, o software e o firmware atuais são substituídos pelo novo software e firmware. Não é possível parar o processo de ativação depois de iniciado.
+
+.Passos
+. Na interface do System Manager, selecione menu:suporte[Centro de atualização].
+. Na área denominada "Atualização do software do sistema operacional SANtricity", clique em *Ativar* e confirme se deseja executar a operação.
+. (Opcional) para ver uma lista do que foi atualizado, clique em *Save Log*.
++
+O arquivo é salvo na pasta Downloads do navegador com o nome, `drive_upgrade_log-timestamp.txt`.
+
+
+
+
+
+== Passo 4: Atualização completa de software e firmware
+
+Conclua a atualização de software e firmware verificando as versões na caixa de diálogo Inventário de Software e firmware.
+
+.Antes de começar
+* Tem de ter ativado o seu software ou firmware.
+
+
+.Passos
+. No System Manager, verifique se todos os componentes aparecem na página hardware.
+. Verifique as novas versões de software e firmware marcando a caixa de diálogo Inventário de Software e firmware (vá para o menu:suporte[Centro de Atualização] e clique no link *Inventário de Software e firmware*).
+. Se você atualizou a NVSRAM da controladora, quaisquer configurações personalizadas aplicadas à NVSRAM existente serão perdidas durante o processo de ativação. Você precisa aplicar as configurações personalizadas à NVSRAM novamente depois que o processo de ativação for concluído.
+. Se ocorrer algum dos seguintes erros durante o procedimento de atualização, tome a ação recomendada apropriada.
++
+|===
+| Se encontrar este erro de transferência de firmware... | Em seguida, faça o seguinte... 
+
+
+ a| 
+Unidades atribuídas com falha
+ a| 
+Um motivo para a falha pode ser que a unidade não tenha a assinatura apropriada. Certifique-se de que a unidade afetada é uma unidade autorizada. Entre em Contato com o suporte técnico para obter mais informações.
+
+Ao substituir uma unidade, certifique-se de que a unidade de substituição tem uma capacidade igual ou superior à unidade com falha que está a substituir.
+
+Você pode substituir a unidade com falha enquanto a matriz de armazenamento está recebendo e/S
+
+
+
+ a| 
+Verifique a matriz de armazenamento
+ a| 
+** Certifique-se de que foi atribuído um endereço IP a cada controlador.
+** Certifique-se de que todos os cabos ligados ao controlador não estão danificados.
+** Certifique-se de que todos os cabos estão bem ligados.
+
+
+
+
+ a| 
+Unidades hot spare integradas
+ a| 
+Esta condição de erro tem de ser corrigida antes de poder atualizar o firmware. Inicie o System Manager e use o Recovery Guru para resolver o problema.
+
+
+
+ a| 
+Grupos de volumes incompletos
+ a| 
+Se um ou mais grupos de volumes ou pools de discos estiverem incompletos, você deverá corrigir essa condição de erro antes de atualizar o firmware. Inicie o System Manager e use o Recovery Guru para resolver o problema.
+
+
+
+ a| 
+Operações exclusivas (exceto Mídia em segundo plano/varredura de paridade) atualmente em execução em qualquer grupo de volume
+ a| 
+Se uma ou mais operações exclusivas estiverem em andamento, as operações devem ser concluídas antes que o firmware possa ser atualizado. Use o System Manager para monitorar o andamento das operações.
+
+
+
+ a| 
+Volumes em falta
+ a| 
+Você deve corrigir a condição de volume ausente antes que o firmware possa ser atualizado. Inicie o System Manager e use o Recovery Guru para resolver o problema.
+
+
+
+ a| 
+Qualquer controlador em um estado diferente do ideal
+ a| 
+Um dos controladores de storage array precisa de atenção. Esta condição deve ser corrigida antes que o firmware possa ser atualizado. Inicie o System Manager e use o Recovery Guru para resolver o problema.
+
+
+
+ a| 
+Informações de partição de armazenamento incompatíveis entre gráficos de objetos do controlador
+ a| 
+Ocorreu um erro ao validar os dados nos controladores. Contacte o suporte técnico para resolver este problema.
+
+
+
+ a| 
+Verificação SPM verificar falha na verificação do controlador do banco de dados
+ a| 
+Ocorreu um erro de banco de dados de mapeamento de partições de armazenamento em um controlador. Contacte o suporte técnico para resolver este problema.
+
+
+
+ a| 
+Validação do banco de dados de configuração (se suportado pela versão do controlador do storage array)
+ a| 
+Ocorreu um erro de banco de dados de configuração em um controlador. Contacte o suporte técnico para resolver este problema.
+
+
+
+ a| 
+Verificações relacionadas com MEL
+ a| 
+Contacte o suporte técnico para resolver este problema.
+
+
+
+ a| 
+Mais de 10 eventos informativos ou críticos de mel foram relatados nos últimos 7 dias
+ a| 
+Contacte o suporte técnico para resolver este problema.
+
+
+
+ a| 
+Mais de 2 Página 2C Eventos críticos de mel foram relatados nos últimos 7 dias
+ a| 
+Contacte o suporte técnico para resolver este problema.
+
+
+
+ a| 
+Mais de 2 eventos de mel críticos de canal de unidade degradada foram relatados nos últimos 7 dias
+ a| 
+Contacte o suporte técnico para resolver este problema.
+
+
+
+ a| 
+Mais de 4 entradas críticas de mel nos últimos 7 dias
+ a| 
+Contacte o suporte técnico para resolver este problema.
+
+|===
+
+
+.O que se segue?
+A atualização do software do controlador está concluída. Pode retomar as operações normais.

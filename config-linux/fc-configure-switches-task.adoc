@@ -1,0 +1,31 @@
+---
+permalink: config-linux/fc-configure-switches-task.html 
+sidebar: sidebar 
+keywords: FC switches, zoning, express linux configuration, software configuration, linux host, 
+summary: Configure os switches Fibre Channel para permitir que os hosts se conetem ao storage array e limite o número de caminhos. 
+---
+= Configurar os switches FC
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Configurar (zonear) os switches Fibre Channel (FC) permite que os hosts se conetem ao storage array e limita o número de caminhos. Você pode definir a zona dos switches usando a interface de gerenciamento dos switches.
+
+.Antes de começar
+Certifique-se de que tem o seguinte:
+
+* Credenciais de administrador para os switches.
+* O WWPN de cada porta do iniciador do host e de cada porta de destino do controlador conetada ao switch. (Use o utilitário HBA para descoberta.)
+
+
+.Sobre esta tarefa
+Cada porta do iniciador deve estar em uma zona separada com todas as portas de destino correspondentes. Para obter detalhes sobre o zoneamento de seus switches, consulte a documentação do fornecedor do switch.
+
+.Passos
+. Faça login no programa de administração do switch FC e selecione a opção de configuração de zoneamento.
+. Crie uma nova zona que inclua a primeira porta do iniciador do host e que também inclua todas as portas de destino que se conetam ao mesmo switch FC que o iniciador.
+. Crie zonas adicionais para cada porta do iniciador do host FC no switch.
+. Salve as zonas e, em seguida, ative a nova configuração de zoneamento.
+

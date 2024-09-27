@@ -1,0 +1,48 @@
+---
+sidebar: sidebar 
+permalink: vcenter-plugin/vc-olh-resolve-untrusted-certificates.html 
+keywords: vCenter plugin, Plugin for vCenter, SANtricity plugin for vCenter 
+summary: 'Resolva certificados não confiáveis importando um certificado auto-assinado da matriz de armazenamento ou importando um certificado de autoridade de certificação (CA) emitido por um terceiro confiável.' 
+---
+= Resolver certificados não confiáveis
+:hardbreaks:
+:allow-uri-read: 
+:experimental: 
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./media/
+
+
+[role="lead"]
+Na página certificado, você pode resolver certificados não confiáveis importando um certificado autoassinado da matriz de armazenamento ou importando um certificado de autoridade de certificação (CA) emitido por um terceiro confiável.
+
+.Antes de começar
+Se pretender importar um certificado assinado pela CA, certifique-se de que:
+
+* Você gerou uma solicitação de assinatura de certificado (arquivo .CSR) para cada controlador na matriz de armazenamento e a enviou para a CA.
+* A CA retornou arquivos de certificado confiáveis.
+* Os ficheiros de certificado estão disponíveis no sistema local.
+
+
+.Sobre esta tarefa
+Certificados não confiáveis ocorrem quando um storage array tenta estabelecer uma conexão segura com o plugin, mas a conexão não consegue confirmar como segura. Talvez seja necessário instalar certificados de CA confiáveis adicionais se alguma das seguintes opções for verdadeira:
+
+* Recentemente, você adicionou uma matriz de armazenamento.
+* Um ou ambos os certificados estão expirados ou revogados.
+* Um ou ambos os certificados estão faltando um certificado raiz ou intermediário.
+
+
+.Passos
+. Selecione *Gerenciamento de certificados*.
+. Selecione a guia *Trusted*.
++
+Esta página mostra todos os certificados reportados para os storages de armazenamento.
+
+. Selecione um menu:Importar[certificados] para importar um certificado de CA ou menu:Importar[certificados de matriz de armazenamento autoassinados] para importar um certificado autoassinado.
+. Para limitar a exibição, você pode usar o campo de filtragem *Mostrar certificados que são...* ou pode classificar as linhas de certificado clicando em um dos cabeçalhos de coluna.
+. Na caixa de diálogo, selecione o certificado e clique em *Importar*.
++
+O certificado é carregado e validado.
+
+

@@ -1,0 +1,26 @@
+---
+permalink: install-hw-cabling/power-cable-task.html 
+sidebar: sidebar 
+keywords: cabling, cables, power cable, power cabling, power supply cabling, E-Series, eseries, E2800, E5700, EF300, EF600, DE212C, DE224C, DE460C 
+summary: Ligue as fontes de alimentação de cada componente a circuitos de alimentação separados. 
+---
+= Cablagem de alimentação
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Tem de ligar as fontes de alimentação de cada componente a circuitos de alimentação separados.
+
+.Antes de começar
+* Confirmou que a sua localização fornece a energia necessária.
+* Os dois interruptores de energia nas duas fontes de alimentação de prateleira devem ser desligados.
+
+
+.Sobre esta tarefa
+A fonte de alimentação do seu sistema de storage deve ser capaz de acomodar os requisitos de energia do novo compartimento de unidades. Para obter informações sobre o consumo de energia do sistema de armazenamento, consulte https://hwu.netapp.com/Controller/Index?platformTypeId=2357027["Hardware Universe"^] .
+
+.Passo
+. Conete os dois cabos de alimentação de cada compartimento a diferentes unidades de distribuição de energia (PDUs) no gabinete ou no rack.
+

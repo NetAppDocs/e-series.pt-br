@@ -1,0 +1,126 @@
+---
+permalink: config-linux/fc-worksheet-concept.html 
+sidebar: sidebar 
+keywords: FC worksheet Linux, express linux configuration, software configuration, linux host, 
+summary: Use esta Planilha para Registrar informações de configuração de armazenamento FC. 
+---
+= Registre sua configuração FC
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Você pode gerar e imprimir um PDF desta página e, em seguida, usar a seguinte Planilha para Registrar informações de configuração de armazenamento FC. Você precisa dessas informações para executar tarefas de provisionamento.
+
+A ilustração mostra um host conetado a um storage array do e-Series em duas zonas. Uma zona é indicada pela linha azul; a outra zona é indicada pela linha vermelha. Qualquer porta única tem dois caminhos para o armazenamento (um para cada controlador).
+
+image::../media/port_identifiers_host_and_target_conf-lin.gif[identificadores de porta host e destino conf lin]
+
+
+
+== Identificadores de host
+
+|===
+| Legenda n.º | Conexões de porta de host (iniciador) | WWPN 
+
+
+ a| 
+1
+ a| 
+Host
+ a| 
+_não aplicável_
+
+
+
+ a| 
+2
+ a| 
+Porta de host 0 para a zona de switch FC 0
+ a| 
+
+
+
+ a| 
+7
+ a| 
+Porta de host 1 para a zona de switch FC 1
+ a| 
+
+|===
+
+
+== Identificadores de destino
+
+|===
+| Legenda n.º | Conexões de porta do controlador de matriz (destino) | WWPN 
+
+
+ a| 
+3
+ a| 
+Interrutor
+ a| 
+_não aplicável_
+
+
+
+ a| 
+6
+ a| 
+Controlador de array (destino)
+ a| 
+_não aplicável_
+
+
+
+ a| 
+5
+ a| 
+Controlador A, porta 1 para o switch FC 1
+ a| 
+
+
+
+ a| 
+9
+ a| 
+Controlador A, porta 2 para o switch FC 2
+ a| 
+
+
+
+ a| 
+4
+ a| 
+Controlador B, porta 1 para o switch FC 1
+ a| 
+
+
+
+ a| 
+8
+ a| 
+Controlador B, porta 2 para o switch FC 2
+ a| 
+
+|===
+
+
+== Host de mapeamento
+
+|===
+
+
+ a| 
+Mapeando o nome do host
+ a| 
+
+
+
+ a| 
+Tipo de SO de host
+ a| 
+
+|===

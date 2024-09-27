@@ -1,0 +1,1174 @@
+---
+permalink: maintenance-e5700/hpp-change-host-protocol-task.html 
+sidebar: sidebar 
+keywords: E5700 change host protocol, E5700 baseboard ports, convert E5700 protocol, IB protocol, Infiniband protocol, Fibre Channel protocol, FC protocol, iSCSI protocol, iSER, RoCE, NVMe, converting host port protocol, 
+summary: Altere o protocolo da porta do host para E5700. 
+---
+= Altere o protocolo de host E5700
+:allow-uri-read: 
+:experimental: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Para uma matriz de armazenamento E5700, você pode converter as portas de host de placa base da seguinte forma:
+
+* Fibre Channel (FC) para iSCSI
+* ISCSI para FC
+* Iser to InfiniBand (IB)
+* SRP para IB
+* NVMe para IB
+* NVMe para RoCE
+
+
+
+
+== Passo 1: Determine se você tem SFPs de protocolo duplo
+
+Use o Gerenciador de sistema SANtricity para determinar que tipo de transcetores SFP você tem. Como esses SFPs podem ser usados com protocolos FC e iSCSI, eles são chamados de SFPs _dual-Protocol_ ou _Unified_.
+
+Se seus SFPs atuais suportarem taxas de dados de 16 Gbps e 10 Gbps, você poderá continuar a usá-los após a conversão do protocolo de porta do host.
+
+.Passos
+. No Gerenciador do sistema SANtricity, selecione *suporte*.
+. Selecione o mosaico *Centro de suporte*.
+. Na guia recursos de suporte, localize e selecione o link *Storage Array Profile*.
+. Digite *SFP* na caixa de texto e clique em *Find*.
+. Para cada SFP listado no Perfil da matriz de armazenamento, localize a entrada para *taxa(s) de dados suportada(s)*.
++
+image::../media/sam1130_ss_e2800_unified_spf_maint-e5700.gif[sam1130 ss e2800, manutenção spf unificada e5700]
+
+. Consulte a tabela para determinar se você pode reutilizar os SFPs, da seguinte forma:
++
+|===
+| Taxa(s) de dados suportada(s) | Tipo de SFP | Protocolo suportado 
+
+
+ a| 
+16 Gbps, 10 Gbps, 4 Gbps
+ a| 
+Com protocolo duplo
+ a| 
+** *FC:* 16 Gbps, 4 Gbps
+** **ISCSI: **10 Gbps
+
+
+
+
+ a| 
+10 Gbps
+ a| 
+10 Gbps
+ a| 
+Apenas iSCSI
+
+
+
+ a| 
+16 Gbps, 8 Gbps, 4 Gbps
+ a| 
+16 Gbps
+ a| 
+Apenas FC
+
+|===
++
+** Se tiver SFPs de protocolo duplo, pode continuar a utilizá-los depois de converter o protocolo.
++
+
+NOTE: Os SFPs de protocolo duplo não suportam iSCSI de 1 GB. Se você estiver convertendo portas de host para iSCSI, esteja ciente de que os SFPs de protocolo duplo suportam apenas um link de 10 GB para a porta conetada.
+
+** Se você tiver SFPs de 16 Gbps e estiver convertendo portas de host para iSCSI, remova os SFPs e substitua-os por SFPs de protocolo duplo ou 10 Gbps após a conversão do protocolo. Conforme necessário, você também pode usar cobre iSCSI de 10 Gbps usando um cabo especial Twin-Ax com SFPs.
++
+
+NOTE: SFPs FC de 8Gbps GB NÃO são compatíveis com as controladoras E28xx ou E57xx. APENAS SFPs FC de 16Gbps e 32 Gbps são suportados.
+
+** Se você tiver SFPs de 10 Gbps e estiver convertendo portas de host para FC, remova os SFPs dessas portas e substitua-os por SFPs de protocolo duplo ou 16 Gbps após a conversão do protocolo.
+
+
+
+
+
+
+== Passo 2: Obtenha o pacote de recursos
+
+Para obter o pacote de recursos, é necessário o número de série do compartimento do controlador, um Código de ativação de recursos e o Identificador de ativação de recursos para o storage array.
+
+.Passos
+. Localize o número de série.
++
+.. No Gerenciador do sistema do SANtricity, selecione menu:suporte[Centro de suporte].
+.. Com a guia *Support Resources* selecionada, role até a seção *View top storage array Properties*.
+.. Localize o *número de série do chassi* e copie esse valor para um arquivo de texto.
++
+image::../media/sam1130_ss_e2800_storage_array_profile_sn_smid_copy_maint-e5700.gif[sam1130 ss e2800 storage array profile sn smid copy mint e5700]
+
+
+
+. Localize o *ID do submodelo do pacote de recursos*.
++
+.. No Gerenciador do sistema SANtricity, selecione *suporte*.
+.. Selecione o mosaico *Centro de suporte*.
+.. Na guia recursos de suporte, localize e selecione o link *Storage Array Profile*.
+.. Digite *ID do submodelo do pacote de recursos* na caixa de texto e clique em *Localizar*.
++
+
+NOTE: "Submodelo" também pode ser escrito como "submodelo".
+
+.. Localize a ID do submodelo do pacote de recursos para a configuração inicial.
++
+image::../media/storage_array_profile2_maint-e5700.gif[storage array profile2 manint e5700]
+
+
+
+. Usando o ID do submodelo do pacote de recursos, localize o ID do submodelo do controlador correspondente para a configuração inicial e encontre o código de ativação do recurso para a configuração final desejada na tabela abaixo. Em seguida, copie o código de ativação do recurso para um arquivo de texto.
++
+
+NOTE: As portas Baseboard são desativadas ao executar um protocolo NVMe no HIC.
+
++
+
+NOTE: Se você não estiver usando o IB HIC, você pode ignorar a coluna _HIC Ports_ nas seguintes tabelas:
+
++
+|===
+5+| Códigos de ativação de funcionalidades compatíveis com encriptação (conversões apenas de porta de base) 
+
+
+2+| A iniciar a configuração 3+| A terminar a configuração 
+
+
+| ID do submodelo do controlador | Portas para converter | ID do submodelo do controlador | Portas convertidas para | Código de ativação do recurso 
+
+
+ a| 
+360
+ a| 
+Portas de placa base FC
+ a| 
+362
+ a| 
+Portas de base iSCSI
+ a| 
+SGL-2SB-ZEX13
+
+
+
+ a| 
+362
+ a| 
+Portas de base iSCSI
+ a| 
+360
+ a| 
+Portas de placa base FC
+ a| 
+5GI-4TB-ZW3HL
+
+|===
++
+|===
+7+| Códigos de ativação de recursos capazes de criptografia 
+
+
+3+| A iniciar a configuração 4+| A terminar a configuração 
+
+
+| ID do submodelo do controlador | Portas da placa de base | Portas HIC | ID do submodelo do controlador | Portas da placa de base | Portas HIC | Código de ativação do recurso 
+
+
+ a| 
+360
+ a| 
+FC
+ a| 
+Iser
+ a| 
+361
+ a| 
+FC
+ a| 
+SRP
+ a| 
+UGG-XSB-ZCZKU
+
+
+
+ a| 
+362
+ a| 
+ISCSI
+ a| 
+Iser
+ a| 
+SGL-2SB-ZEX13
+
+
+
+ a| 
+363
+ a| 
+ISCSI
+ a| 
+SRP
+ a| 
+VGN-LTB-ZGFCT
+
+
+
+ a| 
+382
+ a| 
+Não disponível
+ a| 
+NVMe/IB
+ a| 
+KGI-ISB-ZDHQF
+
+
+
+ a| 
+403
+ a| 
+Não disponível
+ a| 
+NVMe/RoCE ou NVMe/FC
+ a| 
+YGH-BHK-Z8EKB
+
+
+
+ a| 
+361
+ a| 
+FC
+ a| 
+SRP
+ a| 
+360
+ a| 
+FC
+ a| 
+Iser
+ a| 
+JGS-0TB-ZID1V
+
+
+
+ a| 
+362
+ a| 
+ISCSI
+ a| 
+Iser
+ a| 
+UGX-RTB-ZLBPV
+
+
+
+ a| 
+363
+ a| 
+ISCSI
+ a| 
+SRP
+ a| 
+2G1-BTB-ZMRYN
+
+
+
+ a| 
+382
+ a| 
+Não disponível
+ a| 
+NVMe/IB
+ a| 
+TGV-8TB-ZKTH6
+
+
+
+ a| 
+403
+ a| 
+Não disponível
+ a| 
+NVMe/RoCE ou NVMe/FC
+ a| 
+JGM-EIK-ZAC6Q
+
+
+
+ a| 
+362
+ a| 
+ISCSI
+ a| 
+Iser
+ a| 
+360
+ a| 
+FC
+ a| 
+Iser
+ a| 
+5GI-4TB-ZW3HL
+
+
+
+ a| 
+361
+ a| 
+FC
+ a| 
+SRP
+ a| 
+EGL-NTB-ZXKQ4
+
+
+
+ a| 
+363
+ a| 
+ISCSI
+ a| 
+SRP
+ a| 
+HGP-QUB-Z1ICJ
+
+
+
+ a| 
+383
+ a| 
+Não disponível
+ a| 
+NVMe/IB
+ a| 
+BGS-AUB-Z2YNG
+
+
+
+ a| 
+403
+ a| 
+Não disponível
+ a| 
+NVMe/RoCE ou NVMe/FC
+ a| 
+1GW-LIK-ZG9HN
+
+
+
+ a| 
+363
+ a| 
+ISCSI
+ a| 
+SRP
+ a| 
+360
+ a| 
+FC
+ a| 
+Iser
+ a| 
+SGU-TUB-Z3G2U
+
+
+
+ a| 
+361
+ a| 
+FC
+ a| 
+SRP
+ a| 
+FGX-DUB-Z5WF7
+
+
+
+ a| 
+362
+ a| 
+ISCSI
+ a| 
+SRP
+ a| 
+LG3-GUB-Z7V17
+
+
+
+ a| 
+383
+ a| 
+Não disponível
+ a| 
+NVMe/IB
+ a| 
+NG5-ZUB-Z8C8J
+
+
+
+ a| 
+403
+ a| 
+Não disponível
+ a| 
+NVMe/RoCE ou NVMe/FC
+ a| 
+WG2-0IK-ZI75U
+
+
+
+ a| 
+382
+ a| 
+Não disponível
+ a| 
+NVMe/IB
+ a| 
+360
+ a| 
+FC
+ a| 
+Iser
+ a| 
+QG6-ETB-ZPPPT
+
+
+
+ a| 
+361
+ a| 
+FC
+ a| 
+SRP
+ a| 
+XG8-XTB-ZQ7XS
+
+
+
+ a| 
+362
+ a| 
+ISCSI
+ a| 
+Iser
+ a| 
+SGB-HTB-ZS0AH
+
+
+
+ a| 
+363
+ a| 
+ISCSI
+ a| 
+SRP
+ a| 
+TGD-1TB-ZT5TL
+
+
+
+ a| 
+403
+ a| 
+Não disponível
+ a| 
+NVMe/RoCE ou NVMe/FC
+ a| 
+IGR-IIK-ZDBRB
+
+
+
+ a| 
+383
+ a| 
+Não disponível
+ a| 
+NVMe/IB
+ a| 
+360
+ a| 
+FC
+ a| 
+Iser
+ a| 
+LG8-JUB-ZATLD
+
+
+
+ a| 
+361
+ a| 
+FC
+ a| 
+SRP
+ a| 
+LGA-3UB-ZBAX1
+
+
+
+ a| 
+362
+ a| 
+ISCSI
+ a| 
+Iser
+ a| 
+NGF-7UB-ZE8KX
+
+
+
+ a| 
+363
+ a| 
+ISCSI
+ a| 
+SRP
+ a| 
+3GI-QUB-ZFP1Y
+
+
+
+ a| 
+403
+ a| 
+Não disponível
+ a| 
+NVMe/RoCE ou NVMe/FC
+ a| 
+5G7-RIK-ZL5PE
+
+
+
+ a| 
+403
+ a| 
+Não disponível
+ a| 
+NVMe/RoCE ou NVMe/FC
+ a| 
+360
+ a| 
+FC
+ a| 
+Iser
+ a| 
+BGC-UIK-Z03GR
+
+
+
+ a| 
+361
+ a| 
+FC
+ a| 
+SRP
+ a| 
+LGF-EIK-ZPJRX
+
+
+
+ a| 
+362
+ a| 
+ISCSI
+ a| 
+Iser
+ a| 
+PGJ-HIK-ZSIDZ
+
+
+
+ a| 
+363
+ a| 
+ISCSI
+ a| 
+SRP
+ a| 
+1GM-1JK-ZTYQX
+
+
+
+ a| 
+382
+ a| 
+Não disponível
+ a| 
+NVMe/IB
+ a| 
+JGH-XIK-ZQ142
+
+|===
++
+|===
+5+| Códigos de ativação de funcionalidades sem encriptação (conversões apenas de porta de base) 
+
+
+2+| A iniciar a configuração 3+| A terminar a configuração 
+
+
+| ID do submodelo do controlador | Portas para converter | ID do submodelo do controlador | Portas convertidas para | Código de ativação do recurso 
+
+
+ a| 
+365
+ a| 
+Portas de placa base FC
+ a| 
+367
+ a| 
+Portas de base iSCSI
+ a| 
+BGU-GVB-ZM3KW
+
+
+
+ a| 
+367
+ a| 
+Portas de base iSCSI
+ a| 
+366
+ a| 
+Portas de placa base FC
+ a| 
+9GU-2WB-Z503D
+
+|===
++
+|===
+7+| Códigos de ativação do recurso não-criptografia 
+
+
+3+| A iniciar a configuração 4+| A terminar a configuração 
+
+
+| ID do submodelo do controlador | Portas da placa de base | Portas HIC | ID do submodelo do controlador | Portas da placa de base | Portas HIC | Código de ativação do recurso 
+
+
+ a| 
+365
+ a| 
+FC
+ a| 
+Iser
+ a| 
+366
+ a| 
+FC
+ a| 
+SRP
+ a| 
+BGP-DVB-ZJ4YC
+
+
+
+ a| 
+367
+ a| 
+ISCSI
+ a| 
+Iser
+ a| 
+BGU-GVB-ZM3KW
+
+
+
+ a| 
+368
+ a| 
+ISCSI
+ a| 
+SRP
+ a| 
+4GX-ZVB-ZNJVD
+
+
+
+ a| 
+384
+ a| 
+Não disponível
+ a| 
+NVMe/IB
+ a| 
+TGS-WVB-ZKL9T
+
+
+
+ a| 
+405
+ a| 
+Não disponível
+ a| 
+NVMe/RoCE ou NVMe/FC
+ a| 
+WGC-GJK-Z7PU2
+
+
+
+ a| 
+366
+ a| 
+FC
+ a| 
+SRP
+ a| 
+365
+ a| 
+FC
+ a| 
+Iser
+ a| 
+WG2-3VB-ZQHLF
+
+
+
+ a| 
+367
+ a| 
+ISCSI
+ a| 
+Iser
+ a| 
+QG7-6VB-ZSF8M
+
+
+
+ a| 
+368
+ a| 
+ISCSI
+ a| 
+SRP
+ a| 
+PGA-PVB-ZUWMX
+
+
+
+ a| 
+384
+ a| 
+Não disponível
+ a| 
+NVMe/IB
+ a| 
+CG5-MVB-ZRYW1
+
+
+
+ a| 
+405
+ a| 
+Não disponível
+ a| 
+NVMe/RoCE ou NVMe/FC
+ a| 
+3GH-JJK-ZANJQ
+
+
+
+ a| 
+367
+ a| 
+ISCSI
+ a| 
+Iser
+ a| 
+365
+ a| 
+FC
+ a| 
+Iser
+ a| 
+PGR-IWB-Z48PC
+
+
+
+ a| 
+366
+ a| 
+FC
+ a| 
+SRP
+ a| 
+9GU-2WB-Z503D
+
+
+
+ a| 
+368
+ a| 
+ISCSI
+ a| 
+SRP
+ a| 
+SGJ-IWB-ZJFE4
+
+
+
+ a| 
+385
+ a| 
+Não disponível
+ a| 
+NVMe/IB
+ a| 
+UGM-2XB-ZKV0B
+
+
+
+ a| 
+405
+ a| 
+Não disponível
+ a| 
+NVMe/RoCE ou NVMe/FC
+ a| 
+8GR-QKK-ZFJTP
+
+
+
+ a| 
+368
+ a| 
+ISCSI
+ a| 
+SRP
+ a| 
+365
+ a| 
+FC
+ a| 
+Iser
+ a| 
+YG0-LXB-ZLD26
+
+
+
+ a| 
+366
+ a| 
+FC
+ a| 
+SRP
+ a| 
+SGR-5XB-ZNTFB
+
+
+
+ a| 
+367
+ a| 
+ISCSI
+ a| 
+SRP
+ a| 
+PGZ-5WB-Z8M0N
+
+
+
+ a| 
+385
+ a| 
+Não disponível
+ a| 
+NVMe/IB
+ a| 
+KG2-0WB-Z9477
+
+
+
+ a| 
+405
+ a| 
+Não disponível
+ a| 
+NVMe/RoCE ou NVMe/FC
+ a| 
+2GV-TKK-ZIHI6
+
+
+
+ a| 
+384
+ a| 
+Não disponível
+ a| 
+NVMe/IB
+ a| 
+365
+ a| 
+FC
+ a| 
+Iser
+ a| 
+SGF-SVB-ZWU9M
+
+
+
+ a| 
+366
+ a| 
+FC
+ a| 
+SRP
+ a| 
+7GH-CVB-ZYBGV
+
+
+
+ a| 
+367
+ a| 
+ISCSI
+ a| 
+Iser
+ a| 
+6GK-VVB-ZZSRN
+
+
+
+ a| 
+368
+ a| 
+ISCSI
+ a| 
+SRP
+ a| 
+RGM-FWB-Z195H
+
+
+
+ a| 
+405
+ a| 
+Não disponível
+ a| 
+NVMe/RoCE ou NVMe/FC
+ a| 
+VGM-NKK-ZDLDK
+
+
+
+ a| 
+385
+ a| 
+Não disponível
+ a| 
+NVMe/IB
+ a| 
+365
+ a| 
+FC
+ a| 
+Iser
+ a| 
+GG5-8WB-ZBKEM
+
+
+
+ a| 
+366
+ a| 
+FC
+ a| 
+SRP
+ a| 
+KG7-RWB-ZC2RZ
+
+
+
+ a| 
+367
+ a| 
+ISCSI
+ a| 
+Iser
+ a| 
+NGC-VWB-ZFZEN
+
+
+
+ a| 
+368
+ a| 
+ISCSI
+ a| 
+SRP
+ a| 
+4GE-FWB-ZGGQJ
+
+
+
+ a| 
+405
+ a| 
+Não disponível
+ a| 
+NVMe/RoCE ou NVMe/FC
+ a| 
+NG1-WKK-ZLFAI
+
+
+
+ a| 
+405
+ a| 
+Não disponível
+ a| 
+NVMe/RoCE ou NVMe/FC
+ a| 
+365
+ a| 
+FC
+ a| 
+Iser
+ a| 
+MG6-ZKK-ZNDVC
+
+
+
+ a| 
+366
+ a| 
+FC
+ a| 
+SRP
+ a| 
+WG9-JKK-ZPUAR
+
+
+
+ a| 
+367
+ a| 
+ISCSI
+ a| 
+Iser
+ a| 
+NGE-MKK-ZRSW9
+
+
+
+ a| 
+368
+ a| 
+ISCSI
+ a| 
+SRP
+ a| 
+TGG-6KK-ZT9BU
+
+
+
+ a| 
+384
+ a| 
+Não disponível
+ a| 
+NVMe/IB
+ a| 
+AGB-3KK-ZQBLR
+
+|===
++
+
+NOTE: Se o ID do submodelo do controlador não estiver listado, http://mysupport.netapp.com["Suporte à NetApp"^] contacte .
+
+. No System Manager, localize o identificador de ativação da funcionalidade.
++
+.. Aceda ao menu:Definições[sistema].
+.. Role para baixo até *Complementos*.
+.. Em *Change Feature Pack*, localize o *Feature Enable Identifier*.
+.. Copie e cole esse número de 32 dígitos em um arquivo de texto.
++
+image::../media/sam1130_ss_e2800_change_feature_pack_feature_enable_identifier_copy_maint-e5700.gif[sam1130 ss e2800 alterar o recurso de pacote de recursos ativar cópia do identificador e5700]
+
+
+
+. Aceda a http://partnerspfk.netapp.com["Ativação de licença do NetApp: Ativação do recurso Premium do storage array"^]e introduza as informações necessárias para obter o pacote de funcionalidades.
++
+** Número de série do chassis
+** Código de ativação do recurso
+** Identificador de ativação de funcionalidade
++
+
+NOTE: O site de ativação de recursos Premium inclui um link para ""instruções de ativação de recursos Premium"". Não tente usar essas instruções para este procedimento.
+
+
+
+. Escolha se deseja receber o arquivo-chave do pacote de recursos em um e-mail ou baixá-lo diretamente do site.
+
+
+
+
+== Etapa 3: Parar a e/S do host
+
+Pare todas as operações de e/S do host antes de converter o protocolo das portas do host. Não é possível acessar dados no storage array até concluir a conversão com êxito.
+
+Esta tarefa só se aplica se você estiver convertendo uma matriz de armazenamento que já esteja em uso.
+
+.Passos
+. Certifique-se de que nenhuma operação de e/S esteja ocorrendo entre o storage array e todos os hosts conectados. Por exemplo, você pode executar estas etapas:
++
+** Parar todos os processos que envolvem os LUNs mapeados do armazenamento para os hosts.
+** Garantir que nenhuma aplicação esteja gravando dados em LUNs mapeados do storage para os hosts.
+** Desmonte todos os sistemas de arquivos associados a volumes no array.
++
+
+NOTE: As etapas exatas para interromper as operações de e/S do host dependem do sistema operacional do host e da configuração, que estão além do escopo dessas instruções. Se você não tiver certeza de como interromper as operações de e/S do host em seu ambiente, considere encerrar o host.
+
++
+
+CAUTION: *Possível perda de dados* -- se você continuar este procedimento enquanto as operações de e/S estão ocorrendo, o aplicativo host pode perder dados porque o storage array não estará acessível.
+
+
+
+. Se o storage array participar de uma relação de espelhamento, interrompa todas as operações de e/S de host no storage array secundário.
+. Aguarde até que quaisquer dados na memória cache sejam gravados nas unidades.
++
+O LED verde Cache ative *(1)* na parte de trás de cada controlador está ligado quando os dados em cache precisam ser gravados nas unidades. Tem de esperar que este LED se desligue. image:../media/e5700_ib_hic_w_cache_led_callouts_maint-e5700.gif[""]
+
+. Na página inicial do Gerenciador do sistema do SANtricity, selecione *Exibir operações em andamento*.
+. Aguarde que todas as operações sejam concluídas antes de continuar com o próximo passo.
+
+
+
+
+== Passo 4: Altere o pacote de recursos
+
+Altere o pacote de recursos para converter o protocolo de host das portas de host da placa base, as portas IB HIC ou ambos os tipos de portas.
+
+.Passos
+. No Gerenciador do sistema SANtricity, selecione menu:Configurações[sistema].
+. Em *Add-ons*, selecione *Change Feature Pack*.
++
+image::../media/sam1130_ss_system_change_feature_pack_maint-e5700.gif[sam1130 ss troca do sistema manut pack de funcionalidades e5700]
+
+. Clique em *Procurar* e, em seguida, selecione o pacote de funcionalidades que pretende aplicar.
+. Digite *Change* no campo.
+. Clique em *alterar*.
++
+A migração do pacote de recursos começa. Ambos os controladores reiniciam automaticamente duas vezes para permitir que o novo pacote de recursos entre em vigor. O storage array retorna a um estado responsivo após a reinicialização ser concluída.
+
+. Confirme se as portas do host têm o protocolo que você espera.
++
+.. No Gerenciador do sistema SANtricity, selecione *hardware*.
+.. Clique em *Mostrar parte posterior da prateleira*.
+.. Selecione o gráfico para o controlador A ou controlador B.
+.. Selecione *View settings* no menu de contexto.
+.. Selecione a guia *interfaces de host*.
+.. Clique em *Mostrar mais configurações*.
+.. Revise os detalhes mostrados para as portas de base e as portas HIC (rotulada como "lote 1") e confirme se cada tipo de porta tem o protocolo que você espera.
+
+
+
+
+.O que se segue?
+Vá para link:hpp-complete-protocol-conversion-task.html["Conversão completa do protocolo de host"].

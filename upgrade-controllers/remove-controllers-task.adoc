@@ -1,0 +1,88 @@
+---
+permalink: upgrade-controllers/remove-controllers-task.html 
+sidebar: sidebar 
+keywords: E-Series, eseries, E2800, E5700, EF300, EF600, upgrade controller, upgrading controller, remove controller, removing controller, remove battery, removing battery 
+summary: A primeira etapa na atualização de controladores é remover os controladores antigos e, opcionalmente, a bateria. 
+---
+= Remova os controladores
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Depois de se preparar para a atualização, você pode remover os controladores e, se necessário, remover a bateria.
+
+
+
+== Passo 1: Remova o controlador
+
+Remova o recipiente do controlador para que você possa atualizá-lo com um novo. Você deve desconetar todos os cabos e remover quaisquer transcetores SFP. Em seguida, você pode deslizar o recipiente do controlador para fora da prateleira do controlador.
+
+.Antes de começar
+Certifique-se de que tem o seguinte:
+
+* Uma pulseira antiestática ou tome outras precauções antiestáticas.
+* Etiquetas para identificar cada cabo que está ligado ao recipiente do controlador.
+
+
+.Sobre esta tarefa
+Execute as etapas a seguir para cada controlador na bandeja de unidades e controlador
+
+Se você estiver atualizando controladores em uma bandeja de unidades e controlador duplex, repita todas as etapas para remover o segundo recipiente do controlador.
+
+.Passos
+. Coloque uma pulseira antiestática ou tome outras precauções antiestáticas.
+. Identifique cada cabo que esteja conetado ao recipiente do controlador antigo. Dependendo da configuração do HIC, você poderá reconetar alguns cabos depois de substituir o recipiente do controlador.
+. Desconete todos os cabos de interface e Ethernet do antigo recipiente do controlador.
++
+Se existirem cabos de fibra ótica, pode utilizar as duas alavancas de libertação para remover parcialmente o recipiente do controlador. A abertura destas alavancas de libertação facilita a pressão da patilha de libertação do cabo de fibra ótica.
+
++
+
+CAUTION: Para evitar um desempenho degradado, não torça, dobre, aperte ou pise nos cabos.
+
+. Se o recipiente antigo do controlador contiver um HIC Fibre Channel ou um HIC InfiniBand, remova os transcetores de fator de forma pequeno (SFP) (para Fibre Channel) ou quad SFP (QSFP) (para InfiniBand) do HIC e salve-os para possível reutilização.
+. Remova o controlador A..
++
+.. Desbloqueie e rode as pegas de libertação para fora para soltar o recipiente do controlador.
+.. Usando as alças de liberação e as mãos, puxe o recipiente do controlador para fora da bandeja de unidades e controlador
++
+A figura a seguir é um exemplo da localização geral das alças de liberação nos modelos de controlador. As gavetas de controladora e as bandejas de unidades e controlador têm uma configuração semelhante para as alças de liberação.
+
++
+image:../media/28_dwg_e2824_remove_controller_canister_upg-hw.gif[""]
+
++
+*(1)* _Controller canister_
+
++
+*(2)* _pega da câmara_
+
+
+
+. Coloque o recipiente antigo do controlador numa superfície plana e livre de estática perto da bandeja de unidades e controlador com as alavancas de libertação para cima. Posicione o recipiente do controlador de forma a que possa aceder à tampa superior.
+. (Condicional) se você estiver atualizando controladores em uma bandeja de unidades e controlador duplex, repita todas as etapas para remover o segundo recipiente do controlador.
+
+
+Se pretender utilizar a bateria do controlador antigo no novo controlador, vá para a parte seguinte da secção; caso contrário, vá link:install-controllers-task.html["Instale novos controladores"]para .
+
+
+
+== Passo 2: Remova a bateria
+
+Retire a bateria apenas se pretender utilizar a bateria do recipiente do controlador antigo no novo recipiente do controlador.
+
+.Passos
+. Pressione ambos os botões de trava da tampa superior no recipiente antigo do controlador e deslize a tampa superior para a parte traseira do recipiente.
+. Execute uma das seguintes opções, dependendo do modelo da bandeja de unidades e controlador, para liberar a bateria antiga:
++
+** Para a bandeja de unidades e controlador E2600 ou E2700, desaperte o parafuso que fixa a bateria ao recipiente do controlador.
+** Para a bandeja de unidades e controlador E5400, EF540, E5500, EF550, E5600 ou EF600, solte a aba que prende a bateria ao recipiente do controlador.
+
+
+. Retire a bateria, fazendo-a deslizar para a parte traseira do antigo recipiente do controlador.
+
+
+.O que se segue?
+Vá para link:install-controllers-task.html["Instale novos controladores"].

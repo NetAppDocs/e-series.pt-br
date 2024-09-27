@@ -1,0 +1,31 @@
+---
+permalink: install-hw-cabinet/index.html 
+sidebar: sidebar 
+keywords: 3040 40U cabinet, cabinet installation, drive tray installation, controller installation, shelf installation, E2800, E5700, EF300, EF600, 
+summary: Visão geral da instalação das bandejas de unidades no gabinete e-Series 3040 40U 
+---
+= Instale as bandejas no gabinete 3040 40U
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+É possível instalar as seguintes bandejas de unidades e controlador e bandejas de unidades de expansão no gabinete e-Series 3040 40U:
+
+* Bandejas de unidades e controlador E2612, E2624 e E2660
+* Bandejas de unidades e controlador E2712, E2724 e E2760
+* Bandejas de unidades e controlador E5412, E5424 e E5460
+* Bandejas de unidades e controlador E5512, E5524 e E5560
+* Bandejas de unidades e controlador E5612, E5624 e E5660
+* Flash arrays EF540, EF550 e EF560
+* Bandejas de unidades DE1600, DE5600 e DE6600
+
+
+Você também pode instalar as seguintes gavetas de controladora SAS-3 e compartimentos de unidades no gabinete.
+
+* Gavetas de controladora E2812, E2824 e E5724
+* Compartimentos de unidades DE212C e DE224C
+
+
+No entanto, as especificações para essas prateleiras não estão listadas nesses procedimentos. Consulte a https://hwu.netapp.com["NetApp Hardware Universe"^].

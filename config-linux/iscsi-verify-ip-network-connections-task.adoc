@@ -1,0 +1,55 @@
+---
+permalink: config-linux/iscsi-verify-ip-network-connections-task.html 
+sidebar: sidebar 
+keywords: express linux configuration, software configuration, linux host, E2800, E5700, EF300, EF600, E-Series, eseries 
+summary: 'Você verifica as conexões de rede de Protocolo de Internet (IP) usando testes de ping para garantir que o host e a matriz sejam capazes de se comunicar.' 
+---
+= Verifique as conexões de rede IP
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Você verifica as conexões de rede IP (Internet Protocol) usando testes de ping para garantir que o host e o array possam se comunicar.
+
+.Passos
+. No host, execute um dos seguintes comandos, dependendo se os quadros jumbo estão ativados:
++
+** Se os quadros jumbo não estiverem ativados, execute este comando:
++
+[listing]
+----
+ping -I <hostIP\> <targetIP\>
+----
+** Se os quadros jumbo estiverem ativados, execute o comando ping com um tamanho de carga útil de 8.972 bytes. Os cabeçalhos combinados IP e ICMP são 28 bytes, que quando adicionados à carga útil, equivale a 9.000 bytes. O interrutor -s define o `packet size` bit. O switch -d define a opção debug. Essas opções permitem que quadros jumbo de 9.000 bytes sejam transmitidos com sucesso entre o iniciador iSCSI e o destino.
++
+[listing]
+----
+ping -I <hostIP\> -s 8972 -d <targetIP\>
+----
++
+Neste exemplo, o endereço IP de destino iSCSI é `192.0.2.8`.
+
++
+[listing]
+----
+#ping -I 192.0.2.100 -s 8972 -d 192.0.2.8
+Pinging 192.0.2.8 with 8972 bytes of data:
+Reply from 192.0.2.8: bytes=8972 time=2ms TTL=64
+Reply from 192.0.2.8: bytes=8972 time=2ms TTL=64
+Reply from 192.0.2.8: bytes=8972 time=2ms TTL=64
+Reply from 192.0.2.8: bytes=8972 time=2ms TTL=64
+Ping statistics for 192.0.2.8:
+  Packets: Sent = 4, Received = 4, Lost = 0 (0% loss),
+Approximate round trip times in milli-seconds:
+  Minimum = 2ms, Maximum = 2ms, Average = 2ms
+----
+
+
+. Emita um `ping` comando do endereço do iniciador de cada host (o endereço IP da porta Ethernet do host usada para iSCSI) para cada porta iSCSI do controlador. Execute esta ação a partir de cada servidor host na configuração, alterando os endereços IP conforme necessário.
++
+
+NOTE: Se o comando falhar (por exemplo, retorna `Packet needs to be fragmented but DF set`), verifique o tamanho da MTU (suporte a quadros jumbo) para as interfaces Ethernet no servidor host, no controlador de armazenamento e nas portas do switch.
+
+

@@ -1,0 +1,47 @@
+---
+sidebar: sidebar 
+permalink: vcenter-plugin/vc-olh-add-volumes-to-workload.html 
+keywords: vCenter plugin, Plugin for vCenter, SANtricity plugin for vCenter 
+summary: Adicione volumes não atribuídos a um workload novo ou existente. 
+---
+= Adicionar volumes ao workload
+:hardbreaks:
+:allow-uri-read: 
+:experimental: 
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./media/
+
+
+[role="lead"]
+Você pode adicionar volumes não atribuídos a um workload novo ou existente.
+
+.Sobre esta tarefa
+Os volumes não são associados a uma carga de trabalho se tiverem sido criados usando a interface de linha de comando (CLI) ou se tiverem sido migrados (importados/exportados) de um storage array diferente.
+
+.Passos
+. Na página Gerenciar, selecione a matriz de armazenamento que contém os volumes que você deseja adicionar.
+. Selecione menu:provisionamento[Gerenciar volumes].
+. Selecione a guia *aplicativos e cargas de trabalho*.
++
+A exibição aplicações e cargas de trabalho é exibida.
+
+. Selecione *Adicionar à carga de trabalho*.
++
+A caixa de diálogo Selecionar carga de trabalho é exibida.
+
+. Execute uma das seguintes ações:
++
+** *Adicionar volumes a uma carga de trabalho existente* -- Selecione esta opção para adicionar volumes a uma carga de trabalho existente. Use a lista suspensa para selecionar uma carga de trabalho. O tipo de aplicativo associado da carga de trabalho é atribuído aos volumes que você adiciona a essa carga de trabalho.
+** *Adicionar volumes a uma nova carga de trabalho* -- Selecione essa opção para definir uma nova carga de trabalho para um tipo de aplicativo e adicionar volumes à nova carga de trabalho.
+
+
+. Selecione *Next* para continuar com a sequência de adição à carga de trabalho.
++
+A caixa de diálogo Selecionar volumes é exibida.
+
+. Selecione os volumes que você deseja adicionar à carga de trabalho.
+. Revise os volumes que você deseja adicionar à carga de trabalho selecionada.
+. Quando estiver satisfeito com a configuração da carga de trabalho, clique em *Finish*.
+

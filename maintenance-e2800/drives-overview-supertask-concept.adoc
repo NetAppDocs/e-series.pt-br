@@ -1,0 +1,106 @@
+---
+permalink: maintenance-e2800/drives-overview-supertask-concept.html 
+sidebar: sidebar 
+keywords: E2800 replace drive, replacing E2800 drive, E2800 replace drive, replacing E2800 drive, E2800, E-Series, eseries 
+summary: Reveja os requisitos de substituição da unidade E2800. 
+---
+= Requisitos para a substituição da unidade E2800
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Antes de substituir uma unidade E2800, reveja os requisitos e considerações.
+
+
+
+== Tipos de prateleiras
+
+É possível substituir uma unidade em um compartimento de unidades ou compartimento de unidades de 12, 24 ou 60 unidades.
+
+
+
+=== gavetas de 12 ou 24 unidades
+
+As figuras mostram como as unidades são numeradas em cada tipo de prateleira (o painel frontal ou as tampas das extremidades da prateleira foram removidas).
+
+*Número de unidades em um compartimento de controladora E2812 ou compartimento de unidades DE212C:*
+
+image::../media/28_dwg_e2812_de212c_drive_numbering.gif[28 dwg e2812 de212c numeração da unidade]
+
+*Número de unidades em um compartimento de controladora E2824, array Flash EF280 ou compartimento de unidades de DE224C TB:*
+
+image::../media/28_dwg_e2824_de224c_drive_numbering_maint-e2800.gif[28 dwg e2824 de224c unidade numeração manint e2800]
+
+
+NOTE: O storage array de storage E2812, E2824 e EF280 pode incluir uma ou mais bandejas de unidades de expansão herdadas SAS-2, incluindo a bandeja de DE1600 12 unidades, a bandeja de DE5600 24 unidades ou a bandeja de DE6600 60 unidades Para obter instruções para substituir uma unidade em uma dessas bandejas de unidades, consulte link:https://library.netapp.com/ecm/ecm_download_file/ECMLP2577975["Substituição de uma unidade nas bandejas E2660, E2760, E5460, E5560 ou E5660"^] e link:https://library.netapp.com/ecm/ecm_download_file/ECMLP2577971["Substituição de uma unidade nas bandejas de E2600, E2700, E5400, E5500 e E5600 12 unidades ou 24 unidades"^].
+
+
+
+=== compartimentos de 60 unidades
+
+O compartimento de controladora E2860 e o compartimento de unidade DE460C consistem em cinco gavetas de unidade que contêm 12 slots de unidade. A gaveta de unidades 1 está na parte superior e a gaveta de unidades 5 está na parte inferior.
+
+image::../media/28_dwg_e2860_de460c_front_no_callouts_maint-e2800.gif[28 dwg e2860 de460c frente sem legenda-maint e2800]
+
+Para uma gaveta do compartimento de controladora E2860 e uma gaveta do compartimento de unidades DE460C, as unidades são numeradas de 0 a 11 em cada gaveta de unidades dentro da gaveta.
+
+image::../media/dwg_trafford_drawer_with_hdds_callouts_maint-e2800.gif[dwg trafford gaveta com legenda hdds manint e2800]
+
+
+NOTE: O storage array do E2860 pode incluir uma ou mais bandejas de unidades de expansão herdadas SAS-2, incluindo a bandeja de DE1600 12 unidades, a bandeja de DE5600 24 unidades ou a bandeja de DE6600 60 unidades Para obter instruções para substituir uma unidade em uma dessas bandejas de unidades, consulte link:https://library.netapp.com/ecm/ecm_download_file/ECMLP2577975["Substituição de uma unidade nas bandejas E2660, E2760, E5460, E5560 ou E5660"^] e link:https://library.netapp.com/ecm/ecm_download_file/ECMLP2577971["Substituição de uma unidade nas bandejas de E2600, E2700, E5400, E5500 e E5600 12 unidades ou 24 unidades"^].
+
+
+
+=== Gaveta da unidade
+
+Você pode substituir uma gaveta de unidades em um compartimento de controladora E2860 e um compartimento de unidades de DE460C TB. Cada uma dessas gavetas de 60 unidades tem cinco gavetas de unidade.
+
+image::../media/28_dwg_e2860_de460c_front_no_callouts_maint-e2800.gif[28 dwg e2860 de460c frente sem legenda-maint e2800]
+
+Cada uma das cinco gavetas pode conter até 12 unidades.
+
+image:../media/92_dwg_de6600_drawer_with_hdds_no_callouts_maint-e2800.gif[""]
+
+
+
+== Condução
+
+As unidades do seu storage de armazenamento são frágeis. O manuseio inadequado da unidade é uma das principais causas de falha da unidade.
+
+Siga estas regras para evitar danificar as unidades do seu storage de armazenamento:
+
+* Evitar descargas eletrostáticas (ESD):
++
+** Mantenha a unidade no saco ESD até que esteja pronto para instalá-la.
+** Não insira uma ferramenta de metal ou faca no saco ESD.
++
+Abra o saco ESD à mão ou corte a parte superior com uma tesoura.
+
+** Guarde o saco ESD e quaisquer materiais de embalagem caso tenha de devolver uma unidade mais tarde.
+** Utilize sempre uma pulseira antiestática ligada à terra a uma superfície não pintada no chassis do compartimento de armazenamento.
++
+Se uma correia de pulso não estiver disponível, toque numa superfície não pintada no chassis do compartimento de armazenamento antes de manusear a unidade.
+
+
+
+* Manuseie cuidadosamente as transmissões:
++
+** Utilize sempre as duas mãos ao remover, instalar ou transportar uma unidade.
+** Nunca force uma unidade para dentro de uma prateleira e utilize uma pressão suave e firme para engatar completamente o trinco da unidade.
+** Coloque as unidades em superfícies almofadadas e nunca empilhe as unidades umas sobre as outras.
+** Não bata as transmissões contra outras superfícies.
+** Antes de remover uma unidade de uma gaveta, solte a alça e aguarde 30 segundos para que a unidade gire para baixo.
+** Utilize sempre embalagens aprovadas ao enviar unidades.
+
+
+* Evite campos magnéticos:
++
+** Mantenha as unidades afastadas de dispositivos magnéticos.
++
+Os campos magnéticos podem destruir todos os dados na unidade e causar danos irreparáveis aos circuitos da unidade.
+
+
+
+

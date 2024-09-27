@@ -1,0 +1,55 @@
+---
+permalink: config-vmware/verify-vmware-config-support-task.html 
+sidebar: sidebar 
+keywords: express vmware configuration, software configuration, vmware host, E2800, E5700, EF300, EF600, E-Series, eseries 
+summary: Verifique se a configuração do VMware é suportada. 
+---
+= Verifique se a configuração do VMware é suportada
+:allow-uri-read: 
+:experimental: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Para garantir uma operação confiável, você cria um plano de implementação e, em seguida, usa a ferramenta de Matriz de interoperabilidade (IMT) do NetApp para verificar se toda a configuração é suportada.
+
+.Passos
+. Vá para http://mysupport.netapp.com/matrix["Ferramenta de Matriz de interoperabilidade do NetApp"^] .
+. Clique no bloco *Pesquisa de solução*.
+. Na área menu:Protocolos[Host SAN], clique no botão *Add* ao lado de *e-Series SAN Host*.
+. Clique em *Exibir critérios de pesquisa de refino*.
++
+É apresentada a secção refinar critérios de pesquisa. Nesta seção, você pode selecionar o protocolo que se aplica, bem como outros critérios para a configuração, como sistema operacional, NetApp os e driver de vários caminhos de host. Selecione os critérios que você sabe que deseja para sua configuração e veja quais elementos de configuração compatíveis se aplicam. Conforme necessário, faça as atualizações para o seu sistema operativo e protocolo que são prescritas na ferramenta. As informações detalhadas para a configuração escolhida estão acessíveis na página Exibir configurações suportadas clicando na seta da página direita.
+
+. Conforme necessário, faça as atualizações para o seu sistema operativo e protocolo, conforme listado na tabela.
++
+|===
+| Atualizações do sistema operacional | Protocolo | Atualizações relacionadas ao protocolo 
+
+
+ a| 
+** Talvez seja necessário instalar drivers prontos para uso para garantir a funcionalidade e a capacidade de suporte adequados. Você pode instalar drivers HBA usando o shell ESXi ou uma conexão SSH remota ao host ESXi. Para acessar o host usando qualquer um desses métodos, você deve habilitar o shell ESXi e o acesso SSH. Para obter mais informações sobre o shell ESXi, consulte a base de dados de Conhecimento da VMware sobre como usar o shell ESXi no ESXi. Para obter os comandos de instalação, consulte as instruções que acompanham os drivers HBA.
+** Cada fornecedor HBA tem métodos específicos para atualizar o código de inicialização e o firmware. Alguns desses métodos podem incluir o uso de um plug-in do vCenter ou a instalação do provedor CIM no host ESXi. Plugins do vCenter podem ser usados para obter informações sobre o HBA específico do fornecedor. Consulte a seção de suporte do site do fornecedor para obter as instruções e o software necessários para atualizar o código de inicialização ou o firmware do HBA. Consulte o _Guia de compatibilidade VMware_ ou o site do fornecedor HBA para obter o código de inicialização ou firmware correto.
+
+ a| 
+FC
+ a| 
+Driver, firmware e código de inicialização do adaptador de barramento do host (HBA)
+
+
+
+ a| 
+ISCSI
+ a| 
+Driver de placa de interface de rede (NIC), firmware e código de inicialização
+
+
+
+ a| 
+SAS
+ a| 
+Driver, firmware e código de inicialização do adaptador de barramento do host (HBA)
+
+|===
+

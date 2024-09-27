@@ -1,0 +1,118 @@
+---
+permalink: remote-storage-volumes/system-reqs-concept.html 
+sidebar: sidebar 
+keywords: Remote Storage Volumes requirements, RTV requirements, RTV restrictions, remote volumes, remote storage E-Series 
+summary: O sistema deve atender aos requisitos de compatibilidade para volumes de armazenamento remoto. 
+---
+= Requisitos e restrições para armazenamento remoto
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Antes de configurar o recurso volumes de armazenamento remoto, revise os seguintes requisitos e restrições.
+
+
+
+== Requisitos de hardware
+
+
+
+=== Protocolos compatíveis
+
+Para a versão inicial do recurso volumes de armazenamento remoto, o suporte só está disponível para protocolos iSCSI e IPv4.
+
+Consulte o http://mysupport.netapp.com/matrix["Ferramenta de Matriz de interoperabilidade do NetApp"^] para obter informações atualizadas sobre suporte e configuração entre o host e o array e-Series (destino) usado para o recurso volumes de armazenamento remoto.
+
+
+
+=== Requisitos do sistema de storage
+
+O sistema de storage e-Series deve incluir:
+
+* Dois controladores (modo duplex)
+* Conexões iSCSI para ambos os controladores e-Series para se comunicar com o sistema de armazenamento remoto através de uma ou mais conexões iSCSI
+* SANtricity os 11,71 ou superior
+* Recurso de armazenamento remoto habilitado no ID do submodelo (SMID)
+
+
+O sistema remoto pode ser um sistema de storage e-Series ou um sistema de outro fornecedor. Deve incluir interfaces compatíveis com iSCSI.
+
+
+
+== Requisitos de volume
+
+Os volumes utilizados para importações devem satisfazer os requisitos de tamanho, estado e outros critérios.
+
+
+
+=== Volume de armazenamento remoto
+
+O volume de origem de uma importação é chamado de "volume de armazenamento remoto". Este volume deve satisfazer os seguintes critérios:
+
+* Não pode fazer parte de outra importação
+* Tem de ter um estado online
+
+
+Após a importação começar, o firmware do controlador cria um volume de armazenamento remoto em segundo plano. Devido a esse processo em segundo plano, o volume de armazenamento remoto não é gerenciável no System Manager e só pode ser usado para a operação de importação.
+
+Depois que ele é criado, o volume de storage remoto é Tratado como qualquer outro volume padrão no sistema e-Series, com as seguintes exceções:
+
+* Pode ser usado como proxies para o dispositivo de armazenamento remoto.
+* Não pode ser usado como candidatos a outras cópias de volume ou snapshots.
+* Não é possível alterar a definição Data Assurance enquanto a importação estiver em curso.
+* Não pode ser mapeado para nenhum host, porque eles são reservados estritamente para a operação de importação.
+
+
+Cada volume de armazenamento remoto está associado a apenas um objeto de armazenamento remoto; no entanto, um objeto de armazenamento remoto pode ser associado a vários volumes de armazenamento remoto. O volume de armazenamento remoto é identificado de forma exclusiva usando uma combinação das seguintes opções:
+
+* Identificador de objeto de armazenamento remoto
+* Número LUN do dispositivo de armazenamento remoto
+
+
+
+
+=== Candidatos ao volume-alvo
+
+O volume de destino é o volume de destino no sistema e-Series local.
+
+O volume de destino deve satisfazer os seguintes critérios:
+
+* Deve ser um volume RAID/DDP.
+* Tem de ter uma capacidade igual ou superior ao volume de armazenamento remoto.
+* Deve ter um tamanho de bloco que seja o mesmo que o volume de armazenamento remoto.
+* Tem de ter um estado válido (ótimo).
+* Não pode ter nenhuma das seguintes relações: Cópia de volume, cópias snapshot, espelhamento assíncrono ou síncrono.
+* Não pode estar passando por nenhuma operação de reconfiguração: Expansão dinâmica de volume, expansão dinâmica de capacidade, tamanho de segmento dinâmico, migração dinâmica de RAID, redução dinâmica de capacidade ou desfragmentação.
+* Não pode ser mapeado para um host antes que a importação seja iniciada (no entanto, ele pode ser mapeado após o início da importação).
+* Não é possível ativar o Flash Read Cache (FRC).
+
+
+O System Manager verifica automaticamente esses requisitos como parte do assistente Importar armazenamento remoto. Apenas os volumes que atendem a todos os requisitos são exibidos para a seleção do volume de destino.
+
+
+
+== Restrições
+
+O recurso de armazenamento remoto tem as seguintes restrições:
+
+* O espelhamento deve estar desativado.
+* O volume de destino no sistema e-Series não deve ter instantâneos.
+* O volume de destino no sistema e-Series não deve ser mapeado para nenhum host antes que a importação seja iniciada.
+* O volume de destino no sistema e-Series deve ter o provisionamento de recursos desativado.
+* Mapeamentos diretos do volume de armazenamento remoto para um host ou vários hosts não são suportados.
+* O proxy de serviços da Web não é suportado.
+* Segredos CHAP iSCSI não são suportados.
+* O smcli não é suportado.
+* O VMware datastore não é compatível.
+* Apenas um sistema de armazenamento no par de relacionamento/importação pode ser atualizado de uma vez em que há um par de importação presente.
+
+
+
+
+== Preparação para importações de produção
+
+Você deve executar uma importação de teste ou "Dry run" antes das importações de produção para verificar a configuração adequada do armazenamento e da malha.
+
+Muitas variáveis podem afetar a operação de importação e o tempo de conclusão. Para garantir que uma importação de produção seja bem-sucedida e obter uma estimativa de duração, você pode usar essas importações de teste para garantir que todas as conexões estejam funcionando conforme esperado e que a operação de importação esteja sendo concluída em um período de tempo apropriado. Em seguida, é possível fazer ajustes para obter os resultados desejados antes de iniciar a importação de produção.

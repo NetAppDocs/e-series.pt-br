@@ -1,0 +1,91 @@
+---
+permalink: config-linux/nvme-fc-define-host-task.html 
+sidebar: sidebar 
+keywords: define host Linux, configure host linux, express linux configuration, linux host, 
+summary: Usando o Gerenciador de sistemas do SANtricity, você define os hosts que enviam dados para o storage array. Definir um host é uma das etapas necessárias para que o storage array saiba quais hosts estão conetados a ele e para permitir o acesso de e/S aos volumes. 
+---
+= Definir um host
+:allow-uri-read: 
+:experimental: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Usando o Gerenciador de sistemas do SANtricity, você define os hosts que enviam dados para o storage array. Definir um host é uma das etapas necessárias para que o storage array saiba quais hosts estão conetados a ele e para permitir o acesso de e/S aos volumes.
+
+.Sobre esta tarefa
+Mantenha estas diretrizes em mente quando você define um host:
+
+* Você deve definir as portas de identificador de host que estão associadas ao host.
+* Certifique-se de fornecer o mesmo nome que o nome do sistema atribuído pelo host.
+* Esta operação não é bem-sucedida se o nome que você escolher já estiver em uso.
+* O comprimento do nome não pode exceder 30 carateres.
+
+
+.Passos
+. Selecione menu:armazenamento[hosts].
+. Clique em menu:criar[Host].
++
+A caixa de diálogo criar host é exibida.
+
+. Selecione as configurações para o host, conforme apropriado.
++
+|===
+| Definição | Descrição 
+
+
+ a| 
+Nome
+ a| 
+Digite um nome para o novo host.
+
+
+
+ a| 
+Tipo de sistema operacional de host
+ a| 
+Selecione uma das seguintes opções na lista suspensa:
+
+** * Linux* para SANtricity 11,60 e mais recente
+** *Linux DM-MP (Kernel 3,10 ou posterior)* para pré-SANtricity 11,60
+
+
+
+
+ a| 
+Tipo de interface de host
+ a| 
+Selecione o tipo de interface do host que você deseja usar. Se o array configurado tiver apenas um tipo de interface de host disponível, essa configuração pode não estar disponível para selecionar.
+
+
+
+ a| 
+Portas de host
+ a| 
+Execute um dos seguintes procedimentos:
+
+** *Selecione Interface I/o*
++
+Se as portas do host tiverem feito login, você poderá selecionar identificadores de porta do host na lista. Este é o método recomendado.
+
+** *Manual add*
++
+Se as portas do host não tiverem feito login, olhe para /etc/nvme/hostnqn no host para encontrar os identificadores do hostnqn e associe-os à definição do host.
+
++
+Você pode inserir manualmente os identificadores de porta do host ou copiá-los/colá-los do arquivo /etc/nvme/hostnqn (um de cada vez) no campo *Host Ports*.
+
++
+Você deve adicionar um identificador de porta de host de cada vez para associá-lo ao host, mas pode continuar a selecionar quantos identificadores estão associados ao host. Cada identificador é exibido no campo *Host Ports*. Se necessário, você também pode remover um identificador selecionando *X* ao lado dele.
+
+
+
+|===
+. Clique em *criar*.
+
+
+.Resultado
+Depois que o host for criado com êxito, o Gerenciador de sistema do SANtricity cria um nome padrão para cada porta de host configurada para o host.
+
+O alias padrão é `<Hostname_Port Number>`. Por exemplo, o alias padrão para a primeira porta criada para `host IPT is IPT_1`.

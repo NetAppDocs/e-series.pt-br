@@ -1,0 +1,36 @@
+---
+permalink: install-hw-cabinet/move-cabinet-task.html 
+sidebar: sidebar 
+keywords: 3040 40U cabinet, cabinet installation, drive tray installation, controller installation, shelf installation, E2800, E5700, EF300, EF600 
+summary: Mova o gabinete para sua localização permanente. 
+---
+= Mova o gabinete para sua localização permanente
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+O gabinete 3040 40U tem rodízios pesados que permitem que você mova o gabinete para sua localização permanente.
+
+.Antes de começar
+* Reveja as instruções para deslocar o armário para fora da palete sem a utilização de uma empilhadeira.
++
+As caixas de transporte fornecem rampas e instruções integradas. Consulte as instruções de desembalagem incluídas na parte frontal da caixa de transporte.
+
+* Avalie todas as rampas entre a doca de carga e o destino final do gabinete.
++
+Você deve avaliar todas as rampas para se certificar de que o centro de gravidade do gabinete (quando o gabinete está em uma rampa e sentado em um ângulo) não se estende além da pegada do gabinete.
+
+
+
+.Sobre esta tarefa
+Muitos dos gabinetes são preenchidos com bandejas de unidades. Esta situação resulta na maior parte do peso na parte frontal do gabinete, tornando o centro de gravidade mais próximo da frente.
+
+.Passos
+. Remova os dispositivos mais altos do gabinete para garantir que o gabinete seja transportado com segurança para o local final. Isto é especialmente importante se qualquer rampa tiver uma inclinação ou um declínio superior a 10 graus.
+. Mova o gabinete para sua localização permanente usando o método correto mostrado na figura a seguir. Certifique-se de que empurra a parte frontal do gabinete, não a parte traseira.
++
+image::../media/83004_01.gif[83004 01]
+
+

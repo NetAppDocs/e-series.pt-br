@@ -1,0 +1,36 @@
+---
+sidebar: sidebar 
+permalink: vcenter-plugin/vc-olh-perform-pre-upgrade-health-check.html 
+keywords: vCenter plugin, Plugin for vCenter, SANtricity plugin for vCenter 
+summary: Uma verificação de integridade é executada como parte do processo de atualização, mas você também pode executar uma verificação de integridade separadamente antes de começar. 
+---
+= Execute a verificação de integridade pré-atualização
+:hardbreaks:
+:allow-uri-read: 
+:experimental: 
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./media/
+
+
+[role="lead"]
+Uma verificação de integridade é executada como parte do processo de atualização, mas você também pode executar uma verificação de integridade separadamente antes de começar. A verificação de integridade avalia os componentes do storage array para garantir que a atualização possa prosseguir.
+
+*Passos*
+
+. Na visualização principal, selecione *Manage* e, em seguida, selecione menu:Upgrade Center [Pre-Upgrade Health Check] (Verificação de integridade pré-atualização).
++
+A caixa de diálogo Verificação do estado de pré-atualização abre-se e lista todos os sistemas de armazenamento descobertos.
+
+. Se necessário, filtre ou classifique os sistemas de storage na lista para que você possa visualizar todos os sistemas que não estão no estado ideal atualmente.
+. Marque as caixas de seleção dos sistemas de armazenamento que você deseja executar na verificação de integridade.
+. Clique em *Iniciar*.
++
+O progresso é mostrado na caixa de diálogo enquanto a verificação de integridade é executada.
+
+. Quando a verificação de integridade for concluída, você pode clicar nas elipses (...) à direita de cada linha para exibir mais informações e executar outras tarefas.
+
+
+
+NOTE: Se algum array falhar na verificação de integridade, você pode pular esse array específico e continuar a atualização para os outros, ou você pode parar todo o processo e solucionar problemas dos arrays que não passaram.

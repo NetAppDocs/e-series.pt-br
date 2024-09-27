@@ -1,0 +1,132 @@
+---
+permalink: maintenance-e2800/controllers-overview-supertask-concept.html 
+sidebar: sidebar 
+keywords: E2800 controller replacement requirements, E2800 replace controller, replacing E2800 controller, add E2800 controller, adding E2800 controller, E2800, E2812 controller shelf, E2824 controller shelf, EF280 shelf, E-Series, eseries 
+summary: Reveja os requisitos e considerações de substituição do controlador E2800. 
+---
+= Requisitos para substituição do controlador E2800
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Antes de substituir ou adicionar um controlador E2800, reveja os requisitos e considerações.
+
+Cada recipiente do controlador contém uma placa controladora, uma bateria e uma placa de interface do host (HIC) opcional. Você pode adicionar um segundo controlador a uma configuração simplex ou substituir um controlador com falha.
+
+Esses procedimentos se aplicam aos compartimentos de unidades IOM12 e IOM12B.
+
+
+NOTE: Os módulos IOM12B só são suportados no SANtricity os 11.70.2 em diante. Certifique-se de que o firmware do controlador foi atualizado antes de instalar ou atualizar para um IOM12B.
+
+
+NOTE: Esses procedimentos são para hot-swaps ou substituições de IOM de gaveta semelhantes. Isto significa que só pode substituir um módulo IOM12 por outro módulo IOM12 ou substituir um módulo IOM12B por outro módulo IOM12B. (Sua prateleira pode ter dois módulos IOM12 ou ter dois módulos IOM12B.)
+
+
+
+== Requisitos para adicionar o segundo controlador
+
+Você pode adicionar um segundo canister de controladora à versão simplex das seguintes gavetas de controladora:
+
+* Compartimento do controlador de E2812 TB
+* Compartimento do controlador de E2824 TB
+* Array Flash EF280
+
+
+As figuras mostram um exemplo de compartimento do controlador antes de adicionar um segundo controlador (um recipiente do controlador e um controlador em branco) e depois de adicionar um segundo controlador (dois recipientes de controlador).
+
+image::../media/28_dwg_2800_controller_simplex.gif[28 dwg 2800 controlador simplex]
+
+image::../media/28_dwg_2800_controller_duplex.gif[28 dwg 2800 controlador duplex]
+
+
+NOTE: As figuras mostram exemplos de coletores de controladores; as portas de host nos seus coletores de controladores podem ser diferentes.
+
+Antes de adicionar um segundo controlador, tem de ter:
+
+* Um novo recipiente do controlador com o mesmo número de peça que o recipiente do controlador atualmente instalado.
+* Um novo HIC que é idêntico ao HIC no recipiente do controlador atualmente instalado (apenas necessário se o recipiente do controlador atualmente instalado incluir uma placa de interface do host).
+* Todos os cabos, transcetores, switches e adaptadores de barramento do host (HBAs) necessários para conetar as novas portas do controlador.
++
+Para obter informações sobre o hardware compatível, consulte a https://mysupport.netapp.com/NOW/products/interoperability["Matriz de interoperabilidade do NetApp"^] ou a http://hwu.netapp.com/home.aspx["NetApp Hardware Universe"^].
+
+* Driver multipath instalado no host para que você possa usar as duas controladoras. Consulte a link:../config-linux/index.html["Configuração expressa do Linux"], link:../config-windows/index.html["Configuração expressa do Windows"]ou link:../config-vmware/index.html["Configuração do VMware Express"] para obter instruções.
+* Uma pulseira antiestática, ou você tomou outras precauções antiestáticas.
+* Uma chave de fendas Phillips nº 1.
+* Etiquetas para identificar os novos cabos.
+* Uma estação de gerenciamento com um navegador que pode acessar o Gerenciador de sistema do SANtricity para o controlador. (Para abrir a interface do System Manager, aponte o navegador para o nome de domínio ou endereço IP do controlador.)
++
+Opcionalmente, você pode usar a interface de linha de comando (CLI) para executar alguns dos procedimentos. Se você não tiver acesso à CLI, você poderá fazer um dos seguintes procedimentos:
+
++
+** *Para Gerenciador de sistema SANtricity (versão 11,60 e superior)* -- Baixe o pacote CLI (arquivo zip) do Gerenciador de sistema. Aceda ao menu:Definições[sistema > Complementos > Interface de linha de comando]. Em seguida, você pode emitir comandos CLI de um prompt do sistema operacional, como o prompt do dos C:.
+** *For SANtricity Storage Manager/Enterprise Management Window (EMW)* -- siga as instruções no guia expresso para baixar e instalar o software. Você pode executar comandos CLI do EMW selecionando menu:Ferramentas[Executar Script].
+
+
+
+
+
+
+== Requisitos para substituição do controlador
+
+Quando substituir um recipiente do controlador com falha, tem de remover a bateria e o HIC, se estiverem instalados, do recipiente do controlador original e instalá-los no recipiente do controlador de substituição.
+
+Você pode determinar se você tem um recipiente de controlador com falha de duas maneiras:
+
+* O Guru de recuperação no Gerenciador de sistema do SANtricity direciona você para substituir o recipiente do controlador.
+* O LED âmbar de atenção no recipiente do controlador está aceso, indicando que o controlador tem uma avaria.
++
+[]
+====
+
+NOTE: O LED de atenção âmbar do controlador será desligado sempre que existirem as seguintes condições de substituição:
+
+** Falha no caminho da unidade Alt
+** A gaveta está aberta/em falta
+** A ventoinha falhou/está em falta
+** Fonte de alimentação em falta
+
+
+====
+
+
+image::../media/28_dwg_2800_controller_attn_led_maint-e2800.gif[28 dwg 2800 controlador attn led manint e2800]
+
+*(1)* _atenção LED_
+
+
+NOTE: A figura mostra um exemplo de receptor do controlador; as portas do host no seu receptor do controlador podem ser diferentes.
+
+Antes de substituir um controlador, tem de ter:
+
+* Um recipiente do controlador de substituição com o mesmo número de peça que o recipiente do controlador que está a substituir.
+* Uma pulseira antiestática, ou você tomou outras precauções antiestáticas.
+* Etiquetas para identificar cada cabo que está ligado ao recipiente do controlador.
+* Chave de fendas Phillips nº 1.
+* Uma estação de gerenciamento com um navegador que pode acessar o Gerenciador de sistema do SANtricity para o controlador. (Para abrir a interface do System Manager, aponte o navegador para o nome de domínio ou endereço IP do controlador.)
++
+Opcionalmente, você pode usar a interface de linha de comando (CLI) para executar alguns dos procedimentos. Se você não tiver acesso à CLI, você poderá fazer um dos seguintes procedimentos:
+
++
+** *Para Gerenciador de sistema SANtricity (versão 11,60 e superior)* -- Baixe o pacote CLI (arquivo zip) do Gerenciador de sistema. Aceda ao menu:Definições[sistema > Complementos > Interface de linha de comando]. Em seguida, você pode emitir comandos CLI de um prompt do sistema operacional, como o prompt do dos C:.
+** *For SANtricity Storage Manager/Enterprise Management Window (EMW)* -- siga as instruções no guia expresso para baixar e instalar o software. Você pode executar comandos CLI do EMW selecionando menu:Ferramentas[Executar Script].
+
+
+
+
+
+
+=== Requisitos de configuração duplex
+
+Se o compartimento da controladora tiver duas controladoras (configuração duplex), você poderá substituir um coletor de controladora enquanto o storage array estiver ligado e executando operações de e/S do host, contanto que as seguintes condições sejam verdadeiras:
+
+* O segundo recipiente do controlador na gaveta tem o status ideal.
+* O campo *OK para remover* na área Detalhes do Guru de recuperação no Gerenciador de sistema do SANtricity exibe *Sim*, indicando que é seguro remover esse componente.
+
+
+
+
+=== Requisitos de configuração simplex
+
+Se você tiver apenas um recipiente de controlador (configuração simplex), os dados no storage de armazenamento não estarão acessíveis até que você substitua o recipiente do controlador. Você precisa parar as operações de e/S de host e desligar o storage array.

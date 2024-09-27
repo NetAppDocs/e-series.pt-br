@@ -1,0 +1,163 @@
+---
+permalink: upgrade-controllers/prepare-upgrade-controllers-task.html 
+sidebar: sidebar 
+keywords: E-Series, eseries, E2800, E5700, EF300, EF600, upgrade controller, upgrading controller, upgrade controller requirements, upgrade controller key management, prepare upgrade controller, upgrade controller preparation, preparing controller upgrade 
+summary: Prepare-se para atualizar controladores salvando a chave de segurança da unidade, coletando dados de suporte e colocando o controlador offline. 
+---
+= Prepare-se para atualizar os controladores
+:allow-uri-read: 
+:experimental: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Prepare-se para atualizar controladores salvando a chave de Segurança da Unidade (se usada), registrando o número de série, coletando dados de suporte, desativando determinados recursos (se usado) e colocando o controlador offline.
+
+
+NOTE: A coleta de dados de suporte pode afetar temporariamente o desempenho em seu storage array.
+
+.Passos
+. Certifique-se de que o storage array existente seja atualizado para a versão mais recente do sistema operacional (firmware do controlador) disponível para os controladores atuais. No Gerenciador de sistema do SANtricity, vá para menu:suporte[Centro de atualização] para ver o inventário de software e firmware.
++
+
+NOTE: Se você estiver atualizando para controladores que suportam o SANtricity os versão 8,50, instale as versões mais recentes do SANtricity os e a NVSRAM mais recente após instalar e ligar os novos controladores. Se você não executar essa atualização, talvez não consiga configurar o storage array para ALB (Automatic Load Balancing).
+
+. Se você tiver unidades habilitadas com segurança instaladas e planeja executar uma substituição completa do controlador, consulte a tabela a seguir para concluir as etapas apropriadas para o tipo de segurança (interno ou externo) e o estado da unidade. Se *não* tiver unidades seguras instaladas, ignore esta etapa e vá para a etapa 3 abaixo da tabela.
++
+
+NOTE: Algumas etapas na tabela requerem comandos de interface de linha de comando (CLI). Para obter informações sobre como usar esses comandos, consulte https://docs.netapp.com/us-en/e-series-cli/index.html["Referência de interface de linha de comando"].
+
++
+|===
+| Tipo e contexto de segurança | Passos 
+
+
+ a| 
+Gerenciamento de chaves internas, uma ou mais unidades bloqueadas
+ a| 
+Exporte o arquivo de chave de segurança interna para um local conhecido no cliente de gerenciamento (o sistema com um navegador usado para acessar o System Manager). Use o `export storageArray securityKey` comando CLI. Você deve fornecer a frase-passe associada à chave de segurança e especificar o local onde deseja salvar a chave.
+
+
+
+ a| 
+Gerenciamento de chaves externas, todas as unidades bloqueadas, você pode fazer a transição para o gerenciamento de chaves internas temporariamente para a substituição da controladora (recomendado).
+ a| 
+Execute as seguintes etapas, pela ordem:
+
+.. Registre o endereço do servidor KMS externo e o número da porta. A partir do System Manager, aceda ao menu:Definições[sistema > Gestão da chave de segurança > Ver/Editar Definições do servidor de gestão de chaves].
+.. Certifique-se de que os certificados de cliente e servidor estão disponíveis no seu host local para que o storage de armazenamento e o servidor de gerenciamento de chaves possam se autenticar após a substituição do controlador ser concluída. Use o `save storageArray keyManagementCertificate` comando CLI para salvar os certificados. Certifique-se de executar o comando duas vezes, uma vez com o `certificateType` parâmetro definido como `client`, e a outra com o parâmetro definido como `server`.
+.. Transição para o gerenciamento de chaves internas executando o `disable storageArray externalKeyManagement` comando CLI.
+.. Exporte o arquivo de chave de segurança interna para um local conhecido no cliente de gerenciamento (o sistema com um navegador usado para acessar o System Manager). Use o `export storageArray securityKey` comando CLI. Você deve fornecer a frase-passe associada à chave de segurança e especificar o local onde deseja salvar a chave.
+
+
+
+
+ a| 
+Gerenciamento de chaves externas, todas as unidades bloqueadas, você pode fazer a transição temporária para o gerenciamento de chaves internas para a substituição do controlador.
+ a| 
+Execute as seguintes etapas, pela ordem:
+
+.. Registre o endereço do servidor KMS externo e o número da porta. A partir do System Manager, aceda ao menu:Definições[sistema > Gestão da chave de segurança > Ver/Editar Definições do servidor de gestão de chaves].
+.. Certifique-se de que os certificados de cliente e servidor estão disponíveis no seu host local para que o storage de armazenamento e o servidor de gerenciamento de chaves possam se autenticar após a substituição do controlador ser concluída. Use o `save storageArray keyManagementCertificate` comando CLI para salvar os certificados. Certifique-se de executar o comando duas vezes, uma vez com o `certificateType` parâmetro definido como `client`, e a outra com o parâmetro definido como `server`.
+.. Exporte o arquivo de chave de segurança interna para um local conhecido no cliente de gerenciamento (o sistema com um navegador usado para acessar o System Manager). Use o `export storageArray securityKey` comando CLI. Você deve fornecer a frase-passe associada à chave de segurança e especificar o local onde deseja salvar a chave.
+
+
+
+
+ a| 
+Gerenciamento de chaves externas, unidades parciais bloqueadas
+ a| 
+Não são necessários passos adicionais.
+
+|===
++
+
+NOTE: Sua matriz de armazenamento deve estar em um estado ideal para recuperar certificados de cliente e servidor. Se os certificados não forem recuperáveis, você deve criar um novo CSR, obter o CSR assinado e baixar o certificado do servidor do EKMS (servidor de gerenciamento de chaves externo).
+
+. Registe o número de série da sua matriz de armazenamento:
++
+.. No System Manager, selecione menu:suporte[Centro de suporte > separador recursos de suporte].
+.. Role para baixo até *Launch detailed storage array information* e selecione *Storage Array Profile*.
++
+O relatório é apresentado no ecrã.
+
+.. Para localizar o número de série do chassi no perfil do storage de armazenamento, digite *número de série* na caixa de texto *Localizar* e clique em *Localizar*.
++
+Todos os termos correspondentes são realçados. Para percorrer todos os resultados um de cada vez, continue a clicar em *Localizar*.
+
+.. Faça um registo `Chassis Serial Number` do .
++
+É necessário este número de série para executar as etapas em link:complete-upgrade-controllers-task.html["Atualização completa da controladora"].
+
+
+
+. Colete dados de suporte sobre seu storage array usando a GUI ou a CLI:
++
+** Use o System Manager ou a janela Array Management no Storage Manager para coletar e salvar um pacote de suporte de seu storage array.
++
+*** A partir do System Manager, selecione menu:Support [Support Center > Diagnostics tab] (Assistência > Centro de suporte > separador Diagnostics). Em seguida, selecione *Collect Support Data* e clique em *Collect*.
+*** Na barra de ferramentas da janela Gerenciamento de matrizes, selecione menu:Monitor[Saúde > coletar dados de suporte manualmente]. Em seguida, insira um nome e especifique um local no sistema onde você deseja armazenar o pacote de suporte.
++
+O arquivo é salvo na pasta Downloads do navegador com o nome `support-data.7z`.
+
++
+Se o compartimento contiver gavetas, os dados de diagnóstico desse compartimento serão arquivados em um arquivo compactado separado chamado `tray-component-state-capture.7z`.
+
+
+
+** Use a CLI para executar o `save storageArray supportData` comando para reunir dados de suporte abrangentes sobre o storage array.
+
+
+. Certifique-se de que nenhuma operação de e/S esteja ocorrendo entre o storage array e todos os hosts conectados:
++
+.. Parar todos os processos que envolvem os LUNs mapeados do armazenamento para os hosts.
+.. Garantir que nenhuma aplicação esteja gravando dados em LUNs mapeados do storage para os hosts.
+.. Desmonte todos os sistemas de arquivos associados a volumes no array.
++
+
+NOTE: As etapas exatas para interromper as operações de e/S do host dependem do sistema operacional do host e da configuração, que estão além do escopo dessas instruções. Se você não tiver certeza de como interromper as operações de e/S do host em seu ambiente, considere encerrar o host.
+
++
+
+CAUTION: *Possível perda de dados* -- se você continuar este procedimento enquanto as operações de e/S estão ocorrendo, você pode perder dados.
+
+
+
+. Se o storage array participar de uma relação de espelhamento, interrompa todas as operações de e/S de host no storage array secundário.
+. Se você estiver usando o espelhamento assíncrono ou síncrono, exclua os pares espelhados e desative os relacionamentos de espelhamento por meio do System Manager ou da janela Array Management.
+. Se houver um volume provisionado fino que seja relatado ao host como um volume fino e o array antigo estiver executando o firmware (firmware 8,25 ou superior) que suporte o recurso DE DESMAPEAR, desative o Cache de gravação para todos os volumes finos:
++
+.. No System Manager, selecione menu:armazenamento[volumes].
+.. Selecione qualquer volume e, em seguida, selecione menu:mais[alterar definições de cache].
++
+A caixa de diálogo alterar configuração de cache é exibida. Todos os volumes na matriz de armazenamento aparecem nesta caixa de diálogo.
+
+.. Selecione a guia *Basic* e altere as configurações para cache de leitura e cache de gravação.
+.. Clique em *Salvar*.
+.. Aguarde cinco minutos para permitir que quaisquer dados na memória cache sejam lavados para o disco.
+
+
+. Se a Security Assertion Markup Language (SAML) estiver habilitada no controlador, entre em Contato com o suporte técnico para desativar a autenticação SAML.
++
+
+NOTE: Depois que o SAML estiver habilitado, você não poderá desativá-lo através da interface do Gerenciador de sistema do SANtricity. Para desativar a configuração SAML, entre em Contato com o suporte técnico para obter assistência.
+
+. Aguarde que todas as operações em curso sejam concluídas antes de continuar para a próxima etapa.
++
+.. Na página *Home* do System Manager, selecione *Exibir operações em andamento*.
+.. Certifique-se de que todas as operações mostradas na janela *operações em andamento* estão concluídas antes de continuar.
+
+
+. Desligue a alimentação da bandeja de unidades e controlador
++
+Aguarde que todos os LEDs na bandeja de unidades e controlador fiquem escuros.
+
+. Desligue a alimentação de cada bandeja de unidades conetada à bandeja de unidades e controlador
++
+Aguarde dois minutos para que todas as unidades girem para baixo.
+
+
+
+.O que se segue?
+Vá para link:remove-controllers-task.html["Remova os controladores"].

@@ -1,0 +1,14 @@
+---
+permalink: maintenance-ef600/concept-drives-wombat.html 
+sidebar: sidebar 
+keywords: drive, device, physical, storage, media, data 
+summary: Uma unidade é um dispositivo que fornece a Mídia de armazenamento físico para dados. 
+---
+= Unidades
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Uma unidade é um dispositivo que fornece a Mídia de armazenamento físico para dados.

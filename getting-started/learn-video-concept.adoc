@@ -1,0 +1,32 @@
+---
+permalink: getting-started/learn-video-concept.html 
+sidebar: sidebar 
+keywords: E-Series, eseries, E2800, E5700, EF300, EF600, E-Series videos 
+summary: Acesse demonstrações em vídeo para saber mais sobre os sistemas e-Series. 
+---
+= Vídeos e-Series
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Acesse demonstrações em vídeo para saber mais sobre os sistemas e-Series.
+
+
+
+== E-Series: Storage rápido, simples e confiável
+
+[role="lead"]
+Este vídeo destaca os principais benefícios do uso de sistemas NetApp e-Series em comparação com o uso de servidores comuns para storage.
+
+https://www.youtube.com/embed/FjFkU2z_hIo?rel=0["Vídeo NetApp: Principais benefícios do uso de sistemas NetApp e-Series em comparação com o uso de servidores comuns para storage"^]
+
+
+
+== System Manager: Configuração e configuração fáceis
+
+[role="lead"]
+Esta demonstração técnica mostra como a interface do Gerenciador de sistemas SANtricity baseada na Web permite a fácil configuração e configuração do NetApp E2800.
+
+https://www.youtube.com/embed/I0W0AjKpCO8?rel=0["Vídeo do NetApp: Gerenciador de sistema do SANtricity: Configuração e configuração fáceis"^]

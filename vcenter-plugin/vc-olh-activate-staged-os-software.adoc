@@ -1,0 +1,49 @@
+---
+sidebar: sidebar 
+permalink: vcenter-plugin/vc-olh-activate-staged-os-software.html 
+keywords: vCenter plugin, Plugin for vCenter, SANtricity plugin for vCenter 
+summary: Você pode optar por ativar o arquivo de software em um momento mais conveniente. 
+---
+= Ativar o software SO faseado
+:hardbreaks:
+:allow-uri-read: 
+:experimental: 
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./media/
+
+
+[role="lead"]
+Você pode optar por ativar o arquivo de software imediatamente ou esperar até um momento mais conveniente. Este procedimento pressupõe que optou por ativar o ficheiro de software posteriormente.
+
+.Sobre esta tarefa
+Você pode transferir os arquivos de firmware sem ativá-los. Você pode optar por ativar mais tarde por estes motivos:
+
+* *Hora do dia* -- a ativação do software pode demorar muito tempo, então você pode querer esperar até que as cargas de e/S sejam mais leves. Os controladores reiniciam e fazem failover durante a ativação para que o desempenho possa ser menor do que o normal até que a atualização seja concluída.
+* * Tipo de pacote* -- você pode querer testar o novo software e firmware em uma matriz de armazenamento antes de atualizar os arquivos em outras matrizes de armazenamento.
+
+
+
+NOTE: Não é possível parar o processo de ativação depois de iniciado.
+
+.Passos
+. Na vista principal, selecione *Manage* (gerir). Se necessário, clique na coluna *Status* para classificar, na parte superior da página, todos os storages com o status "Atualização do sistema operacional (aguardando ativação)".
+. Selecione uma ou mais matrizes de armazenamento para as quais pretende ativar o software e, em seguida, selecione o menu:Centro de Atualização[Ativar software SANtricity faseado].
++
+As seguintes ações ocorrem durante a operação de atualização:
+
++
+** Uma verificação de integridade pré-atualização é executada como parte do processo de ativação. A verificação de integridade da pré-atualização avalia todos os componentes do storage array para garantir que a ativação possa continuar.
+** Se qualquer verificação de integridade falhar em um storage array, a ativação será interrompida. Você pode clicar nas reticências (...) e selecionar *Salvar Registro* para revisar os erros. Você também pode optar por substituir o erro de verificação de integridade e clicar em *continuar* para continuar com a ativação.
+** Pode cancelar a operação de ativação após a verificação do estado de pré-atualização.
++
+Após a conclusão bem-sucedida da verificação de integridade da pré-atualização, ocorre a ativação. O tempo de ativação depende da configuração do storage array e dos componentes que você está ativando.
+
+
+
+. (Opcional) após a conclusão da ativação, você pode ver uma lista do que foi ativado para uma matriz de armazenamento específica clicando nas reticências (...) e selecionando *Salvar Log*.
++
+O arquivo é salvo na pasta Downloads do navegador com o nome `activate_log-<date>. json`.
+
+

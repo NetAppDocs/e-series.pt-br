@@ -1,0 +1,32 @@
+---
+permalink: config-windows/discover-storage-host-task.html 
+sidebar: sidebar 
+keywords: LUNs, discover LUNs, express Windows configuration, software configuration, Windows host, E2800, E5700, EF300, EF600, E-Series, eseries 
+summary: Descubra o armazenamento para o método Windows Express. 
+---
+= Descubra o armazenamento no host
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Quando você adiciona novos LUNs, você deve redigitalizar manualmente os discos associados para detectá-los. O host não descobre automaticamente novos LUNs.
+
+Os LUNs no seu sistema de armazenamento aparecem como discos para o host do Windows.
+
+.Passos
+. Inicie sessão como administrador.
+. Para descobrir o armazenamento, execute o seguinte comando a partir de um prompt de comando do Windows.
++
+[listing]
+----
+# echo rescan | diskpart
+----
+. Para verificar a adição de novo armazenamento, execute o seguinte comando.
++
+[listing]
+----
+# echo list disk | diskpart
+----
+

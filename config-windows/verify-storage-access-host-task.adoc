@@ -1,0 +1,60 @@
+---
+permalink: config-windows/verify-storage-access-host-task.html 
+sidebar: sidebar 
+keywords: express Windows configuration, software configuration, Windows host, E2800, E5700, EF300, EF600, E-Series, eseries 
+summary: Verifique se o host pode gravar dados no LUN e lê-los de volta. 
+---
+= Verifique o acesso ao armazenamento no host
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Antes de usar o volume, verifique se o host pode gravar dados no LUN e lê-los de volta.
+
+.Antes de começar
+Você deve ter inicializado o LUN e formatado com um sistema de arquivos.
+
+.Passos
+. Criar e gravar em um arquivo no novo LUN.
++
+[listing]
+----
+> echo test file > f:\\test.txt
+----
+. Leia o arquivo e verifique se os dados foram gravados.
++
+[listing]
+----
+> type f:\\test.txt
+----
+. Para verificar se o multipath está funcionando, altere a propriedade do volume.
++
+.. Na GUI do Gerenciador de sistema do SANtricity, vá para *armazenamento* > *volumes* e selecione *mais* > *alterar propriedade*.
+.. Na caixa de diálogo alterar propriedade de volume, use o botão * Preferred Owner* para selecionar o outro controlador para um dos volumes na lista e, em seguida, confirmar a operação.
+.. Verifique se você ainda pode acessar os arquivos no LUN.
++
+[listing]
+----
+> dir f:\\
+----
+
+
+. Encontre o ID alvo.
++
+
+NOTE: O utilitário dsmUtil é sensível a maiúsculas e minúsculas.
+
++
+[listing]
+----
+> C:\\Program Files \(x86\)\\DSMDrivers\\mppdsm\\dsmUtil.exe -a
+----
+. Exiba os caminhos para o LUN e verifique se você tem o número esperado de caminhos. Na `<target ID>` parte do comando, use o ID de destino que você encontrou na etapa anterior.
++
+[listing]
+----
+> C:\\Program Files \(x86\)\\DSMDrivers\\mppdsm\\dsmUtil.exe –g <target ID\>
+----
+

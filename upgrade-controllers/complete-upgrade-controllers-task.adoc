@@ -1,0 +1,208 @@
+---
+permalink: upgrade-controllers/complete-upgrade-controllers-task.html 
+sidebar: sidebar 
+keywords: E-Series, eseries, E2800, E5700, EF300, EF600, upgrade controller, upgrading controller, vendor ID, upgrade status, upgrade validate 
+summary: Concluir a atualização da controladora ligando o compartimento de controladora e validando a versão do software da controladora. Em seguida, você pode coletar dados de suporte e retomar as operações. 
+---
+= Atualização completa da controladora
+:allow-uri-read: 
+:experimental: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Concluir a atualização da controladora ligando o compartimento de controladora e validando a versão do software da controladora. Em seguida, você pode coletar dados de suporte e retomar as operações.
+
+Se você estiver atualizando controladores em uma bandeja de unidades e controlador duplex, repita todas as etapas para concluir a atualização para o segundo controlador.
+
+
+
+== Passo 1: Ligar o controlador
+
+Você deve ligar o compartimento do controlador para confirmar que ele está funcionando corretamente.
+
+.Passos
+. Ligue o interrutor de alimentação na parte traseira de cada bandeja de unidades conetada à bandeja de unidades e controlador
+. Aguarde dois minutos para que as unidades girem.
+. Ligue o interrutor de alimentação na parte traseira da bandeja de unidades e controlador
+. Aguarde três minutos para que o processo de inicialização seja concluído.
+. Se você estiver executando uma substituição completa do controlador para controladores E2800 ou E5700, prossiga para um dos seguintes procedimentos com base no cenário de segurança da unidade.
++
+|===
+| Tipo completo de substituição do controlador | Procedimento e pré-requisitos 
+
+
+ a| 
+Todas as unidades não protegidas, nem Gerenciamento de chaves internas ou externas
+ a| 
+Avance para o passo seguinte.
+
+
+
+ a| 
+Combinação de unidades seguras e não protegidas, Gerenciamento de chaves internas
+ a| 
+Primeiro, tem de criar uma chave de segurança interna e, em seguida, importar manualmente a chave de segurança para desbloquear as unidades protegidas. Depois que as unidades forem desbloqueadas, você poderá acessar as unidades.
+
+.. Criar chave de segurança interna
+.. Troca de controladora com gerenciamento de chaves internas e uma ou mais unidades protegidas
+.. Execute o comando SMclient, `set allDrives nativeState`.
+.. Aguarde que ambos os controladores sejam reiniciados.
+
+
+
+
+ a| 
+Todas as unidades protegidas, Gerenciamento de chaves internas
+ a| 
+Troca de controladora com gerenciamento de chaves internas e uma ou mais unidades protegidas
+
+
+
+ a| 
+Combinação de unidades seguras e não protegidas, Gerenciamento de chaves externas
+ a| 
+Avance para o passo seguinte.
+
+Depois de executar a substituição do controlador, os controladores serão ressincronizados automaticamente com o servidor de gerenciamento de chaves externas e as unidades serão desbloqueadas e acessíveis.
+
+
+NOTE: Se receber um código de bloqueio do visor de sete segmentos de `L5` após a substituição de uma controladora de unidades protegidas mistas por gerenciamento de chaves internas, entre em Contato com o suporte técnico.
+
+
+
+ a| 
+Todas as unidades protegidas, Gerenciamento de chaves externas, você mudou temporariamente de volta para Gerenciamento de chaves internas para o procedimento de substituição do controlador
+ a| 
+Primeiro, tem de desbloquear as unidades protegidas utilizando o procedimento de Gestão de chaves internas. Depois que as unidades forem desbloqueadas, você fará a transição de volta para o Gerenciamento de chaves externas criando uma nova chave de segurança externa para o storage array.
+
+.. Troca de controladora com gerenciamento de chaves internas e uma ou mais unidades protegidas
+.. Criar chave de segurança externa
+.. Execute o comando SMclient, `set allDrives nativeState`.
+.. Aguarde que ambos os controladores sejam reiniciados.
+
+
+
+
+ a| 
+Todas as unidades protegidas, Gerenciamento de chaves externas, você não mudou temporariamente para Gerenciamento de chaves internas para o procedimento de substituição do controlador
+ a| 
+Troca de controladora com gerenciamento de chaves externas e todas as unidades protegidas
+
+|===
+
+
+
+
+== Etapa 2: Verificar o status dos controladores e bandejas
+
+Você pode usar os LEDs e o software de gerenciamento de armazenamento para verificar o status de seus controladores e bandejas.
+
+.Passos
+. Olhe para os LEDs no controlador A para se certificar de que ele está inicializando corretamente.
++
+Os LEDs da Ação de Serviço de ligação ao anfitrião necessária ficam verdes durante a reinicialização. O visor de sete segmentos mostra a sequência os SD blank- para indicar que o controlador está executando o processamento de Início do dia (SOD).
+
++
+Depois que o controlador concluir a reinicialização com êxito, o visor de sete segmentos mostra a ID da bandeja correspondente à exibição de sete segmentos no segundo controlador. Em seguida, você pode descobrir o novo recipiente do controlador usando o software de gerenciamento de armazenamento.
+
+. Se qualquer um dos LEDs de Ação de Serviço da bandeja de unidades e controlador for necessário _ON_, ou se o LED de Ação de Serviço do controlador for _ON_:
++
+.. Verifique se o recipiente do controlador foi instalado corretamente e se todos os cabos estão corretamente encaixados. Volte a instalar o recipiente do controlador, se necessário.
+.. Verifique novamente os LEDs Ação de Serviço necessária da bandeja de unidades e controlador e o LED Ação de Serviço do controlador necessária. Se o problema não for corrigido, entre em Contato com o suporte técnico.
+
+
+. Para uma configuração duplex, repita os passos 1 a 2 para o controlador B.
+. Usando os LEDs e o software de gerenciamento de armazenamento, verifique o status de todas as bandejas na matriz de armazenamento. Se algum componente tiver um status de atenção necessária, use o Recovery Guru para solucionar problemas. Se o problema não for resolvido, entre em Contato com o suporte técnico.
+
+
+
+
+== Passo 3: Valide a versão do software do controlador
+
+Você deve garantir que suas novas controladoras estejam sendo executadas com o nível correto de sistema operacional (firmware da controladora) e NVSRAM.
+
+.Passos
+. Execute um dos seguintes procedimentos:
++
+** Se você estiver atualizando para controladores que não suportam o SANtricity 11,30 e o firmware da controladora 8,30, verifique se a versão em execução nos novos controladores corresponde à versão que foi executada pela última vez nos controladores originais. Normalmente, esta será a versão mais recente suportada pelos controladores antigos. Se necessário, instale a versão apropriada nos novos controladores.
+** Se você estiver atualizando para controladores que executam o SANtricity 11,30 e o firmware da controladora 8,30, baixe e instale a NVSRAM mais recente depois de ligar os novos controladores.
+
+
+. Se a atualização do controlador envolver uma alteração de protocolo (por exemplo, Fibre Channel para iSCSI) e você já tiver hosts definidos para o storage array, associe as novas portas de host aos hosts:
++
+.. No System Manager, selecione menu:armazenamento[hosts].
+.. Selecione o host ao qual as portas serão associadas e clique em *Exibir/Editar configurações*.
++
+É apresentada uma caixa de diálogo que mostra as definições atuais do anfitrião.
+
+.. Clique na guia *Host Ports*.
++
+A caixa de diálogo mostra os identificadores de porta do host atual.
+
+.. Para atualizar as informações do identificador de porta do host associadas a cada host, substitua as IDs de porta do host dos adaptadores de host antigos pelos novos IDs de porta do host para o novo adaptador de host.
+.. Repita a etapa d para cada host.
+.. Clique em *Salvar*.
+
+
++
+Para obter informações sobre hardware compatível, consulte a https://mysupport.netapp.com/NOW/products/interoperability["Matriz de interoperabilidade do NetApp"^] e a http://hwu.netapp.com/home.aspx["NetApp Hardware Universe"^].
+
+. Se o cache Write Back foi desativado para todos os volumes finos na preparação para o headswap, reative o cache Write Back.
++
+.. No System Manager, selecione menu:armazenamento[volumes].
+.. Selecione qualquer volume e, em seguida, selecione menu:mais[alterar definições de cache].
++
+A caixa de diálogo alterar configuração de cache é exibida. Todos os volumes na matriz de armazenamento aparecem nesta caixa de diálogo.
+
+.. Selecione a guia *Basic* e altere as configurações para cache de leitura e cache de gravação.
+.. Clique em *Salvar*.
+
+
+. Se o SAML foi desativado na preparação para a troca de cabeça, reative o SAML.
++
+.. A partir do System Manager, selecione menu:Definições[Gestão de Acesso].
+.. Selecione a guia *SAML* e siga as instruções na página.
+
+
+. Colete dados de suporte sobre seu storage array usando a GUI ou a CLI:
++
+** Use a janela Gerenciamento de matrizes do System Manager ou do Storage Manager para coletar e salvar um pacote de suporte de sua matriz de armazenamento.
++
+*** A partir do System Manager, selecione menu:Support [Support Center > Diagnostics tab] (Assistência > Centro de suporte > separador Diagnostics). Em seguida, selecione *Collect Support Data* e clique em *Collect*.
+*** Na barra de ferramentas da janela Gerenciamento de matrizes, selecione menu:Monitor[Saúde > coletar dados de suporte manualmente]. Em seguida, insira um nome e especifique um local no sistema onde você deseja armazenar o pacote de suporte.
++
+O arquivo é salvo na pasta Downloads do navegador com o nome `support-data.7z`.
+
++
+Se a prateleira contiver gavetas, os dados de diagnóstico dessa prateleira serão arquivados em um arquivo compactado separado chamado `tray-component-state-capture.7z`
+
+
+
+** Use a CLI para executar o `save storageArray supportData` comando para reunir dados de suporte abrangentes sobre o storage array.
++
+
+NOTE: A coleta de dados de suporte pode afetar temporariamente o desempenho em seu storage array.
+
+
+
+. Alerte o suporte técnico da NetApp para as alterações feitas na configuração do seu storage array.
++
+.. Obtenha o número de série da bandeja de unidades e controlador gravada no xref:prepare-upgrade-controllers-task.adoc[Prepare-se para atualizar os controladores].
+.. Faça login no site de suporte da NetApp em http://mysupport.netapp.com/eservice/assistant["mysupport.NetApp.com/eservice/assistant"^].
+.. Selecione *Product Registration* na lista suspensa sob *Category 1*.
+.. Digite o seguinte texto na caixa de texto ** Comentários**, substituindo o número de série da bandeja de unidades e controlador por número de série:
++
+`Please create alert against Serial Number: serial number. The alert name should be “E-Series Upgrade”. The alert text should read as follows:`
+
++
+`“Attention: The controllers in this system have been upgraded from the original configuration. Verify the controller configuration before ordering replacement controllers and notify dispatch that the system has been upgraded.”`
+
+.. Clique no botão *Submit* na parte inferior do formulário.
+
+
+
+
+.O que se segue?
+Se a atualização da controladora resultar na alteração da ID do fornecedor do LSI para O NetApp, vá para link:remount-volumes-lsi-task.html["Remonte os volumes depois de mudar o fornecedor da LSI para A NetApp"]; caso contrário, a atualização da controladora estará concluída e você poderá retomar as operações normais.

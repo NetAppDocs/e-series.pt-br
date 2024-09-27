@@ -1,0 +1,39 @@
+---
+permalink: remote-storage-volumes/modify-remote-storage-task.html 
+sidebar: sidebar 
+keywords: modify Remote Storage Volumes settings, RTV settings, remote volume settings, remote storage E-Series 
+summary: Pode modificar as definições de ligação para qualquer importação de armazenamento remoto configurada através da opção Ver/Editar definições no ecrã armazenamento remoto do Gestor do sistema SANtricity. 
+---
+= Modificar as definições de ligação de armazenamento remoto
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Pode editar, adicionar ou eliminar definições de ligação para qualquer configuração de armazenamento remoto através da opção Ver/Editar definições.
+
+Fazer alterações nas propriedades de conexão afetará as importações em andamento. Para evitar interrupções, faça apenas alterações nas propriedades de conexão quando as importações não estiverem em execução.
+
+.Passos
+. Na tela armazenamento remoto do Gerenciador do sistema SANtricity, selecione o objeto de armazenamento remoto desejado na seção Lista de resultados.
+. Clique em *Exibir/Editar configurações*.
++
+É apresentado o ecrã Remote Storage Settings (Definições de armazenamento remoto).
+
+. Clique na guia *Propriedades da conexão*.
++
+São apresentadas as definições de endereço IP e de porta configuradas para a importação de armazenamento remoto.
+
+. Execute uma das seguintes ações:
++
+** *Editar* – clique em *Editar* ao lado do item de linha correspondente para o objeto de armazenamento remoto. Introduza o endereço IP revisto e/ou as informações da porta nos campos.
+** *Adicionar* – clique em *Adicionar* e, em seguida, insira o novo endereço IP e as informações da porta nos campos fornecidos. Clique em *Add* para confirmar e, em seguida, a nova conexão aparece na lista de objetos de armazenamento remoto.
+** *Excluir* – Selecione a conexão desejada na lista e clique em *Excluir*. Confirme a operação digitando `delete` no campo fornecido e clique em *Excluir*. A conexão é removida da lista de objetos de armazenamento remoto.
+
+
+. Clique em *Salvar*.
++
+As configurações de conexão modificadas são aplicadas ao objeto de armazenamento remoto.
+
+

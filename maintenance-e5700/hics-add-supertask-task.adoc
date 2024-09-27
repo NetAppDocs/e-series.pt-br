@@ -1,0 +1,349 @@
+---
+permalink: maintenance-e5700/hics-add-supertask-task.html 
+sidebar: sidebar 
+keywords: E5700 host interface card, E5700 HIC, replace E5700 HIC, failed E5700 HIC 
+summary: Adicione um HIC em um E5700. 
+---
+= Adicionar placa de interface de host E5700 (HIC)
+:allow-uri-read: 
+:experimental: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Você pode adicionar uma placa de interface de host (HIC) a E5700 controller canisters com portas de host de placa de base. Essa adição aumenta o número de portas de host no storage array e fornece protocolos de host adicionais.
+
+.Sobre esta tarefa
+Quando você adiciona HICs, você deve desligar o storage array, instalar o HIC e reaplicar a energia.
+
+.Antes de começar
+* Revisão link:hics-overview-supertask-concept.html["Requisitos para a substituição de E5700 HIC"].
+* Agende uma janela de manutenção de tempo de inatividade para este procedimento. A energia deve estar desligada quando você instala HICs, para que você não possa acessar dados no storage de armazenamento até que você tenha concluído com êxito este procedimento. (Em uma configuração duplex, ambos os controladores devem ter a mesma configuração HIC quando estão ligados.)
+* Certifique-se de que tem o seguinte:
++
+** Uma ou duas placas de rede (HICs), com base se você tem um ou dois controladores em seu storage array. As placas de rede de interligação local (HICs) têm de ser compatíveis com os controladores.
+** Novo hardware de host instalado para as novas portas de host, como switches ou adaptadores de barramento de host (HBAs).
+** Todos os cabos, transcetores, switches e adaptadores de barramento do host (HBAs) necessários para conetar as novas portas do host.
++
+Para obter informações sobre hardware compatível, consulte a https://mysupport.netapp.com/NOW/products/interoperability["Matriz de interoperabilidade do NetApp"^] e a http://hwu.netapp.com/home.aspx["NetApp Hardware Universe"^].
+
+** Etiquetas para identificar cada cabo que está ligado ao recipiente do controlador.
+** Uma pulseira antiestática, ou você tomou outras precauções antiestáticas.
+** Uma chave de fendas Phillips nº 1.
+** Uma estação de gerenciamento com um navegador que pode acessar o Gerenciador de sistema do SANtricity para o controlador. (Para abrir a interface do System Manager, aponte o navegador para o nome de domínio ou endereço IP do controlador.)
+
+
+
+
+
+
+== Passo 1: Prepare-se para adicionar HIC
+
+Prepare-se para adicionar um HIC fazendo backup do banco de dados de configuração do storage array, coletando dados de suporte e parando as operações de e/S do host. Em seguida, você pode desligar o compartimento do controlador.
+
+.Passos
+. Na página inicial do Gerenciador de sistemas do SANtricity, verifique se o storage array tem o status ideal.
++
+Se o status não for ideal, use o Recovery Guru ou entre em Contato com o suporte técnico para resolver o problema. Não prossiga com este procedimento.
+
+. Faça backup do banco de dados de configuração do storage usando o Gerenciador de sistema do SANtricity.
++
+Se ocorrer um problema durante este procedimento, pode utilizar o ficheiro guardado para restaurar a configuração. O sistema salvará o estado atual do banco de dados de configuração RAID, que inclui todos os dados para grupos de volume e pools de discos na controladora.
+
++
+** Do System Manager:
++
+... Selecione menu:suporte[Centro de suporte > Diagnóstico].
+... Selecione *Collect Configuration Data*.
+... Clique em *Collect*.
++
+O arquivo é salvo na pasta Downloads do seu navegador com o nome *configurationData-<arrayName>-<dateTime>.7z*.
+
+
+
+** Como alternativa, você pode fazer backup do banco de dados de configuração usando o seguinte comando CLI:
++
+`save storageArray dbmDatabase sourceLocation=onboard contentType=all file="filename";`
+
+
+
+. Colete dados de suporte para sua matriz de armazenamento usando o Gerenciador de sistema do SANtricity.
++
+Se ocorrer um problema durante este procedimento, você pode usar o arquivo salvo para solucionar o problema. O sistema salvará os dados de inventário, status e desempenho sobre seu storage array em um único arquivo.
+
++
+.. Selecione menu:suporte[Centro de suporte > Diagnóstico].
+.. Selecione *coletar dados de suporte*.
+.. Clique em *Collect*.
++
+O arquivo é salvo na pasta Downloads do seu navegador com o nome *support-data.7z*.
+
+
+
+. Certifique-se de que nenhuma operação de e/S esteja ocorrendo entre o storage array e todos os hosts conectados. Por exemplo, você pode executar estas etapas:
++
+** Parar todos os processos que envolvem os LUNs mapeados do armazenamento para os hosts.
+** Garantir que nenhuma aplicação esteja gravando dados em LUNs mapeados do storage para os hosts.
+** Desmonte todos os sistemas de arquivos associados a volumes no array.
++
+
+NOTE: As etapas exatas para interromper as operações de e/S do host dependem do sistema operacional do host e da configuração, que estão além do escopo dessas instruções. Se você não tiver certeza de como interromper as operações de e/S do host em seu ambiente, considere encerrar o host.
+
++
+
+CAUTION: *Possível perda de dados* -- se você continuar este procedimento enquanto as operações de e/S estão ocorrendo, o aplicativo host pode perder o acesso aos dados porque o armazenamento não está acessível.
+
+
+
+. Se o storage array participar de uma relação de espelhamento, interrompa todas as operações de e/S de host no storage array secundário.
+. Aguarde até que quaisquer dados na memória cache sejam gravados nas unidades.
++
+O LED verde Cache ative na parte de trás de cada controlador fica aceso quando os dados em cache precisam ser gravados nas unidades. Tem de esperar que este LED se desligue.
+
++
+image::../media/e5700_ib_hic_w_cache_led_callouts_maint-e5700.gif[e5700 ib hic w cache conduziu as anotações maint e5700]
+
++
+*(1)* _Cache ative LED_
+
+. Na página inicial do Gerenciador do sistema do SANtricity, selecione *Exibir operações em andamento*. Aguarde que todas as operações sejam concluídas antes de continuar com o próximo passo.
+. Desligue o compartimento do controlador.
++
+.. Desligue ambos os interruptores de energia no compartimento do controlador.
+.. Aguarde que todos os LEDs na prateleira do controlador se desliguem.
+
+
+
+
+
+
+== Etapa 2: Remova o recipiente do controlador
+
+Retire o recipiente do controlador para que possa adicionar o novo HIC.
+
+.Passos
+. Identifique cada cabo que esteja conetado ao recipiente do controlador.
+. Desligue todos os cabos do recipiente do controlador.
++
+
+CAUTION: Para evitar um desempenho degradado, não torça, dobre, aperte ou pise nos cabos.
+
+. Confirme se o LED Cache ative na parte de trás do controlador está desligado.
++
+O LED verde Cache ative na parte de trás do controlador fica aceso quando os dados em cache precisam ser gravados nas unidades. Tem de esperar que este LED se desligue antes de remover o recipiente do controlador.
+
++
+image::../media/e5700_ib_hic_w_cache_led_callouts_maint-e5700.gif[e5700 ib hic w cache conduziu as anotações maint e5700]
+
++
+*(1)* _Cache ative LED_
+
+. Aperte a trava na alça do came até que ela se solte e, em seguida, abra a alça do came para a direita para liberar o recipiente do controlador da prateleira.
++
+A figura a seguir é um exemplo de um compartimento de controladora E5724:
+
++
+image::../media/28_dwg_e2824_remove_controller_canister_maint-e5700.gif[28 dwg e2824 remover a manutenção do recipiente do controlador e5700]
+
++
+*(1)* _Controller canister_
+
++
+*(2)* _pega da câmara_
+
++
+A figura a seguir é um exemplo de um compartimento de controladora E5760:
+
++
+image::../media/28_dwg_e2860_add_controller_canister_maint-e5700.gif[28 dwg e2860 adicionar o controlador canister manint e5700]
+
++
+*(1)* _Controller canister_
+
++
+*(2)* _pega da câmara_
+
+. Utilizando as duas mãos e a pega do came, deslize o recipiente do controlador para fora da prateleira.
++
+
+CAUTION: Utilize sempre duas mãos para suportar o peso de um recipiente do controlador.
+
++
+Se você estiver removendo o recipiente do controlador de uma prateleira do controlador E5724, uma aba se move para o lugar para bloquear o compartimento vazio, ajudando a manter o fluxo de ar e o resfriamento.
+
+. Vire o recipiente do controlador ao contrário, de forma a que a tampa amovível fique virada para cima.
+. Coloque o recipiente do controlador numa superfície plana e sem estática.
+
+
+
+
+== Passo 3: Instale um HIC
+
+Instale a placa de interface do host (HIC) para aumentar o número de portas do host em seu storage array.
+
+
+CAUTION: *Possível perda de acesso a dados* -- nunca instale um HIC em um recipiente de controlador E5700 se esse HIC foi projetado para outro controlador e-Series. Além disso, se você tiver uma configuração duplex, ambos os controladores e ambas as HICs devem ser idênticos. A presença de HICs incompatíveis ou incompatíveis fará com que os controladores sejam bloqueados quando você aplicar energia.
+
+.Passos
+. Desembale o novo HIC e a nova placa frontal HIC.
+. Pressione o botão na tampa do recipiente do controlador e deslize a tampa para fora.
+. Confirme se o LED verde dentro do controlador (pelos DIMMs) está desligado.
++
+Se este LED verde estiver ligado, o controlador ainda está a utilizar a bateria. Deve aguardar que este LED se apague antes de remover quaisquer componentes.
+
++
+image::../media/28_dwg_e2800_internal_cache_active_led_maint-e5700.gif[28 dwg e2800 cache interno ativo led mint e5700]
+
++
+*(1)* _Cache interno ativo_
+
++
+*(2)* _bateria_
+
+. Usando uma chave de fenda Phillips nº 1, remova os quatro parafusos que prendem a placa frontal vazia ao recipiente do controlador e remova a placa frontal.
+. Alinhe os três parafusos de aperto manual no HIC com os orifícios correspondentes no controlador e alinhe o conetor na parte inferior do HIC com o conetor de interface HIC na placa do controlador.
++
+Tenha cuidado para não arranhar ou bater os componentes na parte inferior do HIC ou na parte superior da placa controladora.
+
+. Baixe cuidadosamente o HIC para o devido lugar e assente o conetor HIC pressionando suavemente o HIC.
++
+
+CAUTION: * Possíveis danos ao equipamento * - tenha muito cuidado para não apertar o conetor de fita dourada para os LEDs do controlador entre o HIC e os parafusos de aperto manual.
+
++
+image::../media/28_dwg_e2800_hic_thumbscrews_maint-e5700.gif[28 dwg e2800 hic parafusos de aperto manual e5700]
+
++
+*(1)* _placa de interface de host (HIC)_
+
++
+*(2)* _parafusos_
+
+. Aperte manualmente os parafusos de aperto manual do HIC.
++
+Não use uma chave de fenda, ou você pode apertar demais os parafusos.
+
+. Utilizando uma chave de fendas Phillips nº 1, fixe a nova placa frontal HIC ao recipiente do controlador com os quatro parafusos removidos anteriormente.
++
+image::../media/28_dwg_e2800_hic_faceplace_screws_maint-e5700.gif[28 dwg e2800 hic faceplace parafusos mint e5700]
+
+
+
+
+
+== Etapa 4: Reinstale o recipiente do controlador
+
+Reinstale o recipiente do controlador na prateleira do controlador depois de instalar o novo HIC.
+
+.Passos
+. Vire o recipiente do controlador ao contrário, de forma a que a tampa amovível fique virada para baixo.
+. Com a alavanca do came na posição aberta, deslize o recipiente do controlador até a prateleira do controlador.
++
+A figura a seguir é um exemplo de um compartimento de controladora E5724:
+
++
+image::../media/28_dwg_e2824_remove_controller_canister_maint-e5700.gif[28 dwg e2824 remover a manutenção do recipiente do controlador e5700]
+
++
+*(1)* _Controller canister_
+
++
+*(2)* _pega da câmara_
+
++
+A figura a seguir é um exemplo de um compartimento de controladora E5760:
+
++
+image::../media/28_dwg_e2860_add_controller_canister_maint-e5700.gif[28 dwg e2860 adicionar o controlador canister manint e5700]
+
++
+*(1)* _Controller canister_
+
++
+*(2)* _pega da câmara_
+
+. Mova a alavanca do came para a esquerda para bloquear o recipiente do controlador no lugar.
+. Reconecte todos os cabos removidos.
++
+
+CAUTION: Não ligue os cabos de dados às novas portas HIC neste momento.
+
+. (Opcional) se você estiver adicionando HICs a uma configuração duplex, repita todas as etapas para remover o segundo recipiente do controlador, instale o segundo HIC e reinstale o segundo recipiente do controlador.
+
+
+
+
+== Passo 5: Complete a adição de HIC
+
+Verifique os LEDs do controlador e o visor de sete segmentos e, em seguida, confirme se o estado do controlador é o ideal.
+
+.Passos
+. Ligue os dois interruptores de energia na parte de trás do compartimento do controlador.
++
+** Não desligue os interruptores de energia durante o processo de ativação, que normalmente leva 90 segundos ou menos para ser concluído.
+** Os ventiladores em cada prateleira são muito altos quando eles começam a funcionar. O ruído alto durante o arranque é normal.
+
+
+. À medida que o controlador inicia, verifique os LEDs do controlador e o visor de sete segmentos.
++
+** O visor de sete segmentos mostra a sequência de repetição *os*, *SD*, *_blank_* para indicar que o controlador está executando o processamento de Início do dia (SOD). Depois de um controlador ter inicializado com êxito, seu visor de sete segmentos deve mostrar o ID da bandeja.
+** O LED âmbar de atenção no controlador liga-se e desliga-se, a menos que haja um erro.
+** Os LEDs verdes do Host Link permanecem desligados até que você conete os cabos do host.
++
+
+NOTE: A figura mostra um exemplo do recipiente do controlador. Seu controlador pode ter um número diferente e um tipo diferente de portas de host.
+
++
+image::../media/e5700_hic_3_callouts_maint-e5700.gif[e5700 hic 3 textos explicativos manint e5700]
+
++
+*(1)* _Host Link LEDs_
+
++
+*(2)* _LED de atenção (âmbar)_
+
++
+*(3)* _display de sete segmentos_
+
+
+
+. A partir do Gestor do sistema SANtricity, confirme se o estado do controlador é o ideal.
++
+Se o estado não for o ideal ou se algum dos LEDs de atenção estiver aceso, confirme se todos os cabos estão corretamente encaixados e verifique se o HIC e o recipiente do controlador estão instalados corretamente. Se necessário, retire e volte a instalar o recipiente do controlador e o HIC.
+
++
+
+NOTE: Se não conseguir resolver o problema, contacte o suporte técnico.
+
+. Se as novas portas HIC exigirem transcetores SFP, instale esses SFPs.
+. Se você instalou um HIC com portas SFP (óticas), confirme se as novas portas têm o protocolo de host que você espera.
++
+.. No Gerenciador do sistema SANtricity, selecione *hardware*.
+.. Se o gráfico mostrar as unidades, clique em *Mostrar parte traseira da prateleira*.
+.. Selecione o gráfico para o controlador A ou controlador B.
+.. Selecione *View settings* no menu de contexto.
+.. Selecione a guia *interfaces de host*.
+.. Clique em *Mostrar mais configurações*.
+.. Revise os detalhes mostrados para as portas HIC (as portas marcadas como *E0__x_* ou *0__x_* no local HIC *slot 1*) para determinar se você está pronto para conetar as portas do host aos hosts de dados:
++
+*** _Se as novas portas HIC tiverem o protocolo que você espera_:
++
+Você está pronto para conetar as novas portas HIC aos hosts de dados; vá para a próxima etapa.
+
+*** _Se as novas portas HIC não tiverem o protocolo que você espera_:
++
+Você deve aplicar um pacote de recursos de software antes de poder conetar as novas portas HIC aos hosts de dados. link:hpp-change-host-protocol-task.html["Altere o protocolo de host E5700"]Consulte . Em seguida, conete as portas do host aos hosts de dados e retome as operações.
+
+
+
+
+
+. Conete os cabos das portas de host do controlador aos hosts de dados.
++
+Se precisar de instruções para configurar e usar um novo protocolo host, consulte o link:../config-linux/index.html["Configuração expressa do Linux"] link:../config-windows/index.html["Configuração expressa do Windows"], ou link:../config-vmware/index.html["Configuração do VMware Express"].
+
+
+
+.O que se segue?
+O processo de adicionar uma placa de interface de host ao storage array está concluído. Pode retomar as operações normais.

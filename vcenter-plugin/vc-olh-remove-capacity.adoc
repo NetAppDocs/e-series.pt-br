@@ -1,0 +1,61 @@
+---
+sidebar: sidebar 
+permalink: vcenter-plugin/vc-olh-remove-capacity.html 
+keywords: vCenter plugin, Plugin for vCenter, SANtricity plugin for vCenter 
+summary: Você pode remover unidades para diminuir a capacidade de um pool existente ou cache SSD. 
+---
+= Remova a capacidade
+:hardbreaks:
+:allow-uri-read: 
+:experimental: 
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./media/
+
+
+[role="lead"]
+Você pode remover unidades para diminuir a capacidade de um pool existente ou cache SSD.
+
+Depois de remover unidades, os dados em cada volume do pool ou cache SSD são redistribuídos para as unidades restantes. As unidades removidas não são atribuídas e sua capacidade se torna parte da capacidade livre total do storage array.
+
+.Sobre esta tarefa
+Siga estas diretrizes ao remover a capacidade:
+
+* Você não pode remover a última unidade em um cache SSD sem primeiro excluir o cache SSD.
+* Não é possível reduzir o número de unidades em um pool para ser inferior a 11 unidades.
+* Você pode remover um máximo de 12 unidades de cada vez. Se precisar remover mais de 12 unidades, repita o procedimento.
+* Não é possível remover unidades se não houver capacidade livre suficiente no pool ou cache SSD para conter os dados, quando esses dados são redistribuídos para as unidades restantes no pool ou cache SSD.
+
+
+Veja a seguir os possíveis impactos no desempenho:
+
+* Remover unidades de um pool ou cache SSD pode resultar em desempenho de volume reduzido.
+* A capacidade de preservação não é consumida quando você remove a capacidade de um pool ou cache SSD. No entanto, a capacidade de preservação pode diminuir com base no número de unidades restantes no pool ou cache SSD.
+
+
+Veja a seguir os impactos nas unidades com capacidade de segurança:
+
+* Se você remover a última unidade que não é segura, o pool será deixado com todas as unidades seguras. Nesta situação, você tem a opção de ativar a segurança para o pool.
+* Se você remover a última unidade que não é capaz de Data Assurance (DA), o pool é deixado com todas as unidades compatíveis com DA.
+* Quaisquer novos volumes que você criar no pool serão capazes de DA. Se você quiser que os volumes existentes sejam capazes de DA, você precisa excluir e recriar o volume.
+
+
+.Passos
+. Na página Gerenciar, selecione o storage array.
++
+Selecione menu:provisionamento[Configurar pools e grupos de volume].
+
+. Selecione o pool ou cache SSD e clique em menu:mais[Remover capacidade].
++
+A caixa de diálogo Remover capacidade é exibida.
+
+. Selecione uma ou mais unidades na lista.
++
+À medida que seleciona ou desseleciona unidades na lista, o campo capacidade total selecionada é atualizado. Este campo mostra a capacidade total do pool ou cache SSD resultante depois de remover as unidades selecionadas.
+
+. Clique em *Remover* e confirme que deseja remover as unidades.
+
+
+.Resultado
+A capacidade recém-reduzida do pool ou cache SSD é refletida na visualização pools e grupos de volume.

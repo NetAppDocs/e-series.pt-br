@@ -1,0 +1,29 @@
+---
+permalink: config-linux/nvme-ib-verify-storage-access-host-task.html 
+sidebar: sidebar 
+keywords: express linux configuration, software configuration, linux host, E2800, E5700, EF300, EF600, E-Series, eseries 
+summary: Antes de usar o namespace, verifique se o host pode gravar dados no namespace e lê-los de volta. 
+---
+= Verifique o acesso ao armazenamento no host
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Antes de usar o namespace, verifique se o host pode gravar dados no namespace e lê-los de volta.
+
+.Antes de começar
+Certifique-se de que tem o seguinte:
+
+* Um namespace inicializado que é formatado com um sistema de arquivos.
+
+
+.Passos
+. No host, copie um ou mais arquivos para o ponto de montagem do disco.
+. Copie os arquivos de volta para uma pasta diferente no disco original.
+. Execute o `diff` comando para comparar os ficheiros copiados com os originais.
+
+
+.Depois de terminar
+Remova o arquivo e a pasta que você copiou.

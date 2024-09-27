@@ -1,0 +1,23 @@
+---
+sidebar: sidebar 
+permalink: vcenter-plugin/vc-olh-array-groups-overview.html 
+keywords: vCenter plugin, Plugin for vCenter, SANtricity plugin for vCenter 
+summary: Gerencie sua infraestrutura física e virtualizada agrupando um conjunto de storage arrays. 
+---
+= Visão geral dos grupos de matrizes
+:hardbreaks:
+:allow-uri-read: 
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./media/
+
+
+[role="lead"]
+Você pode gerenciar sua infraestrutura física e virtualizada no plug-in de armazenamento para vCenter agrupando um conjunto de arrays de armazenamento. Você pode querer agrupar storages para facilitar a execução de tarefas de monitoramento ou geração de relatórios.
+
+Tipos de grupos de storage arrays:
+
+* *All group* -- o grupo All é o grupo padrão e inclui todos os storages de armazenamento descobertos em sua organização. O grupo todos pode ser acessado a partir da vista principal.
+* *Grupo criado pelo usuário* -- Um grupo criado pelo usuário inclui os storages que você seleciona manualmente para adicionar a esse grupo. Os grupos criados pelo utilizador podem ser acedidos a partir da vista principal.
+

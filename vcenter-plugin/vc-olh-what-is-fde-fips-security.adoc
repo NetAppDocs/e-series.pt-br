@@ -1,0 +1,22 @@
+---
+sidebar: sidebar 
+permalink: vcenter-plugin/vc-olh-what-is-fde-fips-security.html 
+keywords: vCenter plugin, Plugin for vCenter, SANtricity plugin for vCenter 
+summary: A segurança FDE/FIPS refere-se a unidades com capacidade segura que criptografam dados durante gravações e descriptografam dados durante leituras usando uma chave de criptografia exclusiva. 
+---
+= O que é segurança FDE/FIPS?
+:hardbreaks:
+:allow-uri-read: 
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./media/
+
+
+[role="lead"]
+A segurança FDE/FIPS refere-se a unidades com capacidade segura que criptografam dados durante gravações e descriptografam dados durante leituras usando uma chave de criptografia exclusiva.
+
+Essas unidades com capacidade de segurança evitam o acesso não autorizado aos dados em uma unidade que é fisicamente removida do storage array. As unidades com capacidade segura podem ser unidades com criptografia total de disco (FDE) ou unidades FIPS (Federal Information Processing Standard). As unidades FIPS foram submetidas a testes de certificação.
+
+
+NOTE: Para volumes que exigem suporte FIPS, use apenas unidades FIPS. A combinação de unidades FIPS e FDE em um grupo de volumes ou pool resultará no tratamento de todas as unidades como unidades FDE. Além disso, uma unidade FDE não pode ser adicionada ou usada como sobressalente em um grupo de volumes ou pool totalmente FIPS.

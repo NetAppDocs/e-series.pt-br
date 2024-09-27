@@ -1,0 +1,36 @@
+---
+permalink: web-services-proxy/index.html 
+sidebar: sidebar 
+keywords: Web Services Proxy, WSP, 
+summary: Visão geral do proxy de serviços da Web SANtricity, API de serviços da Web, API REST, 
+---
+= Visão geral do proxy dos serviços da Web da SANtricity
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+O proxy de serviços da Web da SANtricity é um servidor de API RESTful instalado separadamente em um sistema host para gerenciar centenas de sistemas de storage novos e legados do NetApp e-Series. O proxy inclui o Gerenciador Unificado do SANtricity, que é uma interface baseada na Web que fornece funções semelhantes.
+
+
+
+== Visão geral da instalação
+
+A instalação e configuração do Proxy de Serviços Web envolve as seguintes etapas:
+
+. link:install-reqs-task.html["Reveja os requisitos de instalação e atualização"].
+. link:install-wsp-task.html["Baixe e instale o arquivo Proxy de serviços da Web"].
+. link:install-login-task.html["Faça login na API e no Unified Manager"].
+. link:install-config-task.html["Configurar proxy de serviços da Web"].
+
+
+
+
+== Encontre mais informações
+
+* Gerenciador Unificado -- a instalação de proxy inclui o SANtricity Unified Manager, uma interface baseada na Web que fornece acesso de configuração a sistemas de storage e-Series e EF-Series mais recentes. Para obter mais informações, consulte a ajuda on-line do Unified Manager, que está disponível em sua interface de usuário ou no https://docs.netapp.com/us-en/e-series-santricity/index.html["Site de documentação do software SANtricity"^].
+* Repositório GitHub -- o GitHub contém um repositório para a coleção e organização de scripts de exemplo ilustrando o uso da API de serviços da Web do NetApp SANtricity. Para acessar o repositório, https://github.com/NetApp/webservices-samples["Amostras de Webservices do NetApp"^] consulte .
+* Representational State transfer (REST) -- Serviços Web é uma API RESTful que fornece acesso a praticamente todos os recursos de gerenciamento do SANtricity, portanto, você deve estar familiarizado com os conceitos REST. Para obter mais informações, http://www.ics.uci.edu/~fielding/pubs/dissertation/top.htm["Estilos arquitetônicos e o design de arquiteturas de software baseadas em rede"^]consulte .
+* JavaScript Object Notation (JSON) -- como os dados dentro dos Web Services são codificados através de JSON, você deve estar familiarizado com os conceitos de programação JSON. Para obter mais informações, http://www.json.org["Apresentando JSON"^]consulte .
+

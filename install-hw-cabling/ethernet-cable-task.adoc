@@ -1,0 +1,36 @@
+---
+permalink: install-hw-cabling/ethernet-cable-task.html 
+sidebar: sidebar 
+keywords: cabling, cables, ethernet cabling, ethernet cable, out of band, direct topology, fabric topology, E-Series, eseries, E2800, E5700, EF300, EF600, DE212C, DE224C, DE460C 
+summary: Conete seu sistema de storage a uma rede Ethernet para gerenciamento fora da banda. 
+---
+= Cabeamento Ethernet para uma estação de gerenciamento
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Você pode conetar seu sistema de storage a uma rede Ethernet para gerenciamento de storage array fora da banda. Você deve usar cabos Ethernet para todas as conexões de gerenciamento de storage array.
+
+
+
+== Topologia direta
+
+Uma topologia direta coneta seu controlador diretamente a uma rede Ethernet.
+
+É necessário conetar a porta de gerenciamento 1 em cada controlador para gerenciamento fora da banda e deixar a porta 2 disponível para acesso ao storage array por suporte técnico.
+
+.Conexões diretas de gerenciamento de armazenamento
+image::../media/74167.gif[74167]
+
+
+
+== Topologia de malha
+
+Uma topologia de malha usa um switch para conectar seu controlador a uma rede Ethernet.
+
+É necessário conetar a porta de gerenciamento 1 em cada controlador para gerenciamento fora da banda e deixar a porta 2 disponível para acesso ao storage array por suporte técnico.
+
+.Conexões de gerenciamento de storage de malha
+image::../media/74110.gif[74110]

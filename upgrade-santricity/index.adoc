@@ -1,0 +1,23 @@
+---
+permalink: upgrade-santricity/index.html 
+sidebar: sidebar 
+keywords: E-Series, eseries, E2800, E5700, EF300, EF600, SANtricity, drive firmware, upgrade SANtricity, upgrade OS, upgrade E-Series, upgrade firmware, upgrading, upgrade IOM firmware, upgrade NVSRAM, upgrade controller 
+summary: Visão geral da atualização do SANtricity os 
+---
+= Visão geral da atualização do sistema operacional SANtricity
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Pode atualizar os componentes do sistema operativo e do hardware do sistema para a versão mais recente do software e firmware da SANtricity.
+
+Esses procedimentos de atualização incluem instruções separadas para o seguinte:
+
+* Controladora única - inclui procedimentos para atualizar o software do storage array e, opcionalmente, o firmware IOM e a memória de acesso aleatório estático não volátil (NVSRAM).
+* Vários controladores - inclui procedimentos para atualizar o software SANtricity os em vários storages do mesmo tipo.
+* Unidade -- inclui instruções para atualizar o firmware da unidade.
+
+
+Antes de iniciar a atualização, certifique-se de rever o link:overview-upgrade-consider-task.html["Considerações sobre a atualização"^].

@@ -1,0 +1,186 @@
+---
+permalink: config-vmware/fc-perform-specific-task.html 
+sidebar: sidebar 
+keywords: Fibre Channel protocol, switches, zone switches, zoning, host port identifiers, express vmware configuration, software configuration, vmware host, E2800, E5700, EF300, EF600, E-Series, eseries 
+summary: Para o protocolo Fibre Channel, você configura os switches e determina os identificadores da porta do host. 
+---
+= Executar tarefas específicas de FC
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Para o protocolo Fibre Channel, você configura os switches e determina os identificadores da porta do host.
+
+
+NOTE: Para EF300 e EF600, você deve definir o tamanho do bloco para 512 bytes para garantir a compatibilidade com o VMware. Consulte a ajuda on-line do Gerenciador de sistemas do SANtricity para obter mais informações sobre como definir um volume para 512 bytes.
+
+
+
+== Etapa 1: Configurar os switches FC--VMware
+
+Configurar (zonear) os switches Fibre Channel (FC) permite que os hosts se conetem ao storage array e limita o número de caminhos. Você pode definir a zona dos switches usando a interface de gerenciamento dos switches.
+
+.Antes de começar
+Certifique-se de que tem o seguinte:
+
+* Credenciais de administrador para os switches.
+* O WWPN de cada porta do iniciador do host e de cada porta de destino do controlador conetada ao switch. (Use o utilitário HBA para descoberta.)
+
+
+
+NOTE: O utilitário HBA de um fornecedor pode ser usado para atualizar e obter informações específicas sobre o HBA. Consulte a seção de suporte do site do fornecedor para obter instruções sobre como obter o utilitário HBA.
+
+.Sobre esta tarefa
+Cada porta do iniciador deve estar em uma zona separada com todas as portas de destino correspondentes. Para obter detalhes sobre o zoneamento de seus switches, consulte a documentação do fornecedor do switch.
+
+.Passos
+. Faça login no programa de administração do switch FC e selecione a opção de configuração de zoneamento.
+. Crie uma nova zona que inclua a primeira porta do iniciador do host e que também inclua todas as portas de destino que se conetam ao mesmo switch FC que o iniciador.
+. Crie zonas adicionais para cada porta do iniciador do host FC no switch.
+. Salve as zonas e, em seguida, ative a nova configuração de zoneamento.
+
+
+
+
+== Etapa 2: Determine a porta do host WWPNs--FC
+
+Para configurar o zoneamento FC, você deve determinar o nome da porta mundial (WWPN) de cada porta do iniciador.
+
+.Passos
+. Conete-se ao host ESXi usando SSH ou o shell ESXi.
+. Execute o seguinte comando:
++
+[listing]
+----
+esxcfg-scsidevs –a
+----
+. Registe os identificadores do iniciador. A saída será semelhante a este exemplo:
++
+[listing]
+----
+vmhba3 lpfc link-up  fc.20000090fa05e848:10000090fa05e848 (0000:03:00.0)
+Emulex Corporation Emulex LPe16000 16Gb PCIe Fibre Channel Adapter
+vmhba4 lpfc link-up  fc.20000090fa05e849:10000090fa05e849 (0000:03:00.1)
+Emulex Corporation Emulex LPe16000 16Gb PCIe Fibre Channel Adapter
+----
+
+
+
+
+== Passo 3: Registre sua configuração
+
+Você pode gerar e imprimir um PDF desta página e, em seguida, usar a seguinte Planilha para Registrar informações de configuração de armazenamento FC. Você precisa dessas informações para executar tarefas de provisionamento.
+
+A ilustração mostra um host conetado a um storage array do e-Series em duas zonas. Uma zona é indicada pela linha azul; a outra zona é indicada pela linha vermelha. Cada zona contém uma porta do iniciador e todas as portas de destino.
+
+image::../media/port_identifiers_host_and_target_conf-vmw.gif[identificadores de porta host e vmw conf de destino]
+
+
+
+=== Identificadores de host
+
+|===
+| Legenda n.º | Conexões de porta de host (iniciador) | WWPN 
+
+
+ a| 
+1
+ a| 
+Host
+ a| 
+_não aplicável_
+
+
+
+ a| 
+2
+ a| 
+Porta de host 0 para a zona de switch FC 0
+ a| 
+
+
+
+ a| 
+7
+ a| 
+Porta de host 1 para a zona de switch FC 1
+ a| 
+
+|===
+
+
+=== Identificadores de destino
+
+|===
+| Legenda n.º | Conexões de porta do controlador de matriz (destino) | WWPN 
+
+
+ a| 
+3
+ a| 
+Interrutor
+ a| 
+_não aplicável_
+
+
+
+ a| 
+6
+ a| 
+Controlador de array (destino)
+ a| 
+_não aplicável_
+
+
+
+ a| 
+5
+ a| 
+Controlador A, porta 1 para o switch FC 1
+ a| 
+
+
+
+ a| 
+9
+ a| 
+Controlador A, porta 2 para o switch FC 2
+ a| 
+
+
+
+ a| 
+4
+ a| 
+Controlador B, porta 1 para o switch FC 1
+ a| 
+
+
+
+ a| 
+8
+ a| 
+Controlador B, porta 2 para o switch FC 2
+ a| 
+
+|===
+
+
+=== Host de mapeamento
+
+|===
+
+
+ a| 
+Mapeando o nome do host
+ a| 
+
+
+
+ a| 
+Tipo de SO de host
+ a| 
+
+|===

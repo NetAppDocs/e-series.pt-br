@@ -1,0 +1,51 @@
+---
+sidebar: sidebar 
+permalink: vcenter-plugin/vc-olh-manage-software-repository.html 
+keywords: vCenter plugin, Plugin for vCenter, SANtricity plugin for vCenter 
+summary: Você pode exibir e gerenciar um repositório de software, que lista todos os arquivos de software associados ao plug-in de armazenamento para vCenter. 
+---
+= Gerenciar o repositório de software
+:hardbreaks:
+:allow-uri-read: 
+:experimental: 
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./media/
+
+
+[role="lead"]
+Você pode exibir e gerenciar um repositório de software, que lista todos os arquivos de software associados ao plug-in de armazenamento para vCenter.
+
+.Antes de começar
+Se você estiver usando o repositório para adicionar arquivos do SANtricity os, verifique se os arquivos do sistema operacional estão disponíveis no sistema local.
+
+.Sobre esta tarefa
+Você pode usar a opção Gerenciar o repositório de software do SANtricity os para importar um ou mais arquivos do sistema operacional para o sistema host onde o plug-in está sendo executado. Você também pode optar por excluir um ou mais arquivos do sistema operacional que estão disponíveis no repositório de software.
+
+.Passos
+. Na exibição principal, selecione *Gerenciar* e, em seguida, selecione menu:Centro de Atualização[Gerenciar Repositório de software do SANtricity].
++
+A caixa de diálogo Gerenciar repositório de software do SANtricity os é exibida.
+
+. Execute uma das seguintes ações:
++
+** *Importação:*
++
+... Clique em *Importar*.
+... Clique em *Procurar* e navegue até o local onde residem os arquivos do sistema operacional que você deseja adicionar. Os arquivos DO SO têm um nome de arquivo semelhante `N2800-830000-000.dlp` ao .
+... Selecione um ou mais arquivos do sistema operacional que você deseja adicionar e clique em *Importar*.
+
+
+** *Excluir:*
++
+... Selecione um ou mais arquivos do SO que você deseja remover do repositório de software.
+... Clique em *Excluir*.
+
+
+
+
+
+
+.Resultado
+Se você selecionou importar, o(s) arquivo(s) será(ão) carregado(s) e validado(s). Se você selecionou excluir, os arquivos serão removidos do repositório de software.

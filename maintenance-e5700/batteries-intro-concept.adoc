@@ -1,0 +1,64 @@
+---
+permalink: maintenance-e5700/batteries-intro-concept.html 
+sidebar: sidebar 
+keywords: E5700 battery, repair E5700 battery, replace E5700 battery, failed E5700 battery 
+summary: Reveja os requisitos e considerações de substituição da bateria do E5700. 
+---
+= Requisitos para a substituição da bateria E5700
+:allow-uri-read: 
+:experimental: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Antes de substituir uma bateria de E5700 V, reveja os requisitos e considerações.
+
+Cada recipiente do controlador inclui uma bateria que preserva os dados armazenados em cache se a energia CA falhar.
+
+
+
+== Alertas do Recovery Guru
+
+Se o Guru de recuperação no Gerenciador de sistema do SANtricity relatar um dos seguintes status, você deve substituir a bateria afetada:
+
+* Falha da bateria
+* Substituição da bateria necessária
+
+
+A partir do Gestor do sistema SANtricity, reveja os detalhes no Guru de recuperação para confirmar que existe um problema com uma bateria e para garantir que não é necessário resolver primeiro outros itens.
+
+
+
+== Descrição geral do procedimento
+
+Para proteger seus dados, você deve substituir uma bateria com falha o mais rápido possível.
+
+A seguir está uma visão geral das etapas para substituir uma bateria em controladores E5700 (E5724, EF570 ou E5760):
+
+. Coloque o controlador offline (apenas duplex).
+. Retire o recipiente do controlador.
+. Substitua a bateria.
+. Substitua o recipiente do controlador.
+. Coloque o controlador online (apenas duplex).
+
+
+
+
+== Requisitos
+
+Se você pretende substituir uma bateria com falha, você deve ter:
+
+* Uma bateria de substituição.
+* Uma pulseira antiestática, ou você tomou outras precauções antiestáticas.
+* Etiquetas para identificar cada cabo que está ligado ao recipiente do controlador.
+* Uma estação de gerenciamento com um navegador que pode acessar o Gerenciador de sistema do SANtricity para o controlador. (Para abrir a interface do System Manager, aponte o navegador para o nome de domínio ou endereço IP do controlador.)
++
+Opcionalmente, você pode usar a interface de linha de comando (CLI) para executar alguns dos procedimentos. Se você não tiver acesso à CLI, você poderá fazer um dos seguintes procedimentos:
+
++
+** *Para Gerenciador de sistema SANtricity (versão 11,60 e superior)* -- Baixe o pacote CLI (arquivo zip) do Gerenciador de sistema. Aceda ao menu:Definições[sistema > Complementos > Interface de linha de comando]. Em seguida, você pode emitir comandos CLI de um prompt do sistema operacional, como o prompt do dos C:.
+** *For SANtricity Storage Manager/Enterprise Management Window (EMW)* -- siga as instruções no guia expresso para baixar e instalar o software. Você pode executar comandos CLI do EMW selecionando menu:Ferramentas[Executar Script].
+
+
+

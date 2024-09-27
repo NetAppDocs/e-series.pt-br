@@ -1,0 +1,317 @@
+---
+permalink: install-hw-cabinet/prepare-move-cabinet-task.html 
+sidebar: sidebar 
+keywords: 3040 40U cabinet, cabinet installation, drive tray installation, controller installation, shelf installation, E2800, E5700, EF300, EF600 
+summary: Prepare-se para mover o gabinete. 
+---
+= Prepare-se para mover o gabinete
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Prepare-se para mover o gabinete de sua localização em sua área de recebimento, estimando seu peso total, aclimando o gabinete, removendo os materiais de embalagem e verificando o conteúdo do transporte.
+
+
+
+== Passo 1: Estimar o peso do gabinete
+
+O gabinete transporta de forma confiável e segura até 909,1 kg (2000 lb) de capacidade. Você precisa saber o peso aproximado do gabinete para que você possa movê-lo com segurança.
+
+.Passos
+. Use a tabela a seguir para calcular o peso total aproximado do seu gabinete.
++
+O peso total do gabinete depende do número e do tipo de bandejas que são instaladas no gabinete.
+
++
+|===
+| Componente | Peso | Notas 
+
+
+ a| 
+Gabinete
+ a| 
+138,80 kg (306,0 lb)
+ a| 
+Vazio com a porta traseira instalada
+
+
+
+ a| 
+Unidades de distribuição de energia (PDUs [par])
+ a| 
+19,96 kg (44,0 lb)
+ a| 
+
+
+
+ a| 
+Trilhos de montagem (par)
+ a| 
+1,59 kg (3,50 lb)
+ a| 
+
+
+
+ a| 
+E2612 bandeja de unidades e controlador
+ a| 
+27 kg (59,52 lb)
+ a| 
+Configuração máxima
+
+
+
+ a| 
+E2624 bandeja de unidades e controlador
+ a| 
+26,12 kg (57,32 lb)
+ a| 
+Configuração máxima
+
+
+
+ a| 
+E2660 bandeja de unidades e controlador
+ a| 
+105,2 kg (232 lb)
+ a| 
+Configuração máxima
+
+
+
+ a| 
+E2712 bandeja de unidades e controlador
+ a| 
+27,12 kg (59,8 lb)
+ a| 
+Configuração máxima
+
+
+
+ a| 
+E2724 bandeja de unidades e controlador
+ a| 
+26 kg (57,32 lb)
+ a| 
+Configuração máxima
+
+
+
+ a| 
+E2760 bandeja de unidades e controlador
+ a| 
+105,2 kg (232 lb)
+ a| 
+Configuração máxima
+
+
+
+ a| 
+E5412 bandeja de unidades e controlador
+ a| 
+27,92 (61,52 lb)
+ a| 
+Configuração máxima
+
+
+
+ a| 
+E5424 bandeja de unidades e controlador
+ a| 
+26,92 kg (59,32 lb)
+ a| 
+Configuração máxima
+
+
+
+ a| 
+E5460 bandeja de unidades e controlador
+ a| 
+105,2 kg (232 lb)
+ a| 
+Configuração máxima
+
+
+
+ a| 
+E5512 bandeja de unidades e controlador
+ a| 
+28,89 kg (63,7 lb)
+ a| 
+Configuração máxima
+
+
+
+ a| 
+E5524 bandeja de unidades e controlador
+ a| 
+27,9 kg (61,52 lb)
+ a| 
+Configuração máxima
+
+
+
+ a| 
+E5560 bandeja de unidades e controlador
+ a| 
+107,13 kg (236,2 lb)
+ a| 
+Configuração máxima
+
+
+
+ a| 
+E5612 bandeja de unidades e controlador
+ a| 
+28,89 kg (63,7 lb)
+ a| 
+Configuração máxima
+
+
+
+ a| 
+E5624 bandeja de unidades e controlador
+ a| 
+27,9 kg (61,52 lb)
+ a| 
+Configuração máxima
+
+
+
+ a| 
+E5660 bandeja de unidades e controlador
+ a| 
+107,13 kg (236,2 lb)
+ a| 
+Configuração máxima
+
+
+
+ a| 
+Array Flash EF540
+ a| 
+23,64 kg (52,12 lb)
+ a| 
+Configuração máxima
+
+
+
+ a| 
+Array Flash EF550
+ a| 
+24,63 kg (54,32 lb)
+ a| 
+Configuração máxima
+
+
+
+ a| 
+Array Flash EF560
+ a| 
+24,63 kg (54,32 lb)
+ a| 
+Configuração máxima
+
+
+
+ a| 
+Bandeja de unidades de DE1600 TB
+ a| 
+26,3 kg (58 lb)
+ a| 
+Configuração máxima
+
+
+
+ a| 
+Bandeja de unidades de DE5600 TB
+ a| 
+25,31 kg (55,8 lb)
+ a| 
+Configuração máxima
+
+
+
+ a| 
+Bandeja de unidades de DE6600 TB
+ a| 
+104,1 kg (229,6 lb)
+ a| 
+Configuração máxima
+
+|===
+. Reveja as seguintes notas.
++
+
+CAUTION: Remova todas as unidades da bandeja de unidades DE6600 antes de mover o gabinete para sua posição final.
+
++
+
+CAUTION: *Possíveis danos ao equipamento* -- armários com DE6600 bandejas de unidades são enviados sem unidades para reduzir o peso de envio. Como um gabinete totalmente preenchido com DE6600 bandejas de unidades pode pesar mais de 1247,3 kg (2750 lb), certifique-se de mover o gabinete para o lugar antes de carregar as unidades e certifique-se de que a capacidade de carga no piso do destino do gabinete suporta muito peso.
+
++
+
+CAUTION: *Possíveis danos aos componentes da bandeja* -- não coloque uma bandeja de unidades DE6600 em uma superfície plana. Instale a bandeja de unidades DE6600 no gabinete antes de operar ou mover as gavetas.
+
+
+
+
+
+== Passo 2: Gabinete aclimate
+
+Certifique-se de que o gabinete e as bandejas são aclimatados ao ambiente interno antes de remover os materiais de embalagem.
+
+.Passos
+. Se a temperatura exterior for inferior a 0 ºC (32 ºF), deixe o armário e as bandejas dentro de suas caixas por pelo menos 24 horas para evitar a condensação.
+. Aumente ou diminua o período de estabilização de 24 horas, dependendo da temperatura exterior à chegada.
++
+
+CAUTION: *Possíveis danos aos componentes da bandeja* -- se a temperatura externa estiver abaixo de 0 ºC (32 ºF) quando você receber seu gabinete e bandejas, não as desembale imediatamente ou uncate. A exposição de componentes frios a temperaturas interiores quentes pode causar condensação, o que resulta em danos ou falhas nos componentes.
+
+
+
+
+
+== Passo 3: Remover materiais de embalagem
+
+Remova os materiais de embalagem somente depois que o gabinete tiver aclimatado à temperatura interna.
+
+.Passos
+. Consulte as instruções de desembalagem incluídas na parte frontal da caixa de transporte.
+. Remova os materiais de embalagem de acordo com as instruções incluídas.
+
+
+
+
+== Passo 4: Verifique o conteúdo do transporte
+
+Verifique o conteúdo de envio para se certificar de que todos os equipamentos chegaram ao local.
+
+.Passos
+. Compare a lista de embalagem com o equipamento que recebeu.
+. Certifique-se de que todos os equipamentos chegaram ao local.
+. Se algum item estiver faltando, entre em Contato com seu representante de vendas.
+
+
+
+
+== Passo 5: Remova componentes pesados do gabinete
+
+Remova alguns dos componentes mais pesados que estão localizados na parte superior do gabinete para garantir a máxima estabilidade.
+
+.Antes de começar
+* Certifique-se de que o peso máximo não exceda 2000 lbs antes de mover o gabinete.
+* Observe a localização de cada bandeja, componente e cabo antes de removê-lo, para que você possa reinstalar cada item em seu local original.
+
+
+.Passos
+. Registe a configuração do cabo para uma nova montagem, caso seja necessário desligar quaisquer cabos.
+. Remova as bandejas de unidades e as bandejas de unidades e controlador na metade superior do gabinete. Mantenha todos os componentes da mesma bandeja juntos.
++
+
+NOTE: Não é necessário remover as fontes de alimentação ou outros componentes da parte traseira de cada bandeja
+
+. Coloque cada componente num saco antiestático separado. Se as caixas de transporte originais estiverem disponíveis, utilize-as para transportar os componentes.
+

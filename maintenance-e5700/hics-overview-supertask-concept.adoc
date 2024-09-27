@@ -1,0 +1,50 @@
+---
+permalink: maintenance-e5700/hics-overview-supertask-concept.html 
+sidebar: sidebar 
+keywords: E5700 host interface card, E5700 HIC, replace E5700 HIC, failed E5700 HIC 
+summary: Rever os requisitos para a substituição HIC E5700. 
+---
+= Requisitos para a substituição de E5700 HIC
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Antes de adicionar, atualizar ou substituir uma placa de interface de host (HIC) em um E5700, revise os requisitos e considerações.
+
+
+
+== Descrição geral do procedimento
+
+Você pode adicionar, atualizar ou substituir um HIC no compartimento de controladora E5724 e no compartimento de controladora E5760.
+
+A seguir, uma visão geral das etapas para substituir um HIC em um controlador E5700 (E5724 ou E5760):
+
+. Coloque o controlador offline
+. Retire o recipiente do controlador
+. Substitua a bateria
+. Substitua o recipiente do controlador
+. Coloque o controlador online
+
+
+
+
+== Requisitos para adicionar, atualizar ou substituir um HIC
+
+Se você planeja adicionar, atualizar ou substituir uma placa de interface de host (HIC), tenha em mente os seguintes requisitos.
+
+* Tem de programar uma janela de manutenção de tempo de inatividade para este procedimento. A energia deve estar desligada quando você instala HICs, para que você não possa acessar dados no storage de armazenamento até que você tenha concluído com êxito este procedimento. (Em uma configuração duplex, isso ocorre porque ambos os controladores devem ter a mesma configuração HIC quando são ligados.)
+* Tem de ter duas HICs compatíveis com os controladores.
++
+Para configurações duplex (dois controladores), os HICs instalados nos dois coletores de controladora devem ser idênticos. A presença de HICs incompatíveis faz com que o controlador com o HIC de substituição bloqueie quando o coloca online.
+
+* Você tem todos os cabos, transcetores, switches e adaptadores de barramento do host (HBAs) necessários para conetar as novas portas do host.
++
+Para obter informações sobre o hardware compatível, consulte a https://mysupport.netapp.com/NOW/products/interoperability["Matriz de interoperabilidade do NetApp"^] ou a http://hwu.netapp.com/home.aspx["NetApp Hardware Universe"^].
+
+* Você tem uma pulseira antiestática ou tomou outras precauções antiestáticas.
+* Você tem uma chave de fenda Phillips nº 1.
+* Você tem etiquetas para identificar cada cabo que está conetado ao recipiente do controlador.
+* Você tem uma estação de gerenciamento com um navegador que pode acessar o Gerenciador de sistema do SANtricity para o controlador. (Para abrir a interface do System Manager, aponte o navegador para o nome de domínio ou endereço IP do controlador.)
+

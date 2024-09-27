@@ -1,0 +1,63 @@
+---
+sidebar: sidebar 
+permalink: vcenter-plugin/vc-olh-create-pool-automatically.html 
+keywords: vCenter plugin, Plugin for vCenter, SANtricity plugin for vCenter 
+summary: Você pode criar pools automaticamente quando o sistema detetar pelo menos 11 unidades não atribuídas ou detetar uma unidade não atribuída elegível para um pool existente. 
+---
+= Criar pool automaticamente
+:hardbreaks:
+:allow-uri-read: 
+:experimental: 
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./media/
+
+
+[role="lead"]
+Você pode criar pools automaticamente quando o sistema detetar pelo menos 11 unidades não atribuídas ou detetar uma unidade não atribuída elegível para um pool existente. Um pool é um conjunto de unidades agrupadas logicamente.
+
+.Antes de começar
+Você pode iniciar a caixa de diálogo Pool Auto-Configuration (Configuração automática do pool) quando uma destas condições for verdadeira:
+
+* Pelo menos uma unidade não atribuída foi detetada que pode ser adicionada a um pool existente com tipos de unidade semelhantes.
+* Onze (11) ou mais unidades não atribuídas foram detetadas que podem ser usadas para criar um novo pool (se elas não puderem ser adicionadas a um pool existente devido a tipos de unidades diferentes).
+
+
+.Sobre esta tarefa
+Você pode usar a criação automática de pool para configurar facilmente todas as unidades não atribuídas no storage em um pool e adicionar unidades a pools existentes.
+
+Tenha em mente o seguinte:
+
+* Quando você adiciona unidades a um storage array, o sistema deteta automaticamente as unidades e solicita que você crie um único pool ou vários pools com base no tipo de unidade e na configuração atual.
+* Se os pools foram definidos anteriormente, o sistema solicitará automaticamente a opção de adicionar as unidades compatíveis a um pool existente. Quando novas unidades são adicionadas a um pool existente, o sistema redistribui automaticamente os dados pela nova capacidade, que agora inclui as novas unidades adicionadas.
+* Ao configurar um storage de armazenamento EF600 ou EF300, verifique se cada controlador tem acesso a um número igual de unidades nos primeiros 12 slots e a um número igual de unidades nos últimos 12 slots. Essa configuração ajuda os controladores a usar os dois barramentos PCIe do lado da unidade de forma mais eficaz. Para a criação de pool, você deve usar todas as unidades no storage array.
+
+
+.Passos
+. Na página Gerenciar, selecione o storage array do pool.
+. Selecione menu:provisionamento[Configurar pools e grupos de volume].
+. Selecione menu:mais[Launch pool auto-Configuration] (Iniciar configuração automática do pool).
++
+A tabela de resultados lista novos pools, pools existentes com unidades adicionadas ou ambos. Um novo pool é nomeado com um número sequencial por padrão.
+
++
+Observe que o sistema faz o seguinte:
+
++
+** Cria um único pool se houver um número suficiente de unidades com o mesmo tipo de unidade (HDD ou SSD) e tiverem capacidade semelhante.
+** Cria vários pools se a capacidade não atribuída consistir em diferentes tipos de unidade.
+** Adiciona as unidades a um pool existente se um pool já estiver definido no storage de armazenamento e você adicionar novas unidades do mesmo tipo de unidade ao pool.
+** Adiciona as unidades do mesmo tipo de unidade ao pool existente e usa os outros tipos de unidade para criar pools diferentes se as novas unidades forem de tipos de unidade diferentes.
+
+
+. Para alterar o nome de um novo pool, clique no ícone *Editar* (o lápis).
+. Para ver caraterísticas adicionais do pool, posicione o cursor sobre ou toque no ícone Detalhes (a página).
++
+São exibidas informações sobre o tipo de unidade, a capacidade de segurança, a capacidade de garantia de dados (DA), a proteção contra perda de gaveta e a proteção contra perda de gaveta.
+
++
+Para storages EF600 e EF300, as configurações também são exibidas para provisionamento de recursos e tamanhos de blocos de volume.
+
+. Clique em *aceitar*.
+

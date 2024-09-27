@@ -1,0 +1,91 @@
+---
+permalink: web-services-proxy/install-reqs-task.html 
+sidebar: sidebar 
+keywords: installation, download, install proxy, 
+summary: Requisitos e considerações de instalação e atualização para o Web Services Proxy. 
+---
+= Reveja os requisitos de instalação e atualização
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Antes de instalar o Web Services Proxy, revise os requisitos de instalação e as considerações de atualização.
+
+
+
+== Requisitos de instalação
+
+Você pode instalar e configurar o Proxy de Serviços Web em um sistema host Windows ou Linux.
+
+A instalação do proxy inclui os seguintes requisitos.
+
+[cols="35h,~"]
+|===
+| Requisito | Descrição 
+
+
+ a| 
+Limitações do nome de host
+ a| 
+Certifique-se de que o nome do host do servidor onde você pretende instalar o Proxy de Serviços Web contém apenas letras ASCII, dígitos numéricos e hífens (-). Esse requisito se deve a uma limitação do Java Keytool, que é usado na geração de um certificado autoassinado para o servidor. Se o nome do host do servidor contiver outros carateres, como um sublinhado (_), o servidor Web não será iniciado após a instalação.
+
+
+
+ a| 
+Sistemas operacionais
+ a| 
+Você pode instalar o proxy nos seguintes sistemas operacionais:
+
+* Linux
+* Windows
+
+
+Para obter uma lista completa de sistemas operacionais e compatibilidade de firmware, consulte o http://mysupport.netapp.com/matrix["Ferramenta de Matriz de interoperabilidade do NetApp"^].
+
+
+
+ a| 
+Linux: Considerações adicionais
+ a| 
+As bibliotecas base padrão do Linux (init-functions) são necessárias para que o servidor Web funcione corretamente. Você deve instalar os pacotes lsb/insserv para seu sistema operacional. Para obter mais informações, consulte a seção "Pacotes adicionais necessários" do arquivo Readme.
+
+
+
+ a| 
+Várias instâncias
+ a| 
+Você pode instalar apenas uma instância do Web Services Proxy em um servidor; no entanto, você pode instalar o proxy em vários servidores dentro de sua rede.
+
+
+
+ a| 
+Planejamento de capacidade
+ a| 
+O Proxy de serviços da Web requer espaço adequado para o registo. Verifique se o sistema atende aos seguintes requisitos de espaço em disco disponíveis:
+
+* Espaço de instalação necessário -- 275 MB
+* Espaço mínimo de Registro -- 200 MB
+* Memória do sistema -- 2 GB; o espaço de pilha é de 1 GB por padrão
+
+
+Você pode usar uma ferramenta de monitoramento de espaço em disco para verificar o espaço disponível na unidade de disco para armazenamento persistente e Registro.
+
+
+
+ a| 
+Licença
+ a| 
+O Web Services Proxy é um produto independente e gratuito que não requer uma chave de licença. No entanto, os direitos autorais e os termos de serviço aplicáveis são aplicáveis. Se você estiver instalando o proxy no modo Gráfico ou Console, você deverá aceitar o Contrato de Licença de Usuário final (EULA).
+
+|===
+
+
+== Considerações sobre a atualização
+
+Se você estiver atualizando de uma versão anterior, esteja ciente de que alguns itens são preservados ou removidos.
+
+* Para o Web Services Proxy, as configurações anteriores são preservadas. Essas configurações incluem senhas de usuário, todos os sistemas de armazenamento descobertos, certificados de servidor, certificados confiáveis e configuração de tempo de execução do servidor.
+* Para o Unified Manager, todos os arquivos do SANtricity os carregados anteriormente no repositório são removidos durante a atualização.
+

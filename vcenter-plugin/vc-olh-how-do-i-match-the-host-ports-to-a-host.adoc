@@ -1,0 +1,22 @@
+---
+sidebar: sidebar 
+permalink: vcenter-plugin/vc-olh-how-do-i-match-the-host-ports-to-a-host.html 
+keywords: vCenter plugin, Plugin for vCenter, SANtricity plugin for vCenter 
+summary: 'Se você estiver criando manualmente um host, primeiro deverá usar o utilitário HBA (adaptador de barramento de host) apropriado disponível no host para determinar os identificadores de porta de host associados a cada HBA instalado no host.' 
+---
+= Como faço para corresponder as portas do host a um host?
+:hardbreaks:
+:allow-uri-read: 
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./media/
+
+
+[role="lead"]
+Se você estiver criando manualmente um host, primeiro deverá usar o utilitário HBA (adaptador de barramento de host) apropriado disponível no host para determinar os identificadores de porta de host associados a cada HBA instalado no host.
+
+Quando tiver essas informações, selecione os identificadores de porta do host que fizeram login no storage array na lista fornecida na caixa de diálogo criar host.
+
+
+CAUTION: Certifique-se de selecionar os identificadores de porta de host apropriados para o host que você está criando. Se você associar os identificadores de porta do host errados, poderá causar acesso não intencional de outro host a esses dados.

@@ -1,0 +1,72 @@
+---
+permalink: install-hw-e2800-e5700/e2824-e5724-install-hardware-task.html 
+sidebar: sidebar 
+keywords: E2800, E5700, installation 
+summary: Instale o E2800 ou E5700 em um rack de dois pilares ou em um gabinete do sistema NetApp. 
+---
+= Instale o hardware
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Saiba como instalar um sistema de armazenamento E5724, EF570, EF280, E2812, E2824, DE212C ou DE224C em um rack de duas colunas ou em um gabinete de sistema NetApp.
+
+.Antes de começar
+Certifique-se de fazer o seguinte:
+
+* Registre seu hardware em http://mysupport.netapp.com/["Suporte à NetApp"^].
+* Prepare uma área de trabalho plana e livre de estática.
+* Obtenha uma pulseira antiestática e tome precauções antiestáticas.
+
+
+Leia todas as instruções antes de prosseguir com os passos abaixo.
+
+.Passos
+. Desembale o conteúdo do hardware e, em seguida, faça o inventário do hardware contido contra o deslizamento da embalagem.
+. Instale os trilhos.
++
+Se as instruções foram incluídas com o hardware de montagem em rack, consulte-as para obter informações detalhadas sobre como instalar os trilhos. Para obter instruções adicionais de montagem em rack, link:../rackmount-hardware.html["Hardware de montagem em rack"]consulte .
+
++
+
+NOTE: Instale o hardware da parte inferior do rack ou gabinete até a parte superior para evitar que o equipamento tombe.
+
++
+image:../media/install_rails_inst-hw-e2800-e5700.png[""]
+
+. Instale a prateleira.
++
+
+CAUTION: Quando totalmente carregada com unidades, cada prateleira pesa aproximadamente 64 lb (29 kg). São necessárias duas pessoas ou elevador mecânico para mover a prateleira com segurança.
+
++
+.. Começando com a prateleira que você deseja na parte inferior do gabinete, coloque a parte traseira da prateleira (a extremidade com os conetores) nos trilhos.
+.. Apoiando a prateleira de baixo, deslize-a para dentro do gabinete. image:../media/4_person_lift_source.png[""]
+
+
+. Fixe a prateleira.
++
+Prenda a prateleira ao rack conforme indicado na link:../rackmount-hardware.html["Hardware de montagem em rack"].
+
++
+.. Insira os parafusos no primeiro e no terceiro orifícios da parte superior da prateleira de ambos os lados para prendê-la à parte frontal do gabinete.
+.. Coloque dois suportes traseiros em cada lado da secção traseira superior da prateleira. Insira os parafusos no primeiro e terceiro orifícios de cada suporte para fixar a parte traseira do gabinete.
+
+
++
+image:../media/trafford_secure.png[""]
+
+. Instale a moldura ou as tampas da extremidade.
++
+.. Posicione a moldura frontal na frente da prateleira do controlador de modo que os orifícios em cada extremidade fiquem alinhados com os fixadores na prateleira do controlador.
+.. Encaixe a moldura no lugar.
+.. Se tiver prateleiras de acionamento opcionais, posicione a tampa da extremidade esquerda na frente da prateleira de acionamento de modo que os orifícios na tampa da extremidade fiquem alinhados com os fixadores no lado esquerdo da prateleira.
+.. Encaixe a tampa da extremidade no lugar.
+.. Repita os passos acima para a tampa da extremidade direita.
+
+
+
+
+image:../media/install_faceplate_2_0_inst-hw-e2800-e5700.png[""]

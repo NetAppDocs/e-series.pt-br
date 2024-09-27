@@ -1,0 +1,87 @@
+---
+permalink: web-services-proxy/overview-intro-concept.html 
+sidebar: sidebar 
+keywords: Web Services, WSP, SANtricity API, 
+summary: Saiba mais sobre a API de serviços da Web 
+---
+= Visão geral dos serviços da Web e do Unified Manager
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Antes de instalar e configurar o proxy de serviços da Web, leia a visão geral dos serviços da Web e do Gerenciador Unificado do SANtricity.
+
+
+
+== Serviços da Web
+
+Os serviços da Web são uma interface de programação de aplicações (API) que permite configurar, gerenciar e monitorar sistemas de storage do NetApp e-Series e EF-Series. Ao emitir solicitações de API, você pode concluir fluxos de trabalho como configuração, provisionamento e monitoramento de performance para sistemas de storage e-Series.
+
+Ao usar a API de serviços da Web para gerenciar sistemas de armazenamento, você deve estar familiarizado com o seguinte:
+
+* JavaScript Object Notation (JSON) – como os dados dentro dos Web Services são codificados através de JSON, você deve estar familiarizado com os conceitos de programação JSON. Para obter mais informações, http://www.json.org["Apresentando JSON"^]consulte .
+* Transferência de estado representacional (REST) – os serviços da Web são uma API RESTful que fornece acesso a praticamente todos os recursos de gerenciamento do SANtricity, portanto, você deve estar familiarizado com os conceitos REST. Para obter mais informações, http://www.ics.uci.edu/~fielding/pubs/dissertation/top.htm["Estilos arquitetônicos e o design de arquiteturas de software baseadas em rede"^]consulte .
+* Conceitos de linguagem de programação – Java e Python são as linguagens de programação mais comuns usadas com a API Web Services, mas qualquer linguagem de programação que possa fazer solicitações HTTP é suficiente para interação com API.
+
+
+Os Web Services estão disponíveis em duas implementações:
+
+* *Incorporado* -- Um servidor de API RESTful está incorporado em cada controlador de um sistema de armazenamento E2800/EF280 executando o NetApp SANtricity 11,30 ou versões posteriores, um E5700/EF570 executando o SANtricity 11,40 ou versões posteriores e um EF300 ou EF600 executando o SANtricity 11,60 ou versões posteriores. Nenhuma instalação é necessária.
+* *Proxy* -- o Proxy de Serviços Web da SANtricity é um servidor de API RESTful instalado separadamente em um servidor Windows ou Linux. Essa aplicação baseada em host pode gerenciar centenas de sistemas de storage novos e legados do NetApp e-Series. Em geral, você deve usar o proxy para redes com mais de 10 sistemas de armazenamento. O proxy pode lidar com várias solicitações de forma mais eficiente do que a API incorporada.
+
+
+O núcleo da API está disponível em ambas as implementações.
+
+image::../media/web_services_proxy_overview.gif[visão geral do proxy dos serviços da web]
+
+A tabela a seguir fornece uma comparação entre o proxy e a versão incorporada.
+
+|===
+| Consideração | Proxy | Incorporado 
+
+
+ a| 
+Instalação
+ a| 
+Requer um sistema host (Linux ou Windows). O proxy está disponível para download no http://mysupport.netapp.com/NOW/cgi-bin/software/?product=E-Series+SANtricity+Web+Services+%28REST+API%29&platform=WebServices["Site de suporte da NetApp"^] ou no https://hub.docker.com/r/netapp/eseries-webservices/["DockerHub"^].
+ a| 
+Nenhuma instalação ou capacitação necessária.
+
+
+
+ a| 
+Segurança
+ a| 
+Configurações mínimas de segurança por padrão.
+
+As configurações de segurança são baixas para que os desenvolvedores possam começar a usar a API de forma rápida e fácil. Se desejar, você pode configurar o proxy com o mesmo perfil de segurança que a versão incorporada.
+ a| 
+Configurações de alta segurança por padrão.
+
+As configurações de segurança são altas porque a API é executada diretamente nos controladores. Por exemplo, ele não permite o acesso HTTP e desativa todos os protocolos de criptografia SSL e TLS mais antigos para HTTPS.
+
+
+
+ a| 
+Gerenciamento central
+ a| 
+Gerencia todos os sistemas de storage a partir de um servidor.
+ a| 
+Gerencia apenas o controlador no qual ele está incorporado.
+
+|===
+
+
+== Unified Manager
+
+O pacote de instalação de proxy inclui o Unified Manager, uma interface baseada na Web que fornece acesso de configuração a sistemas de storage e-Series e EF-Series mais recentes, como o E2800, E5700, EF300 e EF600.
+
+No Unified Manager, você pode executar as seguintes operações em lote:
+
+* Visualize o status de vários sistemas de storage a partir de uma visualização central
+* Descubra vários sistemas de armazenamento na sua rede
+* Importe configurações de um sistema de armazenamento para vários sistemas
+* Atualize o firmware para vários sistemas de storage
+

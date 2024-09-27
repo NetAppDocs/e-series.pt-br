@@ -1,0 +1,21 @@
+---
+permalink: config-linux/iscsi-setup-multipath-conf-file-concept.html 
+sidebar: sidebar 
+keywords: multipath.conf file, express linux configuration, software configuration, linux host, E2800, E5700, EF300, EF600, E-Series, eseries 
+summary: Use o arquivo multipath.conf, que é o arquivo de configuração para o daemon multipath, multipathd. 
+---
+= Configure o arquivo multipath.conf
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+O arquivo multipath.conf é o arquivo de configuração para o daemon multipath, multipathd.
+
+O arquivo multipath.conf substitui a tabela de configuração interna para multipathd.
+
+
+NOTE: Para o sistema operacional SANtricity 8,30 e mais recente, o NetApp recomenda o uso das configurações padrão, conforme fornecido.
+
+Não são necessárias alterações no /etc/multipath.conf.

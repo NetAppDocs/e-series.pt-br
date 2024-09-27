@@ -1,0 +1,68 @@
+---
+permalink: maintenance-ef600/index.html 
+sidebar: sidebar 
+keywords: EF300 maintenance, EF600 maintenance, repairing EF300, repairing EF600, replace EF300 components, replace EF600 components 
+summary: Mantenha o hardware EF300 e EF600 
+---
+= Mantenha o hardware EF300 e EF600
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Para os sistemas de armazenamento EF300 e EF600, pode executar procedimentos de manutenção nos seguintes componentes.
+
+
+
+== Baterias
+
+Uma bateria é incluída com um controlador e preserva os dados em cache se a energia CA falhar.
+
+
+
+== Controladores
+
+Um controlador consiste em uma placa, firmware e software. Controla as unidades e implementa as funções do Gestor do sistema SANtricity.
+
+
+
+== DIMMs
+
+Você deve substituir um DIMM (módulo de memória dual in-line) quando houver uma incompatibilidade de memória ou se tiver um DIMM com falha.
+
+
+
+== Unidades
+
+Uma unidade é um dispositivo que fornece a Mídia de armazenamento físico para dados.
+
+
+
+== Fãs
+
+Cada gaveta de unidade ou compartimento de controladora EF300 ou EF600 inclui cinco ventiladores para resfriar a controladora.
+
+
+
+== Placas de interface de host (HICs)
+
+Uma placa de interface do host (HIC) deve ser instalada dentro de um recipiente do controlador. O controlador EF600 inclui portas de host no HIC opcional. As portas de host que são incorporadas ao HIC são chamadas portas HIC.
+
+
+
+== Protocolo de porta de host
+
+Você pode converter o protocolo de um host para um protocolo diferente para que a compatibilidade e a comunicação possam ser estabelecidas.
+
+
+
+== Fontes de alimentação
+
+Uma fonte de alimentação fornece uma fonte de alimentação redundante em um compartimento de controladora.
+
+
+
+== Placas de expansão SAS
+
+Uma placa de expansão SAS pode ser instalada dentro de um recipiente do controlador. A controladora EF300 suporta expansão SAS.

@@ -1,0 +1,237 @@
+---
+permalink: config-linux/nvme-ib-worksheet-concept.html 
+sidebar: sidebar 
+keywords: NVMe over Infiniband worksheet Linux, express linux configuration, software configuration, linux host, E2800, E5700, EF300, EF600, E-Series, eseries 
+summary: Use esta Planilha para gravar informações de configuração de storage NVMe em Infiniband. 
+---
+= Grave o NVMe em uma configuração IB
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Você pode gerar e imprimir um PDF desta página e, em seguida, usar a seguinte Planilha para gravar informações de configuração de storage NVMe over InfiniBand. Você precisa dessas informações para executar tarefas de provisionamento.
+
+
+
+== Identificadores de host
+
+
+NOTE: O iniciador de software NQN é determinado durante a tarefa.
+
+Localize e documente o iniciador NQN de cada host. O NQN é normalmente encontrado no arquivo /etc/nvme/hostnqn.
+
+|===
+| Legenda n.º | Conexões de porta de host | NQN do host 
+
+
+ a| 
+1
+ a| 
+Host (iniciador) 1
+ a| 
+
+
+
+ a| 
+n/a.
+ a| 
+ a| 
+
+
+
+ a| 
+n/a.
+ a| 
+ a| 
+
+
+
+ a| 
+n/a.
+ a| 
+ a| 
+
+
+
+ a| 
+n/a.
+ a| 
+ a| 
+
+|===
+
+
+== Configuração recomendada
+
+Em uma topologia de conexão direta, um ou mais hosts são conetados diretamente ao subsistema. Na versão do SANtricity os 11,50, oferecemos suporte a uma única conexão de cada host para uma controladora de subsistema, conforme mostrado abaixo. Nessa configuração, uma porta HCA (adaptador de canal de host) de cada host deve estar na mesma sub-rede que a porta do controlador e-Series à qual está conetada, mas em uma sub-rede diferente da outra porta HCA.
+
+image::../media/nvmeof_direct_connect.gif[nvmeof conexão direta]
+
+
+
+== NQN alvo
+
+Documente o NQN de destino para o storage array. Você usará essas informações no xref:nvme-ib-configure-storage-connections-task.adoc[Configurar as conexões do storage array NVMe em InfiniBand].
+
+Encontre o nome NQN da matriz de armazenamento usando SANtricity: *Matriz de armazenamento* > *NVMe em Infiniband* > *Gerenciar configurações*. Essas informações podem ser necessárias quando você cria sessões NVMe over InfiniBand a partir de sistemas operacionais que não suportam a descoberta de destinos de envio.
+
+|===
+| Legenda n.º | Nome do array | Objetivo IQN 
+
+
+ a| 
+6
+ a| 
+Controlador de array (destino)
+ a| 
+
+|===
+
+
+== Configuração de rede
+
+Documentar a configuração de rede que será usada para os hosts e o storage na malha InfiniBand. Essas instruções assumem que duas sub-redes serão usadas para redundância total.
+
+O administrador da rede pode fornecer as seguintes informações. Você usa essas informações no tópico, xref:nvme-ib-configure-storage-connections-task.adoc[Configurar as conexões do storage array NVMe em InfiniBand].
+
+
+
+=== Sub-rede A
+
+Defina a sub-rede a ser utilizada.
+
+|===
+| Endereço de rede | Máscara de rede 
+
+
+ a| 
+ a| 
+
+|===
+Documente os NQNs a serem usados pelas portas de matriz e cada porta de host.
+
+|===
+| Legenda n.º | Conexões de porta do controlador de matriz (destino) | NQN 
+
+
+ a| 
+3
+ a| 
+Interrutor
+ a| 
+_não aplicável_
+
+
+
+ a| 
+5
+ a| 
+Controlador A, porta 1
+ a| 
+
+
+
+ a| 
+4
+ a| 
+Controlador B, porta 1
+ a| 
+
+
+
+ a| 
+2
+ a| 
+Host 1, porta 1
+ a| 
+
+
+
+ a| 
+ a| 
+(Opcional) Host 2, porta 1
+ a| 
+
+|===
+
+
+=== Sub-rede B
+
+Defina a sub-rede a ser utilizada.
+
+|===
+| Endereço de rede | Máscara de rede 
+
+
+ a| 
+ a| 
+
+|===
+Documente as IQNs a serem usadas pelas portas de matriz e cada porta de host.
+
+|===
+| Legenda n.º | Conexões de porta do controlador de matriz (destino) | NQN 
+
+
+ a| 
+8
+ a| 
+Interrutor
+ a| 
+_não aplicável_
+
+
+
+ a| 
+10
+ a| 
+Controlador A, porta 2
+ a| 
+
+
+
+ a| 
+9
+ a| 
+Controlador B, porta 2
+ a| 
+
+
+
+ a| 
+7
+ a| 
+Host 1, porta 2
+ a| 
+
+
+
+ a| 
+ a| 
+(Opcional) Host 2, porta 2
+ a| 
+
+|===
+
+
+== Mapeando o nome do host
+
+
+NOTE: O nome do host de mapeamento é criado durante o fluxo de trabalho.
+
+|===
+
+
+ a| 
+Mapeando o nome do host
+ a| 
+
+
+
+ a| 
+Tipo de SO de host
+ a| 
+
+|===

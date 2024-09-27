@@ -1,0 +1,64 @@
+---
+permalink: maintenance-e2800/batteries-install-new-task.html 
+sidebar: sidebar 
+keywords: E2800 battery fail, E2800 battery, E2800 battery replacement, replace E2800 battery, replacing E2800 battery, E2800, E-Series, eseries 
+summary: Instale uma bateria nova. 
+---
+= Instale a nova bateria E2800
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Depois de remover a bateria com falha, você pode instalar a nova.
+
+.Antes de começar
+Certifique-se de que tem o seguinte:
+
+* A bateria de substituição.
+* Uma superfície plana e livre de estática.
+
+
+.Passos
+. Desembale a nova bateria e coloque-a numa superfície plana e sem estática.
++
+
+NOTE: Para cumprir com os regulamentos IATA com segurança, as baterias de substituição são enviadas com um estado de carga (SoC) de 30% ou menos. Quando voltar a aplicar energia, tenha em mente que o armazenamento em cache de gravação não será retomado até que a bateria de substituição esteja totalmente carregada e tenha concluído o ciclo de aprendizagem inicial.
+
+. Oriente o recipiente do controlador de forma a que a ranhura da bateria fique voltada para si.
+. Introduza a bateria no recipiente do controlador a um ligeiro ângulo descendente.
++
+Deve inserir a flange metálica na parte frontal da bateria na ranhura na parte inferior do recipiente do controlador e deslizar a parte superior da bateria por baixo do pequeno pino de alinhamento no lado esquerdo do recipiente.
+
+. Desloque o trinco da bateria para cima para fixar a bateria.
++
+Quando a trava se encaixa no lugar, a parte inferior da trava se encaixa em uma ranhura metálica no chassi.
+
++
+image::../media/28_dwg_e2800_insert_battery_maint-e2800.gif[28 dwg e2800 inserir manutenção da bateria e2800]
+
++
+*(1)* _trava de liberação da bateria_
+
++
+*(2)* _bateria_
+
+. Vire o recipiente do controlador para confirmar que a bateria está instalada corretamente.
++
+
+CAUTION: *Possíveis danos ao hardware* -- a flange metálica na parte frontal da bateria deve ser completamente inserida na ranhura no recipiente do controlador (como mostrado na primeira figura). Se a bateria não estiver instalada corretamente (como mostrado na segunda figura), a flange metálica pode entrar em Contato com a placa controladora, causando danos ao controlador quando você aplicar energia.
+
++
+** *Correto* -- a flange de metal da bateria está completamente inserida na ranhura do controlador:
+
+
++
+image:../media/28_dwg_e2800_battery_flange_ok_maint-e2800.gif[""]
+
++
+** *Incorreto* -- a flange de metal da bateria não está inserida na ranhura do controlador image:../media/28_dwg_e2800_battery_flange_not_ok_maint-e2800.gif[""]
+
+
+. Vá para link:batteries-reinstall-controller-canister-task.html["Volte a instalar o recipiente do controlador E2800"].
+

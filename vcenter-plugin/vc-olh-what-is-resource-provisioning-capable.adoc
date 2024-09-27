@@ -1,0 +1,21 @@
+---
+sidebar: sidebar 
+permalink: vcenter-plugin/vc-olh-what-is-resource-provisioning-capable.html 
+keywords: vCenter plugin, Plugin for vCenter, SANtricity plugin for vCenter 
+summary: O provisionamento de recursos é um recurso disponível nas matrizes de armazenamento EF300 e EF600, que permite que os volumes sejam colocados em uso imediatamente sem processo de inicialização em segundo plano. 
+---
+= O que é capaz de provisionamento de recursos?
+:hardbreaks:
+:allow-uri-read: 
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./media/
+
+
+[role="lead"]
+O provisionamento de recursos é um recurso disponível nas matrizes de armazenamento EF300 e EF600, que permite que os volumes sejam colocados em uso imediatamente sem processo de inicialização em segundo plano.
+
+Um volume provisionado por recursos é um volume espesso em um grupo ou pool de volumes SSD, em que a capacidade da unidade é alocada (atribuída ao volume) quando o volume é criado, mas os blocos de unidades são deslocalizados (não mapeados). Em comparação, em um volume grosso tradicional, todos os blocos de unidades são mapeados ou alocados durante uma operação de inicialização de volume em segundo plano, a fim de inicializar os campos de informações de proteção do Data Assurance e tornar os dados e a paridade RAID consistentes em cada faixa RAID. Com um volume provisionado de recurso, não há inicialização em segundo plano com tempo. Em vez disso, cada stripe RAID é inicializado na primeira gravação em um bloco de volume no stripe.
+
+Os volumes provisionados por recursos são compatíveis apenas com grupos de volumes e pools de SSD, em que todas as unidades do grupo ou pool são compatíveis com a funcionalidade de recuperação de erro de ativação de bloco lógico (DULBE) desalocada ou não escrita do NVMe. Quando um volume provisionado por recurso é criado, todos os blocos de unidade atribuídos ao volume são desalocados (não mapeados). Além disso, os hosts podem desalocar blocos lógicos no volume usando o comando NVMe Dataset Management. A desalocação de blocos pode melhorar a vida útil do SSD e aumentar o desempenho máximo de gravação. A melhoria varia de acordo com cada modelo de unidade e capacidade.

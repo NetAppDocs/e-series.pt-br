@@ -1,0 +1,41 @@
+---
+sidebar: sidebar 
+permalink: rackmount-hardware.html 
+keywords: rackmount, rack-mount, install in rack, rails 
+summary: Monte o hardware em rack. 
+---
+= Hardware de montagem em rack
+:allow-uri-read: 
+
+
+[role="lead"]
+Use os links abaixo para acessar a documentação que descreve como instalar o hardware de montagem em rack.
+
+
+
+== Calhas de suporte ajustáveis
+
+Acesso https://mysupport.netapp.com/ecm/ecm_download_file/ECMP1652045["Instalação de calhas de suporte ajustáveis"^] para instalar uma bandeja de unidades e controlador ou uma bandeja de unidades fornecida separadamente (ainda não instalada no gabinete). Este procedimento é aplicável às seguintes bandejas de 2U (9 cm ou 3,5 polegadas):
+
+* DE1600 ou DE5600
+* E2612 ou E2624
+* E5412, E5424, E5512 OU E5524
+
+
+
+
+== Rack de dois pilares -- 2U
+
+ https://mysupport.netapp.com/ecm/ecm_download_file/ECMM1280302["Instalação de equipamentos 2U em um rack de dois pilares"^]Acesso .
+
+
+
+== Rack de quatro colunas ou gabinete -- 2U
+
+ https://mysupport.netapp.com/ecm/ecm_download_file/ECMLP2484194["Instalação de um gabinete de 2U 12 unidades em um rack ou gabinete de quatro colunas"^]Acesso .
+
+
+
+== Rack de quatro colunas -- SuperRail
+
+ https://docs.netapp.com/us-en/ontap-systems/platform-supplemental/superrail-install.html["Instalar o SuperRail em um rack de quatro colunas (prateleiras DE224C/DE460C)"^]Acesso .

@@ -1,0 +1,89 @@
+---
+sidebar: sidebar 
+permalink: vcenter-plugin/san-spvc-ic-storage-array-discovery.html 
+keywords: discover arrays vCenter plugin, discover storage resources Plugin for vCenter, resolve certificates vCenter plugin 
+summary: Use a interface Plugin for vCenter para descobrir os endereços IP dos storages em sua rede. 
+---
+= Descubra matrizes de armazenamento no plugin
+:hardbreaks:
+:allow-uri-read: 
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./media/
+
+
+[role="lead"]
+Para exibir e gerenciar recursos de armazenamento, use a interface Storage Plugin for vCenter para descobrir os endereços IP dos arrays em sua rede.
+
+.Antes de começar
+* Você deve saber os endereços IP de rede (ou intervalo de endereços) dos controladores de matriz.
+* As matrizes de armazenamento devem ser corretamente configuradas e configuradas, e você deve saber as credenciais de login da matriz de armazenamento (nome de usuário e senha).
+
+
+
+
+== Etapa 1: Insira endereços de rede para descoberta
+
+.Passos
+. Na página Gerenciar, selecione *Adicionar/descobrir*.
++
+A caixa de diálogo Enter Network Address Range (introduzir intervalo de endereços de rede) é apresentada.
+
+. Execute um dos seguintes procedimentos:
++
+** Para descobrir uma matriz, selecione o botão de opção *Discover a single storage array* e, em seguida, insira o endereço IP de um dos controladores na matriz de armazenamento.
+** Para descobrir vários storages de armazenamento, selecione o botão de opção *Discover all storage Arrays within a network range* (descobrir todos os storages de armazenamento dentro de um intervalo de rede) e, em seguida, insira o endereço de rede inicial e o endereço de rede final para pesquisar na sub-rede local.
+
+
+. Clique em *Iniciar descoberta*.
++
+À medida que o processo de descoberta começa, a caixa de diálogo exibe os storages de armazenamento à medida que são descobertos. O processo de descoberta pode levar vários minutos para ser concluído.
+
++
+Se não forem detetados arrays gerenciáveis, verifique se os storages de armazenamento estão conetados corretamente à sua rede e se seus endereços atribuídos estão dentro do alcance. Clique em *New Discovery Parameters* (novos parâmetros de descoberta) para voltar à página Add/Discover (Adicionar/descobrir).
+
+. Marque a caixa de seleção ao lado de qualquer storage array que você deseja adicionar ao seu domínio de gerenciamento.
++
+O sistema executa uma verificação de credenciais em cada array que você está adicionando ao domínio de gerenciamento. Talvez seja necessário resolver quaisquer problemas com certificados não confiáveis antes de prosseguir.
+
+. Clique em *Next* (seguinte) para avançar para a próxima etapa do assistente.
++
+Se os storages de armazenamento tiverem certificados válidos, vá para <<Passo 3: Forneça senhas>>.
+
++
+Se qualquer storage arrays não tiver certificados válidos, a caixa de diálogo resolver certificados autoassinados será exibida. Vá para <<Etapa 2: Resolva certificados não confiáveis durante a descoberta>>.
+
++
+Se você quiser importar certificados assinados pela CA, cancele o assistente de descoberta e clique em *Gerenciamento de certificados* no painel esquerdo. Consulte a ajuda online para obter mais instruções.
+
+
+
+
+
+== Etapa 2: Resolva certificados não confiáveis durante a descoberta
+
+Você deve resolver quaisquer problemas de certificado antes de prosseguir com o processo de descoberta.
+
+. Se a caixa de diálogo resolver certificados autoassinados for aberta, revise as informações exibidas para os certificados não confiáveis. Para obter mais informações, você também pode clicar nas elipses na extremidade da tabela e selecionar *Exibir* no menu pop-up.
+. Execute um dos seguintes procedimentos:
++
+** Se você confiar nas conexões com os storages de armazenamento descobertos, clique em *Next* e, em seguida, clique em *Yes* para confirmar e continuar para a próxima caixa de diálogo no assistente. Os certificados autoassinados são marcados como confiáveis e os storages de armazenamento serão adicionados ao plugin.
+** Se você não confiar nas conexões com os storages de armazenamento, selecione *Cancelar* e valide a estratégia de certificado de segurança de cada storage antes de adicionar qualquer um deles.
+
+
+. Clique em *Next* (seguinte) para avançar para a próxima etapa do assistente.
+
+
+
+
+== Passo 3: Forneça senhas
+
+Como a última etapa para a descoberta, você deve inserir as senhas dos storages que deseja adicionar ao seu domínio de gerenciamento.
+
+. Para cada array descoberto, insira sua senha de administrador nos campos.
+. Clique em *Finish*.
++
+Pode levar vários minutos para que o sistema se conete aos storages especificados. Quando o processo terminar, os storages de armazenamento são adicionados ao domínio de gerenciamento e associados ao grupo selecionado (se especificado).
+
+

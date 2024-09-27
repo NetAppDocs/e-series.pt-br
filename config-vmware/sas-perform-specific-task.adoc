@@ -1,0 +1,116 @@
+---
+permalink: config-vmware/sas-perform-specific-task.html 
+sidebar: sidebar 
+keywords: sas, express vmware configuration, software configuration, vmware host, E2800, E5700, EF300, EF600, E-Series, eseries 
+summary: Para o protocolo SAS, você determina os endereços da porta do host e faz as configurações recomendadas. 
+---
+= Execute tarefas específicas de SAS
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Para o protocolo SAS, você determina os endereços da porta do host e faz as configurações recomendadas.
+
+
+
+== Etapa 1: Determinar identificadores de host SAS - VMware
+
+Localize os endereços SAS usando o utilitário HBA e, em seguida, use o BIOS HBA para fazer as configurações apropriadas.
+
+.Sobre esta tarefa
+Reveja as diretrizes para utilitários HBA:
+
+* A maioria dos fornecedores de HBA oferece um utilitário HBA.
+
+
+.Passos
+. Transfira o utilitário HBA a partir do Web site do fornecedor HBA.
+. Instale o utilitário.
+. Use o BIOS HBA para selecionar as configurações apropriadas para sua configuração.
++
+Para obter as definições apropriadas, consulte a coluna Notas do http://mysupport.netapp.com/matrix["Ferramenta de Matriz de interoperabilidade do NetApp"^] para obter recomendações.
+
+
+
+
+
+== Passo 2: Registre sua configuração
+
+Pode gerar e imprimir um PDF desta página e, em seguida, utilizar a seguinte folha de cálculo para registar as informações de configuração de armazenamento específicas do protocolo. Você precisa dessas informações para executar tarefas de provisionamento.
+
+image::../media/sas_topology_diagram_conf-vmw.gif[Diagrama: Topologia SAS]
+
+
+
+=== Identificadores de host
+
+|===
+| Legenda n.º | Conexões de porta de host (iniciador) | Endereço SAS 
+
+
+ a| 
+1
+ a| 
+Host
+ a| 
+_não aplicável_
+
+
+
+ a| 
+2
+ a| 
+Porta 1 do host (iniciador) conetada ao controlador A, porta 1
+ a| 
+
+
+
+ a| 
+3
+ a| 
+Porta 1 do host (iniciador) conetada ao controlador B, porta 1
+ a| 
+
+
+
+ a| 
+4
+ a| 
+Porta 2 do host (iniciador) conetada ao controlador A, porta 1
+ a| 
+
+
+
+ a| 
+5
+ a| 
+Porta 2 do host (iniciador) conetada ao controlador B, porta 1
+ a| 
+
+|===
+
+
+=== Identificadores de destino
+
+As configurações recomendadas consistem em duas portas de destino.
+
+
+
+=== Mapeando o nome do host
+
+|===
+
+
+ a| 
+Mapeando o nome do host
+ a| 
+
+
+
+ a| 
+Tipo de SO de host
+ a| 
+
+|===

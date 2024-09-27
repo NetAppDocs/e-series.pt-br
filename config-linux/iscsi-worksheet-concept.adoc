@@ -1,0 +1,60 @@
+---
+permalink: config-linux/iscsi-worksheet-concept.html 
+sidebar: sidebar 
+keywords: iSCSI worksheet Linux, express linux configuration, software configuration, linux host, E2800, E5700, EF300, EF600, E-Series, eseries 
+summary: Utilize esta folha de cálculo para registar as informações de configuração do armazenamento iSCSI. 
+---
+= Registe a sua configuração iSCSI
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Pode gerar e imprimir um PDF desta página e, em seguida, utilizar a seguinte folha de cálculo para registar informações de configuração de armazenamento iSCSI. Você precisa dessas informações para executar tarefas de provisionamento.
+
+
+
+== Configuração recomendada
+
+As configurações recomendadas consistem em duas portas de iniciador e quatro portas de destino com uma ou mais VLANs.
+
+image::../media/50001_01_conf-lin.gif[50001 01 conf lin]
+
+
+
+== Objetivo IQN
+
+|===
+| Legenda n.º | Conexão da porta de destino | IQN 
+
+
+ a| 
+2
+ a| 
+Porta de destino
+ a| 
+
+|===
+
+
+== Mapeando o nome do host
+
+|===
+| Legenda n.º | Informações do host | Nome e tipo 
+
+
+ a| 
+1
+ a| 
+Mapeando o nome do host
+ a| 
+
+
+
+ a| 
+ a| 
+Tipo de SO de host
+ a| 
+
+|===

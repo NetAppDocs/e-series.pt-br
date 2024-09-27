@@ -1,0 +1,16 @@
+---
+permalink: config-vmware/understand-vmware-workflow-concept.html 
+sidebar: sidebar 
+keywords: workflow, guide, express, method, configuring, configure, storage, array, system, manager, host, understand 
+summary: Use o fluxo de trabalho de configuração do WVMware Express. 
+---
+= Entenda o fluxo de trabalho da VMware
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Esse fluxo de trabalho orienta você pelo "método expresso" para configurar seu storage array e o Gerenciador de sistema do SANtricity para disponibilizar o storage para um host VMware.
+
+image::../media/1130_flw_sys_mgr_vmware_express_guide_all_protocols.png[1130 flw sys mgr vmware express guia todos os protocolos]

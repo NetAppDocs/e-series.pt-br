@@ -1,0 +1,358 @@
+---
+permalink: maintenance-e5700/batteries-replace-supertask-task.html 
+sidebar: sidebar 
+keywords: E5700 battery, repair E5700 battery, replace E5700 battery, failed E5700 battery 
+summary: Substitua uma bateria com falha em um sistema de armazenamento E5700. 
+---
+= Substitua a bateria E5700
+:allow-uri-read: 
+:experimental: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Você pode substituir uma bateria com falha em um sistema de armazenamento E5700.
+
+.Sobre esta tarefa
+Cada recipiente do controlador E5700 inclui uma bateria que preserva os dados em cache se a energia CA falhar. Se o Guru de recuperação no Gestor do sistema SANtricity comunicar um estado de falha da bateria ou um estado de substituição da bateria necessário, tem de substituir a bateria afetada.
+
+.Antes de começar
+* Verifique se nenhum volume está em uso ou se você tem um driver multipath instalado em todos os hosts que usam esses volumes.
+* Revisão link:batteries-intro-concept.html["Requisitos para a substituição da bateria E5700"].
+* Certifique-se de que tem o seguinte:
++
+** Uma bateria de substituição.
+** Uma pulseira antiestática, ou você tomou outras precauções antiestáticas.
+** Etiquetas para identificar cada cabo que está ligado ao recipiente do controlador.
+** Uma estação de gerenciamento com um navegador que pode acessar o Gerenciador de sistema do SANtricity para o controlador. (Para abrir a interface do System Manager, aponte o navegador para o nome de domínio ou endereço IP do controlador.)
+
+
+
+
+
+
+== Passo 1: Coloque o controlador offline (duplex)
+
+Se você tiver uma configuração duplex, coloque o controlador afetado offline para que você possa remover a bateria com falha com segurança. O controlador que você não está colocando off-line deve estar on-line (no estado ideal).
+
+
+NOTE: Execute esta tarefa somente se o storage array tiver dois controladores (configuração duplex).
+
+.Passos
+. A partir do Gestor do sistema SANtricity, reveja os detalhes no Guru de recuperação para confirmar que existe um problema com uma bateria e para garantir que não é necessário resolver primeiro outros itens.
+. Na área Detalhes do Recovery Guru, determine qual bateria deve ser substituída.
+. Faça backup do banco de dados de configuração do storage usando o Gerenciador de sistema do SANtricity.
++
+Se ocorrer um problema ao remover um controlador, pode utilizar o ficheiro guardado para restaurar a configuração. O sistema salvará o estado atual do banco de dados de configuração RAID, que inclui todos os dados para grupos de volume e pools de discos na controladora.
+
++
+** A partir do SANtricity System Manager:
++
+... Selecione menu:suporte[Centro de suporte > Diagnóstico].
+... Selecione *Collect Configuration Data*.
+... Clique em *Collect*.
++
+O arquivo é salvo na pasta Downloads do seu navegador com o nome *configurationData-<arrayName>-<dateTime>.7z*.
+
+
+
+** Como alternativa, você pode fazer backup do banco de dados de configuração usando o seguinte comando CLI:
++
+`save storageArray dbmDatabase sourceLocation=onboard contentType=all file="filename";`
+
+
+
+. Colete dados de suporte para sua matriz de armazenamento usando o Gerenciador de sistema do SANtricity.
++
+Se ocorrer um problema ao remover um controlador, você pode usar o arquivo salvo para solucionar o problema. O sistema salvará os dados de inventário, status e desempenho sobre seu storage array em um único arquivo.
+
++
+.. Selecione menu:suporte[Centro de suporte > Diagnóstico].
+.. Selecione *coletar dados de suporte*.
+.. Clique em *Collect*.
++
+O arquivo é salvo na pasta Downloads do seu navegador com o nome *support-data.7z*.
+
+
+
+. Se o controlador ainda não estiver offline, coloque-o offline agora usando o Gerenciador de sistema do SANtricity.
++
+** A partir do SANtricity System Manager:
++
+... Selecione *hardware*.
+... Se o gráfico mostrar as unidades, selecione *Mostrar parte traseira da prateleira* para mostrar os controladores.
+... Selecione o controlador que pretende colocar offline.
+... No menu de contexto, selecione *colocar offline* e confirme que deseja executar a operação.
++
+
+NOTE: Se você estiver acessando o Gerenciador de sistema do SANtricity usando o controlador que você está tentando ficar offline, uma mensagem Gerenciador de sistema do SANtricity indisponível será exibida. Selecione *conetar-se a uma conexão de rede alternativa* para acessar automaticamente o Gerenciador de sistema do SANtricity usando o outro controlador.
+
+
+
+** Como alternativa, você pode colocar os controladores offline usando os seguintes comandos CLI:
++
+*Para o controlador A:* `set controller [a] availability=offline`
+
++
+*Para o controlador B:* `set controller [b] availability=offline`
+
+
+
+. Aguarde até que o Gerenciador de sistema do SANtricity atualize o status do controlador para offline.
++
+
+CAUTION: Não inicie quaisquer outras operações até que o estado tenha sido atualizado.
+
+
+
+
+
+== Etapa 2: Remova o recipiente do controlador
+
+Antes de poder remover a bateria com falha, tem de remover o recipiente do controlador.
+
+.Passos
+. Coloque uma pulseira antiestática ou tome outras precauções antiestáticas.
+. Identifique cada cabo que esteja conetado ao recipiente do controlador.
+. Desligue todos os cabos do recipiente do controlador.
++
+
+CAUTION: Para evitar um desempenho degradado, não torça, dobre, aperte ou pise nos cabos.
+
+. Se as portas do host no canister do controlador usarem transcetores SFP, deixe-as instaladas.
+. Confirme se o LED Cache ative na parte de trás do controlador está desligado.
+. Aperte a trava na alça do came até que ela se solte e, em seguida, abra a alça do came para a direita para liberar o recipiente do controlador da prateleira.
++
+A figura a seguir é um exemplo de um compartimento de controladora E5724:
+
++
+image::../media/28_dwg_e2824_remove_controller_canister_maint-e5700.gif[28 dwg e2824 remover a manutenção do recipiente do controlador e5700]
+
++
+*(1)* _Controller canister_
+
++
+*(2)* _pega da câmara_
+
++
+A figura a seguir é um exemplo de um compartimento de controladora E5760:
+
++
+image::../media/28_dwg_e2860_add_controller_canister_maint-e5700.gif[28 dwg e2860 adicionar o controlador canister manint e5700]
+
++
+*(1)* _Controller canister_
+
++
+*(2)* _pega da câmara_
+
+. Utilizando as duas mãos e a pega do came, deslize o recipiente do controlador para fora da prateleira.
++
+
+CAUTION: Utilize sempre duas mãos para suportar o peso de um recipiente do controlador.
+
++
+Se você estiver removendo o recipiente do controlador de uma prateleira do controlador E5724, uma aba se move para o lugar para bloquear o compartimento vazio, ajudando a manter o fluxo de ar e o resfriamento.
+
+. Vire o recipiente do controlador ao contrário, de forma a que a tampa amovível fique virada para cima.
+. Coloque o recipiente do controlador numa superfície plana e sem estática.
+
+
+
+
+== Passo 3: Remova a bateria com falha
+
+Depois de remover o recipiente do controlador da prateleira do controlador, retire a bateria.
+
+.Passos
+. Remova a tampa do recipiente do controlador pressionando o botão e deslizando a tampa para fora.
+. Confirme se o LED verde dentro do controlador (entre a bateria e os DIMMs) está desligado.
++
+Se este LED verde estiver ligado, o controlador ainda está a utilizar a bateria. Deve aguardar que este LED se apague antes de remover quaisquer componentes.
+
++
+image::../media/28_dwg_e2800_internal_cache_active_led_maint-e5700.gif[28 dwg e2800 cache interno ativo led mint e5700]
+
++
+*(1)* _LED ativo Cache interno_
+
++
+*(2)* _bateria_
+
+. Localize a trava de liberação azul da bateria.
+. Desengate a bateria empurrando a trava de liberação para baixo e afastando-a do recipiente do controlador.
++
+image::../media/28_dwg_e2800_remove_battery_maint-e5700.gif[28 dwg e2800 remover a manutenção da bateria e5700]
+
++
+*(1)* _trava de liberação da bateria_
+
++
+*(2)* _bateria_
+
+. Levante a bateria e deslize-a para fora do recipiente do controlador.
+. Siga os procedimentos adequados para a sua localização para reciclar ou eliminar a bateria avariada.
++
+
+CAUTION: Para cumprir com os regulamentos da Associação Internacional de Transporte aéreo (IATA), nunca envie uma bateria de lítio por via aérea, a menos que seja instalada dentro da prateleira do controlador.
+
+
+
+
+
+== Passo 4: Instale a bateria nova
+
+Depois de remover a bateria com falha, instale uma nova.
+
+.Passos
+. Desembale a nova bateria e coloque-a numa superfície plana e sem estática.
++
+
+NOTE: Para cumprir com os regulamentos IATA com segurança, as baterias de substituição são enviadas com um estado de carga (SoC) de 30% ou menos. Quando voltar a aplicar energia, tenha em mente que o armazenamento em cache de gravação não será retomado até que a bateria de substituição esteja totalmente carregada e tenha concluído o ciclo de aprendizagem inicial.
+
+. Oriente o recipiente do controlador de forma a que a ranhura da bateria fique voltada para si.
+. Introduza a bateria no recipiente do controlador a um ligeiro ângulo descendente.
++
+Deve inserir a flange metálica na parte frontal da bateria na ranhura na parte inferior do recipiente do controlador e deslizar a parte superior da bateria por baixo do pequeno pino de alinhamento no lado esquerdo do recipiente.
+
+. Desloque o trinco da bateria para cima para fixar a bateria.
++
+Quando a trava se encaixa no lugar, a parte inferior da trava se encaixa em uma ranhura metálica no chassi.
+
++
+image::../media/28_dwg_e2800_insert_battery_maint-e5700.gif[28 dwg e2800 inserir manutenção da bateria e5700]
+
++
+*(1)* _trava de liberação da bateria_
+
++
+*(2)* _bateria_
+
+. Vire o recipiente do controlador para confirmar que a bateria está instalada corretamente.
++
+
+CAUTION: *Possíveis danos ao hardware* -- a flange metálica na parte frontal da bateria deve ser completamente inserida na ranhura no recipiente do controlador (como mostrado na primeira figura). Se a bateria não estiver instalada corretamente (como mostrado na segunda figura), a flange metálica pode entrar em Contato com a placa controladora, causando danos ao controlador quando você aplicar energia.
+
++
+** *Correto* -- a flange de metal da bateria está completamente inserida na ranhura do controlador:
++
+image:../media/28_dwg_e2800_battery_flange_ok_maint-e5700.gif[""]
+
+** *Incorreto* -- a flange metálica da bateria não está inserida na ranhura do controlador:
++
+image:../media/28_dwg_e2800_battery_flange_not_ok_maint-e5700.gif[""]
+
+
+
+
+
+
+
+== Passo 5: Reinstale o recipiente do controlador
+
+Depois de instalar a nova bateria, reinstale o recipiente do controlador na prateleira do controlador.
+
+.Passos
+. Reinstale a tampa no recipiente do controlador deslizando a tampa de trás para a frente até que o botão clique.
+. Vire o recipiente do controlador ao contrário, de forma a que a tampa amovível fique virada para baixo.
+. Com a alavanca do came na posição aberta, deslize o recipiente do controlador até a prateleira do controlador.
++
+image::../media/28_dwg_e2824_remove_controller_canister_maint-e5700.gif[28 dwg e2824 remover a manutenção do recipiente do controlador e5700]
+
++
+*(1)* _Controller canister_
+
++
+*(2)* _pega da câmara_
+
++
+image::../media/28_dwg_e2860_add_controller_canister_maint-e5700.gif[28 dwg e2860 adicionar o controlador canister manint e5700]
+
++
+*(1)* _Controller canister_
+
++
+*(2)* _pega da câmara_
+
+. Mova a alavanca do came para a esquerda para bloquear o recipiente do controlador no lugar.
+. Volte a ligar todos os cabos.
+
+
+
+
+== Passo 6: Coloque o controlador on-line (duplex)
+
+Para uma configuração duplex, coloque o controlador on-line, colete dados de suporte e retome as operações.
+
+
+NOTE: Execute esta tarefa somente se o storage array tiver dois controladores.
+
+.Passos
+. À medida que o controlador inicia, verifique os LEDs do controlador e o visor de sete segmentos.
++
+
+NOTE: A figura mostra um exemplo do recipiente do controlador. Seu controlador pode ter um número diferente e um tipo diferente de portas de host.
+
++
+Quando a comunicação com o outro controlador é restabelecida:
+
++
+** O visor de sete segmentos mostra a sequência repetida *os*, *OL*, *_blank_* para indicar que o controlador está offline.
+** O LED âmbar de atenção permanece aceso.
+** Os LEDs do Host Link podem estar ligados, piscando ou desligados, dependendo da interface do host. image:../media/e5700_hic_3_callouts_maint-e5700.gif[""]
++
+*(1)* _Host Link LEDs_
+
++
+*(2)* _LED de atenção (âmbar)_
+
++
+*(3)* _display de sete segmentos_
+
+
+
+. Coloque o controlador on-line usando o Gerenciador de sistema do SANtricity.
++
+** A partir do SANtricity System Manager:
++
+... Selecione *hardware*.
+... Se o gráfico mostrar as unidades, selecione *Mostrar parte traseira da prateleira*.
+... Selecione o controlador que pretende colocar online.
+... Selecione *Place Online* no menu de contexto e confirme que deseja executar a operação.
++
+O sistema coloca o controlador online.
+
+
+
+** Como alternativa, você pode colocar os controladores online usando os seguintes comandos CLI:
++
+*Para o controlador A:* `set controller [a] availability=online;`
+
++
+*Para o controlador B:* `set controller [b] availability=online;`
+
+
+
+. Quando o controlador estiver novamente online, confirme se o seu estado é o ideal e verifique os LEDs de atenção do compartimento do controlador.
++
+Se o estado não for o ideal ou se algum dos LEDs de atenção estiver aceso, confirme se todos os cabos estão corretamente encaixados e verifique se a bateria e o recipiente do controlador estão instalados corretamente. Se necessário, retire e volte a instalar o recipiente do controlador e a bateria.
+
++
+
+NOTE: Se não conseguir resolver o problema, contacte o suporte técnico.
+
+. Se necessário, colete dados de suporte para seu storage array usando o Gerenciador de sistema do SANtricity.
++
+.. Selecione *suporte* > *Centro de suporte* > *Diagnóstico*.
+.. Selecione *coletar dados de suporte*.
+.. Clique em *Collect*.
++
+O arquivo é salvo na pasta Downloads do seu navegador com o nome *support-data.7z*.
+
+
+
+
+
+.O que se segue?
+A substituição da bateria está concluída. Pode retomar as operações normais.

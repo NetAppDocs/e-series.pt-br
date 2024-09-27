@@ -1,0 +1,321 @@
+---
+permalink: config-vmware/iscsi-perform-specific-task.html 
+sidebar: sidebar 
+keywords: iscsi, express vmware configuration, software configuration, vmware host, E2800, E5700, EF300, EF600, E-Series, eseries 
+summary: Para o protocolo iSCSI, configure os switches e configure a rede no lado da matriz e no lado do host. Em seguida, você verifica as conexões de rede IP. 
+---
+= Executar tarefas específicas de iSCSI
+:allow-uri-read: 
+:experimental: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Para o protocolo iSCSI, configure os switches e configure a rede no lado da matriz e no lado do host. Em seguida, você verifica as conexões de rede IP.
+
+
+
+== Etapa 1: Configurar os switches - iSCSI, VMware
+
+Você configura os switches de acordo com as recomendações do fornecedor para iSCSI. Essas recomendações podem incluir diretivas de configuração, bem como atualizações de código.
+
+.Antes de começar
+Certifique-se de que tem o seguinte:
+
+* Duas redes separadas para alta disponibilidade. Certifique-se de isolar o tráfego iSCSI para segmentos de rede separados.
+* Controle de fluxo de hardware de envio e recebimento ativado *fim a fim*.
+* Controle de fluxo de prioridade desativado.
+* Se apropriado, habilitado quadros jumbo.
+
+
+
+NOTE: Os canais de porta/LACP não são suportados nas portas do switch do controlador. O LACP do lado do host não é recomendado; o multipathing oferece os mesmos benefícios ou melhores.
+
+.Passos
+Consulte a documentação do fornecedor do switch.
+
+
+
+== Etapa 2: Configurar rede - VMware iSCSI
+
+Pode configurar a sua rede iSCSI de várias formas, dependendo dos requisitos de armazenamento de dados. Consulte o administrador da rede para obter dicas sobre como selecionar a melhor configuração para o seu ambiente.
+
+.Antes de começar
+Certifique-se de que tem o seguinte:
+
+* Controle de fluxo de hardware de envio e recebimento ativado *fim a fim*.
+* Controle de fluxo de prioridade desativado.
+* Se apropriado, habilitado quadros jumbo.
++
+Se você estiver usando quadros jumbo dentro da SAN IP por razões de desempenho, certifique-se de configurar o array, switches e hosts para usar quadros jumbo. Consulte a documentação do sistema operacional e do switch para obter informações sobre como habilitar quadros jumbo nos hosts e nos switches. Para ativar quadros jumbo no array, execute as etapas na Etapa 3.
+
+
+
+.Sobre esta tarefa
+Ao Planejar sua rede iSCSI, lembre-se de que o https://configmax.vmware.com/home["Máximos de configuração do VMware"^] guia afirma que o máximo de caminhos de armazenamento iSCSI suportados é 8. Você deve considerar esse requisito para evitar configurar muitos caminhos.
+
+Por padrão, o iniciador de software iSCSI da VMware cria uma única sessão por destino iSCSI quando você não está usando a vinculação de porta iSCSI.
+
+
+NOTE: A vinculação de porta iSCSI da VMware é um recurso que força todas as portas VMkernel vinculadas a fazer logon em todas as portas de destino acessíveis nos segmentos de rede configurados. Destina-se a ser utilizado com matrizes que apresentem um único endereço de rede para o destino iSCSI. A NetApp recomenda que a ligação de porta iSCSI não seja utilizada. Para obter informações adicionais, consulte o http://kb.vmware.com/["Base de Conhecimento da VMware"] para obter o artigo sobre considerações sobre o uso de vinculação de porta iSCSI de software no ESX/ESXi. Se o host ESXi estiver conetado ao armazenamento de outro fornecedor, o NetApp recomenda que você use portas iSCSI vmkernel separadas para evitar qualquer conflito com a vinculação de porta.
+
+Para a prática recomendada, você não deve usar vinculação de porta em storage arrays e-Series. Consulte https://www.netapp.com/media/17017-tr4789.pdf["TR-4789:Guia de configuração VMware para integração iSCSI SANtricity da série e com ESXi 6.x e 7.x."^] para obter mais informações.
+
+Para garantir uma boa configuração de multipathing, use vários segmentos de rede para a rede iSCSI. Coloque pelo menos uma porta do lado do host e pelo menos uma porta de cada controlador de array em um segmento de rede e um grupo idêntico de portas do lado do host e do lado do array em outro segmento de rede. Sempre que possível, use vários switches Ethernet para fornecer redundância adicional.
+
+.Passos
+Consulte a documentação do fornecedor do switch.
+
+
+NOTE: Muitos switches de rede precisam ser configurados acima de 9.000 bytes para sobrecarga IP. Consulte a documentação do switch para obter mais informações.
+
+
+
+== Etapa 3: Configurar rede do lado da matriz--iSCSI, VMware
+
+Você usa a GUI do Gerenciador de sistema do SANtricity para configurar a rede iSCSI no lado da matriz.
+
+.Antes de começar
+Certifique-se de que tem o seguinte:
+
+* O endereço IP ou nome de domínio de um dos controladores de storage array.
+* A senha para a GUI do System Manager, o controle de acesso baseado em função (RBAC) ou LDAP e um serviço de diretório é configurada para o acesso de segurança apropriado ao storage array. Consulte a ajuda on-line do Gerenciador de sistemas do SANtricity para obter mais informações sobre o Gerenciamento de Acesso.
+
+
+.Sobre esta tarefa
+Esta tarefa descreve como aceder à configuração da porta iSCSI a partir da página hardware. Também pode aceder à configuração a partir do menu:sistema[Definições > Configurar portas iSCSI].
+
+
+NOTE: Para obter informações adicionais sobre como configurar a rede do lado do array na configuração do VMware, consulte o seguinte relatório técnico: https://www.netapp.com/pdf.html?item=/media/17017-tr4789pdf.pdf["Guia de configuração da VMware para integração iSCSI SANtricity da série e com ESXi 6.x e 7.x"^].
+
+.Passos
+. No seu navegador, insira o seguinte URL: `+https://<DomainNameOrIPAddress>+`
++
+`IPAddress` é o endereço de uma das controladoras de storage array.
+
++
+Na primeira vez que o Gerenciador do sistema SANtricity é aberto em uma matriz que não foi configurada, o prompt Definir senha do administrador é exibido. O gerenciamento de acesso baseado em função configura quatro funções locais: administração, suporte, segurança e monitor. Os três últimos papéis têm senhas aleatórias que não podem ser adivinhadas. Depois de definir uma senha para a função de administrador, você pode alterar todas as senhas usando as credenciais de administrador. Consulte a ajuda on-line do Gerenciador de sistema do SANtricity para obter mais informações sobre as quatro funções de usuário locais.
+
+. Introduza a palavra-passe do Gestor do sistema para a função de administrador nos campos Definir palavra-passe do administrador e confirmar palavra-passe e, em seguida, clique em *Definir palavra-passe*.
++
+O assistente de configuração é iniciado se não houver pools, grupos de volumes, cargas de trabalho ou notificações configuradas.
+
+. Feche o assistente de configuração.
++
+Você usará o assistente mais tarde para concluir tarefas de configuração adicionais.
+
+. Selecione *hardware*.
+. Se o gráfico mostrar as unidades, clique em *Mostrar parte traseira da prateleira*.
++
+O gráfico muda para mostrar os controladores em vez das unidades.
+
+. Clique no controlador com as portas iSCSI que pretende configurar.
++
+É apresentado o menu de contexto do controlador.
+
+. Selecione *Configurar portas iSCSI*.
++
+Abre-se a caixa de diálogo Configurar portas iSCSI.
+
+. Na lista suspensa, selecione a porta que deseja configurar e clique em *Avançar*.
+. Selecione as definições da porta de configuração e, em seguida, clique em *seguinte*.
++
+Para ver todas as configurações de porta, clique no link *Mostrar mais configurações de porta* à direita da caixa de diálogo.
+
++
+|===
+| Definição da porta | Descrição 
+
+
+ a| 
+Velocidade da porta ethernet configurada
+ a| 
+Selecione a velocidade pretendida. As opções que aparecem na lista suspensa dependem da velocidade máxima que sua rede pode suportar (por exemplo, 10 Gbps).
+
+
+NOTE: As placas de interface de host iSCSI de 25GB GB opcionais disponíveis nos controladores não negociam automaticamente as velocidades. Você deve definir a velocidade de cada porta para 10 GB ou 25 GB. Todas as portas devem ser definidas para a mesma velocidade.
+
+
+
+ a| 
+Ativar IPv4 / ativar IPv6
+ a| 
+Selecione uma ou ambas as opções para ativar o suporte para redes IPv4G e IPv6G.
+
+
+
+ a| 
+Porta de escuta TCP (disponível clicando em *Mostrar mais configurações de porta*.)
+ a| 
+Se necessário, introduza um novo número de porta.
+
+A porta de escuta é o número da porta TCP que o controlador usa para ouvir logins iSCSI de iniciadores iSCSI do host. A porta de escuta padrão é 3260. Tem de introduzir 3260 ou um valor entre 49152 e 65535.
+
+
+
+ a| 
+Tamanho MTU (disponível clicando em *Mostrar mais configurações de porta*.)
+ a| 
+Se necessário, introduza um novo tamanho em bytes para a unidade máxima de transmissão (MTU).
+
+O tamanho padrão da unidade máxima de transmissão (MTU) é de 1500 bytes por quadro. Tem de introduzir um valor entre 1500 e 9000.
+
+
+
+ a| 
+Ative as respostas ICMP PING
+ a| 
+Selecione esta opção para ativar o ICMP (Internet Control Message Protocol). Os sistemas operativos dos computadores em rede utilizam este protocolo para enviar mensagens. Essas mensagens ICMP determinam se um host é acessível e quanto tempo leva para obter pacotes de e para esse host.
+
+|===
++
+Se você selecionou *Ativar IPv4*, uma caixa de diálogo será aberta para selecionar IPv4 configurações depois de clicar em *Avançar*. Se você selecionou *Ativar IPv6*, uma caixa de diálogo será aberta para selecionar IPv6 configurações depois de clicar em *Avançar*. Se você selecionou ambas as opções, a caixa de diálogo para configurações IPv4 será aberta primeiro e, depois de clicar em *Avançar*, a caixa de diálogo para configurações IPv6 será aberta.
+
+. Configure as definições IPv4 e/ou IPv6, automática ou manualmente. Para ver todas as configurações de porta, clique no link *Mostrar mais configurações* à direita da caixa de diálogo.
++
+|===
+| Definição da porta | Descrição 
+
+
+ a| 
+Obter automaticamente a configuração
+ a| 
+Selecione esta opção para obter a configuração automaticamente.
+
+
+
+ a| 
+Especifique manualmente a configuração estática
+ a| 
+Selecione esta opção e, em seguida, introduza um endereço estático nos campos. Para IPv4, inclua a máscara de sub-rede e o gateway. Para IPv6, inclua o endereço IP roteável e o endereço IP do roteador.
+
+|===
+. Clique em *Finish*.
+. Feche o System Manager.
+
+
+
+
+== Etapa 4: Configurar rede do lado do host--iSCSI
+
+A configuração de rede iSCSI no lado do host permite que o iniciador iSCSI VMware estabeleça uma sessão com o array.
+
+.Sobre esta tarefa
+Neste método expresso de configuração de rede iSCSI no lado do host, você permite que o host ESXi carregue tráfego iSCSI em quatro caminhos redundantes para o armazenamento.
+
+Depois de concluir esta tarefa, o host é configurado com um único vSwitch contendo ambas as portas VMkernel e vmnics.
+
+Para obter informações adicionais sobre como configurar redes iSCSI para VMware, consulte o https://docs.vmware.com/en/VMware-vSphere/index.html["Documentação do VMware vSphere"^] para sua versão do vSphere.
+
+.Passos
+. Configure os switches que serão usados para transportar tráfego de armazenamento iSCSI.
+. Ative o controle de fluxo de hardware Enviar e receber *de ponta a ponta*.
+. Desativar o controle de fluxo de prioridade.
+. Conclua a configuração iSCSI do lado da matriz.
+. Use duas portas NIC para tráfego iSCSI.
+. Use o cliente vSphere ou o cliente da Web vSphere para executar a configuração do lado do host.
++
+As interfaces variam em funcionalidade e o fluxo de trabalho exato varia.
+
+
+
+
+
+== Etapa 5: Verificar conexões de rede IP - iSCSI, VMware
+
+Você verifica as conexões de rede IP (Internet Protocol) usando testes de ping para garantir que o host e o array possam se comunicar.
+
+.Passos
+. No host, execute um dos seguintes comandos, dependendo se os quadros jumbo estão ativados:
++
+** Se os quadros jumbo não estiverem ativados, execute este comando:
++
+[listing]
+----
+vmkping <iSCSI_target_IP_address\>
+----
+** Se os quadros jumbo estiverem ativados, execute o comando ping com um tamanho de carga útil de 8.972 bytes. Os cabeçalhos combinados IP e ICMP são 28 bytes, que quando adicionados à carga útil, equivale a 9.000 bytes. O interrutor -s define o `packet size` bit. O switch -d define o bit DF (não fragmentar) no pacote IPv4. Essas opções permitem que quadros jumbo de 9.000 bytes sejam transmitidos com sucesso entre o iniciador iSCSI e o destino.
++
+[listing]
+----
+vmkping -s 8972 -d <iSCSI_target_IP_address\>
+----
++
+Neste exemplo, o endereço IP de destino iSCSI é `192.0.2.8`.
+
++
+[listing]
+----
+vmkping -s 8972 -d 192.0.2.8
+Pinging 192.0.2.8 with 8972 bytes of data:
+Reply from 192.0.2.8: bytes=8972 time=2ms TTL=64
+Reply from 192.0.2.8: bytes=8972 time=2ms TTL=64
+Reply from 192.0.2.8: bytes=8972 time=2ms TTL=64
+Reply from 192.0.2.8: bytes=8972 time=2ms TTL=64
+Ping statistics for 192.0.2.8:
+  Packets: Sent = 4, Received = 4, Lost = 0 (0% loss),
+Approximate round trip times in milli-seconds:
+  Minimum = 2ms, Maximum = 2ms, Average = 2ms
+----
+
+
+. Emita um `vmkping` comando do endereço do iniciador de cada host (o endereço IP da porta Ethernet do host usada para iSCSI) para cada porta iSCSI do controlador. Execute esta ação a partir de cada servidor host na configuração, alterando os endereços IP conforme necessário.
++
+
+NOTE: Se o comando falhar com a mensagem `sendto() failed (Message too long)`, verifique o tamanho da MTU (suporte a quadros jumbo) para as interfaces Ethernet no servidor host, no controlador de armazenamento e nas portas do switch.
+
+. Regresse ao procedimento de configuração iSCSI para concluir a deteção de destino.
+
+
+
+
+== Passo 6: Registre sua configuração
+
+Pode gerar e imprimir um PDF desta página e, em seguida, utilizar a seguinte folha de cálculo para registar as informações de configuração de armazenamento específicas do protocolo. Você precisa dessas informações para executar tarefas de provisionamento.
+
+
+
+=== Configuração recomendada
+
+As configurações recomendadas consistem em duas portas de iniciador e quatro portas de destino com uma ou mais VLANs.
+
+image::../media/50001_01_conf-vmw.gif[50001 01 conf vmw]
+
+
+
+=== Objetivo IQN
+
+|===
+| Legenda n.º | Conexão da porta de destino | IQN 
+
+
+ a| 
+2
+ a| 
+Porta de destino
+ a| 
+
+|===
+
+
+=== Mapeando o nome do host
+
+|===
+| Legenda n.º | Informações do host | Nome e tipo 
+
+
+ a| 
+1
+ a| 
+Mapeando o nome do host
+ a| 
+
+
+
+ a| 
+ a| 
+Tipo de SO de host
+ a| 
+
+|===

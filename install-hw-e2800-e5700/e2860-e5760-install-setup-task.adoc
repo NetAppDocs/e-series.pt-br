@@ -1,0 +1,34 @@
+---
+permalink: install-hw-e2800-e5700/e2860-e5760-install-setup-task.html 
+sidebar: sidebar 
+keywords: instruction, describe, install, storage, system, link, additional, content, installation, setup, e2860, e5760, de460c 
+summary: Essas instruções descrevem como instalar e configurar seu novo sistema de armazenamento e fornecem links para conteúdo adicional. 
+---
+= Instruções de instalação e configuração para E2860, E5760 e DE460C
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Essas instruções descrevem como instalar e configurar seu novo sistema de armazenamento e fornecem links para conteúdo adicional.
+
+Você pode escolher um dos formatos a seguir para orientá-lo na instalação e configuração do seu novo sistema de armazenamento.
+
+* *PDF*
++
+Este é um PDF imprimível de instruções passo a passo com links ao vivo para conteúdo adicional.
+
++
+** https://library.netapp.com/ecm/ecm_download_file/ECMLP2842061["Poster PDF E2860, E5760 e DE460C"^]
+
+
+* *Instruções online*
++
+Estas são as instruções de configuração descritas neste site.
+
++
+** xref:e2860-e5760-prepare-task.adoc[Prepare-se para instalar o E2860, o E5760 e o DE460C]
+
+
+

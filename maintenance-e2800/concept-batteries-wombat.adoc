@@ -1,0 +1,14 @@
+---
+permalink: maintenance-e2800/concept-batteries-wombat.html 
+sidebar: sidebar 
+keywords: controller, canister, battery, preserve, cache, data, ac, power, fail, recovery, guru, santricity, system, manager, replacement, require, affect, batteries 
+summary: Cada recipiente do controlador inclui uma bateria que preserva os dados armazenados em cache se a energia CA falhar. Se o Guru de recuperação no Gestor do sistema SANtricity comunicar um estado de falha da bateria ou um estado de substituição da bateria necessário, tem de substituir a bateria afetada. 
+---
+= Baterias
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Cada recipiente do controlador inclui uma bateria que preserva os dados armazenados em cache se a energia CA falhar. Se o Guru de recuperação no Gestor do sistema SANtricity comunicar um estado de falha da bateria ou um estado de substituição da bateria necessário, tem de substituir a bateria afetada.

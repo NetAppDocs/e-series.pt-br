@@ -1,0 +1,39 @@
+---
+sidebar: sidebar 
+permalink: vcenter-plugin/vc-olh-redistribute-volumes.html 
+keywords: vCenter plugin, Plugin for vCenter, SANtricity plugin for vCenter 
+summary: Redistribuir volumes para mover volumes de volta para os proprietários de controladores preferidos 
+---
+= Redistribuir volumes
+:hardbreaks:
+:allow-uri-read: 
+:experimental: 
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./media/
+
+
+[role="lead"]
+Você redistribui volumes para mover volumes de volta para os proprietários de controladores preferenciais. Normalmente, os drivers multipath movem volumes do proprietário da controladora preferida quando ocorre um problema ao longo do caminho de dados entre o host e o storage array.
+
+.Antes de começar
+* Os volumes que você deseja redistribuir não estão em uso, ou erros de e/S ocorrerão.
+* Um driver multipath é instalado em todos os hosts usando os volumes que você deseja redistribuir, ou erros de e/S ocorrerão. Se você quiser redistribuir volumes sem um driver multipath nos hosts, todas as atividades de e/S nos volumes enquanto a operação de redistribuição estiver em andamento devem ser interrompidas para evitar erros de aplicativo.
+
+
+.Sobre esta tarefa
+A maioria dos drivers multipath de host tenta acessar cada volume em um caminho para o proprietário do controlador preferido. No entanto, se esse caminho preferido ficar indisponível, o driver multipath no host fará failover para um caminho alternativo. Esse failover pode fazer com que a propriedade do volume mude para o controlador alternativo. Depois de resolver a condição que causou o failover, alguns hosts podem mover automaticamente a propriedade do volume de volta para o proprietário do controlador preferido, mas, em alguns casos, talvez seja necessário redistribuir manualmente os volumes.
+
+.Passos
+. Na página Gerenciar, selecione o storage array que contém os volumes que você deseja redistribuir.
+. Selecione menu:provisionamento[Gerenciar volumes].
+. Selecione menu:mais[redistribuir volumes].
++
+A caixa de diálogo redistribuir volumes é exibida. Todos os volumes na matriz de armazenamento cujo proprietário de controlador preferido não corresponde ao proprietário atual aparecem nesta caixa de diálogo.
+
+. Selecione um ou mais volumes que deseja redistribuir e confirme que deseja executar a operação.
+
+
+.Resultado
+O sistema move os volumes selecionados para seus proprietários de controladores preferidos ou você pode ver uma caixa de diálogo redistribuir volumes desnecessários.

@@ -1,0 +1,73 @@
+---
+permalink: install-hw-cabling/index.html 
+sidebar: sidebar 
+keywords: cabling, cables, E-Series, eseries, E2800, E5700, EF300, EF600, DE212C, DE224C, DE460C 
+summary: Faça o cabeamento de um host diretamente para um controlador ou use switches. 
+---
+= Visão geral do cabeamento
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Você pode enviar um host diretamente a um controlador ou usar switches para conetar um host a um controlador.
+
+Se o sistema de storage incluir uma ou mais gavetas de unidades, será necessário enviá-las por cabo ao compartimento de controladora. Você pode adicionar um novo compartimento de unidades enquanto a energia ainda é aplicada a outros componentes do sistema de storage. Além disso, você pode conectar seu sistema de storage a uma rede para gerenciamento fora da banda.
+
+As informações de cabeamento destinam-se a um instalador de hardware ou administrador de sistema que esteja instalando ou expandindo um sistema de storage. Supõe-se que você instalou o sistema de armazenamento conforme descrito em _instruções de instalação e configuração_ para o seu hardware.
+
+
+
+== Modelo de hardware aplicável
+
+As informações de cabeamento se aplicam aos seguintes modelos de hardware.
+
+|===
+| *Prateleira do controlador* | *Prateleira de acionamento* 
+
+
+ a| 
+EF300, EF600
+ a| 
+DE212C, DE224C, DE460
+
+
+
+ a| 
+E5724, EF570, E2812, E2824, EF280
+ a| 
+DE212C, DE224C
+
+
+
+ a| 
+E2860, E5760
+ a| 
+DE460C
+
+|===
+
+
+== Informações adicionais sobre cabeamento
+
+Se você estiver fazendo cabeamento para a configuração a seguir, consulte https://mysupport.netapp.com/ecm/ecm_download_file/ECMLP2859057["Adição de gavetas de unidade IOM a uma gaveta de controladora E27XX, E56XX ou EF560 existente."^]
+
+|===
+| *Prateleira do controlador* | *Prateleira de acionamento* 
+
+
+ a| 
+E2712, E2724, E5612, E5624, EF560
+ a| 
+DE212C, DE224C
+
+
+
+ a| 
+E2760, E5660
+ a| 
+DE460C
+
+|===
+Para obter informações sobre o cabeamento para oferecer suporte a recursos de espelhamento, consulte o https://www.netapp.com/pdf.html?item=/media/17133-tr4656pdf.pdf["Descrições e Guia de implantação dos recursos de espelhamento síncrono e assíncrono"^].

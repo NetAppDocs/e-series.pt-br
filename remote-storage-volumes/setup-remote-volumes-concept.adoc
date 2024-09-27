@@ -1,0 +1,84 @@
+---
+permalink: remote-storage-volumes/setup-remote-volumes-concept.html 
+sidebar: sidebar 
+keywords: configure Remote Storage Volumes, set up RTV, configure remote volumes, set up remote storage E-Series 
+summary: A configuração inicial é necessária para permitir que o sistema e-Series se conete ao storage remoto por meio do protocolo iSCSI suportado. 
+---
+= Configurar hardware para volumes de armazenamento remoto
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+O sistema de storage e-Series deve ser configurado para se comunicar com o sistema de storage remoto por meio do protocolo iSCSI suportado.
+
+
+
+== Configurar dispositivo de storage remoto e array e-Series
+
+Antes de prosseguir para o Gerenciador de sistema do SANtricity para configurar o recurso volumes de armazenamento remoto, faça o seguinte:
+
+. Estabeleça manualmente uma conexão cabeada entre o sistema e-Series e o sistema de storage remoto, de modo que os dois sistemas possam ser configurados para se comunicar via iSCSI.
+. Configure as portas iSCSI de forma a que o sistema e-Series e o sistema de armazenamento remoto possam comunicar-se com êxito entre si.
+. Obtenha o IQN do sistema e-Series.
+. Torne o sistema e-Series visível para o sistema de storage remoto. Se o sistema de storage remoto for um sistema e-Series, crie um host usando o IQN do sistema e-Series de destino como informações de conexão para a porta do host.
+. Se o dispositivo de armazenamento remoto estiver em uso por um host/aplicativo:
++
+** Pare a e/S para o dispositivo de armazenamento remoto.
+** Desmapear/desmontar o dispositivo de armazenamento remoto.
+
+
+. Mapear o dispositivo de storage remoto para o host definido para o sistema de storage e-Series.
+. Obtenha o número LUN do dispositivo utilizado para o mapeamento.
+
+
+
+NOTE: Recomendado: Faça backup do volume de origem remoto antes de iniciar o processo de importação.
+
+
+
+== Faça o cabeamento das matrizes de armazenamento
+
+Como parte do processo de configuração, os storage arrays e o host de e/S devem ser cabeados para a interface compatível com iSCSI.
+
+Os diagramas a seguir fornecem exemplos de como fazer o cabeamento dos sistemas de modo que eles executem operações de volume de armazenamento remoto através de uma conexão iSCSI.
+
+image:../media/remote_target_volumes_iscsi_use_case_1.png[""] image:../media/remote_target_volumes_iscsi_use_case_2.png[""]
+
+
+
+== Configurar as portas iSCSI
+
+Você deve configurar as portas iSCSI para garantir a comunicação entre o destino (storage local e-Series) e a origem (storage de storage remoto).
+
+As portas iSCSI podem ser configuradas de várias formas com base na sua sub-rede. Veja a seguir alguns exemplos de como configurar as portas iSCSI para uso com o recurso volumes de armazenamento remoto.
+
+|===
+| Fonte A | Fonte B | Segmente A | Alvo B 
+
+
+ a| 
+10.10.1.100/22
+ a| 
+10.10.2.100/22
+ a| 
+10.10.1.101/22
+ a| 
+10.10.2.101/22
+
+|===
+|===
+| Fonte A | Fonte B | Segmente A | Alvo B 
+
+
+ a| 
+10.10.0.100/16
+ a| 
+10.10.0.100/16
+ a| 
+10.10.0.101/16
+ a| 
+10.10.0.101/16
+
+|===

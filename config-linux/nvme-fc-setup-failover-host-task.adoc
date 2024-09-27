@@ -1,0 +1,108 @@
+---
+permalink: config-linux/nvme-fc-setup-failover-host-task.html 
+sidebar: sidebar 
+keywords: failover, express linux configuration, software configuration, linux host, E2800, E5700, EF300, EF600, E-Series, eseries 
+summary: Configure o host para executar o failover. 
+---
+= Configurar failover no host
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Para fornecer um caminho redundante para o storage array, você pode configurar o host para executar o failover.
+
+.Antes de começar
+Você deve instalar os pacotes necessários em seu sistema.
+
+* Para hosts Red Hat (RHEL), verifique se os pacotes estão instalados executando `rpm -q device-mapper-multipath`
+* Para hosts SLES, verifique se os pacotes estão instalados executando `rpm -q multipath-tools`
+
+
+.Sobre esta tarefa
+O RHEL 7 e o SLES 12 usam o Mapeador de dispositivos Multipath (DMMP) para multipathing ao usar o NVMe sobre Fibre Channel. RHEL 8, RHEL 9 e SLES 15 usam failover NVMe nativo incorporado. Dependendo de qual sistema operacional você está executando, alguma configuração adicional de multipath é necessária para que ele seja executado corretamente.
+
+
+
+== Ative o DMMP (Device Mapper Multipath) para RHEL 7 ou SLES 12
+
+Por padrão, o DM-MP está desativado no RHEL e no SLES. Execute as etapas a seguir para habilitar componentes DM-MP no host.
+
+.Passos
+. Adicione a entrada do dispositivo NVMe e-Series à seção dispositivos do arquivo /etc/multipath.conf, como mostrado no exemplo a seguir:
++
+[listing]
+----
+
+devices {
+        device {
+                vendor "NVME"
+                product "NetApp E-Series*"
+                path_grouping_policy group_by_prio
+                failback immediate
+                no_path_retry 30
+        }
+}
+----
+. Configure `multipathd` para iniciar na inicialização do sistema.
++
+[listing]
+----
+# systemctl enable multipathd
+----
+. Inicie `multipathd` se não estiver em execução no momento.
++
+[listing]
+----
+# systemctl start multipathd
+----
+. Verifique o estado de `multipathd` para se certificar de que está ativo e em execução:
++
+[listing]
+----
+# systemctl status multipathd
+----
+
+
+
+
+== Configure o NVMe Multipathing nativo para RHEL 8
+
+.Sobre esta tarefa
+O NVMe Multipathing nativo é desativado por padrão no RHEL 8 e deve ser habilitado usando as etapas abaixo.
+
+.Passos
+. Regra de `modprobe` configuração para ativar o NVMe Multipathing nativo.
++
+[listing]
+----
+# echo "options nvme_core multipath=y" >> /etc/modprobe.d/50-nvme_core.conf
+----
+. Remake `initramfs` com novo parâmetro modprobe.
++
+[listing]
+----
+# dracut -f
+----
+. Reinicie o servidor para ativá-lo com o Native NVMe Multipathing habilitado
++
+[listing]
+----
+# reboot
+----
+. Verifique se a opção de multipathing NVMe nativo foi ativada depois que o host inicializa o backup.
++
+[listing]
+----
+# cat /sys/module/nvme_core/parameters/multipath
+----
++
+.. Se o comando output for `N`, então o Native NVMe Multipathing ainda será desativado.
+.. Se o comando output for `Y`, então o Native NVMe Multipathing será ativado e todos os dispositivos NVMe que você descobrir o usarão.
+
+
+
+
+
+NOTE: Para RHEL 9 e SLES 15, o Native NVMe Multipathing é habilitado por padrão e nenhuma configuração adicional é necessária.

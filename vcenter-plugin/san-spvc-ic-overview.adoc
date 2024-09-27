@@ -1,0 +1,99 @@
+---
+sidebar: sidebar 
+permalink: vcenter-plugin/san-spvc-ic-overview.html 
+keywords: vCenter plugin, Plugin for vCenter, SANtricity plugin for vCenter, VMware vSphere Client 
+summary: O plug-in de armazenamento do SANtricity para vCenter oferece gerenciamento integrado de storage arrays do e-Series dentro de uma sessão do cliente VMware vSphere. 
+---
+= Visão geral do plug-in de armazenamento para vCenter
+:hardbreaks:
+:allow-uri-read: 
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ../media/
+
+
+[role="lead"]
+O plug-in de armazenamento do SANtricity para vCenter oferece gerenciamento integrado de storage arrays do e-Series dentro de uma sessão do cliente VMware vSphere.
+
+
+
+== Tarefas disponíveis
+
+Você pode usar o plugin para executar as seguintes tarefas:
+
+* Visualize e gerencie matrizes de armazenamento descobertas na rede.
+* Execute operações em lote em grupos de vários storages de armazenamento.
+* Faça atualizações no sistema operacional do software.
+* Importar configurações de um storage array para outro.
+* Configurar volumes, cache SSD, hosts, clusters de host, pools e grupos de volumes.
+* Inicie a interface do System Manager para tarefas de gerenciamento adicionais em um array.
+
+
+
+NOTE: O plug-in não é um substituto direto para a interface do System Manager, que é incorporada em cada controlador para uma matriz de armazenamento. O System Manager fornece recursos de gerenciamento adicionais; se desejar, você pode abrir o System Manager selecionando um storage array na exibição principal do plugin e, em seguida, clicando em *Launch*.
+
+O plug-in requer um dispositivo VMware vCenter Server implantado no ambiente VMware e um host de aplicativos para instalar e executar o servidor web do plug-in.
+
+Consulte a figura a seguir para obter mais informações sobre comunicações no ambiente do vCenter.
+
+image:../media/vcenter_communication2.png[""]
+
+
+
+== Visão geral da interface
+
+Quando você faz login no plugin, a página principal abre para *Gerenciar - todos*. Nesta página, você pode visualizar e gerenciar todos os storages de armazenamento descobertos em sua rede.
+
+
+
+=== Barra lateral de navegação
+
+A barra lateral de navegação exibe o seguinte:
+
+* *Gerenciar* -- Descubra matrizes de armazenamento em sua rede, inicie o Gerenciador de sistema para uma matriz, importe configurações de um array para vários arrays, gerencie grupos de matrizes, atualize o sistema operacional SANtricity e provisione armazenamento.
+* *Gerenciamento de certificados* -- Gerencie certificados para autenticar entre navegadores e clientes.
+* *Operações* -- Veja o andamento das operações em lote, como importar configurações de um array para outro.
+
+
+
+NOTE: Algumas operações não estão disponíveis quando um storage array tem um status não ideal.
+
+* *Suporte* -- Veja opções de suporte técnico, recursos e Contatos.
+
+
+
+
+=== Navegadores suportados
+
+O plug-in de armazenamento para vCenter pode ser acessado de vários tipos de navegadores. Os seguintes navegadores e versões são suportados.
+
+* Google Chrome 89 ou posterior
+* Mozilla Firefox 80 ou posterior
+* Microsoft Edge 90 ou posterior
+
+
+
+
+=== Funções e permissões do usuário
+
+Para acessar tarefas no plug-in de armazenamento para vCenter, o usuário deve ter permissões de leitura e gravação. Por padrão, todas as IDs de usuário definidas do VMware vCenter não têm permissões para executar tarefas no plug-in.
+
+
+
+== Visão geral da configuração
+
+A configuração envolve as seguintes etapas:
+
+. link:san-spvc-ic-installation.html["Instale e Registre o plugin"].
+. link:san-spvc-ic-user-access.html["Configurar permissões de acesso ao plugin"].
+. link:san-spvc-ic-login-and-navigation.html["Faça login na interface do plugin"].
+. link:san-spvc-ic-storage-array-discovery.html["Descubra matrizes de armazenamento"].
+. link:san-spvc-ic-storage-provisioning.html["Provisionamento de storage"].
+
+
+
+
+== Encontre mais informações
+
+Para obter mais informações sobre como gerenciar datastores no vSphere Client, https://docs.vmware.com/en/VMware-vSphere/index.html["Documentação do VMware vSphere"^] consulte .

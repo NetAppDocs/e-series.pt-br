@@ -1,0 +1,90 @@
+---
+permalink: cloud-connector/learn-intro-concept.html 
+sidebar: sidebar 
+keywords: Cloud Connector requirements 
+summary: Requisitos do sistema, configuração, instalação, configuração e tarefas associadas ao aplicativo SANtricity Cloud Connector. 
+---
+= Requisitos de sistema para o Cloud Connector
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Seu sistema precisa atender aos requisitos de compatibilidade do SANtricity Cloud Connector.
+
+
+
+== Requisitos de hardware de host
+
+Seu hardware precisa atender aos seguintes requisitos mínimos:
+
+* Pelo menos 5 GB de memória; 4 GB para o tamanho máximo de heap configurado
+* É necessário pelo menos 5 GB de espaço livre em disco a partir da instalação do software
+
+
+Você deve instalar o proxy de serviços da Web do SANtricity para usar o SANtricity Cloud Connector. Você pode instalar o Web Services Proxy localmente ou executar o aplicativo remotamente em um servidor diferente. Para obter informações sobre como instalar o proxy de serviços da Web do SANtricity, consulte link:../web-services-proxy/index.html["Tópicos de proxy de serviços da Web"].
+
+
+
+== Navegadores suportados
+
+Os seguintes navegadores são compatíveis com o aplicativo SANtricity Cloud Connector (versões mínimas anotadas):
+
+* firefox V31
+* Google chrome V47
+* Microsoft Internet Explorer v11
+* Microsoft Edge, EdgeHTML 12
+* Safari v9
+
+
+
+NOTE: A documentação da API para o aplicativo SANtricity Cloud Connector não será carregada ao usar a configuração Exibição de Compatibilidade no navegador Microsoft Internet Explorer v11. Para garantir que a documentação da API seja exibida corretamente no navegador Microsoft Internet Explorer v11, é recomendável que a configuração Exibição de compatibilidade esteja desativada.
+
+
+
+== Matrizes de armazenamento compatíveis e firmware do controlador
+
+Você deve verificar a compatibilidade de seus storages de armazenamento e firmware antes de usar o aplicativo SANtricity Cloud Connector.
+
+Para obter uma lista completa e atualizada de todos os storages de armazenamento e firmware compatíveis para o SANtricity Cloud Connector, consulte o http://mysupport.netapp.com/matrix["Ferramenta de Matriz de interoperabilidade do NetApp"^].
+
+
+
+== Sistemas operacionais compatíveis
+
+O aplicativo SANtricity Cloud Connector 4,0 é compatível com e compatível com os seguintes sistemas operacionais:
+
+|===
+| Sistema operacional | Versão | Arquitetura 
+
+
+ a| 
+Red Hat Enterprise Linux (RHEL)
+ a| 
+7.x
+ a| 
+64 bits
+
+
+
+ a| 
+SUSE Linux Enterprise Server (SLES)
+ a| 
+12.x
+ a| 
+64 bits
+
+|===
+
+
+== Sistemas de arquivos suportados
+
+Você deve usar sistemas de arquivos compatíveis para executar backups e restaurações por meio da aplicação SANtricity Cloud Connector.
+
+Os seguintes sistemas de arquivos são compatíveis com operações de backup e restauração no aplicativo SANtricity Cloud Connector:
+
+* ext2
+* ext3
+* ext4
+

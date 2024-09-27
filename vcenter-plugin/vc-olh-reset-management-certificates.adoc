@@ -1,0 +1,35 @@
+---
+sidebar: sidebar 
+permalink: vcenter-plugin/vc-olh-reset-management-certificates.html 
+keywords: vCenter plugin, Plugin for vCenter, SANtricity plugin for vCenter 
+summary: Reverta o certificado de gerenciamento para o estado original, autoassinado de fábrica. 
+---
+= Repor certificados de gestão
+:hardbreaks:
+:allow-uri-read: 
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./media/
+
+
+[role="lead"]
+Para o sistema de gerenciamento que hospeda o plug-in de armazenamento para vCenter, você pode reverter o certificado de gerenciamento para o estado original, autoassinado de fábrica.
+
+.Sobre esta tarefa
+Esta tarefa exclui o certificado de gerenciamento atual do sistema host onde o plug-in de armazenamento para vCenter está sendo executado. Depois que o certificado é redefinido, o sistema host reverte para usando o certificado autoassinado.
+
+.Passos
+. Selecione *Gerenciamento de certificados*.
+. Na guia *Management*, selecione *Reset*.
++
+Uma caixa de diálogo confirmar certificado de gerenciamento de redefinição é aberta.
+
+. Digite reset no campo e clique em *Reset*.
++
+Após a atualização do navegador, o navegador pode bloquear o acesso ao site de destino e informar que o site está usando HTTP Strict Transport Security. Essa condição surge quando você volta para certificados autoassinados. Para limpar a condição que está bloqueando o acesso ao destino, você deve limpar os dados de navegação do navegador.
+
+
+
+.Resultado
+O sistema reverte para o uso do certificado autoassinado do servidor. Como resultado, o sistema solicita aos usuários que aceitem manualmente o certificado autoassinado para suas sessões.

@@ -1,0 +1,46 @@
+---
+sidebar: sidebar 
+permalink: vcenter-plugin/vc-olh-delete-pool-or-volume-group.html 
+keywords: vCenter plugin, Plugin for vCenter, SANtricity plugin for vCenter 
+summary: Exclua um pool ou grupo de volumes para criar mais capacidade não atribuída, que pode ser reconfigurada para atender às necessidades de armazenamento de aplicativos 
+---
+= Excluir pool ou grupo de volume
+:hardbreaks:
+:allow-uri-read: 
+:experimental: 
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./media/
+
+
+[role="lead"]
+É possível excluir um pool ou grupo de volumes para criar mais capacidade não atribuída, que pode ser reconfigurada para atender às necessidades de armazenamento de aplicativos.
+
+.Antes de começar
+* Você deve ter feito backup dos dados em todos os volumes no pool ou grupo de volumes.
+* Você deve ter parado todas as entradas/saídas (e/S).
+* Você deve desmontar qualquer sistema de arquivos nos volumes.
+* Você deve ter excluído quaisquer relações de espelhamento no pool ou grupo de volumes.
+* Você deve ter parado qualquer operação de cópia de volume em andamento para o pool ou grupo de volumes.
+* O pool ou grupo de volume não deve estar participando de uma operação de espelhamento assíncrono.
+* As unidades no grupo de volumes não devem ter uma reserva persistente.
+
+
+.Passos
+. Na página Gerenciar, selecione o storage array com o pool ou grupo de volumes.
+. Selecione menu:provisionamento[Configurar pools e grupos de volume].
+. Selecione um pool ou grupo de volume na lista.
++
+Você pode selecionar apenas um pool ou grupo de volume de cada vez. Role a lista para baixo para ver pools ou grupos de volume adicionais.
+
+. Selecione menu:tarefas incomuns[Excluir] e confirme.
+
+
+.Resultados
+O sistema executa as seguintes ações:
+
+* Exclui todos os dados no pool ou grupo de volumes.
+* Exclui todas as unidades associadas ao pool ou grupo de volumes.
+* Desatribui as unidades associadas, o que permite reutilizá-las em pools ou grupos de volumes novos ou existentes.
+

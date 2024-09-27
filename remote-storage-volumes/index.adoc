@@ -1,0 +1,35 @@
+---
+permalink: remote-storage-volumes/index.html 
+sidebar: sidebar 
+keywords: Remote Storage Volumes, RTV, remote volumes, remote storage E-Series 
+summary: Use o recurso volumes de armazenamento remoto para importar dados de um dispositivo de armazenamento remoto diretamente para um volume local da série e. 
+---
+= Visão geral dos volumes de armazenamento remoto
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Use o recurso volumes de armazenamento remoto do SANtricity para importar dados de um dispositivo de armazenamento remoto diretamente para um volume local da Série E. Esse recurso ajuda a simplificar o processo de atualizações de equipamentos e fornece recursos de migração de dados para mover dados de dispositivos que não são do e-Series para sistemas e-Series.
+
+
+
+== Visão geral da configuração
+
+O recurso volumes de armazenamento remoto está disponível com o Gerenciador de sistema do SANtricity em IDs de submodelo selecionados. Para usar esse recurso, você deve configurar um sistema de storage remoto e um sistema de storage e-Series para se comunicar entre si.
+
+Use o seguinte fluxo de trabalho:
+
+. link:system-reqs-concept.html["Rever requisitos e restrições"].
+. link:setup-remote-volumes-concept.html["Configurar hardware"].
+. link:import-remote-storage-task.html["Importar armazenamento remoto"].
+
+
+
+
+== Encontre mais informações
+
+* Ajuda online, disponível na interface do utilizador do System Manager ou no https://docs.netapp.com/us-en/e-series-santricity/index.html["Site de documentação do software SANtricity"^].
+* Para obter informações técnicas adicionais sobre o recurso volumes de armazenamento remoto, consulte https://www.netapp.com/pdf.html?item=/media/28697-tr-4893-deploy.pdf["Relatório técnico sobre volumes de armazenamento remoto"^] .
+

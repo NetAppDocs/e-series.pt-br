@@ -1,0 +1,144 @@
+---
+permalink: getting-started/learn-terms-concept.html 
+sidebar: sidebar 
+keywords: E-Series, eseries, E2800, E5700, EF300, EF600, terms 
+summary: Saiba mais sobre os termos usados no e-Series. 
+---
+= Terminologia do e-Series
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Saiba mais sobre os termos usados no e-Series.
+
+|===
+| Prazo | Descrição 
+
+
+ a| 
+controlador
+ a| 
+Um controlador consiste em uma placa, firmware e software. Controla as unidades e implementa as funções.
+
+
+
+ a| 
+configurações duplex/simplex
+ a| 
+O duplex é uma configuração de módulo de dois controladores dentro da matriz de armazenamento. Simplex é uma configuração de módulo de controlador único.
+
+
+
+ a| 
+HDD
+ a| 
+Unidades de disco rígido (HDDs) são dispositivos de armazenamento de dados que usam plataformas metálicas rotativas com um revestimento magnético.
+
+
+
+ a| 
+HIC
+ a| 
+Uma placa de interface de host (HIC) coneta o array ao host. Opcionalmente, pode ser instalado dentro de um recipiente controlador.
+
+
+
+ a| 
+IB
+ a| 
+InfiniBand (IB) é um padrão de comunicação para a transmissão de dados entre servidores de alto desempenho e sistemas de armazenamento.
+
+
+
+ a| 
+IOPS
+ a| 
+IOPS são operações de entrada/saída por segundo.
+
+
+
+ a| 
+espelhamento
+ a| 
+O espelhamento é a replicação de volumes de dados em arrays de storage separados para garantir disponibilidade contínua.
+
+
+
+ a| 
+piscina
+ a| 
+Um pool é um conjunto de unidades que é agrupado logicamente. Você pode usar um pool para criar um ou mais volumes acessíveis a um host.
+
+
+
+ a| 
+depósito da ventoinha/alimentação
+ a| 
+Um recipiente de alimentação/ventilador é um conjunto que desliza para dentro de uma prateleira. Inclui uma fonte de alimentação e uma ventoinha integrada.
+
+
+
+ a| 
+Unidade de rack (U)
+ a| 
+Uma unidade de rack (abreviada U) é uma unidade de medida definida como 44,50 milímetros (1,75 in).
+
+
+
+ a| 
+SAS
+ a| 
+O Serial Attached SCSI (SAS) é um protocolo serial ponto a ponto que vincula controladores diretamente às unidades de disco.
+
+
+
+ a| 
+ROCE
+ a| 
+RDMA over Converged Ethernet (RoCE) é um protocolo de rede que permite acesso remoto à memória direta (RDMA) através de uma rede Ethernet.
+
+
+
+ a| 
+gaveta
+ a| 
+Uma prateleira é um gabinete instalado em um gabinete ou rack. Ele contém os componentes de hardware para o storage array. Há dois tipos de compartimentos: Um compartimento de controladora e um compartimento de unidade. Um compartimento de controladora inclui controladores e unidades. Um compartimento de unidades inclui módulos de entrada/saída (IOMs) e unidades.
+
+
+
+ a| 
+snapshot
+ a| 
+Uma imagem instantânea é uma cópia lógica dos dados de volume, capturados em um determinado ponto no tempo. Como um ponto de restauração, as imagens instantâneas permitem que você role de volta para um conjunto de dados em boas condições.
+
+
+
+ a| 
+SSD
+ a| 
+Os discos de estado sólido (SSDs) são dispositivos de armazenamento de dados que usam memória de estado sólido (flash) para armazenar dados persistentemente. Os SSDs emulam discos rígidos convencionais e estão disponíveis com as mesmas interfaces que os discos rígidos usam.
+
+
+
+ a| 
+storage array
+ a| 
+Um storage array inclui compartimentos, controladores, unidades, software e firmware.
+
+
+
+ a| 
+volume
+ a| 
+Um volume é um contêiner no qual aplicativos, bancos de dados e sistemas de arquivos armazenam dados. É o componente lógico criado para que o host acesse o storage no storage array.
+
+
+
+ a| 
+workload
+ a| 
+Um workload é um objeto de storage compatível com uma aplicação. Para alguns aplicativos, o System Manager configura a carga de trabalho para conter volumes com caraterísticas de volume subjacentes semelhantes. Essas características de volume são otimizadas com base no tipo de aplicação compatível com o workload.
+
+|===

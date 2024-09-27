@@ -1,0 +1,21 @@
+---
+permalink: maintenance-ef600/fans-overview-requirements-replacing2-concept.html 
+sidebar: sidebar 
+keywords: replace EF300 fan, replace EF600 fan, 
+summary: Reveja os requisitos e considerações antes de substituir os ventiladores EF300 ou EF600. 
+---
+= Requisitos para a substituição do ventilador EF300 ou EF600
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Antes de substituir um ventilador com falha em um array EF300 ou EF600, revise os seguintes requisitos.
+
+* Você tem um ventilador de substituição compatível com o modelo do compartimento de controladora ou do compartimento de unidade.
+* Você tem uma pulseira antiestática ou tomou outras precauções antiestáticas.
+
+
+
+NOTE: Se o Recovery Guru indicar que não é bom remover o ventilador, entre em Contato com o suporte técnico.

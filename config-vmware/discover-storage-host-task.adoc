@@ -1,0 +1,23 @@
+---
+permalink: config-vmware/discover-storage-host-task.html 
+sidebar: sidebar 
+keywords: discover storage ESXi, express vmware configuration, software configuration, vmware host, E2800, E5700, EF300, EF600, E-Series, eseries 
+summary: Depois de atribuir volumes ao host, você executa uma nova digitalização para que o host detete e configure os volumes para multipathing. 
+---
+= Descubra o armazenamento no host
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Depois de atribuir volumes ao host, você executa uma nova digitalização para que o host detete e configure os volumes para multipathing.
+
+Por padrão, um host ESXi executa automaticamente uma nova varredura a cada cinco minutos. Um volume pode aparecer entre o momento em que você o cria e o atribui a um host, antes de executar uma nova digitalização manual. Independentemente disso, você pode executar uma nova verificação manual para garantir que todos os volumes estejam configurados corretamente.
+
+.Passos
+. Crie um ou mais volumes e atribua-os ao host ESXi.
+. Se estiver usando um vCenter Server, adicione o host ao inventário do servidor.
+. Use o vSphere Client ou o vSphere Web Client para se conetar diretamente ao vCenter Server ou ao host ESXi.
+. Para obter instruções sobre como executar uma nova digitalização do armazenamento em um host ESXi, procure o https://kb.vmware.com/s/["Base de Conhecimento da VMware"^] artigo sobre este tópico.
+

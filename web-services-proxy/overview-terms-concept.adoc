@@ -1,0 +1,88 @@
+---
+permalink: web-services-proxy/overview-terms-concept.html 
+sidebar: sidebar 
+keywords: Web Services terms, WSP concepts 
+summary: Saiba mais sobre a API de serviços da Web 
+---
+= Termos e conceitos
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Os termos a seguir se aplicam ao proxy de serviços da Web.
+
+|===
+| Prazo | Definição 
+
+
+ a| 
+API
+ a| 
+Uma API (Application Programming Interface) é um conjunto de protocolos e métodos que permite que os desenvolvedores se comuniquem com dispositivos. A API de serviços da Web é usada para se comunicar com os sistemas de storage e-Series.
+
+
+
+ a| 
+ASUP
+ a| 
+O recurso AutoSupport (ASUP) coleta dados em um pacote de suporte ao cliente e envia automaticamente o arquivo de mensagem para o suporte técnico para solução de problemas remota e análise de problemas.
+
+
+
+ a| 
+Endpoint
+ a| 
+Endpoints são funções que estão disponíveis através da API. Um endpoint inclui um verbo HTTP, mais o caminho URI. Nos Web Services, os endpoints podem executar tarefas como descobrir sistemas de armazenamento e criar volumes.
+
+
+
+ a| 
+Verbo HTTP
+ a| 
+Um verbo HTTP é uma ação correspondente para um endpoint, como recuperar e criar dados. Nos Serviços Web, os verbos HTTP incluem POST, GET E DELETE.
+
+
+
+ a| 
+JSON
+ a| 
+JavaScript Object Notation (JSON) é um formato de dados estruturado muito parecido com XML, que usa um formato mínimo e legível. Os dados dentro dos Web Services são codificados através de JSON.
+
+
+
+ a| 
+DESCANSO/RESTful
+ a| 
+Representational State transfer (REST) é uma especificação solta que define um estilo arquitetônico para uma API. Como a maioria das APIs REST não adere totalmente à especificação, elas são descritas como "RESTful" ou "REST-like". Geralmente, uma API RESTful é agnóstica às linguagens de programação e tem as seguintes caraterísticas:
+
+* Baseado em HTTP, que segue a semântica geral do protocolo
+* Produtor e consumidor de dados estruturados (JSON, XML, etc.)
+* Orientado a objetos (ao contrário do orientado para a operação)
+
+
+Os serviços da Web são uma API RESTful que fornece acesso a praticamente todos os recursos de gerenciamento do SANtricity.
+
+
+
+ a| 
+sistema de storage
+ a| 
+Um sistema de storage é um array e-Series, que inclui compartimentos, controladores, unidades, software e firmware.
+
+
+
+ a| 
+API de símbolos
+ a| 
+O Symbol é uma API legada para gerenciar sistemas de storage e-Series. A implementação subjacente da API de Serviços Web usa o símbolo.
+
+
+
+ a| 
+Serviços da Web
+ a| 
+Os serviços da Web são uma API desenvolvida pela NetApp para os desenvolvedores gerenciarem os sistemas de storage e-Series. Há duas implementações de Web Services: Incorporadas no controlador e um proxy separado que pode ser instalado no Linux ou Windows.
+
+|===

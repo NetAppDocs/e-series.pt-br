@@ -1,0 +1,65 @@
+---
+sidebar: sidebar 
+permalink: vcenter-plugin/vc-olh-certificates-overview.html 
+keywords: vCenter plugin, Plugin for vCenter, SANtricity plugin for vCenter 
+summary: 'O Gerenciamento de certificados permite criar solicitações de assinatura de certificado (CSRs), importar certificados e gerenciar certificados existentes.' 
+---
+= Descrição geral dos certificados
+:hardbreaks:
+:allow-uri-read: 
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./media/
+
+
+[role="lead"]
+O gerenciamento de certificados no plug-in de armazenamento para vCenter permite criar CSRs (solicitações de assinatura de certificado), importar certificados e gerenciar certificados existentes.
+
+
+
+== O que são certificados?
+
+Certificados são arquivos digitais que identificam entidades online, como sites e servidores, para comunicações seguras na internet. Eles garantem que as comunicações da Web sejam transmitidas de forma criptografada, privada e inalterada, apenas entre o servidor e o cliente especificados. Com o plug-in de armazenamento para vCenter, você pode gerenciar certificados para o navegador em um sistema de gerenciamento de host e os controladores nos arrays de armazenamento descobertos.
+
+Um certificado pode ser assinado por uma autoridade confiável ou pode ser autoassinado. "Assinatura" significa simplesmente que alguém validou a identidade do proprietário e determinou que seus dispositivos podem ser confiáveis.
+
+As matrizes de armazenamento são fornecidas com um certificado auto-assinado gerado automaticamente em cada controlador. Você pode continuar usando os certificados autoassinados ou obter certificados assinados pela CA para uma conexão mais segura entre os controladores e os sistemas host.
+
+
+NOTE: Embora os certificados assinados pela CA forneçam melhor proteção de segurança (por exemplo, evitando ataques man-in-the-middle), eles também exigem taxas que podem ser caras se você tiver uma rede grande. Em contraste, os certificados autoassinados são menos seguros, mas são gratuitos. Portanto, os certificados autoassinados são mais usados para ambientes de teste internos, não em ambientes de produção.
+
+
+
+== Certificados assinados
+
+Um certificado assinado é validado por uma autoridade de certificação (CA), que é uma organização de terceiros confiável. Os certificados assinados incluem detalhes sobre o proprietário da entidade (normalmente, um servidor ou site), data de emissão e expiração do certificado, domínios válidos para a entidade e uma assinatura digital composta por letras e números.
+
+Quando você abre um navegador e insere um endereço da Web, o sistema executa um processo de verificação de certificados em segundo plano para determinar se você está se conetando a um site que inclui um certificado válido assinado pela CA. Geralmente, um site protegido com um certificado assinado inclui um ícone de cadeado e uma designação https no endereço. Se você tentar se conetar a um site que não contenha um certificado assinado pela CA, o navegador exibirá um aviso de que o site não está seguro.
+
+A CA toma medidas para verificar sua identidade durante o processo de inscrição. Eles podem enviar um e-mail para sua empresa registrada, verificar seu endereço comercial e executar uma verificação HTTP ou DNS. Quando o processo de aplicação estiver concluído, a CA envia arquivos digitais para serem carregados em um sistema de gerenciamento de host. Normalmente, esses arquivos incluem uma cadeia de confiança, como segue:
+
+* *Root* -- na parte superior da hierarquia está o certificado raiz, que contém uma chave privada usada para assinar outros certificados. A raiz identifica uma organização de CA específica. Se você usar a mesma CA para todos os dispositivos de rede, precisará de apenas um certificado raiz.
+* *Intermediate* -- ramificação fora da raiz são os certificados intermediários. A CA emite um ou mais certificados intermediários para atuar como intermediários entre uma raiz protegida e certificados de servidor.
+* *Servidor* -- na parte inferior da cadeia está o certificado do servidor, que identifica sua entidade específica, como um site ou outro dispositivo. Cada controlador em um storage array requer um certificado de servidor separado.
+
+
+
+
+== Certificados autoassinados
+
+Cada controladora no storage inclui um certificado pré-instalado e autoassinado. Um certificado autoassinado é semelhante a um certificado assinado pela CA, exceto que ele é validado pelo proprietário da entidade em vez de um terceiro. Como um certificado assinado pela CA, um certificado autoassinado contém sua própria chave privada e também garante que os dados sejam criptografados e enviados por uma conexão HTTPS entre um servidor e um cliente.
+
+Os certificados autoassinados não são "confiáveis" pelos navegadores. Cada vez que você tenta se conetar a um site que contém apenas um certificado autoassinado, o navegador exibe uma mensagem de aviso. Você deve clicar em um link na mensagem de aviso que permite que você prossiga para o site; ao fazê-lo, você está essencialmente aceitando o certificado auto-assinado.
+
+
+
+== Certificado de gestão
+
+Quando você abre o plugin, o navegador tenta verificar se o host de gerenciamento é uma fonte confiável, verificando se há um certificado digital. Se o navegador não localizar um certificado assinado pela CA, ele abrirá uma mensagem de aviso. A partir daí, você pode continuar para o site para aceitar o certificado autoassinado para essa sessão. Você também pode obter certificados digitais assinados de uma CA para que você não veja mais a mensagem de aviso.
+
+
+
+== Certificados confiáveis
+
+Durante uma sessão de plug-in, você pode ver mensagens de segurança adicionais quando você tenta acessar um controlador que não tem um certificado assinado pela CA. Nesse caso, você pode confiar permanentemente no certificado autoassinado ou importar os certificados assinados pela CA para os controladores para que o plug-in possa autenticar solicitações de clientes recebidas desses controladores.

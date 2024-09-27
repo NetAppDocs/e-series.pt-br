@@ -1,0 +1,230 @@
+---
+permalink: web-services-proxy/access-intro-concept.html 
+sidebar: sidebar 
+keywords: Web Services, WSP, roles WSP, user access WSP 
+summary: Você pode gerenciar o acesso do usuário à API de serviços da Web e ao Unified Manager para fins de segurança. 
+---
+= Gerencie o acesso do usuário no Web Services Proxy
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Você pode gerenciar o acesso do usuário à API de serviços da Web e ao Unified Manager para fins de segurança.
+
+
+
+== Visão geral do gerenciamento de acesso
+
+O gerenciamento de acesso inclui logins baseados em função, criptografia de senha, autenticação básica e integração LDAP.
+
+
+
+=== Acesso baseado em função
+
+O controle de acesso baseado em função (RBAC) associa usuários predefinidos a funções. Cada função concede permissões a um nível específico de funcionalidade.
+
+A tabela a seguir descreve cada função.
+
+[cols="35h,~"]
+|===
+| Função | Descrição 
+
+
+ a| 
+segurança.admin
+ a| 
+Gerenciamento de SSL e certificados.
+
+
+
+ a| 
+armazenamento.admin
+ a| 
+Acesso completo de leitura/gravação à configuração do sistema de storage.
+
+
+
+ a| 
+armazenamento.monitor
+ a| 
+Acesso somente leitura para visualizar os dados do sistema de storage.
+
+
+
+ a| 
+support.admin
+ a| 
+Acesso a todos os recursos de hardware em sistemas de storage e operações de suporte, como recuperação de AutoSupport (ASUP).
+
+|===
+As contas de usuário padrão são definidas no arquivo users.properties. Você pode alterar contas de usuário modificando diretamente o arquivo users.properties ou usando as funções de gerenciamento de acesso no Unified Manager.
+
+A tabela a seguir lista os logins de usuário disponíveis para o Proxy de serviços da Web.
+
+[cols="35h,~"]
+|===
+| Início de sessão predefinido do utilizador | Descrição 
+
+
+ a| 
+administrador
+ a| 
+Um super administrador que tem acesso a todas as funções e inclui todas as funções. Para o Unified Manager, você deve definir a senha no primeiro login.
+
+
+
+ a| 
+armazenamento
+ a| 
+O administrador responsável por todo o provisionamento de storage. Este usuário inclui as seguintes funções: Storage.admin, support.admin e storage.monitor. Esta conta é desativada até que uma palavra-passe seja definida.
+
+
+
+ a| 
+segurança
+ a| 
+O usuário responsável pela configuração de segurança. Este utilizador inclui as seguintes funções: Security.admin e storage.monitor. Esta conta é desativada até que uma palavra-passe seja definida.
+
+
+
+ a| 
+suporte
+ a| 
+O usuário responsável por recursos de hardware, dados de falha e atualizações de firmware. Este usuário inclui as seguintes funções: Support.admin e storage.monitor. Esta conta é desativada até que uma palavra-passe seja definida.
+
+
+
+ a| 
+monitorar
+ a| 
+Um utilizador com acesso apenas de leitura ao sistema. Este utilizador inclui apenas a função storage.monitor. Esta conta é desativada até que uma palavra-passe seja definida.
+
+
+
+ a| 
+rw (legado para matrizes mais antigas)
+ a| 
+O usuário rw (leitura/gravação) inclui as seguintes funções: Storage.admin, support.admin e storage.monitor. Esta conta é desativada até que uma palavra-passe seja definida.
+
+
+
+ a| 
+ro (legado para arrays mais antigos)
+ a| 
+O usuário ro (somente leitura) inclui somente a função storage.monitor. Esta conta é desativada até que uma palavra-passe seja definida.
+
+|===
+
+
+=== Encriptação de palavra-passe
+
+Para cada senha, você pode aplicar um processo de criptografia adicional usando a codificação de senha SHA256 existente. Este processo de criptografia adicional aplica um conjunto aleatório de bytes a cada senha (Salt) para cada criptografia de hash SHA256. A criptografia Salt SHA256 é aplicada a todas as senhas recém-criadas.
+
+
+NOTE: Antes da versão 3,0 do Web Services Proxy, as senhas eram criptografadas apenas por meio de hash SHA256. Quaisquer senhas criptografadas SHA256 somente hash existentes mantêm essa codificação e ainda são válidas sob o arquivo users.properties. No entanto, as senhas criptografadas SHA256 somente com hash não são tão seguras quanto as senhas com criptografia SHA256 salgada.
+
+
+
+=== Autenticação básica
+
+Por padrão, a autenticação básica é ativada, o que significa que o servidor retorna um desafio básico de autenticação. Esta definição pode ser alterada no ficheiro wsconfig.xml.
+
+
+
+=== LDAP
+
+O LDAP (Lightweight Directory Access Protocol), um protocolo de aplicação para aceder e manter serviços de informações de diretórios distribuídos, está ativado para o Proxy de Serviços Web. A integração LDAP permite a autenticação do usuário e o mapeamento de funções para grupos.
+
+Para obter informações sobre como configurar a funcionalidade LDAP, consulte as opções de configuração na interface do Unified Manager ou na seção LDAP da documentação da API interativa.
+
+
+
+== Configurar o acesso do utilizador
+
+Você pode gerenciar o acesso do usuário aplicando criptografia adicional a senhas, definindo autenticação básica e definindo acesso baseado em função.
+
+
+
+=== Aplique criptografia adicional a senhas
+
+Para obter o mais alto nível de segurança, você pode aplicar criptografia adicional a senhas usando a codificação de senha SHA256 existente.
+
+Este processo de criptografia adicional aplica um conjunto aleatório de bytes a cada senha (Salt) para cada criptografia de hash SHA256. A criptografia Salt SHA256 é aplicada a todas as senhas recém-criadas.
+
+.Passos
+. Abra o arquivo users.properties, localizado em:
++
+** (Windows) -- C: Arquivos de programas/NetApp/SANtricity Web Services Proxy/data/config
+** (Linux) -- /opt/NetApp/SANtricity_web_services_proxy/data/config
+
+
+. Digite novamente a senha criptografada como texto simples.
+. Execute o `securepasswds` utilitário de linha de comando para recriptografar a senha ou simplesmente reinicie o Proxy de Serviços Web. Este utilitário é instalado no diretório de instalação raiz do Proxy de Serviços Web.
++
+
+NOTE: Como alternativa, você pode cortar e hash senhas de usuários locais sempre que as edições de senha forem realizadas pelo Unified Manager.
+
+
+
+
+
+=== Configurar a autenticação básica
+
+Por padrão, a autenticação básica está ativada, o que significa que o servidor retorna um desafio básico de autenticação. Se desejar, você pode alterar essa configuração no arquivo wsconfig.xml.
+
+. Abra o arquivo wsconfig.xml, localizado em:
++
+** (Windows) -- C: Arquivos de programas/NetApp/SANtricity proxy de serviços da Web
+** (Linux) -- /opt/NetApp/SANtricity_web_services_proxy
+
+
+. Modifique a seguinte linha no arquivo especificando false (não habilitado) ou true (habilitado).
++
+Por exemplo: `<env key="enable-basic-auth">true</env>`
+
+. Salve o arquivo.
+. Reinicie o serviço Webserver para que a alteração tenha efeito.
+
+
+
+
+=== Configurar o acesso baseado em função
+
+Para limitar o acesso do usuário a funções específicas, você pode modificar quais funções são especificadas para cada conta de usuário.
+
+O Web Services Proxy inclui controle de acesso baseado em função (RBAC), no qual as funções são associadas a usuários predefinidos. Cada função concede permissões a um nível específico de funcionalidade. Você pode alterar as funções atribuídas às contas de usuário modificando diretamente o arquivo users.properties.
+
+
+NOTE: Você também pode alterar contas de usuário usando o Access Management no Unified Manager. Para obter mais informações, consulte a ajuda on-line disponível com o Unified Manager.
+
+.Passos
+. Abra o arquivo users.properties, localizado em:
++
+** (Windows) -- C: Arquivos de programas/NetApp/SANtricity Web Services Proxy/data/config
+** (Linux) -- /opt/NetApp/SANtricity_web_services_proxy/data/config
+
+
+. Localize a linha da conta de usuário que deseja modificar (armazenamento, segurança, monitor, suporte, rw ou ro).
++
+
+NOTE: Não modifique o usuário admin. Este é um super usuário com acesso a todas as funções.
+
+. Adicione ou remova as funções especificadas, conforme desejado.
++
+As funções incluem:
+
++
+** Security.admin -- Gerenciamento de SSL e certificado.
+** Storage.admin -- Acesso completo de leitura/gravação à configuração do sistema de armazenamento.
+** Storage.monitor -- Acesso somente leitura para visualizar os dados do sistema de armazenamento.
+** Support.admin -- Acesso a todos os recursos de hardware em sistemas de storage e operações de suporte, como recuperação de AutoSupport (ASUP).
++
+
+NOTE: A função storage.monitor é necessária para todos os usuários, incluindo o administrador.
+
+
+
+. Salve o arquivo.
+

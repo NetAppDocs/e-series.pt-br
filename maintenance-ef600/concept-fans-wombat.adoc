@@ -1,0 +1,14 @@
+---
+permalink: maintenance-ef600/concept-fans-wombat.html 
+sidebar: sidebar 
+keywords: ef300, ef600, controller, shelf, drive, fan, cooling 
+summary: Cada gaveta de unidade ou compartimento de controladora EF300 ou EF600 inclui cinco ventiladores para resfriar a controladora. 
+---
+= Fãs
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Cada gaveta de unidade ou compartimento de controladora EF300 ou EF600 inclui cinco ventiladores para resfriar a controladora.

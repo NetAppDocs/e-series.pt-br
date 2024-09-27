@@ -1,0 +1,39 @@
+---
+sidebar: sidebar 
+permalink: vcenter-plugin/vc-olh-how-do-i-view-and-interpret-all-ssd-cache-statistics.html 
+keywords: vCenter plugin, Plugin for vCenter, SANtricity plugin for vCenter 
+summary: Você pode ver estatísticas nominais e estatísticas detalhadas para cache SSD. 
+---
+= Como posso visualizar e interpretar todas as estatísticas de cache SSD?
+:hardbreaks:
+:allow-uri-read: 
+:experimental: 
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./media/
+
+
+[role="lead"]
+Você pode ver estatísticas nominais e estatísticas detalhadas para cache SSD.
+
+As estatísticas nominais são um subconjunto das estatísticas detalhadas. As estatísticas detalhadas só podem ser visualizadas quando você exporta todas as estatísticas SSD para um arquivo .csv. Ao rever e interpretar as estatísticas, tenha em mente que algumas interpretações são derivadas olhando para uma combinação de estatísticas.
+
+
+
+=== Estatísticas nominais
+
+Para exibir estatísticas de cache SSD, vá para a página *Gerenciar*. Selecione menu:provisionamento[Configurar pools e grupos de volume]. Selecione o cache SSD para o qual deseja exibir estatísticas e, em seguida, selecione menu:mais[View Statistics]. As estatísticas nominais são apresentadas na caixa de diálogo View SSD Cache Statistics (Ver estatísticas de cache SSD).
+
+
+NOTE: Este recurso não está disponível no sistema de armazenamento EF600 ou EF300.
+
+A lista inclui estatísticas nominais, que são um subconjunto das estatísticas detalhadas.
+
+
+
+=== Estatísticas detalhadas
+
+As estatísticas detalhadas consistem nas estatísticas nominais, mais estatísticas adicionais. Essas estatísticas adicionais são salvas juntamente com as estatísticas nominais, mas, ao contrário das estatísticas nominais, elas não são exibidas na caixa de diálogo View SSD Cache Statistics (Exibir estatísticas de cache SSD). Você pode exibir as estatísticas detalhadas somente depois de exportar as estatísticas para um arquivo .csv.
+
+As estatísticas detalhadas são listadas após as estatísticas nominais.

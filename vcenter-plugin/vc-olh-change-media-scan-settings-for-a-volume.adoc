@@ -1,0 +1,57 @@
+---
+sidebar: sidebar 
+permalink: vcenter-plugin/vc-olh-change-media-scan-settings-for-a-volume.html 
+keywords: vCenter plugin, Plugin for vCenter, SANtricity plugin for vCenter 
+summary: Uma verificação de Mídia é uma operação em segundo plano que verifica todos os dados e informações de redundância no volume. Utilize esta opção para ativar ou desativar as definições de digitalização de multimédia para um ou mais volumes ou para alterar a duração da digitalização. 
+---
+= Alterar as definições de digitalização de multimédia para um volume
+:hardbreaks:
+:allow-uri-read: 
+:experimental: 
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./media/
+
+
+[role="lead"]
+Uma verificação de Mídia é uma operação em segundo plano que verifica todos os dados e informações de redundância no volume. Utilize esta opção para ativar ou desativar as definições de digitalização de multimédia para um ou mais volumes ou para alterar a duração da digitalização.
+
+.Antes de começar
+Entenda o seguinte:
+
+* As digitalizações multimédia são executadas continuamente a uma taxa constante, com base na capacidade a digitalizar e na duração da digitalização. As digitalizações em segundo plano podem ser temporariamente suspensas por uma tarefa de fundo de prioridade mais elevada (por exemplo, reconstrução), mas serão retomadas com a mesma taxa constante.
+* Um volume só é lido quando a opção de digitalização de material está ativada para a matriz de armazenamento e para esse volume. Se a verificação de redundância também estiver ativada para esse volume, as informações de redundância no volume serão verificadas quanto à consistência com os dados, desde que o volume tenha redundância. A verificação de Mídia com verificação de redundância é ativada por padrão para cada volume quando é criado.
+* Se for encontrado um erro de meio irrecuperável durante a verificação, os dados serão reparados usando informações de redundância, se disponíveis.
++
+Por exemplo, as informações de redundância estão disponíveis em volumes RAID 5 ideais ou em volumes RAID 6 ideais ou que só têm uma unidade com falha. Se o erro irrecuperável não puder ser reparado usando informações de redundância, o bloco de dados será adicionado ao log de setor ilegível. Os erros de meio corrigíveis e incorrigíveis são reportados ao log de eventos.
+
+* Se a verificação de redundância encontrar uma inconsistência entre os dados e as informações de redundância, ela será reportada ao log de eventos.
+
+
+.Sobre esta tarefa
+As digitalizações de Mídia detetam e reparam erros de Mídia em blocos de disco que são raramente lidos por aplicativos. Isso pode impedir a perda de dados em caso de falha de unidade, uma vez que os dados para unidades com falha são reconstruídos usando informações de redundância e dados de outras unidades no grupo de volumes ou pool.
+
+Você pode executar as seguintes ações:
+
+* Ative ou desative digitalizações de Mídia em segundo plano para toda a matriz de armazenamento
+* Altere a duração da digitalização para toda a matriz de armazenamento
+* Ative ou desative a digitalização de multimédia para um ou mais volumes
+* Ative ou desative a verificação de redundância para um ou mais volumes
+
+
+.Passos
+. Na página Gerenciar, selecione a matriz de armazenamento que contém os volumes para os quais você deseja alterar as configurações de digitalização de Mídia.
+. Selecione menu:provisionamento[Gerenciar volumes].
+. Selecione qualquer volume e, em seguida, selecione menu:mais[alterar definições de digitalização de multimédia].
++
+É apresentada a caixa de diálogo alterar as definições de digitalização de multimédia da unidade. Todos os volumes na matriz de armazenamento aparecem nesta caixa de diálogo.
+
+. Para ativar a digitalização de material, selecione a caixa de verificação *Digitalizar material ao longo de...*. A caixa de verificação desativar a digitalização de multimédia suspende todas as definições de digitalização de multimédia.
+. Especifique o número de dias durante os quais pretende que a digitalização de material seja executada.
+. Selecione a caixa de verificação *Media Scan* para cada volume em que pretende efetuar uma digitalização de multimédia. O sistema ativa a opção Verificação de redundância para cada volume no qual você escolhe executar uma digitalização de Mídia. Se houver volumes individuais para os quais você não deseja executar uma verificação de redundância, desmarque a caixa de seleção *Verificação de redundância*.
+. Clique em *Salvar*.
+
+
+.Resultado
+O sistema aplica alterações às digitalizações de multimédia em segundo plano com base na sua seleção.

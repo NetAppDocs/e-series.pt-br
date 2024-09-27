@@ -1,0 +1,53 @@
+---
+permalink: config-linux/nvme-fc-configure-ip-address-dhcp-task.html 
+sidebar: sidebar 
+keywords: IP address, DHCP, express linux configuration, software configuration, linux host, E2800, E5700, EF300, EF600, E-Series, eseries 
+summary: 'Use o protocolo DHCP (Dynamic Host Configuration Protocol) para fornecer endereços IP.' 
+---
+= Configurar endereços IP usando DHCP
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Para configurar as comunicações entre a estação de gerenciamento e a matriz de armazenamento, use o DHCP (Dynamic Host Configuration Protocol) para fornecer endereços IP.
+
+.Antes de começar
+Certifique-se de que tem o seguinte:
+
+* Um servidor DHCP instalado e configurado na mesma sub-rede que as portas de gerenciamento de armazenamento.
+
+
+.Sobre esta tarefa
+Cada storage array tem um controlador (simplex) ou dois controladores (duplex), e cada controlador tem duas portas de gerenciamento de storage. Cada porta de gerenciamento será atribuído um endereço IP.
+
+As instruções a seguir referem-se a uma matriz de armazenamento com dois controladores (uma configuração duplex).
+
+.Passos
+. Se ainda não o tiver feito, ligue um cabo Ethernet à estação de gestão e à porta de gestão 1 em cada controlador (A e B).
++
+O servidor DHCP atribui um endereço IP à porta 1 de cada controlador.
+
++
+
+NOTE: Não use a porta de gerenciamento 2 em nenhum dos controladores. A porta 2 é reservada para uso pelo pessoal técnico da NetApp.
+
++
+
+NOTE: Se você desconetar e reconetar o cabo Ethernet, ou se o storage de armazenamento for ligado, o DHCP atribuirá endereços IP novamente. Este processo ocorre até que os endereços IP estáticos sejam configurados. Recomenda-se que evite desligar o cabo ou ligar o dispositivo de alimentação.
+
++
+Se a matriz de armazenamento não conseguir obter endereços IP atribuídos pelo DHCP dentro de 30 segundos, os seguintes endereços IP padrão serão definidos:
+
++
+** Controlador A, porta 1: 169.254.128.101
+** Controlador B, porta 1: 169.254.128.102
+** Máscara de sub-rede: 255.255.0.0
+
+
+. Localize a etiqueta de endereço MAC na parte de trás de cada controlador e, em seguida, forneça ao administrador da rede o endereço MAC da porta 1 de cada controlador.
++
+O administrador de rede precisa dos endereços MAC para determinar o endereço IP de cada controlador. Você precisará dos endereços IP para se conetar ao seu sistema de armazenamento por meio do navegador.
+
+

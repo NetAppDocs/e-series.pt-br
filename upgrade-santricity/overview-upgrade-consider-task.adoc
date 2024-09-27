@@ -1,0 +1,150 @@
+---
+permalink: upgrade-santricity/overview-upgrade-consider-task.html 
+sidebar: sidebar 
+keywords: E-Series, eseries, E2800, E5700, EF300, EF600, SANtricity, drive firmware, upgrade SANtricity, upgrade OS, upgrade E-Series, upgrade firmware, upgrading, upgrade IOM firmware, upgrade NVSRAM, upgrade controller 
+summary: Analise as considerações de atualização para o software e firmware do controlador SANtricity os da matriz de armazenamento e para o firmware da unidade. 
+---
+= Considerações sobre a atualização
+:allow-uri-read: 
+:experimental: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Para garantir uma atualização bem-sucedida, reveja as considerações de atualização a seguir.
+
+
+
+== Atualizações de controladora (única ou múltipla)
+
+Revise essas principais considerações antes de atualizar os controladores.
+
+
+
+=== Versões atuais
+
+Você pode visualizar as versões atuais do seu software e firmware, da seguinte forma:
+
+* Para um único controlador, use a interface do Gerenciador de sistema do SANtricity. Aceda ao menu:suporte[Centro de Atualização] e, em seguida, clique no link *Inventário de Software e firmware*.
+* Para vários controladores, use a interface do Gerenciador Unificado do SANtricity. Vá para a página *Manage* para matrizes de armazenamento descobertas. As versões são mostradas na coluna *Software do sistema operacional SANtricity*. As informações de firmware e NVSRAM da controladora estão disponíveis em uma caixa de diálogo pop-up quando você clica na versão do SANtricity os em cada linha.
+
+
+
+
+=== Componentes incluídos na atualização
+
+Os seguintes componentes estão incluídos no processo de atualização do SANtricity os:
+
+* *System Manager* -- System Manager é o software que gerencia o storage array.
+* *Firmware do controlador* -- o firmware do controlador gerencia a e/S entre hosts e volumes.
+* *Firmware IOM* -- o firmware do módulo de e/S (IOM) gerencia a conexão entre uma controladora e um compartimento de unidades. Também monitoriza o estado dos componentes.
+* *Software Supervisor* -- o software Supervisor é a máquina virtual em um controlador no qual o software é executado.
+
+
+
+
+=== Componentes a atualizar separadamente
+
+Os seguintes componentes devem ser atualizados separadamente:
+
+* *Controller NVSRAM* -- Controller NVSRAM é um arquivo de controlador que especifica as configurações padrão para os controladores. As instruções para atualizar a NVSRAM estão incluídas com as instruções para atualizar as controladoras.
+* *Firmware da unidade* -- consulte link:upgrade-drive-firmware-task.html["Atualize o firmware da unidade"] para obter instruções separadas.
+* * Multipath/failover driver* -- como parte do processo de atualização, o driver multipath/failover do host também pode precisar ser atualizado para que o host possa interagir com os controladores corretamente. Se os hosts que executam sistemas operacionais diferentes do Microsoft Windows tiverem conexões de e/S ao seu sistema de storage, atualize os drivers multipath desses hosts. Para obter informações sobre compatibilidade, consulte o https://mysupport.netapp.com/NOW/products/interoperability["Matriz de interoperabilidade do NetApp"^]. Para obter instruções de atualização, consulte link:../config-linux/index.html["Configuração expressa do Linux"] link:../config-windows/index.html["Configuração expressa do Windows"], ou link:../config-vmware/index.html["Configuração do VMware Express"].
+* *Gerenciador Unificado da SANtricity* -- Gerenciador unificado é o software que gerencia vários sistemas de storage, incluindo os modelos E2800, E5700, EF300 e EF600. O Unified Manager faz parte do proxy dos serviços da Web da SANtricity, que é um servidor de API RESTful instalado separadamente em um sistema host para gerenciar centenas de sistemas de storage novos e legados do NetApp e-Series. Para obter mais informações, link:../web-services-proxy/index.html["Visão geral do proxy dos serviços da Web da SANtricity"]consulte .
+* *Utilitários* -- outros utilitários de gerenciamento requerem atualizações separadas, como o Utilitário de host do Windows SANtricity, o Utilitário de host do SANtricity Linux e o SANtricity DSM. Para obter mais informações sobre esses utilitários, consulte link:../config-linux/index.html["Configuração expressa do Linux"] link:../config-windows/index.html["Configuração expressa do Windows"], ou link:../config-vmware/index.html["Configuração do VMware Express"].
+* *Sistemas legados* -- se o seu sistema de armazenamento faz parte de uma rede de armazenamento que inclui sistemas de armazenamento mais antigos, poderá ser necessário usar a janela de Gestão Empresarial (EMW) da SANtricity Storage Manager para fornecer uma visão empresarial de todos os seus sistemas de armazenamento. Neste caso, verifique se existe uma versão de manutenção mais recente do SANtricity Storage Manager.
+
+
+
+
+=== Controladores duplos e processamento de e/S.
+
+Se um storage array contiver dois controladores e você tiver um driver multipath instalado, o storage array poderá continuar processando e/S durante a atualização. Durante a atualização, ocorre o seguinte processo:
+
+. O controlador A faz failover de todos os LUNs para o controlador B.
+. A atualização ocorre no controlador A..
+. O controlador A recupera os LUNs e todos os LUNs do controlador B.
+. A atualização ocorre no controlador B.
+
+
+Após a conclusão da atualização, talvez seja necessário redistribuir manualmente os volumes entre as controladoras para garantir que os volumes voltem para a controladora proprietária correta.
+
+
+
+=== Verificação de integridade
+
+Uma verificação de integridade é executada como parte do processo de atualização. Essa verificação de integridade avalia todos os componentes do storage array para garantir que a atualização possa prosseguir. As seguintes condições podem impedir a atualização:
+
+* Unidades atribuídas com falha
+* Peças sobressalentes quentes em uso
+* Grupos de volumes incompletos
+* Operações exclusivas em execução
+* Volumes em falta
+* Controlador em estado não ótimo
+* Número excessivo de eventos de log
+* Falha na validação da base de dados de configuração
+* Unidades com versões antigas do DACstore
+
+
+Você também pode executar a verificação de integridade de pré-atualização separadamente sem fazer uma atualização.
+
+
+
+=== Atualização imediata ou faseada
+
+Você pode ativar a atualização imediatamente ou colocá-la em fase posterior. Você pode optar por ativar mais tarde por estes motivos:
+
+* *Hora do dia* -- a ativação do software pode demorar muito tempo, então você pode querer esperar até que as cargas de e/S sejam mais leves. Dependendo da carga de e/S e do tamanho do cache, uma atualização da controladora normalmente pode levar entre 15 a 25 minutos para ser concluída. Os controladores reiniciam e fazem failover durante a ativação para que o desempenho possa ser menor do que o normal até que a atualização seja concluída.
+* * Tipo de pacote* -- você pode querer testar o novo software e firmware em uma matriz de armazenamento antes de atualizar os arquivos em outras matrizes de armazenamento.
+
+
+
+
+== Upgrade do formware da unidade
+
+Reveja estas considerações-chave antes de atualizar o firmware da unidade.
+
+
+
+=== Compatibilidade de unidades
+
+Cada arquivo de firmware da unidade contém informações sobre o tipo de unidade em que o firmware é executado. Pode transferir o ficheiro de firmware especificado apenas para uma unidade compatível. O System Manager verifica automaticamente a compatibilidade durante o processo de atualização.
+
+
+
+=== Métodos de atualização da unidade
+
+Existem dois tipos de métodos de atualização de firmware de unidade: On-line e off-line.
+
+|===
+| Atualização online | Atualização offline 
+
+
+ a| 
+Durante uma atualização online, as unidades são atualizadas sequencialmente, uma de cada vez. O storage array continua processando e/S durante a atualização. Você não tem que parar I/O.. Se uma unidade puder fazer uma atualização on-line, o método on-line será usado automaticamente.
+
+As unidades que podem fazer uma atualização online incluem o seguinte:
+
+* Conduz em um pool ideal
+* Unidades em um grupo de volume redundante ideal (RAID 1, RAID 5 e RAID 6)
+* Unidades não atribuídas
+* Unidades de reserva hot spare em espera
+
+
+Fazer uma atualização de firmware de unidade on-line pode levar várias horas, expondo o storage array a possíveis falhas de volume. A falha de volume pode ocorrer nestes casos:
+
+* Em um grupo de volumes RAID 1 ou RAID 5, uma unidade falha enquanto uma unidade diferente no grupo de volumes está sendo atualizada.
+* Em um pool RAID 6 ou grupo de volumes, duas unidades falham enquanto uma unidade diferente no pool ou grupo de volumes está sendo atualizada.
+
+ a| 
+Durante uma atualização off-line, todas as unidades do mesmo tipo de unidade são atualizadas ao mesmo tempo. Este método requer a interrupção da atividade de e/S para os volumes associados às unidades selecionadas. Como várias unidades podem ser atualizadas simultaneamente (em paralelo), o tempo de inatividade geral é significativamente reduzido. Se uma unidade puder fazer apenas uma atualização off-line, o método off-line será usado automaticamente.
+
+As seguintes unidades DEVEM usar o método offline:
+
+* Unidades em um grupo de volume não redundante (RAID 0)
+* Unidades em um pool ou grupo de volumes não ideais
+* Unidades em cache SSD
+
+
+|===

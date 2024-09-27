@@ -1,0 +1,126 @@
+---
+permalink: config-linux/nvme-fc-access-virtual-targets-concept.html 
+sidebar: sidebar 
+keywords: NVMe volumes virtual, express linux configuration, software configuration, linux host, E2800, E5700, EF300, EF600, E-Series, eseries 
+summary: Você pode configurar a e/S direcionada para o destino do dispositivo com base na versão Linux. O DM-MP gerencia os caminhos físicos subjacentes a esses alvos virtuais. 
+---
+= Acessar volumes NVMe para destinos de dispositivos virtuais
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Você pode configurar a e/S direcionada para o destino do dispositivo com base no sistema operacional (e pelo método multipathing de extensão) que você está usando.
+
+Para RHEL 7 e SLES 12, I/o é direcionado para alvos de dispositivos virtuais pelo host Linux. O DM-MP gerencia os caminhos físicos subjacentes a esses alvos virtuais.
+
+
+
+== Os dispositivos virtuais são alvos de e/S.
+
+Certifique-se de que você está executando e/S apenas para os dispositivos virtuais criados pelo DM-MP e não para os caminhos físicos do dispositivo. Se você estiver executando e/S para os caminhos físicos, o DM-MP não poderá gerenciar um evento de failover e a e/S falhará.
+
+Pode aceder a estes dispositivos de bloqueio através `dm` do dispositivo ou do `symlink` no `/dev/mapper`, por exemplo:
+
+[listing]
+----
+/dev/dm-1
+/dev/mapper/eui.00001bc7593b7f5f00a0980000af4462
+----
+
+
+== Exemplo
+
+A saída de exemplo a seguir `nvme list` do comando mostra o nome do nó do host e sua correlação com o ID do namespace.
+
+[listing]
+----
+
+NODE         SN           MODEL           NAMESPACE
+
+/dev/nvme1n1 021648023072 NetApp E-Series 10
+/dev/nvme1n2 021648023072 NetApp E-Series 11
+/dev/nvme1n3 021648023072 NetApp E-Series 12
+/dev/nvme1n4 021648023072 NetApp E-Series 13
+/dev/nvme2n1 021648023151 NetApp E-Series 10
+/dev/nvme2n2 021648023151 NetApp E-Series 11
+/dev/nvme2n3 021648023151 NetApp E-Series 12
+/dev/nvme2n4 021648023151 NetApp E-Series 13
+----
+|===
+| Coluna | Descrição 
+
+
+ a| 
+`Node`
+ a| 
+O nome do nó inclui duas partes:
+
+* A notação `nvme1` representa o controlador A e `nvme2` representa o controlador B.
+* A notação `n1`, `n2` e assim por diante representam o identificador do namespace a partir da perspetiva do host. Estes identificadores são repetidos na tabela, uma vez para o controlador A e uma vez para o controlador B.
+
+
+
+
+ a| 
+`Namespace`
+ a| 
+A coluna namespace lista o ID do namespace (NSID), que é o identificador da perspetiva do storage array.
+
+|===
+Na saída a seguir `multipath -ll`, os caminhos otimizados são mostrados com um `prio` valor de 50, enquanto os caminhos não otimizados são mostrados com `prio` um valor de 10.
+
+O sistema operacional Linux roteia e/S para o grupo de caminhos que é mostrado como `status=active`, enquanto os grupos de caminhos listados como `status=enabled` estão disponíveis para failover.
+
+[listing]
+----
+eui.00001bc7593b7f500a0980000af4462 dm-0 NVME,NetApp E-Series
+size=15G features='1 queue_if_no_path' hwhandler='0' wp=rw
+|-+- policy='service-time 0' prio=50 status=active
+| `- #:#:#:# nvme1n1 259:5 active ready running
+`-+- policy='service-time 0' prio=10 status=enabled
+  `- #:#:#:# nvme2n1 259:9  active ready running
+
+eui.00001bc7593b7f5f00a0980000af4462 dm-0 NVME,NetApp E-Series
+size=15G features='1 queue_if_no_path' hwhandler='0' wp=rw
+|-+- policy='service-time 0' prio=0 status=enabled
+| `- #:#:#:# nvme1n1 259:5 failed faulty running
+`-+- policy='service-time 0' prio=10 status=active
+  `- #:#:#:# nvme2n1 259:9  active ready running
+----
+|===
+| Item de linha | Descrição 
+
+
+ a| 
+`policy='service-time 0' prio=50 status=active`
+ a| 
+Esta linha e a seguinte linha mostram que `nvme1n1`, que é o namespace com um NSID de 10, é otimizado no caminho com um `prio` valor de 50 e um `status` valor `active` de .
+
+Este namespace é de propriedade do controlador A.
+
+
+
+ a| 
+`policy='service-time 0' prio=10 status=enabled`
+ a| 
+Essa linha mostra o caminho de failover para o namespace 10, com `prio` um valor de 10 e um `status` valor `enabled`de . I/o não está sendo direcionado para o namespace neste caminho no momento.
+
+Este namespace é de propriedade do controlador B.
+
+
+
+ a| 
+`policy='service-time 0' prio=0 status=enabled`
+ a| 
+Este exemplo mostra ``multipath -ll``a saída de um ponto diferente no tempo, enquanto o controlador A está reinicializando. O caminho para o namespace 10 é mostrado como com um `prio` valor de 0 e um `status` valor de `enabled`.
+
+
+
+ a| 
+`policy='service-time 0' prio=10 status=active`
+ a| 
+Observe que o `active` caminho se refere a `nvme2`, então a e/S está sendo direcionada nesse caminho para o controlador B.
+
+|===

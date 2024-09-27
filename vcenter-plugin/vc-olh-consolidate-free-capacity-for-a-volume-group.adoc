@@ -1,0 +1,60 @@
+---
+sidebar: sidebar 
+permalink: vcenter-plugin/vc-olh-consolidate-free-capacity-for-a-volume-group.html 
+keywords: vCenter plugin, Plugin for vCenter, SANtricity plugin for vCenter 
+summary: Use a opção consolidar capacidade livre para consolidar extensões livres existentes em um grupo de volumes selecionado. Ao executar esta ação, você pode criar volumes adicionais a partir da quantidade máxima de capacidade livre em um grupo de volumes. 
+---
+= Consolide a capacidade livre para um grupo de volumes
+:hardbreaks:
+:allow-uri-read: 
+:experimental: 
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./media/
+
+
+[role="lead"]
+Use a opção consolidar capacidade livre para consolidar extensões livres existentes em um grupo de volumes selecionado. Ao executar esta ação, você pode criar volumes adicionais a partir da quantidade máxima de capacidade livre em um grupo de volumes.
+
+.Antes de começar
+* O grupo de volume deve conter pelo menos uma área de capacidade livre.
+* Todos os volumes no grupo de volumes devem estar online e em ótimo estado.
+* As operações de modificação de volume não devem estar em andamento, como alterar o tamanho do segmento de um volume.
+
+
+.Sobre esta tarefa
+Não é possível cancelar a operação depois de iniciada. Seus dados permanecem acessíveis durante a operação de consolidação.
+
+Você pode iniciar a caixa de diálogo consolidar capacidade livre usando qualquer um dos seguintes métodos:
+
+* Quando é detetada pelo menos uma área de capacidade livre para um grupo de volumes, a recomendação consolidar capacidade livre aparece na página inicial na área notificação. Clique no link *consolidar capacidade livre* para iniciar a caixa de diálogo.
+* Também é possível iniciar a caixa de diálogo consolidar capacidade livre a partir da página pools e grupos de volume, conforme descrito na tarefa a seguir.
+
+
+.Mais sobre áreas de capacidade livre
+[%collapsible]
+====
+Uma área de capacidade livre é a capacidade livre que pode resultar da exclusão de um volume ou da não utilização de toda a capacidade livre disponível durante a criação do volume. Quando você cria um volume em um grupo de volumes que tenha uma ou mais áreas de capacidade livre, a capacidade do volume é limitada à maior área de capacidade livre nesse grupo de volumes. Por exemplo, se um grupo de volume tiver um total de 15 GiB de capacidade livre, e a maior área de capacidade livre for de 10 GiB, o maior volume que você pode criar é de 10 GiB.
+
+Você consolida a capacidade livre em um grupo de volumes para melhorar o desempenho de gravação. A capacidade livre do seu grupo de volumes ficará fragmentada ao longo do tempo à medida que o host grava, modifica e exclui arquivos. Eventualmente, a capacidade disponível não será localizada em um único bloco contíguo, mas será espalhada em pequenos fragmentos pelo grupo de volumes. Isso causa mais fragmentação de arquivos, já que o host deve gravar novos arquivos como fragmentos para encaixá-los nos intervalos disponíveis de clusters livres.
+
+Ao consolidar a capacidade gratuita em um grupo de volumes selecionado, você notará o desempenho aprimorado do sistema de arquivos sempre que o host gravar novos arquivos. O processo de consolidação também ajudará a evitar que novos arquivos sejam fragmentados no futuro.
+
+====
+.Passos
+. Na página Gerenciar, selecione o storage array com o grupo de volumes.
+. Selecione menu:provisionamento[Configurar pools e grupos de volume].
+. Selecione o grupo de volumes com capacidade livre que deseja consolidar e, em seguida, selecione menu:tarefas incomuns[consolidar volume group free capacity].
++
+A caixa de diálogo consolidar capacidade livre é exibida.
+
+. Digite `consolidate` para confirmar que deseja executar esta operação.
+. Clique em *consolidar*.
+
+
+.Resultado
+O sistema começa a consolidar (desfragmentar) as áreas de capacidade livre do grupo de volumes em um valor contíguo para tarefas subsequentes de configuração de armazenamento.
+
+.Depois de terminar
+Na barra lateral de navegação, selecione *operações* para ver o progresso da operação consolidar capacidade livre. Esta operação pode ser demorada e pode afetar o desempenho do sistema.

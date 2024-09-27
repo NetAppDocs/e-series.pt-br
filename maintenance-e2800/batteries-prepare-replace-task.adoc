@@ -1,0 +1,171 @@
+---
+permalink: maintenance-e2800/batteries-prepare-replace-task.html 
+sidebar: sidebar 
+keywords: E2800 battery fail, E2800 battery, E2800 battery replacement, replace E2800 battery, replacing E2800 battery, E2800, E-Series, eseries 
+summary: Prepare-se para a substituição da bateria E2800, seguindo as etapas apropriadas para duplex ou simplex. 
+---
+= Prepare a substituição da bateria de E2800 V.
+:allow-uri-read: 
+:experimental: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+As etapas para se preparar para a substituição da bateria dependem se você tem uma configuração duplex (dois controladores) ou uma configuração simplex (um controlador).
+
+* Para configurações duplex, <<Colocar o controlador offline (duplex)>>consulte .
+* Para configurações simplex, <<Desligue o compartimento do controlador (simplex)>>consulte .
+
+
+.Antes de começar
+* Verifique se nenhum volume está em uso ou se você tem um driver multipath instalado em todos os hosts que usam esses volumes.
+* Reveja o link:batteries-overview-requirements-concept.html["Requisitos para a substituição da bateria E2800"].
+
+
+
+
+== Colocar o controlador offline (duplex)
+
+Se você tiver uma configuração duplex, você deve colocar o controlador afetado off-line para que você possa remover com segurança a bateria com falha. O controlador que você não está colocando off-line deve estar on-line (no estado ideal).
+
+
+NOTE: Execute esta tarefa somente se o storage array tiver dois controladores (configuração duplex).
+
+.Passos
+. A partir do Gestor do sistema SANtricity, reveja os detalhes no Guru de recuperação para confirmar que existe um problema com uma bateria e para garantir que não é necessário resolver primeiro outros itens.
+. Na área Detalhes do Recovery Guru, determine qual bateria deve ser substituída.
+. Faça backup do banco de dados de configuração do storage usando o Gerenciador de sistema do SANtricity.
++
+Se ocorrer um problema ao remover um controlador, pode utilizar o ficheiro guardado para restaurar a configuração. O sistema salvará o estado atual do banco de dados de configuração RAID, que inclui todos os dados para grupos de volume e pools de discos na controladora.
+
++
+** Do System Manager:
++
+... Selecione menu:suporte[Centro de suporte > Diagnóstico].
+... Selecione *Collect Configuration Data*.
+... Clique em *Collect*.
++
+O arquivo é salvo na pasta Downloads do seu navegador com o nome *configurationData-<arrayName>-<dateTime>.7z*.
+
+
+
+** Como alternativa, você pode fazer backup do banco de dados de configuração usando o seguinte comando CLI:
++
+`save storageArray dbmDatabase sourceLocation=onboard contentType=all file="filename";`
+
+
+
+. Colete dados de suporte para sua matriz de armazenamento usando o Gerenciador de sistema do SANtricity.
++
+Se ocorrer um problema ao remover um controlador, você pode usar o arquivo salvo para solucionar o problema. O sistema salvará os dados de inventário, status e desempenho sobre seu storage array em um único arquivo.
+
++
+.. Selecione menu:suporte[Centro de suporte > Diagnóstico].
+.. Selecione *coletar dados de suporte*.
+.. Clique em *Collect*.
++
+O arquivo é salvo na pasta Downloads do seu navegador com o nome *support-data.7z*.
+
+
+
+. Se o controlador ainda não estiver offline, coloque-o offline agora usando o Gerenciador de sistema do SANtricity.
++
+** A partir do SANtricity System Manager:
++
+... Selecione *hardware*.
+... Se o gráfico mostrar as unidades, selecione *Mostrar parte traseira da prateleira* para mostrar os controladores.
+... Selecione o controlador que pretende colocar offline.
+... No menu de contexto, selecione *colocar offline* e confirme que deseja executar a operação.
++
+
+NOTE: Se você estiver acessando o Gerenciador de sistema do SANtricity usando o controlador que você está tentando ficar offline, uma mensagem Gerenciador de sistema do SANtricity indisponível será exibida. Selecione *conetar-se a uma conexão de rede alternativa* para acessar automaticamente o Gerenciador de sistema do SANtricity usando o outro controlador.
+
+
+
+** Como alternativa, você pode colocar os controladores offline usando os seguintes comandos CLI:
++
+*Para o controlador A:* `set controller [a] availability=offline`
+
++
+*Para o controlador B:* `set controller [b] availability=offline`
+
+
+
+. Aguarde até que o Gerenciador de sistema do SANtricity atualize o status do controlador para offline.
+. Vá para link:batteries-remove-controller-canister-task.html["Remova o recipiente do controlador E2800"].
++
+
+CAUTION: Não inicie quaisquer outras operações até que o estado tenha sido atualizado.
+
+
+
+
+
+== Desligue o compartimento do controlador (simplex)
+
+Se você tiver uma configuração simplex, desligue o compartimento do controlador para que você possa remover com segurança a bateria com falha.
+
+
+NOTE: Execute esta tarefa somente se o storage array tiver um controlador (configuração simplex).
+
+.Passos
+. Faça backup do banco de dados de configuração do storage usando o Gerenciador de sistema do SANtricity.
++
+Se ocorrer um problema ao remover um controlador, pode utilizar o ficheiro guardado para restaurar a configuração. O sistema salvará o estado atual do banco de dados de configuração RAID, que inclui todos os dados para grupos de volume e pools de discos na controladora.
+
++
+** Do System Manager:
++
+... Selecione menu:suporte[Centro de suporte > Diagnóstico].
+... Selecione *Collect Configuration Data*.
+... Clique em *Collect*.
++
+O arquivo é salvo na pasta Downloads do seu navegador com o nome *configurationData-<arrayName>-<dateTime>.7z*.
+
+
+
+** Como alternativa, você pode fazer backup do banco de dados de configuração usando o seguinte comando CLI:
++
+`save storageArray dbmDatabase sourceLocation=onboard contentType=all file="filename";`
+
+
+
+. Colete dados de suporte para sua matriz de armazenamento usando o Gerenciador de sistema do SANtricity.
++
+Se ocorrer um problema ao remover um controlador, você pode usar o arquivo salvo para solucionar o problema. O sistema salvará os dados de inventário, status e desempenho sobre seu storage array em um único arquivo.
+
++
+.. Selecione menu:suporte[Centro de suporte > Diagnóstico].
+.. Selecione *coletar dados de suporte*.
+.. Clique em *Collect*.
++
+O arquivo é salvo na pasta Downloads do seu navegador com o nome *support-data.7z*.
+
+
+
+. Certifique-se de que nenhuma operação de e/S esteja ocorrendo entre o storage array e todos os hosts conectados. Por exemplo, você pode executar estas etapas:
++
+.. Parar todos os processos que envolvem os LUNs mapeados do armazenamento para os hosts.
+.. Garantir que nenhuma aplicação esteja gravando dados em LUNs mapeados do storage para os hosts.
+.. Desmonte todos os sistemas de arquivos associados a volumes no array.
++
+
+NOTE: As etapas exatas para interromper as operações de e/S do host dependem do sistema operacional do host e da configuração, que estão além do escopo dessas instruções. Se você não tiver certeza de como interromper as operações de e/S do host em seu ambiente, considere encerrar o host.
+
++
+
+CAUTION: *Possível perda de dados* -- se você continuar este procedimento enquanto as operações de e/S estão ocorrendo, você pode perder dados.
+
+
+
+. Aguarde até que quaisquer dados na memória cache sejam gravados nas unidades.
++
+O LED verde Cache ative na parte de trás do controlador fica aceso quando os dados em cache precisam ser gravados nas unidades. Tem de esperar que este LED se desligue.
+
+. Na página inicial do Gerenciador do sistema do SANtricity, selecione *Exibir operações em andamento*.
+. Confirme se todas as operações foram concluídas antes de continuar com a próxima etapa.
+. Desligue ambos os interruptores de energia no compartimento do controlador.
+. Aguarde que todos os LEDs na prateleira do controlador se desliguem.
+. Vá para link:batteries-remove-controller-canister-task.html["Remova o recipiente do controlador E2800"].
+

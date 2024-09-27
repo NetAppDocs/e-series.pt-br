@@ -1,0 +1,24 @@
+---
+sidebar: sidebar 
+permalink: vcenter-plugin/vc-olh-why-can-i-not-increase-my-preservation-capacity.html 
+keywords: vCenter plugin, Plugin for vCenter, SANtricity plugin for vCenter 
+summary: Se você criou volumes em toda a capacidade utilizável disponível, talvez não consiga aumentar a capacidade de preservação. 
+---
+= Por que não posso aumentar minha capacidade de preservação?
+:hardbreaks:
+:allow-uri-read: 
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./media/
+
+
+[role="lead"]
+Se você criou volumes em toda a capacidade utilizável disponível, talvez não consiga aumentar a capacidade de preservação.
+
+Capacidade de preservação é a quantidade de capacidade (número de unidades) reservada em um pool para dar suporte a possíveis falhas de unidade. Quando um pool é criado, o sistema reserva automaticamente uma quantidade padrão de capacidade de preservação, dependendo do número de unidades no pool. Se você tiver criado volumes em toda a capacidade utilizável disponível, não poderá aumentar a capacidade de preservação sem adicionar capacidade ao pool adicionando unidades ou excluindo volumes.
+
+Você pode alterar a capacidade de preservação de pools e grupos de volume. Selecione o pool que você deseja editar. Clique em *Exibir/Editar configurações* e selecione a guia *Configurações*.
+
+
+NOTE: A capacidade de preservação é especificada como um número de unidades, mesmo que a capacidade de preservação real seja distribuída entre as unidades no pool.

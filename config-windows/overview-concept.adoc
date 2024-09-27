@@ -1,0 +1,97 @@
+---
+permalink: config-windows/overview-concept.html 
+sidebar: sidebar 
+keywords: express Windows configuration, software configuration, Windows host, E2800, E5700, EF300, EF600, E-Series, eseries 
+summary: Revise os requisitos para usar o método expresso para configurar um array e-Series e um host Windows. 
+---
+= Suposições
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+O método Windows Express baseia-se nas seguintes suposições:
+
+|===
+| Componente | Suposições 
+
+
+ a| 
+Hardware
+ a| 
+* Você usou as instruções de instalação e configuração incluídas nas prateleiras da controladora para instalar o hardware.
+* Você conectou cabos entre as gavetas de unidade opcionais e as controladoras.
+* Você aplicou energia ao sistema de armazenamento.
+* Você instalou todo o outro hardware (por exemplo, estação de gerenciamento, switches) e fez as conexões necessárias.
+
+
+
+
+ a| 
+Host
+ a| 
+* Você fez uma conexão entre o sistema de armazenamento e o host de dados.
+* Você instalou o sistema operacional host.
+* Você não está usando o Windows como um convidado virtualizado.
+* Você não está configurando o host de dados (e/S anexado) para inicializar a partir da SAN.
+
+
+
+
+ a| 
+Estação de gerenciamento de armazenamento
+ a| 
+* Você está usando uma rede de gerenciamento de 1 Gbps ou mais rápida.
+* Você está usando uma estação separada para gerenciamento, em vez do host de dados (e/S anexado).
+* Você está usando o gerenciamento fora da banda, no qual uma estação de gerenciamento de storage envia comandos ao sistema de storage por meio das conexões Ethernet ao controlador.
+* Você conetou a estação de gerenciamento à mesma sub-rede que as portas de gerenciamento de armazenamento.
+
+
+
+
+ a| 
+Endereçamento IP
+ a| 
+* Instalou e configurou um servidor DHCP.
+* * Ainda não* fez uma conexão Ethernet entre a estação de gerenciamento e o sistema de armazenamento.
+
+
+
+
+ a| 
+Provisionamento de storage
+ a| 
+* Você não usará volumes compartilhados.
+* Você criará pools em vez de grupos de volume.
+
+
+
+
+ a| 
+Protocolo: FC
+ a| 
+* Você fez todas as conexões FC do lado do host e ativou o zoneamento do switch.
+* Você está usando HBAs e switches FC compatíveis com NetApp.
+* Você está usando versões de driver e firmware FC HBA, conforme listado no http://mysupport.netapp.com/matrix["Ferramenta de Matriz de interoperabilidade do NetApp"^].
+
+
+
+
+ a| 
+Protocolo: ISCSI
+ a| 
+* Você está usando switches Ethernet capazes de transportar tráfego iSCSI.
+* Você configurou os switches Ethernet de acordo com a recomendação do fornecedor para iSCSI.
+
+
+
+
+ a| 
+Protocolo: SAS
+ a| 
+* Você está usando HBAs SAS compatíveis com NetApp.
+* Você está usando as versões de driver e firmware HBA SAS, conforme listado no http://mysupport.netapp.com/matrix["Ferramenta de Matriz de interoperabilidade do NetApp"^].
+
+
+|===

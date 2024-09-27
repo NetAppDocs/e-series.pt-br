@@ -1,0 +1,55 @@
+---
+sidebar: sidebar 
+permalink: vcenter-plugin/vc-olh-delete-host-or-host-cluster.html 
+keywords: vCenter plugin, Plugin for vCenter, SANtricity plugin for vCenter 
+summary: Você pode remover um host ou cluster de host para que os volumes não sejam mais associados a esse host. 
+---
+= Excluir host ou cluster de host
+:hardbreaks:
+:allow-uri-read: 
+:experimental: 
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./media/
+
+
+[role="lead"]
+Você pode remover um host ou cluster de host para que os volumes não sejam mais associados a esse host.
+
+.Sobre esta tarefa
+Tenha estas diretrizes em mente quando você excluir um host ou um cluster de host:
+
+* Quaisquer atribuições específicas de volume são excluídas e os volumes associados estão disponíveis para uma nova atribuição.
+* Se o host fizer parte de um cluster de host que tenha suas próprias atribuições específicas, o cluster de host não será afetado. No entanto, se o host fizer parte de um cluster de host que não tenha outras atribuições, o cluster de host e quaisquer outros hosts ou identificadores de porta de host associados herdarão quaisquer atribuições padrão.
+* Quaisquer identificadores de porta de host que foram associados ao host tornam-se indefinidos.
+
+
+.Passos
+. Na página Gerenciar, selecione a matriz de armazenamento com a conexão do host.
+. Selecione menu:provisionamento[Configurar hosts].
++
+A página Configurar hosts será exibida.
+
+. Selecione o host ou cluster de host que você deseja excluir e clique em *Excluir*.
++
+É apresentada a caixa de diálogo de confirmação.
+
+. Confirme se deseja executar a operação e clique em *Excluir*.
+
+
+.Resultados
+Se você excluir um host, o sistema executará as seguintes ações:
+
+* Exclui o host e, se aplicável, o remove do cluster de host.
+* Remove o acesso a quaisquer volumes atribuídos.
+* Retorna os volumes associados a um estado não atribuído.
+* Retorna qualquer identificador de porta de host associado ao host para um estado não associado. Se você excluir um cluster de host, o sistema executará as seguintes ações:
++
+** Exclui o cluster de host e seus hosts associados (se houver).
+** Remove o acesso a quaisquer volumes atribuídos.
+** Retorna os volumes associados a um estado não atribuído.
+** Retorna todos os identificadores de porta de host associados aos hosts para um estado não associado.
+
+
+

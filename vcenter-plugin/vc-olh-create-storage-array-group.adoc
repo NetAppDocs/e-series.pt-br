@@ -1,0 +1,26 @@
+---
+sidebar: sidebar 
+permalink: vcenter-plugin/vc-olh-create-storage-array-group.html 
+keywords: vCenter plugin, Plugin for vCenter, SANtricity plugin for vCenter 
+summary: O grupo de armazenamento define quais unidades fornecem o armazenamento que compõe o volume. 
+---
+= Crie um grupo de storage array
+:hardbreaks:
+:allow-uri-read: 
+:experimental: 
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./media/
+
+
+[role="lead"]
+Você cria grupos de armazenamento e adiciona matrizes de armazenamento aos grupos. O grupo de armazenamento define quais unidades fornecem o armazenamento que compõe o volume.
+
+*Passos*
+
+. Na página Gerenciar, selecione menu:Gerenciar grupos[criar grupo de matriz de armazenamento].
+. No campo *Nome*, digite um nome para o novo grupo.
+. Selecione as matrizes de armazenamento que pretende adicionar ao novo grupo.
+. Clique em *criar*.
+

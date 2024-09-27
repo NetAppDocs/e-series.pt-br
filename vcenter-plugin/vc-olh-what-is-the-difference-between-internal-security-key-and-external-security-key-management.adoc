@@ -1,0 +1,19 @@
+---
+sidebar: sidebar 
+permalink: vcenter-plugin/vc-olh-what-is-the-difference-between-internal-security-key-and-external-security-key-management.html 
+keywords: vCenter plugin, Plugin for vCenter, SANtricity plugin for vCenter 
+summary: Ao implementar o recurso Segurança da unidade, você pode usar uma chave de segurança interna ou uma chave de segurança externa para bloquear dados quando uma unidade habilitada for removida do storage de armazenamento. 
+---
+= Qual é a diferença entre a chave de segurança interna e o gerenciamento de chaves de segurança externas?
+:hardbreaks:
+:allow-uri-read: 
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./media/
+
+
+[role="lead"]
+Ao implementar o recurso Segurança da unidade, você pode usar uma chave de segurança interna ou uma chave de segurança externa para bloquear dados quando uma unidade habilitada for removida do storage de armazenamento.
+
+Uma chave de segurança é uma cadeia de carateres, que é compartilhada entre as unidades e controladores habilitados para segurança em um storage array. As chaves internas são mantidas na memória persistente do controlador. As chaves externas são mantidas em um servidor de gerenciamento de chaves separado, usando um KMIP (Key Management Interoperability Protocol).

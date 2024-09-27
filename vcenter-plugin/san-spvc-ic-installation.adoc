@@ -1,0 +1,96 @@
+---
+sidebar: sidebar 
+permalink: vcenter-plugin/san-spvc-ic-installation.html 
+keywords: install vCenter plugin, installing vCenter plugin, vCenter plugin, 
+summary: Instale ou atualize o plug-in de armazenamento do SANtricity para vCenter. 
+---
+= Instale ou atualize o plug-in de armazenamento para vCenter
+:hardbreaks:
+:allow-uri-read: 
+:experimental: 
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./media/
+
+
+[role="lead"]
+Siga estas etapas para instalar o plug-in de armazenamento para vCenter e verificar o Registro do plug-in. Você também pode atualizar o plugin usando estas instruções.
+
+
+
+== Reveja os pré-requisitos de instalação
+
+Certifique-se de que seus sistemas atendem aos requisitos do link:san-spvc-ic-reqs.html["Reveja os requisitos de instalação e atualização"].
+
+
+NOTE: O processo de atualização não preserva os arquivos *vcenter.properties*. Se você estiver atualizando, você deve cancelar o Registro do plugin antes da atualização. Uma vez que a atualização é bem-sucedida, você pode então Registrar o plugin novamente no vCSA.
+
+
+
+== Instale o software do plugin
+
+Para instalar o software do plugin:
+
+. Copie o arquivo do instalador para o host que será usado como servidor de aplicativos e acesse a pasta onde você baixou o instalador.
+. Clique duas vezes no arquivo de instalação:
++
+`santricity_storage_vcenterplugin-windows_x64-- nn.nn.nn.nnnn.exe`
+
++
+No nome do arquivo acima, `nn.nn.nn.nnnn` representa o número da versão.
+
+. Quando a instalação for iniciada, siga as instruções apresentadas no ecrã para ativar várias funcionalidades e introduzir alguns parâmetros de configuração. Se necessário, você pode alterar qualquer uma dessas seleções posteriormente nos arquivos de configuração.
++
+
+NOTE: Durante uma atualização, você não será solicitado a fornecer parâmetros de configuração.
+
++
+
+NOTE: Durante a instalação, você será solicitado a validar o certificado. Mantenha a caixa de seleção selecionada se você quiser impor a validação de certificado entre o plug-in e os arrays de armazenamento. Com essa aplicação, os certificados de matriz de armazenamento são verificados para serem confiáveis em relação ao plugin. Se os certificados não forem confiáveis, eles não poderão ser adicionados ao plugin. Se você quiser substituir a validação do certificado, desmarque a caixa de seleção para que todos os storages de armazenamento possam ser adicionados ao plugin usando certificados autoassinados. Para saber mais sobre certificados, consulte a ajuda on-line disponível na interface do plugin.
+
+. Quando a mensagem servidor Web iniciado for exibida, clique em *OK* para concluir a instalação e, em seguida, clique em *Concluído*.
+. Verifique se o servidor de aplicativos foi instalado com sucesso executando o comando *services.msc*.
+. Verifique se o serviço servidor de aplicativos (VCP), *Plugin de armazenamento NetApp SANtricity para vCenter*, foi instalado e o serviço foi iniciado.
++
+
+NOTE: Se necessário, você pode alterar as configurações de Validação de certificado e porta de serviço da Web após a instalação. No diretório de instalação, abra o arquivo wsconfig.xml. Para remover a Validação de certificados em matrizes de armazenamento, altere a `env` chave `trust.all.arrays`, para `true`. Para alterar a porta Web Services, modifique o `sslport` valor para o valor de porta desejado que varia de 0 a 65535. Certifique-se de que o número da porta utilizada não está ligado a outro processo. Quando terminar, salve as alterações e reinicie o servidor web do plugin. Se o valor de porta do servidor web do plugin for alterado após o Registro do plugin em um vCSA, então você deve cancelar o Registro e Registrar novamente o plugin para que o vCSA esteja se comunicando na porta alterada para o servidor web do plugin.
+
+
+
+
+
+== Registre o plug-in com um vCenter Server Appliance
+
+Depois que o software do plugin é instalado, Registre o plugin com um vCSA.
+
+
+NOTE: O plugin só pode ser registrado em um vCSA de cada vez. Para se Registrar em um vCSA diferente, você deve cancelar o Registro do plug-in do vCSA atual e desinstalá-lo do host do aplicativo. Em seguida, você pode reinstalar o plugin e registrá-lo para o outro vCSA.
+
+. Abra um prompt através da linha de comando e navegue até o seguinte diretório:
++
+`<install directory>\vcenter-register\bin`
+
+. Execute o arquivo *vcenter-register.bat*:
+`vcenter-register.bat ^
+    -action registerPlugin ^
+    -vcenterHostname <vCenter FQDN> ^
+    -username <Administrator username> ^`
+. Verifique se o script foi bem-sucedido.
+
+
+Os registos são guardados no `%install_dir%/working/logs/vc-registration.log`.
+
+
+
+== Verifique o Registro do plugin
+
+Depois que o plug-in for instalado e o script de Registro for executado, verifique se o plug-in foi registrado com sucesso no vCenter Server Appliance.
+
+. Abra o vSphere Client no vCenter Server Appliance.
+. Na barra de menus, selecione menu:Administrador[Plug-ins do cliente].
+. Verifique se o plug-in de armazenamento para vCenter está listado como *ativado*.
++
+Se o plug-in estiver listado como Desativado com uma mensagem de erro informando que ele não pode se comunicar com o servidor de aplicativos, verifique se o número da porta definido para o servidor de aplicativos está habilitado para passar por quaisquer firewalls que possam estar em uso. O número da porta TCP (Transmission Control Protocol) do servidor de aplicativos padrão é 8445.
+
+

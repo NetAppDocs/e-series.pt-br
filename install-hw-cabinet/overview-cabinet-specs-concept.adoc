@@ -1,0 +1,450 @@
+---
+permalink: install-hw-cabinet/overview-cabinet-specs-concept.html 
+sidebar: sidebar 
+keywords: 3040 40U cabinet specs, cabinet installation, drive tray installation, controller installation, shelf installation, E2800, E5700, EF300, EF600, 
+summary: Reveja a visão geral e as especificações para a instalação do gabinete. 
+---
+= Especificações do gabinete
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+O gabinete modelo 3040 40U tem estas caraterísticas padrão:
+
+* Uma porta traseira que pode ser trancada e trancada
+* Trilhos de suporte da Associação Eletrônica padrão da indústria (EIA) que fornecem furos de montagem para a instalação de dispositivos em um gabinete padrão de 48,3 cm (19 pol.) de largura
+* Quatro rodízios de rolos e quatro pés de nivelamento ajustáveis que estão localizados abaixo do gabinete para mover o gabinete e, em seguida, nivelar o gabinete em seu local final
+* Um pé de estabilidade que estabiliza o gabinete depois de instalado em seu local permanente
+* Aberturas de acesso para cabos de interface
+* Duas unidades de distribuição de energia CA (PDUs) que fornecem conexão de energia integrada e capacidade de manuseio de energia
+
+
+As figuras a seguir mostram uma visão frontal (esquerda) e uma visão traseira (direita) do gabinete.
+
+image::../media/83000_07_dwg_3040_cabinet_with_callouts.gif[83000 07 dwg 3040 armário com chamadas]
+
+|===
+
+
+ a| 
+1.
+ a| 
+Cobertura de ventilação
+
+
+
+ a| 
+2.
+ a| 
+Aberturas de acesso ao cabo de interface
+
+
+
+ a| 
+3.
+ a| 
+Placa traseira
+
+
+
+ a| 
+4.
+ a| 
+Calhas de suporte EIA
+
+
+
+ a| 
+5.
+ a| 
+Trilhos de suporte verticais
+
+
+
+ a| 
+6.
+ a| 
+Trilhos de montagem do gabinete
+
+
+
+ a| 
+7.
+ a| 
+Pé de estabilidade
+
+
+
+ a| 
+8.
+ a| 
+Pés niveladores ajustáveis
+
+
+
+ a| 
+9.
+ a| 
+Unidade de distribuição de energia (uma de duas)
+
+
+
+ a| 
+10.
+ a| 
+Caixas de entrada de alimentação CA
+
+
+
+ a| 
+11.
+ a| 
+Frente do gabinete
+
+
+
+ a| 
+12.
+ a| 
+Parte traseira do gabinete
+
+|===
+
+CAUTION: *Risco de lesões corporais* -- se a metade inferior do gabinete estiver vazia, não instale componentes na metade superior do gabinete. Se a metade superior do gabinete for muito pesada para a metade inferior, o gabinete pode cair e causar lesões corporais. Instale sempre um componente na posição mais baixa disponível no gabinete.
+
+
+CAUTION: *Risco de lesões corporais* -- mova apenas um gabinete preenchido com uma empilhadeira ou ajuda adequada de outras pessoas. Sempre empurre o gabinete da frente para evitar que ele caia. Um gabinete totalmente preenchido pode pesar mais de 2000 lb (909 kg). O gabinete é difícil de mover, mesmo em uma superfície plana. Se você precisar mover o gabinete ao longo de uma superfície inclinada, remova os componentes da metade superior do gabinete e certifique-se de ter a ajuda adequada.
+
+
+NOTE: Não é possível instalar gavetas de controladora E2860U ou E5760U ou um compartimento de unidades de DE460CU em um gabinete 3040 40UU.
+
+
+NOTE: Se um gabinete 3040 estiver totalmente preenchido com DE6600 bandejas, ele pesa mais de 2756 lb (1250,1 kg).
+
+
+
+== Requisitos de energia e dissipação de calor
+
+O gabinete inclui as seguintes especificações para dissipação de energia e calor.
+
+
+
+=== Potência nominal
+
+O gabinete 3040 40U é classificado entre 200 VCA e 240 VCA entre 50 Hz e 60 Hz e opera até ±10% desse intervalo.
+
+
+
+=== Unidades de distribuição de energia (PDUs)
+
+O gabinete inclui duas unidades de distribuição de energia CA (PDUs) idênticas, com cada PDU fornecendo até 72A W de energia utilizável. As PDUs são montadas verticalmente na parte de trás do gabinete, e cada PDU inclui seis bancos de energia 12A. Cada banco de potência contém quatro tomadas IEC 60320-C19 e um disjuntor 15A. Cada PDU tem um total de 24 saídas e 6 disjuntores.
+
+Cada uma das duas PDUs tem três caixas de entrada de energia, que estão localizadas na parte inferior do gabinete. Cada caixa de entrada de alimentação fornece energia a oito das tomadas de alimentação, da seguinte forma:
+
+* A caixa de entrada de alimentação 1, que tem o cabo de alimentação C1, fornece alimentação às oito tomadas inferiores
+* A caixa de entrada de alimentação 2, que tem o cabo de alimentação C2, fornece energia às oito tomadas do meio
+* A caixa de entrada de alimentação 3, que tem cabo de alimentação C3, fornece alimentação para as oito principais tomadas
+
+
+As caixas de entrada de energia são identificadas como C1, C2 e C3, onde os cabos de alimentação se conetam aos módulos.
+
+
+
+=== Cálculos de energia e cálculos de calor para o gabinete
+
+|===
+| Componente | KVA | Watts | BTU/HR 
+
+
+ a| 
+PDU do armário (72A PDUs)
+ a| 
+14,4
+ a| 
+14400
+ a| 
+49176
+
+
+
+ a| 
+Gabinete PDU/12A banco (72A PDUs)
+ a| 
+2,40*
+ a| 
+2400*
+ a| 
+8196*
+
+
+
+ a| 
+E2612 bandeja de unidades e controlador
+ a| 
+0,437
+ a| 
+433
+ a| 
+1476
+
+
+
+ a| 
+E2624 bandeja de unidades e controlador
+ a| 
+0,487
+ a| 
+482
+ a| 
+1644
+
+
+
+ a| 
+E2660 bandeja de unidades e controlador
+ a| 
+1,128
+ a| 
+1117
+ a| 
+3810
+
+
+
+ a| 
+E2712 bandeja de unidades e controlador
+ a| 
+0,516
+ a| 
+511
+ a| 
+1744
+
+
+
+ a| 
+E2724 bandeja de unidades e controlador
+ a| 
+0,561
+ a| 
+555
+ a| 
+1894
+
+
+
+ a| 
+E2760 bandeja de unidades e controlador
+ a| 
+1,205
+ a| 
+1193
+ a| 
+4072
+
+
+
+ a| 
+E5412 bandeja de unidades e controlador
+ a| 
+0,558
+ a| 
+552
+ a| 
+1883
+
+
+
+ a| 
+Bandeja de unidades e controlador E5424 e array flash EF540
+ a| 
+0,607
+ a| 
+601
+ a| 
+2051
+
+
+
+ a| 
+E5460 bandeja de unidades e controlador
+ a| 
+1,254
+ a| 
+1242
+ a| 
+4237
+
+
+
+ a| 
+E5512 bandeja de unidades e controlador
+ a| 
+0,587
+ a| 
+581
+ a| 
+1982
+
+
+
+ a| 
+Bandeja de unidades e controlador E5524 e array flash EF550
+ a| 
+0,637
+ a| 
+630
+ a| 
+2150
+
+
+
+ a| 
+E5560 bandeja de unidades e controlador
+ a| 
+1,285
+ a| 
+1272
+ a| 
+4342
+
+
+
+ a| 
+E5612 bandeja de unidades e controlador
+ a| 
+0,625
+ a| 
+619
+ a| 
+2111
+
+
+
+ a| 
+Bandeja de unidades e controlador E5624 e array flash EF560
+ a| 
+0,675
+ a| 
+668
+ a| 
+2279
+
+
+
+ a| 
+E5660 bandeja de unidades e controlador
+ a| 
+1,325
+ a| 
+1312
+ a| 
+4477
+
+
+
+ a| 
+Bandeja de unidades de DE1600 TB
+ a| 
+0,325
+ a| 
+322
+ a| 
+1099
+
+
+
+ a| 
+Bandeja de unidades de DE5600 TB
+ a| 
+0,375
+ a| 
+371
+ a| 
+1267
+
+
+
+ a| 
+Bandeja de unidades de DE6600 TB
+ a| 
+0.1.011
+ a| 
+1001
+ a| 
+3415
+
+|===
+
+
+== Número máximo de bandejas
+
+O número máximo de bandejas que você pode instalar em um gabinete 3040 40U depende da altura de cada bandeja em unidades de rack (U).
+
+
+
+=== Alturas da bandeja em unidades de rack (U)
+
+Cada unidade de rack é de 1,75 polegadas (4,45 cm). Por exemplo, você pode instalar até dez bandejas 4U, até vinte bandejas 2U ou uma combinação de bandejas 2U e 4U, até 40U.
+
+|===
+| Tabuleiro | Unidades de rack (U) 
+
+
+ a| 
+Bandeja de unidades e controlador E2x12 ou E2x24
+ a| 
+2U
+
+
+
+ a| 
+Bandeja de unidades e controlador E2x60
+ a| 
+4U
+
+
+
+ a| 
+Bandeja de unidades e controlador E5x12 ou E5x24
+ a| 
+2U
+
+
+
+ a| 
+Bandeja de unidades e controlador E5x60
+ a| 
+4U
+
+
+
+ a| 
+Array Flash EF5x0
+ a| 
+2U
+
+
+
+ a| 
+Bandeja de unidades de DE1600 TB
+ a| 
+2U
+
+
+
+ a| 
+Bandeja de unidades de DE5600 TB
+ a| 
+2U
+
+
+
+ a| 
+Bandeja de unidades de DE6600 TB
+ a| 
+4U
+
+|===

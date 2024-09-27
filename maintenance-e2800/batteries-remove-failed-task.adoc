@@ -1,0 +1,49 @@
+---
+permalink: maintenance-e2800/batteries-remove-failed-task.html 
+sidebar: sidebar 
+keywords: E2800 battery fail, E2800 battery, E2800 battery replacement, replace E2800 battery, replacing E2800 battery, E2800, E-Series, eseries 
+summary: Depois de remover o recipiente do controlador da prateleira do controlador, pode remover a bateria. 
+---
+= Remova a bateria E2800 com falha
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Depois de remover o recipiente do controlador da prateleira do controlador, pode remover a bateria.
+
+.Passos
+. Remova a tampa do recipiente do controlador pressionando o botão e deslizando a tampa para fora.
+. Confirme se o LED verde dentro do controlador (entre a bateria e os DIMMs) está desligado.
++
+Se este LED verde estiver ligado, o controlador ainda está a utilizar a bateria. Deve aguardar que este LED se apague antes de remover quaisquer componentes.
+
++
+image::../media/28_dwg_e2800_internal_cache_active_led_maint-e2800.gif[28 dwg e2800 cache interno ativo led mint e2800]
+
++
+*(1)* _Cache interno ativo_
+
++
+*(2)* _bateria_
+
+. Localize a trava de liberação azul da bateria.
+. Desengate a bateria empurrando a trava de liberação para baixo e afastando-a do recipiente do controlador.
++
+image::../media/28_dwg_e2800_remove_battery_maint-e2800.gif[28 dwg e2800 remover a manutenção da bateria e2800]
+
++
+*(1)* _trava de liberação da bateria_
+
++
+*(2)* _bateria_
+
+. Levante a bateria e deslize-a para fora do recipiente do controlador.
+. Siga os procedimentos adequados para a sua localização para reciclar ou eliminar a bateria avariada.
++
+
+CAUTION: Para cumprir com os regulamentos da Associação Internacional de Transporte aéreo (IATA), nunca envie uma bateria de lítio por via aérea, a menos que seja instalada dentro da prateleira do controlador.
+
+. Vá para link:batteries-install-new-task.html["Instale uma bateria nova"].
+

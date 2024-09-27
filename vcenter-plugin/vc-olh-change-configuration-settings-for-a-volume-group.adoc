@@ -1,0 +1,78 @@
+---
+sidebar: sidebar 
+permalink: vcenter-plugin/vc-olh-change-configuration-settings-for-a-volume-group.html 
+keywords: vCenter plugin, Plugin for vCenter, SANtricity plugin for vCenter 
+summary: Edite as configurações de um grupo de volume, incluindo seu nome e nível RAID. 
+---
+= Alterar as definições de configuração para um grupo de volumes
+:hardbreaks:
+:allow-uri-read: 
+:experimental: 
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./media/
+
+
+[role="lead"]
+Você pode editar as configurações de um grupo de volumes, incluindo seu nome e nível RAID.
+
+.Antes de começar
+Se você estiver alterando o nível RAID para acomodar as necessidades de desempenho dos aplicativos que estão acessando o grupo de volumes, certifique-se de atender aos seguintes pré-requisitos:
+
+* O grupo de volume tem de estar no estado ideal.
+* Você precisa ter capacidade suficiente no grupo de volumes para converter para o novo nível RAID.
+
+
+.Passos
+. Na página Gerenciar, selecione o storage array com o grupo de volumes.
+. Selecione menu:provisionamento[Configurar pools e grupos de volume].
+. Selecione o grupo de volume que deseja editar e clique em *Exibir/Editar configurações*.
++
+A caixa de diálogo Configurações do grupo de volume é exibida.
+
+. Selecione a guia *Configurações* e edite as configurações do grupo de volume conforme apropriado.
++
+.Detalhes do campo
+[%collapsible]
+====
+[cols="25h,~"]
+|===
+| Definição | Descrição 
+
+
+ a| 
+Nome
+ a| 
+Pode alterar o nome fornecido pelo utilizador do grupo de volumes. É necessário especificar um nome para um grupo de volumes.
+
+
+
+ a| 
+Nível RAID
+ a| 
+Selecione o novo nível RAID no menu suspenso.
+
+** *RAID 0 striping* -- oferece alto desempenho, mas não fornece redundância de dados. Se uma única unidade falhar no grupo de volumes, todos os volumes associados falharão e todos os dados serão perdidos. Um grupo RAID de distribuição combina duas ou mais unidades em uma unidade lógica grande.
+** *Espelhamento RAID 1* - oferece alto desempenho e a melhor disponibilidade de dados e é adequado para armazenar dados confidenciais em nível corporativo ou pessoal. Protege seus dados espelhando automaticamente o conteúdo de uma unidade para a segunda unidade no par espelhado. Ele fornece proteção em caso de falha única de unidade.
+** *RAID 10 striping/mirroring* -- fornece uma combinação de RAID 0 (striping) e RAID 1 (espelhamento) e é obtida quando quatro ou mais unidades são selecionadas. O RAID 10 é adequado para aplicações de transações de alto volume, como um banco de dados, que exigem alto desempenho e tolerância a falhas.
+** *RAID 5* -- ideal para ambientes multiusuário (como armazenamento de banco de dados ou sistema de arquivos) onde o tamanho típico de e/S é pequeno e há uma alta proporção de atividade de leitura.
+** *RAID 6* -- ideal para ambientes que exigem proteção de redundância além do RAID 5, mas que não exigem alto desempenho de gravação. O RAID 3 só pode ser atribuído a grupos de volume usando a interface de linha de comando (CLI). Quando você altera o nível RAID, você não pode cancelar essa operação depois que ela for iniciada. Durante a alteração, seus dados permanecem disponíveis.
+
+
+
+
+ a| 
+Capacidade de otimização (somente arrays EF600)
+ a| 
+Quando um grupo de volumes é criado, é gerada uma capacidade de otimização recomendada que fornece um equilíbrio entre capacidade disponível e desempenho e vida útil do desgaste. Você pode ajustar esse equilíbrio movendo o controle deslizante para a direita para melhor desempenho e vida útil do desgaste à custa do aumento da capacidade disponível, ou movendo-o para a esquerda para maior capacidade disponível à custa de um melhor desempenho e vida útil do desgaste. As unidades SSD terão vida útil mais longa e melhor desempenho máximo de gravação quando uma parte de sua capacidade não for alocada. Para unidades associadas a um grupo de volumes, a capacidade não alocada é composta pela capacidade livre de um grupo (capacidade não usada por volumes) e por uma parte da capacidade utilizável reservada como capacidade de otimização adicional. A capacidade de otimização adicional garante um nível mínimo de capacidade de otimização, reduzindo a capacidade utilizável, e, como tal, não está disponível para criação de volume.
+
+|===
+====
+. Clique em *Salvar*.
+
+
+Uma caixa de diálogo de confirmação será exibida se a capacidade for reduzida, a redundância de volume for perdida ou a proteção contra perda de gaveta/gaveta for perdida como resultado da alteração do nível RAID. Selecione *Sim* para continuar; caso contrário, clique em *não*.
+
+.Resultado
+Se você alterar o nível RAID para um grupo de volumes, o plugin altera os níveis RAID de cada volume que compreende o grupo de volumes. O desempenho pode ser ligeiramente afetado durante a operação.

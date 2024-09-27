@@ -1,0 +1,17 @@
+---
+sidebar: sidebar 
+permalink: vcenter-plugin/vc-olh-why-are-these-volumes-not-associated-with-a-workload.html 
+keywords: vCenter plugin, Plugin for vCenter, SANtricity plugin for vCenter 
+summary: 'Os volumes não são associados a uma carga de trabalho se tiverem sido criados usando a interface de linha de comando (CLI) ou se tiverem sido migrados (importados/exportados) de um storage array diferente.' 
+---
+= Por que esses volumes não estão associados a uma carga de trabalho?
+:hardbreaks:
+:allow-uri-read: 
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./media/
+
+
+[role="lead"]
+Os volumes não são associados a uma carga de trabalho se tiverem sido criados usando a interface de linha de comando (CLI) ou se tiverem sido migrados (importados/exportados) de um storage array diferente.

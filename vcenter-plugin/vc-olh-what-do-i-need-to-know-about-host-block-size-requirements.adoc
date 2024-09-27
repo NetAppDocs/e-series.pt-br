@@ -1,0 +1,30 @@
+---
+sidebar: sidebar 
+permalink: vcenter-plugin/vc-olh-what-do-i-need-to-know-about-host-block-size-requirements.html 
+keywords: vCenter plugin, Plugin for vCenter, SANtricity plugin for vCenter 
+summary: 'Para sistemas EF300 e EF600, um volume pode ser definido para suportar um tamanho de bloco de 512 bytes ou 4KiB (também chamado de "tamanho do setor"). Você deve definir o valor correto durante a criação do volume.' 
+---
+= O que eu preciso saber sobre os requisitos de tamanho de bloco de host?
+:hardbreaks:
+:allow-uri-read: 
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./media/
+
+
+[role="lead"]
+Para sistemas EF300 e EF600, um volume pode ser definido para suportar um tamanho de bloco de 512 bytes ou 4KiB (também chamado de "tamanho do setor"). Você deve definir o valor correto durante a criação do volume. Se possível, o sistema sugere o valor padrão apropriado.
+
+Antes de definir o tamanho do bloco de volume, leia as seguintes limitações e diretrizes.
+
+* Alguns sistemas operacionais e máquinas virtuais (especialmente VMware, neste momento) exigem um tamanho de bloco de 512 bytes e não suportam 4KiB, portanto, certifique-se de conhecer os requisitos do host antes de criar um volume. Normalmente, você pode obter o melhor desempenho definindo um volume para apresentar um tamanho de bloco de 4KiB KB; no entanto, certifique-se de que seu host permita blocos de 4KiB TB (ou "4Kn TB").
+* O tipo de unidades que você selecionar para o seu pool ou grupo de volumes também determina quais tamanhos de bloco de volume são suportados, da seguinte forma:
++
+** Se você criar um grupo de volumes usando unidades que gravam em blocos de 512 bytes, então você só poderá criar volumes com blocos de 512 bytes.
+** Se você criar um grupo de volumes usando unidades que gravam em blocos 4KiB, poderá criar volumes com blocos 512 ou 4KiB.
+
+
+* Se o array tiver uma placa de interface de host iSCSI, todos os volumes estarão limitados a blocos de 512 bytes (independentemente do tamanho do bloco do grupo de volumes). Isso se deve a uma implementação de hardware específica.
+* Não é possível alterar um tamanho de bloco depois de definido. Se você precisar alterar um tamanho de bloco, exclua o volume e recriá-lo.
+

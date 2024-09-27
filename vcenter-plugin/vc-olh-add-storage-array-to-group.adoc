@@ -1,0 +1,26 @@
+---
+sidebar: sidebar 
+permalink: vcenter-plugin/vc-olh-add-storage-array-to-group.html 
+keywords: vCenter plugin, Plugin for vCenter, SANtricity plugin for vCenter 
+summary: Adicione um ou mais arrays de armazenamento a um grupo criado pelo usuário. 
+---
+= Adicione storage array ao grupo
+:hardbreaks:
+:allow-uri-read: 
+:experimental: 
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./media/
+
+
+[role="lead"]
+Você pode adicionar um ou mais arrays de armazenamento a um grupo criado pelo usuário.
+
+*Passos*
+
+. Na exibição principal, selecione *Gerenciar* e, em seguida, selecione o grupo ao qual você deseja adicionar matrizes de armazenamento.
+. Selecione menu:Gerenciar grupos[Adicionar matrizes de armazenamento ao grupo].
+. Selecione as matrizes de armazenamento que pretende adicionar ao grupo.
+. Clique em *Add*.
+

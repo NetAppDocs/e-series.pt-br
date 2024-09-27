@@ -1,0 +1,91 @@
+---
+permalink: maintenance-e2800/batteries-overview-requirements-concept.html 
+sidebar: sidebar 
+keywords: E2800 battery fail, E2800 battery, E2800 battery replacement, replace E2800 battery, replacing E2800 battery, E2800, E-Series, eseries 
+summary: Reveja os requisitos e considerações de substituição da bateria do E2800. 
+---
+= Requisitos para a substituição da bateria E2800
+:allow-uri-read: 
+:experimental: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Antes de substituir uma bateria de E2800 V, reveja os requisitos e considerações.
+
+Cada recipiente do controlador inclui uma bateria que preserva os dados armazenados em cache se a energia CA falhar.
+
+
+
+== Alertas do Recovery Guru
+
+Se o Guru de recuperação no Gerenciador de sistema do SANtricity relatar um dos seguintes status, você deve substituir a bateria afetada:
+
+* Falha da bateria
+* Substituição da bateria necessária
+
+
+A partir do Gestor do sistema SANtricity, reveja os detalhes no Guru de recuperação para confirmar que existe um problema com uma bateria e para garantir que não é necessário resolver primeiro outros itens.
+
+
+
+== Descrição geral do procedimento
+
+Para proteger seus dados, você deve substituir uma bateria com falha o mais rápido possível.
+
+Segue-se uma descrição geral dos passos necessários para substituir uma bateria num controlador E2800:
+
+. Prepare-se para a substituição, seguindo as etapas apropriadas para uma configuração duplex ou simplex.
+. Retire o recipiente do controlador.
+. Remova a bateria com falha.
+. Instale a nova bateria.
+. Volte a instalar o recipiente do controlador.
+. Conclua a substituição, seguindo as etapas apropriadas para uma configuração duplex ou simplex.
+
+
+
+
+== Configuração duplex ou simplex
+
+As etapas para substituir uma bateria dependem se você tem um ou dois controladores, como segue:
+
+|===
+| Se a sua matriz de armazenamento tem... | Você deve... 
+
+
+ a| 
+Dois controladores (duplex)
+ a| 
+. Coloque o controlador offline.
+. Retire o recipiente do controlador.
+. Substitua a bateria.
+. Substitua o recipiente do controlador.
+. Coloque o controlador online.
+
+
+
+
+ a| 
+Um controlador (simplex)
+ a| 
+. Parar as operações de e/S do host.
+. Desligue o compartimento do controlador.
+. Retire o recipiente do controlador.
+. Substitua a bateria.
+. Substitua o recipiente do controlador.
+. Aplique energia na gaveta do controlador.
+
+
+|===
+
+
+== Requisitos para substituir uma bateria
+
+Se você pretende substituir uma bateria com falha, você deve ter:
+
+* Uma bateria de substituição.
+* Uma pulseira antiestática, ou você tomou outras precauções antiestáticas.
+* Etiquetas para identificar cada cabo que está ligado ao recipiente do controlador.
+* Uma estação de gerenciamento com um navegador que pode acessar o Gerenciador de sistema do SANtricity para o controlador. (Para abrir a interface do System Manager, aponte o navegador para o nome de domínio ou endereço IP do controlador.)
+

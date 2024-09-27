@@ -1,0 +1,70 @@
+---
+sidebar: sidebar 
+permalink: vcenter-plugin/vc-olh-upgrade-overview.html 
+keywords: vCenter plugin, Plugin for vCenter, SANtricity plugin for vCenter 
+summary: Você pode gerenciar atualizações de software SANtricity e NVSRAM para vários storage arrays do mesmo tipo. 
+---
+= Visão geral da atualização
+:hardbreaks:
+:allow-uri-read: 
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./media/
+
+
+[role="lead"]
+No plug-in de armazenamento para vCenter, você pode gerenciar atualizações de software SANtricity e NVSRAM para vários storages do mesmo tipo.
+
+
+
+== Atualizar fluxo de trabalho
+
+As etapas a seguir fornecem um fluxo de trabalho de alto nível para a realização de atualizações de software:
+
+. Transfira o ficheiro SANtricity os mais recente a partir do site de suporte (está disponível uma hiperligação na página de suporte). Salve o arquivo no sistema host de gerenciamento (o host onde você acessa o plug-in em um navegador) e, em seguida, descompacte o arquivo.
+. No plugin, você pode carregar o arquivo de software do SANtricity os e o arquivo NVSRAM no repositório (uma área do servidor onde os arquivos são armazenados).
+. Depois que os arquivos são carregados no repositório, você pode selecionar o arquivo a ser usado na atualização. Na página Atualizar software SANtricity os, selecione o arquivo de software do sistema operacional e o arquivo NVSRAM. Depois de selecionar um ficheiro de software, é apresentada nesta página uma lista de matrizes de armazenamento compatíveis. Em seguida, selecione as matrizes de armazenamento que pretende atualizar com o novo software. (Não é possível selecionar matrizes incompatíveis.)
+. Em seguida, você pode iniciar uma transferência e ativação imediata de software, ou você pode optar por preparar os arquivos para ativação posteriormente. Durante o processo de atualização, o plugin executa as seguintes tarefas:
++
+** Executa uma verificação de integridade nos storage arrays para determinar se existem condições que possam impedir a conclusão da atualização. Se algum array falhar na verificação de integridade, você pode pular esse array específico e continuar a atualização para os outros, ou você pode parar todo o processo e solucionar problemas dos arrays que não passaram.
+** Transfere os arquivos de atualização para cada controlador.
+** Reinicializa os controladores e ativa o novo software do sistema operacional, um controlador de cada vez. Durante a ativação, o arquivo do sistema operacional existente é substituído pelo novo arquivo.
+
+
+
+
+
+NOTE: Você também pode especificar que o software está ativado posteriormente.
+
+
+
+== Considerações sobre a atualização
+
+Antes de atualizar vários storages de armazenamento, revise as principais considerações como parte do Planejamento.
+
+
+
+=== Versões atuais
+
+Você pode visualizar as versões atuais do software SANtricity os na página Gerenciar do plug-in de armazenamento para vCenter para cada storage array descoberto. A versão é mostrada na coluna Software do SANtricity os. As informações do firmware da controladora e da NVSRAM estão disponíveis em uma caixa de diálogo pop-up quando você clica na versão do sistema operacional em cada linha.
+
+
+
+=== Outros componentes que exigem atualização
+
+Como parte do processo de atualização, você também pode precisar atualizar o driver multipath/failover do host ou o driver HBA para que o host possa interagir com os controladores corretamente. Para obter informações sobre compatibilidade, consulte o link:https://imt.netapp.com/matrix/["Ferramenta de Matriz de interoperabilidade"^].
+
+
+
+=== Controladores duplos
+
+Se um storage array contiver dois controladores e você tiver um driver multipath instalado, o storage array poderá continuar processando e/S durante a atualização. Durante a atualização, ocorre o seguinte processo:
+
+. O controlador A faz failover de todos os LUNs para o controlador B.
+. A atualização ocorre no controlador A..
+. O controlador A recupera os LUNs e todos os LUNs do controlador B.
+. A atualização ocorre no controlador B.
+
+
+Após a conclusão da atualização, talvez seja necessário redistribuir manualmente os volumes entre as controladoras para garantir que os volumes voltem para a controladora proprietária correta.

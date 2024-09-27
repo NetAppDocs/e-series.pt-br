@@ -1,0 +1,66 @@
+---
+sidebar: sidebar 
+permalink: vcenter-plugin/vc-olh-view-ssd-cache-statistics.html 
+keywords: vCenter plugin, Plugin for vCenter, SANtricity plugin for vCenter 
+summary: Exibir estatísticas do cache SSD, como leituras, gravações, acertos de cache, porcentagem de alocação de cache e porcentagem de utilização de cache. 
+---
+= Exibir estatísticas de cache SSD
+:hardbreaks:
+:allow-uri-read: 
+:experimental: 
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./media/
+
+
+[role="lead"]
+É possível exibir estatísticas do cache SSD, como leituras, gravações, acertos de cache, porcentagem de alocação de cache e porcentagem de utilização de cache.
+
+
+NOTE: Este recurso não está disponível no sistema de armazenamento EF600 ou EF300.
+
+.Sobre esta tarefa
+As estatísticas nominais, que são um subconjunto das estatísticas detalhadas, são mostradas na caixa de diálogo View SSD Cache Statistics (Exibir estatísticas de cache SSD). Você pode exibir estatísticas detalhadas para o cache SSD somente quando exportar todas as estatísticas SSD para um arquivo .csv.
+
+Ao rever e interpretar as estatísticas, tenha em mente que algumas interpretações são derivadas olhando para uma combinação de estatísticas.
+
+.Passos
+. Na página Gerenciar, selecione a matriz de armazenamento com o cache SSD.
+. Selecione menu:provisionamento[Configurar pools e grupos de volume].
+. Selecione o cache SSD para o qual você deseja exibir estatísticas e clique em menu:mais[View SSD Cache] statistics.
++
+A caixa de diálogo View SSD Cache Statistics (Visualizar estatísticas de cache SSD) é exibida e exibe as estatísticas nominais para o cache SSD selecionado.
+
++
+.Detalhes do campo
+[%collapsible]
+====
+[cols="25h,~"]
+|===
+| Definição | Descrição 
+
+
+| Lê | Mostra o número total de leituras de host dos volumes habilitados para cache SSD. Quanto maior a proporção de leituras para gravações, melhor é a operação do cache. 
+
+
+| Gravações | O número total de gravações de host nos volumes habilitados para cache SSD. Quanto maior a proporção de leituras para gravações, melhor é a operação do cache. 
+
+
+| Cache hits | Mostra o número de acessos de cache. 
+
+
+| Cache atinge % | Mostra a porcentagem de acertos de cache. Este número é derivado de hits de cache / (leituras e gravações). A porcentagem de acerto do cache deve ser superior a 50 por cento para operação efetiva do cache SSD. 
+
+
+| Alocação de cache % | Mostra a porcentagem de armazenamento em cache SSD que é alocado, expressa como uma porcentagem do armazenamento em cache SSD disponível para este controlador e é derivado de bytes alocados / bytes disponíveis. 
+
+
+| % De utilização de cache | Mostra a porcentagem de armazenamento em cache SSD que contém dados de volumes ativados, expressos como uma porcentagem de armazenamento em cache SSD alocado. Esse valor representa a utilização ou a densidade do cache SSD. Derivado de bytes alocados / bytes disponíveis. 
+
+
+| Exportar tudo | Exporta todas as estatísticas de cache SSD para um formato CSV. O arquivo exportado contém todas as estatísticas disponíveis para o cache SSD (nominal e detalhada). 
+|===
+====
+. Clique em *Cancelar* para fechar a caixa de diálogo.
+

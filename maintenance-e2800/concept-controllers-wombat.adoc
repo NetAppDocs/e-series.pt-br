@@ -1,0 +1,14 @@
+---
+permalink: maintenance-e2800/concept-controllers-wombat.html 
+sidebar: sidebar 
+keywords: controller, board, firmware, software, control, drive, implement, system, manager, function, convert, duplex 
+summary: Um controlador consiste em uma placa, firmware e software. Controla as unidades e implementa as funções do System Manager. Esta seção descreve como converter para uma configuração duplex adicionando um segundo controlador e como substituir um controlador em uma configuração simplex e em uma configuração duplex. 
+---
+= Controladores
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Um controlador consiste em uma placa, firmware e software. Controla as unidades e implementa as funções do System Manager. Esta seção descreve como converter para uma configuração duplex adicionando um segundo controlador e como substituir um controlador em uma configuração simplex e em uma configuração duplex.

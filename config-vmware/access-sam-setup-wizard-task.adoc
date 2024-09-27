@@ -1,0 +1,96 @@
+---
+permalink: config-vmware/access-sam-setup-wizard-task.html 
+sidebar: sidebar 
+keywords: access System Manager vmware, express vmware configuration,software configuration, vmware host, E2800, E5700, EF300, EF600, E-Series, eseries 
+summary: Você usa o assistente de configuração no Gerenciador de sistema do SANtricity para configurar sua matriz de armazenamento. 
+---
+= Acesse o Gerenciador de sistema do SANtricity e use o assistente de configuração
+:allow-uri-read: 
+:experimental: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Para configurar a matriz de armazenamento, pode utilizar o assistente de configuração no Gestor de sistema do SANtricity.
+
+O SANtricity System Manager é uma interface baseada na Web incorporada em cada controlador. Para acessar a interface do usuário, você aponta um navegador para o endereço IP do controlador. Um assistente de configuração ajuda você a começar com a configuração do sistema.
+
+.Antes de começar
+Certifique-se de que tem o seguinte:
+
+* Gerenciamento fora da banda.
+* Uma estação de gerenciamento para acessar o Gerenciador de sistema do SANtricity que inclui um dos seguintes navegadores:
++
+|===
+| Navegador | Versão mínima 
+
+
+ a| 
+Google Chrome
+ a| 
+89
+
+
+
+ a| 
+Microsoft Edge
+ a| 
+90
+
+
+
+ a| 
+Mozilla Firefox
+ a| 
+80
+
+
+
+ a| 
+Safari
+ a| 
+14
+
+|===
+
+
+.Sobre esta tarefa
+Se for um utilizador iSCSI, certifique-se de que fechou o assistente de configuração durante a configuração do iSCSI.
+
+O assistente reinicia automaticamente quando você abre o System Manager ou atualiza o navegador e _pelo menos uma_ das seguintes condições é atendida:
+
+* Não foram detetados pools e grupos de volume.
+* Nenhuma carga de trabalho é detetada.
+* Nenhuma notificação está configurada.
+
+
+Se o assistente de configuração não for apresentado automaticamente, contacte o suporte técnico.
+
+.Passos
+. No seu navegador, insira o seguinte URL: `+https://<DomainNameOrIPAddress>+`
++
+`IPAddress` é o endereço de uma das controladoras de storage array.
+
++
+Na primeira vez que o Gerenciador do sistema SANtricity é aberto em uma matriz que não foi configurada, o prompt Definir senha do administrador é exibido. O gerenciamento de acesso baseado em função configura quatro funções locais: administração, suporte, segurança e monitor. Os três últimos papéis têm senhas aleatórias que não podem ser adivinhadas. Depois de definir uma senha para a função de administrador, você pode alterar todas as senhas usando as credenciais de administrador. Para obter mais informações sobre as quatro funções de usuário local, consulte a ajuda on-line disponível na interface de usuário do Gerenciador de sistema do SANtricity.
+
+. Introduza a palavra-passe do Gestor do sistema para a função de administrador nos campos Definir palavra-passe do administrador e confirmar palavra-passe e, em seguida, clique em *Definir palavra-passe*.
++
+O assistente de configuração é iniciado se não houver pools, grupos de volumes, cargas de trabalho ou notificações configuradas.
+
+. Use o assistente de configuração para executar as seguintes tarefas:
++
+** *Verifique o hardware (controladores e unidades)* -- Verifique o número de controladores e unidades no storage de armazenamento. Atribua um nome à matriz.
+** *Verifique hosts e sistemas operacionais* -- Verifique os tipos de host e sistema operacional que o storage array pode acessar.
+** *Accept pools* -- aceite a configuração de pool recomendada para o método de instalação expressa. Um pool é um grupo lógico de unidades.
+** *Configurar alertas* -- permitir que o System Manager receba notificações automáticas quando ocorrer um problema com a matriz de armazenamento.
+** * Ativar AutoSupport* -- monitore automaticamente a integridade do seu storage array e tenha despachos enviados para o suporte técnico.
+
+
+. Se ainda não criou um volume, crie um acedendo ao menu:armazenamento[volumes > criar > volume].
++
+
+NOTE: Para EF300 e EF600, você deve definir o tamanho do bloco para 512 bytes para garantir a compatibilidade com o VMware. Consulte a ajuda on-line do Gerenciador de sistemas do SANtricity para obter mais informações sobre como definir um volume para 512 bytes.
+
+

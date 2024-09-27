@@ -1,0 +1,53 @@
+---
+sidebar: sidebar 
+permalink: vcenter-plugin/vc-olh-increase-capacity-of-a-volume.html 
+keywords: vCenter plugin, Plugin for vCenter, SANtricity plugin for vCenter 
+summary: Redimensione um volume para aumentar sua capacidade reportada. 
+---
+= Aumentar a capacidade de um volume
+:hardbreaks:
+:allow-uri-read: 
+:experimental: 
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./media/
+
+
+[role="lead"]
+Você pode redimensionar um volume para aumentar sua capacidade reportada.
+
+.Antes de começar
+Certifique-se de que:
+
+* A capacidade livre suficiente está disponível no pool ou grupo de volumes associados ao volume.
+* O volume é ótimo e não em nenhum estado de modificação.
+* Não há unidades hot spare em uso no volume. (Aplica-se apenas a volumes em grupos de volumes.)
+
+
+.Sobre esta tarefa
+Esta tarefa descreve como aumentar a capacidade reportada (a capacidade reportada aos hosts) de um volume usando a capacidade livre que está disponível no pool ou grupo de volumes. Considere quaisquer requisitos de capacidade futuros que você possa ter para outros volumes nesse pool ou grupo de volumes.
+
+
+NOTE: O aumento da capacidade de um volume é suportado apenas em determinados sistemas operacionais. Se você aumentar a capacidade de volume em um sistema operacional host que não é suportado, a capacidade expandida será inutilizável e você não poderá restaurar a capacidade de volume original.
+
+.Passos
+. Na página *Gerenciar*, selecione a matriz de armazenamento que contém os volumes que você deseja redimensionar.
+. Selecione menu:provisionamento[Gerenciar volumes].
+. Selecione o volume para o qual deseja aumentar a capacidade e, em seguida, selecione *aumentar a capacidade*.
++
+A caixa de diálogo confirmar aumento de capacidade é exibida.
+
+. Selecione *Sim* para continuar.
++
+É apresentada a caixa de diálogo aumentar capacidade comunicada. Esta caixa de diálogo exibe a capacidade atual reportada do volume e a capacidade livre disponível no pool ou grupo de volumes associados do volume.
+
+. Use a caixa *aumente a capacidade reportada adicionando...* para adicionar capacidade à capacidade reportada disponível atual. Você pode alterar o valor de capacidade para exibir em mebibytes (MIB), gibibytes (GiB) ou tebibytes (TIB).
+. Clique em *aumentar*.
++
+A capacidade do volume é aumentada com base na sua seleção. Esteja ciente de que esta operação pode ser longa e pode afetar o desempenho do sistema.
+
+
+
+.Depois de terminar
+Depois de expandir a capacidade de volume, você deve aumentar manualmente o tamanho do sistema de arquivos para corresponder. A forma como você faz isso depende do sistema de arquivos que você está usando. Consulte a documentação do sistema operacional do host para obter detalhes.

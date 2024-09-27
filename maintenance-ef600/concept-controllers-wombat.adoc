@@ -1,0 +1,14 @@
+---
+permalink: maintenance-ef600/concept-controllers-wombat.html 
+sidebar: sidebar 
+keywords: controller, board, firmware, software, control, drive, implement, system, manager, function, ef300, ef600, shelf 
+summary: Um controlador consiste em uma placa, firmware e software. Controla as unidades e implementa as funções do System Manager. Esta seção descreve como substituir uma única controladora ou ambas as controladoras no compartimento de controladoras EF300 ou EF600. 
+---
+= Controladores
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Um controlador consiste em uma placa, firmware e software. Controla as unidades e implementa as funções do System Manager. Esta seção descreve como substituir uma única controladora ou ambas as controladoras no compartimento de controladoras EF300 ou EF600.

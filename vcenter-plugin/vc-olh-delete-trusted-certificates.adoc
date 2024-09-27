@@ -1,0 +1,40 @@
+---
+sidebar: sidebar 
+permalink: vcenter-plugin/vc-olh-delete-trusted-certificates.html 
+keywords: vCenter plugin, Plugin for vCenter, SANtricity plugin for vCenter 
+summary: Exclua um ou mais certificados que não são mais necessários. 
+---
+= Excluir certificados confiáveis
+:hardbreaks:
+:allow-uri-read: 
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./media/
+
+
+[role="lead"]
+Você pode excluir um ou mais certificados que não são mais necessários, como um certificado expirado.
+
+.Antes de começar
+Importe o novo certificado antes de excluir o antigo.
+
+
+CAUTION: Esteja ciente de que a exclusão de um certificado raiz ou intermediário pode afetar vários storages, já que esses storages podem compartilhar os mesmos arquivos de certificado.
+
+.Passos
+. Selecione *Gerenciamento de certificados*.
+. Selecione a guia *Trusted*.
+. Selecione um ou mais certificados na tabela e clique em *Excluir*.
++
+
+NOTE: A função Delete (Eliminar) não está disponível para certificados pré-instalados.
+
++
+A caixa de diálogo confirmar Excluir certificado confiável é aberta.
+
+. Confirme a exclusão e clique em *Excluir*.
++
+O certificado é removido da tabela.
+
+

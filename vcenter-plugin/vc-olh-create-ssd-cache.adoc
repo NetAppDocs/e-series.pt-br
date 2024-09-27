@@ -1,0 +1,78 @@
+---
+sidebar: sidebar 
+permalink: vcenter-plugin/vc-olh-create-ssd-cache.html 
+keywords: vCenter plugin, Plugin for vCenter, SANtricity plugin for vCenter 
+summary: 'Para acelerar dinamicamente a performance do sistema, você pode usar o recurso cache SSD para armazenar em cache os dados acessados com mais frequência ("dados ativos") em unidades de estado sólido (SSDs) de baixa latência.' 
+---
+= Criar cache SSD
+:hardbreaks:
+:allow-uri-read: 
+:experimental: 
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./media/
+
+
+[role="lead"]
+Para acelerar dinamicamente a performance do sistema, você pode usar o recurso cache SSD para armazenar em cache os dados acessados com mais frequência ("dados ativos") em unidades de estado sólido (SSDs) de baixa latência. O cache SSD é usado exclusivamente para leituras de host.
+
+.Antes de começar
+Seu storage array deve conter algumas unidades SSD.
+
+
+NOTE: O cache SSD não está disponível no sistema de armazenamento EF600 ou EF300.
+
+.Sobre esta tarefa
+Ao criar cache SSD, você pode usar uma única unidade ou várias unidades. Como o cache de leitura está no storage array, o armazenamento em cache é compartilhado em todos os aplicativos que usam o storage array. Você seleciona os volumes que deseja armazenar em cache e, em seguida, o armazenamento em cache é automático e dinâmico.
+
+Siga estas diretrizes ao criar cache SSD.
+
+* Você pode ativar a segurança no cache SSD somente quando você estiver criando, e não mais tarde.
+* Apenas um cache SSD é suportado por storage array.
+* A capacidade máxima de cache SSD utilizável em um storage array depende da capacidade de cache principal da controladora.
+* O cache SSD não é suportado em imagens instantâneas.
+* Se você importar ou exportar volumes que estejam habilitados ou desativados em cache SSD, os dados em cache não serão importados ou exportados.
+* Qualquer volume atribuído para usar o cache SSD de um controlador não é elegível para uma transferência automática de balanceamento de carga.
+* Se os volumes associados estiverem habilitados para segurança, crie um cache SSD habilitado para segurança.
+
+
+.Passos
+. Na página Gerenciar, selecione a matriz de armazenamento para o cache.
+. Selecione menu:provisionamento[Configurar pools e grupos de volume].
+. Clique em menu:criar[cache SSD].
++
+A caixa de diálogo criar cache SSD é exibida.
+
+. Digite um nome para o cache SSD.
+. Selecione o candidato cache SSD que você deseja usar com base nas seguintes caraterísticas.
++
+.Detalhes do campo
+[%collapsible]
+====
+[cols="25h,~"]
+|===
+| Característica | Utilização 
+
+
+| Capacidade | Mostra a capacidade disponível em GiB. Selecione a capacidade para as necessidades de storage da sua aplicação. A capacidade máxima para cache SSD depende da capacidade de cache principal da controladora. Se você alocar mais do que o valor máximo para cache SSD, qualquer capacidade extra será inutilizável. A capacidade do cache SSD conta para sua capacidade alocada geral. 
+
+
+| Total de unidades | Mostra o número de unidades disponíveis para este cache SSD. Selecione o candidato SSD com o número de unidades desejadas 
+
+
+| Com capacidade segura | Indica se o candidato à cache SSD é composto inteiramente de unidades com capacidade de segurança, que podem ser unidades com criptografia total de disco (FDE) ou unidades FIPS (Federal Information Processing Standard). Se você quiser criar um cache SSD habilitado para segurança, procure "Sim - FDE" ou "Sim - FIPS" na coluna compatível com segurança. 
+
+
+| Ativar a segurança? | Fornece a opção para ativar o recurso de Segurança da Unidade com unidades com capacidade segura. Se você quiser criar um cache SSD habilitado para segurança, marque a caixa de seleção *Ativar segurança* . Nota: Uma vez ativado, a segurança não pode ser desativada. Você pode ativar a segurança no cache SSD somente quando você estiver criando, e não mais tarde. 
+
+
+| DA capaz | Indica se o Data Assurance (DA) está disponível para este candidato de cache SSD. O Data Assurance (DA) verifica e corrige erros que podem ocorrer à medida que os dados são transferidos através dos controladores para as unidades. Se você quiser usar DA, selecione um candidato de cache SSD capaz de DA. Esta opção só está disponível quando a funcionalidade DA tiver sido ativada. O cache SSD pode conter unidades com CAPACIDADE DA e não DA, mas todas as unidades devem ser capazes de DA para você usar DA. 
+|===
+====
+. Associe o cache SSD aos volumes para os quais você deseja implementar o armazenamento em cache de leitura SSD. Para ativar o cache SSD em volumes compatíveis imediatamente, marque a caixa de seleção *Ativar cache SSD em volumes compatíveis existentes mapeados para hosts* .
++
+Os volumes são compatíveis se compartilharem os mesmos recursos de Segurança de Unidade e DA.
+
+. Clique em *criar*.
+

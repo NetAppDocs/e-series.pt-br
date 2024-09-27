@@ -1,0 +1,140 @@
+---
+permalink: install-hw-e2800-e5700/e2824-e5724-prepare-task.html 
+sidebar: sidebar 
+keywords: e5724, ef570, ef280, e2812, e2824, de212c, de224c, installation 
+summary: Para instalar o E5724, EF570, EF280, E2812, E2824, DE212C ou DE224C, crie uma conta e registe o seu hardware. 
+---
+= Prepare-se para a instalação
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Saiba como se preparar para instalar o sistema de armazenamento das séries E5724, EF570, EF280, E2812, E2824, DE212C ou DE224C.
+
+.Passos
+. Crie uma conta e Registre seu hardware em http://mysupport.netapp.com/["Suporte à NetApp"^].
+. Certifique-se de que os itens a seguir estão na caixa que você recebeu.
++
+|===
+
+
+ a| 
+image:../media/trafford_overview.png[""]
+ a| 
+Gaveta com unidades instaladas (painel empacotado separadamente)
+
+
+
+ a| 
+image:../media/superrails_inst-hw-e2800-e5700.png[""]
+ a| 
+Hardware de montagem em rack
+
+|===
++
+A tabela a seguir identifica os tipos de cabos que você pode receber. Se receber um cabo não listado na tabela, consulte https://hwu.netapp.com/["Hardware Universe"^] para localizar o cabo e identificar a respetiva utilização.
+
++
+|===
+| Tipo de conetor | Tipo de cabo | Utilização 
+
+
+ a| 
+image:../media/cable_ethernet_inst-hw-e2800-e5700.png[""]
+ a| 
+Cabos Ethernet
+
+(se encomendado)
+ a| 
+Conexão de gerenciamento
+
+
+
+ a| 
+image:../media/cable_io_inst-hw-e2800-e5700.png[""]
+ a| 
+Cabos de e/S.
+
+(se encomendado)
+ a| 
+Cabeamento dos hosts de dados
+
+
+
+ a| 
+image:../media/cable_power_inst-hw-e2800-e5700.png[""]
+ a| 
+Cabos de alimentação
+
+(se encomendado)
+ a| 
+Ligar o sistema de armazenamento
+
+
+
+ a| 
+image:../media/sas_cable.png[""]
+ a| 
+Cabos SAS incluídos apenas com as gavetas de unidade
+ a| 
+Cabos SAS
+
+|===
+. Certifique-se de fornecer os seguintes itens.
++
+|===
+
+
+ a| 
+image:../media/screwdriver_inst-hw-e2800-e5700.png[""]
+ a| 
+Chave de fendas Phillips nº 2
+
+
+
+ a| 
+image:../media/flashlight_inst-hw-e2800-e5700.png[""]
+ a| 
+Lanterna
+
+
+
+ a| 
+image:../media/wrist_strap_inst-hw-e2800-e5700.png[""]
+ a| 
+Correia ESD
+
+
+
+ a| 
+image:../media/2u_rackspace_inst-hw-e2800-e5700.png[""]
+ a| 
+2U espaço em rack: Um rack padrão de 19 pol. (48,30 cm) para caber 2U prateleiras das seguintes dimensões.
+
+*Profundidade*: 19,0 pol. (48,3 cm)
+
+* Largura*: 17,6 pol. (44,7 cm)
+
+*Altura*: 3,34 pol. (8,48 cm)
+
+* Prateleira*: 24 unidades
+
+* Peso máximo*: 60,5 lb (27,4 kg)
+
+
+
+ a| 
+image:../media/management_station_inst-hw-e2800-e5700_g60b3.png[""]
+ a| 
+Um navegador compatível para o software de gerenciamento:
+
+** Google Chrome (versão 89 e posterior)
+** Microsoft Edge (versão 90 e posterior)
+** Mozilla Firefox (versão 80 e posterior)
+** Safari (versão 14 e posterior)
+
+
+|===
+

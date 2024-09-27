@@ -1,0 +1,220 @@
+---
+permalink: maintenance-ef600/sas-add-supertask-task.html 
+sidebar: sidebar 
+keywords: replace EF300 SAS expansion card, replacing SAS card, drive tray expansion, expansion card 
+summary: Adicione uma placa de expansão SAS a controladores EF300 para permitir a expansão da bandeja de unidades. 
+---
+= Adicione a placa de expansão SAS ao EF300 e EF600
+:allow-uri-read: 
+:experimental: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+É possível adicionar uma placa de expansão SAS a uma controladora EF300 ou EF600 para permitir a expansão da bandeja de unidades.
+
+.Sobre esta tarefa
+Quando você adiciona uma placa de expansão SAS, você deve desligar o storage array, instalar a nova placa de expansão SAS e reaplicar a energia.
+
+.Antes de começar
+* Revisão link:sas-overview-supertask-concept.html["Requisitos para substituição da placa de expansão SAS EF300 e EF600"].
+* Tem de programar uma janela de manutenção de tempo de inatividade para este procedimento. Não é possível aceder aos dados na matriz de armazenamento até concluir com êxito este procedimento.
++
+
+CAUTION: Este procedimento deve ser feito com ambos os coletores do controlador. As configurações do controlador HIC devem corresponder exatamente.
+
+* Certifique-se de que tem o seguinte:
++
+** Uma placa de expansão SAS compatível com o controlador.
+** Uma pulseira antiestática, ou você tomou outras precauções antiestáticas.
+** Uma área de trabalho plana e estática livre.
+** Uma chave de fendas Phillips nº 1.
+** Etiquetas para identificar cada cabo que está ligado ao recipiente do controlador.
+** Uma estação de gerenciamento com um navegador que pode acessar o Gerenciador de sistema do SANtricity para o controlador. (Para abrir a interface do System Manager, aponte o navegador para o nome de domínio ou endereço IP do controlador.)
+
+
+
+
+
+
+== Passo 1: Coloque o compartimento do controlador offline
+
+Coloque o compartimento da controladora offline para que você possa adicionar com segurança a placa de expansão SAS.
+
+.Passos
+. Na página inicial do Gerenciador de sistemas do SANtricity, verifique se o storage array tem o status ideal.
++
+Se o status não for ideal, use o Recovery Guru ou entre em Contato com o suporte técnico para resolver o problema. Não prossiga com este procedimento.
+
+. Faça backup do banco de dados de configuração do storage usando o Gerenciador de sistema do SANtricity.
++
+Se ocorrer um problema ao remover um controlador, pode utilizar o ficheiro guardado para restaurar a configuração. O sistema salvará o estado atual do banco de dados de configuração RAID, que inclui todos os dados para grupos de volume e pools de discos na controladora.
+
++
+** Do System Manager:
++
+... Selecione menu:suporte[Centro de suporte > Diagnóstico].
+... Selecione *Collect Configuration Data*.
+... Clique em *Collect*.
++
+O arquivo é salvo na pasta Downloads do seu navegador com o nome *configurationData-<arrayName>-<dateTime>.7z*.
+
+
+
+
+
+. Certifique-se de que nenhuma operação de e/S esteja ocorrendo entre o storage array e todos os hosts conectados. Por exemplo, você pode executar estas etapas:
++
+** Parar todos os processos que envolvem os LUNs mapeados do armazenamento para os hosts.
+** Garantir que nenhuma aplicação esteja gravando dados em LUNs mapeados do storage para os hosts.
+** Desmonte todos os sistemas de arquivos associados a volumes no array.
++
+
+NOTE: As etapas exatas para interromper as operações de e/S do host dependem do sistema operacional do host e da configuração, que estão além do escopo dessas instruções. Se você não tiver certeza de como interromper as operações de e/S do host em seu ambiente, considere encerrar o host.
+
++
+
+CAUTION: *Possível perda de dados* -- se você continuar este procedimento enquanto as operações de e/S estão ocorrendo, o aplicativo host pode perder o acesso aos dados porque o armazenamento não está acessível.
+
+
+
+. Aguarde até que quaisquer dados na memória cache sejam gravados nas unidades.
++
+O LED verde Cache ative na parte de trás de cada controlador fica aceso quando os dados em cache precisam ser gravados nas unidades. Tem de esperar que este LED se desligue.
+
+. Na página inicial do Gerenciador do sistema do SANtricity, selecione *Exibir operações em andamento*. Aguarde que todas as operações sejam concluídas antes de continuar com o próximo passo.
+. Desligue o compartimento do controlador.
++
+.. Identifique e, em seguida, desconete ambos os cabos de alimentação do compartimento do controlador.
+.. Aguarde que todos os LEDs na prateleira do controlador se desliguem.
+
+
+
+
+
+
+== Etapa 2: Remova o recipiente do controlador
+
+Remova o recipiente do controlador para que você possa adicionar a nova placa de expansão SAS.
+
+.Passos
+. Coloque uma pulseira antiestática ou tome outras precauções antiestáticas.
+. Identifique cada cabo que esteja conetado ao recipiente do controlador.
+. Desligue todos os cabos do recipiente do controlador.
++
+
+CAUTION: Para evitar um desempenho degradado, não torça, dobre, aperte ou pise nos cabos.
+
+. Confirme se o LED Cache ative na parte de trás do controlador está desligado.
+. Aperte as alças em ambos os lados do controlador e puxe para trás até que ele se solte da prateleira.
++
+image::../media/remove_controller_5.png[remova o controlador 5]
+
+. Utilizando as duas mãos e as pegas, deslize o recipiente do controlador para fora da prateleira. Quando a parte frontal do controlador estiver livre do compartimento, use duas mãos para puxá-lo completamente.
++
+
+CAUTION: Utilize sempre duas mãos para suportar o peso de um recipiente do controlador.
+
++
+image::../media/remove_controller_6.png[remova o controlador 6]
+
+. Coloque o recipiente do controlador numa superfície plana e sem estática.
+
+
+
+
+== Etapa 3: Adicione a nova placa de expansão SAS
+
+Instale a placa de expansão SAS para permitir a expansão da bandeja de unidades.
+
+.Passos
+. Retire a tampa do recipiente do controlador desapertando o parafuso de aperto manual único e levantando a tampa aberta.
+. Confirme se o LED verde no interior do controlador está desligado.
++
+Se este LED verde estiver ligado, o controlador ainda está a utilizar a bateria. Deve aguardar que este LED se apague antes de remover quaisquer componentes.
+
+. Usando uma chave de fenda Phillips nº 1, remova os dois parafusos que prendem a placa frontal ao recipiente do controlador e remova a placa frontal.
+. Alinhe o parafuso de aperto manual único na placa de expansão SAS com o orifício correspondente no controlador e alinhe o conetor na parte inferior da placa de expansão com o conetor de interface da placa de expansão na placa controladora.
++
+Tenha cuidado para não arranhar ou bater os componentes na parte inferior da placa de expansão SAS ou na parte superior da placa controladora.
+
+. Abaixe cuidadosamente a placa de expansão SAS no lugar e coloque o conetor da placa de expansão pressionando cuidadosamente a placa de expansão.
+. Aperte manualmente o parafuso de aperto manual da placa de expansão SAS.
++
+Não use uma chave de fenda, ou você pode apertar demais os parafusos.
+
+. Usando uma chave de fenda Phillips nº 1, prenda a placa frontal que você removeu do recipiente do controlador original ao novo recipiente do controlador com os dois parafusos.
+
+
+
+
+== Etapa 4: Reinstale o recipiente do controlador
+
+Depois de instalar a nova placa de expansão SAS, reinstale o recipiente do controlador na gaveta do controlador.
+
+.Passos
+. Baixe a tampa do recipiente do controlador e fixe o parafuso de aperto manual.
+. Enquanto aperta as alças do controlador, deslize suavemente o recipiente do controlador até a prateleira do controlador.
++
+
+NOTE: O controlador clica audivelmente quando instalado corretamente na prateleira.
+
++
+image::../media/remove_controller_7.png[remova o controlador 7]
+
+
+
+
+
+== Etapa 5: Concluir a adição da placa de expansão SAS
+
+Coloque o controlador on-line, colete dados de suporte e retome as operações.
+
+.Passos
+. Ligue os cabos de alimentação para colocar o controlador online.
+. À medida que o controlador arranca, verifique os LEDs do controlador.
++
+** O LED âmbar de atenção permanece aceso.
+** Os LEDs do Host Link podem estar ligados, piscando ou desligados, dependendo da interface do host.
+
+
+. Quando o controlador estiver novamente online, confirme se o seu estado é ideal e verifique os LEDs de atenção do compartimento do controlador.
++
+Se o estado não for o ideal ou se algum dos LEDs de atenção estiver aceso, confirme se todos os cabos estão corretamente encaixados e o recipiente do controlador está instalado corretamente. Se necessário, remova e reinstale o recipiente do controlador.
+
++
+
+NOTE: Se não conseguir resolver o problema, contacte o suporte técnico.
+
+. Clique em menu:hardware[suporte > Centro de Atualização] para garantir que a versão mais recente do SANtricity os esteja instalada.
++
+Conforme necessário, instale a versão mais recente.
+
+. Verifique se todos os volumes foram devolvidos ao proprietário preferido.
++
+.. Selecione menu:armazenamento[volumes]. Na página *todos os volumes*, verifique se os volumes são distribuídos aos seus proprietários preferidos. Selecione menu:mais[alterar propriedade] para ver os proprietários de volume.
+.. Se todos os volumes forem propriedade do proprietário preferido, avance para o passo 6.
+.. Se nenhum dos volumes for retornado, você deverá retornar manualmente os volumes. Vá para menu:mais[redistribuir volumes].
+.. Se apenas alguns dos volumes forem devolvidos aos seus proprietários preferidos após a distribuição automática ou a distribuição manual, você deverá verificar o Recovery Guru para problemas de conetividade do host.
+.. Se não houver Recovery Guru presente ou se seguir as etapas do Recovery Guru, os volumes ainda não serão devolvidos aos seus proprietários preferenciais, entre em Contato com o suporte.
+
+
+. Colete dados de suporte para sua matriz de armazenamento usando o Gerenciador de sistema do SANtricity.
++
+.. Selecione menu:suporte[Centro de suporte > Diagnóstico].
+.. Selecione *coletar dados de suporte*.
+.. Clique em *Collect*.
++
+O arquivo é salvo na pasta Downloads do seu navegador com o nome *support-data.7z*.
+
+
+
+. Repita esta tarefa com o seu segundo recipiente do controlador.
+
+
+
+NOTE: Para fazer o cabeamento da expansão SAS, consulte link:../install-hw-cabling/index.html["Cabeamento de hardware e-Series"] para obter instruções.
+
+.O que se segue?
+O processo de adição de uma placa de expansão SAS no storage array está concluído. Pode retomar as operações normais.

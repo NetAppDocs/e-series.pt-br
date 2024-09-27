@@ -1,0 +1,181 @@
+---
+permalink: config-windows/fc-perform-specific-task.html 
+sidebar: sidebar 
+keywords: Fibre Channel protocol, switches, zone switches, zoning, host port identifiers, express Windows configuration, software configuration, Windows host, E2800, E5700, EF300, EF600, E-Series, eseries 
+summary: Para o protocolo Fibre Channel, você configura os switches e determina os identificadores da porta do host. 
+---
+= Executar tarefas específicas de FC
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Para o protocolo Fibre Channel, você configura os switches e determina os identificadores da porta do host.
+
+
+
+== Passo 1: Configurar os switches FC --Windows
+
+Configurar (zonear) os switches Fibre Channel (FC) permite que os hosts se conetem ao storage array e limita o número de caminhos. Você pode definir a zona dos switches usando a interface de gerenciamento dos switches.
+
+.Antes de começar
+Certifique-se de que tem o seguinte:
+
+* Credenciais de administrador para os switches.
+* O WWPN de cada porta do iniciador do host e de cada porta de destino do controlador conetada ao switch. (Use o utilitário HBA para descoberta.)
+
+
+.Sobre esta tarefa
+Você deve zona por WWPN, não por porta física. Cada porta do iniciador deve estar em uma zona separada com todas as portas de destino correspondentes. Para obter detalhes sobre o zoneamento de seus switches, consulte a documentação do fornecedor do switch.
+
+.Passos
+. Faça login no programa de administração do switch FC e selecione a opção de configuração de zoneamento.
+. Crie uma nova zona que inclua a primeira porta do iniciador do host e que também inclua todas as portas de destino que se conetam ao mesmo switch FC que o iniciador.
+. Crie zonas adicionais para cada porta do iniciador do host FC no switch.
+. Salve as zonas e, em seguida, ative a nova configuração de zoneamento.
+
+
+
+
+== Passo 2: Determine WWPNs do host e faça as configurações recomendadas - FC, Windows
+
+Você instala um utilitário HBA FC para que você possa exibir o nome da porta mundial (WWPN) de cada porta de host. Além disso, pode utilizar o utilitário HBA para alterar as definições recomendadas na coluna Notas da http://mysupport.netapp.com/matrix["Ferramenta de Matriz de interoperabilidade do NetApp"^] para a configuração suportada.
+
+.Sobre esta tarefa
+Reveja estas diretrizes para utilitários HBA:
+
+* A maioria dos fornecedores de HBA oferece um utilitário HBA. Você precisará da versão correta do HBA para seu sistema operacional host e CPU. Exemplos de utilitários FC HBA incluem:
++
+** Emulex OneCommand Manager para Emulex HBAs
+** Console QLogic QConverge para HBAs QLogic
+
+
+
+
+.Passos
+. Baixe o utilitário apropriado do site do seu fornecedor HBA.
+. Instale o utilitário.
+. Selecione as definições apropriadas no utilitário HBA.
++
+As configurações apropriadas para sua configuração são listadas na coluna Notas do http://mysupport.netapp.com/matrix["Ferramenta de Matriz de interoperabilidade do NetApp"^].
+
+
+
+
+
+== Passo 3: Registre sua configuração
+
+Você pode gerar e imprimir um PDF desta página e, em seguida, usar a seguinte Planilha para Registrar informações de configuração de armazenamento FC. Você precisa dessas informações para executar tarefas de provisionamento.
+
+A ilustração mostra um host conetado a um storage array do e-Series em duas zonas. Uma zona é indicada pela linha azul; a outra zona é indicada pela linha vermelha. Qualquer porta única tem dois caminhos para o armazenamento (um para cada controlador).
+
+image::../media/port_identifiers_host_and_target_conf-win.gif[identificadores de porta host e conf de destino win]
+
+
+
+=== Identificadores de host
+
+|===
+| Legenda n.º | Conexões de porta de host (iniciador) | WWPN 
+
+
+ a| 
+1
+ a| 
+Host
+ a| 
+_não aplicável_
+
+
+
+ a| 
+2
+ a| 
+Porta de host 0 para a zona de switch FC 0
+ a| 
+
+
+
+ a| 
+7
+ a| 
+Porta de host 1 para a zona de switch FC 1
+ a| 
+
+|===
+
+
+=== Identificadores de destino
+
+|===
+| Legenda n.º | Conexões de porta do controlador de matriz (destino) | WWPN 
+
+
+ a| 
+3
+ a| 
+Interrutor
+ a| 
+_não aplicável_
+
+
+
+ a| 
+6
+ a| 
+Controlador de array (destino)
+ a| 
+_não aplicável_
+
+
+
+ a| 
+5
+ a| 
+Controlador A, porta 1 para o switch FC 1
+ a| 
+
+
+
+ a| 
+9
+ a| 
+Controlador A, porta 2 para o switch FC 2
+ a| 
+
+
+
+ a| 
+4
+ a| 
+Controlador B, porta 1 para o switch FC 1
+ a| 
+
+
+
+ a| 
+8
+ a| 
+Controlador B, porta 2 para o switch FC 2
+ a| 
+
+|===
+
+
+=== Mapeando o nome do host
+
+|===
+
+
+ a| 
+Mapeando o nome do host
+ a| 
+
+
+
+ a| 
+Tipo de SO de host
+ a| 
+
+|===

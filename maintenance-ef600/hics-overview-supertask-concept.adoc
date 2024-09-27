@@ -1,0 +1,27 @@
+---
+permalink: maintenance-ef600/hics-overview-supertask-concept.html 
+sidebar: sidebar 
+keywords: replace EF600 HIC, replace EF300 HIC, host interface card failed, HIC failure 
+summary: Reveja os requisitos e considerações antes de substituir um HIC EF300 ou EF600. 
+---
+= Requisitos para atualizações HIC EF300 ou EF600
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Antes de atualizar ou substituir uma placa de interface de host (HIC) em um array EF300 ou EF600, revise os seguintes requisitos.
+
+* Você agendou uma janela de manutenção de tempo de inatividade para este procedimento. Não é possível aceder aos dados na matriz de armazenamento até concluir com êxito este procedimento. Como ambos os controladores devem ter a mesma configuração HIC quando são ligados, a energia deve estar desligada quando você altera a configuração HIC. A presença de HICs incompatíveis faz com que o controlador com o HIC de substituição bloqueie quando o coloca online.
+* Você tem todos os cabos, transcetores, switches e adaptadores de barramento do host (HBAs) necessários para conetar as novas portas do host.
++
+Para obter informações sobre o hardware compatível, consulte a https://mysupport.netapp.com/NOW/products/interoperability["Matriz de interoperabilidade do NetApp"^] ou a http://hwu.netapp.com/home.aspx["NetApp Hardware Universe"^].
+
+* Você tem uma pulseira antiestática ou tomou outras precauções antiestáticas.
+* Você tem uma chave de fenda Phillips nº 1.
+* Você tem etiquetas para identificar cada cabo que está conetado ao recipiente do controlador.
+* Uma estação de gerenciamento com um navegador que pode acessar o Gerenciador de sistema do SANtricity para o controlador. (Para abrir a interface do System Manager, aponte o navegador para o nome de domínio ou endereço IP do controlador.)
+* Algumas substituições ou atualizações HIC podem exigir uma conversão de protocolo de porta de host. Siga as instruções na xref:hpp-change-supertask-task.html[Altere o protocolo de host para um EF300 ou EF600] para este requisito.
+* Os controladores EF300 devem ter a porta HIC 2 preenchida com um HIC para conetividade de host.
+

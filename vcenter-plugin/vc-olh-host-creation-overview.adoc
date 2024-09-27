@@ -1,0 +1,41 @@
+---
+sidebar: sidebar 
+permalink: vcenter-plugin/vc-olh-host-creation-overview.html 
+keywords: vCenter plugin, Plugin for vCenter, SANtricity plugin for vCenter 
+summary: Para gerenciar o armazenamento com o plug-in de armazenamento para vCenter, você deve descobrir ou definir cada host na rede. 
+---
+= Visão geral da criação do host
+:hardbreaks:
+:allow-uri-read: 
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./media/
+
+
+[role="lead"]
+Para gerenciar o armazenamento com o plug-in de armazenamento para vCenter, você deve descobrir ou definir cada host na rede. Um host é um servidor que envia e/S para um volume em um storage array.
+
+
+
+== Criação manual do host
+
+A criação de um host é uma das etapas necessárias para que o storage array saiba quais hosts estão conetados a ele e para permitir o acesso de e/S aos volumes. Um host pode ser criado manualmente.
+
+* *Manual* -- durante a criação manual do host, você associa identificadores de porta do host selecionando-os de uma lista ou inserindo-os manualmente. Depois de criar um host, você poderá atribuir volumes a ele ou adicioná-lo a um cluster de host se desejar compartilhar o acesso a volumes.
+
+
+
+
+== Como os volumes são atribuídos
+
+Para que um host envie e/S para um volume, você deve atribuir o volume a ele. Você pode selecionar um cluster de host ou host quando criar um volume ou atribuir um volume a um cluster de host ou host posteriormente. Um cluster de host é um grupo de hosts. Você cria um cluster de host para facilitar a atribuição dos mesmos volumes a vários hosts.
+
+Atribuir volumes a hosts é flexível, permitindo que você atenda às suas necessidades de armazenamento específicas.
+
+* * Host autônomo, não parte de um cluster de host* -- você pode atribuir um volume a um host individual. O volume só pode ser acessado por um host.
+* *Host cluster* -- você pode atribuir um volume a um cluster de host. O volume pode ser acessado por todos os hosts no cluster de host.
+* *Host dentro de um cluster de host* -- você pode atribuir um volume a um host individual que faz parte de um cluster de host. Mesmo que o host faça parte de um cluster de host, o volume pode ser acessado apenas pelo host individual e não por nenhum outro host no cluster de host.
+
+
+Quando os volumes são criados, os números de unidade lógica (LUNs) são atribuídos automaticamente. O LUN serve como o endereço entre o host e o controlador durante as operações de e/S. Você pode alterar LUNs depois que o volume é criado.

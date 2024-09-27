@@ -1,0 +1,192 @@
+---
+permalink: upgrade-santricity/upgrade-multiple-controller-task.html 
+sidebar: sidebar 
+keywords: E-Series, eseries, E2800, E5700, EF300, EF600, SANtricity, drive firmware, upgrade SANtricity, upgrade OS, upgrade E-Series, upgrade firmware, upgrading, upgrade IOM firmware, upgrade NVSRAM, upgrade controller 
+summary: Use o SANtricity Unified Manager para atualizar o software SANtricity os em vários storage arrays do mesmo tipo. 
+---
+= Atualize o software e o firmware para vários controladores
+:allow-uri-read: 
+:experimental: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Você pode atualizar várias controladoras do mesmo tipo com o SANtricity Unified Manager.
+
+.Antes de começar
+* Revisão link:overview-upgrade-consider-task.html["Considerações sobre a atualização"].
+* Determine se deseja ativar a atualização de software agora ou mais tarde. Você pode optar por ativar mais tarde por estes motivos:
++
+** *Hora do dia* -- a ativação do software pode demorar muito tempo, então você pode querer esperar até que as cargas de e/S sejam mais leves. Os controladores fazem failover durante a ativação, portanto, o desempenho pode ser menor do que o normal até que a atualização seja concluída.
+** * Tipo de pacote* -- você pode querer testar o novo software do sistema operacional em uma matriz de armazenamento antes de atualizar os arquivos em outras matrizes de armazenamento.
+
+
+* Reveja estas precauções:
+
+
+
+CAUTION: Risco de perda de dados ou risco de danos à matriz de armazenamento - não faça alterações na matriz de armazenamento enquanto a atualização estiver ocorrendo. Mantenha o poder do storage array.
+
+
+CAUTION: Se estiver a atualizar o SANtricity os num dispositivo StorageGRID (por exemplo, SG5612 ou SG5760), tem de parar a atividade de e/S colocando o dispositivo no modo de manutenção antes de continuar com este procedimento, ou poderá perder dados. Para obter instruções detalhadas, consulte as instruções de instalação e manutenção do seu dispositivo StorageGRID.
+
+
+
+== Passo 1: Execute a verificação de integridade pré-atualização
+
+Uma verificação de integridade é executada como parte do processo de atualização, mas você também pode executar uma verificação de integridade separadamente antes de começar. A verificação de integridade avalia os componentes do storage array para garantir que a atualização possa prosseguir.
+
+.Passos
+. Abra o Unified Manager.
+. Na visualização principal, selecione *Manage* e, em seguida, selecione menu:Upgrade Center [Pre-Upgrade Health Check] (Verificação de integridade pré-atualização).
++
+A caixa de diálogo Verificação do estado de pré-atualização abre-se e lista todos os sistemas de armazenamento descobertos.
+
+. Se necessário, filtre ou classifique os sistemas de storage na lista para que você possa visualizar todos os sistemas que não estão no estado ideal atualmente.
+. Marque as caixas de seleção dos sistemas de armazenamento que você deseja executar na verificação de integridade.
+. Clique em *Iniciar*.
++
+O progresso é mostrado na caixa de diálogo enquanto a verificação de integridade é executada.
+
+. Quando a verificação de integridade for concluída, você pode clicar nas elipses (...) à direita de cada linha para exibir mais informações e executar outras tarefas.
++
+
+NOTE: Se algum array falhar na verificação de integridade, você pode pular esse array específico e continuar a atualização para os outros, ou você pode parar todo o processo e solucionar problemas dos arrays que não passaram.
+
+
+
+
+
+== Passo 2: Baixe arquivos de software do site de suporte
+
+Nesta etapa, você acessa o site de suporte da NetApp para salvar os novos arquivos de software do pacote para download (DLP) no sistema host de gerenciamento.
+
+.Passos
+. Se o storage array contiver apenas uma controladora ou um driver multipath não estiver em uso, interrompa a atividade de e/S no storage array para evitar erros de aplicativos. Se o seu storage array tiver duas controladoras e você tiver um driver multipath instalado, não será necessário interromper a atividade de e/S.
+. Na exibição principal do Unified Manager, selecione *Manage* e, em seguida, selecione um ou mais storages que você deseja atualizar.
+. Selecione menu:Centro de Atualização[Atualizar software SANtricity os].
++
+A página Atualizar software SANtricity os é exibida.
+
+. Transfira o mais recente pacote de software do SANtricity os a partir do site de suporte da NetApp para a sua máquina local.
++
+.. Clique em *Adicionar novo arquivo ao repositório de software*.
+.. Clique no link para encontrar os mais recentes *Downloads do SANtricity os*.
+.. Clique no link *Download Latest Release*.
+.. Siga as instruções restantes para transferir o ficheiro SANtricity os e o ficheiro NVSRAM para a sua máquina local.
+
+
++
+
+NOTE: O firmware assinado digitalmente é necessário na versão 8,42 e superior. Se tentar transferir firmware não assinado, é apresentado um erro e a transferência é cancelada.
+
+
+
+
+
+== Passo 3: Transfira arquivos de software para os controladores
+
+Você carrega o arquivo de software do SANtricity os e o arquivo NVSRAM no repositório para que ele seja acessível ao Centro de Atualização do Gerenciador Unificado.
+
+
+CAUTION: Risco de perda de dados ou risco de danos à matriz de armazenamento - não faça alterações na matriz de armazenamento enquanto a atualização estiver ocorrendo. Mantenha o poder do storage array.
+
+.Passos
+. Na exibição principal do Unified Manager, selecione *Manage* e, em seguida, selecione um ou mais storages que você deseja atualizar.
+. Selecione menu:Centro de Atualização[Atualizar software SANtricity os].
++
+A página Atualizar software SANtricity os é exibida.
+
+. Transfira o mais recente pacote de software do SANtricity os a partir do site de suporte da NetApp para a sua máquina local.
++
+.. Clique em *Adicionar novo arquivo ao repositório de software*.
+.. Clique no link para encontrar os mais recentes *Downloads do SANtricity os*.
+.. Clique no link *Download Latest Release*.
+.. Siga as instruções restantes para transferir o ficheiro SANtricity os e o ficheiro NVSRAM para a sua máquina local.
+
+
++
+
+NOTE: O firmware assinado digitalmente é necessário na versão 8,42 e superior. Se tentar transferir firmware não assinado, é apresentado um erro e a transferência é cancelada.
+
+. Selecione o arquivo de software do sistema operacional e o arquivo NVSRAM que você deseja usar para atualizar os controladores:
++
+.. Na lista suspensa *Selecione um arquivo de software do SANtricity os*, selecione o arquivo do sistema operacional que você baixou para sua máquina local.
++
+Se houver vários arquivos disponíveis, os arquivos serão classificados da data mais recente para a data mais antiga.
+
++
+
+NOTE: O repositório de software lista todos os arquivos de software associados ao Web Services Proxy. Se você não vir o arquivo que deseja usar, clique no link *Adicionar novo arquivo ao repositório de software*, para navegar até o local onde reside o arquivo do sistema operacional que você deseja adicionar.
+
+.. Na lista suspensa *Selecione um arquivo NVSRAM*, selecione o arquivo do controlador que deseja usar.
++
+Se houver vários arquivos, os arquivos serão classificados da data mais recente para a data mais antiga.
+
+
+
+. Na tabela Matriz de armazenamento compatível, reveja os storages de armazenamento compatíveis com o arquivo de software do sistema operacional selecionado e selecione os storages que você deseja atualizar.
++
+** As matrizes de armazenamento selecionadas na vista gerir e compatíveis com o ficheiro de firmware selecionado são selecionadas por predefinição na tabela Matriz de armazenamento compatível.
+** As matrizes de armazenamento que não podem ser atualizadas com o ficheiro de firmware selecionado não são selecionáveis na tabela Matriz de armazenamento compatível, conforme indicado pelo estado *incompatível*.
+
+
+. (Opcional) para transferir o arquivo de software para os storages de armazenamento sem ativá-los, marque a caixa de seleção *Transferir o software do sistema operacional para os storages, marque-o como staged e ative posteriormente*.
+. Clique em *Iniciar*.
+. Dependendo se você escolheu ativar agora ou mais tarde, execute um dos seguintes procedimentos:
++
+** Digite *TRANSFER* para confirmar que deseja transferir as versões propostas de software do sistema operacional nos arrays que você selecionou para atualizar e clique em *Transferir*.
++
+Para ativar o software transferido, selecione menu:Centro de Atualização[Activate Staged os Software].
+
+** Digite *UPGRADE* para confirmar que deseja transferir e ativar as versões propostas de software do sistema operacional nos arrays que você selecionou para atualizar e clique em *Upgrade*.
++
+O sistema transfere o ficheiro de software para cada matriz de armazenamento selecionada para atualizar e, em seguida, ativa esse ficheiro iniciando uma reinicialização.
+
+
+
++
+As seguintes ações ocorrem durante a operação de atualização:
+
++
+** Uma verificação de integridade de pré-atualização é executada como parte do processo de atualização. A verificação de integridade da pré-atualização avalia todos os componentes do storage array para garantir que a atualização possa prosseguir.
+** Se qualquer verificação de integridade falhar em um storage array, a atualização será interrompida. Você pode clicar nas reticências (...) e selecionar *Salvar Registro* para revisar os erros. Você também pode optar por substituir o erro de verificação de integridade e clicar em *continuar* para continuar com a atualização.
+** Você pode cancelar a operação de atualização após a verificação de integridade da pré-atualização.
+
+
+. (Opcional) depois que a atualização estiver concluída, você poderá ver uma lista do que foi atualizado para uma matriz de armazenamento específica clicando nas reticências (...) e selecionando *Salvar Log*.
++
+O arquivo é salvo na pasta Downloads do navegador com o nome``upgrade_log-<date>.json``.
+
+
+
+
+
+== Passo 4: Ativar arquivos de software em estágios (opcional)
+
+Você pode optar por ativar o arquivo de software imediatamente ou esperar até um momento mais conveniente. Este procedimento pressupõe que optou por ativar o ficheiro de software posteriormente.
+
+
+NOTE: Não é possível parar o processo de ativação depois de iniciado.
+
+.Passos
+. Na visualização principal do Unified Manager, selecione *Manage*. Se necessário, clique na coluna Status para classificar todos os storages de armazenamento com o status "Atualização do sistema operacional (aguardando ativação)".
+. Selecione uma ou mais matrizes de armazenamento para as quais pretende ativar o software e, em seguida, selecione o menu:Centro de Atualização[Ativar software de SO faseado].
++
+As seguintes ações ocorrem durante a operação de atualização:
+
++
+** Uma verificação de integridade pré-atualização é executada como parte do processo de ativação. A verificação de integridade da pré-atualização avalia todos os componentes do storage array para garantir que a ativação possa continuar.
+** Se qualquer verificação de integridade falhar em um storage array, a ativação será interrompida. Você pode clicar nas reticências (...) e selecionar *Salvar Registro* para revisar os erros. Você também pode optar por substituir o erro de verificação de integridade e clicar em *continuar* para continuar com a ativação.
+** Pode cancelar a operação de ativação após a verificação do estado de pré-atualização. Após a conclusão bem-sucedida da verificação de integridade da pré-atualização, ocorre a ativação. O tempo de ativação depende da configuração do storage array e dos componentes que você está ativando.
+
+
+. (Opcional) após a conclusão da ativação, você pode ver uma lista do que foi ativado para uma matriz de armazenamento específica clicando nas reticências (...) e selecionando *Salvar Log*.
++
+O arquivo é salvo na pasta Downloads do navegador com o nome `activate_log-<date>.json`.
+
+
+
+.O que se segue?
+A atualização do software do controlador está concluída. Pode retomar as operações normais.

@@ -1,0 +1,97 @@
+---
+permalink: config-linux/srp-ib-worksheet-concept.html 
+sidebar: sidebar 
+keywords: SRP over Infiniband worksheet Linux, express linux configuration, software configuration, linux host, E2800, E5700, EF300, EF600, E-Series, eseries 
+summary: Use esta Planilha para gravar informações de configuração de armazenamento SRP em Infiniband. 
+---
+= Registre seu SRP na configuração IB
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Você pode gerar e imprimir um PDF desta página e, em seguida, usar a seguinte Planilha para gravar informações de configuração de armazenamento SRP em InfiniBand. Você precisa dessas informações para executar tarefas de provisionamento.
+
+image::../media/port_identifiers_ib_srp.gif[identificadores de porta ib srp]
+
+
+
+== Identificadores de host
+
+
+NOTE: Os GUIDs do iniciador são determinados na tarefa, xref:srp-ib-determine-host-port-guids-task.adoc[Determine GUIDs da porta do host e faça as configurações recomendadas].
+
+|===
+| Legenda n.º | Conexões de porta de host (iniciador) | GUID 
+
+
+ a| 
+1
+ a| 
+Host
+ a| 
+_não aplicável_
+
+
+
+ a| 
+3
+ a| 
+Interrutor
+ a| 
+_não aplicável_
+
+
+
+ a| 
+4
+ a| 
+Destino (storage array)
+ a| 
+_não aplicável_
+
+
+
+ a| 
+2
+ a| 
+Porta de host 1 para o switch IB 1 ("caminho A")
+ a| 
+
+
+
+ a| 
+5
+ a| 
+Porta de host 2 para switch IB 2 (caminho "B")
+ a| 
+
+|===
+
+
+== Configuração recomendada
+
+As configurações recomendadas consistem em duas portas de iniciador e quatro portas de destino.
+
+
+
+== Mapeando o nome do host
+
+
+NOTE: O nome do host de mapeamento é criado durante o fluxo de trabalho.
+
+|===
+
+
+ a| 
+Mapeando o nome do host
+ a| 
+
+
+
+ a| 
+Tipo de SO de host
+ a| 
+
+|===

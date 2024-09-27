@@ -1,0 +1,96 @@
+---
+sidebar: sidebar 
+permalink: vcenter-plugin/san-spvc-ic-plugin-removal.html 
+keywords: remove vCenter plugin, uninstall Plugin for vCenter, unregister vCenter plugin, 
+summary: Remova o plug-in para vCenter. 
+---
+= Remova o plug-in de armazenamento para vCenter
+:hardbreaks:
+:allow-uri-read: 
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./media/
+
+
+[role="lead"]
+Você pode remover o plug-in do vCenter Server Appliance e desinstalar o servidor web do plug-in do host do aplicativo.
+
+Estas são duas etapas distintas que você pode executar em qualquer ordem. No entanto, se você optar por remover o servidor web do plugin do host do aplicativo antes de cancelar o Registro do plugin, o script de Registro é removido durante esse processo e você não pode usar o método 1 para cancelar o Registro.
+
+
+
+== DesRegistre o plug-in de um vCenter Server Appliance
+
+Para cancelar o Registro do plug-in de um vCenter Server Appliance, selecione um destes métodos:
+
+* <<Método 1: Execute o script de Registro>>
+* <<Método 2: Use as páginas MOB do vCenter Server>>
+
+
+
+
+=== Método 1: Execute o script de Registro
+
+. Abra um prompt através da linha de comando e navegue até o seguinte diretório:
++
+`<install directory>\vcenter-register\bin`
+
+. Execute o `vcenter-register.bat` arquivo:
++
+`vcenter-register.bat ^`
+
++
+`-action unregisterPlugin ^`
+
++
+`-vcenterHostname <vCenter FQDN> ^`
+
++
+`-username <Administrator Username> ^`
+
+. Verifique se o script foi bem-sucedido.
++
+Os registos são guardados no `%install_dir%/working/logs/vc-registration.log`.
+
+
+
+
+
+=== Método 2: Use as páginas MOB do vCenter Server
+
+. Abra um navegador da Web e insira o seguinte url:
++
+Mais https://<FQDN[] de vCenter Server>/MOB
+
+. Faça login sob as credenciais do administrador.
+. Procure o nome da propriedade de `extensionManager` e clique no link associado a essa propriedade.
+. Expanda a lista de propriedades clicando no link *mais*... na parte inferior da lista.
+. Verifique se a extensão `plugin.netapp.eseries` está na lista.
+. Se estiver presente, clique no método `UnregisterExtension`.
+. Insira o valor `plugin.netapp.eseries` na caixa de diálogo e clique em *Invoke Method*.
+. Feche a caixa de diálogo e atualize o navegador da Web.
+. Verifique se a `plugin.netapp.eseries` extensão não está na lista.
+
+
+
+NOTE: Esse procedimento desRegistra o plugin do vCenter Server Appliance; no entanto, ele não remove arquivos de pacote de plug-ins do servidor. Para remover arquivos de pacote, use SSH para acessar o vCenter Server Appliance e navegue até o seguinte diretório: `etc/vmware/vsphere-ui/vc-packages/vsphere-client-serenity/`. Em seguida, remova o diretório associado ao plugin.
+
+
+
+== Remova o servidor web do plugin do host do aplicativo
+
+Para remover o software do plugin do host do aplicativo, siga estas etapas:
+
+. No servidor de aplicativos, navegue até o *Painel de controle*.
+. Vá para *aplicativos e recursos* e selecione *Plugin de armazenamento SANtricity para vCenter*.
+. Clique em *Desinstalar/alterar*.
++
+Abre-se uma caixa de diálogo de confirmação.
+
+. Clique em *Desinstalar*.
++
+Uma mensagem de confirmação é exibida quando a desinstalação estiver concluída.
+
+. Clique em *Concluído*.
+

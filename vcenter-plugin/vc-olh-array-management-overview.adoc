@@ -1,0 +1,142 @@
+---
+sidebar: sidebar 
+permalink: vcenter-plugin/vc-olh-array-management-overview.html 
+keywords: vCenter plugin, Plugin for vCenter, SANtricity plugin for vCenter 
+summary: Use o recurso Adicionar/descobrir para localizar e adicionar os storages de armazenamento que você deseja gerenciar na rede da sua organização. 
+---
+= Visão geral do gerenciamento de array
+:hardbreaks:
+:allow-uri-read: 
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./media/
+
+
+[role="lead"]
+Use o recurso Adicionar/descobrir para localizar e adicionar os arrays de armazenamento que você deseja gerenciar no plug-in Storage para vCenter. Na página Gerenciar, você também pode renomear, remover e fornecer novas senhas para esses arrays descobertos.
+
+
+
+== Considerações para descobrir arrays
+
+Para que o plugin exiba e gerencie recursos de armazenamento, você deve descobrir os storages que deseja gerenciar na rede da sua organização. Você pode descobrir e adicionar um único array ou vários arrays.
+
+
+
+=== Vários storage arrays
+
+Se você optar por descobrir vários storages, insira um intervalo de endereços IP de rede e, em seguida, o sistema tentará conexões individuais para cada endereço IP nesse intervalo. Qualquer matriz de armazenamento alcançada com sucesso aparece no plugin e você pode adicioná-los ao seu domínio de gerenciamento.
+
+
+
+=== Array de storage único
+
+Se você optar por descobrir um único array, insira o endereço IP único de um dos controladores no storage array e adicione esse array ao seu domínio de gerenciamento.
+
+
+NOTE: O plugin deteta e exibe apenas o único endereço IP ou endereço IP dentro de um intervalo atribuído a um controlador. Se houver controladores alternativos ou endereços IP atribuídos a esses controladores que estejam fora desse único endereço IP ou intervalo de endereços IP, o plugin não os detetará ou exibirá. No entanto, depois de adicionar a matriz de armazenamento, todos os endereços IP associados serão descobertos e exibidos na visualização Gerenciar.
+
+
+
+=== Credenciais do usuário
+
+Você deve fornecer a senha de administrador para cada storage que deseja adicionar.
+
+
+
+=== Certificados
+
+Como parte do processo de descoberta, o sistema verifica se os storages descobertos estão usando certificados por uma fonte confiável. O sistema usa dois tipos de autenticação baseada em certificado para todas as conexões que estabelece com o com o navegador:
+
+* *Certificados confiáveis* -- você pode precisar instalar certificados confiáveis adicionais fornecidos pela Autoridade de Certificação se um ou ambos os certificados do controlador tiverem expirado, revogado ou faltando um certificado em sua cadeia.
+* *Certificados autoassinados* -- os storages também podem usar certificados autoassinados. Se você tentar descobrir matrizes sem importar certificados assinados, o plugin fornece uma etapa adicional que permite que você aceite o certificado autoassinado. O certificado autoassinado do storage será marcado como confiável e o storage será adicionado ao plugin. Se você não confiar nas conexões com o storage array, selecione *Cancelar* e valide a estratégia de certificado de segurança do storage antes de adicionar o storage array ao plug-in.
+
+
+
+
+== Status do storage array
+
+Quando você abre o plug-in de armazenamento para vCenter, a comunicação com cada storage array é estabelecida e o status de cada storage array é exibido.
+
+Na página *Manage - All*, você pode visualizar o status da matriz de armazenamento e o status da conexão da matriz de armazenamento.
+
+|===
+| Estado | Indica 
+
+
+| Ideal | O storage array está em um estado ideal. Não há problemas de certificado e a senha é válida. 
+
+
+| Palavra-passe inválida | Foi fornecida uma palavra-passe inválida da matriz de armazenamento. 
+
+
+| Certificado não fidedigno | Uma ou mais conexões com o storage não são confiáveis porque o certificado HTTPS é autoassinado e não foi importado, ou o certificado é assinado pela CA e os certificados raiz e intermediário da CA não foram importados. 
+
+
+| Precisa de atenção | Há um problema com o storage array que requer a sua intervenção para corrigi-lo. 
+
+
+| Bloqueio | O storage array está em um estado bloqueado. 
+
+
+| Desconhecido | O storage array nunca foi contatado. Isso pode acontecer quando o plugin está sendo iniciado e ainda não entrou em Contato com o storage array, ou o storage array está offline e nunca foi contatado desde que o plugin foi iniciado. 
+
+
+| Offline | O plugin já havia contatado o storage array, mas agora perdeu toda a conexão com ele. 
+|===
+
+
+== Interface do plugin em comparação com o System Manager
+
+Você pode usar o plug-in de armazenamento para vCenter para tarefas operacionais básicas em sua matriz de armazenamento; no entanto, pode haver momentos em que você precisa iniciar o System Manager para executar tarefas não disponíveis no plug-in.
+
+O System Manager é um aplicativo incorporado no controlador do storage array, que é conetado à rede por meio de uma porta de gerenciamento Ethernet. O System Manager inclui todas as funções baseadas em array.
+
+A tabela a seguir ajuda você a decidir se você pode usar a interface do plugin ou a interface do System Manager para uma determinada tarefa de storage array.
+
+|===
+| Função | Interface do plugin | Interface do System Manager 
+
+
+| Operações em lote em grupos de várias matrizes de armazenamento | Sim | Não. As operações são realizadas em uma única matriz. 
+
+
+| Atualizações para o firmware do SANtricity os | Sim. Um ou mais arrays em uma operação em lote. | Sim. Somente array único. 
+
+
+| Importe configurações de um array para vários arrays | Sim | Não 
+
+
+| Gerenciamento de cluster de host e host (criar, atribuir volumes, atualizar e excluir) | Sim | Sim 
+
+
+| Gerenciamento de pools e grupos de volumes (criar, atualizar, ativar segurança e excluir) | Sim | Sim 
+
+
+| Gerenciamento de volume (criar, redimensionar, atualizar e excluir) | Sim | Sim 
+
+
+| Gerenciamento de cache SSD (criar, atualizar e excluir) | Sim | Sim 
+
+
+| Espelhamento e gerenciamento de snapshot | Não | Sim 
+
+
+| Gerenciamento de hardware (exibir status do controlador, configurar conexões de porta, colocar o controlador off-line, habilitar hot spares, apagar unidades, etc.) | Não | Sim 
+
+
+| Gerenciar alertas (e-mail, SNMP e syslog) | Não | Sim 
+
+
+| Gerenciamento de chaves de segurança | Não | Sim 
+
+
+| Gerenciamento de certificados para controladores | Não | Sim 
+
+
+| Gerenciamento de acesso para controladores (LDAP, SAML, etc.) | Não | Sim 
+
+
+| Gerenciamento de AutoSupport | Não | Sim 
+|===

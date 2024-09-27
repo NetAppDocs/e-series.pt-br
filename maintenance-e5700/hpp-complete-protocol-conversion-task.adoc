@@ -1,0 +1,138 @@
+---
+permalink: maintenance-e5700/hpp-complete-protocol-conversion-task.html 
+sidebar: sidebar 
+keywords: E5700 change host protocol, E5700 baseboard ports, convert E5700 protocol, IB protocol, Infiniband protocol, Fibre Channel protocol, FC protocol, iSCSI protocol, iSER, RoCE, NVMe, converting host port protocol, 
+summary: Conclua a conversão do protocolo do host E5700. 
+---
+= Conversão completa do protocolo de host E5700
+:allow-uri-read: 
+:experimental: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Depois de converter o protocolo das portas do host, execute etapas adicionais para usar o novo protocolo.
+
+As etapas que você pode precisar concluir dependem dos protocolos de início e término das portas do host da placa base e das portas HIC.
+
+
+
+== Conversão FC completa para iSCSI
+
+Se você já tinha portas de host FC e converteu para iSCSI, talvez seja necessário modificar sua configuração existente para oferecer suporte ao iSCSI. O procedimento a seguir só é aplicável se não houver iSCSI HIC presente.
+
+.Sobre esta tarefa
+Esta tarefa só se aplica se você estiver convertendo uma matriz de armazenamento que já esteja em uso.
+
+Essa tarefa não se aplica se você estiver convertendo um novo storage array que ainda não tenha hosts e volumes definidos. Se você tiver convertido o protocolo de porta de host de um novo storage array, consulte link:../install-hw-cabling/index.html["Procedimentos de cabeamento"] para instalar cabos e SFPs. Em seguida, siga as instruções na link:../config-linux/index.html["Configuração expressa do Linux"] link:../config-windows/index.html["Configuração expressa do Windows"], ou link:../config-vmware/index.html["Configuração do VMware Express"] para concluir a configuração de cada protocolo.
+
+.Passos
+. Configure os interrutores.
++
+Você deve configurar os switches usados para transportar tráfego iSCSI de acordo com as recomendações do fornecedor para iSCSI. Essas recomendações podem incluir diretivas de configuração, bem como atualizações de código.
+
+. A partir do Gestor do sistema SANtricity, selecione menu:hardware[Configurar portas iSCSI].
+. Selecione as definições da porta.
++
+Pode configurar a sua rede iSCSI de várias formas. Consulte o administrador da rede para obter dicas sobre como selecionar a melhor configuração para o seu ambiente.
+
+. Atualize as definições do host no Gerenciador de sistema do SANtricity.
++
+
+NOTE: Se você precisar de instruções para adicionar hosts ou clusters de host, consulte a ajuda on-line do Gerenciador de sistemas do SANtricity.
+
++
+.. Selecione menu:armazenamento[hosts].
+.. Selecione o host ao qual a porta será associada e clique em *Exibir/Editar configurações*.
++
+A caixa de diálogo Configurações do host é exibida.
+
+.. Clique na guia *Host Ports*.
++
+image::../media/sam1130_ss_host_settings_dialog_ports_tab_maint-e5700.gif[sam1130 ss host settings dialog ports tab manint e5700]
+
+.. Clique em *Adicionar* e use a caixa de diálogo *Adicionar porta de host* para associar um novo identificador de porta de host ao host.
++
+O comprimento do nome do identificador da porta do host é determinado pela tecnologia da interface do host. Os nomes do identificador da porta do host FC devem ter 16 carateres. Os nomes do identificador da porta do host iSCSI têm um máximo de 223 carateres. A porta deve ser única. Não é permitido um número de porta que já tenha sido configurado.
+
+.. Clique em *Excluir* e use a caixa de diálogo *Excluir porta do host* para remover (desassociar) um identificador de porta do host.
++
+A opção *Delete* não remove fisicamente a porta do host. Essa opção remove a associação entre a porta do host e o host. A menos que você remova o adaptador de barramento do host ou o iniciador iSCSI, a porta do host ainda é reconhecida pelo controlador.
+
+.. Clique em *Salvar* para aplicar as alterações às configurações do identificador da porta do host.
+.. Repita estas etapas para adicionar e remover quaisquer identificadores de porta de host adicionais.
+
+
+. Reinicie o host ou execute uma nova digitalização para que o host descubra adequadamente os LUNs.
+. Remonte os volumes ou comece a usar o volume do bloco.
+
+
+.O que se segue?
+A conversão do protocolo de host está concluída. Pode retomar as operações normais.
+
+
+
+== Conversão iSCSI completa para FC
+
+Se você já tinha portas de host iSCSI e converteu para FC, talvez seja necessário modificar sua configuração existente para oferecer suporte ao FC. O seguinte procedimento só é aplicável se não existir FC HIC.
+
+Esta tarefa só se aplica se você estiver convertendo uma matriz de armazenamento que já esteja em uso.
+
+Essa tarefa não se aplica se você estiver convertendo um novo storage array que ainda não tenha hosts e volumes definidos. Se você tiver convertido o protocolo de porta de host de um novo storage array, consulte link:../install-hw-cabling/index.html["Procedimentos de cabeamento"] para instalar cabos e SFPs. Em seguida, siga as instruções na link:../config-linux/index.html["Configuração expressa do Linux"] link:../config-windows/index.html["Configuração expressa do Windows"], ou link:../config-vmware/index.html["Configuração do VMware Express"] para concluir a configuração de cada protocolo.
+
+.Passos
+. Instale o utilitário HBA e determine WWPNs do iniciador.
+. Coloque a zona dos interrutores.
++
+O zoneamento dos switches permite que os hosts se conetem ao armazenamento e limita o número de caminhos. Você pode definir a zona dos switches usando a interface de gerenciamento dos switches.
+
+. Atualize as definições do host no Gerenciador de sistema do SANtricity.
++
+.. Selecione menu:armazenamento[hosts].
+.. Selecione o host ao qual a porta será associada e clique em *Exibir/Editar configurações*.
++
+A caixa de diálogo Configurações do host é exibida.
+
+.. Clique na guia *Host Ports*.
++
+image::../media/sam1130_ss_host_settings_dialog_ports_tab_maint-e5700.gif[sam1130 ss host settings dialog ports tab manint e5700]
+
+.. Clique em *Adicionar* e use a caixa de diálogo *Adicionar porta de host* para associar um novo identificador de porta de host ao host.
++
+O comprimento do nome do identificador da porta do host é determinado pela tecnologia da interface do host. Os nomes do identificador da porta do host FC devem ter 16 carateres. Os nomes do identificador da porta do host iSCSI têm um máximo de 223 carateres. A porta deve ser única. Não é permitido um número de porta que já tenha sido configurado.
+
+.. Clique em *Excluir* e use a caixa de diálogo *Excluir porta do host* para remover (desassociar) um identificador de porta do host.
++
+A opção *Delete* não remove fisicamente a porta do host. Essa opção remove a associação entre a porta do host e o host. A menos que você remova o adaptador de barramento do host ou o iniciador iSCSI, a porta do host ainda é reconhecida pelo controlador.
+
+.. Clique em *Salvar* para aplicar as alterações às configurações do identificador da porta do host.
+.. Repita estas etapas para adicionar e remover quaisquer identificadores de porta de host adicionais.
+
+
+. Reinicie o host ou execute uma nova digitalização para que o host descubra adequadamente o armazenamento mapeado.
+. Remonte os volumes ou comece a usar o volume do bloco.
+
+
+.O que se segue?
+A conversão do protocolo de host está concluída. Pode retomar as operações normais.
+
+
+
+== Conversão completa de IB-iSER para IB-SRP, NVMe em IB, NVMe em RoCE ou NVMe em FC
+
+Depois de aplicar a chave do pacote de recursos para converter o protocolo usado pela porta InfiniBand iSER HIC para/de SRP, NVMe em InfiniBand, NVMe em RoCE ou NVMe em Fibre Channel, é necessário configurar o host para usar o protocolo apropriado.
+
+.Passos
+. Configurar o host para usar o protocolo SRP, iSER ou NVMe.
++
+Para obter instruções passo a passo sobre como configurar o host para usar SRP, iSER ou NVMe, consulte o link:../config-linux/index.html["Configuração expressa do Linux"].
+
+. Para conectar o host ao storage array para uma configuração SRP, é necessário habilitar a stack de drivers InfiniBand com as opções apropriadas.
++
+Configurações específicas podem variar entre distribuições Linux. Consulte o http://mysupport.netapp.com/matrix["Matriz de interoperabilidade do NetApp"^] para obter instruções específicas e configurações adicionais recomendadas para sua solução.
+
+
+
+.O que se segue?
+A conversão do protocolo de host está concluída. Pode retomar as operações normais.

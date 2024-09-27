@@ -1,0 +1,102 @@
+---
+sidebar: sidebar 
+permalink: vcenter-plugin/vc-olh-create-host-access.html 
+keywords: vCenter plugin, Plugin for vCenter, SANtricity plugin for vCenter 
+summary: Para gerenciar o armazenamento com o plug-in de armazenamento para vCenter, você deve descobrir ou definir cada host na rede. 
+---
+= Crie acesso ao host
+:hardbreaks:
+:allow-uri-read: 
+:experimental: 
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./media/
+
+
+[role="lead"]
+Para gerenciar o armazenamento com o plug-in de armazenamento para vCenter, você deve descobrir ou definir cada host na rede.
+
+.Sobre esta tarefa
+Ao criar um host, você define os parâmetros do host para fornecer conexão com o storage array e acesso de e/S aos volumes.
+
+Ao criar um host, tenha em mente estas diretrizes:
+
+* Você deve definir as portas de identificador de host que estão associadas ao host.
+* Certifique-se de fornecer o mesmo nome que o nome do sistema atribuído pelo host.
+* Esta operação não é bem-sucedida se o nome que você escolher já estiver em uso.
+* O comprimento do nome não pode exceder 30 carateres.
+
+
+.Passos
+. Na página Gerenciar, selecione a matriz de armazenamento com a conexão do host.
+. Selecione menu:provisionamento[Configurar hosts].
++
+A página Configurar hosts será exibida.
+
+. Clique em menu:criar[Host].
++
+A caixa de diálogo criar host é exibida.
+
+. Selecione as configurações para o host, conforme apropriado.
++
+.Detalhes do campo
+[%collapsible]
+====
+[cols="25h,~"]
+|===
+| Definição | Descrição 
+
+
+ a| 
+Nome
+ a| 
+Digite um nome para o novo host.
+
+
+
+ a| 
+Tipo de sistema operacional de host
+ a| 
+Selecione o sistema operacional que está sendo executado no novo host na lista suspensa.
+
+
+
+ a| 
+Tipo de interface de host
+ a| 
+(Opcional) se você tiver mais de um tipo de interface de host compatível com seu storage array, selecione o tipo de interface de host que deseja usar.
+
+
+
+ a| 
+Portas de host
+ a| 
+Execute um dos seguintes procedimentos:
+
+** *Selecione Interface de e/S* -- geralmente, as portas do host devem ter feito login e estar disponíveis na lista suspensa. Você pode selecionar os identificadores de porta do host na lista.
+** *Manual add* -- se um identificador de porta de host não for exibido na lista, isso significa que a porta de host não foi conetada. Um utilitário HBA ou o utilitário iniciador iSCSI podem ser usados para localizar os identificadores de porta de host e associá-los ao host. Você pode inserir manualmente os identificadores da porta do host ou copiá-los/colá-los do utilitário (um de cada vez) no campo portas do host. Você deve selecionar um identificador de porta de host de cada vez para associá-lo ao host, mas pode continuar a selecionar quantos identificadores estão associados ao host. Cada identificador é exibido no campo Host Ports (portas do host). Se necessário, você também pode remover um identificador selecionando *X* ao lado dele.
+
+
+
+
+ a| 
+Definir segredo do iniciador CHAP
+ a| 
+(Opcional) se você selecionou ou inseriu manualmente uma porta de host com um IQN iSCSI e se quiser exigir que um host que tente acessar a matriz de armazenamento para se autenticar usando o Challenge Handshake Authentication Protocol (CHAP), marque a caixa de seleção "Definir segredo do iniciador CHAP". Para cada porta de host iSCSI selecionada ou inserida manualmente, faça o seguinte:
+
+** Insira o mesmo segredo CHAP que foi definido em cada iniciador de host iSCSI para autenticação CHAP. Se você estiver usando autenticação CHAP mútua (autenticação bidirecional que permite que um host se valide para o storage array e para que um storage array se valide para o host), você também deve definir o segredo CHAP para o storage array na configuração inicial ou alterando as configurações.
+** Deixe o campo em branco se você não precisar de autenticação de host. Atualmente, o único método de autenticação iSCSI usado é CHAP.
+
+
+|===
+====
+. Clique em *criar*.
+. Se você precisar atualizar as informações do host, selecione o host na tabela e clique em *Exibir/Editar configurações*.
+
+
+.Resultado
+Depois que o host é criado com êxito, o sistema cria um nome padrão para cada porta de host configurada para o host (rótulo do usuário). O alias padrão é `<Hostname_Port Number>`. Por exemplo, o alias padrão para a primeira porta criada para o IPT de host é `IPT_1`.
+
+.Depois de terminar
+É necessário atribuir um volume a um host para que ele possa ser usado para operações de e/S. Vá para link:vc-olh-assign-volumes-to-hosts.html["Atribuir volumes aos hosts"].

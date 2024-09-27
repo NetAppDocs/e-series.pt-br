@@ -1,0 +1,136 @@
+---
+permalink: cloud-connector/modify-intro-concept.html 
+sidebar: sidebar 
+keywords: Cloud Connector settings 
+summary: Você pode acessar a opção Configurações no painel de navegação à esquerda do aplicativo SANtricity Cloud Connector. A opção Configurações permite modificar as configurações atuais do aplicativo para a conta S3, matrizes e hosts de armazenamento gerenciados e credenciais de proxy de serviços da Web. Você também pode alterar a senha do aplicativo SANtricity Cloud Connector por meio da opção Configurações. 
+---
+= Modifique as configurações do SANtricity Cloud Connector
+:allow-uri-read: 
+:experimental: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+A opção Configurações permite modificar as configurações atuais do aplicativo para a conta S3, matrizes e hosts de armazenamento gerenciados e credenciais de proxy de serviços da Web. Você também pode alterar a senha do aplicativo SANtricity Cloud Connector por meio da opção Configurações.
+
+
+
+== Modifique as configurações da conta S3
+
+Você pode modificar as configurações S3 existentes para o aplicativo SANtricity Cloud Connector na janela Configurações de conta do S3.
+
+.Antes de começar
+Ao modificar as configurações URL ou rótulo de bucket S3, esteja ciente de que o acesso a quaisquer backups existentes configurados pelo SANtricity Cloud Connector será afetado.
+
+.Passos
+. Na barra de ferramentas esquerda, clique em *Configurações > Configuração*.
++
+É apresentada a página Definições - Configuração.
+
+. Clique em *Exibir/Editar configurações* para Configurações de conta do S3.
++
+A página Configurações da conta S3 é exibida.
+
+. No arquivo URL, insira o URL do serviço de nuvem S3.
+. No campo *ID da chave de acesso*, insira a ID de acesso para o destino S3.
+. No campo *chave de acesso secreta*, insira a chave de acesso para o destino S3.
+. No campo *S3 Bucket Name*, insira o nome do bucket para o alvo S3.
+. Marque a caixa de seleção *Use Path Style Access* se necessário.
+. Clique em *Test Connection* para verificar a conexão para as credenciais S3 inseridas.
+. Clique em *Salvar* para aplicar as modificações.
++
+As configurações de conta S3 modificadas são aplicadas.
+
+
+
+
+
+== Gerenciar storage arrays
+
+Você pode adicionar ou remover matrizes de armazenamento do proxy de serviços da Web registrado no host do SANtricity Cloud Connector na página Gerenciar matrizes de armazenamento.
+
+A página Gerenciar matrizes de armazenamento exibe uma lista de matrizes de armazenamento do proxy de serviços da Web disponíveis para Registro no host do SANtricity Cloud Connector.
+
+.Passos
+. Na barra de ferramentas esquerda, clique em *Configurações > matrizes de armazenamento*.
++
+É apresentado o ecrã Settings - Storage Arrays (Definições - matrizes de armazenamento).
+
+. Para adicionar matrizes de armazenamento ao SANtricity Cloud Connector, clique em *Add*.
++
+.. Na janela Adicionar matrizes de armazenamento, marque cada caixa de seleção ao lado das matrizes de armazenamento desejadas na lista de resultados.
+.. Clique em *Add*.
++
+A matriz de armazenamento selecionada é adicionada ao SANtricity Cloud Connector e é exibida na seção de lista de resultados da tela Configurações - matrizes de armazenamento.
+
+
+
+. Para modificar o host para uma matriz de armazenamento adicionada, clique em *Editar* para o item de linha na seção de lista de resultados da tela Configurações - matrizes de armazenamento.
++
+.. No menu suspenso Host associado, selecione o host desejado para o storage array.
+.. Clique em *Salvar*.
++
+O host selecionado é atribuído ao storage array.
+
+
+
+. Para remover um storage array existente do host do SANtricity Cloud Connector, selecione os storages de armazenamento desejados na lista de resultados inferior e clique em *Remover*.
++
+.. No campo Confirm Remove Storage Array (confirmar remoção da matriz de armazenamento), `REMOVE` digite .
+.. Clique em *Remover*.
++
+O storage array selecionado é removido do host do SANtricity Cloud Connector.
+
+
+
+
+
+
+
+== Modificar as configurações do proxy dos serviços da Web
+
+Você pode modificar as configurações de proxy de serviços da Web existentes para o aplicativo SANtricity Cloud Connector na janela Configurações de proxy de serviços da Web.
+
+.Antes de começar
+O proxy de serviços da Web usado com o SANtricity Cloud Connector precisa ter os arrays apropriados adicionados e a senha correspondente definida.
+
+.Passos
+. Na barra de ferramentas esquerda, clique em *menu:Configurações[Configuração]*.
++
+É apresentado o ecrã Settings - Configuration (Definições - Configuração).
+
+. Clique em *View/Edit Settings* (Ver/Editar definições) para Web Services Proxy.
++
+É apresentado o ecrã Web Services Proxy settings (Definições do proxy dos serviços da Web).
+
+. No campo URL, insira o URL do proxy de serviços da Web usado para o conetor da nuvem do SANtricity.
+. No campo Nome do usuário, insira o nome do usuário para a conexão do proxy de serviços da Web.
+. No campo Senha , digite a senha para a conexão do Proxy de Serviços da Web.
+. Clique em *testar conexão* para verificar a conexão para as credenciais de proxy de serviços da Web inseridas.
+. Clique em *Salvar* para aplicar as modificações.
+
+
+
+
+== Altere a senha do SANtricity Cloud Connector
+
+Você pode alterar a senha do aplicativo SANtricity Cloud Connector na tela alterar senha.
+
+.Passos
+. Na barra de ferramentas esquerda, clique em *menu:Configurações[Configuração]*.
++
+É apresentado o ecrã Settings - Configuration (Definições - Configuração).
+
+. Clique em *alterar senha* para o SANtricity Cloud Connector.
++
+É apresentado o ecrã Change Password (alterar palavra-passe).
+
+. No campo Senha atual, digite sua senha atual para o aplicativo SANtricity Cloud Connector.
+. No campo Nova senha, insira sua nova senha para o aplicativo SANtricity Cloud Connector.
+. No campo confirmar nova senha , digite novamente a nova senha.
+. Clique em *alterar* para aplicar a nova senha.
++
+A senha modificada é aplicada ao aplicativo SANtricity Cloud Connector.
+
+

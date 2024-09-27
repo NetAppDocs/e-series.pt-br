@@ -1,0 +1,25 @@
+---
+permalink: config-linux/iscsi-configure-network-concept.html 
+sidebar: sidebar 
+keywords: express linux configuration, software configuration, linux host, E2800, E5700, EF300, EF600, E-Series, eseries 
+summary: Configure a sua rede iSCSI. 
+---
+= Configurar a rede
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Pode configurar a sua rede iSCSI de várias formas, dependendo dos requisitos de armazenamento de dados.
+
+Consulte o administrador da rede para obter dicas sobre como selecionar a melhor configuração para o seu ambiente.
+
+Para configurar uma rede iSCSI com redundância básica, conete cada porta de host e uma porta de cada controlador a switches separados e particione cada conjunto de portas de host e portas de controlador em segmentos de rede ou VLANs separados.
+
+Você deve ativar o controle de fluxo de hardware Enviar e receber *fim a fim*. Você deve desativar o controle de fluxo de prioridade.
+
+Se você estiver usando quadros jumbo dentro da SAN IP por razões de desempenho, certifique-se de configurar o array, switches e hosts para usar quadros jumbo. Consulte a documentação do sistema operacional e do switch para obter informações sobre como habilitar quadros jumbo nos hosts e nos switches. Para ativar quadros jumbo no array, execute as etapas em link:iscsi-configure-array-side-network-task.html["Configurar a rede do lado da matriz"].
+
+
+NOTE: Muitos switches de rede devem ser configurados acima de 9.000 bytes para sobrecarga de IP. Consulte a documentação do switch para obter mais informações.

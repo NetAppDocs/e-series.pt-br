@@ -1,0 +1,45 @@
+---
+permalink: config-vmware/index.html 
+sidebar: sidebar 
+keywords: express vmware configuration, software configuration, vmware host, E2800, E5700, EF300, EF600, E-Series, eseries 
+summary: Use a configuração expressa de um host VMware com um sistema e-Series. 
+---
+= Visão geral da configuração do VMware Express
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+O método expresso da VMware para instalar seu storage array e acessar o Gerenciador de sistema do SANtricity é apropriado para configurar um host VMware autônomo em um sistema de storage e-Series. Ele foi projetado para colocar o sistema de storage em funcionamento o mais rápido possível com pontos de decisão mínimos.
+
+
+
+== Descrição geral do procedimento
+
+O método expresso inclui as seguintes etapas, que também são descritas no link:understand-vmware-workflow-concept.html["Fluxo de trabalho da VMware"].
+
+. Configure um dos seguintes ambientes de comunicação:
++
+** link:nmve-fc-perform-specific-task.html["NVMe em Fibre Channel"]
+** link:fc-perform-specific-task.html["Fibre Channel"]
+** link:iscsi-perform-specific-task.html["ISCSI"]
+** link:sas-perform-specific-task.html["SAS"]
+
+
+. Crie volumes lógicos no storage array.
+. Disponibilize os volumes para o host de dados.
+
+
+
+
+== Encontre mais informações
+
+* Ajuda on-line -- descreve como usar o Gerenciador de sistemas do SANtricity para concluir as tarefas de gerenciamento de storage e configuração. Está disponível dentro do produto.
+* https://kb.netapp.com/["Base de conhecimento da NetApp"^] (Um banco de dados de artigos) - fornece informações de solução de problemas, perguntas frequentes e instruções para uma ampla gama de produtos e tecnologias NetApp.
+* http://mysupport.netapp.com/matrix["Ferramenta de Matriz de interoperabilidade do NetApp"^] -- permite pesquisar configurações de produtos e componentes NetApp que atendam aos padrões e requisitos especificados pela NetApp.
+* https://www.netapp.com/pdf.html?item=/media/17017-tr4789pdf.pdf["Guia de configuração da VMware para integração iSCSI SANtricity da série e com o ESXi 6.X."^] -- fornece detalhes técnicos sobre a integração iSCSI com VMware.
+* https://configmax.vmware.com/home["Máximos de configuração do VMware"^] -- descreve como configurar o armazenamento virtual e físico para permanecer dentro dos máximos permitidos que o ESX/ESXi suporta.
+* https://docs.vmware.com/en/VMware-vSphere/7.0/com.vmware.vsphere.storage.doc/GUID-9AEE5F4D-0CB8-4355-BF89-BB61C5F30C70.html["Requisitos e limitações do storage VMware NVMe"^].
+* https://docs.vmware.com/en/VMware-vSphere/index.html["Documentação do VMware vSphere"^] -- fornece a documentação do ESXi vCenter Server.
+
