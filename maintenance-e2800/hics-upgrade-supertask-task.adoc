@@ -102,7 +102,7 @@ CAUTION: *Possível perda de dados* -- se você continuar este procedimento enqu
 O LED verde Cache ative na parte de trás de cada controlador fica aceso quando os dados em cache precisam ser gravados nas unidades. Tem de esperar que este LED se desligue.
 
 +
-image::../media/28_dwg_2800_controller_attn_led_maint-e2800.gif[28 dwg 2800 controlador attn led manint e2800]
+image::../media/28_dwg_2800_controller_attn_led_maint-e2800.gif[LED de cache ativo]
 
 +
 *(1)* _Cache ative LED_
@@ -138,7 +138,7 @@ Dependendo do tipo de HIC para o qual você está atualizando, você pode ser ca
 O LED verde Cache ative na parte de trás do controlador fica aceso quando os dados em cache precisam ser gravados nas unidades. Tem de esperar que este LED se desligue antes de remover o recipiente do controlador.
 
 +
-image::../media/28_dwg_2800_controller_attn_led_maint-e2800.gif[28 dwg 2800 controlador attn led manint e2800]
+image::../media/28_dwg_2800_controller_attn_led_maint-e2800.gif[LED de cache ativo]
 
 +
 *(1)* _Cache ative LED_
@@ -148,7 +148,7 @@ image::../media/28_dwg_2800_controller_attn_led_maint-e2800.gif[28 dwg 2800 cont
 A figura a seguir é um exemplo de um compartimento de controladora E2812, compartimento de controladora E2824 ou array Flash EF280:
 
 +
-image::../media/28_dwg_e2824_remove_controller_canister_maint-e2800.gif[28 dwg e2824 remover a manutenção do recipiente do controlador e2800]
+image::../media/28_dwg_e2824_remove_controller_canister_maint-e2800.gif[Remova o recipiente do controlador]
 
 +
 *(1)* _Controller canister_
@@ -160,7 +160,7 @@ image::../media/28_dwg_e2824_remove_controller_canister_maint-e2800.gif[28 dwg e
 A figura a seguir é um exemplo de um compartimento de controladora E2860:
 
 +
-image::../media/28_dwg_e2860_add_controller_canister_maint-e2800.gif[28 dwg e2860 adicionar o controlador canister manint e2800]
+image::../media/28_dwg_e2860_add_controller_canister_maint-e2800.gif[Remova o recipiente do controlador]
 
 +
 *(1)* _Controller canister_
@@ -193,7 +193,7 @@ Remova a placa de interface do host original (HIC) para que você possa substitu
 Se este LED verde estiver ligado, o controlador ainda está a utilizar a bateria. Deve aguardar que este LED se apague antes de remover quaisquer componentes.
 
 +
-image::../media/28_dwg_e2800_internal_cache_active_led_maint-e2800.gif[28 dwg e2800 cache interno ativo led mint e2800]
+image::../media/28_dwg_e2800_internal_cache_active_led_maint-e2800.gif[LED Ativo Cache Interno]
 
 +
 *(1)* _Cache interno ativo_
@@ -206,7 +206,7 @@ image::../media/28_dwg_e2800_internal_cache_active_led_maint-e2800.gif[28 dwg e2
 Há quatro parafusos: Um na parte superior, um na parte lateral e dois na parte frontal.
 
 +
-image::../media/28_dwg_e2800_hic_faceplace_screws_maint-e2800.gif[28 dwg e2800 hic faceplace parafusos mint e2800]
+image::../media/28_dwg_e2800_hic_faceplace_screws_maint-e2800.gif[Retire a placa frontal HIC do controlador]
 
 . Retire a placa frontal do HIC.
 . Utilizando os dedos ou uma chave de fendas Phillips, desaperte os três parafusos de aperto manual que fixam o HIC à placa do controlador.
@@ -216,7 +216,7 @@ image::../media/28_dwg_e2800_hic_faceplace_screws_maint-e2800.gif[28 dwg e2800 h
 CAUTION: Tenha cuidado para não arranhar ou bater os componentes na parte inferior do HIC ou na parte superior da placa controladora.
 
 +
-image::../media/28_dwg_e2800_hic_thumbscrews_maint-e2800.gif[28 dwg e2800 hic parafusos de aperto manual e2800]
+image::../media/28_dwg_e2800_hic_thumbscrews_maint-e2800.gif[Retire o HIC do controlador"]
 
 +
 *(1)* _placa de interface de host (HIC)_
@@ -240,7 +240,7 @@ CAUTION: *Possível perda de acesso a dados* -- nunca instale um HIC em um recip
 . Desembale o novo HIC e a nova placa frontal HIC.
 . Usando uma chave de fenda Phillips nº 1, remova os quatro parafusos que prendem a placa frontal HIC ao recipiente do controlador e remova a placa frontal.
 +
-image::../media/28_dwg_e2800_hic_faceplace_screws_maint-e2800.gif[28 dwg e2800 hic faceplace parafusos mint e2800]
+image::../media/28_dwg_e2800_hic_faceplace_screws_maint-e2800.gif[Volte a colocar a placa frontal HIC no controlador]
 
 . Alinhe os três parafusos de aperto manual no HIC com os orifícios correspondentes no controlador e alinhe o conetor na parte inferior do HIC com o conetor de interface HIC na placa do controlador.
 +
@@ -252,7 +252,7 @@ Tenha cuidado para não arranhar ou bater os componentes na parte inferior do HI
 CAUTION: * Possíveis danos ao equipamento * - tenha muito cuidado para não apertar o conetor de fita dourada para os LEDs do controlador entre o HIC e os parafusos de aperto manual.
 
 +
-image::../media/28_dwg_e2800_hic_thumbscrews_maint-e2800.gif[28 dwg e2800 hic parafusos de aperto manual e2800]
+image::../media/28_dwg_e2800_hic_thumbscrews_maint-e2800.gif[Instale o HIC no controlador]
 
 +
 *(1)* _placa de interface host_
@@ -281,7 +281,7 @@ Reinstale o recipiente do controlador na prateleira do controlador depois de ins
 A figura a seguir é um exemplo de um compartimento de controladora E2824 ou de um array flash EF280:
 
 +
-image::../media/28_dwg_e2824_remove_controller_canister_maint-e2800.gif[28 dwg e2824 remover a manutenção do recipiente do controlador e2800]
+image::../media/28_dwg_e2824_remove_controller_canister_maint-e2800.gif[volte a instalar o recipiente do controlador]
 
 +
 *(1)* _Controller canister_
@@ -293,7 +293,7 @@ image::../media/28_dwg_e2824_remove_controller_canister_maint-e2800.gif[28 dwg e
 A figura a seguir é um exemplo de um compartimento de controladora E2860:
 
 +
-image::../media/28_dwg_e2860_add_controller_canister_maint-e2800.gif[28 dwg e2860 adicionar o controlador canister manint e2800]
+image::../media/28_dwg_e2860_add_controller_canister_maint-e2800.gif[Volte a instalar o recipiente do controlador]
 
 +
 *(1)* _Controller canister_
@@ -333,7 +333,7 @@ Conclua o processo de atualização de uma placa de interface do host verificand
 NOTE: A figura mostra um exemplo do recipiente do controlador. Seu controlador pode ter um número diferente e um tipo diferente de portas de host.
 
 +
-image::../media/28_dwg_attn_led_7s_display_maint-e2800.gif[28 dwg attn led 7s display manint e2800]
+image::../media/28_dwg_attn_led_7s_display_maint-e2800.gif[E2800 LEDs do controlador"]
 
 +
 *(1)* _LED de atenção (âmbar)_

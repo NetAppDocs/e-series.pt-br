@@ -10,7 +10,7 @@ summary: 'O Gerenciamento de certificados permite criar solicitações de assina
 :nofooter: 
 :icons: font
 :linkattrs: 
-:imagesdir: ./media/
+:imagesdir: ../media/
 
 
 [role="lead"]

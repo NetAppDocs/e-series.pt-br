@@ -36,7 +36,7 @@ Você pode substituir uma fonte de alimentação nas seguintes prateleiras:
 
 A figura a seguir mostra um exemplo de compartimento de controladora E5724 com duas fontes de alimentação (coletores de ventilador de energia). Os compartimentos de unidades DE224C são idênticos, mas incluem módulos de e/S (IOMs) em vez de coletores de controladora.
 
-image::../media/e5700_power_supply_callout.png[legenda da fonte de alimentação e5700]
+image::../media/e5700_power_supply_callout.png[Fonte de alimentação do controlador E5700]
 
 *(1)* _compartimento do controlador com duas fontes de alimentação (coletores do ventilador de energia) abaixo dos coletores do controlador._
 
@@ -82,11 +82,11 @@ Os tópicos _replace power canister_ não descrevem como substituir um recipient
 
 A figura a seguir mostra a parte traseira de um compartimento de unidades de DE460C TB com os dois coletores de energia:
 
-image::../media/28_dwg_de460c_rear_no_callouts_maint-e5700.gif[28 dwg de460c traseiro sem legenda e5700]
+image::../media/28_dwg_de460c_rear_no_callouts_maint-e5700.gif[DE460C com dois coletores de potência]
 
 A figura a seguir mostra um recipiente de alimentação:
 
-image::../media/28_dwg_e2860_de460c_psu_maint-e5700.gif[28 dwg e2860 de460c fonte de alimentação e5700]
+image::../media/28_dwg_e2860_de460c_psu_maint-e5700.gif[Depósito de alimentação]
 
 
 
@@ -130,11 +130,11 @@ Os tópicos _replace fan canister_ não descrevem como substituir um recipiente 
 
 A figura seguinte mostra um recipiente da ventoinha:
 
-image::../media/28_dwg_e2860_de460c_single_fan_canister_no_callouts_maint-e5700.gif[28 dwg e2860 de460c recipiente de ventilador único sem legenda-maint e5700]
+image::../media/28_dwg_e2860_de460c_single_fan_canister_no_callouts_maint-e5700.gif[Recipiente da ventoinha]
 
 A figura a seguir mostra a parte traseira de uma prateleira DE460C com dois coletores de ventilador:
 
-image::../media/28_dwg_de460c_rear_no_callouts_maint-e5700.gif[28 dwg de460c traseiro sem legenda e5700]
+image::../media/28_dwg_de460c_rear_no_callouts_maint-e5700.gif[DE460C com dois coletores de ventilador]
 
 
 CAUTION: *Possíveis danos ao equipamento* -- se substituir um recipiente do ventilador com a alimentação ligada, deve concluir o procedimento de substituição no prazo de 30 minutos para evitar a possibilidade de sobreaquecimento do equipamento.

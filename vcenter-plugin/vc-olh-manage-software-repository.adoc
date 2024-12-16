@@ -11,7 +11,7 @@ summary: Você pode exibir e gerenciar um repositório de software, que lista to
 :nofooter: 
 :icons: font
 :linkattrs: 
-:imagesdir: ./media/
+:imagesdir: ../media/
 
 
 [role="lead"]

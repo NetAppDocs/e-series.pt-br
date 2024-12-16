@@ -10,7 +10,7 @@ summary: Mantenha a proteção contra perda de gaveta e gaveta para um pool ou g
 :nofooter: 
 :icons: font
 :linkattrs: 
-:imagesdir: ./media/
+:imagesdir: ../media/
 
 
 [role="lead"]

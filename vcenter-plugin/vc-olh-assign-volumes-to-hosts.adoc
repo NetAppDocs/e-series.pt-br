@@ -11,7 +11,7 @@ summary: É necessário atribuir um volume a um host ou a um cluster de host par
 :nofooter: 
 :icons: font
 :linkattrs: 
-:imagesdir: ./media/
+:imagesdir: ../media/
 
 
 [role="lead"]

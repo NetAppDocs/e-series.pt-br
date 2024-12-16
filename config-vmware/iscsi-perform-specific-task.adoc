@@ -53,12 +53,12 @@ Se você estiver usando quadros jumbo dentro da SAN IP por razões de desempenho
 
 
 .Sobre esta tarefa
-Ao Planejar sua rede iSCSI, lembre-se de que o https://configmax.vmware.com/home["Máximos de configuração do VMware"^] guia afirma que o máximo de caminhos de armazenamento iSCSI suportados é 8. Você deve considerar esse requisito para evitar configurar muitos caminhos.
+Ao Planejar sua rede iSCSI, lembre-se de que o https://configmax.broadcom.com/home["Máximos de configuração do VMware"^] guia afirma que o máximo de caminhos de armazenamento iSCSI suportados é 8. Você deve considerar esse requisito para evitar configurar muitos caminhos.
 
 Por padrão, o iniciador de software iSCSI da VMware cria uma única sessão por destino iSCSI quando você não está usando a vinculação de porta iSCSI.
 
 
-NOTE: A vinculação de porta iSCSI da VMware é um recurso que força todas as portas VMkernel vinculadas a fazer logon em todas as portas de destino acessíveis nos segmentos de rede configurados. Destina-se a ser utilizado com matrizes que apresentem um único endereço de rede para o destino iSCSI. A NetApp recomenda que a ligação de porta iSCSI não seja utilizada. Para obter informações adicionais, consulte o http://kb.vmware.com/["Base de Conhecimento da VMware"] para obter o artigo sobre considerações sobre o uso de vinculação de porta iSCSI de software no ESX/ESXi. Se o host ESXi estiver conetado ao armazenamento de outro fornecedor, o NetApp recomenda que você use portas iSCSI vmkernel separadas para evitar qualquer conflito com a vinculação de porta.
+NOTE: A vinculação de porta iSCSI da VMware é um recurso que força todas as portas VMkernel vinculadas a fazer logon em todas as portas de destino acessíveis nos segmentos de rede configurados. Destina-se a ser utilizado com matrizes que apresentem um único endereço de rede para o destino iSCSI. A NetApp recomenda que a ligação de porta iSCSI não seja utilizada. Para obter informações adicionais, consulte o https://support.broadcom.com/["Base de Conhecimento da VMware"] para obter o artigo sobre considerações sobre o uso de vinculação de porta iSCSI de software no ESX/ESXi. Se o host ESXi estiver conetado ao armazenamento de outro fornecedor, o NetApp recomenda que você use portas iSCSI vmkernel separadas para evitar qualquer conflito com a vinculação de porta.
 
 Para a prática recomendada, você não deve usar vinculação de porta em storage arrays e-Series. Consulte https://www.netapp.com/media/17017-tr4789.pdf["TR-4789:Guia de configuração VMware para integração iSCSI SANtricity da série e com ESXi 6.x e 7.x."^] para obter mais informações.
 
@@ -280,7 +280,7 @@ Pode gerar e imprimir um PDF desta página e, em seguida, utilizar a seguinte fo
 
 As configurações recomendadas consistem em duas portas de iniciador e quatro portas de destino com uma ou mais VLANs.
 
-image::../media/50001_01_conf-vmw.gif[50001 01 conf vmw]
+image::../media/50001_01_conf-vmw.gif[Identificador de porta iSCSI]
 
 
 

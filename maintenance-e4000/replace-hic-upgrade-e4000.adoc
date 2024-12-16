@@ -1,0 +1,228 @@
+---
+permalink: maintenance-e4000/replace-hic-upgrade-e4000.html 
+sidebar: sidebar 
+keywords:  
+summary:  
+---
+= Atualize o HIC em E4000
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+É possível atualizar as placas de interface do host (HICs) para aumentar o número de portas do host ou alterar protocolos de host.
+
+.Sobre esta tarefa
+* Ao atualizar HICs, você deve desligar a matriz de armazenamento, atualizar as HICs e reaplicar energia.
+* Ao atualizar HICs em um controlador E4000, repita todas as etapas para remover o segundo controlador, atualize os HICs do segundo controlador e reinstale o segundo controlador antes de reaplicar energia ao compartimento do controlador.
+
+
+.Antes de começar
+* Agende uma janela de manutenção de tempo de inatividade para este procedimento. Não é possível aceder aos dados na matriz de armazenamento até concluir com êxito este procedimento. Como ambos os controladores devem ter a mesma configuração HIC quando são ligados, a energia deve estar desligada quando você altera a configuração HIC. A presença de HICs incompatíveis faz com que o controlador com o HIC de substituição bloqueie quando o coloca online.
+* Certifique-se de que tem o seguinte:
++
+** Duas placas de rede compatíveis com os controladores.
+** Uma pulseira antiestática, ou você tomou outras precauções antiestáticas.
+** Uma área de trabalho plana e estática livre.
+** Etiquetas para identificar cada cabo que está ligado ao recipiente do controlador.
+** Uma chave de fendas Phillips nº 1.
+** Uma estação de gerenciamento com um navegador que pode acessar o Gerenciador de sistema do SANtricity para o controlador. (Para abrir a interface do System Manager, aponte o navegador para o nome de domínio ou endereço IP do controlador.)
++
+
+CAUTION: *Possível perda de acesso a dados* -- nunca instale um HIC em um recipiente de controlador E4000 se esse HIC foi projetado para outro controlador e-Series. Além disso, ambos os controladores e ambas as HICs devem ser idênticos. A presença de HICs incompatíveis ou incompatíveis faz com que os controladores bloqueiem quando você aplica energia.
+
+
+
+
+
+
+
+== Passo 1: Coloque o compartimento do controlador offline
+
+Coloque o compartimento da controladora offline para que você possa atualizar os HICs com segurança.
+
+.Passos
+. Na página inicial do Gerenciador de sistemas do SANtricity, verifique se o storage array tem o status ideal.
++
+Se o status não for ideal, use o Recovery Guru ou entre em Contato com o suporte técnico para resolver o problema. Não prossiga com este procedimento.
+
+. Clique em *suporte > Centro de Atualização* para garantir que a versão mais recente do SANtricity os esteja instalada.
++
+Conforme necessário, instale a versão mais recente.
+
+. Faça backup do banco de dados de configuração do storage usando o Gerenciador de sistema do SANtricity.
++
+Se ocorrer um problema ao remover um controlador, pode utilizar o ficheiro guardado para restaurar a configuração. O sistema salvará o estado atual do banco de dados de configuração RAID, que inclui todos os dados para grupos de volume e pools de discos na controladora.
+
++
+** Do System Manager:
++
+... Selecione *suporte > Centro de suporte > Diagnóstico*.
+... Selecione *Collect Configuration Data*.
+... Clique em *Collect*.
++
+O arquivo é salvo na pasta Downloads do seu navegador com o nome *configurationData-<arrayName>-<dateTime>.7z*.
+
+
+
+
+
+. Certifique-se de que nenhuma operação de e/S esteja ocorrendo entre o storage array e todos os hosts conectados. Por exemplo, você pode executar estas etapas:
++
+** Parar todos os processos que envolvem os LUNs mapeados do armazenamento para os hosts.
+** Garantir que nenhuma aplicação esteja gravando dados em LUNs mapeados do storage para os hosts.
+** Desmonte todos os sistemas de arquivos associados a volumes no array.
++
+
+NOTE: As etapas exatas para interromper as operações de e/S do host dependem do sistema operacional do host e da configuração, que estão além do escopo dessas instruções. Se você não tiver certeza de como interromper as operações de e/S do host em seu ambiente, considere encerrar o host.
+
++
+
+CAUTION: *Possível perda de dados* -- se você continuar este procedimento enquanto as operações de e/S estão ocorrendo, o aplicativo host pode perder o acesso aos dados porque o armazenamento não está acessível.
+
+
+
+. Aguarde até que quaisquer dados na memória cache sejam gravados nas unidades.
++
+O LED verde Cache ative na parte de trás de cada controlador fica aceso quando os dados em cache precisam ser gravados nas unidades. Tem de esperar que este LED se desligue.
+
+. Na página inicial do Gerenciador do sistema do SANtricity, selecione *Exibir operações em andamento*. Aguarde que todas as operações sejam concluídas antes de continuar com o próximo passo.
+. Desligue o compartimento do controlador.
++
+.. Identifique e, em seguida, desconete ambos os cabos de alimentação do compartimento do controlador.
+.. Aguarde que todos os LEDs na prateleira do controlador se desliguem.
+
+
+
+
+
+
+== Etapa 2: Remova o recipiente do controlador
+
+Retire o recipiente do controlador do sistema e, em seguida, retire a tampa do recipiente do controlador.
+
+.Passos
+. Se você ainda não está aterrado, aterre-se adequadamente.
+. Solte o gancho e a alça de loop que prendem os cabos ao dispositivo de gerenciamento de cabos e, em seguida, desconete os cabos do sistema e os SFPs (se necessário) do recipiente do controlador, mantendo o controle de onde os cabos estavam conetados.
++
+Deixe os cabos no dispositivo de gerenciamento de cabos para que, ao reinstalar o dispositivo de gerenciamento de cabos, os cabos sejam organizados.
+
+. Remova e reserve os dispositivos de gerenciamento de cabos dos lados esquerdo e direito do recipiente do controlador.
+. Aperte o trinco na pega do excêntrico até que este se solte, abra totalmente a pega do excêntrico para libertar o recipiente do controlador do plano médio e, em seguida, utilizando duas mãos, puxe o recipiente do controlador para fora do chassis.
+. Vire o recipiente do controlador e coloque-o numa superfície plana e estável.
+. Abra a tampa pressionando os botões azuis nas laterais do recipiente do controlador para soltar a tampa e, em seguida, gire a tampa para cima e para fora do recipiente do controlador.
++
+image::../media/drw_E4000_open_controller_module_cover_IEOPS-870.png[Abra a tampa do recipiente do controlador.]
+
+
+
+
+
+== Passo 3: Atualize o HIC
+
+Retire e substitua o HIC.
+
+.Passos
+. Se você ainda não está aterrado, aterre-se adequadamente.
+. Retire o HIC:
++
+image::../media/drw_E4000_replace_HIC_source_IEOPS-864.png[Remova o HIC do módulo do controlador.]
+
++
+.. Retire a placa frontal HIC desapertando todos os parafusos e deslizando-a diretamente para fora do módulo do controlador.
+.. Desaperte os parafusos de orelhas no HIC e levante o HIC para cima.
+
+
+. Reinstale o HIC:
++
+.. Alinhe o soquete na tomada HIC de substituição com o soquete na placa-mãe e, em seguida, encaixe suavemente a placa diretamente no soquete.
+.. Aperte os três parafusos de aperto manual no HIC.
+.. Volte a instalar a placa frontal do HIC.
+
+
+. Volte a instalar a tampa do módulo do controlador e bloqueie-a no lugar.
+
+
+
+
+== Etapa 4: Reinstale o recipiente do controlador
+
+Volte a instalar o recipiente do controlador no chassis.
+
+.Passos
+. Se você ainda não está aterrado, aterre-se adequadamente.
+. Se ainda não o tiver feito, substitua a tampa no recipiente do controlador.
+. Vire o recipiente do controlador ao contrário e alinhe a extremidade com a abertura no chassis.
+. Alinhe a extremidade do recipiente do controlador com a abertura no chassis e, em seguida, empurre cuidadosamente o recipiente do controlador até meio do sistema.
++
+
+NOTE: Não introduza completamente o recipiente do controlador no chassis até receber instruções para o fazer.
+
+. Recable o sistema, conforme necessário.
++
+Se você removeu os conversores de Mídia (QSFPs ou SFPs), lembre-se de reinstalá-los se você estiver usando cabos de fibra ótica.
+
+. Conclua a reinstalação do recipiente do controlador:
++
+.. Com a alavanca do came na posição aberta, empurre firmemente o recipiente do controlador até que ele atenda ao plano médio e esteja totalmente assentado e feche a alça do came para a posição travada.
++
+
+NOTE: Não utilize força excessiva ao deslizar o recipiente do controlador para o chassis para evitar danificar os conetores.
+
+.. Se ainda não o tiver feito, reinstale o dispositivo de gerenciamento de cabos.
+.. Prenda os cabos ao dispositivo de gerenciamento de cabos com o gancho e a alça de loop.
+
+
+. Repita <<step2_remove_controller_canister,Etapa 2: Remova o recipiente do controlador>>, <<step3_upgrade_hic,Passo 3: Atualize o HIC>>e <<step4_reinstall_controller,Etapa 4: Reinstale o recipiente do controlador>> para o segundo controlador.
+
+
+
+
+== Passo 5: Conclua a atualização do HIC
+
+Coloque ambos os controladores on-line, colete dados de suporte e retome as operações.
+
+.Passos
+. Coloque os controladores online.
++
+.. Ligue os cabos de alimentação.
+
+
+. À medida que os controladores iniciarem, verifique os LEDs do controlador.
++
+** O LED âmbar de atenção permanece aceso.
+** Os LEDs do Host Link podem estar ligados, piscando ou desligados, dependendo da interface do host.
+
+
+. Quando os controladores estiverem novamente on-line, confirme se o status deles é o ideal e verifique os LEDs de atenção do compartimento do controlador.
++
+Se o status não for ideal ou se algum dos LEDs de atenção estiver aceso, confirme se todos os cabos estão corretamente encaixados e os coletores do controlador estão instalados corretamente. Se necessário, remova e reinstale os coletores do controlador.
+
++
+
+NOTE: Se não conseguir resolver o problema, contacte o suporte técnico.
+
+. Verifique se todos os volumes foram devolvidos ao proprietário preferido.
++
+.. Selecione *armazenamento de volumes*. Na página *todos os volumes*, verifique se os volumes são distribuídos aos seus proprietários preferidos. Selecione *mais
+.. Se todos os volumes forem propriedade do proprietário preferido, avance para o passo 6.
+.. Se nenhum dos volumes for retornado, você deverá retornar manualmente os volumes. Vá para *mais
+.. Se apenas alguns dos volumes forem devolvidos aos seus proprietários preferidos após a distribuição automática ou a distribuição manual, você deverá verificar o Recovery Guru para problemas de conetividade do host.
+.. Se não houver Recovery Guru presente ou se seguir as etapas do Recovery Guru, os volumes ainda não serão devolvidos aos seus proprietários preferenciais, entre em Contato com o suporte.
+
+
+. Colete dados de suporte para sua matriz de armazenamento usando o Gerenciador de sistema do SANtricity.
++
+.. Selecione *suporte > Centro de suporte > Diagnóstico*.
+.. Selecione *coletar dados de suporte*.
+.. Clique em *Collect*.
++
+O arquivo é salvo na pasta Downloads do seu navegador com o nome *support-data.7z*.
+
+
+
+
+
+.O que se segue?
+O processo de atualização de uma placa de interface de host em seu storage array está concluído. Pode retomar as operações normais.

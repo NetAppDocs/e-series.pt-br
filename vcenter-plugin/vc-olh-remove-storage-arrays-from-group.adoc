@@ -11,7 +11,7 @@ summary: Remova um ou mais arrays de armazenamento gerenciados de um grupo se vo
 :nofooter: 
 :icons: font
 :linkattrs: 
-:imagesdir: ./media/
+:imagesdir: ../media/
 
 
 [role="lead"]

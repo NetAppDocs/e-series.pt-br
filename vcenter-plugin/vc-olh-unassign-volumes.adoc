@@ -11,7 +11,7 @@ summary: Se você não precisar mais de acesso de e/S a um volume, poderá desat
 :nofooter: 
 :icons: font
 :linkattrs: 
-:imagesdir: ./media/
+:imagesdir: ../media/
 
 
 [role="lead"]

@@ -23,7 +23,7 @@ O gabinete modelo 3040 40U tem estas caraterísticas padrão:
 
 As figuras a seguir mostram uma visão frontal (esquerda) e uma visão traseira (direita) do gabinete.
 
-image::../media/83000_07_dwg_3040_cabinet_with_callouts.gif[83000 07 dwg 3040 armário com chamadas]
+image::../media/83000_07_dwg_3040_cabinet_with_callouts.gif[descrição geral do armário 3040]
 
 |===
 

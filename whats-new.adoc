@@ -1,19 +1,62 @@
 ---
 sidebar: sidebar 
 permalink: whats-new.html 
-keywords: whats new, new features, SANtricity 11.73 
+keywords: whats new, new features, SANtricity 11.90 
 summary: Novos recursos no SANtricity os. 
 ---
 = O que há de novo no SANtricity os
 :allow-uri-read: 
 :experimental: 
 :icons: font
-:imagesdir: ../media/
+:imagesdir: ./media/
 
 
 [role="lead"]
-A tabela a seguir descreve novos recursos no SANtricity os 11,8 para gerenciamento incorporado de controladoras EF300, EF600, E2800/EF280 e E5700/EF570.
+A tabela a seguir descreve novos recursos nas versões mais recentes do SANtricity os para gerenciamento incorporado de controladoras E4000, EF300, EF600, E2800/EF280 e E5700/EF570.
 
+
+
+== Novos recursos na versão 11,90
+
+[cols="35h,~"]
+|===
+| Novo recurso | Descrição 
+
+
+ a| 
+Novo modelo de sistema de armazenamento – E4000
+ a| 
+Esta versão apresenta o sistema de armazenamento de baixo custo E4000. O E4000 suporta unidades de 12 TB e 60 TB e uma única placa de interface de host (HIC) por controladora. Para a versão inicial, as placas de interface de host suportadas incluem iSCSI e Fibre Channel. Os sistemas de storage E4000 e outros sistemas de storage e-Series podem ser visualizados e gerenciados no Unified Manager.
+
+
+
+ a| 
+Maior capacidade para Dynamic Disk Pools
+ a| 
+A capacidade de Dynamic Disk Pools (DDP) foi aumentada para 12 PB sempre que a capacidade de cada uma das unidades individuais no pool for maior que 23 TB de tamanho. Se a capacidade de unidade individual for inferior a 23 TB, a capacidade DDP será de 6 PB.
+
+
+
+ a| 
+As definições de digitalização de multimédia predefinidas aumentaram
+ a| 
+A taxa de digitalização de multimédia predefinida foi aumentada para 120 dias.
+
+
+
+ a| 
+Chave privada agora aceita para gerenciamento de chaves externas
+ a| 
+O arquivo de solicitação de assinatura de certificado (CSR) gerado externamente por meio de pares de chaves públicas e privadas agora pode ser importado por meio do System Manager.
+
+
+
+ a| 
+O recurso de bloqueio de login agora está disponível para Serviços Web
+ a| 
+Configurável somente pela API REST, uma nova configuração de bloqueio de login agora está disponível para serviços Web incorporados e proxy.
+
+|===
 
 
 == Novos recursos na versão 11.80.1R1

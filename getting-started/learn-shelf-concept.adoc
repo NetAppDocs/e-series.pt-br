@@ -1,7 +1,7 @@
 ---
 permalink: getting-started/learn-shelf-concept.html 
 sidebar: sidebar 
-keywords: E-Series, eseries, E2800, E5700, EF300, EF600, E-series hardware, E-Series shelf, DE212C, DE224C, DE460C, NE224, 
+keywords: E-Series, eseries, E4000, E2800, E5700, EF300, EF600, E-series hardware, E-Series shelf, DE212C, DE224C, DE460C, NE224, 
 summary: Os sistemas e-Series estão disponíveis em diversos tamanhos de prateleira. 
 ---
 = Tipos de gaveta e-Series
@@ -22,10 +22,10 @@ Os sistemas e-Series estão disponíveis em diversos tamanhos de prateleira.
 
 * 2u12 (2 unidades de rack; 12 unidades)
 * HDDs de 3,5" e/ou SSDs de 2,5" (com adaptador)
-* Apenas controladores E2800
+* Somente controladores E4000 e E2800
 
  a| 
-image:../media/e2812_front.gif[""]
+image:../media/e2812_front.gif["DE212C"]
 
 
 
@@ -37,7 +37,7 @@ image:../media/e2812_front.gif[""]
 * Controladores E2800, EF280, E5700 e EF570
 
  a| 
-image:../media/e2824_front.gif[""]
+image:../media/e2824_front.gif["DE224C"]
 
 
 
@@ -46,10 +46,10 @@ image:../media/e2824_front.gif[""]
 
 * 4u60 (4 unidades de rack; 60 unidades)
 * Unidades de 3,5" e 2,5" (NL-SAS, SAS e SSD)
-* Controladores E2800 e E5700
+* Controladores E4000, E2800 e E5700
 
  a| 
-image:../media/de460c.gif[""]
+image:../media/de460c.gif["DE460C"]
 
 
 
@@ -61,6 +61,6 @@ image:../media/de460c.gif[""]
 * Controladores EF300 e EF600
 
  a| 
-image:../media/ne224.gif[""]
+image:../media/ne224.gif["NE224"]
 
 |===

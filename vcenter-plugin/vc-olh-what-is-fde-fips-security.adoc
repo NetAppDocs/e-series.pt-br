@@ -10,7 +10,7 @@ summary: A segurança FDE/FIPS refere-se a unidades com capacidade segura que cr
 :nofooter: 
 :icons: font
 :linkattrs: 
-:imagesdir: ./media/
+:imagesdir: ../media/
 
 
 [role="lead"]

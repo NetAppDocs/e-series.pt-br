@@ -2,9 +2,6 @@
 :allow-uri-read: 
 
 
-[role="lead"]
-Você pode adicionar um novo compartimento de unidades enquanto a energia ainda é aplicada aos outros componentes do sistema de storage. Você pode configurar, reconfigurar, adicionar ou realocar a capacidade do sistema de storage sem interromper o acesso do usuário aos dados.
-
 .Antes de começar
 Devido à complexidade deste procedimento, recomenda-se o seguinte:
 
@@ -13,7 +10,7 @@ Devido à complexidade deste procedimento, recomenda-se o seguinte:
 
 
 .Sobre esta tarefa
-Este procedimento se aplica à adição rápida de um compartimento de unidades DE212C, DE224C ou DE460C a um compartimento de controladora E2800, E2800B, EF280, E5700, E5700B, EF570, EF300 ou EF600.
+Este procedimento se aplica à adição rápida de um compartimento de unidades DE212C, DE224C ou DE460C a um compartimento de controladora E2800, E2800B, EF280, E5700, E5700B, EF570, EF300, EF600 ou E4000.
 
 Este procedimento se aplica aos compartimentos de unidades IOM12 e IOM12B.
 
@@ -59,21 +56,25 @@ A página Registro de eventos exibe os dados do evento.
 
 NOTE: Se ocorrerem eventos críticos não resolvidos nas duas ou três semanas anteriores, interrompa o procedimento e contacte o suporte técnico. Continue o procedimento apenas quando o problema for resolvido.
 
-. Selecione *hardware*.
-. Selecione o ícone *IOMs (ESMs)*.
+. Se você tiver IOMs conetados ao seu hardware, execute as etapas a seguir. Caso contrário, vá para <<step2_install_drive_shelf,Etapa 2: Instale o compartimento de unidades e aplique energia.>>
 +
-image::../media/sam1130_ss_hardware_iom_icon.gif[sam1130 ss hardware iom ícone]
+.. Selecione *hardware*.
+.. Selecione o ícone *IOMs (ESMs)*.
++
+image::../media/sam1130_ss_hardware_iom_icon.gif[Ícone de IOMs (ESMs)]
 
 +
 A caixa de diálogo Configurações do componente do compartimento é exibida com a guia *IOMs (ESMs)* selecionada.
 
-. Certifique-se de que o status mostrado para cada IOM/ESM é _Optimal_.
-. Clique em *Mostrar mais configurações*.
-. Confirme se existem as seguintes condições:
+.. Certifique-se de que o status mostrado para cada IOM/ESM é _Optimal_.
+.. Clique em *Mostrar mais configurações*.
+.. Confirme se existem as seguintes condições:
 +
-** O número de ESMs/IOMs detetados corresponde ao número de ESMs/IOMs instalados no sistema e ao de cada compartimento de unidades.
-** Ambos os ESMs/IOMs mostram que a comunicação está OK.
-** A taxa de dados é de 12GB GB/s para compartimentos de unidades DE212C, DE224C e DE460C ou 6 GB/s para outras bandejas de unidades.
+*** O número de ESMs/IOMs detetados corresponde ao número de ESMs/IOMs instalados no sistema e ao de cada compartimento de unidades.
+*** Ambos os ESMs/IOMs mostram que a comunicação está OK.
+*** A taxa de dados é de 12GB GB/s para compartimentos de unidades DE212C, DE224C e DE460C ou 6 GB/s para outras bandejas de unidades.
+
+
 
 
 
@@ -101,18 +102,12 @@ NOTE: Consulte as instruções de instalação do seu modelo para obter o proced
 
 == Passo 3: Faça o cabo do seu sistema
 
-Selecione uma das seguintes opções:
-
-* <<Opção 1: Conete o compartimento de unidades para E2800 TB ou E5700 TB>>
-* <<Opção 2: Conete o compartimento de unidades para EF300 TB ou EF600 TB>>
-
-
 Se você estiver fazendo o cabeamento de uma gaveta de controladora mais antiga para um DE212C, DE224C ou DE460, https://mysupport.netapp.com/ecm/ecm_download_file/ECMLP2859057["Adição de gavetas de unidade IOM a uma gaveta de controladora E27XX, E56XX ou EF560 existente"^] consulte .
 
-
-
-=== Opção 1: Conete o compartimento de unidades para E2800 TB ou E5700 TB
-
+[role="tabbed-block"]
+====
+.Conete o compartimento de unidades para E2800 ou E5700
+--
 Você conecta o compartimento de unidades ao controlador A, confirma o status IOM e, em seguida, conecta o compartimento de unidades à controladora B.
 
 .Passos
@@ -121,10 +116,10 @@ Você conecta o compartimento de unidades ao controlador A, confirma o status IO
 A figura a seguir mostra um exemplo de conexão entre um compartimento de unidade adicional e o controlador A. para localizar as portas no modelo, consulte o https://hwu.netapp.com/Controller/Index?platformTypeId=2357027["Hardware Universe"^].
 
 +
-image::../media/hot_e5700_0.png[quente e5700 0]
+image::../media/hot_e5700_0.png[Conete o compartimento de unidades ao controlador]
 
 +
-image::../media/hot_e5700_1.png[quente e5700 1]
+image::../media/hot_e5700_1.png[Conete o compartimento de unidades ao controlador]
 
 . No Gerenciador do sistema SANtricity, clique em *hardware*.
 +
@@ -134,7 +129,7 @@ NOTE: Neste ponto do procedimento, você tem apenas um caminho ativo para o comp
 . Role para baixo, conforme necessário, para ver todos os compartimentos de unidades no novo sistema de storage. Se o novo compartimento de unidades não for exibido, resolva o problema de conexão.
 . Selecione o ícone *ESMs/IOMs* para o novo compartimento de unidades.
 +
-image::../media/sam1130_ss_hardware_iom_icon.gif[sam1130 ss hardware iom ícone]
+image::../media/sam1130_ss_hardware_iom_icon.gif[Ícone ESMs/IOMs]
 
 +
 A caixa de diálogo *Shelf Component Settings* é exibida.
@@ -153,7 +148,7 @@ A caixa de diálogo *Shelf Component Settings* é exibida.
 A figura a seguir mostra um exemplo de conexão entre um compartimento de unidade adicional e o controlador B. para localizar as portas no modelo, consulte o https://hwu.netapp.com/Controller/Index?platformTypeId=2357027["Hardware Universe"^].
 
 +
-image::../media/hot_e5700_2.png[quente e5700 2]
+image::../media/hot_e5700_2.png[Exemplo de conexão do compartimento de unidades]
 
 . Se ainda não estiver selecionado, selecione a guia *ESMs/IOMs* na caixa de diálogo *Configurações do componente de prateleira* e, em seguida, selecione *Mostrar mais opções*. Verifique se as comunicações do cartão são *SIM*.
 +
@@ -162,10 +157,9 @@ NOTE: O status ideal indica que o erro de perda de redundância associado ao nov
 
 
 
-
-
-=== Opção 2: Conete o compartimento de unidades para EF300 TB ou EF600 TB
-
+--
+.Conete o compartimento de unidades para EF300 ou EF600
+--
 Você conecta o compartimento de unidades ao controlador A, confirma o status IOM e, em seguida, conecta o compartimento de unidades à controladora B.
 
 .Antes de começar
@@ -175,17 +169,17 @@ Você conecta o compartimento de unidades ao controlador A, confirma o status IO
 .Passos
 . Desconete os dois cabos do controlador do lado A das IOM12 portas uma e duas da última gaveta anterior na stack e, em seguida, conete-os à nova gaveta IOM12 portas uma e duas.
 +
-image::../media/de224c_sides.png[de224c lados]
+image::../media/de224c_sides.png[Desconete os cabos do controlador A e conete-os à nova gaveta]
 
 . Conete os cabos às portas IOM12 três e quatro do lado A da nova gaveta às portas IOM12 do último compartimento anterior uma e duas.
 +
 A figura a seguir mostra um exemplo de conexão para um lado entre um compartimento de unidade adicional e o último compartimento anterior. Para localizar as portas no modelo, consulte https://hwu.netapp.com/Controller/Index?platformTypeId=2357027["Hardware Universe"^] .
 
 +
-image::../media/hot_ef_0.png[ef quente 0]
+image::../media/hot_ef_0.png[Exemplo de cabeamento do compartimento de unidade]
 
 +
-image::../media/hot_ef_1.png[ef quente 1]
+image::../media/hot_ef_1.png[Exemplo de cabeamento do compartimento de unidade]
 
 . No Gerenciador do sistema SANtricity, clique em *hardware*.
 +
@@ -195,7 +189,7 @@ NOTE: Neste ponto do procedimento, você tem apenas um caminho ativo para o comp
 . Role para baixo, conforme necessário, para ver todos os compartimentos de unidades no novo sistema de storage. Se o novo compartimento de unidades não for exibido, resolva o problema de conexão.
 . Selecione o ícone *ESMs/IOMs* para o novo compartimento de unidades.
 +
-image::../media/sam1130_ss_hardware_iom_icon.gif[sam1130 ss hardware iom ícone]
+image::../media/sam1130_ss_hardware_iom_icon.gif[Ícone ESMs/IOMs]
 
 +
 A caixa de diálogo *Shelf Component Settings* é exibida.
@@ -214,7 +208,7 @@ A caixa de diálogo *Shelf Component Settings* é exibida.
 A figura a seguir mostra um exemplo de conexão para o lado B entre um compartimento de unidade adicional e o último compartimento anterior. Para localizar as portas no modelo, consulte https://hwu.netapp.com/Controller/Index?platformTypeId=2357027["Hardware Universe"^] .
 
 +
-image::../media/hot_ef_2.png[ef quente 2]
+image::../media/hot_ef_2.png[Exemplo de cabeamento do compartimento de unidade]
 
 . Se ainda não estiver selecionado, selecione a guia *ESMs/IOMs* na caixa de diálogo *Configurações do componente de prateleira* e, em seguida, selecione *Mostrar mais opções*. Verifique se as comunicações do cartão são *SIM*.
 +
@@ -223,6 +217,51 @@ NOTE: O status ideal indica que o erro de perda de redundância associado ao nov
 
 
 
+--
+.Conete o compartimento de unidades para E4000
+--
+Você conecta o compartimento de unidades ao controlador A, confirma o status IOM e, em seguida, conecta o compartimento de unidades à controladora B.
+
+.Passos
+. Conete o compartimento de unidades ao controlador A.
++
+image::../media/hot_e4000_cabling_1.png[Cabeamento do compartimento de unidades]
+
+. No Gerenciador do sistema SANtricity, clique em *hardware*.
++
+
+NOTE: Neste ponto do procedimento, você tem apenas um caminho ativo para o compartimento da controladora.
+
+. Role para baixo, conforme necessário, para ver todos os compartimentos de unidades no novo sistema de storage. Se o novo compartimento de unidades não for exibido, resolva o problema de conexão.
+. Selecione o ícone *ESMs/IOMs* para o novo compartimento de unidades.
++
+image::../media/sam1130_ss_hardware_iom_icon.gif[Ícone de hardware IOM]
+
++
+A caixa de diálogo *Shelf Component Settings* é exibida.
+
+. Selecione a guia *ESMs/IOMs* na caixa de diálogo *Configurações do componente de prateleira*.
+. Selecione *Mostrar mais opções* e verifique o seguinte:
++
+** IOM/Esm A está na lista.
+** A taxa de dados atual é de 12 Gbps para um compartimento de unidades SAS-3.
+** As comunicações do cartão estão OK.
+
+
+. Desconete todos os cabos de expansão do controlador B.
+. Conete o compartimento de unidades ao controlador B.
++
+image::../media/hot_e4000_cabling_2.png[Cabeamento do compartimento de unidades]
+
+. Se ainda não estiver selecionado, selecione a guia *ESMs/IOMs* na caixa de diálogo *Configurações do componente de prateleira* e, em seguida, selecione *Mostrar mais opções*. Verifique se as comunicações do cartão são *SIM*.
++
+
+NOTE: O status ideal indica que o erro de perda de redundância associado ao novo compartimento de unidades foi resolvido e o sistema de armazenamento está estabilizado.
+
+
+
+--
+====
 
 
 == Passo 4: Complete hot add

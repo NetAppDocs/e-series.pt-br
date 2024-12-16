@@ -11,7 +11,7 @@ summary: Exclua um pool ou grupo de volumes para criar mais capacidade não atri
 :nofooter: 
 :icons: font
 :linkattrs: 
-:imagesdir: ./media/
+:imagesdir: ../media/
 
 
 [role="lead"]

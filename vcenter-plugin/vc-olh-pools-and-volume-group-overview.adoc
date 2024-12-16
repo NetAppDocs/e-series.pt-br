@@ -10,7 +10,7 @@ summary: 'Para provisionar o armazenamento, você cria um pool ou um grupo de vo
 :nofooter: 
 :icons: font
 :linkattrs: 
-:imagesdir: ./media/
+:imagesdir: ../media/
 
 
 [role="lead"]

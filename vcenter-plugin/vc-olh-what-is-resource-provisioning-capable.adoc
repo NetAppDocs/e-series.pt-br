@@ -10,7 +10,7 @@ summary: O provisionamento de recursos é um recurso disponível nas matrizes de
 :nofooter: 
 :icons: font
 :linkattrs: 
-:imagesdir: ./media/
+:imagesdir: ../media/
 
 
 [role="lead"]

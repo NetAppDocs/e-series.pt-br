@@ -32,7 +32,7 @@ O exemplo a seguir mostra o cabeamento dos hosts de dados usando uma topologia d
 
 
  a| 
-image:../media/4U_DirectTopology.png[""]
+image:../media/4U_DirectTopology.png["Cabeamento de topologia de conexão direta"]
  a| 
 . Conete cada adaptador de host diretamente às portas de host nos controladores.
 
@@ -48,7 +48,7 @@ O exemplo a seguir mostra o cabeamento dos hosts de dados usando uma topologia d
 
 
  a| 
-image:../media/4U_FabricTopology.png[""]
+image:../media/4U_FabricTopology.png["Cabeamento de topologia do Fabrix"]
  a| 
 . Conete cada adaptador de host diretamente ao switch.
 . Conete cada switch diretamente às portas do host nos controladores.
@@ -79,7 +79,7 @@ Saiba como configurar as portas de gerenciamento com um servidor DHCP.
 
 
  a| 
-image:../media/cable_ethernet_inst-hw-e2800-e5700.png[""]
+image:../media/cable_ethernet_inst-hw-e2800-e5700.png["Cabos Ethernet"]
  a| 
 Cabos Ethernet (se tiverem sido solicitados)
 
@@ -92,11 +92,11 @@ As figuras a seguir mostram exemplos da localização da porta de gerenciamento 
 
 
  a| 
-image:../media/e2800_mgmt_ports.png[""]
+image:../media/e2800_mgmt_ports.png["E2800 portas de gerenciamento"]
 
 E2800 controlador P1 porta de gerenciamento
  a| 
-image:../media/e5700_mgmt_ports.png[""]
+image:../media/e5700_mgmt_ports.png["E5700 portas de gerenciamento"]
 
 E5700 controlador P1 porta de gerenciamento
 
@@ -122,7 +122,7 @@ Saiba como configurar manualmente as portas de gerenciamento inserindo o endere�
 
 
  a| 
-image:../media/cable_ethernet_inst-hw-e2800-e5700.png[""]
+image:../media/cable_ethernet_inst-hw-e2800-e5700.png["Cabos Ethernet"]
  a| 
 Cabos Ethernet (se tiverem sido solicitados)
 
@@ -135,11 +135,11 @@ As figuras a seguir mostram exemplos da localização da porta de gerenciamento 
 
 
  a| 
-image:../media/e2800_mgmt_ports.png[""]
+image:../media/e2800_mgmt_ports.png["E2800 portas de gerenciamento"]
 
 E2800 controlador P1 porta de gerenciamento
  a| 
-image:../media/e5700_mgmt_ports.png[""]
+image:../media/e5700_mgmt_ports.png["E5700 portas de gerenciamento"]
 
 E5700 controlador P1 porta de gerenciamento
 
@@ -199,7 +199,7 @@ Depois de instalar o hardware, use o software SANtricity para configurar e geren
 
 
  a| 
-image:../media/management_s_g2285tation_inst-hw-e2800-e5700_g2285.png[""]
+image:../media/management_s_g2285tation_inst-hw-e2800-e5700_g2285.png["Acesse o System Manager para configurar suas portas de gerenciamento"]
  a| 
 Para acessar o System Manager, use os mesmos endereços IP usados para configurar suas portas de gerenciamento.
 

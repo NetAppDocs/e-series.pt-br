@@ -11,7 +11,7 @@ summary: Adicione um ou mais arrays de armazenamento a um grupo criado pelo usu√
 :nofooter: 
 :icons: font
 :linkattrs: 
-:imagesdir: ./media/
+:imagesdir: ../media/
 
 
 [role="lead"]

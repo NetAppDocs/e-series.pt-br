@@ -11,7 +11,7 @@ summary: Quando dois ou mais hosts exigem acesso de e/S aos mesmos volumes, é p
 :nofooter: 
 :icons: font
 :linkattrs: 
-:imagesdir: ./media/
+:imagesdir: ../media/
 
 
 [role="lead"]

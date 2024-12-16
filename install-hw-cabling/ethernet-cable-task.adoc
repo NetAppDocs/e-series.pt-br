@@ -14,6 +14,9 @@ summary: Conete seu sistema de storage a uma rede Ethernet para gerenciamento fo
 Você pode conetar seu sistema de storage a uma rede Ethernet para gerenciamento de storage array fora da banda. Você deve usar cabos Ethernet para todas as conexões de gerenciamento de storage array.
 
 
+NOTE: O EF300, EF600 e E4000 têm apenas uma porta de gerenciamento ethernet fora da banda.
+
+
 
 == Topologia direta
 
@@ -22,7 +25,7 @@ Uma topologia direta coneta seu controlador diretamente a uma rede Ethernet.
 É necessário conetar a porta de gerenciamento 1 em cada controlador para gerenciamento fora da banda e deixar a porta 2 disponível para acesso ao storage array por suporte técnico.
 
 .Conexões diretas de gerenciamento de armazenamento
-image::../media/74167.gif[74167]
+image::../media/74167.gif[Conexões diretas de gerenciamento de armazenamento]
 
 
 
@@ -33,4 +36,4 @@ Uma topologia de malha usa um switch para conectar seu controlador a uma rede Et
 É necessário conetar a porta de gerenciamento 1 em cada controlador para gerenciamento fora da banda e deixar a porta 2 disponível para acesso ao storage array por suporte técnico.
 
 .Conexões de gerenciamento de storage de malha
-image::../media/74110.gif[74110]
+image::../media/74110.gif[Conexões de gerenciamento de storage de malha]

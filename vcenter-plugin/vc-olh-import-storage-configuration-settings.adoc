@@ -11,7 +11,7 @@ summary: Importe a configuração de armazenamento de um storage array para outr
 :nofooter: 
 :icons: font
 :linkattrs: 
-:imagesdir: ./media/
+:imagesdir: ../media/
 
 
 [role="lead"]

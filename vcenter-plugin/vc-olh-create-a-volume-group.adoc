@@ -11,7 +11,7 @@ summary: É possível criar um grupo de volumes para um ou mais volumes que este
 :nofooter: 
 :icons: font
 :linkattrs: 
-:imagesdir: ./media/
+:imagesdir: ../media/
 
 
 [role="lead"]

@@ -59,7 +59,7 @@ O arquivo é salvo na pasta Downloads do seu navegador com o nome *support-data.
 . A partir do Gerenciador do sistema SANtricity, determine qual fonte de alimentação falhou. Você pode encontrar essas informações na área Detalhes do Recovery Guru, ou você pode revisar as informações exibidas para o shelf.
 +
 .. Selecione *hardware*.
-.. Observe os ícones de energia image:../media/sam1130_ss_hardware_power_icon_maint-e5700.gif[""] e ventilador image:../media/sam1130_ss_hardware_fan_icon_maint-e5700.gif[""]à direita das listas suspensas *Shelf* para determinar qual prateleira tem a fonte de alimentação com falha.
+.. Observe os ícones de energia image:../media/sam1130_ss_hardware_power_icon_maint-e5700.gif["Ícone de alimentação"] e ventilador image:../media/sam1130_ss_hardware_fan_icon_maint-e5700.gif["Ícone da ventoinha"]à direita das listas suspensas *Shelf* para determinar qual prateleira tem a fonte de alimentação com falha.
 +
 Se um componente tiver falhado, um ou ambos os ícones ficam vermelhos.
 
@@ -80,12 +80,12 @@ CAUTION: Se o segundo recipiente da fonte de alimentação na prateleira não ti
 Tem de substituir a fonte de alimentação que tem o respetivo LED de atenção ligado.
 
 +
-image::../media/28_dwg_913w_power_supply_back_view_maint-e5700.gif[28 dwg 913w fonte de alimentação back view manint e5700]
+image::../media/28_dwg_913w_power_supply_back_view_maint-e5700.gif[LED de atenção da fonte de alimentação]
 
 +
-** Se o LED de alimentação image:../media/drw_sas_power_icon_maint-e5700.gif[""]for *verde fixo*, a fonte de alimentação está a funcionar corretamente. Se estiver *Off*, a fonte de alimentação falhou, o interrutor CA está desligado, o cabo de alimentação CA não está corretamente instalado ou a tensão de entrada do cabo de alimentação CA não está dentro da margem (há um problema na extremidade da fonte do cabo de alimentação CA).
+** Se o LED de alimentação image:../media/drw_sas_power_icon_maint-e5700.gif["Ícone do LED de alimentação"]for *verde fixo*, a fonte de alimentação está a funcionar corretamente. Se estiver *Off*, a fonte de alimentação falhou, o interrutor CA está desligado, o cabo de alimentação CA não está corretamente instalado ou a tensão de entrada do cabo de alimentação CA não está dentro da margem (há um problema na extremidade da fonte do cabo de alimentação CA).
 +
-Se o LED de atenção image:../media/drw_sas_fault_icon_maint-e5700.gif[""]for *âmbar fixo*, a fonte de alimentação ou a ventoinha integrada tem uma avaria.
+Se o LED de atenção image:../media/drw_sas_fault_icon_maint-e5700.gif["Ícone de avaria"]for *âmbar fixo*, a fonte de alimentação ou a ventoinha integrada tem uma avaria.
 
 
 
@@ -111,7 +111,7 @@ Guarde todos os materiais de embalagem para utilização quando devolver a fonte
 
 . Aperte o trinco na pega do excêntrico da fonte de alimentação e, em seguida, abra a pega do excêntrico para libertar totalmente a fonte de alimentação do plano intermédio.
 +
-image::../media/drw_2600_psu_maint-e5700.gif[drw 2600 psu manint e5700]
+image::../media/drw_2600_psu_maint-e5700.gif[Utilize o trinco para libertar a fonte de alimentação do plano intermédio]
 
 . Utilize a pega do came para fazer deslizar a fonte de alimentação para fora do sistema.
 +

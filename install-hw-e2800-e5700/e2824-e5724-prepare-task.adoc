@@ -21,14 +21,14 @@ Saiba como se preparar para instalar o sistema de armazenamento das séries E572
 
 
  a| 
-image:../media/trafford_overview.png[""]
+image:../media/trafford_overview.png["Gaveta com unidades instaladas e painel frontal"]
  a| 
 Gaveta com unidades instaladas (painel empacotado separadamente)
 
 
 
  a| 
-image:../media/superrails_inst-hw-e2800-e5700.png[""]
+image:../media/superrails_inst-hw-e2800-e5700.png["Hardware de montagem em rack"]
  a| 
 Hardware de montagem em rack
 
@@ -42,7 +42,7 @@ A tabela a seguir identifica os tipos de cabos que você pode receber. Se recebe
 
 
  a| 
-image:../media/cable_ethernet_inst-hw-e2800-e5700.png[""]
+image:../media/cable_ethernet_inst-hw-e2800-e5700.png["Cabos Ethernet"]
  a| 
 Cabos Ethernet
 
@@ -53,7 +53,7 @@ Conexão de gerenciamento
 
 
  a| 
-image:../media/cable_io_inst-hw-e2800-e5700.png[""]
+image:../media/cable_io_inst-hw-e2800-e5700.png["Cabos de e/S."]
  a| 
 Cabos de e/S.
 
@@ -64,7 +64,7 @@ Cabeamento dos hosts de dados
 
 
  a| 
-image:../media/cable_power_inst-hw-e2800-e5700.png[""]
+image:../media/cable_power_inst-hw-e2800-e5700.png["Cabos de alimentação"]
  a| 
 Cabos de alimentação
 
@@ -75,7 +75,7 @@ Ligar o sistema de armazenamento
 
 
  a| 
-image:../media/sas_cable.png[""]
+image:../media/sas_cable.png["Cabos SAS"]
  a| 
 Cabos SAS incluídos apenas com as gavetas de unidade
  a| 
@@ -88,28 +88,28 @@ Cabos SAS
 
 
  a| 
-image:../media/screwdriver_inst-hw-e2800-e5700.png[""]
+image:../media/screwdriver_inst-hw-e2800-e5700.png["Chave de fendas Phillips nº 2"]
  a| 
 Chave de fendas Phillips nº 2
 
 
 
  a| 
-image:../media/flashlight_inst-hw-e2800-e5700.png[""]
+image:../media/flashlight_inst-hw-e2800-e5700.png["Lanterna"]
  a| 
 Lanterna
 
 
 
  a| 
-image:../media/wrist_strap_inst-hw-e2800-e5700.png[""]
+image:../media/wrist_strap_inst-hw-e2800-e5700.png["Correia ESD"]
  a| 
 Correia ESD
 
 
 
  a| 
-image:../media/2u_rackspace_inst-hw-e2800-e5700.png[""]
+image:../media/2u_rackspace_inst-hw-e2800-e5700.png["Rack de 2U\""]
  a| 
 2U espaço em rack: Um rack padrão de 19 pol. (48,30 cm) para caber 2U prateleiras das seguintes dimensões.
 
@@ -126,7 +126,7 @@ image:../media/2u_rackspace_inst-hw-e2800-e5700.png[""]
 
 
  a| 
-image:../media/management_station_inst-hw-e2800-e5700_g60b3.png[""]
+image:../media/management_station_inst-hw-e2800-e5700_g60b3.png["Estação de gerenciamento com navegador compatível para software de gerenciamento"]
  a| 
 Um navegador compatível para o software de gerenciamento:
 

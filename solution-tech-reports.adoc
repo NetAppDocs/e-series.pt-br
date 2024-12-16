@@ -6,7 +6,12 @@ summary: Relatórios técnicos do e-Series
 ---
 = Navegue pelos relatórios técnicos da solução
 :allow-uri-read: 
+:icons: font
+:imagesdir: ./media/
 
+
+[role="lead"]
+Confira os links abaixo para acessar os relatórios técnicos da solução relacionados ao hardware e ao software SANtricity do e-Series. Os links levam você a um site de documentação diferente.
 
 
 

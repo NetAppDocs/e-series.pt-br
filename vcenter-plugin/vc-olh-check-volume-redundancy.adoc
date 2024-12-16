@@ -11,7 +11,7 @@ summary: Você pode verificar a redundância em um volume em um pool ou grupo de
 :nofooter: 
 :icons: font
 :linkattrs: 
-:imagesdir: ./media/
+:imagesdir: ../media/
 
 
 [role="lead"]

@@ -21,20 +21,20 @@ Antes de instalar o gabinete 3040 40U, certifique-se de que você tem as ferrame
 
 
  a| 
-image:../media/83009_02.gif[""]
+image:../media/83009_02.gif["Chave de 3/4 pol. E chave Allen"]
  a| 
 *Chave de 3/4 pol.* (fornecida na caixa de transporte) -- para levantar e baixar os pés de nivelamento sob o gabinete.
 
 *Chave Allen de 1/4 pol.* -- para levantar e baixar o pé de estabilidade na parte frontal do gabinete.
  a| 
-image:../media/77037_11.gif[""]
+image:../media/77037_11.gif["Incluído com o gabinete"]
 
 
 
  a| 
 *NEMA L6-30*
 
-image:../media/73121_01_dwg_nema_l6_30_power_cord.gif[""]
+image:../media/73121_01_dwg_nema_l6_30_power_cord.gif["Cabo NEMA L6-30"]
  a| 
 * Cabos de alimentação CA* -- para conetar o gabinete a fontes de alimentação externas (plugues de parede).
 
@@ -45,19 +45,19 @@ image:../media/73121_01_dwg_nema_l6_30_power_cord.gif[""]
 
 NOTE: Cada PDU tem de ser ligada a uma fonte de alimentação independente.
  a| 
-image:../media/77037_11.gif[""]
+image:../media/77037_11.gif["Incluído com o gabinete"]
 
 
 
  a| 
 **IEC-60309**
 
-image:../media/73122_01_dwg_iec_60309_power_cord.gif[""]
+image:../media/73122_01_dwg_iec_60309_power_cord.gif["Cabo IEC-60309"]
 
 
 
  a| 
-image:../media/78038_21.png[""]
+image:../media/78038_21.png["Incluído com o gabinete"]
  a| 
 **Cabos SAS** (opcional) – dois cabos estão incluídos em cada bandeja de unidades, enquanto os cabos laterais do host devem ser adquiridos separadamente.
 
@@ -69,11 +69,11 @@ Consulte o guia de instalação apropriado da bandeja de unidades e controlador 
 
 
  a| 
-image:../media/77038_06.gif[""]
+image:../media/77038_06.gif["Cabos SAS e de comunicação"]
  a| 
 **Bobinas de cabo montáveis** – instaladas ao longo de ambos os lados das tomadas de distribuição de energia vertical para acomodar o excesso de comprimento do cabo e encaminhamento de cabos. Dois carretéis de cabo estão incluídos em cada bandeja de unidades e controlador Os carretéis de cabos também são fornecidos com bandejas de unidades autônomas.
  a| 
-image:../media/77037_11.gif[""]
+image:../media/77037_11.gif["Bobinas de cabos montáveis"]
 
 
 

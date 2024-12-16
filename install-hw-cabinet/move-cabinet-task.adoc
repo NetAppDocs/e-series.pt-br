@@ -31,6 +31,6 @@ Muitos dos gabinetes são preenchidos com bandejas de unidades. Esta situação 
 . Remova os dispositivos mais altos do gabinete para garantir que o gabinete seja transportado com segurança para o local final. Isto é especialmente importante se qualquer rampa tiver uma inclinação ou um declínio superior a 10 graus.
 . Mova o gabinete para sua localização permanente usando o método correto mostrado na figura a seguir. Certifique-se de que empurra a parte frontal do gabinete, não a parte traseira.
 +
-image::../media/83004_01.gif[83004 01]
+image::../media/83004_01.gif[Mova o aviso do gabinete]
 
 

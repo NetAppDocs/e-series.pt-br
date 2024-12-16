@@ -102,7 +102,7 @@ Dependendo do tipo de HIC para o qual você está atualizando, você pode ser ca
 . Confirme se o LED Cache ative na parte de trás do controlador está desligado.
 . Aperte as alças em ambos os lados do controlador e puxe para trás até que ele se solte da prateleira.
 +
-image::../media/remove_controller_5.png[remova o controlador 5]
+image::../media/remove_controller_5.png[Aperte as alças para remover o controlador]
 
 . Utilizando as duas mãos e as pegas, deslize o recipiente do controlador para fora da prateleira. Quando a parte frontal do controlador estiver livre do compartimento, use duas mãos para puxá-lo completamente.
 +
@@ -110,7 +110,7 @@ image::../media/remove_controller_5.png[remova o controlador 5]
 CAUTION: Utilize sempre duas mãos para suportar o peso de um recipiente do controlador.
 
 +
-image::../media/remove_controller_6.png[remova o controlador 6]
+image::../media/remove_controller_6.png[Use duas mãos para suportar o peso do controlador enquanto você remove]
 
 . Coloque o recipiente do controlador numa superfície plana e sem estática.
 
@@ -129,7 +129,7 @@ Se este LED verde estiver ligado, o controlador ainda está a utilizar a bateria
 
 . Utilizando uma chave de fendas Phillips, retire os dois parafusos que fixam a placa frontal HIC ao recipiente do controlador.
 +
-image::../media/hic_2.png[hic 2]
+image::../media/hic_2.png[Remova a placa frontal do HIC]
 
 +
 
@@ -138,7 +138,7 @@ NOTE: A imagem acima é um exemplo; a aparência do seu HIC pode diferir.
 . Retire a placa frontal do HIC.
 . Utilizando os dedos ou uma chave de fendas Phillips, desaperte o parafuso de aperto manual único que fixa o HIC à placa do controlador.
 +
-image::../media/hic_3.png[hic 3]
+image::../media/hic_3.png[Solte os parafusos de aperto manual do HIC]
 
 +
 
@@ -154,7 +154,7 @@ NOTE: A imagem acima é um exemplo; a aparência do seu HIC pode diferir.
 CAUTION: Tenha cuidado para não arranhar ou bater os componentes na parte inferior do HIC ou na parte superior da placa controladora.
 
 +
-image::../media/hic_4.png[hic 4]
+image::../media/hic_4.png[Remova o HIC da placa controladora]
 
 +
 
@@ -184,7 +184,7 @@ Tenha cuidado para não arranhar ou bater os componentes na parte inferior do HI
 CAUTION: **Possíveis danos ao equipamento** - tenha muito cuidado para não apertar o conetor de fita dourada para os LEDs do controlador entre o HIC e o parafuso de aperto manual.
 
 +
-image::../media/hic_7.png[hic 7]
+image::../media/hic_7.png[Instale o HIC]
 
 +
 
@@ -211,7 +211,7 @@ Depois de substituir o HIC, reinstale o recipiente do controlador na prateleira 
 NOTE: O controlador clica audivelmente quando instalado corretamente na prateleira.
 
 +
-image::../media/remove_controller_7.png[remova o controlador 7]
+image::../media/remove_controller_7.png[Instale o controlador na gaveta]
 
 . Instale os SFPs no novo HIC e volte a ligar todos os cabos.
 +

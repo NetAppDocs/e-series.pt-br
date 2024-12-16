@@ -10,7 +10,7 @@ summary: O recurso Importar configurações é uma operação em lote que carreg
 :nofooter: 
 :icons: font
 :linkattrs: 
-:imagesdir: ./media/
+:imagesdir: ../media/
 
 
 [role="lead"]

@@ -50,7 +50,7 @@ A caixa de diálogo Configurações do host é exibida.
 
 .. Clique na guia *Host Ports*.
 +
-image::../media/sam1130_ss_host_settings_dialog_ports_tab_maint-e5700.gif[sam1130 ss host settings dialog ports tab manint e5700]
+image::../media/sam1130_ss_host_settings_dialog_ports_tab_maint-e5700.gif[Caixa de diálogo Configurações do host]
 
 .. Clique em *Adicionar* e use a caixa de diálogo *Adicionar porta de host* para associar um novo identificador de porta de host ao host.
 +
@@ -96,7 +96,7 @@ A caixa de diálogo Configurações do host é exibida.
 
 .. Clique na guia *Host Ports*.
 +
-image::../media/sam1130_ss_host_settings_dialog_ports_tab_maint-e5700.gif[sam1130 ss host settings dialog ports tab manint e5700]
+image::../media/sam1130_ss_host_settings_dialog_ports_tab_maint-e5700.gif[Caixa de diálogo Configurações do host]
 
 .. Clique em *Adicionar* e use a caixa de diálogo *Adicionar porta de host* para associar um novo identificador de porta de host ao host.
 +

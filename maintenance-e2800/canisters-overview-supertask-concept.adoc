@@ -39,7 +39,7 @@ Você pode substituir uma fonte de alimentação nas seguintes prateleiras:
 
 A figura a seguir mostra um exemplo de compartimento de controladora E2812, compartimento de controladora E2824 e array Flash EF280 com duas fontes de alimentação (coletores de ventilador de energia). Os compartimentos de unidades DE212C e DE224C são idênticos, mas incluem módulos de e/S (IOMs) em vez de coletores de controladora.
 
-image::../media/28_dwg_e2812_power_fan_canisters.gif[28 dwg e2812 latas de ventilador de energia]
+image::../media/28_dwg_e2812_power_fan_canisters.gif[E2800 com coletores de ventilador de potência]
 
 *(1)* _compartimento do controlador com duas fontes de alimentação (coletores do ventilador de energia) abaixo dos coletores do controlador_
 
@@ -85,11 +85,11 @@ O procedimento para substituir um recipiente de alimentação não descreve como
 
 A figura a seguir mostra a parte traseira de um compartimento de unidades de DE460C TB com os dois coletores de energia:
 
-image::../media/28_dwg_de460c_rear_no_callouts_maint-e2800.gif[28 dwg de460c traseiro sem legenda e2800]
+image::../media/28_dwg_de460c_rear_no_callouts_maint-e2800.gif[DE460C com latas de energia]
 
 A figura a seguir mostra um recipiente de alimentação:
 
-image::../media/28_dwg_e2860_de460c_psu_maint-e2800.gif[28 dwg e2860 de460c fonte de alimentação e2800]
+image::../media/28_dwg_e2860_de460c_psu_maint-e2800.gif[Latas de energia]
 
 
 
@@ -136,11 +136,11 @@ O procedimento para substituir um recipiente do ventilador não descreve como su
 
 A figura seguinte mostra um recipiente da ventoinha:
 
-image::../media/28_dwg_e2860_de460c_single_fan_canister_no_callouts_maint-e2800.gif[28 dwg e2860 de460c recipiente de ventilador único sem legenda-maint e2800]
+image::../media/28_dwg_e2860_de460c_single_fan_canister_no_callouts_maint-e2800.gif[Recipiente da ventoinha]
 
 A figura a seguir mostra a parte traseira de uma prateleira DE460C com dois coletores de ventilador:
 
-image::../media/28_dwg_de460c_rear_no_callouts_maint-e2800.gif[28 dwg de460c traseiro sem legenda e2800]
+image::../media/28_dwg_de460c_rear_no_callouts_maint-e2800.gif[DE460c com dois coletores de ventilador]
 
 
 CAUTION: *Possíveis danos ao equipamento* -- se substituir um recipiente do ventilador com a alimentação ligada, deve concluir o procedimento de substituição no prazo de 30 minutos para evitar a possibilidade de sobreaquecimento do equipamento.

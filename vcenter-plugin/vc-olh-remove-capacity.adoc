@@ -11,7 +11,7 @@ summary: Você pode remover unidades para diminuir a capacidade de um pool exist
 :nofooter: 
 :icons: font
 :linkattrs: 
-:imagesdir: ./media/
+:imagesdir: ../media/
 
 
 [role="lead"]

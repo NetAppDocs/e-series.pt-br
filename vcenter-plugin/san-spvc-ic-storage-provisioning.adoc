@@ -11,7 +11,7 @@ summary: Use o Plugin para vCenter para criar volumes, atribuir volumes a hosts 
 :nofooter: 
 :icons: font
 :linkattrs: 
-:imagesdir: ./media/
+:imagesdir: ../media/
 
 
 [role="lead"]

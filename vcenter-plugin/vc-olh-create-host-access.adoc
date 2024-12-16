@@ -11,7 +11,7 @@ summary: Para gerenciar o armazenamento com o plug-in de armazenamento para vCen
 :nofooter: 
 :icons: font
 :linkattrs: 
-:imagesdir: ./media/
+:imagesdir: ../media/
 
 
 [role="lead"]

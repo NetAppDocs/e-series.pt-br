@@ -36,7 +36,7 @@ Siga estas regras para evitar danificar as unidades do seu storage de armazename
 ** Nunca force uma unidade para dentro de uma prateleira e utilize uma pressão suave e firme para engatar completamente o trinco da unidade.
 ** Coloque as unidades em superfícies almofadadas e nunca empilhe as unidades umas sobre as outras.
 ** Não bata as transmissões contra outras superfícies.
-** Antes de remover uma unidade de uma gaveta, solte a alça e aguarde 30 segundos para que a unidade gire para baixo.
+** Antes de remover uma unidade de uma gaveta, solte a alça e aguarde 60 segundos para que a unidade gire para baixo.
 ** Utilize sempre embalagens aprovadas ao enviar unidades.
 
 
@@ -52,10 +52,10 @@ Os campos magnéticos podem destruir todos os dados na unidade e causar danos ir
 
 As gavetas padrão de 24 unidades exigem escalonamento de unidades. A figura a seguir mostra como as unidades são numeradas em cada gaveta (o painel frontal da gaveta foi removido).
 
-image::../media/ef600_drives_numbered.png[ef600 unidades numeradas]
+image::../media/ef600_drives_numbered.png[Numeração de unidades em um compartimento de 24 unidades]
 
 Ao inserir menos de 24 unidades em um controlador EF300 ou EF600, você deve alternar entre as duas metades do controlador. Começando pela extrema esquerda e depois movendo-se para a extrema direita, coloque as unidades em uma de cada vez.
 
 A figura a seguir mostra como escalonar as unidades entre as duas metades.
 
-image::../media/ef600_drives_staggering.png[ef600 unidades desconcertantes]
+image::../media/ef600_drives_staggering.png[Impulsione impressionantes em uma gaveta de 24 unidades]

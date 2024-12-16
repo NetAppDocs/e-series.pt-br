@@ -41,7 +41,7 @@ NOTE: O LED de atenção âmbar do controlador será desligado sempre que existi
 ====
 
 
-image::../media/e5700_attention_led_callout.png[e5700 a atenção levou o chamado]
+image::../media/e5700_attention_led_callout.png[E5700 controlador de atenção LED]
 
 *(1)* _atenção LED_
 

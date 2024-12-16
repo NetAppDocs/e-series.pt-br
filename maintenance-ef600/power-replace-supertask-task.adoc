@@ -47,7 +47,7 @@ Guarde todos os materiais de embalagem para utilização quando devolver a fonte
 
 . Localize a patilha à direita da fonte de alimentação e prima-a em direção à unidade de fonte de alimentação.
 +
-image::../media/psup_2.png[psup 2]
+image::../media/psup_2.png[Prima o separador junto à fonte de alimentação]
 
 . Localize a alça na parte frontal da fonte de alimentação.
 . Utilize a pega para deslizar a fonte de alimentação para fora do sistema.
@@ -56,7 +56,7 @@ image::../media/psup_2.png[psup 2]
 CAUTION: Ao remover uma fonte de alimentação, utilize sempre duas mãos para suportar o seu peso.
 
 +
-image::../media/psup_3.png[psup 3]
+image::../media/psup_3.png[Deslize a fonte de alimentação para fora]
 
 
 
@@ -76,7 +76,7 @@ As fontes de alimentação são chaveadas e só podem ser instaladas de uma form
 CAUTION: Não utilize força excessiva ao deslizar a fonte de alimentação para o sistema; pode danificar o conetor.
 
 +
-image::../media/psup_4.png[psup 4]
+image::../media/psup_4.png[Instale a fonte de alimentação no controlador]
 
 . Confirme se seu status é ideal e verifique os LEDs de atenção do compartimento do controlador.
 +

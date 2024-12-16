@@ -19,7 +19,7 @@ Pode gerar e imprimir um PDF desta página e, em seguida, utilizar a seguinte fo
 
 As configurações recomendadas consistem em duas portas de iniciador e quatro portas de destino com uma ou mais VLANs.
 
-image::../media/50001_01_conf-lin.gif[50001 01 conf lin]
+image::../media/50001_01_conf-lin.gif[Configuração de rede iSCSI]
 
 
 

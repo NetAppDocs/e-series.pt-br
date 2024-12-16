@@ -70,7 +70,7 @@ Você pode gerar e imprimir um PDF desta página e, em seguida, usar a seguinte 
 
 A ilustração mostra um host conetado a um storage array do e-Series em duas zonas. Uma zona é indicada pela linha azul; a outra zona é indicada pela linha vermelha. Qualquer porta única tem dois caminhos para o armazenamento (um para cada controlador).
 
-image::../media/port_identifiers_host_and_target_conf-win.gif[identificadores de porta host e conf de destino win]
+image::../media/port_identifiers_host_and_target_conf-win.gif[Identificadores de porta Fibre Channel]
 
 
 

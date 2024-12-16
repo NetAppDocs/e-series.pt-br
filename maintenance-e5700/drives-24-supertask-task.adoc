@@ -70,20 +70,20 @@ Salve todos os materiais de embalagem.
 
 . Pressione o botão de liberação na unidade com falha.
 +
-image::../media/drw_drive_latch_maint-e5700.gif[manutenção do trinco da unidade drw e5700]
+image::../media/drw_drive_latch_maint-e5700.gif[Pressione o botão de liberação para remover a unidade com falha]
 
 +
 ** Para unidades em E5724 compartimentos de controladora ou DE224C compartimentos de unidades, o botão de liberação fica na parte superior da unidade. A alavanca do came nas molas de acionamento abre parcialmente e a unidade solta-se do plano médio.
 
 
 . Abra a alavanca do came e deslize a unidade ligeiramente para fora.
-. Aguarde 30 segundos.
+. Aguarde 60 segundos.
 . Utilizando ambas as mãos, retire a unidade da prateleira.
 . Coloque a unidade numa superfície antiestática e amortecida, longe de campos magnéticos.
-. Aguarde 30 segundos para que o software reconheça que a unidade foi removida.
+. Aguarde 60 segundos para que o software reconheça que a unidade foi removida.
 +
 
-NOTE: Se remover acidentalmente uma unidade ativa, aguarde pelo menos 30 segundos e, em seguida, reinstale-a. Para o procedimento de recuperação, consulte o software de gerenciamento de armazenamento.
+NOTE: Se remover acidentalmente uma unidade ativa, aguarde pelo menos 60 segundos e, em seguida, reinstale-a. Para o procedimento de recuperação, consulte o software de gerenciamento de armazenamento.
 
 
 
@@ -119,7 +119,7 @@ Quando você insere uma unidade pela primeira vez, seu LED de atenção pode est
 
 +
 ** O LED de alimentação está ligado ou intermitente e o LED de atenção está apagado: Indica que a nova unidade está a funcionar corretamente.
-** O LED de alimentação está desligado: Indica que a unidade pode não estar instalada corretamente. Retire a unidade, aguarde 30 segundos e, em seguida, volte a instalá-la.
+** O LED de alimentação está desligado: Indica que a unidade pode não estar instalada corretamente. Retire a unidade, aguarde 60 segundos e, em seguida, volte a instalá-la.
 ** O LED de atenção está aceso: Indica que a nova unidade pode estar com defeito. Substitua-a por outra unidade nova.
 
 

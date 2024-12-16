@@ -6,6 +6,8 @@ summary: Gerenciar o storage
 ---
 = Gerenciar o storage
 :allow-uri-read: 
+:icons: font
+:imagesdir: ./media/
 
 
 [role="lead"]

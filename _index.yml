@@ -24,9 +24,9 @@ indexpage:
       url: https://www.netapp.com/pdf.html?item=/media/7573-ds-3805.pdf
   - title: Software SANtricity
     links:
-    - title: Gerenciador de sistemas SANtricity 11,8
+    - title: Gerenciador de sistemas SANtricity 11,9
       url: https://docs.netapp.com/us-en/e-series-santricity/system-manager/index.html
-    - title: SANtricity Unified Manager 6
+    - title: SANtricity Unified Manager 7
       url: https://docs.netapp.com/us-en/e-series-santricity/unified-manager/index.html
     - title: Referência da interface de linha de comando (CLI)
       url: https://docs.netapp.com/us-en/e-series-cli/index.html

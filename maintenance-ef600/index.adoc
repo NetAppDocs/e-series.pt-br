@@ -11,58 +11,79 @@ summary: Mantenha o hardware EF300 e EF600
 
 
 [role="lead"]
+Talvez seja necessário executar procedimentos de manutenção no hardware. Os procedimentos específicos para manter os componentes do sistema EF300 ou EF600 estão nesta seção.
+
+Os procedimentos nesta seção pressupõem que o sistema EF300 ou EF600 já foi implantado no ambiente e-Series.
+
+
+
+== Componentes do sistema
+
 Para os sistemas de armazenamento EF300 e EF600, pode executar procedimentos de manutenção nos seguintes componentes.
 
+[cols="25,65"]
+|===
 
 
-== Baterias
-
+ a| 
+https://docs.netapp.com/us-en/e-series/maintenance-ef600/batteries-overview-requirements-concept.html["Baterias"]
+ a| 
 Uma bateria é incluída com um controlador e preserva os dados em cache se a energia CA falhar.
 
 
 
-== Controladores
-
+ a| 
+https://docs.netapp.com/us-en/e-series/maintenance-ef600/controllers-overview-supertask-concept.html["Controladores"]
+ a| 
 Um controlador consiste em uma placa, firmware e software. Controla as unidades e implementa as funções do Gestor do sistema SANtricity.
 
 
 
-== DIMMs
-
+ a| 
+https://docs.netapp.com/us-en/e-series/maintenance-ef600/dimms-overview-supertask-concept.html["DIMMs"]
+ a| 
 Você deve substituir um DIMM (módulo de memória dual in-line) quando houver uma incompatibilidade de memória ou se tiver um DIMM com falha.
 
 
 
-== Unidades
-
+ a| 
+https://docs.netapp.com/us-en/e-series/maintenance-ef600/drives-overview-supertask-concept.html["Unidades"]
+ a| 
 Uma unidade é um dispositivo que fornece a Mídia de armazenamento físico para dados.
 
 
 
-== Fãs
-
+ a| 
+https://docs.netapp.com/us-en/e-series/maintenance-ef600/fans-overview-requirements-replacing2-concept.html["Fãs"]
+ a| 
 Cada gaveta de unidade ou compartimento de controladora EF300 ou EF600 inclui cinco ventiladores para resfriar a controladora.
 
 
 
-== Placas de interface de host (HICs)
-
+ a| 
+https://docs.netapp.com/us-en/e-series/maintenance-ef600/hics-overview-supertask-concept.html["Placas de interface de host (HICs)"]
+ a| 
 Uma placa de interface do host (HIC) deve ser instalada dentro de um recipiente do controlador. O controlador EF600 inclui portas de host no HIC opcional. As portas de host que são incorporadas ao HIC são chamadas portas HIC.
 
 
 
-== Protocolo de porta de host
-
+ a| 
+https://docs.netapp.com/us-en/e-series/maintenance-ef600/hpp-overview-supertask-concept.html["Protocolo de porta de host"]
+ a| 
 Você pode converter o protocolo de um host para um protocolo diferente para que a compatibilidade e a comunicação possam ser estabelecidas.
 
 
 
-== Fontes de alimentação
-
+ a| 
+https://docs.netapp.com/us-en/e-series/maintenance-ef600/power-overview-requirements2-concept.html["Fontes de alimentação"]
+ a| 
 Uma fonte de alimentação fornece uma fonte de alimentação redundante em um compartimento de controladora.
 
 
 
-== Placas de expansão SAS
-
+ a| 
+https://docs.netapp.com/us-en/e-series/maintenance-ef600/sas-overview-supertask-concept.html["Placas de expansão SAS"]
+ a| 
 Uma placa de expansão SAS pode ser instalada dentro de um recipiente do controlador. A controladora EF300 suporta expansão SAS.
+
+|===

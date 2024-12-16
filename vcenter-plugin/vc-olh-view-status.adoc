@@ -10,7 +10,7 @@ summary: Exibir o status do sistema a partir do plug-in de armazenamento para vC
 :nofooter: 
 :icons: font
 :linkattrs: 
-:imagesdir: ./media/
+:imagesdir: ../media/
 
 
 [role="lead"]

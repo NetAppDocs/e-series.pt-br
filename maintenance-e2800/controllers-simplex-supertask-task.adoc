@@ -151,14 +151,14 @@ O LED verde Cache ative na parte de trás do controlador fica aceso quando os da
 NOTE: A figura mostra um exemplo do recipiente do controlador. Seu controlador pode ter um número diferente e um tipo diferente de portas de host.
 
 +
-image::../media/28_dwg_2800_controller_attn_led_maint-e2800.gif[28 dwg 2800 controlador attn led manint e2800]
+image::../media/28_dwg_2800_controller_attn_led_maint-e2800.gif[LED ativo de cache E2800]
 
 +
 *(1)* _Cache ative LED_
 
 . Aperte o trinco na pega do excêntrico até que este se solte e, em seguida, abra a pega do excêntrico para a direita para libertar o recipiente do controlador do plano médio.
 +
-image::../media/28_dwg_e2824_remove_controller_canister_simplex_maint-e2800.gif[28 dwg e2824 remover controlador canister simplex manint e2800]
+image::../media/28_dwg_e2824_remove_controller_canister_simplex_maint-e2800.gif[Remova o recipiente do controlador]
 
 +
 *(1)* _Controller canister_
@@ -191,7 +191,7 @@ Depois de remover o recipiente do controlador da prateleira do controlador, reti
 Se este LED verde estiver ligado, o controlador ainda está a utilizar a bateria. Deve aguardar que este LED se apague antes de remover quaisquer componentes.
 
 +
-image::../media/28_dwg_e2800_internal_cache_active_led_maint-e2800.gif[28 dwg e2800 cache interno ativo led mint e2800]
+image::../media/28_dwg_e2800_internal_cache_active_led_maint-e2800.gif[LED ativo de cache interno]
 
 +
 *(1)* _Cache interno ativo_
@@ -202,7 +202,7 @@ image::../media/28_dwg_e2800_internal_cache_active_led_maint-e2800.gif[28 dwg e2
 . Localize a trava de liberação azul da bateria.
 . Desengate a bateria empurrando a trava de liberação para baixo e afastando-a do recipiente do controlador.
 +
-image::../media/28_dwg_e2800_remove_battery_maint-e2800.gif[28 dwg e2800 remover a manutenção da bateria e2800]
+image::../media/28_dwg_e2800_remove_battery_maint-e2800.gif[Retire a bateria do recipiente do controlador]
 
 +
 *(1)* _trava de liberação da bateria_
@@ -225,7 +225,7 @@ Se o recipiente do controlador incluir uma placa de interface do host (HIC), rem
 Há quatro parafusos: Um na parte superior, um na parte lateral e dois na parte frontal.
 
 +
-image::../media/28_dwg_e2800_hic_faceplace_screws_maint-e2800.gif[28 dwg e2800 hic faceplace parafusos mint e2800]
+image::../media/28_dwg_e2800_hic_faceplace_screws_maint-e2800.gif[Remova a placa frontal do recipiente do controlador]
 
 . Retire a placa frontal do HIC.
 . Utilizando os dedos ou uma chave de fendas Phillips, desaperte os três parafusos de aperto manual que fixam o HIC à placa do controlador.
@@ -235,7 +235,7 @@ image::../media/28_dwg_e2800_hic_faceplace_screws_maint-e2800.gif[28 dwg e2800 h
 CAUTION: Tenha cuidado para não arranhar ou bater os componentes na parte inferior do HIC ou na parte superior da placa controladora.
 
 +
-image::../media/28_dwg_e2800_hic_thumbscrews_maint-e2800.gif[28 dwg e2800 hic parafusos de aperto manual e2800]
+image::../media/28_dwg_e2800_hic_thumbscrews_maint-e2800.gif[Remova o HIC da placa controladora]
 
 +
 *(1)* _placa de interface host_
@@ -274,7 +274,7 @@ Deve inserir a flange metálica na parte frontal da bateria na ranhura na parte 
 Quando a trava se encaixa no lugar, a parte inferior da trava se encaixa em uma ranhura metálica no chassi.
 
 +
-image::../media/28_dwg_e2800_insert_battery_maint-e2800.gif[28 dwg e2800 inserir manutenção da bateria e2800]
+image::../media/28_dwg_e2800_insert_battery_maint-e2800.gif['Volte a instalar a bateria no recipiente do controlador"]
 
 +
 *(1)* _trava de liberação da bateria_
@@ -290,11 +290,11 @@ CAUTION: *Possíveis danos ao hardware* -- a flange metálica na parte frontal d
 +
 ** *Correto* -- a flange de metal da bateria está completamente inserida na ranhura do controlador:
 +
-image:../media/28_dwg_e2800_battery_flange_ok_maint-e2800.gif[""]
+image:../media/28_dwg_e2800_battery_flange_ok_maint-e2800.gif["Corrija a flange metálica"]
 
 ** *Incorreto* -- a flange metálica da bateria não está inserida na ranhura do controlador:
 +
-image:../media/28_dwg_e2800_battery_flange_not_ok_maint-e2800.gif[""]
+image:../media/28_dwg_e2800_battery_flange_not_ok_maint-e2800.gif["Flange metálica incorreta"]
 
 
 
@@ -318,7 +318,7 @@ Tenha cuidado para não arranhar ou bater os componentes na parte inferior do HI
 CAUTION: * Possíveis danos ao equipamento * - tenha muito cuidado para não apertar o conetor de fita dourada para os LEDs do controlador entre o HIC e os parafusos de aperto manual.
 
 +
-image::../media/28_dwg_e2800_hic_thumbscrews_maint-e2800.gif[28 dwg e2800 hic parafusos de aperto manual e2800]
+image::../media/28_dwg_e2800_hic_thumbscrews_maint-e2800.gif[Reinstale o HIC no controlador]
 
 +
 *(1)* _placa de interface host_
@@ -332,7 +332,7 @@ Não use uma chave de fenda, ou você pode apertar demais os parafusos.
 
 . Usando uma chave de fenda Phillips nº 1, prenda a placa frontal HIC que você removeu do recipiente do controlador original ao novo recipiente do controlador com quatro parafusos.
 +
-image::../media/28_dwg_e2800_hic_faceplace_screws_maint-e2800.gif[28 dwg e2800 hic faceplace parafusos mint e2800]
+image::../media/28_dwg_e2800_hic_faceplace_screws_maint-e2800.gif[Volte a instalar a placa frontal no controlador"]
 
 
 
@@ -347,7 +347,7 @@ Depois de instalar a bateria e o HIC, se uma foi inicialmente instalada, você p
 . Vire o recipiente do controlador ao contrário, de forma a que a tampa amovível fique virada para baixo.
 . Com a alavanca do came na posição aberta, deslize o recipiente do controlador até a prateleira do controlador.
 +
-image::../media/28_dwg_e2824_remove_controller_canister_simplex_maint-e2800.gif[28 dwg e2824 remover controlador canister simplex manint e2800]
+image::../media/28_dwg_e2824_remove_controller_canister_simplex_maint-e2800.gif[Reinstale o recipiente do controlador na prateleira do controlador]
 
 +
 *(1)* _Controller canister_
@@ -426,7 +426,7 @@ Ligue o compartimento do controlador, colete dados de suporte e retome as opera�
 NOTE: A figura mostra um exemplo do recipiente do controlador. Seu controlador pode ter um número diferente e um tipo diferente de portas de host.
 
 +
-image::../media/28_dwg_attn_led_7s_display_maint-e2800.gif[28 dwg attn led 7s display manint e2800]
+image::../media/28_dwg_attn_led_7s_display_maint-e2800.gif[E2800 LEDs do controlador]
 
 +
 *(1)* _LED de atenção (âmbar)_

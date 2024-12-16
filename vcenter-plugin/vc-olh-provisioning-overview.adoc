@@ -10,7 +10,7 @@ summary: Você pode criar contentores de dados, chamados volumes, para que o hos
 :nofooter: 
 :icons: font
 :linkattrs: 
-:imagesdir: ./media/
+:imagesdir: ../media/
 
 
 [role="lead"]

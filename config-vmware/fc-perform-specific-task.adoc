@@ -75,7 +75,7 @@ Você pode gerar e imprimir um PDF desta página e, em seguida, usar a seguinte 
 
 A ilustração mostra um host conetado a um storage array do e-Series em duas zonas. Uma zona é indicada pela linha azul; a outra zona é indicada pela linha vermelha. Cada zona contém uma porta do iniciador e todas as portas de destino.
 
-image::../media/port_identifiers_host_and_target_conf-vmw.gif[identificadores de porta host e vmw conf de destino]
+image::../media/port_identifiers_host_and_target_conf-vmw.gif[Identificadores de porta Fibre Channel]
 
 
 

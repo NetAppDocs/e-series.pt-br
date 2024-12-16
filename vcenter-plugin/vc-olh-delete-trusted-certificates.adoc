@@ -10,7 +10,7 @@ summary: Exclua um ou mais certificados que não são mais necessários.
 :nofooter: 
 :icons: font
 :linkattrs: 
-:imagesdir: ./media/
+:imagesdir: ../media/
 
 
 [role="lead"]

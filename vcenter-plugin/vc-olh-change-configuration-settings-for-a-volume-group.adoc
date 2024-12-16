@@ -11,7 +11,7 @@ summary: Edite as configurações de um grupo de volume, incluindo seu nome e n�
 :nofooter: 
 :icons: font
 :linkattrs: 
-:imagesdir: ./media/
+:imagesdir: ../media/
 
 
 [role="lead"]

@@ -1,0 +1,148 @@
+---
+permalink: install-hw-e4000/prepare-installation.html 
+sidebar: sidebar 
+keywords:  
+summary:  
+---
+= Prepare-se para a instalação
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Você precisa preparar seu local para atender às especificações do sistema de storage da série E4000.
+
+.Passos
+. Crie uma conta e Registre seu hardware em http://mysupport.netapp.com/["Suporte à NetApp"^].
+. Certifique-se de que os seguintes itens estão na caixa que recebeu:
++
+[role="tabbed-block"]
+====
+.E4012
+--
+Gaveta com unidades instaladas (painel empacotado separadamente)::
++
+--
+image:../media/trafford_overview.png["Compartimento com unidades instaladas"]
+
+--
+Hardware de montagem em rack::
++
+--
+image:../media/superrails_inst-hw-e2800-e5700.png["Hardware de montagem em rack"]
+
+--
+Cabos Ethernet para conexão de gerenciamento (se solicitados)::
++
+--
+image:../media/cable_ethernet_inst-hw-e2800-e5700.png["Cabos Ethernet para conexão de gerenciamento"]
+
+--
+Cabos de e/S para cabeamento de hosts de dados::
++
+--
+image:../media/cable_io_inst-hw-e2800-e5700.png["Cabos de e/S para cabeamento de hosts de dados"]
+
+--
+Cabos de alimentação::
++
+--
+image:../media/cable_power_inst-hw-e2800-e5700.png["Cabos de alimentação"]
+
+--
+Cabos SAS::
++
+--
+image:../media/sas_cable.png["Cabos SAS"]
+
+--
+
+
+--
+.E4060
+--
+Prateleira, moldura e ferragens de montagem em rack::
++
+--
+image:../media/trafford_overview.png["Prateleira, moldura e ferragens de montagem em rack"]
+
+--
+Quatro alças de prateleira x4:: image:../media/handles_counted.png["Quatro alças de prateleira"]
+Cabos Ethernet para conexão de gerenciamento (se solicitados)::
++
+--
+image:../media/cable_ethernet_inst-hw-e2800-e5700.png["Cabos Ethernet para conexão de gerenciamento"]
+
+--
+Cabos de e/S para cabeamento de hosts de dados::
++
+--
+image:../media/cable_io_inst-hw-e2800-e5700.png["Cabos de e/S para cabeamento de hosts de dados"]
+
+--
+Cabos de alimentação::
++
+--
+image:../media/cable_power_inst-hw-e2800-e5700.png["Cabos de alimentação"]
+
+--
+Cabos SAS::
++
+--
+image:../media/sas_cable.png["Cabos SAS"]
+
+--
+
+
+--
+====
+. Obtenha os itens adicionais necessários para a instalação:
++
+** Uma chave de fendas philips n.o 2
+** Uma lanterna
+** Uma correia ESD
+** Um gabinete ou rack se encaixa em prateleiras dos seguintes tamanhos:
++
+[role="tabbed-block"]
+====
+.E4012
+--
+* Profundidade*: 21,1 cm. Pol. (53,59 cm)
+
+* Largura*: 17,64 pol (44,8)
+
+*Altura*: 3,4 pol (8,64 cm)
+
+* Peso máximo*: 65,25 lb (29,6 kg)
+
+--
+.E4060
+--
+* Profundidade*: 36,3 pol (92,2 cm)
+
+* Largura*: 17,64 pol (44,8 cm)
+
+*Altura*: 7,0 pol (17,78 cm)
+
+* Peso máximo*: 253,33 lb (114,91 kg)
+
+--
+====
+** Um local que fornece a tensão correta da alimentação CA:
++
+*** E4012: 120 a 240 volts AC
+*** E4060: 240 volts AC
+
+
+** Um navegador compatível para o software de gerenciamento:
++
+*** Google Chrome (versão 89 e posterior)
+*** Microsoft Edge (versão 90 e posterior)
+*** Mozilla Firefox (versão 80 e posterior)
+*** Safari (versão 14 e posterior)
+
+
+
+
+

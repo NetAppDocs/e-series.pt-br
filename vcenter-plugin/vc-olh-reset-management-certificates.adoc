@@ -10,7 +10,7 @@ summary: Reverta o certificado de gerenciamento para o estado original, autoassi
 :nofooter: 
 :icons: font
 :linkattrs: 
-:imagesdir: ./media/
+:imagesdir: ../media/
 
 
 [role="lead"]

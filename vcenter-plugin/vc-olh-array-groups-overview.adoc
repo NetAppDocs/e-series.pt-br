@@ -10,7 +10,7 @@ summary: Gerencie sua infraestrutura física e virtualizada agrupando um conjunt
 :nofooter: 
 :icons: font
 :linkattrs: 
-:imagesdir: ./media/
+:imagesdir: ../media/
 
 
 [role="lead"]

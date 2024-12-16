@@ -11,7 +11,7 @@ summary: Redistribuir volumes para mover volumes de volta para os proprietários
 :nofooter: 
 :icons: font
 :linkattrs: 
-:imagesdir: ./media/
+:imagesdir: ../media/
 
 
 [role="lead"]

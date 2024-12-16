@@ -1,7 +1,7 @@
 ---
 permalink: upgrade-controllers/install-controllers-task.html 
 sidebar: sidebar 
-keywords: E-Series, eseries, E2800, E5700, EF300, EF600, upgrade controller, upgrading controller, installing new controller, install new controller, install battery, installing battery, install controller canister 
+keywords: E-Series, eseries, E4000, E2800, E5700, EF300, EF600, upgrade controller, upgrading controller, installing new controller, install new controller, install battery, installing battery, install controller canister 
 summary: Depois de remover os controladores antigos, é possível instalar novos controladores na bandeja de unidades e controlador 
 ---
 = Instale novos controladores
@@ -34,35 +34,20 @@ Instale a bateria que retirou do recipiente do controlador original ou uma nova 
 . Desembale o novo recipiente do controlador e coloque-o numa superfície plana e livre de estática, de modo a que a tampa amovível fique virada para cima.
 . Prima o botão da tampa para baixo e deslize a tampa para fora.
 . Oriente o recipiente do controlador de forma a que a ranhura da bateria fique voltada para si.
-. Dependendo do modelo do controlador, execute um dos seguintes procedimentos:
-+
-** Para modelos de controlador E2600 ou E2700:
-+
-... Insira a placa do circuito da bateria, deslizando-a para a frente do novo recipiente do controlador.
-... Aperte o parafuso de aperto manual para fixar a placa do circuito da bateria na nova placa do recipiente do controlador.
-... Volte a instalar a tampa superior no novo recipiente do controlador, deslizando-a para a frente até que as tampas do trinco superior encaixem.
-+
-Quando a trava se encaixa no lugar, a parte inferior da trava se encaixa em uma ranhura metálica no chassi.
-
-
-
-** Para outros modelos de controlador:
-+
-... Introduza a bateria no novo recipiente do controlador.
+. Introduza a bateria no novo recipiente do controlador.
 +
 Deslize a bateria para dentro do recipiente, certificando-se de que fica por baixo dos rebites na parede do novo recipiente.
 
-... Mantendo a pega de bloqueio num ângulo de 45 graus, alinhe os conetores na parte inferior da bateria com os conetores no recipiente.
-... Empurre a bateria para baixo até ouvir um clique e mova a pega de bloqueio para cima para fixar a bateria do controlador ao recipiente do controlador.
++
+.. Mantendo a pega de bloqueio num ângulo de 45 graus, alinhe os conetores na parte inferior da bateria com os conetores no recipiente.
+.. Empurre a bateria para baixo até ouvir um clique e mova a pega de bloqueio para cima para fixar a bateria do controlador ao recipiente do controlador.
 +
 
 TIP: Para se certificar de que a bateria do controlador está encaixada corretamente em uma bandeja de unidades e controlador E5XX, talvez seja necessário deslizá-la para fora e inseri-la novamente. Ele é seguro quando você ouve um clique no lugar, e quando a alça de bloqueio não se move para fora de sua posição vertical quando você a balança.
 
-... Volte a instalar a tampa superior no novo recipiente do controlador, deslizando-a para a frente até que as tampas do trinco superior encaixem.
+.. Volte a instalar a tampa superior no novo recipiente do controlador, deslizando-a para a frente até que as tampas do trinco superior encaixem.
 +
 Quando a trava se encaixa no lugar, a parte inferior da trava se encaixa em uma ranhura metálica no chassi.
-
-
 
 
 
@@ -76,7 +61,7 @@ Quando a trava se encaixa no lugar, a parte inferior da trava se encaixa em uma 
 Instale o novo recipiente do controlador na gaveta do controlador.
 
 .Passos
-. Deslize o novo recipiente do controlador completamente para dentro da bandeja de unidades e controlador Rode as alavancas de libertação em direção ao centro do recipiente do controlador para o bloquear no devido lugar.
+. Deslize o novo recipiente do controlador completamente para dentro da bandeja de unidades e controlador Rode as pegas de libertação em direção ao centro do recipiente do controlador para o bloquear no lugar.
 . Se o seu novo coletor do controlador tiver um HIC Fibre Channel ou um InfiniBand HIC, instale os transcetores SFP (Fibre Channel) ou o transcetor QSFP (InfiniBand) no recipiente do controlador e reconete os cabos do host.
 +
 Dependendo das HICs envolvidas na sua atualização, você pode ser capaz de reutilizar transcetores SFP ou transcetores QSFP que você removeu do seu antigo canister do controlador.
@@ -85,11 +70,7 @@ Dependendo das HICs envolvidas na sua atualização, você pode ser capaz de reu
 +
 Se a configuração de cabeamento da unidade for a mesma que era com as controladoras antigas, use as etiquetas que você conetou aos cabos para reconetar os cabos corretamente.
 
-+
-
-NOTE: Se você estiver atualizando para controladores E2700 de um modelo anterior, a configuração de cabeamento da unidade pode ser diferente da configuração usada para as controladoras antigas.
-
 
 
 .O que se segue?
-Se você estiver atualizando os controladores E2800 e E5700 e o recurso Segurança da unidade estiver ativado, vá para link:upgrade-unlock-drives-task.html["Desbloquear unidades"]. Caso contrário, vá link:complete-upgrade-controllers-task.html["Atualização completa da controladora"]para .
+Se o recurso Segurança da unidade estiver ativado, vá para link:upgrade-unlock-drives-task.html["Desbloquear unidades"]. Caso contrário, vá link:complete-upgrade-controllers-task.html["Atualização completa da controladora"]para .

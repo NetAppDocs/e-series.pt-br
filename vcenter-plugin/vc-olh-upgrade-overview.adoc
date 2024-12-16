@@ -10,7 +10,7 @@ summary: Você pode gerenciar atualizações de software SANtricity e NVSRAM par
 :nofooter: 
 :icons: font
 :linkattrs: 
-:imagesdir: ./media/
+:imagesdir: ../media/
 
 
 [role="lead"]

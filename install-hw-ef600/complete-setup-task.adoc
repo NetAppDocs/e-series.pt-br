@@ -29,7 +29,7 @@ O exemplo a seguir mostra o cabeamento dos hosts de dados usando uma topologia d
 
 
  a| 
-image:../media/direct_topo.png[""]
+image:../media/direct_topo.png["Cabeamento de topologia de conexão direta"]
  a| 
 . Conete cada adaptador de host diretamente às portas de host nos controladores.
 
@@ -45,7 +45,7 @@ O exemplo a seguir mostra o cabeamento dos hosts de dados usando uma topologia d
 
 
  a| 
-image:../media/fabric_topo.png[""]
+image:../media/fabric_topo.png["Cabeamento de topologia de malha"]
  a| 
 . Conete cada adaptador de host diretamente ao switch.
 . Conete cada switch diretamente às portas do host nos controladores.
@@ -76,7 +76,7 @@ Saiba como configurar as portas de gerenciamento com um servidor DHCP.
 
 
  a| 
-image:../media/cable_ethernet_inst-hw-ef600.png[""]
+image:../media/cable_ethernet_inst-hw-ef600.png["Cabos RJ-45"]
  a| 
 Cabos Ethernet RJ-45 (se solicitados)
 
@@ -91,7 +91,7 @@ A figura a seguir mostra um exemplo da localização da porta de gerenciamento d
 
 
  a| 
-image:../media/ethernet_callout.png[""]
+image:../media/ethernet_callout.png["EF600 portas de gerenciamento"]
 
 |===
 . Abra um navegador e conete-se ao sistema de armazenamento usando um dos endereços IP do controlador fornecidos pelo administrador da rede.
@@ -119,7 +119,7 @@ NOTE: O controlador A é o recipiente superior do controlador e o controlador B 
 
 
  a| 
-image:../media/cable_ethernet_inst-hw-ef600.png[""]
+image:../media/cable_ethernet_inst-hw-ef600.png["Cabos RJ-45\""]
  a| 
 Cabos Ethernet RJ-45 (se solicitados)
 
@@ -134,7 +134,7 @@ A figura a seguir mostra um exemplo da localização da porta de gerenciamento d
 
 
  a| 
-image:../media/ethernet_callout.png[""]
+image:../media/ethernet_callout.png["EF600 portas de gerenciamento"]
 
 |===
 . Abra um navegador e use o endereço IP padrão (169.254.128.101) para estabelecer uma conexão com o controlador. O controlador envia de volta um certificado autoassinado. O navegador informa que a conexão não é segura.
@@ -191,7 +191,7 @@ Depois de instalar o hardware EF300 ou EF600, use o software SANtricity para con
 
 
  a| 
-image:../media/management_station_inst-hw-ef600_g2285.png[""]
+image:../media/management_station_inst-hw-ef600_g2285.png["Acesse o System Manager para configurar suas portas de gerenciamento"]
  a| 
 Para acessar o System Manager, use os mesmos endereços IP usados para configurar suas portas de gerenciamento.
 

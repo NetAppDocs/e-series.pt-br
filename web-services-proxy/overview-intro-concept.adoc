@@ -28,13 +28,13 @@ Ao usar a API de serviços da Web para gerenciar sistemas de armazenamento, voc�
 
 Os Web Services estão disponíveis em duas implementações:
 
-* *Incorporado* -- Um servidor de API RESTful está incorporado em cada controlador de um sistema de armazenamento E2800/EF280 executando o NetApp SANtricity 11,30 ou versões posteriores, um E5700/EF570 executando o SANtricity 11,40 ou versões posteriores e um EF300 ou EF600 executando o SANtricity 11,60 ou versões posteriores. Nenhuma instalação é necessária.
+* *Incorporado* -- Um servidor de API RESTful está incorporado em cada controlador de um sistema de armazenamento E2800/EF280 executando o NetApp SANtricity 11,30 ou versões posteriores, um E5700/EF570 executando o SANtricity 11,40 ou versões posteriores, um EF300 ou EF600 executando o SANtricity 11,60 ou versões posteriores e um E4000 executando o SANtricity 11,90 ou versões posteriores. Nenhuma instalação é necessária.
 * *Proxy* -- o Proxy de Serviços Web da SANtricity é um servidor de API RESTful instalado separadamente em um servidor Windows ou Linux. Essa aplicação baseada em host pode gerenciar centenas de sistemas de storage novos e legados do NetApp e-Series. Em geral, você deve usar o proxy para redes com mais de 10 sistemas de armazenamento. O proxy pode lidar com várias solicitações de forma mais eficiente do que a API incorporada.
 
 
 O núcleo da API está disponível em ambas as implementações.
 
-image::../media/web_services_proxy_overview.gif[visão geral do proxy dos serviços da web]
+image::../media/web_services_proxy_overview.gif[Visão geral do Web Services Proxy]
 
 A tabela a seguir fornece uma comparação entre o proxy e a versão incorporada.
 

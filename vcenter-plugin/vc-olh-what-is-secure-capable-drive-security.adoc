@@ -10,7 +10,7 @@ summary: O Drive Security é um recurso que impede o acesso não autorizado aos 
 :nofooter: 
 :icons: font
 :linkattrs: 
-:imagesdir: ./media/
+:imagesdir: ../media/
 
 
 [role="lead"]

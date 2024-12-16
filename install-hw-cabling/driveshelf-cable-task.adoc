@@ -1,7 +1,7 @@
 ---
 permalink: install-hw-cabling/driveshelf-cable-task.html 
 sidebar: sidebar 
-keywords: cabling, cables, drive shelf cabling, controller shelf cabling, E-Series, eseries, E2800, E5700, EF300, EF600, DE212C, DE224C, DE460C 
+keywords: cabling, cables, drive shelf cabling, controller shelf cabling, E-Series, eseries, E2800, E5700, EF300, EF600, E4000, DE212C, DE224C, DE460C 
 summary: 'Conectar cada controladora na gaveta de controladora a um módulo de e/S (IOM) em uma gaveta de unidade.' 
 ---
 = Cabeamento do compartimento de unidades
@@ -29,34 +29,27 @@ Se você estiver fazendo o cabeamento de uma gaveta de controladora mais antiga 
 
 As informações a seguir se aplicam ao cabeamento de um compartimento de controladora E2800, E2800B, EF280, E5700, EF5700B ou EF570 em um compartimento de unidades de DE212C, DE224C ou DE460.
 
-
-
-=== Fazer o cabeamento de uma gaveta de 12 ou 24 unidades
-
+[role="tabbed-block"]
+====
+.compartimento de 12 unidades ou 24 unidades
+--
 Você pode vincular o compartimento de controladora a uma ou mais gavetas de 12 ou 24 unidades.
 
 A imagem a seguir mostra uma representação do compartimento de controladora e dos compartimentos de unidades. Para localizar as portas no modelo, https://hwu.netapp.com/Controller/Index?platformTypeId=2357027["Hardware Universe"^] consulte .
 
+image::../media/12_24_cabling.png[Um compartimento de controladora e compartimentos de 12 ou 24 unidades]
 
-
-==== Um compartimento de controladora e compartimentos de 12 ou 24 unidades
-
-image::../media/12_24_cabling.png[cabeamento de 12 24 gbe]
-
-
-
-=== Fazer o cabeamento de uma gaveta de 60 unidades
-
+--
+.compartimento de 60 unidades
+--
 Você pode vincular o compartimento de controladora a uma ou mais gavetas de 60 unidades.
 
 A imagem a seguir mostra uma representação do compartimento de controladora e dos compartimentos de unidades. Para localizar as portas no modelo, https://hwu.netapp.com/Controller/Index?platformTypeId=2357027["Hardware Universe"^] consulte .
 
+image::../media/60_cabling.png[Um compartimento de controladora e compartimentos de 60 unidades]
 
-
-==== Um compartimento de controladora e compartimentos de 60 unidades
-
-image::../media/60_cabling.png[cabeamento de 60 gbe]
-
+--
+====
 
 
 == Cabeamento EF300 e EF600
@@ -66,30 +59,47 @@ As informações a seguir se aplicam ao cabeamento de uma gaveta de controladora
 .Antes de começar
 Antes de fazer o cabeamento de um EF300 ou EF600, verifique se o firmware está atualizado para a versão mais recente. Para atualizar o firmware, siga as instruções em link:../upgrade-santricity/index.html["Atualizando o SANtricity os"^].
 
-
-
-=== Fazer o cabeamento de uma gaveta de 12 ou 24 unidades
-
+[role="tabbed-block"]
+====
+.compartimento de 12 unidades ou 24 unidades
+--
 Você pode vincular o compartimento de controladora a uma ou mais gavetas de 12 ou 24 unidades.
 
 A imagem a seguir mostra uma representação do compartimento de controladora e dos compartimentos de unidades. Para localizar as portas no modelo, https://hwu.netapp.com/Controller/Index?platformTypeId=2357027["Hardware Universe"^] consulte .
 
+image::../media/ef_to_de224c_four_shelves.png[Um compartimento de controladora e compartimentos de 12 ou 24 unidades]
 
-
-==== Um compartimento de controladora e compartimentos de 12 ou 24 unidades
-
-image::../media/ef_to_de224c_four_shelves.png[ef para de224c e quatro gavetas]
-
-
-
-=== Fazer o cabeamento de uma gaveta de 60 unidades
-
+--
+.compartimento de 60 unidades
+--
 Você pode vincular o compartimento de controladora a uma ou mais gavetas de 60 unidades.
 
 A imagem a seguir mostra uma representação do compartimento de controladora e dos compartimentos de unidades. Para localizar as portas no modelo, https://hwu.netapp.com/Controller/Index?platformTypeId=2357027["Hardware Universe"^] consulte .
 
+image::../media/ef_to_de460c.png[Um compartimento de controladora e compartimentos de 60 unidades]
+
+--
+====
 
 
-==== Um compartimento de controladora e compartimentos de 60 unidades
+== Cabeamento E4000
 
-image::../media/ef_to_de460c.png[ef a de460c mm]
+As informações a seguir se aplicam ao cabeamento de um compartimento de controladora E4000U a um compartimento de unidades de DE212CU, DE224CU ou DE460U.
+
+[role="tabbed-block"]
+====
+.compartimento de 12 unidades
+--
+Você pode vincular o compartimento de controladora a uma ou mais gavetas de 12 unidades.
+
+image::../media/e4012_cabling.png[Um compartimento de controladora e um compartimento de 12 unidades]
+
+--
+.compartimento de 60 unidades
+--
+Você pode vincular o compartimento de controladora a uma ou mais gavetas de 60 unidades.
+
+image::../media/e4060_cabling.png[Um compartimento de controladora e compartimentos de 60 unidades]
+
+--
+====

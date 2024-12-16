@@ -11,7 +11,7 @@ summary: Uma chave de segurança é compartilhada por controladores e unidades h
 :nofooter: 
 :icons: font
 :linkattrs: 
-:imagesdir: ./media/
+:imagesdir: ../media/
 
 
 [role="lead"]

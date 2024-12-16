@@ -129,3 +129,16 @@ O endpoint */certificates/reload* geralmente retorna uma resposta http 202 bem-s
 Usando uma sessão de navegação anônima ou privada, você pode abrir uma conexão com o servidor sem usar dados salvos de sessões de navegação anteriores.
 
 
+
+
+
+== Funcionalidade de bloqueio de início de sessão
+
+Configurável apenas através da API REST, você pode limitar o número de tentativas de login para os Serviços Web incorporados e proxy. Com base nas suas definições, a funcionalidade de bloqueio será ativada quando o número de tentativas de início de sessão para os Serviços Web for excedido.
+
+.Passos
+. Inicie sessão no link:install-login-task.html["Documentação interativa da API"].
+. Vá para o menu suspenso no canto superior direito e selecione *v2*.
+. Clique no endpoint *GET:/settings/lockout* para recuperar as configurações de bloqueio.
+. Clique no ponto final *POST:/settings/lockout* e, em seguida, clique em *Experimente* para configurar as definições de bloqueio.
+

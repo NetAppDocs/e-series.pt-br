@@ -36,7 +36,7 @@ Deve inserir a flange metálica na parte frontal da bateria na ranhura na parte 
 Quando a trava se encaixa no lugar, a parte inferior da trava se encaixa em uma ranhura metálica no chassi.
 
 +
-image::../media/28_dwg_e2800_insert_battery_maint-e2800.gif[28 dwg e2800 inserir manutenção da bateria e2800]
+image::../media/28_dwg_e2800_insert_battery_maint-e2800.gif[E2800 insira a bateria]
 
 +
 *(1)* _trava de liberação da bateria_
@@ -54,10 +54,10 @@ CAUTION: *Possíveis danos ao hardware* -- a flange metálica na parte frontal d
 
 
 +
-image:../media/28_dwg_e2800_battery_flange_ok_maint-e2800.gif[""]
+image:../media/28_dwg_e2800_battery_flange_ok_maint-e2800.gif["Encaixe correto da flange da bateria"]
 
 +
-** *Incorreto* -- a flange de metal da bateria não está inserida na ranhura do controlador image:../media/28_dwg_e2800_battery_flange_not_ok_maint-e2800.gif[""]
+** *Incorreto* -- a flange de metal da bateria não está inserida na ranhura do controlador image:../media/28_dwg_e2800_battery_flange_not_ok_maint-e2800.gif["Inserção incorreta da flange da bateria"]
 
 
 . Vá para link:batteries-reinstall-controller-canister-task.html["Volte a instalar o recipiente do controlador E2800"].

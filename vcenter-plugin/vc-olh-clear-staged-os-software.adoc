@@ -11,7 +11,7 @@ summary: Você pode remover o software de sistema operacional em estágios para 
 :nofooter: 
 :icons: font
 :linkattrs: 
-:imagesdir: ./media/
+:imagesdir: ../media/
 
 
 [role="lead"]

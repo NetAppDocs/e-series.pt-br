@@ -43,7 +43,7 @@ Se as instruções foram incluídas com o hardware de montagem em rack, consulte
 
 
  a| 
-image:../media/install_rails_inst-hw-ef600.png[""]
+image:../media/install_rails_inst-hw-ef600.png["Instale os trilhos"]
 
 |===
 . Instale a prateleira.
@@ -63,7 +63,7 @@ CAUTION: Ao instalar a prateleira, use um elevador de equipe com duas pessoas.
 
 
  a| 
-image:../media/install_ef600.png[""]
+image:../media/install_ef600.png["Instale a prateleira no armário com duas pessoas"]
 
 |===
 . Fixe a prateleira.
@@ -77,7 +77,7 @@ Para obter mais informações, link:../rackmount-hardware.html["Hardware de mont
 
 
  a| 
-image:../media/secure_shelf_inst-hw-ef600.png[""]
+image:../media/secure_shelf_inst-hw-ef600.png["Fixe a prateleira"]
 
 |===
 . Instale a placa frontal.
@@ -92,7 +92,7 @@ image:../media/secure_shelf_inst-hw-ef600.png[""]
 
 
  a| 
-image:../media/install_faceplate_2_0_inst-hw-ef600.png[""]
+image:../media/install_faceplate_2_0_inst-hw-ef600.png["Instale a placa frontal"]
 
 |===
 

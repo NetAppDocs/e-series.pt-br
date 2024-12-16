@@ -11,7 +11,7 @@ summary: Instale ou atualize o plug-in de armazenamento do SANtricity para vCent
 :nofooter: 
 :icons: font
 :linkattrs: 
-:imagesdir: ./media/
+:imagesdir: ../media/
 
 
 [role="lead"]

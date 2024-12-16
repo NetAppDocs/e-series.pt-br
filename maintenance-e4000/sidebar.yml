@@ -1,0 +1,44 @@
+---
+section: maintenance-e4000
+title: E4000
+entries:
+- title: Baterias
+  url: "/maintenance-e4000/replace-battery-e4000.html"
+- title: Controladores
+  entries:
+  - title: Considerações e requisitos
+    url: "/maintenance-e4000/replace-controller-requirements-e4000.html"
+  - title: Adicione o segundo recipiente do controlador
+    url: "/maintenance-e4000/replace-controller-second-e4000.html"
+  - title: Substitua o controlador
+    url: "/maintenance-e4000/replace-controller-e4000.html"
+- title: Canisters
+  entries:
+  - title: Substituição da fonte de alimentação (E4012)
+    url: "/maintenance-e4000/replace-power-supply.html"
+  - title: Substitua o recipiente de alimentação (E4060)
+    url: "/maintenance-e4000/replace-power-canister.html"
+  - title: Substitua o recipiente da ventoinha (E4060)
+    url: "/maintenance-e4000/replace-fan-canister.html"
+- title: DIMMs
+  url: "/maintenance-e4000/replace-dimms-e4000.html"
+- title: Unidades
+  entries:
+  - title: Considerações e requisitos
+    url: "/maintenance-e4000/replace-drive-e4000.html"
+  - title: Substitua a transmissão
+    entries:
+    - title: 12 ou 24 unidade
+      url: "/maintenance-e4000/replace-drives-12-24.html"
+    - title: 60 unidade
+      url: "/maintenance-e4000/replace-drives-60.html"
+  - title: Substitua a gaveta da unidade (4060)
+    url: "/maintenance-e4000/drive-drawer-60.html"
+  - title: Adicionar um compartimento de unidade a quente
+    url: "/maintenance-e4000/replace-drives-hotadd-drive-shelf.html"
+- title: Placas de interface do host
+  entries:
+  - title: Atualize HIC
+    url: "/maintenance-e4000/replace-hic-upgrade-e4000.html"
+  - title: Substituir HIC com falha
+    url: "/maintenance-e4000/replace-hic-e4000.html"

@@ -11,7 +11,7 @@ summary: O grupo de armazenamento define quais unidades fornecem o armazenamento
 :nofooter: 
 :icons: font
 :linkattrs: 
-:imagesdir: ./media/
+:imagesdir: ../media/
 
 
 [role="lead"]

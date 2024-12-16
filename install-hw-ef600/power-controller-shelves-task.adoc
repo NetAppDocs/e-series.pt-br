@@ -27,7 +27,7 @@ Certifique-se de fazer o seguinte:
 
 
  a| 
-image:../media/power_cable_inst-hw-ef600.png[""]
+image:../media/power_cable_inst-hw-ef600.png["Cabos de alimentação"]
  a| 
 *Cabos de alimentação*
 
@@ -37,7 +37,7 @@ image:../media/power_cable_inst-hw-ef600.png[""]
 
 
  a| 
-image:../media/cabling_power.png[""]
+image:../media/cabling_power.png["Cabeamento de alimentação EF600/EF300"]
 
 |===
 . Conete os dois cabos de alimentação, um de cada controlador, a duas unidades de distribuição de energia (PDUs) separadas no gabinete ou no rack.

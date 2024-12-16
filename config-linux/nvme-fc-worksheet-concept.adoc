@@ -19,7 +19,7 @@ Você pode gerar e imprimir um PDF desta página e, em seguida, usar a seguinte 
 
 Em uma topologia de conexão direta, um ou mais hosts são conetados diretamente ao controlador.
 
-image::../media/nvme_fc_direct_topology.png[topologia direta do nvme fc]
+image::../media/nvme_fc_direct_topology.png[Exemplo de topologia de conexão direta]
 
 * Host 1 HBA porta 1 e controlador A porta de host 1
 * Host 1 HBA porta 2 e controlador B porta de host 1
@@ -37,7 +37,7 @@ image::../media/nvme_fc_direct_topology.png[topologia direta do nvme fc]
 
 Em uma topologia de malha, um ou mais switches são usados. Consulte https://mysupport.netapp.com/matrix["Ferramenta de Matriz de interoperabilidade do NetApp"^] a para obter uma lista de comutadores suportados.
 
-image::../media/nvme_fc_fabric_topology.png[topologia da malha do nvme fc]
+image::../media/nvme_fc_fabric_topology.png[Exemplo de topologia de conexão de switch]
 
 
 

@@ -22,7 +22,7 @@ NOTE: Apenas as HICs iSCSI de 16GB GB/10Gb GB e as portas de base óticas em um 
 
 A figura a seguir mostra a parte traseira de um controlador E2800 que tem duas portas de host de placa base SFP (óticas) *(1)* e quatro portas HIC SFP (óticas) *(2)*.
 
-image::../media/28_dwg_e2800_optical_base_quad_sfp_hic.gif[28 dwg e2800 base ótica quad sfp hic]
+image::../media/28_dwg_e2800_optical_base_quad_sfp_hic.gif[Portas de host e HIC em um controlador E2800"]
 
 
 NOTE: Um HIC de duas portas também está disponível.
@@ -275,7 +275,7 @@ Antes e depois da conversão, o espelhamento ocorrerá na porta FC de maior núm
 Quando você aplica o pacote de recursos, o suporte de espelhamento passará da porta de host da placa base mais numerada (identificada como *1* na figura) para a porta HIC mais numerada (identificada como *2* na figura).
 
 +
-image::../media/28_dwg_e2800_fc_iscsi_to_fc.gif[28 dwg e2800 fc iscsi para fc]
+image::../media/28_dwg_e2800_fc_iscsi_to_fc.gif[Portas em um controlador E2800"]
 
 +
 |===

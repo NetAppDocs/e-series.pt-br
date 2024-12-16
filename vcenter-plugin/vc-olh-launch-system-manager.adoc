@@ -10,7 +10,7 @@ summary: Para gerenciar um único array, use a opção Iniciar para abrir o Syst
 :nofooter: 
 :icons: font
 :linkattrs: 
-:imagesdir: ./media/
+:imagesdir: ../media/
 
 
 [role="lead"]

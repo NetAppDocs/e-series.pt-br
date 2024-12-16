@@ -126,7 +126,7 @@ CAUTION: Para evitar um desempenho degradado, não torça, dobre, aperte ou pise
 O LED verde Cache ative na parte de trás do controlador fica aceso quando os dados em cache precisam ser gravados nas unidades. Tem de esperar que este LED se desligue antes de remover o recipiente do controlador.
 
 +
-image::../media/e5700_ib_hic_w_cache_led_callouts_maint-e5700.gif[e5700 ib hic w cache conduziu as anotações maint e5700]
+image::../media/e5700_ib_hic_w_cache_led_callouts_maint-e5700.gif[LED de cache ativo no controlador E5700]
 
 +
 *(1)* _Cache ative LED_
@@ -136,7 +136,7 @@ image::../media/e5700_ib_hic_w_cache_led_callouts_maint-e5700.gif[e5700 ib hic w
 A figura a seguir é um exemplo de um compartimento de controladora E5724:
 
 +
-image::../media/28_dwg_e2824_remove_controller_canister_maint-e5700.gif[28 dwg e2824 remover a manutenção do recipiente do controlador e5700]
+image::../media/28_dwg_e2824_remove_controller_canister_maint-e5700.gif[Remova o recipiente do controlador]
 
 +
 *(1)* _Controller canister_
@@ -148,7 +148,7 @@ image::../media/28_dwg_e2824_remove_controller_canister_maint-e5700.gif[28 dwg e
 A figura a seguir é um exemplo de um compartimento de controladora E5760:
 
 +
-image::../media/28_dwg_e2860_add_controller_canister_maint-e5700.gif[28 dwg e2860 adicionar o controlador canister manint e5700]
+image::../media/28_dwg_e2860_add_controller_canister_maint-e5700.gif[Remova o recipiente do controlador]
 
 +
 *(1)* _Controller canister_
@@ -185,7 +185,7 @@ CAUTION: *Possível perda de acesso a dados* -- nunca instale um HIC em um recip
 Se este LED verde estiver ligado, o controlador ainda está a utilizar a bateria. Deve aguardar que este LED se apague antes de remover quaisquer componentes.
 
 +
-image::../media/28_dwg_e2800_internal_cache_active_led_maint-e5700.gif[28 dwg e2800 cache interno ativo led mint e5700]
+image::../media/28_dwg_e2800_internal_cache_active_led_maint-e5700.gif[LED ativo de cache interno]
 
 +
 *(1)* _LED ativo Cache interno_
@@ -204,7 +204,7 @@ Tenha cuidado para não arranhar ou bater os componentes na parte inferior do HI
 CAUTION: * Possíveis danos ao equipamento * - tenha muito cuidado para não apertar o conetor de fita dourada para os LEDs do controlador entre o HIC e os parafusos de aperto manual.
 
 +
-image::../media/28_dwg_e2800_hic_thumbscrews_maint-e5700.gif[28 dwg e2800 hic parafusos de aperto manual e5700]
+image::../media/28_dwg_e2800_hic_thumbscrews_maint-e5700.gif[Instale o HIC na placa controladora]
 
 +
 *(1)* _placa de interface host_
@@ -218,7 +218,7 @@ Não utilize uma chave de fendas ou aperte demasiado os parafusos.
 
 . Utilizando uma chave de fendas Phillips nº 1, fixe a nova placa frontal HIC ao recipiente do controlador com os quatro parafusos removidos anteriormente.
 +
-image::../media/28_dwg_e2800_hic_faceplace_screws_maint-e5700.gif[28 dwg e2800 hic faceplace parafusos mint e5700]
+image::../media/28_dwg_e2800_hic_faceplace_screws_maint-e5700.gif[Instale a placa frontal no controlador]
 
 
 
@@ -235,7 +235,7 @@ Depois de instalar o HIC, reinstale o recipiente do controlador na prateleira do
 A figura a seguir é um exemplo de um compartimento de controladora E5724:
 
 +
-image::../media/28_dwg_e2824_remove_controller_canister_maint-e5700.gif[28 dwg e2824 remover a manutenção do recipiente do controlador e5700]
+image::../media/28_dwg_e2824_remove_controller_canister_maint-e5700.gif[Instale o recipiente do controlador]
 
 +
 *(1)* _Controller canister_
@@ -247,7 +247,7 @@ image::../media/28_dwg_e2824_remove_controller_canister_maint-e5700.gif[28 dwg e
 A figura a seguir é um exemplo de um compartimento de controladora E5760:
 
 +
-image::../media/28_dwg_e2860_add_controller_canister_maint-e5700.gif[28 dwg e2860 adicionar o controlador canister manint e5700]
+image::../media/28_dwg_e2860_add_controller_canister_maint-e5700.gif[Instale o recipiente do controlador]
 
 +
 *(1)* _Controller canister_
@@ -285,7 +285,7 @@ Quando a comunicação com o outro controlador é restabelecida:
 +
 ** O visor de sete segmentos mostra a sequência repetida *os*, *OL*, *_blank_* para indicar que o controlador está offline.
 ** O LED âmbar de atenção permanece aceso.
-** Os LEDs do Host Link podem estar ligados, piscando ou desligados, dependendo da interface do host. image:../media/e5700_hic_3_callouts_maint-e5700.gif[""]
+** Os LEDs do Host Link podem estar ligados, piscando ou desligados, dependendo da interface do host. image:../media/e5700_hic_3_callouts_maint-e5700.gif["E5700 LEDs do controlador\""]
 +
 *(1)* _Host Link LED_
 

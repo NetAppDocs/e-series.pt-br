@@ -22,7 +22,7 @@ NOTE: Apenas as portas da base ótica de um controlador E5700 podem ser converti
 
 A figura a seguir mostra o E5700 com suas portas de host de placa base SFP *(1)* e as duas portas HIC IB opcionais *(2)*.
 
-image::../media/e5700_with_2_port_100g_edr_infiniband_hic_w_callouts.gif[e5700 com 2 portas 100g edr infiniband hic w chamadas]
+image::../media/e5700_with_2_port_100g_edr_infiniband_hic_w_callouts.gif[Portas de host e HIC no controlador E5700]
 
 
 

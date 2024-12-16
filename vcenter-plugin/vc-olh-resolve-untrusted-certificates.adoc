@@ -11,7 +11,7 @@ summary: 'Resolva certificados não confiáveis importando um certificado auto-a
 :nofooter: 
 :icons: font
 :linkattrs: 
-:imagesdir: ./media/
+:imagesdir: ../media/
 
 
 [role="lead"]

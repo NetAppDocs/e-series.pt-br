@@ -1,0 +1,385 @@
+---
+permalink: maintenance-e4000/replace-hic-e4000.html 
+sidebar: sidebar 
+keywords:  
+summary:  
+---
+= Substitua o HIC em E4000
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Siga este procedimento para substituir uma placa de interface de host (HIC) com falha em um array E4000.
+
+.Sobre esta tarefa
+Quando você substitui um HIC com falha, você deve desligar o storage de armazenamento (simplex) ou colocar o controlador afetado offline (duplex), substituir o HIC e reaplicar a energia (simplex) ou colocar o controlador on-line (duplex).
+
+.Antes de começar
+* Se tiver uma configuração simplex, agende uma janela de manutenção de tempo de inatividade para este procedimento. Não é possível aceder aos dados na matriz de armazenamento até concluir com êxito este procedimento.
+* Certifique-se de que tem o seguinte:
++
+** Placas de rede compatíveis com o(s) seu(s) controlador(es).
+** Uma pulseira antiestática, ou você tomou outras precauções antiestáticas.
+** Uma área de trabalho plana e estática livre.
+** Etiquetas para identificar cada cabo que está ligado ao recipiente do controlador.
+** Uma chave de fendas Phillips nº 1.
+** Uma estação de gerenciamento com um navegador que pode acessar o Gerenciador de sistema do SANtricity para o controlador. (Para abrir a interface do System Manager, aponte o navegador para o nome de domínio ou endereço IP do controlador.)
++
+
+CAUTION: *Possível perda de acesso a dados* -- nunca instale um HIC em um recipiente de controlador E4000 se esse HIC foi projetado para outro controlador e-Series. Além disso, ambos os controladores e ambos HICs devem ser idênticos em uma configuração duplex. A presença de HICs incompatíveis ou incompatíveis faz com que os controladores bloqueiem quando você aplica energia.
+
+
+
+
+
+
+
+== Passo 1: Prepare-se para substituir o HIC
+
+Desligue o compartimento do controlador (simplex) ou coloque o controlador afetado offline (duplex) para que possa substituir as HICs com segurança.
+
+[role="tabbed-block"]
+====
+.Desligue o compartimento do controlador (simplex)
+--
+.Passos
+. Se possível, anote qual versão do software SANtricity os está atualmente instalada no controlador. Abra o Gerenciador de sistema do SANtricity e selecione *suporte
+. Se o recurso Segurança da unidade estiver ativado, verifique se existe uma chave salva e se você sabe a frase-passe necessária para instalá-la.
++
+
+CAUTION: *Possível perda de acesso a dados* – se todas as unidades do storage estiverem habilitadas para segurança, o novo controlador não poderá acessar o storage até que você desbloqueie as unidades protegidas usando a janela Gerenciamento Empresarial no SANtricity Storage Manager.
+
++
+Para salvar a chave (pode não ser possível, dependendo do estado do controlador):
+
++
+.. No Gerenciador do sistema SANtricity, selecione *Configurações do sistema*.
+.. Em *Gerenciamento de chaves de segurança*, selecione *Backup Key*.
+.. Nos campos *Definir uma frase-passe/voltar a introduzir frase-passe*, introduza e confirme uma frase-passe para esta cópia de segurança.
+.. Clique em *Backup*.
+.. Grave suas informações chave em um local seguro e clique em *Fechar*.
+
+
+. Faça backup do banco de dados de configuração do storage usando o Gerenciador de sistema do SANtricity.
++
+Se ocorrer um problema ao remover um controlador, pode utilizar o ficheiro guardado para restaurar a configuração. O sistema salvará o estado atual do banco de dados de configuração RAID, que inclui todos os dados para grupos de volume e pools de discos na controladora.
+
++
+** Do System Manager:
++
+... *Selecione suporte
+... Selecione *Collect Configuration Data*.
+... Clique em *Collect*.
++
+O arquivo é salvo na pasta Downloads do seu navegador com o nome *configurationData-<arrayName>-<dateTime>.7z*.
+
+
+
+** Como alternativa, você pode fazer backup do banco de dados de configuração usando o seguinte comando CLI:
++
+`save storageArray dbmDatabase sourceLocation=onboard contentType=all file="filename";`
+
+
+
+. Colete dados de suporte para sua matriz de armazenamento usando o Gerenciador de sistema do SANtricity.
++
+Se ocorrer um problema ao remover um controlador, você pode usar o arquivo salvo para solucionar o problema. O sistema salvará os dados de inventário, status e desempenho sobre seu storage array em um único arquivo.
+
++
+.. *Selecione suporte
+.. Selecione *coletar dados de suporte*.
+.. Clique em *Collect*.
++
+O arquivo é salvo na pasta Downloads do seu navegador com o nome *support-data.7z*.
+
+
+
+. Certifique-se de que nenhuma operação de e/S esteja ocorrendo entre o storage array e todos os hosts conectados. Por exemplo, você pode executar estas etapas:
++
+** Parar todos os processos que envolvem os LUNs mapeados do armazenamento para os hosts.
+** Garantir que nenhuma aplicação esteja gravando dados em LUNs mapeados do storage para os hosts.
+** Desmonte todos os sistemas de arquivos associados a volumes no array.
++
+
+NOTE: As etapas exatas para interromper as operações de e/S do host dependem do sistema operacional do host e da configuração, que estão além do escopo dessas instruções. Se você não tiver certeza de como interromper as operações de e/S do host em seu ambiente, considere encerrar o host.
+
++
+
+CAUTION: *Possível perda de dados* – se você continuar este procedimento enquanto as operações de e/S estão ocorrendo, você pode perder dados.
+
+
+
+. Aguarde até que quaisquer dados na memória cache sejam gravados nas unidades.
++
+O LED verde Cache ative na parte de trás do controlador fica aceso quando os dados em cache precisam ser gravados nas unidades. Tem de esperar que este LED se desligue.
+
+. Na página inicial do Gerenciador do sistema do SANtricity, selecione *Exibir operações em andamento*.
+. Confirme se todas as operações foram concluídas antes de continuar com a próxima etapa.
+. Desligue ambos os interruptores de energia no compartimento do controlador.
+. Aguarde que todos os LEDs na prateleira do controlador se desliguem.
+. Selecione *Reverifique* no Recovery Guru e confirme se o campo *OK para remover* na área Detalhes exibe *Sim*, indicando que é seguro remover este componente. Os dados na matriz de armazenamento não estarão acessíveis até que você substitua o recipiente do controlador.
+
+
+--
+.Colocar o controlador offline (duplex)
+--
+.Passos
+. Desembale o novo recipiente do controlador e coloque-o numa superfície plana e livre de estática.
++
+Guarde os materiais de embalagem a utilizar ao enviar o recipiente do controlador avariado.
+
+. Localize o endereço MAC e as etiquetas de número de peça FRU na parte traseira do recipiente do controlador.
+. No Gerenciador do sistema do SANtricity, localize o número de peça de substituição do recipiente do controlador que você está substituindo.
++
+Quando um controlador tem uma falha e precisa ser substituído, o número de peça de substituição é exibido na área Detalhes do Recovery Guru. Se você precisar encontrar esse número manualmente, siga estas etapas:
+
++
+.. Selecione *hardware*.
+.. Localize o compartimento do controlador, que está marcado com o ícone do controlador.
+.. Clique no ícone do controlador.
+.. Selecione o controlador e clique em *seguinte*.
+.. No separador *base*, anote o *número de peça de substituição* para o controlador.
+
+
+. Confirme se o número de peça de substituição para o controlador com falha é o mesmo que o número de peça FRU para o controlador de substituição.
++
+
+CAUTION: *Possível perda de acesso aos dados* – se os dois números de peça não forem os mesmos, não tente este procedimento. A presença de controladores incompatíveis fará com que o novo controlador fique bloqueado quando você o colocar on-line.
+
+. Faça backup do banco de dados de configuração do storage usando o Gerenciador de sistema do SANtricity.
++
+Se ocorrer um problema ao remover um controlador, pode utilizar o ficheiro guardado para restaurar a configuração. O sistema salvará o estado atual do banco de dados de configuração RAID, que inclui todos os dados para grupos de volume e pools de discos na controladora.
+
++
+** Do System Manager:
++
+... Selecione *suporte
+... Selecione *Collect Configuration Data*.
+... Clique em *Collect*.
++
+O arquivo é salvo na pasta Downloads do seu navegador com o nome *configurationData-<arrayName>-<dateTime>.7z*.
+
+
+
+** Como alternativa, você pode fazer backup do banco de dados de configuração usando o seguinte comando CLI:
++
+[listing]
+----
+save storageArray dbmDatabase sourceLocation=onboard contentType=all file="filename";
+----
+
+
+. Se o controlador ainda não estiver offline, coloque-o offline agora usando o Gerenciador de sistema do SANtricity.
++
+** A partir do SANtricity System Manager:
++
+... Selecione *hardware*.
+... Se o gráfico mostrar as unidades, selecione *Mostrar parte traseira da prateleira* para mostrar os controladores.
+... Selecione o controlador que pretende colocar offline.
+... No menu de contexto, selecione *colocar offline* e confirme que deseja executar a operação.
++
+
+NOTE: Se você estiver acessando o Gerenciador de sistema do SANtricity usando o controlador que você está tentando ficar offline, uma mensagem Gerenciador de sistema do SANtricity indisponível será exibida. Selecione conetar a uma conexão de rede alternativa para acessar automaticamente o Gerenciador de sistema do SANtricity usando o outro controlador.
+
+
+
+** Como alternativa, você pode colocar os controladores offline usando os seguintes comandos CLI:
++
+*Para o controlador A*: `set controller [a] availability=offline`
+
++
+*Para o controlador B*: `set controller [b] availability=offline`
+
+
+
+. Aguarde até que o Gerenciador de sistema do SANtricity atualize o status do controlador para offline.
++
+
+CAUTION: Não inicie quaisquer outras operações até que o estado tenha sido atualizado.
+
+. Selecione *Reverifique* no Recovery Guru e confirme se o campo *OK para remover* na área Detalhes exibe *Sim*, indicando que é seguro remover este componente.
+
+
+--
+====
+
+
+== Etapa 2: Remova o recipiente do controlador
+
+Retire o recipiente do controlador do sistema e, em seguida, retire a tampa do recipiente do controlador.
+
+.Passos
+. Se você ainda não está aterrado, aterre-se adequadamente.
+. Solte o gancho e a alça de loop que prendem os cabos ao dispositivo de gerenciamento de cabos e, em seguida, desconete os cabos do sistema e os SFPs (se necessário) do recipiente do controlador, mantendo o controle de onde os cabos estavam conetados.
++
+Deixe os cabos no dispositivo de gerenciamento de cabos para que, ao reinstalar o dispositivo de gerenciamento de cabos, os cabos sejam organizados.
+
+. Remova e reserve os dispositivos de gerenciamento de cabos dos lados esquerdo e direito do recipiente do controlador.
+. Aperte o trinco na pega do excêntrico até que este se solte, abra totalmente a pega do excêntrico para libertar o recipiente do controlador do plano médio e, em seguida, utilizando duas mãos, puxe o recipiente do controlador para fora do chassis.
+. Vire o recipiente do controlador e coloque-o numa superfície plana e estável.
+. Abra a tampa pressionando os botões azuis nas laterais do recipiente do controlador para soltar a tampa e, em seguida, gire a tampa para cima e para fora do recipiente do controlador.
++
+image::../media/drw_E4000_open_controller_module_cover_IEOPS-870.png[Abra a tampa do recipiente do controlador.]
+
+
+
+
+
+== Passo 3: Substitua o HIC
+
+Substitua o HIC.
+
+.Passos
+. Se você ainda não está aterrado, aterre-se adequadamente.
+. Retire o HIC:
++
+image::../media/drw_E4000_replace_HIC_source_IEOPS-864.png[Remova o HIC e a placa frontal.]
+
++
+.. Retire a placa frontal do HIC deslizando-a diretamente para fora do módulo do controlador.
+.. Desaperte os parafusos de aperto manual do HIC e levante-os para cima.
+
+
+. Reinstale o HIC:
++
+.. Alinhe o soquete na tomada HIC de substituição com o soquete na placa-mãe e, em seguida, encaixe suavemente a placa diretamente no soquete.
+.. Aperte os três parafusos de aperto manual no HIC.
+.. Volte a instalar a placa frontal do HIC.
+
+
+. Volte a instalar a tampa do módulo do controlador e bloqueie-a no lugar.
+
+
+
+
+== Etapa 4: Reinstale o recipiente do controlador
+
+Volte a instalar o recipiente do controlador no chassis.
+
+.Passos
+. Se você ainda não está aterrado, aterre-se adequadamente.
+. Se ainda não o tiver feito, substitua a tampa no recipiente do controlador.
+. Vire o recipiente do controlador ao contrário e alinhe a extremidade com a abertura no chassis.
+. Empurre cuidadosamente o recipiente do controlador até meio para o sistema. Alinhe a extremidade do recipiente do controlador com a abertura no chassis e, em seguida, empurre cuidadosamente o recipiente do controlador até meio do sistema.
++
+
+NOTE: Não introduza completamente o recipiente do controlador no chassis até receber instruções para o fazer.
+
+. Recable o sistema, conforme necessário.
++
+Se você removeu os conversores de Mídia (QSFPs ou SFPs), lembre-se de reinstalá-los se você estiver usando cabos de fibra ótica.
+
+. Conclua a reinstalação do recipiente do controlador:
++
+.. Com a alavanca do came na posição aberta, empurre firmemente o recipiente do controlador até que ele atenda ao plano médio e esteja totalmente assentado e feche a alça do came para a posição travada.
++
+
+NOTE: Não utilize força excessiva ao deslizar o recipiente do controlador para o chassis para evitar danificar os conetores.
+
++
+Se você tiver uma configuração duplex, o controlador começará a inicializar assim que estiver sentado no chassi.
+
+.. Se ainda não o tiver feito, reinstale o dispositivo de gerenciamento de cabos.
+.. Prenda os cabos ao dispositivo de gerenciamento de cabos com o gancho e a alça de loop.
+
+
+
+
+
+
+== Passo 5: Substituição completa do HIC
+
+Ligue o controlador (simplex) ou coloque o controlador online (duplex), recolha dados de suporte e retome as operações.
+
+[role="tabbed-block"]
+====
+.Controlador de ativação (simplex)
+--
+.Passos
+. Ligue os dois interruptores de energia na parte de trás do compartimento do controlador.
++
+** Não desligue os interruptores de energia durante o processo de ativação, que normalmente leva 90 segundos ou menos para ser concluído.
+** Os ventiladores em cada prateleira são muito altos quando eles começam a funcionar. O ruído alto durante o arranque é normal.
+
+
+. Quando o controlador estiver novamente online, verifique os LEDs de atenção do compartimento do controlador.
++
+Se o estado não for o ideal ou se algum dos LEDs de atenção estiver aceso, confirme se todos os cabos estão corretamente encaixados e verifique se a bateria e o recipiente do controlador estão instalados corretamente. Se necessário, retire e volte a instalar o recipiente do controlador e a bateria.
+
++
+
+NOTE: Se não conseguir resolver o problema, contacte o suporte técnico. Se necessário, colete dados de suporte para seu storage array usando o Gerenciador de sistema do SANtricity.
+
+. Colete dados de suporte para sua matriz de armazenamento usando o Gerenciador de sistema do SANtricity.
++
+.. Selecione *suporte
+.. Selecione coletar dados de suporte.
+.. Clique em coletar.
++
+O arquivo é salvo na pasta Downloads do seu navegador com o nome *support-data.7z*.
+
+
+
+
+
+--
+.Colocar o controlador online (duplex)
+--
+.Passos
+. Coloque o controlador on-line usando o Gerenciador de sistema do SANtricity.
++
+** A partir do SANtricity System Manager:
++
+... Selecione *hardware*.
+... Se o gráfico mostrar as unidades, selecione *Mostrar parte traseira da prateleira*.
+... Selecione o controlador que pretende colocar online.
+... Selecione *Place Online* no menu de contexto e confirme que deseja executar a operação.
++
+O sistema coloca o controlador online.
+
+
+
+** Como alternativa, você pode colocar o controlador novamente online usando os seguintes comandos CLI:
++
+*Para o controlador A*: `set controller [a] availability=online`;
+
++
+*Para o controlador B*: `set controller [b] availability=online`;
+
+
+
+. Quando o controlador estiver novamente online, verifique os LEDs de atenção do compartimento do controlador.
++
+Se o estado não for o ideal ou se algum dos LEDs de atenção estiver aceso, confirme se todos os cabos estão corretamente encaixados e verifique se a bateria e o recipiente do controlador estão instalados corretamente. Se necessário, retire e volte a instalar o recipiente do controlador e a bateria.
+
++
+
+NOTE: Se não conseguir resolver o problema, contacte o suporte técnico. Se necessário, colete dados de suporte para seu storage array usando o Gerenciador de sistema do SANtricity.
+
+. Verifique se todos os volumes foram devolvidos ao proprietário preferido.
++
+.. Selecione *armazenamento de volumes*. Na página *todos os volumes*, verifique se os volumes são distribuídos aos seus proprietários preferidos. Selecione *mais
+.. Se todos os volumes forem propriedade do proprietário preferido, avance para o passo 5.
+.. Se nenhum dos volumes for retornado, você deverá retornar manualmente os volumes. Vá para *mais
+.. Se apenas alguns dos volumes forem devolvidos aos seus proprietários preferidos após a distribuição automática ou manual, você deve verificar o Recovery Guru para problemas de conetividade do host.
+.. Se não houver Guru de recuperação presente ou se depois de seguir as etapas do guru de recuperação os volumes ainda não forem devolvidos aos seus proprietários preferidos, entre em Contato com o suporte.
+
+
+. Colete dados de suporte para sua matriz de armazenamento usando o Gerenciador de sistema do SANtricity.
++
+.. Selecione *suporte
+.. Selecione coletar dados de suporte.
+.. Clique em coletar.
++
+O arquivo é salvo na pasta Downloads do seu navegador com o nome *support-data.7z*.
+
+
+
+
+
+--
+====
+.O que se segue?
+A substituição da placa de interface do host está concluída. Pode retomar as operações normais.

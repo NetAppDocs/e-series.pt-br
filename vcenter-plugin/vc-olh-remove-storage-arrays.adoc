@@ -11,7 +11,7 @@ summary: Remova um ou mais arrays de armazenamento se você não quiser mais ger
 :nofooter: 
 :icons: font
 :linkattrs: 
-:imagesdir: ./media/
+:imagesdir: ../media/
 
 
 [role="lead"]

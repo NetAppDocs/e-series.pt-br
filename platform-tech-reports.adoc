@@ -6,7 +6,12 @@ summary: Relatórios técnicos do e-Series
 ---
 = Navegue pelos relatórios técnicos da plataforma
 :allow-uri-read: 
+:icons: font
+:imagesdir: ./media/
 
+
+[role="lead"]
+Confira os links abaixo para acessar relatórios técnicos relacionados às plataformas e-Series. Os links levam você a um site de documentação diferente.
 
 
 
@@ -28,8 +33,8 @@ summary: Relatórios técnicos do e-Series
 |  |  |  
 
 
-| https://www.netapp.com/pdf.html?item=/media/17009-tr4800pdf.pdf["*TR-4800: Visão geral dos storages EF600*"] |  |  
+| https://www.netapp.com/pdf.html?item=/media/17009-tr4800pdf.pdf["*TR-4800: Visão geral dos storages EF600*"] | https://www.netapp.com/pdf.html?item=/media/116236-tr-5001-intro-to-netapp-e4000-arrays-with-santricity.pdf["*TR-5001: Visão geral dos storages E4000*"^] |  
 
 
-| Descreve os recursos de hardware e software do array all-flash EF600 e os novos recursos do SANtricity os. |  |  
+| Descreve os recursos de hardware e software do array all-flash EF600 e os novos recursos do SANtricity os. | Descreve os recursos de hardware e software do array híbrido E4000 e os recursos mais recentes do SANtricity os. |  
 |===

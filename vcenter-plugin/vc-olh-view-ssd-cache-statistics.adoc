@@ -11,7 +11,7 @@ summary: Exibir estatísticas do cache SSD, como leituras, gravações, acertos 
 :nofooter: 
 :icons: font
 :linkattrs: 
-:imagesdir: ./media/
+:imagesdir: ../media/
 
 
 [role="lead"]

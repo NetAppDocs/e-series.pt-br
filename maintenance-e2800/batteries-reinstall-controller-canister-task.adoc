@@ -18,7 +18,7 @@ Reinstale o recipiente do controlador na prateleira do controlador depois de ins
 . Vire o recipiente do controlador ao contrário, de forma a que a tampa amovível fique virada para baixo.
 . Com a alavanca do came na posição aberta, deslize o recipiente do controlador até a prateleira do controlador.
 +
-image::../media/28_dwg_e2824_remove_controller_canister_maint-e2800.gif[28 dwg e2824 remover a manutenção do recipiente do controlador e2800]
+image::../media/28_dwg_e2824_remove_controller_canister_maint-e2800.gif[reinstalação do controlador da unidade 24]
 
 +
 *(1)* _Controller canister_
@@ -27,7 +27,7 @@ image::../media/28_dwg_e2824_remove_controller_canister_maint-e2800.gif[28 dwg e
 *(2)* _pega da câmara_
 
 +
-image::../media/28_dwg_e2860_add_controller_canister_maint-e2800.gif[28 dwg e2860 adicionar o controlador canister manint e2800]
+image::../media/28_dwg_e2860_add_controller_canister_maint-e2800.gif[reinstalação do controlador da unidade 60]
 
 +
 *(1)* _Controller canister_

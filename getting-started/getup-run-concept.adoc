@@ -1,7 +1,7 @@
 ---
 permalink: getting-started/getup-run-concept.html 
 sidebar: sidebar 
-keywords: E-Series, eseries, E2800, E5700, EF300, EF600, 
+keywords: E-Series, eseries, E2800, E5700, EF300, EF600, E4000 
 summary: Para começar a trabalhar com sistemas e-Series, você instala componentes de hardware, configura sistemas host e configura o storage. 
 ---
 = Início rápido para e-Series
@@ -21,6 +21,7 @@ Para instalar o hardware e-Series, acesse as instruções de instalação e conf
 * link:../install-hw-ef600/index.html["Séries EF600 ou EF300 com compartimento de 24 unidades"^]
 * https://library.netapp.com/ecm/ecm_download_file/ECMLP2842063["Série E2800/EF280 ou E5700/EF570 com compartimentos de 12 ou 24 unidades"^]
 * https://library.netapp.com/ecm/ecm_download_file/ECMLP2842061["Séries E2800 ou E5700 com compartimento de 60 unidades"^]
+* link:../install-hw-e4000/index.html["Série E4000 com compartimento de 12 ou 60 unidades"^]
 
 
 .image:https://raw.githubusercontent.com/NetAppDocs/common/main/media/number-2.png["Dois"] Configure o gabinete

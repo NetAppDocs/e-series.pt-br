@@ -39,7 +39,7 @@ Confirme se o novo controlador tem o mesmo número de peça que o controlador at
 . Desembale o novo recipiente do controlador e coloque-o numa superfície plana e livre de estática.
 . Localize o endereço MAC e as etiquetas de número de peça FRU na parte traseira do recipiente do controlador.
 +
-image::../media/28_dwg_e2800_labels_maint-e2800.gif[28 dwg e2800 rótulos mint e2800]
+image::../media/28_dwg_e2800_labels_maint-e2800.gif[Endereço MAC e número de peça FRU no controlador E2800]
 
 +
 *(1)* _Endereço MAC:_ o endereço MAC da porta de gerenciamento 1 ("'P1'"). Se você usou DHCP para obter o endereço IP do controlador original, precisará desse endereço para se conetar ao novo controlador.
@@ -50,7 +50,7 @@ image::../media/28_dwg_e2800_labels_maint-e2800.gif[28 dwg e2800 rótulos mint e
 . A partir do Gerenciador do sistema SANtricity, localize o número de peça de substituição para o recipiente do controlador instalado.
 +
 .. Selecione *hardware*.
-.. Localize o compartimento do controlador, que está marcado com o ícone do controlador image:../media/sam1130_ss_hardware_controller_icon_maint-e2800.gif[""].
+.. Localize o compartimento do controlador, que está marcado com o ícone do controlador image:../media/sam1130_ss_hardware_controller_icon_maint-e2800.gif["Ícone do controlador"].
 .. Clique no ícone do controlador.
 .. Selecione o controlador e clique em *seguinte*.
 .. No separador *base*, anote o *número de peça de substituição* para o controlador.
@@ -88,7 +88,7 @@ Tenha cuidado para não arranhar ou bater os componentes na parte inferior do HI
 CAUTION: * Possíveis danos ao equipamento * - tenha muito cuidado para não apertar o conetor de fita dourada para os LEDs do controlador entre o HIC e os parafusos de aperto manual.
 
 +
-image::../media/28_dwg_e2800_hic_thumbscrews_maint-e2800.gif[28 dwg e2800 hic parafusos de aperto manual e2800]
+image::../media/28_dwg_e2800_hic_thumbscrews_maint-e2800.gif[Instale o HIC no controlador]
 
 +
 *(1)* _placa de interface host_
@@ -102,7 +102,7 @@ Não use uma chave de fenda, ou você pode apertar demais os parafusos.
 
 . Utilizando uma chave de fendas Phillips nº 1, fixe a nova placa frontal HIC ao recipiente do controlador com os quatro parafusos removidos anteriormente.
 +
-image::../media/28_dwg_e2800_hic_faceplace_screws_maint-e2800.gif[28 dwg e2800 hic faceplace parafusos mint e2800]
+image::../media/28_dwg_e2800_hic_faceplace_screws_maint-e2800.gif[Instale a placa frontal]
 
 . Volte a instalar a tampa no recipiente do controlador deslizando a tampa de trás para a frente até o botão clicar.
 . Coloque o recipiente do controlador de lado até que esteja pronto para instalá-lo.
@@ -286,7 +286,7 @@ Instale um segundo recipiente do controlador para alterar uma configuração sim
 . Vire o recipiente do controlador ao contrário, de forma a que a tampa amovível fique virada para baixo.
 . Com a alavanca do came na posição aberta, deslize o recipiente do controlador até a prateleira do controlador.
 +
-image::../media/28_dwg_e2824_add_controller_canister.gif[28 dwg e2824 adicionar recipiente de controlador]
+image::../media/28_dwg_e2824_add_controller_canister.gif[Instale o segundo recipiente do controlador]
 
 +
 *(1)* _Controller canister_
@@ -312,7 +312,7 @@ Quando a comunicação com o outro controlador é restabelecida:
 +
 ** O visor de sete segmentos mostra a sequência repetida *os*, *OL*, *_blank_* para indicar que o controlador está offline.
 ** O LED âmbar de atenção permanece aceso.
-** Os LEDs do Host Link podem estar ligados, piscando ou desligados, dependendo da interface do host. image:../media/28_dwg_attn_led_7s_display_maint-e2800.gif[""]
+** Os LEDs do Host Link podem estar ligados, piscando ou desligados, dependendo da interface do host. image:../media/28_dwg_attn_led_7s_display_maint-e2800.gif["E2800 LEDs do controlador"]
 +
 *(1)* _LED de atenção (âmbar)_
 
@@ -380,7 +380,7 @@ O botão alterar propriedade está ativado.
 
 .. Para cada volume que você deseja redistribuir, selecione *controlador B* na lista *proprietário preferido*.
 +
-image::../media/sam1130_ss_change_volume_ownership.gif[sam1130 ss alterar a propriedade do volume]
+image::../media/sam1130_ss_change_volume_ownership.gif[Ecrã System Manager (Gestor do sistema) para alterar a propriedade do volume]
 
 .. Clique em *alterar propriedade*.
 +

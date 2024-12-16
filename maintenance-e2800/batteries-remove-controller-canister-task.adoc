@@ -37,7 +37,7 @@ CAUTION: Para evitar um desempenho degradado, não torça, dobre, aperte ou pise
 A figura a seguir é um exemplo de um compartimento de controladora E2812, compartimento de controladora E2824 ou array Flash EF280:
 
 +
-image::../media/28_dwg_e2824_remove_controller_canister_maint-e2800.gif[28 dwg e2824 remover a manutenção do recipiente do controlador e2800]
+image::../media/28_dwg_e2824_remove_controller_canister_maint-e2800.gif[reinstalação do controlador da unidade 24]
 
 +
 *(1)* _Controller canister_
@@ -49,7 +49,7 @@ image::../media/28_dwg_e2824_remove_controller_canister_maint-e2800.gif[28 dwg e
 A figura a seguir é um exemplo de um compartimento de controladora E2860:
 
 +
-image::../media/28_dwg_e2860_add_controller_canister_maint-e2800.gif[28 dwg e2860 adicionar o controlador canister manint e2800]
+image::../media/28_dwg_e2860_add_controller_canister_maint-e2800.gif[reinstalação do controlador da unidade 60]
 
 +
 *(1)* _Controller canister_

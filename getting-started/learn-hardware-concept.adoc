@@ -1,7 +1,7 @@
 ---
 permalink: getting-started/learn-hardware-concept.html 
 sidebar: sidebar 
-keywords: E-Series, eseries, E2800, E5700, EF300, EF600, hardware, all flash array, E-Series protocols, E-Series rack 
+keywords: E-Series, eseries, E4000, E2800, E5700, EF300, EF600, hardware, all flash array, E-Series protocols, E-Series rack 
 summary: Os storage arrays e-Series estão disponíveis em várias configurações e modelos. 
 ---
 = Visão geral do hardware e-Series
@@ -20,6 +20,7 @@ Os arrays e-Series estão disponíveis nos seguintes modelos:
 * Série E2800 -- híbrido de nível básico
 * Série EF280 -- all flash de nível de entrada
 * Série EF300 -- all-flash de nível de entrada, All NVMe
+* Série E4000 -- híbrido de nível básico
 * Série E5700 -- híbrido midrange
 * Série EF570 -- all flash midrange
 * Série EF600 -- all-flash midrange, All NVMe
@@ -28,34 +29,28 @@ Os arrays e-Series estão disponíveis nos seguintes modelos:
 
 NOTE: Para o SANtricity os 11,80GA e posterior, todas as portas USB são desativadas nos storages E2800, EF280, E5700, EF570, EF600 e EF300.
 
-
-
-== Modelos E2800D.
-
-[cols="35h,~"]
-|===
-| Componente | Especificação 
-
-
- a| 
-Tamanhos de rack:
- a| 
+[role="tabbed-block"]
+====
+.Modelos E2800D.
+--
+Tamanhos de rack::
++
+--
 * 2U12 (2 unidades de rack; 12 unidades)
 * 2U24 (2 unidades de rack; 24 unidades)
 +
-image::../media/e2800_2u_front.gif[e2800 2u dianteira]
+image::../media/e2800_2u_front.gif[E2800 2U]
 
 * 4U60 (4 unidades de rack; 60 unidades)
 +
-image::../media/e2860_front.gif[e2860 dianteira]
+image::../media/e2860_front.gif["E2800 4U']
 
 
 
-
-
- a| 
-Unidades:
- a| 
+--
+Unidades::
++
+--
 Suporta os seguintes tipos de unidade:
 
 * NL-SAS de 3,5" (até 180 TB)
@@ -63,11 +58,10 @@ Suporta os seguintes tipos de unidade:
 * HDD SAS de 2,5" (até 180 GB)
 
 
-
-
- a| 
-Interfaces:
- a| 
+--
+Interfaces::
++
+--
 Disponível com as seguintes interfaces:
 
 * 12Gb SAS
@@ -75,33 +69,29 @@ Disponível com as seguintes interfaces:
 * Fibre Channel de 16GB GB ou 32GB GB
 
 
-|===
+--
 
 
-== Modelos EF280D.
+--
+.Modelos EF280D.
+--
+Tamanhos de rack::
++
+--
+2U24 (2 unidades de rack; 24 unidades)
 
-[cols="35h,~"]
-|===
-| Componente | Especificação 
+image:../media/ef570_front.gif["EF280 2U"]
 
-
- a| 
-Tamanhos de rack:
- a| 
-2U24 (2 unidades de rack; 24 unidades)image:../media/ef570_front.gif[""]
-
-
-
- a| 
-Unidades:
- a| 
+--
+Unidades::
++
+--
 Suporta até 96 unidades SSD de 2,5"
 
-
-
- a| 
-Interfaces:
- a| 
+--
+Interfaces::
++
+--
 Disponível com as seguintes interfaces:
 
 * 12Gb SAS
@@ -109,26 +99,23 @@ Disponível com as seguintes interfaces:
 * Fibre Channel de 16GB GB ou 32GB GB
 
 
-|===
+--
 
 
-== Modelos EF300D.
+--
+.Modelos EF300D.
+--
+Tamanhos de rack::
++
+--
+2U24 (2 unidades de rack; 24 unidades)
 
-[cols="35h,~"]
-|===
-| Componente | Especificação 
+image:../media/ef570_front.gif["EF300 2U"]
 
-
- a| 
-Tamanhos de rack:
- a| 
-2U24 (2 unidades de rack; 24 unidades)image:../media/ef570_front.gif[""]
-
-
-
- a| 
-Unidades e HICs:
- a| 
+--
+Unidades e HICs::
++
+--
 Suporta as seguintes unidades com uma única placa de interface de host (HIC) por controlador:
 
 * Unidades SSD NVMe: Até 24 unidades SSD NVMe no compartimento da controladora.
@@ -139,11 +126,10 @@ Suporta as seguintes unidades com uma única placa de interface de host (HIC) po
 
 NOTE: Para o SANtricity os 11,80GA e posterior, o EF300 é compatível com configurações de compartimento de expansão sem unidades na bandeja de base Ao usar essa configuração, verifique se as unidades estão preenchidas no compartimento de expansão e conetadas corretamente à bandeja de base antes de ligar o sistema.
 
-
-
- a| 
-Interfaces:
- a| 
+--
+Interfaces::
++
+--
 Disponível com as seguintes interfaces:
 
 * ISCSI de 25GB GB
@@ -155,34 +141,29 @@ Disponível com as seguintes interfaces:
 * NVMe/RoCE de 100GB GbE
 
 
-|===
+--
 
 
-== Modelos E5700D.
-
-[cols="35h,~"]
-|===
-| Componente | Especificação 
-
-
- a| 
-Tamanhos de rack:
- a| 
+--
+.Modelos E5700D.
+--
+Tamanhos de rack::
++
+--
 * 2U24 (2 unidades de rack; 24 unidades)
 +
-image::../media/e2800_2u_front.gif[e2800 2u dianteira]
+image::../media/e2800_2u_front.gif[E5700 2U]
 
 * 4U60 (4 unidades de rack; 60 unidades)
 +
-image::../media/e2860_front.gif[e2860 dianteira]
+image::../media/e2860_front.gif[E5700 4U]
 
 
 
-
-
- a| 
-Unidades:
- a| 
+--
+Unidades::
++
+--
 Suporta até 480 dos seguintes tipos de unidade:
 
 * Unidades NL-SAS de 3,5"
@@ -190,11 +171,10 @@ Suporta até 480 dos seguintes tipos de unidade:
 * Unidades HDD SAS de 2,5"
 
 
-
-
- a| 
-Interfaces:
- a| 
+--
+Interfaces::
++
+--
 Disponível com as seguintes interfaces:
 
 * 12Gb SAS
@@ -207,33 +187,29 @@ Disponível com as seguintes interfaces:
 * NVMe/RoCE de 100GB GbE
 
 
-|===
+--
 
 
-== Modelos EF570D.
+--
+.Modelos EF570D.
+--
+Tamanhos de rack::
++
+--
+2U24 (2 unidades de rack; 24 unidades)
 
-[cols="35h,~"]
-|===
-| Componente | Especificação 
+image:../media/ef570_front.gif["EF570 2U"]
 
-
- a| 
-Tamanhos de rack:
- a| 
-2U24 (2 unidades de rack; 24 unidades)image:../media/ef570_front.gif[""]
-
-
-
- a| 
-Unidades:
- a| 
+--
+Unidades::
++
+--
 Suporta até 120 unidades SSD de 2,5"
 
-
-
- a| 
-Interfaces:
- a| 
+--
+Interfaces::
++
+--
 Disponível com as seguintes interfaces:
 
 * 12Gb SAS
@@ -246,26 +222,23 @@ Disponível com as seguintes interfaces:
 * NVMe/RoCE de 100GB GbE
 
 
-|===
+--
 
 
-== Modelos EF600D.
+--
+.Modelos EF600D.
+--
+Tamanhos de rack::
++
+--
+2U24 (2 unidades de rack; 24 unidades)
 
-[cols="35h,~"]
-|===
-| Componente | Especificação 
+image:../media/ef570_front.gif["EF600 2U"]
 
-
- a| 
-Tamanhos de rack:
- a| 
-2U24 (2 unidades de rack; 24 unidades)image:../media/ef570_front.gif[""]
-
-
-
- a| 
-Unidades e HICs:
- a| 
+--
+Unidades e HICs::
++
+--
 Suporta as seguintes unidades com uma única placa de interface de host (HIC) por controlador:
 
 * Unidades SSD NVMe: Até 24 unidades SSD NVMe no compartimento da controladora.
@@ -276,11 +249,10 @@ Suporta as seguintes unidades com uma única placa de interface de host (HIC) po
 
 NOTE: Para o SANtricity os 11,80GA e posterior, o EF600 é compatível com configurações de compartimento de expansão sem unidades na bandeja de base Ao usar essa configuração, verifique se as unidades estão preenchidas no compartimento de expansão e conetadas corretamente à bandeja de base antes de ligar o sistema.
 
-
-
- a| 
-Interfaces:
- a| 
+--
+Interfaces::
++
+--
 Disponível com as seguintes interfaces:
 
 * ISCSI de 25GB GB
@@ -295,4 +267,49 @@ Disponível com as seguintes interfaces:
 * NVMe/RoCE de 200GB GbE
 
 
-|===
+--
+
+
+--
+.Modelos E4000D.
+--
+Tamanhos de rack::
++
+--
+* 2U12 (2 unidades de rack; 12 unidades)
++
+image::../media/e4000_2u_front.png[E4000 2U]
+
+* 4U60 (4 unidades de rack; 60 unidades)
++
+image::../media/e4000_4u_front.png[E4000 4U]
+
+
+
+--
+Unidades::
++
+--
+Suporta os seguintes tipos de unidade:
+
+* NL-SAS de 3,5" (até 300 TB)
+* SSD SAS de 2,5" (até 120 GB)
+
+
+--
+Interfaces::
++
+--
+Disponível com as seguintes interfaces:
+
+* 12Gb SAS
+* ISCSI de 1 GB ou 10GBASE T
+* ISCSI de 1GB GB, 10Gb GB ou 25GB GB
+* FC de 8GB GB, 16GB GB ou 32GB GB
+
+
+--
+
+
+--
+====

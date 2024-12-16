@@ -230,9 +230,6 @@ Esses protocolos incluem, entre outros, QoS, compartilhamento de arquivos e impr
 . Guarde os valores padrão para as restantes caixas de seleção e selecione *OK*.
 . Selecione *OK* novamente à medida que retornar à caixa de diálogo *conetar ao destino*.
 . Repita este procedimento para cada porta e sessão do iniciador (caminho lógico) para a matriz de armazenamento que você deseja estabelecer.
-+
-image::../media/82012_00.gif[82012 00]
-
 
 
 
@@ -293,7 +290,7 @@ Pode gerar e imprimir um PDF desta página e, em seguida, utilizar a seguinte fo
 
 As configurações recomendadas consistem em duas portas de iniciador e quatro portas de destino com uma ou mais VLANs.
 
-image::../media/50001_01_conf-win.gif[50001 01 conf win]
+image::../media/50001_01_conf-win.gif[Identificadores de porta iSCSI]
 
 
 

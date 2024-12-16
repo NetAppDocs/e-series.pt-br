@@ -19,5 +19,5 @@ Por padrão, um host ESXi executa automaticamente uma nova varredura a cada cinc
 . Crie um ou mais volumes e atribua-os ao host ESXi.
 . Se estiver usando um vCenter Server, adicione o host ao inventário do servidor.
 . Use o vSphere Client ou o vSphere Web Client para se conetar diretamente ao vCenter Server ou ao host ESXi.
-. Para obter instruções sobre como executar uma nova digitalização do armazenamento em um host ESXi, procure o https://kb.vmware.com/s/["Base de Conhecimento da VMware"^] artigo sobre este tópico.
+. Para obter instruções sobre como executar uma nova digitalização do armazenamento em um host ESXi, procure o https://support.broadcom.com/["Base de Conhecimento da VMware"^] artigo sobre este tópico.
 

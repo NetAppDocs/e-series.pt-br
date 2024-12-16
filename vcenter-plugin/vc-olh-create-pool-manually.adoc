@@ -11,7 +11,7 @@ summary: Você pode criar um pool manualmente se a configuração não atender a
 :nofooter: 
 :icons: font
 :linkattrs: 
-:imagesdir: ./media/
+:imagesdir: ../media/
 
 
 [role="lead"]

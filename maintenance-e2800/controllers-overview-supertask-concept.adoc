@@ -36,9 +36,9 @@ Você pode adicionar um segundo canister de controladora à versão simplex das 
 
 As figuras mostram um exemplo de compartimento do controlador antes de adicionar um segundo controlador (um recipiente do controlador e um controlador em branco) e depois de adicionar um segundo controlador (dois recipientes de controlador).
 
-image::../media/28_dwg_2800_controller_simplex.gif[28 dwg 2800 controlador simplex]
+image::../media/28_dwg_2800_controller_simplex.gif[Configuração E2800 simplex]
 
-image::../media/28_dwg_2800_controller_duplex.gif[28 dwg 2800 controlador duplex]
+image::../media/28_dwg_2800_controller_duplex.gif[Configuração duplex E2800]
 
 
 NOTE: As figuras mostram exemplos de coletores de controladores; as portas de host nos seus coletores de controladores podem ser diferentes.
@@ -91,7 +91,7 @@ NOTE: O LED de atenção âmbar do controlador será desligado sempre que existi
 ====
 
 
-image::../media/28_dwg_2800_controller_attn_led_maint-e2800.gif[28 dwg 2800 controlador attn led manint e2800]
+image::../media/28_dwg_2800_controller_attn_led_maint-e2800.gif[E2800 LED de atenção]
 
 *(1)* _atenção LED_
 

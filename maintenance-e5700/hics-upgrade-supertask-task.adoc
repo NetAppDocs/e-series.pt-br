@@ -102,7 +102,7 @@ CAUTION: *Possível perda de dados* -- se você continuar este procedimento enqu
 O LED verde Cache ative na parte de trás de cada controlador fica aceso quando os dados em cache precisam ser gravados nas unidades. Tem de esperar que este LED se desligue.
 
 +
-image::../media/e5700_ib_hic_w_cache_led_callouts_maint-e5700.gif[e5700 ib hic w cache conduziu as anotações maint e5700]
+image::../media/e5700_ib_hic_w_cache_led_callouts_maint-e5700.gif[LED de cache ativo no controlador E5700]
 
 +
 *(1)* _Cache ative LED_
@@ -138,7 +138,7 @@ Dependendo do tipo de HIC para o qual você está atualizando, você pode ser ca
 O LED verde Cache ative na parte de trás do controlador fica aceso quando os dados em cache precisam ser gravados nas unidades. Tem de esperar que este LED se desligue antes de remover o recipiente do controlador.
 
 +
-image::../media/e5700_ib_hic_w_cache_led_callouts_maint-e5700.gif[e5700 ib hic w cache conduziu as anotações maint e5700]
+image::../media/e5700_ib_hic_w_cache_led_callouts_maint-e5700.gif[LED de cache ativo no controlador E5700]
 
 +
 *(1)* _Cache ative LED_
@@ -148,7 +148,7 @@ image::../media/e5700_ib_hic_w_cache_led_callouts_maint-e5700.gif[e5700 ib hic w
 A figura a seguir é um exemplo de um compartimento de controladora E5724:
 
 +
-image::../media/28_dwg_e2824_remove_controller_canister_maint-e5700.gif[28 dwg e2824 remover a manutenção do recipiente do controlador e5700]
+image::../media/28_dwg_e2824_remove_controller_canister_maint-e5700.gif[Remova o recipiente do controlador]
 
 +
 *(1)* _Controller canister_
@@ -160,7 +160,7 @@ image::../media/28_dwg_e2824_remove_controller_canister_maint-e5700.gif[28 dwg e
 A figura a seguir é um exemplo de um compartimento de controladora E5760:
 
 +
-image::../media/28_dwg_e2860_add_controller_canister_maint-e5700.gif[28 dwg e2860 adicionar o controlador canister manint e5700]
+image::../media/28_dwg_e2860_add_controller_canister_maint-e5700.gif[Remova o recipiente do controlador]
 
 +
 *(1)* _Controller canister_
@@ -193,7 +193,7 @@ Remova o HIC original para que você possa substituí-lo por um atualizado.
 Se este LED verde estiver ligado, o controlador ainda está a utilizar a bateria. Deve aguardar que este LED se apague antes de remover quaisquer componentes.
 
 +
-image::../media/28_dwg_e2800_internal_cache_active_led_maint-e5700.gif[28 dwg e2800 cache interno ativo led mint e5700]
+image::../media/28_dwg_e2800_internal_cache_active_led_maint-e5700.gif[LED de cache ativo]
 
 +
 *(1)* _Cache ative LED_
@@ -206,7 +206,7 @@ image::../media/28_dwg_e2800_internal_cache_active_led_maint-e5700.gif[28 dwg e2
 Há quatro parafusos: Um na parte superior, um na parte lateral e dois na parte frontal.
 
 +
-image::../media/28_dwg_e2800_hic_faceplace_screws_maint-e5700.gif[28 dwg e2800 hic faceplace parafusos mint e5700]
+image::../media/28_dwg_e2800_hic_faceplace_screws_maint-e5700.gif[Remova a placa frontal do controlador]
 
 . Retire a placa frontal do HIC.
 . Utilizando os dedos ou uma chave de fendas Phillips, desaperte os três parafusos de aperto manual que fixam o HIC à placa do controlador.
@@ -216,7 +216,7 @@ image::../media/28_dwg_e2800_hic_faceplace_screws_maint-e5700.gif[28 dwg e2800 h
 CAUTION: Tenha cuidado para não arranhar ou bater os componentes na parte inferior do HIC ou na parte superior da placa controladora.
 
 +
-image::../media/28_dwg_e2800_hic_thumbscrews_maint-e5700.gif[28 dwg e2800 hic parafusos de aperto manual e5700]
+image::../media/28_dwg_e2800_hic_thumbscrews_maint-e5700.gif[Remova o HIC da placa controladora]
 
 +
 *(1)* _placa de interface de host (HIC)_
@@ -240,7 +240,7 @@ CAUTION: *Possível perda de acesso a dados* -- nunca instale um HIC em um recip
 . Desembale o novo HIC e a nova placa frontal HIC.
 . Usando uma chave de fenda Phillips nº 1, remova os quatro parafusos que prendem a placa frontal HIC ao recipiente do controlador e remova a placa frontal.
 +
-image::../media/28_dwg_e2800_hic_faceplace_screws_maint-e5700.gif[28 dwg e2800 hic faceplace parafusos mint e5700]
+image::../media/28_dwg_e2800_hic_faceplace_screws_maint-e5700.gif[Instale a placa frontal no controlador]
 
 . Alinhe os três parafusos de aperto manual no HIC com os orifícios correspondentes no controlador e alinhe o conetor na parte inferior do HIC com o conetor de interface HIC na placa do controlador.
 +
@@ -252,7 +252,7 @@ Tenha cuidado para não arranhar ou bater os componentes na parte inferior do HI
 CAUTION: * Possíveis danos ao equipamento * - tenha muito cuidado para não apertar o conetor de fita dourada para os LEDs do controlador entre o HIC e os parafusos de aperto manual.
 
 +
-image::../media/28_dwg_e2800_hic_thumbscrews_maint-e5700.gif[28 dwg e2800 hic parafusos de aperto manual e5700]
+image::../media/28_dwg_e2800_hic_thumbscrews_maint-e5700.gif[Instale o HIC na placa controladora]
 
 +
 *(1)* _placa de interface de host (HIC)_
@@ -281,7 +281,7 @@ Depois de instalar o novo HIC, reinstale o recipiente do controlador na pratelei
 A figura a seguir é um exemplo de um compartimento de controladora E5724:
 
 +
-image::../media/28_dwg_e2824_remove_controller_canister_maint-e5700.gif[28 dwg e2824 remover a manutenção do recipiente do controlador e5700]
+image::../media/28_dwg_e2824_remove_controller_canister_maint-e5700.gif[Instale o recipiente do controlador]
 
 +
 *(1)* _Controller canister_
@@ -293,7 +293,7 @@ image::../media/28_dwg_e2824_remove_controller_canister_maint-e5700.gif[28 dwg e
 A figura a seguir é um exemplo de um compartimento de controladora E5760:
 
 +
-image::../media/28_dwg_e2860_add_controller_canister_maint-e5700.gif[28 dwg e2860 adicionar o controlador canister manint e5700]
+image::../media/28_dwg_e2860_add_controller_canister_maint-e5700.gif[Instale o recipiente do controlador]
 
 +
 *(1)* _Controller canister_
@@ -333,7 +333,7 @@ Verifique os LEDs do controlador e o visor de sete segmentos e confirme se o est
 NOTE: A figura mostra um exemplo do recipiente do controlador. Seu controlador pode ter um número diferente e um tipo diferente de portas de host.
 
 +
-image::../media/e5700_hic_3_callouts_maint-e5700.gif[e5700 hic 3 textos explicativos manint e5700]
+image::../media/e5700_hic_3_callouts_maint-e5700.gif[E5700 LEDs do controlador"]
 
 +
 *(1)* _LED de ligação ao anfitrião (âmbar)_

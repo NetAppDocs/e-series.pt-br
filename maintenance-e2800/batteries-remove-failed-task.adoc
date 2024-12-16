@@ -20,7 +20,7 @@ Depois de remover o recipiente do controlador da prateleira do controlador, pode
 Se este LED verde estiver ligado, o controlador ainda está a utilizar a bateria. Deve aguardar que este LED se apague antes de remover quaisquer componentes.
 
 +
-image::../media/28_dwg_e2800_internal_cache_active_led_maint-e2800.gif[28 dwg e2800 cache interno ativo led mint e2800]
+image::../media/28_dwg_e2800_internal_cache_active_led_maint-e2800.gif[LED ativo de cache interno]
 
 +
 *(1)* _Cache interno ativo_
@@ -31,7 +31,7 @@ image::../media/28_dwg_e2800_internal_cache_active_led_maint-e2800.gif[28 dwg e2
 . Localize a trava de liberação azul da bateria.
 . Desengate a bateria empurrando a trava de liberação para baixo e afastando-a do recipiente do controlador.
 +
-image::../media/28_dwg_e2800_remove_battery_maint-e2800.gif[28 dwg e2800 remover a manutenção da bateria e2800]
+image::../media/28_dwg_e2800_remove_battery_maint-e2800.gif[Remova a bateria do controlador]
 
 +
 *(1)* _trava de liberação da bateria_

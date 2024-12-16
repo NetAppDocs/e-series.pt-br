@@ -1,7 +1,7 @@
 ---
 permalink: upgrade-controllers/prepare-upgrade-controllers-task.html 
 sidebar: sidebar 
-keywords: E-Series, eseries, E2800, E5700, EF300, EF600, upgrade controller, upgrading controller, upgrade controller requirements, upgrade controller key management, prepare upgrade controller, upgrade controller preparation, preparing controller upgrade 
+keywords: E-Series, eseries, E4000, E2800, E5700, EF300, EF600, upgrade controller, upgrading controller, upgrade controller requirements, upgrade controller key management, prepare upgrade controller, upgrade controller preparation, preparing controller upgrade 
 summary: Prepare-se para atualizar controladores salvando a chave de segurança da unidade, coletando dados de suporte e colocando o controlador offline. 
 ---
 = Prepare-se para atualizar os controladores
@@ -94,10 +94,9 @@ Todos os termos correspondentes são realçados. Para percorrer todos os resulta
 
 . Colete dados de suporte sobre seu storage array usando a GUI ou a CLI:
 +
-** Use o System Manager ou a janela Array Management no Storage Manager para coletar e salvar um pacote de suporte de seu storage array.
+** Use o System Manager para coletar e salvar um pacote de suporte de sua matriz de armazenamento.
 +
 *** A partir do System Manager, selecione menu:Support [Support Center > Diagnostics tab] (Assistência > Centro de suporte > separador Diagnostics). Em seguida, selecione *Collect Support Data* e clique em *Collect*.
-*** Na barra de ferramentas da janela Gerenciamento de matrizes, selecione menu:Monitor[Saúde > coletar dados de suporte manualmente]. Em seguida, insira um nome e especifique um local no sistema onde você deseja armazenar o pacote de suporte.
 +
 O arquivo é salvo na pasta Downloads do navegador com o nome `support-data.7z`.
 
@@ -133,7 +132,7 @@ CAUTION: *Possível perda de dados* -- se você continuar este procedimento enqu
 +
 A caixa de diálogo alterar configuração de cache é exibida. Todos os volumes na matriz de armazenamento aparecem nesta caixa de diálogo.
 
-.. Selecione a guia *Basic* e altere as configurações para cache de leitura e cache de gravação.
+.. Selecione a guia *Basic* e desative as configurações para cache de leitura e cache de gravação.
 .. Clique em *Salvar*.
 .. Aguarde cinco minutos para permitir que quaisquer dados na memória cache sejam lavados para o disco.
 

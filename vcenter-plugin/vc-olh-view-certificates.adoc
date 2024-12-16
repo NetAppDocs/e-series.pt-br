@@ -10,7 +10,7 @@ summary: 'Exibir informações resumidas de um certificado, que inclui a organiz
 :nofooter: 
 :icons: font
 :linkattrs: 
-:imagesdir: ./media/
+:imagesdir: ../media/
 
 
 [role="lead"]

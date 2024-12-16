@@ -37,7 +37,7 @@ NOTE: Para armários de orifício quadrado, primeiro você deve instalar as porc
 
 
  a| 
-image:../media/install_rails_inst-hw-e2800-e5700.png[""]
+image:../media/install_rails_inst-hw-e2800-e5700.png["Instale os trilhos"]
 
 |===
 . Instale a prateleira.
@@ -51,14 +51,14 @@ CAUTION: Uma prateleira vazia pesa aproximadamente 132 lb (60 kg). Um elevador m
 
 
 +
-image:../media/4_person_lift_source.png[""]
+image:../media/4_person_lift_source.png["Quatro pessoas precisavam levantar a prateleira no armário"]
 
 . Fixe a prateleira.
 +
 .. Insira os parafusos no primeiro e no terceiro orifícios da parte superior da prateleira de ambos os lados para prendê-la à parte frontal do gabinete.
 .. Coloque dois suportes traseiros em cada lado da secção traseira superior da prateleira. Insira os parafusos no primeiro e terceiro orifícios de cada suporte para fixar a parte traseira do gabinete.
 +
-image:../media/trafford_secure.png[""]
+image:../media/trafford_secure.png["Fixe os suportes na parte traseira da prateleira"]
 
 
 
@@ -92,7 +92,7 @@ image:../media/trafford_secure.png[""]
 
 
  a| 
-image:../media/trafford_overview.png[""]
+image:../media/trafford_overview.png["Instale a placa frontal"]
 
 
 

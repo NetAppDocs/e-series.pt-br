@@ -10,7 +10,7 @@ summary: Remova o plug-in para vCenter.
 :nofooter: 
 :icons: font
 :linkattrs: 
-:imagesdir: ./media/
+:imagesdir: ../media/
 
 
 [role="lead"]

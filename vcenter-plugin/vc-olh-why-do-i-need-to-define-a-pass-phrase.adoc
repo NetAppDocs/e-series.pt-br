@@ -10,7 +10,7 @@ summary: A frase-passe é usada para criptografar e descriptografar o arquivo de
 :nofooter: 
 :icons: font
 :linkattrs: 
-:imagesdir: ./media/
+:imagesdir: ../media/
 
 
 [role="lead"]

@@ -1,0 +1,81 @@
+---
+permalink: maintenance-e4000/replace-controller-requirements-e4000.html 
+sidebar: sidebar 
+keywords:  
+summary:  
+---
+= Requisitos para substituição do controlador E4000
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Antes de substituir ou adicionar um controlador E4000, reveja os requisitos e considerações.
+
+Cada recipiente do controlador contém uma placa controladora e uma bateria. Você pode adicionar um segundo controlador a uma configuração simplex ou substituir um controlador com falha.
+
+
+
+== Requisitos para adicionar o segundo controlador
+
+Você pode adicionar um segundo recipiente de controlador à versão simplex do compartimento de controladores E4000. Antes de adicionar um segundo controlador, tem de ter:
+
+* Um novo recipiente do controlador com o mesmo número de peça que o recipiente do controlador atualmente instalado.
++
+
+NOTE: Isso não é aplicável a um dispositivo StorageGRID.
+
+* Todos os cabos, transcetores, switches e adaptadores de barramento do host (HBAs) necessários para conetar as novas portas do controlador.
++
+Para obter informações sobre o hardware compatível, consulte a https://mysupport.netapp.com/NOW/products/interoperability["Matriz de interoperabilidade do NetApp"] ou a http://hwu.netapp.com/home.aspx["NetApp Hardware Universe"].
+
+* Driver multipath instalado no host para que você possa usar as duas controladoras. Consulte a https://docs.netapp.com/us-en/e-series/config-linux/index.html["Configuração expressa do Linux"] , https://docs.netapp.com/us-en/e-series/config-windows/index.html["Configuração expressa do Windows"] ou https://docs.netapp.com/us-en/e-series/config-vmware/index.html["Configuração do VMware Express"] para obter instruções.
+* Uma pulseira antiestática, ou você tomou outras precauções antiestáticas.
+* Uma chave de fendas Phillips nº 1.
+* Etiquetas para identificar os novos cabos.
+* Uma estação de gerenciamento com um navegador que pode acessar o Gerenciador de sistema do SANtricity para o controlador. (Para abrir a interface do System Manager, aponte o navegador para o nome de domínio ou endereço IP do controlador.)
++
+Opcionalmente, você pode usar a interface de linha de comando (CLI) para executar alguns dos procedimentos. Para o Gerenciador de sistema SANtricity (versão 11,60 e superior), você pode baixar o pacote CLI (arquivo zip) do Gerenciador de sistema. Para tal, aceda a *Definições > sistema > Complementos > Interface de linha de comando* no System Manager. Em seguida, você pode emitir comandos CLI de um prompt do sistema operacional, como o prompt do dos C:.
+
+
+
+
+
+== Requisitos para substituição do controlador
+
+Ao substituir um recipiente do controlador com falha, você deve remover a bateria, HIC e DIMMs do recipiente do controlador original e instalá-los no recipiente do controlador de substituição.
+
+Você pode determinar se você tem um recipiente de controlador com falha de duas maneiras:
+
+* O Guru de recuperação no Gerenciador de sistema do SANtricity direciona você para substituir o recipiente do controlador.
+* O LED âmbar de atenção no recipiente do controlador está aceso, indicando que o controlador tem uma avaria.
+
+
+Antes de substituir um controlador, tem de ter:
+
+* Um recipiente do controlador de substituição com o mesmo número de peça que o recipiente do controlador que está a substituir.
+* Uma pulseira antiestática, ou você tomou outras precauções antiestáticas.
+* Etiquetas para identificar cada cabo que está ligado ao recipiente do controlador.
+* Chave de fendas Phillips nº 1.
+* Uma estação de gerenciamento com um navegador que pode acessar o Gerenciador de sistema do SANtricity para o controlador. (Para abrir a interface do System Manager, aponte o navegador para o nome de domínio ou endereço IP do controlador.)
++
+Opcionalmente, você pode usar a interface de linha de comando (CLI) para executar alguns dos procedimentos. Para o Gerenciador de sistema SANtricity (versão 11,60 e superior), você pode baixar o pacote CLI (arquivo zip) do Gerenciador de sistema. Para tal, aceda a *Definições > sistema > Complementos > Interface de linha de comando* no System Manager. Em seguida, você pode emitir comandos CLI de um prompt do sistema operacional, como o prompt do dos C:.
+
+
+
+
+
+=== Requisitos de configuração duplex
+
+Se o compartimento da controladora tiver duas controladoras (configuração duplex), você poderá substituir um coletor de controladora enquanto o storage array estiver ligado e executando operações de e/S do host, contanto que as seguintes condições sejam verdadeiras:
+
+* O segundo recipiente do controlador na gaveta tem o status ideal.
+* O campo *OK para remover* na área Detalhes do Guru de recuperação no Gerenciador de sistema do SANtricity exibe *Sim*, indicando que é seguro remover esse componente.
+
+
+
+
+=== Requisitos de configuração simplex
+
+Se você tiver apenas um recipiente de controlador (configuração simplex), os dados no storage de armazenamento não estarão acessíveis até que você substitua o recipiente do controlador. Você precisa parar as operações de e/S de host e desligar o storage array.

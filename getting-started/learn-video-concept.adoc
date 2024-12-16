@@ -17,7 +17,6 @@ Acesse demonstrações em vídeo para saber mais sobre os sistemas e-Series.
 
 == E-Series: Storage rápido, simples e confiável
 
-[role="lead"]
 Este vídeo destaca os principais benefícios do uso de sistemas NetApp e-Series em comparação com o uso de servidores comuns para storage.
 
 https://www.youtube.com/embed/FjFkU2z_hIo?rel=0["Vídeo NetApp: Principais benefícios do uso de sistemas NetApp e-Series em comparação com o uso de servidores comuns para storage"^]
@@ -26,7 +25,6 @@ https://www.youtube.com/embed/FjFkU2z_hIo?rel=0["Vídeo NetApp: Principais benef
 
 == System Manager: Configuração e configuração fáceis
 
-[role="lead"]
 Esta demonstração técnica mostra como a interface do Gerenciador de sistemas SANtricity baseada na Web permite a fácil configuração e configuração do NetApp E2800.
 
 https://www.youtube.com/embed/I0W0AjKpCO8?rel=0["Vídeo do NetApp: Gerenciador de sistema do SANtricity: Configuração e configuração fáceis"^]

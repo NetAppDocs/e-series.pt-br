@@ -57,7 +57,7 @@ Por exemplo, não tente substituir uma unidade de disco rígido (HDD) por um dis
 O LED de atenção (âmbar) da gaveta da unidade pisca para que você possa abrir a gaveta da unidade correta para identificar qual unidade substituir.
 
 +
-image::../media/2860_dwg_attn_led_on_drawer_maint-e5700.gif[2860 dwg attn led na gaveta manint e5700]
+image::../media/2860_dwg_attn_led_on_drawer_maint-e5700.gif[LED de atenção]
 
 +
 *(1)* _atenção LED_
@@ -66,7 +66,7 @@ image::../media/2860_dwg_attn_led_on_drawer_maint-e5700.gif[2860 dwg attn led na
 .. Utilizando as alavancas estendidas, puxe cuidadosamente a gaveta da unidade para fora até parar.
 .. Olhe para a parte superior da gaveta da unidade para encontrar o LED de atenção na frente de cada unidade.
 +
-image::../media/2860_dwg_amber_on_drive_maint-e5700.gif[2860 dwg âmbar na manutenção da unidade e5700]
+image::../media/2860_dwg_amber_on_drive_maint-e5700.gif[LED de atenção na gaveta da unidade]
 
 +
 *(1)* _luz LED atenção acesa para a unidade no lado superior direito_
@@ -75,7 +75,7 @@ image::../media/2860_dwg_amber_on_drive_maint-e5700.gif[2860 dwg âmbar na manut
 Os LEDs de atenção da gaveta da unidade estão no lado esquerdo na frente de cada unidade, com um ícone de atenção na alça da unidade logo atrás do LED.
 
 +
-image::../media/28_dwg_e2860_de460c_attention_led_drive_maint-e5700.gif[28 dwg e2860 de460c atenção led drive manint e5700]
+image::../media/28_dwg_e2860_de460c_attention_led_drive_maint-e5700.gif[LED de atenção na gaveta da unidade]
 
 +
 *(1)* _ícone de atenção_
@@ -105,22 +105,22 @@ Salve todos os materiais de embalagem para a próxima vez que você precisar env
 A pega do came nas molas da unidade abre parcialmente e a unidade é libertada da gaveta.
 
 +
-image::../media/trafford_drive_rel_button_maint-e5700.gif[trafford drive rel button manut e5700]
+image::../media/trafford_drive_rel_button_maint-e5700.gif[Solte a trava laranja para remover a unidade]
 
 +
 *(1)* _trava de liberação laranja_
 
 . Abra o manípulo do excêntrico e levante ligeiramente a unidade.
-. Aguarde 30 segundos.
+. Aguarde 60 segundos.
 . Utilize a pega do excêntrico para levantar a unidade da prateleira.
 +
-image::../media/92_dwg_de6600_install_or_remove_drive_maint-e5700.gif[92 dwg de6600 instalar ou remover a manutenção da unidade e5700]
+image::../media/92_dwg_de6600_install_or_remove_drive_maint-e5700.gif[Use a alavanca do came para remover a transmissão]
 
 . Coloque a unidade numa superfície antiestática e amortecida, longe de campos magnéticos.
-. Aguarde 30 segundos para que o software reconheça que a unidade foi removida.
+. Aguarde 60 segundos para que o software reconheça que a unidade foi removida.
 +
 
-NOTE: Se remover acidentalmente uma unidade ativa, aguarde pelo menos 30 segundos e, em seguida, reinstale-a. Para o procedimento de recuperação, consulte o software de gerenciamento de armazenamento.
+NOTE: Se remover acidentalmente uma unidade ativa, aguarde pelo menos 60 segundos e, em seguida, reinstale-a. Para o procedimento de recuperação, consulte o software de gerenciamento de armazenamento.
 
 
 
@@ -137,7 +137,7 @@ CAUTION: *Possível perda de acesso a dados* -- ao empurrar a gaveta da unidade 
 . Levante a alavanca do came na nova unidade para a vertical.
 . Alinhe os dois botões levantados em cada lado do suporte da unidade com a folga correspondente no canal da unidade na gaveta da unidade.
 +
-image::../media/28_dwg_e2860_de460c_drive_cru_maint-e5700.gif[28 dwg e2860 de460c drive cru manut e5700]
+image::../media/28_dwg_e2860_de460c_drive_cru_maint-e5700.gif[O botão levantado no suporte da unidade deve corresponder ao canal da unidade na gaveta da unidade]
 
 +
 *(1)* _botão levantado no lado direito do transportador da unidade_
@@ -163,7 +163,7 @@ Confirme se a nova unidade está a funcionar corretamente.
 . Verifique o LED de alimentação e o LED de atenção na unidade que você substituiu. (Quando você insere uma unidade pela primeira vez, seu LED de atenção pode estar ligado. No entanto, o LED deve apagar-se dentro de um minuto.)
 +
 ** O LED de alimentação está ligado ou intermitente e o LED de atenção está apagado: Indica que a nova unidade está a funcionar corretamente.
-** O LED de alimentação está desligado: Indica que a unidade pode não estar instalada corretamente. Retire a unidade, aguarde 30 segundos e, em seguida, volte a instalá-la.
+** O LED de alimentação está desligado: Indica que a unidade pode não estar instalada corretamente. Retire a unidade, aguarde 60 segundos e, em seguida, volte a instalá-la.
 ** O LED de atenção está aceso: Indica que a nova unidade pode estar com defeito. Substitua-a por outra unidade nova.
 
 

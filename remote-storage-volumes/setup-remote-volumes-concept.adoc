@@ -44,7 +44,7 @@ Como parte do processo de configuração, os storage arrays e o host de e/S deve
 
 Os diagramas a seguir fornecem exemplos de como fazer o cabeamento dos sistemas de modo que eles executem operações de volume de armazenamento remoto através de uma conexão iSCSI.
 
-image:../media/remote_target_volumes_iscsi_use_case_1.png[""] image:../media/remote_target_volumes_iscsi_use_case_2.png[""]
+image:../media/remote_target_volumes_iscsi_use_case_1.png["Cablagem de armazenamento iSCSI"] image:../media/remote_target_volumes_iscsi_use_case_2.png["Cablagem de armazenamento iSCSI"]
 
 
 

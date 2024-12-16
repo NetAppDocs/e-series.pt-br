@@ -10,7 +10,7 @@ summary: 'Para sistemas EF300 e EF600, um volume pode ser definido para suportar
 :nofooter: 
 :icons: font
 :linkattrs: 
-:imagesdir: ./media/
+:imagesdir: ../media/
 
 
 [role="lead"]

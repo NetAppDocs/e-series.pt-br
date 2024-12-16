@@ -10,7 +10,7 @@ summary: Uma verificação de redundância determina se os dados em um volume em
 :nofooter: 
 :icons: font
 :linkattrs: 
-:imagesdir: ./media/
+:imagesdir: ../media/
 
 
 [role="lead"]

@@ -37,7 +37,7 @@ Se seus SFPs atuais suportarem taxas de dados de 16 Gbps e 10 Gbps, você poder�
 . Digite *SFP* na caixa de texto e clique em *Find*.
 . Para cada SFP listado no Perfil da matriz de armazenamento, localize a entrada para *taxa(s) de dados suportada(s)*.
 +
-image::../media/sam1130_ss_e2800_unified_spf_maint-e5700.gif[sam1130 ss e2800, manutenção spf unificada e5700]
+image::../media/sam1130_ss_e2800_unified_spf_maint-e5700.gif[Taxa(s) de dados suportada(s)]
 
 . Consulte a tabela para determinar se você pode reutilizar os SFPs, da seguinte forma:
 +
@@ -102,7 +102,7 @@ Para obter o pacote de recursos, é necessário o número de série do compartim
 .. Com a guia *Support Resources* selecionada, role até a seção *View top storage array Properties*.
 .. Localize o *número de série do chassi* e copie esse valor para um arquivo de texto.
 +
-image::../media/sam1130_ss_e2800_storage_array_profile_sn_smid_copy_maint-e5700.gif[sam1130 ss e2800 storage array profile sn smid copy mint e5700]
+image::../media/sam1130_ss_e2800_storage_array_profile_sn_smid_copy_maint-e5700.gif[Número de série do chassis]
 
 
 
@@ -118,7 +118,7 @@ NOTE: "Submodelo" também pode ser escrito como "submodelo".
 
 .. Localize a ID do submodelo do pacote de recursos para a configuração inicial.
 +
-image::../media/storage_array_profile2_maint-e5700.gif[storage array profile2 manint e5700]
+image::../media/storage_array_profile2_maint-e5700.gif[ID do submodelo do pacote de funcionalidades]
 
 
 
@@ -1088,7 +1088,7 @@ NOTE: Se o ID do submodelo do controlador não estiver listado, http://mysupport
 .. Em *Change Feature Pack*, localize o *Feature Enable Identifier*.
 .. Copie e cole esse número de 32 dígitos em um arquivo de texto.
 +
-image::../media/sam1130_ss_e2800_change_feature_pack_feature_enable_identifier_copy_maint-e5700.gif[sam1130 ss e2800 alterar o recurso de pacote de recursos ativar cópia do identificador e5700]
+image::../media/sam1130_ss_e2800_change_feature_pack_feature_enable_identifier_copy_maint-e5700.gif[Alterar o pacote de funcionalidades]
 
 
 
@@ -1133,7 +1133,7 @@ CAUTION: *Possível perda de dados* -- se você continuar este procedimento enqu
 . Se o storage array participar de uma relação de espelhamento, interrompa todas as operações de e/S de host no storage array secundário.
 . Aguarde até que quaisquer dados na memória cache sejam gravados nas unidades.
 +
-O LED verde Cache ative *(1)* na parte de trás de cada controlador está ligado quando os dados em cache precisam ser gravados nas unidades. Tem de esperar que este LED se desligue. image:../media/e5700_ib_hic_w_cache_led_callouts_maint-e5700.gif[""]
+O LED verde Cache ative *(1)* na parte de trás de cada controlador está ligado quando os dados em cache precisam ser gravados nas unidades. Tem de esperar que este LED se desligue. image:../media/e5700_ib_hic_w_cache_led_callouts_maint-e5700.gif["LED de cache ativo no controlador E5700"]
 
 . Na página inicial do Gerenciador do sistema do SANtricity, selecione *Exibir operações em andamento*.
 . Aguarde que todas as operações sejam concluídas antes de continuar com o próximo passo.
@@ -1149,7 +1149,7 @@ Altere o pacote de recursos para converter o protocolo de host das portas de hos
 . No Gerenciador do sistema SANtricity, selecione menu:Configurações[sistema].
 . Em *Add-ons*, selecione *Change Feature Pack*.
 +
-image::../media/sam1130_ss_system_change_feature_pack_maint-e5700.gif[sam1130 ss troca do sistema manut pack de funcionalidades e5700]
+image::../media/sam1130_ss_system_change_feature_pack_maint-e5700.gif[Alterar o pacote de funcionalidades]
 
 . Clique em *Procurar* e, em seguida, selecione o pacote de funcionalidades que pretende aplicar.
 . Digite *Change* no campo.

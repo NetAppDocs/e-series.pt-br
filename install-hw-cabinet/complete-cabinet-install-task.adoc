@@ -29,7 +29,7 @@ Os pés de nivelamento estão localizados perto de cada canto inferior do gabine
 A figura seguinte proporciona uma visão de grande plano do pé de estabilidade e dos pés niveladores.
 
 +
-image::../media/83000_08.gif[83000 08]
+image::../media/83000_08.gif[Pés de nivelamento e estabilidade]
 
 +
 |===
@@ -83,7 +83,7 @@ Depois de reinstalar as bandejas, instale os carretéis de cabo e os atamentos. 
 .Passo
 . Instale os carretéis de cabo e os atamentos de amarração ao longo de ambos os lados das tomadas de distribuição de energia verticais.
 +
-image::../media/83003_01_dwg_3040_cable_spools.gif[83003 01 dwg 3040 bobinas de cabo]
+image::../media/83003_01_dwg_3040_cable_spools.gif[Amarre o enrolamento e o carretel do cabo]
 
 +
 |===
@@ -123,7 +123,6 @@ Cobrir os espaços vazios é necessário para que o fluxo de ar correto através
 
 == Passo 5: Instale trilhos de montagem adicionais
 
-[role="lead"]
 Se você estiver instalando bandejas de unidades e controlador ou bandejas de unidades fornecidas separadamente (ainda não instaladas no gabinete), talvez seja necessário instalar trilhos de montagem adicionais no gabinete.
 
 .Passos
@@ -140,7 +139,7 @@ Se você estiver instalando bandejas de unidades e controlador ou bandejas de un
 
 . Use os marcadores de medição nos suportes verticais dianteiro direito e dianteiro esquerdo para fixar os trilhos de montagem na mesma posição em cada lado do gabinete.
 +
-image::../media/92042_06.gif[92042 06]
+image::../media/92042_06.gif[Montagem da calha]
 
 +
 |===
@@ -248,7 +247,7 @@ NOTE: Você deve conetar cada PDU a uma fonte de alimentação independente fora
 
 . Rode todos os 12 disjuntores para a respetiva posição de ligado (para cima).
 +
-image::../media/83002_05_dwg_3040_cabinet_pdus.gif[83002 05 dwg 3040 pdus de gabinete]
+image::../media/83002_05_dwg_3040_cabinet_pdus.gif[Disjuntores e tomadas elétricas]
 
 +
 |===
@@ -277,9 +276,9 @@ Caixas de entrada de energia
 . Ligue a alimentação de todas as bandejas de unidades no gabinete.
 +
 
-NOTE: Aguarde 30 segundos após ligar as bandejas de unidades antes de ligar a alimentação das bandejas de unidades e controlador.
+NOTE: Aguarde 60 segundos após ligar as bandejas de unidades antes de ligar a alimentação das bandejas de unidades e controlador.
 
-. Aguarde 30 segundos após ligar as bandejas de unidades e, em seguida, ligue a alimentação de todas as bandejas de unidades e controlador no gabinete.
+. Aguarde 60 segundos após ligar as bandejas de unidades e, em seguida, ligue a alimentação de todas as bandejas de unidades e controlador no gabinete.
 
 
 .Resultado

@@ -22,5 +22,11 @@ Tem de ligar as fontes de alimentação de cada componente a circuitos de alimen
 A fonte de alimentação do seu sistema de storage deve ser capaz de acomodar os requisitos de energia do novo compartimento de unidades. Para obter informações sobre o consumo de energia do sistema de armazenamento, consulte https://hwu.netapp.com/Controller/Index?platformTypeId=2357027["Hardware Universe"^] .
 
 .Passo
+. Ligue um cabo de alimentação a cada uma das unidades de fonte de alimentação do seu sistema de armazenamento.
 . Conete os dois cabos de alimentação de cada compartimento a diferentes unidades de distribuição de energia (PDUs) no gabinete ou no rack.
+. Ligue ambos os interrutores de alimentação.
++
+
+NOTE: Os sistemas de armazenamento EF300 e EF600 não têm interrutores de alimentação. Eles ligarão assim que os cabos forem conetados.
+
 

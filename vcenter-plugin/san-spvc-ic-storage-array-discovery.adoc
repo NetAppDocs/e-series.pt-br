@@ -10,7 +10,7 @@ summary: Use a interface Plugin for vCenter para descobrir os endereços IP dos 
 :nofooter: 
 :icons: font
 :linkattrs: 
-:imagesdir: ./media/
+:imagesdir: ../media/
 
 
 [role="lead"]

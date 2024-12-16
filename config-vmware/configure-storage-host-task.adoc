@@ -17,5 +17,5 @@ Todas as versões 6._x_ e 7 _x_ do ESXi suportam as versões 5 e 6 do VMFS.
 
 .Passos
 . Certifique-se de que os volumes mapeados para o host ESXi foram descobertos corretamente.
-. Para obter instruções sobre como criar datastores VMFS ou usar volumes como RDMs com o vSphere Client ou o vSphere Web Client, consulte https://www.vmware.com/support/pubs/["Site da VMware Documentation"^].
+. Para obter instruções sobre como criar datastores VMFS ou usar volumes como RDMs com o vSphere Client ou o vSphere Web Client, consulte https://docs.vmware.com/index.html["Site da VMware Documentation"^].
 

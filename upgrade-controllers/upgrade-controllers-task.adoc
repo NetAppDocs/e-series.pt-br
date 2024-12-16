@@ -1,7 +1,7 @@
 ---
 permalink: upgrade-controllers/upgrade-controllers-task.html 
 sidebar: sidebar 
-keywords: E-Series, eseries, E2800, E5700, EF300, EF600, upgrade controller, upgrading controller 
+keywords: E-Series, eseries, E4000, E2800, E5700, EF300, EF600, upgrade controller, upgrading controller 
 summary: Você pode atualizar seu storage array com a substituição de controladores existentes. Um controlador consiste em uma placa, firmware e software. Controla as unidades e implementa as funções do software de gestão. 
 ---
 = Atualizar os controladores do e-Series

@@ -125,7 +125,7 @@ NOTE: A entrada timestamp é supérflua.
 
 === Configurar o método de entrega do AutoSupport
 
-Você pode configurar o recurso AutoSupport para usar os métodos de entrega HTTPS, HTTP ou SMTP. HTTPS é o método de entrega padrão.
+Você pode configurar o recurso AutoSupport para usar os métodos de entrega HTTPS ou SMTP. HTTPS é o método de entrega padrão.
 
 . Acesse o arquivo ASUPConfig.xml no diretório de trabalho.
 . Na cadeia de carateres `<delivery type="n">`, digite 1, 2 ou 3 conforme descrito na tabela:
@@ -146,15 +146,6 @@ Você pode configurar o recurso AutoSupport para usar os métodos de entrega HTT
 
  a| 
 2
- a| 
-*HTTP*
-
-<delivery type="2">
-
-
-
- a| 
-3
  a| 
 *SMTP* -- para configurar corretamente o tipo de entrega AutoSupport para SMTP, você deve incluir o endereço do servidor de e-mail SMTP, juntamente com os e-mails do usuário do remetente e destinatário, semelhante ao seguinte exemplo:
 

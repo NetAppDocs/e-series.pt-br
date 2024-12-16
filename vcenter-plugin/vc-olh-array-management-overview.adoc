@@ -10,7 +10,7 @@ summary: Use o recurso Adicionar/descobrir para localizar e adicionar os storage
 :nofooter: 
 :icons: font
 :linkattrs: 
-:imagesdir: ./media/
+:imagesdir: ../media/
 
 
 [role="lead"]

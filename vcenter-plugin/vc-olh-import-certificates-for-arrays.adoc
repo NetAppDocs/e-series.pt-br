@@ -11,7 +11,7 @@ summary: Importe certificados para os storages de armazenamento para que eles po
 :nofooter: 
 :icons: font
 :linkattrs: 
-:imagesdir: ./media/
+:imagesdir: ../media/
 
 
 [role="lead"]

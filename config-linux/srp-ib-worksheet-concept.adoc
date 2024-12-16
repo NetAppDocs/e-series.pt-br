@@ -13,7 +13,7 @@ summary: Use esta Planilha para gravar informações de configuração de armaze
 [role="lead"]
 Você pode gerar e imprimir um PDF desta página e, em seguida, usar a seguinte Planilha para gravar informações de configuração de armazenamento SRP em InfiniBand. Você precisa dessas informações para executar tarefas de provisionamento.
 
-image::../media/port_identifiers_ib_srp.gif[identificadores de porta ib srp]
+image::../media/port_identifiers_ib_srp.gif[SRB sobre identificadores de porta IB]
 
 
 

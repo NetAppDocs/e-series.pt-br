@@ -37,7 +37,7 @@ O plug-in requer um dispositivo VMware vCenter Server implantado no ambiente VMw
 
 Consulte a figura a seguir para obter mais informações sobre comunicações no ambiente do vCenter.
 
-image:../media/vcenter_communication2.png[""]
+image:../media/vcenter_communication2.png["Ambiente de comunicação do vCenter"]
 
 
 

@@ -10,7 +10,7 @@ summary: 'A Data Assurance (DA) implementa a norma T10 Protection Information (P
 :nofooter: 
 :icons: font
 :linkattrs: 
-:imagesdir: ./media/
+:imagesdir: ../media/
 
 
 [role="lead"]

@@ -2,7 +2,7 @@
 permalink: config-linux/sas-express-setup-task.html 
 sidebar: sidebar 
 keywords: sas, express, setup 
-summary: Configuração do SAS Express 
+summary: Você pode usar o protocolo SAS com um host Linux em um sistema e-Series. 
 ---
 = Configuração do SAS Express
 :allow-uri-read: 
@@ -10,3 +10,5 @@ summary: Configuração do SAS Express
 :imagesdir: ../media/
 
 
+[role="lead"]
+Você pode usar o protocolo SAS com um host Linux em um sistema e-Series.

@@ -11,7 +11,7 @@ summary: Edite o nome do cache SSD e exiba seu status, capacidade máxima e atua
 :nofooter: 
 :icons: font
 :linkattrs: 
-:imagesdir: ./media/
+:imagesdir: ../media/
 
 
 [role="lead"]

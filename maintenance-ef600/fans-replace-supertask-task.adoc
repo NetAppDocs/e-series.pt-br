@@ -90,7 +90,7 @@ CAUTION: Para evitar um desempenho degradado, não torça, dobre, aperte ou pise
 . Confirme se o LED Cache ative na parte de trás do controlador está desligado.
 . Aperte as alças em ambos os lados do controlador e puxe para trás até que ele se solte da prateleira.
 +
-image::../media/remove_controller_5.png[remova o controlador 5]
+image::../media/remove_controller_5.png[Aperte as alças para remover o controlador]
 
 . Utilizando as duas mãos e as pegas, deslize o recipiente do controlador para fora da prateleira. Quando a parte frontal do controlador estiver livre do compartimento, use duas mãos para puxá-lo completamente.
 +
@@ -98,7 +98,7 @@ image::../media/remove_controller_5.png[remova o controlador 5]
 CAUTION: Utilize sempre duas mãos para suportar o peso de um recipiente do controlador.
 
 +
-image::../media/remove_controller_6.png[remova o controlador 6]
+image::../media/remove_controller_6.png[Use duas mãos para suportar o peso do controlador enquanto você remove]
 
 . Coloque o recipiente do controlador numa superfície plana e sem estática.
 
@@ -117,7 +117,7 @@ Se este LED verde estiver ligado, o controlador ainda está a utilizar a bateria
 
 . Levante cuidadosamente a ventoinha avariada do controlador.
 +
-image::../media/fan_2.png[ventoinha 2]
+image::../media/fan_2.png[Retire a ventoinha]
 
 
 
@@ -130,10 +130,10 @@ Instale um novo ventilador para substituir o que falhou.
 .Passos
 . Deslize a ventoinha de substituição completamente para dentro da prateleira.
 +
-image::../media/fan_3.png[ventoinha 3]
+image::../media/fan_3.png[Instale o ventilador no controlador]
 
 +
-image::../media/fan_3_a.png[ventoinha de 3 a]
+image::../media/fan_3_a.png[Instale o ventilador no controlador]
 
 
 
@@ -151,7 +151,7 @@ Depois de instalar o novo ventilador, reinstale o recipiente do controlador na p
 NOTE: O controlador clica audivelmente quando instalado corretamente na prateleira.
 
 +
-image::../media/remove_controller_7.png[remova o controlador 7]
+image::../media/remove_controller_7.png[Instale o controlador na gaveta]
 
 
 

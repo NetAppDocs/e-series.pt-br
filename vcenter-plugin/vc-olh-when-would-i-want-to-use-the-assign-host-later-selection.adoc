@@ -10,7 +10,7 @@ summary: Se você quiser acelerar o processo de criação de volumes, você pode
 :nofooter: 
 :icons: font
 :linkattrs: 
-:imagesdir: ./media/
+:imagesdir: ../media/
 
 
 [role="lead"]

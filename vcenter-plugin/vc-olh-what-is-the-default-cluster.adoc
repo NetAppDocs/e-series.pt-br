@@ -10,7 +10,7 @@ summary: O cluster padrão é uma entidade definida pelo sistema que permite que
 :nofooter: 
 :icons: font
 :linkattrs: 
-:imagesdir: ./media/
+:imagesdir: ../media/
 
 
 [role="lead"]

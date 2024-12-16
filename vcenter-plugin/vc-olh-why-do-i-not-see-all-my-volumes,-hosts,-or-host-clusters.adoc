@@ -10,7 +10,7 @@ summary: 'Os volumes instantâneos com um volume base habilitado PARA DA não s�
 :nofooter: 
 :icons: font
 :linkattrs: 
-:imagesdir: ./media/
+:imagesdir: ../media/
 
 
 [role="lead"]

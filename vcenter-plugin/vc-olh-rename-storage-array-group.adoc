@@ -11,7 +11,7 @@ summary: Altere o nome de um grupo de storage array quando o nome atual não for
 :nofooter: 
 :icons: font
 :linkattrs: 
-:imagesdir: ./media/
+:imagesdir: ../media/
 
 
 [role="lead"]

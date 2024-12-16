@@ -10,7 +10,7 @@ summary: Faça login e navegue pelo Plugin for vCenter.
 :nofooter: 
 :icons: font
 :linkattrs: 
-:imagesdir: ./media/
+:imagesdir: ../media/
 
 
 [role="lead"]

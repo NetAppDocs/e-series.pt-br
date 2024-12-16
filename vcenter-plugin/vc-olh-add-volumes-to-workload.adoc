@@ -11,7 +11,7 @@ summary: Adicione volumes não atribuídos a um workload novo ou existente.
 :nofooter: 
 :icons: font
 :linkattrs: 
-:imagesdir: ./media/
+:imagesdir: ../media/
 
 
 [role="lead"]

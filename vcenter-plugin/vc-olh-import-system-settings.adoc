@@ -11,7 +11,7 @@ summary: Importe as configurações do sistema de uma matriz de armazenamento pa
 :nofooter: 
 :icons: font
 :linkattrs: 
-:imagesdir: ./media/
+:imagesdir: ../media/
 
 
 [role="lead"]

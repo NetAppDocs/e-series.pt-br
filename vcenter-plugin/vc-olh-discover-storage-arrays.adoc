@@ -10,7 +10,7 @@ summary: Para exibir e gerenciar recursos de armazenamento no plug-in de armazen
 :nofooter: 
 :icons: font
 :linkattrs: 
-:imagesdir: ./media/
+:imagesdir: ../media/
 
 
 [role="lead"]

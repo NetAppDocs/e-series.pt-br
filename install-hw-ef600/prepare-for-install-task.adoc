@@ -28,14 +28,14 @@ Se você estiver fazendo o cabeamento do EF300 para expansão SAS, consulte as s
 
 
  a| 
-image:../media/ef600_w_faceplate.png[""]
+image:../media/ef600_w_faceplate.png["Gaveta com unidades instaladas e painel frontal"]
  a| 
 Gaveta com unidades instaladas (tampa frontal e tampa frontal empacotadas separadamente)
 
 
 
  a| 
-image:../media/superrails_inst-hw-ef600.png[""]
+image:../media/superrails_inst-hw-ef600.png["Hardware de montagem em rack"]
  a| 
 Hardware de montagem em rack
 
@@ -49,7 +49,7 @@ A tabela a seguir identifica os tipos de cabos que você pode receber. Se recebe
 
 
  a| 
-image:../media/cable_ethernet_inst-hw-ef600.png[""]
+image:../media/cable_ethernet_inst-hw-ef600.png["Cabo ethernet RJ-45"]
  a| 
 Cabos Ethernet RJ-45 (se solicitados)
  a| 
@@ -58,7 +58,7 @@ Conexão de gerenciamento
 
 
  a| 
-image:../media/cable_io_inst-hw-ef600.png[""]
+image:../media/cable_io_inst-hw-ef600.png["Cabo de e/S."]
  a| 
 Cabos de e/S (se solicitados)
  a| 
@@ -67,7 +67,7 @@ Cabeamento dos hosts de dados
 
 
  a| 
-image:../media/cable_power_inst-hw-ef600.png[""]
+image:../media/cable_power_inst-hw-ef600.png["Cabos de alimentação"]
  a| 
 Cabos de alimentação (se tiverem sido encomendados)
  a| 
@@ -80,28 +80,28 @@ Ligar o sistema de armazenamento
 
 
  a| 
-image:../media/screwdriver_inst-hw-ef600.png[""]
+image:../media/screwdriver_inst-hw-ef600.png["Chave de fendas Phillips nº 2"]
  a| 
 Chave de fendas Phillips nº 2
 
 
 
  a| 
-image:../media/flashlight_inst-hw-ef600.png[""]
+image:../media/flashlight_inst-hw-ef600.png["Lanterna"]
  a| 
 Lanterna
 
 
 
  a| 
-image:../media/wrist_strap_inst-hw-ef600.png[""]
+image:../media/wrist_strap_inst-hw-ef600.png["Correia ESD"]
  a| 
 Correia ESD
 
 
 
  a| 
-image:../media/2u_rackspace_inst-hw-ef600.png[""]
+image:../media/2u_rackspace_inst-hw-ef600.png["Rack de 2U U"]
  a| 
 2U espaço em rack: Um rack padrão de 19 pol. (48,30 cm) para caber 2U prateleiras das seguintes dimensões.
 
@@ -121,7 +121,7 @@ NOTE: O uso de gabinetes de terceiros pode fazer com que os cabos de alimentaç�
 
 
  a| 
-image:../media/management_station_inst-hw-ef600_g60b3.png[""]
+image:../media/management_station_inst-hw-ef600_g60b3.png["Estação de gerenciamento com navegador compatível para software de gerenciamento"]
  a| 
 Um navegador compatível para o software de gerenciamento:
 

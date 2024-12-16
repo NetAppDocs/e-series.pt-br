@@ -39,14 +39,14 @@ Para os exemplos mostrados, você precisa dos seguintes cabos:
 
 
  a| 
-image:../media/sas_cable.png[""]
+image:../media/sas_cable.png["Cabo SAS"]
  a| 
 *Cabos SAS*
 
 |===
 +
 .Exemplo A: Compartimento de controladora E5700U com três compartimentos de disco DE212C/DE224U em uma configuração SAS padrão.
-image:../media/example_a_28_57.png[""]
+image:../media/example_a_28_57.png["Controladora E5700 em uma configuração SAS"]
 
 +
 .. Controlador de cabo A a IOM a da primeira gaveta de unidades.
@@ -59,7 +59,7 @@ image:../media/example_a_28_57.png[""]
 
 +
 .Exemplo B: Um compartimento de controladora E5700U com um compartimento de disco DE212C/DE224U em uma configuração SAS padrão.
-image:../media/example_b_57_28.png[""]
+image:../media/example_b_57_28.png["Controladora E5700 em uma configuração SAS"]
 
 +
 .. Controlador de cabo A a IOM A..
@@ -75,7 +75,7 @@ Você precisa dos seguintes cabos:
 
 
  a| 
-image:../media/power_cable_inst-hw-e2800-e5700.png[""]
+image:../media/power_cable_inst-hw-e2800-e5700.png["Cabos de alimentação"]
  a| 
 *Cabos de alimentação*
 
@@ -99,7 +99,7 @@ Durante a inicialização, o visor de sete segmentos mostra a sequência de repe
 
 
  a| 
-*Exemplo: As conexões de alimentação estão na parte traseira da prateleira.* image:../media/trafford_power.png[""]
+*Exemplo: As conexões de alimentação estão na parte traseira da prateleira.* image:../media/trafford_power.png["Ligações do compartimento de alimentação"]
 
 |===
 

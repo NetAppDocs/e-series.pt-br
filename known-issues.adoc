@@ -6,11 +6,14 @@ summary: Problemas conhecidos
 ---
 = Notas de lançamento
 :allow-uri-read: 
+:icons: font
+:imagesdir: ./media/
 
 
 [role="lead"]
 Notas de versão estão disponíveis fora deste site. Você será solicitado a fazer login usando suas credenciais do site de suporte da NetApp.
 
+* https://library.netapp.com/ecm/ecm_download_file/ECMLP3334464["11,90 Notas de lançamento"^]
 * https://library.netapp.com/ecm/ecm_download_file/ECMLP2885976["11,80 Notas de lançamento"^]
 * https://library.netapp.com/ecm/ecm_download_file/ECMLP2874254["11,70 Notas de lançamento"^]
 * https://library.netapp.com/ecm/ecm_download_file/ECMLP2857931["11,60 Notas de lançamento"^]

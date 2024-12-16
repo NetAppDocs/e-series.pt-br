@@ -11,7 +11,7 @@ summary: Se você estiver atualizando os controladores E2800 e E5700 e o recurso
 
 
 [role="lead"]
-Se você estiver atualizando os controladores E2800 e E5700, o recurso de Segurança da Unidade para esses controladores bloqueará as unidades parcialmente, externamente ou internamente. Se o recurso Segurança da unidade estiver ativado, você deverá desbloquear manualmente essas unidades.
+O recurso de Segurança da Unidade para esses controladores bloqueará as unidades parcialmente, externamente ou internamente. Se o recurso Segurança da unidade estiver ativado, você deverá desbloquear manualmente essas unidades.
 
 Siga o procedimento apropriado para:
 

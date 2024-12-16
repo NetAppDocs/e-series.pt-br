@@ -111,7 +111,7 @@ CAUTION: Para evitar um desempenho degradado, não torça, dobre, aperte ou pise
 . Confirme se o LED Cache ative na parte de trás do controlador está desligado.
 . Aperte as alças em ambos os lados do controlador e puxe para trás até que ele se solte da prateleira.
 +
-image::../media/remove_controller_5.png[remova o controlador 5]
+image::../media/remove_controller_5.png[Aperte as alças para remover o controlador]
 
 . Utilizando as duas mãos e as pegas, deslize o recipiente do controlador para fora da prateleira. Quando a parte frontal do controlador estiver livre do compartimento, use duas mãos para puxá-lo completamente.
 +
@@ -119,7 +119,7 @@ image::../media/remove_controller_5.png[remova o controlador 5]
 CAUTION: Utilize sempre duas mãos para suportar o peso de um recipiente do controlador.
 
 +
-image::../media/remove_controller_6.png[remova o controlador 6]
+image::../media/remove_controller_6.png[Use duas mãos para suportar o peso do controlador enquanto você remove]
 
 . Coloque o recipiente do controlador numa superfície plana e sem estática.
 
@@ -144,10 +144,10 @@ NOTE: Um entalhe na parte inferior do DIMM ajuda a alinhar o DIMM durante a inst
 
 . Empurre lentamente as duas abas do ejetor DIMM em ambos os lados do DIMM para ejetar o DIMM de seu slot e, em seguida, deslize-o para fora do slot.
 +
-image::../media/dimm_2.png[dimm 2]
+image::../media/dimm_2.png[Pressione as abas do ejetor no slot DIMM]
 
 +
-image::../media/dimim_3.png[dimim 3]
+image::../media/dimim_3.png[Remova a DIMM]
 
 +
 
@@ -183,7 +183,7 @@ NOTE: Inspecione visualmente o DIMM para verificar se ele está alinhado uniform
 NOTE: DIMMs se encaixam firmemente. Talvez seja necessário pressionar suavemente um lado de cada vez e fixar com cada aba individualmente.
 
 +
-image::../media/dimm_5.png[dimm 5]
+image::../media/dimm_5.png[Insira OS DIMMS no slot e fixe-os com abas]
 
 
 
@@ -201,7 +201,7 @@ Depois de instalar os novos DIMMs, reinstale o recipiente do controlador na gave
 NOTE: O controlador clica audivelmente quando instalado corretamente na prateleira.
 
 +
-image::../media/remove_controller_7.png[remova o controlador 7]
+image::../media/remove_controller_7.png[Instale o DIMM no slot do controlador]
 
 . Volte a ligar todos os cabos.
 

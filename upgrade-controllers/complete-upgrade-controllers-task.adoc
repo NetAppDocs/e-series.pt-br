@@ -1,7 +1,7 @@
 ---
 permalink: upgrade-controllers/complete-upgrade-controllers-task.html 
 sidebar: sidebar 
-keywords: E-Series, eseries, E2800, E5700, EF300, EF600, upgrade controller, upgrading controller, vendor ID, upgrade status, upgrade validate 
+keywords: E-Series, eseries, E4000, E2800, E5700, EF300, EF600, upgrade controller, upgrading controller, vendor ID, upgrade status, upgrade validate 
 summary: Concluir a atualização da controladora ligando o compartimento de controladora e validando a versão do software da controladora. Em seguida, você pode coletar dados de suporte e retomar as operações. 
 ---
 = Atualização completa da controladora
@@ -88,7 +88,7 @@ Primeiro, tem de desbloquear as unidades protegidas utilizando o procedimento de
  a| 
 Todas as unidades protegidas, Gerenciamento de chaves externas, você não mudou temporariamente para Gerenciamento de chaves internas para o procedimento de substituição do controlador
  a| 
-Troca de controladora com gerenciamento de chaves externas e todas as unidades protegidas
+Troca de controladora com gerenciamento de chaves externas e todas as unidades protegidas.  https://docs.netapp.com/us-en/e-series/upgrade-controllers/upgrade-unlock-drives-task.html#external-key-management["Gerenciamento de chaves externas"^]Consulte para obter instruções detalhadas.
 
 |===
 
@@ -102,10 +102,10 @@ Você pode usar os LEDs e o software de gerenciamento de armazenamento para veri
 .Passos
 . Olhe para os LEDs no controlador A para se certificar de que ele está inicializando corretamente.
 +
-Os LEDs da Ação de Serviço de ligação ao anfitrião necessária ficam verdes durante a reinicialização. O visor de sete segmentos mostra a sequência os SD blank- para indicar que o controlador está executando o processamento de Início do dia (SOD).
+Os LEDs da Ação de Serviço de ligação ao anfitrião necessária ficam verdes durante a reinicialização.
 
 +
-Depois que o controlador concluir a reinicialização com êxito, o visor de sete segmentos mostra a ID da bandeja correspondente à exibição de sete segmentos no segundo controlador. Em seguida, você pode descobrir o novo recipiente do controlador usando o software de gerenciamento de armazenamento.
+Depois que o controlador concluir com êxito a reinicialização, você poderá descobrir o novo recipiente do controlador usando o software de gerenciamento de armazenamento.
 
 . Se qualquer um dos LEDs de Ação de Serviço da bandeja de unidades e controlador for necessário _ON_, ou se o LED de Ação de Serviço do controlador for _ON_:
 +
@@ -124,12 +124,6 @@ Depois que o controlador concluir a reinicialização com êxito, o visor de set
 Você deve garantir que suas novas controladoras estejam sendo executadas com o nível correto de sistema operacional (firmware da controladora) e NVSRAM.
 
 .Passos
-. Execute um dos seguintes procedimentos:
-+
-** Se você estiver atualizando para controladores que não suportam o SANtricity 11,30 e o firmware da controladora 8,30, verifique se a versão em execução nos novos controladores corresponde à versão que foi executada pela última vez nos controladores originais. Normalmente, esta será a versão mais recente suportada pelos controladores antigos. Se necessário, instale a versão apropriada nos novos controladores.
-** Se você estiver atualizando para controladores que executam o SANtricity 11,30 e o firmware da controladora 8,30, baixe e instale a NVSRAM mais recente depois de ligar os novos controladores.
-
-
 . Se a atualização do controlador envolver uma alteração de protocolo (por exemplo, Fibre Channel para iSCSI) e você já tiver hosts definidos para o storage array, associe as novas portas de host aos hosts:
 +
 .. No System Manager, selecione menu:armazenamento[hosts].
@@ -156,7 +150,7 @@ Para obter informações sobre hardware compatível, consulte a https://mysuppor
 +
 A caixa de diálogo alterar configuração de cache é exibida. Todos os volumes na matriz de armazenamento aparecem nesta caixa de diálogo.
 
-.. Selecione a guia *Basic* e altere as configurações para cache de leitura e cache de gravação.
+.. Selecione a guia *Basic* e ative as configurações para cache de leitura e cache de gravação.
 .. Clique em *Salvar*.
 
 
@@ -168,10 +162,9 @@ A caixa de diálogo alterar configuração de cache é exibida. Todos os volumes
 
 . Colete dados de suporte sobre seu storage array usando a GUI ou a CLI:
 +
-** Use a janela Gerenciamento de matrizes do System Manager ou do Storage Manager para coletar e salvar um pacote de suporte de sua matriz de armazenamento.
+** Use o System Manager para coletar e salvar um pacote de suporte de sua matriz de armazenamento.
 +
 *** A partir do System Manager, selecione menu:Support [Support Center > Diagnostics tab] (Assistência > Centro de suporte > separador Diagnostics). Em seguida, selecione *Collect Support Data* e clique em *Collect*.
-*** Na barra de ferramentas da janela Gerenciamento de matrizes, selecione menu:Monitor[Saúde > coletar dados de suporte manualmente]. Em seguida, insira um nome e especifique um local no sistema onde você deseja armazenar o pacote de suporte.
 +
 O arquivo é salvo na pasta Downloads do navegador com o nome `support-data.7z`.
 
@@ -205,4 +198,4 @@ NOTE: A coleta de dados de suporte pode afetar temporariamente o desempenho em s
 
 
 .O que se segue?
-Se a atualização da controladora resultar na alteração da ID do fornecedor do LSI para O NetApp, vá para link:remount-volumes-lsi-task.html["Remonte os volumes depois de mudar o fornecedor da LSI para A NetApp"]; caso contrário, a atualização da controladora estará concluída e você poderá retomar as operações normais.
+A atualização da controladora está concluída e você pode retomar as operações normais.

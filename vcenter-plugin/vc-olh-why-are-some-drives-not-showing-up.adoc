@@ -10,7 +10,7 @@ summary: Na caixa de diálogo Adicionar capacidade, nem todas as unidades estão
 :nofooter: 
 :icons: font
 :linkattrs: 
-:imagesdir: ./media/
+:imagesdir: ../media/
 
 
 [role="lead"]

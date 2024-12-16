@@ -96,7 +96,7 @@ serviceAllowedIndicator=forceOnWarning;"
 ** Se o comando for bem-sucedido, você não precisará interromper a atividade de e/S do host. Todas as unidades na gaveta estão em pools ou grupos de volume com proteção contra perda de gaveta. Vá para <<Passo 2: Remova as correntes dos cabos>>.
 +
 
-CAUTION: *Possível dano às unidades* -- espere 30 segundos após o comando ser concluído antes de abrir a gaveta da unidade. Esperar 30 segundos permite que as unidades girem para baixo, o que evita possíveis danos ao hardware.
+CAUTION: *Possível dano às unidades* -- espere 60 segundos após o comando ser concluído antes de abrir a gaveta da unidade. Esperar 60 segundos permite que as unidades girem para baixo, o que evita possíveis danos ao hardware.
 
 ** Se um aviso for exibido indicando que esse comando não pôde ser concluído, você deve parar a atividade de e/S do host antes de remover a gaveta. O aviso é exibido porque uma ou mais unidades na gaveta afetada estão em pools ou grupos de volume sem proteção contra perda de gaveta. Para evitar a perda de dados, siga as próximas etapas para interromper a atividade de e/S do host e desligar o compartimento de unidade e o compartimento de controladora.
 
@@ -122,7 +122,7 @@ CAUTION: *Possível perda de dados* -- se você continuar este procedimento enqu
 O LED verde Cache ative na parte de trás de cada controlador fica aceso quando os dados em cache precisam ser gravados nas unidades. Tem de esperar que este LED se desligue.
 
 +
-image::../media/28_dwg_2800_controller_attn_led_maint-e2800.gif[28 dwg 2800 controlador attn led manint e2800]
+image::../media/28_dwg_2800_controller_attn_led_maint-e2800.gif[LED de cache ativo no controlador E2800]
 
 +
 *(1)* _Cache ative LED_
@@ -177,7 +177,7 @@ CAUTION: *Possíveis danos ao hardware* -- se a bandeja da unidade estiver ligad
 A figura mostra o manípulo para o recipiente da ventoinha estendido e libertado da patilha cor-de-laranja à esquerda.
 
 +
-image::../media/28_dwg_e2860_de460c_fan_canister_handle_with_callout_maint-e2800.gif[28 dwg e2860 de460c punho do recipiente do ventilador com a manutenção do callout e2800]
+image::../media/28_dwg_e2860_de460c_fan_canister_handle_with_callout_maint-e2800.gif[Punho do recipiente da ventoinha]
 
 +
 *(1)* _pega do recipiente do ventilador_
@@ -198,7 +198,7 @@ CAUTION: *Possíveis danos ao equipamento devido ao sobreaquecimento* -- se a ba
 A corrente superior do cabo está fixada à gaveta de acionamento 1. A corrente do cabo inferior está fixada à gaveta da unidade 5. As legendas para a gaveta de unidades 1 são fornecidas.
 
 +
-image::../media/trafford_cable_rail_1_maint-e2800.gif[trilho de cabo trafford 1 mint e2800]
+image::../media/trafford_cable_rail_1_maint-e2800.gif[Corrente de cabos e conetores para a gaveta da unidade]
 
 +
 *(1)* _corrente de cabo_
@@ -216,7 +216,7 @@ image::../media/trafford_cable_rail_1_maint-e2800.gif[trilho de cabo trafford 1 
 +
 .. Utilizando uma lanterna, localize o anel laranja na extremidade da corrente do cabo que está ligada ao trilho de guia vertical no compartimento.
 +
-image::../media/trafford_cable_rail_3_maint-e2800.gif[trilho de cabo trafford 3 mint e2800]
+image::../media/trafford_cable_rail_3_maint-e2800.gif[Anel laranja para calha vertical e corrente de cabo para a gaveta da unidade]
 
 +
 *(1)* _anel laranja no trilho de guia vertical_
@@ -235,7 +235,7 @@ image::../media/trafford_cable_rail_3_maint-e2800.gif[trilho de cabo trafford 3 
 A figura mostra o conetor horizontal do lado direito e a corrente do cabo desconetada e parcialmente puxada para fora do lado esquerdo.
 
 +
-image::../media/trafford_cable_rail_2_maint-e2800.gif[trilho de cabo trafford 2 mint e2800]
+image::../media/trafford_cable_rail_2_maint-e2800.gif[Anel laranja para calha horizontal e corrente de cabo para a gaveta da unidade]
 
 +
 *(1)* _anel laranja no trilho de guia horizontal_
@@ -312,7 +312,7 @@ CAUTION: *Possível perda de acesso a dados* -- os campos magnéticos podem dest
 . Utilizando as alavancas estendidas, puxe cuidadosamente a gaveta da unidade para fora até parar. Não remova completamente a gaveta da unidade da prateleira da unidade.
 . Se os volumes já tiverem sido criados e atribuídos, use um marcador permanente para anotar a localização exata de cada unidade. Por exemplo, usando o seguinte desenho como referência, escreva o número de slot apropriado na parte superior de cada unidade.
 +
-image::../media/dwg_trafford_drawer_with_hdds_callouts_maint-e2800.gif[dwg trafford gaveta com legenda hdds manint e2800]
+image::../media/dwg_trafford_drawer_with_hdds_callouts_maint-e2800.gif[Números da ranhura da unidade]
 
 +
 
@@ -324,7 +324,7 @@ CAUTION: **Possível perda de acesso a dados** -- Certifique-se de Registrar a l
 .. Levante a alavanca de acionamento para a vertical.
 .. Utilize a pega para levantar a unidade da gaveta da unidade.
 +
-image::../media/92_dwg_de6600_install_or_remove_drive_maint-e2800.gif[92 dwg de6600 instalar ou remover a manutenção da unidade e2800]
+image::../media/92_dwg_de6600_install_or_remove_drive_maint-e2800.gif[Utilize a pega do came para levantar a unidade da gaveta]
 
 .. Coloque a unidade numa superfície plana e livre de estática e afastada de dispositivos magnéticos.
 
@@ -333,7 +333,7 @@ image::../media/92_dwg_de6600_install_or_remove_drive_maint-e2800.gif[92 dwg de6
 +
 .. Localize a alavanca de liberação de plástico em cada lado da gaveta da unidade.
 +
-image::../media/92_pht_de6600_drive_drawer_release_lever_maint-e2800.gif[92 tampa da alavanca de libertação da gaveta da unidade pht de6600 e2800]
+image::../media/92_pht_de6600_drive_drawer_release_lever_maint-e2800.gif[Solte a alavanca para remover a gaveta]
 
 +
 *(1)* _alavanca de liberação da gaveta da unidade_
@@ -357,7 +357,7 @@ Instale uma nova gaveta de unidade para substituir a que falhou.
 O conjunto de patilha de bloqueio é um recurso de segurança que impede que você seja capaz de abrir mais de uma gaveta de unidade de cada vez.
 
 +
-image::../media/92_pht_de6600_lock_out_tumbler_detail_maint-e2800.gif[92 pht de6600 bloqueio tumbler detalhe manint e2800]
+image::../media/92_pht_de6600_lock_out_tumbler_detail_maint-e2800.gif[Patilha de bloqueio e guia da gaveta]
 
 +
 *(1)* _patilha de bloqueio_
@@ -419,7 +419,7 @@ CAUTION: *Risco de avaria do equipamento* -- Certifique-se de que desliza o cone
 A figura mostra os trilhos de guia horizontais e verticais para a segunda gaveta da unidade no compartimento.
 
 +
-image::../media/2860_dwg_both_guide_rails_maint-e2800.gif[2860 dwg ambos os trilhos guia manint e2800]
+image::../media/2860_dwg_both_guide_rails_maint-e2800.gif[Guias horizontais e verificáveis]
 
 +
 *(1)* _trilho de guia horizontal_
@@ -491,7 +491,7 @@ CAUTION: * Possível perda de acesso a dados * - você deve instalar cada unidad
 .. Utilizando as alavancas estendidas, puxe cuidadosamente a gaveta da unidade para fora até parar. Não remova completamente a gaveta da unidade da prateleira da unidade.
 .. Determine qual unidade instalar em cada slot usando as notas feitas ao remover as unidades.
 +
-image::../media/dwg_trafford_drawer_with_hdds_callouts_maint-e2800.gif[dwg trafford gaveta com legenda hdds manint e2800]
+image::../media/dwg_trafford_drawer_with_hdds_callouts_maint-e2800.gif[Números da ranhura da unidade]
 
 .. Levante a pega da unidade para a vertical.
 .. Alinhe os dois botões levantados em cada lado da unidade com os entalhes na gaveta.
@@ -499,14 +499,14 @@ image::../media/dwg_trafford_drawer_with_hdds_callouts_maint-e2800.gif[dwg traff
 A figura mostra a vista do lado direito de uma unidade, mostrando a localização dos botões levantados.
 
 +
-image::../media/28_dwg_e2860_de460c_drive_cru_maint-e2800.gif[28 dwg e2860 de460c drive cru manut e2800]
+image::../media/28_dwg_e2860_de460c_drive_cru_maint-e2800.gif[O botão levantado no suporte da unidade deve corresponder ao canal da unidade na gaveta da unidade]
 
 +
 *(1)* _botão levantado no lado direito da unidade_
 
 .. Baixe a unidade em linha reta para baixo, certificando-se de que a unidade é pressionada totalmente para baixo no compartimento e, em seguida, gire a alça da unidade para baixo até que a unidade se encaixe no lugar.
 +
-image::../media/92_dwg_de6600_install_or_remove_drive_maint-e2800.gif[92 dwg de6600 instalar ou remover a manutenção da unidade e2800]
+image::../media/92_dwg_de6600_install_or_remove_drive_maint-e2800.gif[Utilize a pega para baixar a unidade na gaveta]
 
 .. Repita estes passos para instalar todas as unidades.
 

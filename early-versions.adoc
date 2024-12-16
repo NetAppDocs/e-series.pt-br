@@ -6,6 +6,8 @@ summary: Versões anteriores da documentação
 ---
 = Versões anteriores
 :allow-uri-read: 
+:icons: font
+:imagesdir: ./media/
 
 
 [role="lead"]
@@ -23,11 +25,20 @@ Confira os links abaixo para acessar a documentação de versões anteriores do 
 * https://mysupport.netapp.com/ecm/ecm_download_file/ECMP1394872["Adicione o segundo controlador ao E2600 e ao E2700"^]
 * https://library.netapp.com/ecm/ecm_download_file/ECMLP2353447["Alterar ou adicionar protocolos de host"^]
 * https://mysupport.netapp.com/ecm/ecm_download_file/ECMP1656638["Converter de alimentação CA para CC"^]
+* https://library.netapp.com/ecm/ecm_download_file/ECMLP2589397["Guia de atualização do controlador - modelos de controlador antigos"^]
 
 
 
 
 == Documentação de software para versões anteriores
+
+
+
+=== SANtricity versão 11,8
+
+* https://docs.netapp.com/us-en/e-series-santricity-118/index.html["Ajuda do System Manager"^]
+* https://docs.netapp.com/us-en/e-series-santricity-118/index.html["Ajuda do Unified Manager"^]
+
 
 
 

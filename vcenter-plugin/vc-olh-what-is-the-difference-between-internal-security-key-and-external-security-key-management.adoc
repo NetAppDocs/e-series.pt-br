@@ -10,7 +10,7 @@ summary: Ao implementar o recurso Segurança da unidade, você pode usar uma cha
 :nofooter: 
 :icons: font
 :linkattrs: 
-:imagesdir: ./media/
+:imagesdir: ../media/
 
 
 [role="lead"]

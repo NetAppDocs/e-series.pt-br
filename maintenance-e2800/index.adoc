@@ -11,40 +11,58 @@ summary: Efectue a manutenção nos componentes E2800.
 
 
 [role="lead"]
+Talvez seja necessário executar procedimentos de manutenção no hardware. Os procedimentos específicos para a manutenção dos componentes do sistema E2800 estão nesta seção.
+
+Os procedimentos nesta seção pressupõem que o sistema E2800 já foi implantado no ambiente e-Series.
+
+
+
+== Componentes do sistema
+
 Para o sistema de armazenamento E2800, pode executar procedimentos de manutenção nos seguintes componentes.
 
+[cols="25,65"]
+|===
 
 
-== Baterias
-
+ a| 
+https://docs.netapp.com/us-en/e-series/maintenance-e2800/batteries-overview-requirements-concept.html["Baterias"]
+ a| 
 Cada recipiente do controlador inclui uma bateria que preserva os dados armazenados em cache se a energia CA falhar.
 
 
 
-== Controladores
-
+ a| 
+https://docs.netapp.com/us-en/e-series/maintenance-e2800/controllers-overview-supertask-concept.html["Controladores"]
+ a| 
 Um controlador consiste em uma placa, firmware e software. Controla as unidades e implementa as funções do System Manager.
 
 
 
-== Canisters
-
+ a| 
+https://docs.netapp.com/us-en/e-series/maintenance-e2800/canisters-overview-supertask-concept.html["Canisters"]
+ a| 
 Os coletores consistem em três tipos diferentes: Coletores de ventilador de energia (fontes de alimentação) que fornecem uma fonte de alimentação redundante e resfriamento adequado em um compartimento de controladora de 12 ou 24 unidades ou compartimento de unidades; coletores de energia usados para redundância de energia em um compartimento de controladora de 60 unidades ou compartimento de unidades; e coletores de ventilador usados para resfriamento do compartimento de controladora de 60 unidades ou compartimento de unidades.
 
 
 
-== Unidades
-
+ a| 
+https://docs.netapp.com/us-en/e-series/maintenance-e2800/drives-overview-supertask-concept.html["Unidades"]
+ a| 
 Uma unidade é um dispositivo mecânico eletromagnético que fornece o meio de armazenamento físico para os dados.
 
 
 
-== Placas de interface de host (HICs)
-
+ a| 
+https://docs.netapp.com/us-en/e-series/maintenance-e2800/hics-overview-supertask-concept.html["Placas de interface de host (HICs)"]
+ a| 
 Uma placa de interface de host (HIC) pode ser instalada opcionalmente dentro de um recipiente de controlador. O controlador E2800 inclui portas de host integradas na própria placa controladora, bem como portas de host no HIC opcional. As portas de host que são incorporadas ao controlador são chamadas portas de host de placa base. As portas de host que são incorporadas ao HIC são chamadas portas HIC.
 
 
 
-== Protocolo de porta de host
-
+ a| 
+https://docs.netapp.com/us-en/e-series/maintenance-e2800/hpp-overview-supertask-concept.html["Protocolo de porta de host"]
+ a| 
 Você pode converter o protocolo de um host para um protocolo diferente para que a compatibilidade e a comunicação possam ser estabelecidas.
+
+|===

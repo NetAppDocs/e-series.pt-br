@@ -27,7 +27,7 @@ As figuras mostram como as unidades são numeradas em cada tipo de prateleira (o
 
 *Número de unidades em um compartimento de controladora E5724 ou compartimento de unidades DE224C*
 
-image::../media/28_dwg_e2824_de224c_drive_numbering_maint-e5700.gif[28 dwg e2824 de224c unidade numeração manint e5700]
+image::../media/28_dwg_e2824_de224c_drive_numbering_maint-e5700.gif[Numeração de DE224C unidades]
 
 
 NOTE: Seu storage array do E5724 pode incluir uma ou mais bandejas de unidades de expansão herdadas SAS-2, incluindo a bandeja de DE5600 24 unidades ou a bandeja de DE6600 60 unidades Para obter instruções para substituir uma unidade em uma dessas bandejas de unidades, consulte link:https://mysupport.netapp.com/ecm/ecm_download_file/ECMLP2577975["Substituição de uma unidade nas bandejas de unidades E2660, E2760, E5460, E5560 ou E5660"] e link:https://library.netapp.com/ecmdocs/ECMLP2577971/html/GUID-E9157E41-F4BF-4237-9454-F1C9145247F0.html["Substituição de uma unidade nas bandejas de E2600, E2700, E5400, E5500 e E5600 12 unidades ou 24 unidades"].
@@ -38,11 +38,11 @@ NOTE: Seu storage array do E5724 pode incluir uma ou mais bandejas de unidades d
 
 O compartimento de controladora E5760 e o compartimento de unidade DE460C consistem em cinco gavetas de unidade que contêm 12 slots de unidade. A gaveta de unidades 1 está na parte superior e a gaveta de unidades 5 está na parte inferior.
 
-image::../media/28_dwg_e2860_de460c_front_no_callouts_maint-e5700.gif[28 dwg e2860 de460c frente sem legenda-maint e5700]
+image::../media/28_dwg_e2860_de460c_front_no_callouts_maint-e5700.gif[DE460C gaveta de unidades]
 
 Para uma gaveta do compartimento de controladora E5760 e uma gaveta do compartimento de unidades DE460C, as unidades são numeradas de 0 a 11 em cada gaveta de unidades dentro da gaveta.
 
-image::../media/dwg_trafford_drawer_with_hdds_callouts_maint-e5700.gif[dwg trafford gaveta com legenda hdds manint e5700]
+image::../media/dwg_trafford_drawer_with_hdds_callouts_maint-e5700.gif[Numeração da unidade]
 
 
 NOTE: O storage array do E5760 pode incluir uma ou mais bandejas de unidades de expansão herdadas SAS-2, incluindo a bandeja de DE1600 12 unidades, a bandeja de DE5600 24 unidades ou a bandeja de DE6600 60 unidades Para obter instruções para substituir uma unidade em uma dessas bandejas de unidades, consulte link:https://mysupport.netapp.com/ecm/ecm_download_file/ECMLP2577975["Substituição de uma unidade nas bandejas de unidades E2660, E2760, E5460, E5560 ou E5660"] e link:https://library.netapp.com/ecmdocs/ECMLP2577971/html/GUID-E9157E41-F4BF-4237-9454-F1C9145247F0.html["Substituição de uma unidade nas bandejas de E2600, E2700, E5400, E5500 e E5600 12 unidades ou 24 unidades"].
@@ -53,11 +53,11 @@ NOTE: O storage array do E5760 pode incluir uma ou mais bandejas de unidades de 
 
 Você pode substituir uma gaveta de unidades em um compartimento de controladora E5760 e um compartimento de unidades de DE460C TB. Cada uma dessas gavetas de 60 unidades tem cinco gavetas de unidade.
 
-image::../media/28_dwg_e2860_de460c_front_no_callouts_maint-e5700.gif[28 dwg e2860 de460c frente sem legenda-maint e5700]
+image::../media/28_dwg_e2860_de460c_front_no_callouts_maint-e5700.gif[DE460C gaveta de unidades]
 
 Cada uma das cinco gavetas pode conter até 12 unidades.
 
-image::../media/92_dwg_de6600_drawer_with_hdds_no_callouts_maint-e5700.gif[92 dwg de6600 gaveta com hdds sem legenda-maint e5700]
+image::../media/92_dwg_de6600_drawer_with_hdds_no_callouts_maint-e5700.gif[Gaveta da unidade]
 
 
 
@@ -88,7 +88,7 @@ Se uma correia de pulso não estiver disponível, toque numa superfície não pi
 ** Nunca force uma unidade para dentro de uma prateleira e utilize uma pressão suave e firme para engatar completamente o trinco da unidade.
 ** Coloque as unidades em superfícies almofadadas e nunca empilhe as unidades umas sobre as outras.
 ** Não bata as transmissões contra outras superfícies.
-** Antes de remover uma unidade de uma gaveta, solte a alça e aguarde 30 segundos para que a unidade gire para baixo.
+** Antes de remover uma unidade de uma gaveta, solte a alça e aguarde 60 segundos para que a unidade gire para baixo.
 ** Utilize sempre embalagens aprovadas ao enviar unidades.
 
 

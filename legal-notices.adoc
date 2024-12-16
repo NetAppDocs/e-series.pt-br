@@ -50,4 +50,4 @@ link:https://www.netapp.com/company/legal/privacy-policy/["https://www.netapp.co
 
 Os arquivos de aviso fornecem informações sobre direitos autorais de terceiros e licenças usadas no software NetApp.
 
-https://library.netapp.com/ecm/ecm_download_file/ECMLP2885978["Aviso para o e-Series/EF-Series SANtricity os"]
+https://library.netapp.com/ecm/ecm_download_file/ECMLP3334467["Aviso para o e-Series/EF-Series SANtricity os"]

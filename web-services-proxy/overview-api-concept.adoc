@@ -19,7 +19,7 @@ Na API Web Services, as comunicações HTTP envolvem um ciclo de resposta de sol
 
 Independentemente da linguagem de programação ou ferramenta usada, cada chamada para a API de Serviços Web tem uma estrutura semelhante, com um URL, verbo HTTP e um cabeçalho aceitar.
 
-image::../media/web_services_proxy_api.gif[api de proxy de serviços da web]
+image::../media/web_services_proxy_api.gif[Diagrama de chamadas da API de serviços Web]
 
 Todas as solicitações incluem um URL, como no exemplo a seguir, e contêm os elementos descritos na tabela.
 

@@ -10,7 +10,7 @@ summary: Durante a operação Importar configurações, alguns dos storages de a
 :nofooter: 
 :icons: font
 :linkattrs: 
-:imagesdir: ./media/
+:imagesdir: ../media/
 
 
 [role="lead"]

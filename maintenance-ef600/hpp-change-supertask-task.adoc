@@ -27,7 +27,7 @@ Para obter a chave do pacote de recursos, é necessário o número de série do 
 .. Com a guia *Support Resources* selecionada, role até a seção *View top storage array Properties*.
 .. Localize o *número de série do chassi* e copie esse valor para um arquivo de texto.
 +
-image::../media/sam1130_ss_e2800_storage_array_profile_sn_smid_copy_maint-ef600.gif[sam1130 ss e2800 storage array profile sn smid copy mint ef600]
+image::../media/sam1130_ss_e2800_storage_array_profile_sn_smid_copy_maint-ef600.gif[Número de série do chassis]
 
 
 
@@ -39,7 +39,7 @@ image::../media/sam1130_ss_e2800_storage_array_profile_sn_smid_copy_maint-ef600.
 .. Digite *ID do submodelo do pacote de recursos* na caixa de texto e clique em *Localizar*.
 .. Localize a ID do submodelo do pacote de recursos para a configuração inicial.
 +
-image::../media/storage_array_profile2_maint-ef600.gif[storage array profile2 manint ef600]
+image::../media/storage_array_profile2_maint-ef600.gif[Perfil do storage array]
 
 
 
@@ -596,7 +596,7 @@ NOTE: Se o ID do submodelo do controlador não estiver listado, https://mysuppor
 .. Em *Change Feature Pack*, localize o *Feature Enable Identifier*.
 .. Copie e cole esse número de 32 dígitos em um arquivo de texto.
 +
-image::../media/sam1130_ss_e2800_change_feature_pack_feature_enable_identifier_copy_maint-ef600.gif[sam1130 ss e2800 alterar o recurso de pacote de recursos ativar cópia do identificador ef600]
+image::../media/sam1130_ss_e2800_change_feature_pack_feature_enable_identifier_copy_maint-ef600.gif[Caixa de diálogo Change Feature Pack]
 
 
 
@@ -652,7 +652,7 @@ Altere o pacote de recursos para converter o protocolo de host de suas portas de
 . No Gerenciador do sistema SANtricity, selecione menu:Configurações[sistema].
 . Em *Add-ons*, selecione *Change Feature Pack*.
 +
-image::../media/sam1130_ss_system_change_feature_pack_maint-ef600.gif[sam1130 ss troca do sistema manut pack de funcionalidades ef600]
+image::../media/sam1130_ss_system_change_feature_pack_maint-ef600.gif[Alterar o pacote de funcionalidades]
 
 . Clique em *Procurar* e, em seguida, selecione o pacote de funcionalidades que pretende aplicar.
 . Digite *Change* no campo.

@@ -10,7 +10,7 @@ summary: Você precisa criar um cluster de host se quiser que dois ou mais hosts
 :nofooter: 
 :icons: font
 :linkattrs: 
-:imagesdir: ./media/
+:imagesdir: ../media/
 
 
 [role="lead"]

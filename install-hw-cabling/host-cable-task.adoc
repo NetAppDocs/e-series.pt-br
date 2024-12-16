@@ -22,9 +22,12 @@ Uma topologia com conexão direta conecta os adaptadores de host diretamente aos
 A figura a seguir mostra um exemplo de conexão. Para ajudar a garantir o máximo desempenho, use todas as portas de adaptador de host disponíveis.
 
 .Dois hosts e dois controladores
-image::../media/topology_host_direct_generic_web_low.png[topologia host direto da web genérica baixa]
+image::../media/topology_host_direct_generic_web_low.png[Dois hosts e dois cabeamento de controladores]
 
 *(1)* _Conete cada porta do adaptador de host diretamente às portas do host nos controladores._
+
+
+NOTE: Para o E4000, conete-se às portas de host e0a e e0b.
 
 
 
@@ -35,8 +38,11 @@ A topologia do switch usa switches para conectar hosts aos controladores no sist
 A figura a seguir mostra um exemplo de conexão. Para switches que fornecem funcionalidade de provisionamento, você deve isolar cada iniciador e par de destino.
 
 .Dois hosts e dois switches
-image::../media/topology_host_fabric_generic.png[topologia de host fabric genérico]
+image::../media/topology_host_fabric_generic.png[Cabeamento de dois hosts e dois switches]
 
 *(1)* _Conete cada adaptador de host diretamente ao switch._
 
 *(2)* _Conete cada switch diretamente às portas do host nos controladores. Para ajudar a garantir o máximo desempenho, use todas as portas de adaptador de host disponíveis._
+
+
+NOTE: Para o E4000, conete-se às portas de host e0a e e0b.

@@ -13,4 +13,4 @@ summary: Reveja o processo de instalação e configuração de um EF300 ou EF600
 [role="lead"]
 Antes de instalar e configurar o novo sistema de armazenamento, familiarize-se com o processo de instalação:
 
-image::../media/ef600_isi_workflow_v_2_inst-hw-ef600.bmp[ef600 fluxo de trabalho isi v 2 inst hw ef600]
+image::../media/ef600_isi_workflow_v_2_inst-hw-ef600.bmp[Fluxo de trabalho do processo de instalação EF600 e EF300]

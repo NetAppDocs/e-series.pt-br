@@ -11,7 +11,7 @@ summary: Exclua um ou mais volumes para aumentar a capacidade livre de um pool o
 :nofooter: 
 :icons: font
 :linkattrs: 
-:imagesdir: ./media/
+:imagesdir: ../media/
 
 
 [role="lead"]

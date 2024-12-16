@@ -10,7 +10,7 @@ summary: Para maximizar o desempenho de um grupo de volumes, você deve selecion
 :nofooter: 
 :icons: font
 :linkattrs: 
-:imagesdir: ./media/
+:imagesdir: ../media/
 
 
 [role="lead"]
