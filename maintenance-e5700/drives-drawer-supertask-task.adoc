@@ -76,14 +76,14 @@ local:
 ** `array_password` é a palavra-passe para a matriz de armazenamento. Você deve incluir o valor para array_password em aspas duplas ("").
 ** `[trayID]` é o identificador do compartimento de unidades que contém a gaveta de unidades que você deseja substituir. Os valores de ID do compartimento de unidades são de 0 a 99. Você deve incluir o valor `trayID` entre parênteses retos.
 ** `[drawerID]` é o identificador da gaveta da unidade que você deseja substituir. Os valores de ID da gaveta são 1 (gaveta superior) a 5 (gaveta inferior). Você deve incluir o valor `drawerID` entre parênteses retos. Esse comando garante que você possa remover a gaveta mais alta no compartimento de unidades 10:
-
-
 +
 [listing]
 ----
 SMcli <ctlr_IP1\> -p "safety-1" -c "set tray [10] drawer [1]
 serviceAllowedIndicator=forceOnWarning;"
 ----
+
+
 . Determine se você precisa interromper a atividade de e/S do host, da seguinte forma:
 +
 ** Se o comando for bem-sucedido, você não precisará interromper a atividade de e/S do host. Todas as unidades na gaveta estão em pools ou grupos de volume com proteção contra perda de gaveta. Vá para <<Passo 2: Remova as correntes dos cabos>>.

@@ -306,17 +306,14 @@ CAUTION: *Possíveis danos ao hardware* -- a flange metálica na parte frontal d
 
 +
 ** *Correto* -- a flange de metal da bateria está completamente inserida na ranhura do controlador:
-
-
 +
 image:../media/28_dwg_e2800_battery_flange_ok_maint-e2800.gif["Corrija a flange metálica"]
 
-+
 ** *Incorreto* -- a flange metálica da bateria não está inserida na ranhura do controlador:
-
-
 +
 image:../media/28_dwg_e2800_battery_flange_not_ok_maint-e2800.gif["Flange metálica incorreta"]
+
+
 
 
 

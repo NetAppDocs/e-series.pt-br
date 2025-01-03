@@ -15,15 +15,15 @@ Use os links abaixo para acessar a documentação que descreve como configurar, 
 
 
 
-== Ajuda online para o System Manager 11,7
+== Ajuda online para System Manager
 
-Acesse o https://docs.netapp.com/us-en/e-series-santricity/system-manager/index.html["Ajuda online do Gestor de sistema SANtricity 11,7"^], onde você pode encontrar informações sobre como Planejar, configurar, gerenciar e solucionar problemas do storage array.
+Acesse o https://docs.netapp.com/us-en/e-series-santricity/system-manager/index.html["Ajuda online do Gestor de sistema SANtricity"^], onde você pode encontrar informações sobre como Planejar, configurar, gerenciar e solucionar problemas do storage array.
 
 
 
-== Ajuda online para o Unified Manager 5
+== Ajuda on-line do Unified Manager
 
-Acesse o https://docs.netapp.com/us-en/e-series-santricity/unified-manager/index.html["Ajuda online do SANtricity Unified Manager 5"^], onde você pode aprender a executar comandos de gerenciamento de armazenamento em vários storages de armazenamento de rede.
+Acesse o https://docs.netapp.com/us-en/e-series-santricity/unified-manager/index.html["Ajuda online do SANtricity Unified Manager"^], onde você pode aprender a executar comandos de gerenciamento de armazenamento em vários storages de armazenamento de rede.
 
 
 

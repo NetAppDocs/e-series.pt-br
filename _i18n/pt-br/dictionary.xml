@@ -4924,27 +4924,17 @@
   <block id="e4005cc04ad30971023ff0ce6398ae8e" category="list-text">Os controladores EF300 podem ter uma placa de expansão SAS instalada na porta 1 para permitir a expansão da bandeja de unidades.</block>
   <block id="f54101aa6702c025c4f74ec5ada7bae3" category="summary">Gerenciar o storage</block>
   <block id="14ad3096f7edeb7d23e22e3ab3539e0f" category="paragraph">Use os links abaixo para acessar a documentação que descreve como configurar, gerenciar e monitorar objetos de storage e sistemas de storage e-Series. Os links levam você a um site de documentação diferente.</block>
-  <block id="55b9698df8d5ce238fd672cacb45db33" category="section-title">Ajuda online para o System Manager 11,7</block>
-  <block id="bb0f94cdcadb9a7fe9605a5b5978bc9f" category="inline-link">Ajuda online do Gestor de sistema SANtricity 11,7</block>
-  <block id="ff584d910a943e131a1a33c07ee376cf" category="paragraph">Acesse o<block ref="4f3037dfe9e12b0599983cd81724b08c" category="inline-link-rx"></block>, onde você pode encontrar informações sobre como Planejar, configurar, gerenciar e solucionar problemas do storage array.</block>
-  <block id="08bdf5ba02a44ea1089a7356e56323d3" category="section-title">Ajuda online para o Unified Manager 5</block>
-  <block id="d9b69b9cb75561d821d13badf467853f" category="inline-link">Ajuda online do SANtricity Unified Manager 5</block>
-  <block id="a9a112f936967fe8b7a02587778320ab" category="paragraph">Acesse o<block ref="777f091bde7329e4b8f42b44c5184089" category="inline-link-rx"></block>, onde você pode aprender a executar comandos de gerenciamento de armazenamento em vários storages de armazenamento de rede.</block>
   <block id="6e8602d76e9fef34df4842cd3e73e25b" category="section-title">Referência do comando</block>
   <block id="173fec560797244d437c91da004ea89c" category="paragraph">Acesse o<block ref="60cc209e7041626253d52f9b6ac8557b" category="inline-link-rx"></block>, onde você pode aprender a configurar e monitorar seus storage arrays usando comandos de interface de linha de comando (CLI).</block>
   <block id="4fca16c33bb8244a7b60dd7da4eec715" category="doc">Navegue pelos relatórios técnicos da plataforma</block>
   <block id="775ecf6ed5e3db61059ce09b5b398110" category="section-title">Plataforma TRs</block>
   <block id="a28b8b732f1d7a87c511f615fe886bc4" category="inline-link">*TR-4725: Visão geral dos storages E2800*</block>
-  <block id="fac7424958d70cf4f8d849fb90db1f68" category="cell"><block ref="fac7424958d70cf4f8d849fb90db1f68" category="inline-link-rx"></block></block>
   <block id="16ee0112605f5c7f44d31ab4fb0f7c73" category="inline-link">TR-4724: Os storages E5700 apresentam visão geral</block>
-  <block id="cdbe326a711e037f4bddbe4b226edfa6" category="cell"><block ref="cdbe326a711e037f4bddbe4b226edfa6" category="inline-link-rx"></block></block>
   <block id="346bfe6c5f1a40af18c578c446b216aa" category="inline-link">TR-4877: Os storages EF300 apresentam visão geral</block>
-  <block id="ca74b797e6d3bd7c698dff9a991616e6" category="cell"><block ref="ca74b797e6d3bd7c698dff9a991616e6" category="inline-link-rx"></block></block>
   <block id="c3bad4531ac09819ae11c8f1eef46379" category="cell">Descreve os recursos de hardware e software do array híbrido E2800 e os recursos mais recentes do SANtricity os.</block>
   <block id="170c5373a5aea2b6d6daa41c328182fc" category="cell">Descreve as informações do produto E5700, incluindo novos recursos de hardware e software introduzidos com a versão mais recente do SANtricity.</block>
   <block id="6bf4f338106e6cad43fd2f2fecfcaafa" category="cell">Descreve os recursos de hardware e software do array all-flash EF300 e os novos recursos do SANtricity os.</block>
   <block id="f3a3500a11e0c13b98d7092f5af6a6c7" category="inline-link">*TR-4800: Visão geral dos storages EF600*</block>
-  <block id="567d596a04a1bf27275d8aa991230778" category="cell"><block ref="567d596a04a1bf27275d8aa991230778" category="inline-link-rx"></block></block>
   <block id="6b4552e99c78bda589322e0594a1d89b" category="cell">Descreve os recursos de hardware e software do array all-flash EF600 e os novos recursos do SANtricity os.</block>
   <block id="d4f48db40cc9ccb47737f1fc78496e37" category="summary">Monte o hardware em rack.</block>
   <block id="bd0b9fd60ba60fb26f0df0fcd090ce57" category="paragraph">Use os links abaixo para acessar a documentação que descreve como instalar o hardware de montagem em rack.</block>
@@ -9461,4 +9451,15 @@
   <block id="7dca1699f8152d82864de292753389fc" category="sidebar">Substitua a gaveta da unidade (4060)</block>
   <block id="676d3cbad89c6a95fe470771db65cfaa" category="sidebar">Atualize HIC</block>
   <block id="f1de52c9b2e0108b121235152081f684" category="sidebar">Substituir HIC com falha</block>
+  <block id="54941a8cb8785fb145b01e1bb947b67f" category="section-title">Ajuda online para System Manager</block>
+  <block id="a4cf386ebe9065ef38c507aa0138fca1" category="inline-link">Ajuda online do Gestor de sistema SANtricity</block>
+  <block id="022c96b1591a4fe3fe2e854b113c6c33" category="paragraph">Acesse o<block ref="4060ff1e62df840ae8eeaa66b7bc4ef3" category="inline-link-rx"></block>, onde você pode encontrar informações sobre como Planejar, configurar, gerenciar e solucionar problemas do storage array.</block>
+  <block id="68b5d7bbc938636a6430a66ddd3590d0" category="section-title">Ajuda on-line do Unified Manager</block>
+  <block id="703be4c8c3307cd5e44163a39538eb58" category="inline-link">Ajuda online do SANtricity Unified Manager</block>
+  <block id="4c0bdc96ec6314c064f33faae57a0c02" category="paragraph">Acesse o<block ref="d6978b00f819ec3b99c59933f313d81f" category="inline-link-rx"></block>, onde você pode aprender a executar comandos de gerenciamento de armazenamento em vários storages de armazenamento de rede.</block>
+  <block id="5b4f9cf27402df2737b167e7393669c2" category="cell"><block ref="5b4f9cf27402df2737b167e7393669c2" category="inline-link-rx"></block></block>
+  <block id="034410ce2cd58a6a56e6772fadec879b" category="cell"><block ref="034410ce2cd58a6a56e6772fadec879b" category="inline-link-rx"></block></block>
+  <block id="6c33c8a01a7b3f83682789dc2c3e0a6e" category="cell"><block ref="6c33c8a01a7b3f83682789dc2c3e0a6e" category="inline-link-rx"></block></block>
+  <block id="ec476342469d41cbc06b7065ffea021e" category="cell"><block ref="ec476342469d41cbc06b7065ffea021e" category="inline-link-rx"></block></block>
+  <block id="ba463c26bea3a95ca7381fd32b63eb98" category="sidebar">Folha de dados E4000</block>
 </blocks>

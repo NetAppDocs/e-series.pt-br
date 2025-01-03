@@ -48,10 +48,10 @@ CAUTION: Uma prateleira vazia pesa 253,33 lb (114,91 kg). Um elevador mecanizado
 +
 .. Se levantar a prateleira manualmente, fixe as quatro pegas de elevação. Empurre cada alça para cima até que ela se encaixe no lugar.
 .. Apoiando a prateleira de baixo, deslize-a para dentro do gabinete. Se as pegas de elevação forem utilizadas, retire-as um conjunto de cada vez, à medida que a prateleira desliza para dentro do armário. Para remover as pegas, puxe para trás o trinco de desbloqueio, empurre-o para baixo e, em seguida, puxe-o para fora da prateleira.
-
-
 +
 image:../media/4_person_lift_source.png["Elevador para quatro pessoas"]
+
+
 
 . Fixe a prateleira.
 +

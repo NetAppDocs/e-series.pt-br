@@ -51,10 +51,10 @@ Prenda a prateleira ao rack conforme indicado na link:../rackmount-hardware.html
 +
 .. Insira os parafusos no primeiro e no terceiro orifícios da parte superior da prateleira de ambos os lados para prendê-la à parte frontal do gabinete.
 .. Coloque dois suportes traseiros em cada lado da secção traseira superior da prateleira. Insira os parafusos no primeiro e terceiro orifícios de cada suporte para fixar a parte traseira do gabinete.
-
-
 +
 image:../media/trafford_secure.png["Prenda a prateleira ao rack"]
+
+
 
 . Instale a moldura ou as tampas da extremidade.
 +
