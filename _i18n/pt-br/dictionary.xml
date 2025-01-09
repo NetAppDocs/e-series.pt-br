@@ -9462,4 +9462,6 @@
   <block id="6c33c8a01a7b3f83682789dc2c3e0a6e" category="cell"><block ref="6c33c8a01a7b3f83682789dc2c3e0a6e" category="inline-link-rx"></block></block>
   <block id="ec476342469d41cbc06b7065ffea021e" category="cell"><block ref="ec476342469d41cbc06b7065ffea021e" category="inline-link-rx"></block></block>
   <block id="ba463c26bea3a95ca7381fd32b63eb98" category="sidebar">Folha de dados E4000</block>
+  <block id="b30b3ed54d36ae2fd1e5c231ba1b18c0" category="list-text">Confirme se os LEDs Cache ative na parte traseira do controlador e na placa frontal do controlador estão desligados.</block>
+  <block id="53ec2a2a971455f492adc2f07e6c780d" category="paragraph">Se qualquer LED estiver ligado, o controlador ainda está a utilizar a alimentação da bateria. Todos os LEDs devem estar desligados antes de continuar com este procedimento.</block>
 </blocks>

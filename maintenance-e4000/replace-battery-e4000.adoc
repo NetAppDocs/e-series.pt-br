@@ -186,7 +186,10 @@ Certifique-se de que tem o seguinte:
 CAUTION: Para evitar um desempenho degradado, não torça, dobre, aperte ou pise nos cabos.
 
 . Se as portas do host no canister do controlador usarem transcetores SFP, deixe-as instaladas.
-. Confirme se o LED Cache ative na parte de trás do controlador está desligado.
+. Confirme se os LEDs Cache ative na parte traseira do controlador e na placa frontal do controlador estão desligados.
++
+Se qualquer LED estiver ligado, o controlador ainda está a utilizar a alimentação da bateria. Todos os LEDs devem estar desligados antes de continuar com este procedimento.
+
 . Aperte o trinco na pega do excêntrico até que este se solte, abra totalmente a pega do excêntrico para libertar o recipiente do controlador do plano médio e, em seguida, utilizando duas mãos, puxe o recipiente do controlador até meio do chassis.
 
 
