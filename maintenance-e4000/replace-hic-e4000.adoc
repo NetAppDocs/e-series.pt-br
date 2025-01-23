@@ -240,6 +240,10 @@ image::../media/drw_E4000_replace_HIC_source_IEOPS-864.png[Remova o HIC e a plac
 +
 .. Retire a placa frontal do HIC deslizando-a diretamente para fora do módulo do controlador.
 .. Desaperte os parafusos de aperto manual do HIC e levante-os para cima.
++
+
+NOTE: Se estiver usando os dedos para soltar o parafuso de aperto manual, talvez seja necessário pressionar a aba de liberação da bateria e girar a bateria para cima para obter melhor acesso.
+
 
 
 . Reinstale o HIC:

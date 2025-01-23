@@ -108,11 +108,11 @@ Você remove o recipiente do controlador com falha para que você possa substitu
 
 CAUTION: Para evitar um desempenho degradado, não torça, dobre, aperte ou pise nos cabos.
 
-. Confirme se o LED Cache ative na parte de trás do controlador está desligado.
 . Aperte as alças em ambos os lados do controlador e puxe para trás até que ele se solte da prateleira.
 +
 image::../media/remove_controller_5.png[Aperte as alças para remover o controlador]
 
+. Confirme se o LED Cache ative na parte de trás do controlador está desligado.
 . Utilizando as duas mãos e as pegas, deslize o recipiente do controlador para fora da prateleira. Quando a parte frontal do controlador estiver livre do compartimento, use duas mãos para puxá-lo completamente.
 +
 

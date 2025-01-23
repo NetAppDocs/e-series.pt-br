@@ -176,6 +176,7 @@ Deixe os cabos no dispositivo de gerenciamento de cabos para que, ao reinstalar 
 
 . Remova e reserve os dispositivos de gerenciamento de cabos dos lados esquerdo e direito do recipiente do controlador.
 . Aperte o trinco na pega do excêntrico até que este se solte, abra totalmente a pega do excêntrico para libertar o recipiente do controlador do plano médio e, em seguida, utilizando duas mãos, puxe o recipiente do controlador para fora do chassis.
+. Confirme se o LED Cache ative na parte de trás do controlador está desligado.
 . Vire o recipiente do controlador e coloque-o numa superfície plana e estável.
 . Abra a tampa pressionando os botões azuis nas laterais do recipiente do controlador para soltar a tampa e, em seguida, gire a tampa para cima e para fora do recipiente do controlador.
 +
