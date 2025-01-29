@@ -59,6 +59,18 @@ Configurável somente pela API REST, uma nova configuração de bloqueio de logi
 |===
 
 
+== Novos recursos na versão 11.80.1R3
+
+Esta versão contém apenas pequenas alterações e não há novos recursos ou restrições. Para obter mais informações sobre as alterações nesta versão, consulte o arquivo README.
+
+
+
+== Novos recursos na versão 11.80.1R2
+
+Esta versão contém apenas pequenas alterações e não há novos recursos ou restrições. Para obter mais informações sobre as alterações nesta versão, consulte o arquivo README.
+
+
+
 == Novos recursos na versão 11.80.1R1
 
 [cols="35h,~"]
