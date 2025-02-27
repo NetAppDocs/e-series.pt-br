@@ -1,7 +1,7 @@
 ---
 permalink: maintenance-ef600/hics-upgrade-intro.html 
 sidebar: sidebar 
-keywords: upgrade EF300 HIC, upgrade EF600 HIC, increase host ports, change host protocol 
+keywords: EF600, EF300, EF300C, EF600C, upgrade HIC, upgrade HIC, increase host ports, change host protocol 
 summary: 'Você atualiza uma placa de interface de host (HIC) para aumentar o número de portas de host ou para alterar protocolos de host.' 
 ---
 = Atualize a placa de interface de host (HIC) EF300 ou EF600
@@ -16,7 +16,7 @@ summary: 'Você atualiza uma placa de interface de host (HIC) para aumentar o n�
 
 .Sobre esta tarefa
 * Ao atualizar HICs, você deve desligar a matriz de armazenamento, atualizar as HICs e reaplicar energia.
-* Ao atualizar as HICs em um controlador EF300 ou EF600, repita todas as etapas para remover o segundo controlador, atualize as HICs do segundo controlador e reinstale o segundo controlador antes de reaplicar energia à prateleira do controlador.
+* Ao atualizar as HICs em um controlador EF300, EF600, EF300C ou EF600C, repita todas as etapas para remover o segundo controlador, atualize as HICs do segundo controlador e reinstale o segundo controlador antes de reaplicar energia ao compartimento do controlador.
 
 
 .Antes de começar

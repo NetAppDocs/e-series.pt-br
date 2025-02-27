@@ -1,7 +1,7 @@
 ---
 permalink: maintenance-ef600/hpp-change-supertask-task.html 
 sidebar: sidebar 
-keywords: host protocol change, EF300 host protocol, EF600 host protocol 
+keywords: host protocol change, EF300, EF600, EF600C, EF300C 
 summary: Altere o protocolo da porta do host para um array EF300 ou EF600. 
 ---
 = Altere o protocolo de host para um EF300 ou EF600
@@ -12,7 +12,7 @@ summary: Altere o protocolo da porta do host para um array EF300 ou EF600.
 
 
 [role="lead"]
-Siga este procedimento para alterar o protocolo da porta do host em um array EF300 ou EF600. Este procedimento aplica-se apenas a placas de interface de host (HICs) que usam Infiniband (IB) ou Fibre Channel (FC).
+Siga este procedimento para alterar o protocolo da porta do host em um array EF300, EF600, EF300C ou EF600C. Este procedimento aplica-se apenas a placas de interface de host (HICs) que usam Infiniband (IB) ou Fibre Channel (FC).
 
 
 

@@ -21,7 +21,7 @@ Devido à complexidade deste procedimento, recomenda-se o seguinte:
 
 
 .Sobre esta tarefa
-Este procedimento se aplica à adição rápida de um compartimento de unidades DE212C, DE224C ou DE460C a um compartimento de controladora E2800, E2800B, EF280, E5700, E5700B, EF570, EF300, EF600 ou E4000.
+Este procedimento se aplica à adição rápida de um compartimento de unidades DE212C, DE224C ou DE460C a um compartimento de controladora E2800, E2800B, EF280, EF300, E5700B, EF570, E5700, EF600, EF300C, EF600C ou E4000.
 
 Este procedimento se aplica aos compartimentos de unidades IOM12 e IOM12B.
 

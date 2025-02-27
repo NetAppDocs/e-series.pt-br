@@ -94,7 +94,7 @@ Visualize dados de diagnóstico, gerencie atualizações e configure o AutoSuppo
 
 == Gerenciador unificado do SANtricity
 
-O Unified Manager é um software baseado na Web usado para gerenciar todo o seu domínio. Em uma visualização central, você pode ver o status de todos os arrays e-Series e EF-Series mais recentes, como E4000, E2800, EF280, EF300, E5700, EF570 e EF600. Você também pode executar operações em lote em matrizes de armazenamento selecionadas.
+O Unified Manager é um software baseado na Web usado para gerenciar todo o seu domínio. Em uma visualização central, você pode ver o status de todos os arrays e-Series e EF-Series mais recentes, como E4000, E2800, EF280, EF300, E5700, EF570, EF600, EF300C e EF600C. Você também pode executar operações em lote em matrizes de armazenamento selecionadas.
 
 O Unified Manager é instalado em um servidor de gerenciamento juntamente com o Web Services Proxy. Para acessar o Unified Manager, abra um navegador e insira o URL apontando para o servidor onde o Proxy de Serviços Web está instalado.
 

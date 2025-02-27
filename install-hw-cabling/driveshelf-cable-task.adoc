@@ -54,7 +54,7 @@ image::../media/60_cabling.png[Um compartimento de controladora e compartimentos
 
 == Cabeamento EF300 e EF600
 
-As informações a seguir se aplicam ao cabeamento de uma gaveta de controladora EF300 ou EF600U em um compartimento de unidades de DE212C, DE224C ou DE460 U.
+As informações a seguir se aplicam ao cabeamento de um compartimento de controladora EF300, EF600, EF300C ou EF600CU em um compartimento de unidades de DE212C, DE224C ou DE460 U.
 
 .Antes de começar
 Antes de fazer o cabeamento de um EF300 ou EF600, verifique se o firmware está atualizado para a versão mais recente. Para atualizar o firmware, siga as instruções em link:../upgrade-santricity/index.html["Atualizando o SANtricity os"^].

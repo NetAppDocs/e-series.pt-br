@@ -1,7 +1,7 @@
 ---
 permalink: maintenance-ef600/power-overview-requirements2-concept.html 
 sidebar: sidebar 
-keywords: replace EF300 power supply, replace EF600 power supply, 
+keywords: EF300, EF600, EF300C, EF600C, replace EF600 power supply, 
 summary: Reveja os requisitos e considerações antes de substituir uma fonte de alimentação EF300 ou EF600. 
 ---
 = Requisitos para a substituição da fonte de alimentação EF300 ou EF600
@@ -11,7 +11,7 @@ summary: Reveja os requisitos e considerações antes de substituir uma fonte de
 
 
 [role="lead"]
-Antes de substituir uma fonte de alimentação em uma matriz EF300 ou EF600, revise os seguintes requisitos.
+Antes de substituir uma fonte de alimentação em uma matriz EF300, EF600, EF300C ou EF600C, revise os seguintes requisitos.
 
 * Você precisa ter uma fonte de alimentação de substituição compatível com o modelo do compartimento de controladora ou do compartimento de unidade.
 

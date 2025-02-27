@@ -16,6 +16,28 @@ A tabela a seguir descreve novos recursos nas versões mais recentes do SANtrici
 
 
 
+== Novos recursos na versão 11.90.1
+
+[cols="35h,~"]
+|===
+| Novo recurso | Descrição 
+
+
+ a| 
+Novos modelos de sistemas de armazenamento – EF300C e EF600C
+ a| 
+Esta versão apresenta os sistemas de storage all-flash NVMe EF300C e EF600C. O EF300C e o EF600C são todas as versões flash de alta capacidade dos sistemas de storage EF300 e EF600 existentes. As unidades SSD NVMe de alta capacidade de tamanhos 30TB e 60TB são compatíveis com o EF300C e o EF600C.
+
+
+
+ a| 
+Suporte para interfaces SAS de 12GB GB no EF4000
+ a| 
+A controladora E4000 agora oferece suporte a placas de interface de host SAS de 12GB GB.
+
+|===
+
+
 == Novos recursos na versão 11,90
 
 [cols="35h,~"]

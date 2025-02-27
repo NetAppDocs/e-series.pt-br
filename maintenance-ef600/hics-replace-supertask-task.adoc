@@ -12,7 +12,7 @@ summary: 'Substitua uma placa de interface de host (HIC) EF300 ou EF600 com falh
 
 
 [role="lead"]
-Siga este procedimento para substituir uma placa de interface de host (HIC) com falha em um array EF300 ou EF600.
+Siga este procedimento para substituir uma placa de interface de host (HIC) com falha em um array EF300, EF600, EF300C ou EF600C.
 
 .Sobre esta tarefa
 Quando você substitui um HIC com falha, você deve desligar o storage, substituir o HIC e reaplicar a energia.

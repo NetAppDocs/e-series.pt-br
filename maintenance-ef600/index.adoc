@@ -1,7 +1,7 @@
 ---
 permalink: maintenance-ef600/index.html 
 sidebar: sidebar 
-keywords: EF300 maintenance, EF600 maintenance, repairing EF300, repairing EF600, replace EF300 components, replace EF600 components 
+keywords: EF300 maintenance, EF600 maintenance, repairing EF300, repairing EF600, EF600C, EF300C replace EF300 components, replace EF600 components 
 summary: Mantenha o hardware EF300 e EF600 
 ---
 = Mantenha o hardware EF300 e EF600
@@ -11,7 +11,7 @@ summary: Mantenha o hardware EF300 e EF600
 
 
 [role="lead"]
-Talvez seja necessário executar procedimentos de manutenção no hardware. Os procedimentos específicos para manter os componentes do sistema EF300 ou EF600 estão nesta seção.
+Talvez seja necessário executar procedimentos de manutenção no hardware. Procedimentos específicos para manter os componentes do sistema EF300, EF600, EF300C ou EF600C estão nesta seção.
 
 Os procedimentos nesta seção pressupõem que o sistema EF300 ou EF600 já foi implantado no ambiente e-Series.
 
@@ -19,7 +19,7 @@ Os procedimentos nesta seção pressupõem que o sistema EF300 ou EF600 já foi 
 
 == Componentes do sistema
 
-Para os sistemas de armazenamento EF300 e EF600, pode executar procedimentos de manutenção nos seguintes componentes.
+Para os sistemas de armazenamento EF300, EF600, EF300C e EF600C, pode executar procedimentos de manutenção nos seguintes componentes.
 
 [cols="25,65"]
 |===

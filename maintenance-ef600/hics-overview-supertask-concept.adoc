@@ -1,7 +1,7 @@
 ---
 permalink: maintenance-ef600/hics-overview-supertask-concept.html 
 sidebar: sidebar 
-keywords: replace EF600 HIC, replace EF300 HIC, host interface card failed, HIC failure 
+keywords: EF300, EF600, EF300C, EF600C, replace HIC, replace HIC, host interface card failed, HIC failure 
 summary: Reveja os requisitos e considerações antes de substituir um HIC EF300 ou EF600. 
 ---
 = Requisitos para atualizações HIC EF300 ou EF600
@@ -11,7 +11,7 @@ summary: Reveja os requisitos e considerações antes de substituir um HIC EF300
 
 
 [role="lead"]
-Antes de atualizar ou substituir uma placa de interface de host (HIC) em um array EF300 ou EF600, revise os seguintes requisitos.
+Antes de atualizar ou substituir uma placa de interface de host (HIC) em um array EF300, EF600, EF300C ou EF600C, revise os seguintes requisitos.
 
 * Você agendou uma janela de manutenção de tempo de inatividade para este procedimento. Não é possível aceder aos dados na matriz de armazenamento até concluir com êxito este procedimento. Como ambos os controladores devem ter a mesma configuração HIC quando são ligados, a energia deve estar desligada quando você altera a configuração HIC. A presença de HICs incompatíveis faz com que o controlador com o HIC de substituição bloqueie quando o coloca online.
 * Você tem todos os cabos, transcetores, switches e adaptadores de barramento do host (HBAs) necessários para conetar as novas portas do host.

@@ -1,7 +1,7 @@
 ---
 permalink: maintenance-ef600/drives-overview-supertask-concept.html 
 sidebar: sidebar 
-keywords: replace EF300 drive, replace EF600 drive, 
+keywords: EF300, EF600, EF600C, EF300C, replace drive, 
 summary: Reveja os requisitos e considerações antes de substituir unidades em EF300 ou EF600. 
 ---
 = Requisitos para substituição de EF300 ou EF600 unidades
@@ -11,7 +11,7 @@ summary: Reveja os requisitos e considerações antes de substituir unidades em 
 
 
 [role="lead"]
-Antes de substituir uma unidade em um array EF300 ou EF600, revise os requisitos e considerações.
+Antes de substituir uma unidade em um array EF300, EF600, EF300C ou EF600C, revise os requisitos e considerações.
 
 
 CAUTION: Esteja ciente de que as unidades em seu storage array são frágeis; o manuseio inadequado de unidades é uma das principais causas de falha da unidade.

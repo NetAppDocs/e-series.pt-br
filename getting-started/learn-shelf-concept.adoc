@@ -58,7 +58,7 @@ image:../media/de460c.gif["DE460C"]
 
 * 2u24 (2 unidades de rack; 24 unidades)
 * Unidades SSD NVMe de 2,5"
-* Controladores EF300 e EF600
+* EF300, EF600. Controladores EF300C e EF600C
 
  a| 
 image:../media/ne224.gif["NE224"]

@@ -1,7 +1,7 @@
 ---
 permalink: maintenance-ef600/power-replace-supertask-task.html 
 sidebar: sidebar 
-keywords: replace EF300 power supply, replace EF600 power supply, 
+keywords: replace power supply, EF300, EF600, EF300C, EF600C 
 summary: Substitua as fontes de alimentação quando falharem no controlador EF300 ou EF600. 
 ---
 = Substitua uma fonte de alimentação EF300 ou EF600
@@ -12,7 +12,7 @@ summary: Substitua as fontes de alimentação quando falharem no controlador EF3
 
 
 [role="lead"]
-Você pode substituir uma fonte de alimentação quando ela falhar em seu controlador EF300 ou EF600.
+Você pode substituir uma fonte de alimentação quando ela falhar no controlador EF300, EF600, EF300C ou EF600C.
 
 Se uma fonte de alimentação falhar, você deve substituí-la o mais rápido possível para que o compartimento da controladora tenha uma fonte de alimentação redundante.
 

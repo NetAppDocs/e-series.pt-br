@@ -1,7 +1,7 @@
 ---
 permalink: maintenance-ef600/controllers-replace-supertask-task.html 
 sidebar: sidebar 
-keywords: replace EF300 controller, replace EF600 controller, replace EF300 canister, replace EF600 canister, 
+keywords: replace controller, replace canister, EF300, EF600, EF300C, EF600C 
 summary: Substitua um único controlador em um compartimento de controladora EF300 ou EF600. 
 ---
 = Substitua o controlador EF300 ou EF600
@@ -12,7 +12,7 @@ summary: Substitua um único controlador em um compartimento de controladora EF3
 
 
 [role="lead"]
-Você pode substituir um único controlador no compartimento de controladoras EF300 ou EF600.
+É possível substituir um único controlador no compartimento de controladoras EF300, EF600, EF300C ou EF600C.
 
 .Sobre esta tarefa
 Ao substituir um recipiente do controlador com falha, você deve remover a bateria, a fonte de alimentação, os DIMMs, os ventiladores e a placa de interface do host (HIC) do recipiente do controlador original e instalá-los no recipiente do controlador de substituição.

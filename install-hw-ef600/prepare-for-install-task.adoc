@@ -1,7 +1,7 @@
 ---
 permalink: install-hw-ef600/prepare-for-install-task.html 
 sidebar: sidebar 
-keywords: EF300, EF600, installation, create account, register hardware 
+keywords: EF300, EF600, EF300C, EF600C, installation, create account, register hardware 
 summary: Para instalar um EF300 ou EF600, crie uma conta e registe o seu hardware. 
 ---
 = Prepare-se para a instalação
@@ -11,7 +11,7 @@ summary: Para instalar um EF300 ou EF600, crie uma conta e registe o seu hardwar
 
 
 [role="lead"]
-Saiba como se preparar para a instalação do seu sistema de armazenamento da série EF300 ou EF600.
+Saiba como se preparar para a instalação do seu sistema de armazenamento das séries EF300, EF600, EF300C ou EF600C.
 
 .Antes de começar
 Se você estiver fazendo o cabeamento do EF300 para expansão SAS, consulte as seguintes informações:

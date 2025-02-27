@@ -1,7 +1,7 @@
 ---
 permalink: maintenance-ef600/batteries-replace-supertask-task.html 
 sidebar: sidebar 
-keywords: replace EF300 battery, replace EF600 battery, EF300 battery fail, EF600 battery fail 
+keywords: replace battery, battery fail, EF300C, EF600C, EF300, EF600 
 summary: Substitua uma bateria em uma matriz EF300 ou EF600. 
 ---
 = Substitua a bateria EF300 ou EF600
@@ -12,7 +12,7 @@ summary: Substitua uma bateria em uma matriz EF300 ou EF600.
 
 
 [role="lead"]
-Pode substituir uma bateria num sistema de armazenamento EF300 ou EF600.
+Pode substituir uma bateria num sistema de armazenamento EF300, EF600, EF300C ou EF600C.
 
 .Sobre esta tarefa
 Cada recipiente do controlador inclui uma bateria que preserva os dados armazenados em cache se a energia CA falhar. Se o Guru de recuperação no Gestor do sistema SANtricity comunicar um estado de falha da bateria ou um estado de substituição da bateria necessário, tem de substituir a bateria afetada.

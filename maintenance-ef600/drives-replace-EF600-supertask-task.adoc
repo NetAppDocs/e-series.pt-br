@@ -1,7 +1,7 @@
 ---
 permalink: maintenance-ef600/drives-replace-EF600-supertask-task.html 
 sidebar: sidebar 
-keywords: replace EF300 DIMM, replace EF600 DIMM, drive failure 
+keywords: EF600, EF600C replace DIMM, drive failure 
 summary: Substitua uma unidade em um array EF600. 
 ---
 = Substitua a unidade em um array EF600
@@ -11,7 +11,7 @@ summary: Substitua uma unidade em um array EF600.
 
 
 [role="lead"]
-Você pode substituir uma unidade em um array EF600.
+Você pode substituir uma unidade em uma matriz EF600 ou EF600C.
 
 .Sobre esta tarefa
 O Guru de recuperação no Gerenciador de sistema do SANtricity monitora as unidades no storage array e pode notificá-lo de uma falha iminente de unidade ou de uma falha real de unidade. Quando uma unidade tiver falhado, o LED âmbar de atenção está aceso. Você pode trocar a quente uma unidade com falha enquanto a matriz de armazenamento está recebendo e/S

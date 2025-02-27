@@ -28,7 +28,7 @@ As informações de cabeamento se aplicam aos seguintes modelos de hardware.
 
 
  a| 
-EF300, EF600
+EF300, EF600, EF300C, EF600C
  a| 
 DE212C, DE224C, DE460
 

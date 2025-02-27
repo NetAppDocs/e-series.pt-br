@@ -39,7 +39,7 @@ O método expresso inclui as seguintes etapas, que também são descritas no lin
 * https://kb.netapp.com/["Base de conhecimento da NetApp"^] (Um banco de dados de artigos) - fornece informações de solução de problemas, perguntas frequentes e instruções para uma ampla gama de produtos e tecnologias NetApp.
 * http://mysupport.netapp.com/matrix["Ferramenta de Matriz de interoperabilidade do NetApp"^] -- permite pesquisar configurações de produtos e componentes NetApp que atendam aos padrões e requisitos especificados pela NetApp.
 * https://www.netapp.com/pdf.html?item=/media/17017-tr4789pdf.pdf["Guia de configuração da VMware para integração iSCSI SANtricity da série e com o ESXi 6.X."^] -- fornece detalhes técnicos sobre a integração iSCSI com VMware.
-* https://configmax.vmware.com/home["Máximos de configuração do VMware"^] -- descreve como configurar o armazenamento virtual e físico para permanecer dentro dos máximos permitidos que o ESX/ESXi suporta.
+* https://configmax.broadcom.com/home["Máximos de configuração do VMware"^] -- descreve como configurar o armazenamento virtual e físico para permanecer dentro dos máximos permitidos que o ESX/ESXi suporta.
 * https://docs.vmware.com/en/VMware-vSphere/7.0/com.vmware.vsphere.storage.doc/GUID-9AEE5F4D-0CB8-4355-BF89-BB61C5F30C70.html["Requisitos e limitações do storage VMware NVMe"^].
 * https://docs.vmware.com/en/VMware-vSphere/index.html["Documentação do VMware vSphere"^] -- fornece a documentação do ESXi vCenter Server.
 
