@@ -56,12 +56,7 @@ Execute as seguintes etapas, pela ordem:
  a| 
 Gerenciamento de chaves externas, todas as unidades bloqueadas, você pode fazer a transição temporária para o gerenciamento de chaves internas para a substituição do controlador.
  a| 
-Execute as seguintes etapas, pela ordem:
-
-.. Registre o endereço do servidor KMS externo e o número da porta. A partir do System Manager, aceda ao menu:Definições[sistema > Gestão da chave de segurança > Ver/Editar Definições do servidor de gestão de chaves].
-.. Certifique-se de que os certificados de cliente e servidor estão disponíveis no seu host local para que o storage de armazenamento e o servidor de gerenciamento de chaves possam se autenticar após a substituição do controlador ser concluída. Use o `save storageArray keyManagementCertificate` comando CLI para salvar os certificados. Certifique-se de executar o comando duas vezes, uma vez com o `certificateType` parâmetro definido como `client`, e a outra com o parâmetro definido como `server`.
-.. Exporte o arquivo de chave de segurança interna para um local conhecido no cliente de gerenciamento (o sistema com um navegador usado para acessar o System Manager). Use o `export storageArray securityKey` comando CLI. Você deve fornecer a frase-passe associada à chave de segurança e especificar o local onde deseja salvar a chave.
-
+Entre em Contato com o suporte ao cliente.
 
 
 

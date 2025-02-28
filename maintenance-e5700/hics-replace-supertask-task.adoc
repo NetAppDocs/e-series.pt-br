@@ -19,15 +19,10 @@ Quando você substitui um HIC, coloca o controlador offline (para configuraçõe
 
 .Antes de começar
 * Revisão link:hics-overview-supertask-concept.html["Requisitos para a substituição de E5700 HIC"].
-* Agende uma janela de manutenção de tempo de inatividade para este procedimento. A energia deve estar desligada quando você instala HICs, para que você não possa acessar dados no storage de armazenamento até que você tenha concluído com êxito este procedimento. (Em uma configuração duplex, ambos os controladores devem ter a mesma configuração HIC quando estão ligados.)
 * Verifique se nenhum volume está em uso ou se você tem um driver multipath instalado em todos os hosts que usam esses volumes.
 * No Gerenciador de sistema do SANtricity, verifique os detalhes no Guru de recuperação para confirmar que você tem um HIC com falha e para garantir que nenhum outro item deve ser Tratado antes de remover e substituir o HIC.
 * Certifique-se de que tem o seguinte:
 +
-** Duas placas de rede compatíveis com os controladores.
-+
-Para configurações duplex (dois controladores), os HICs instalados nos dois coletores de controladora devem ser idênticos. A presença de HICs incompatíveis faz com que o controlador com o HIC de substituição bloqueie quando o coloca online.
-
 ** Uma pulseira antiestática, ou você tomou outras precauções antiestáticas.
 ** Uma chave de fendas Phillips nº 1.
 ** Etiquetas para identificar cada cabo que está ligado ao recipiente do controlador.

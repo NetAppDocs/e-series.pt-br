@@ -19,6 +19,9 @@ Saiba como fazer o cabeamento dos controladores à sua rede e concluir a configu
 
 Faça o cabeamento do sistema de acordo com a topologia da rede.
 
+
+NOTE: As portas de host no lado esquerdo inferior (e1a, e1b, E1C e e1d) e no lado direito superior (e0a e e0b) da controladora podem ser usadas para cabeamento de host de dados.
+
 [role="tabbed-block"]
 ====
 .Opção 1: Topologia de conexão direta
@@ -27,8 +30,11 @@ O exemplo a seguir mostra o cabeamento dos hosts de dados usando uma topologia d
 
 image:../media/drw_e4012_direct_topology_ieops-2047.svg["E4012 topologia direta, largura de 1000px mm"]
 
-. Se você não tiver compartimentos de expansão instalados, conecte cada adaptador de host diretamente às portas de host e0a e e0b nas controladoras.
+. Conete cada porta HBA do host às portas do host nos controladores (e1a, e1b, E1C, e1d ou e0a e e0b).
 
+
+
+NOTE: Para obter exemplos adicionais de diagramas de cabeamento, https://docs.netapp.com/us-en/e-series/install-hw-cabling/host-cable-task.html#cabling-for-a-direct-attached-topology["Cabeamento de host"^]consulte .
 
 --
 .Opção 2: Topologia de malha
@@ -38,7 +44,7 @@ O exemplo a seguir mostra o cabeamento dos hosts de dados usando uma topologia d
 image:../media/drw_e4012_fabric_topology_ieops-2046.svg["E4012 topologia de tecido, largura de 1000pxmm"]
 
 . Conete cada adaptador de host diretamente ao switch.
-. Conete cada switch diretamente às portas de host e0a e e0b nos controladores.
+. Conete cada switch diretamente às portas do host nos controladores (e1a, e1b, E1C, e1d ou e0a e e0b).
 
 
 --

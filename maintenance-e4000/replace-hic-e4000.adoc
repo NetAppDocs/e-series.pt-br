@@ -249,7 +249,10 @@ NOTE: Se estiver usando os dedos para soltar o parafuso de aperto manual, talvez
 . Reinstale o HIC:
 +
 .. Alinhe o soquete na tomada HIC de substituição com o soquete na placa-mãe e, em seguida, encaixe suavemente a placa diretamente no soquete.
-.. Aperte os três parafusos de aperto manual no HIC.
+.. Aperte manualmente os três parafusos de aperto manual no HIC.
++
+Não use uma chave de fenda, ou você pode apertar demais os parafusos.
+
 .. Volte a instalar a placa frontal do HIC.
 
 

@@ -58,6 +58,14 @@ Se você estiver substituindo os controladores para atualizar para um novo model
 +
 Ao atualizar seu controlador e-Series, você deve desativar todos os recursos premium usados em seu storage array que não sejam compatíveis com os novos controladores.
 
+* *Gerenciamento na banda usando o volume de acesso*
++
+** O E4000 não oferece suporte ao gerenciamento na banda usando o volume de acesso.
++
+Antes de atualizar para controladores E4000, desmarque o volume de acesso de todos os hosts e clusters de host definidos.
+
+
+
 
 
 
@@ -84,6 +92,7 @@ Encomende uma nova bateria.
 * O E4000 só pode suportar volumes 512
 * O E4000 não suporta configurações SAS
 * O E4000 não suporta volumes de armazenamento remoto
+* O E4000 não oferece suporte ao gerenciamento na banda usando o volume de acesso.
 
  a| 
 As controladoras E4000 devem usar gavetas SAS-3.
@@ -107,6 +116,8 @@ Encomende uma nova bateria.
 
 * O suporte à placa de interface do host InfiniBand não está disponível
 * O E4000 não suporta configurações SAS
+* O E4000 não suporta volumes de armazenamento remoto
+* O E4000 não oferece suporte ao gerenciamento na banda usando o volume de acesso.
 
  a| 
 As controladoras E4000 devem usar gavetas SAS-3.

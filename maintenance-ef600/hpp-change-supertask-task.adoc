@@ -604,7 +604,11 @@ image::../media/sam1130_ss_e2800_change_feature_pack_feature_enable_identifier_c
 +
 ** Número de série do chassis
 ** Código de ativação do recurso
-** OBSERVAÇÃO: O site da ativação de recursos Premium inclui um link para "instruções de ativação de recursos Premium". Não tente usar essas instruções para este procedimento.
+** Identificador de ativação de funcionalidade
++
+
+NOTE: O site de ativação de recursos Premium inclui um link para ""instruções de ativação de recursos Premium"". Não tente usar essas instruções para este procedimento.
+
 
 
 . Escolha se deseja receber o arquivo-chave do pacote de recursos em um e-mail ou baixá-lo diretamente do site.

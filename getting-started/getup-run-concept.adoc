@@ -69,7 +69,8 @@ Para configurar o armazenamento, você pode acessar a interface baseada na Web, 
 Selecione a interface que deseja usar:
 
 [role="quick-margin-list"]
-* https://docs.netapp.com/us-en/e-series-santricity/system-manager/index.html["Ajuda online do Gestor de sistema do SANtricity para 11,8x"^]
+* https://docs.netapp.com/us-en/e-series-santricity/system-manager/index.html["Ajuda online do Gestor de sistema do SANtricity para 11,9x"^]
+* https://docs.netapp.com/us-en/e-series-santricity-118/system-manager/index.html["Ajuda online do Gestor de sistema do SANtricity para 11,8x"^]
 * https://docs.netapp.com/us-en/e-series-santricity-117/system-manager/index.html["Ajuda online do Gestor de sistema do SANtricity para 11,7x"^]
 * https://docs.netapp.com/us-en/e-series-santricity-116/index.html["Ajuda online do Gestor de sistema do SANtricity para 11,6x"^]
 

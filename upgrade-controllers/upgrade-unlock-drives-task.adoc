@@ -29,18 +29,18 @@ Siga estas etapas para o gerenciamento de chaves internas quando todas as unidad
 Os controladores recém-trocados serão bloqueados com um código de exibição de sete segmentos de *L5*. Esse bloqueio ocorre quando nenhuma unidade pode executar a sincronização de código automático (ACS). Após a importação da chave de segurança, o ACS retoma e atualiza os novos controladores.
 
 
-NOTE: Se você não estiver usando a porta de gerenciamento 1, tente com outros endereços IP padrão: Ctrl A porta 1: 192.168.128.101 Ctrl A porta 2: 192.168.128.102 Ctrl B porta 1: 192.168.129.101 Ctrl B porta 2: 192.168.129.102
+NOTE: Se você não estiver usando a porta de gerenciamento 1, tente com outros endereços IP padrão: Ctrl A porta 1: 169.254.128.101 Ctrl A porta 2: 169.254.128.102 Ctrl B porta 1: 169.254.128.101 Ctrl B porta 2: 169.254.128.102
 
 .Passos
 . Faça uma conexão ethernet direta e privada entre a matriz de armazenamento e o laptop ou PC do cliente SANtricity. Para fazer isso:
 +
 .. Use um cabo ethernet RJ45 para conetar o laptop à porta de gerenciamento 1 no controlador A..
-.. Para concluir a conexão, talvez seja necessário atribuir o laptop a um endereço IP na mesma sub-rede que o controlador A. durante o bloqueio do controlador, o controlador A usa por padrão um endereço de gerenciamento de 192.168.128.101. Assim, você pode atribuir o laptop a uma sub-rede como "192.168.128.201".
+.. Para concluir a conexão, talvez seja necessário atribuir o laptop a um endereço IP na mesma sub-rede que o controlador A. durante o bloqueio do controlador, o controlador A usa por padrão um endereço de gerenciamento de 169.254.128.101. Assim, você pode atribuir o laptop a uma sub-rede como "169.254.128.201".
 
 
-. Usando o endereço IP 192.168.128.101 com nome de usuário *admin* e a senha em branco, importe a chave interna usando o `import storageArray securityKey file` comando CLI, com a chave de segurança salva link:prepare-upgrade-controllers-task.html["Prepare-se para atualizar os controladores"]do . Para obter informações sobre como usar esse comando, consulte https://docs.netapp.com/us-en/e-series-cli/index.html["Referência de interface de linha de comando"].
+. Usando o endereço IP 169.254.128.101 com nome de usuário *admin* e a senha em branco, importe a chave interna usando o `import storageArray securityKey file` comando CLI, com a chave de segurança salva link:prepare-upgrade-controllers-task.html["Prepare-se para atualizar os controladores"]do . Para obter informações sobre como usar esse comando, consulte https://docs.netapp.com/us-en/e-series-cli/index.html["Referência de interface de linha de comando"].
 +
-*Exemplo:* `SMcli 192.168.128.101 -u admin -p "" -c "import storageArray securityKey file=\"Directory&FileName\" passPhrase=\"passPhraseString\";"`
+*Exemplo:* `SMcli 169.254.128.101 -k -u admin -p "" -c "import storageArray securityKey file=\"Directory&FileName\" passPhrase=\"passPhraseString\";"`
 
 +
 Como alternativa, você pode importar a chave interna através da API REST através da seguinte chamada: `/storage-systems/{system-id}/security-key/import`
@@ -58,40 +58,25 @@ Siga estas etapas para gerenciamento de chaves externas quando todas as unidades
 .Sobre esta tarefa
 Os controladores recém-trocados serão bloqueados com um código de exibição de sete segmentos de *L5*. Esse bloqueio ocorre quando nenhuma unidade pode executar a sincronização de código automático (ACS). Após a importação da chave de segurança, o ACS retoma e atualiza os novos controladores.
 
-
-NOTE: Sua matriz de armazenamento deve estar em um estado ideal para recuperar certificados de cliente e servidor. Se os certificados não forem recuperáveis, você deverá criar uma nova solicitação de assinatura de certificado (CSR) e importar o certificado do servidor de gerenciamento de chaves externas.
-
 .Passos
 . Faça uma conexão ethernet direta e privada entre a matriz de armazenamento e o laptop ou PC do cliente SANtricity. Para fazer isso:
 +
 .. Use um cabo ethernet RJ45 para conetar o laptop à porta de gerenciamento 1 no controlador A..
-.. Para concluir a conexão, talvez seja necessário atribuir o laptop a um endereço IP na mesma sub-rede que o controlador A. durante o bloqueio do controlador, o controlador A usa por padrão um endereço de gerenciamento de 192.168.128.101. Assim, você pode atribuir o laptop a uma sub-rede como "192.168.128.201".
+.. Para concluir a conexão, talvez seja necessário atribuir o laptop a um endereço IP na mesma sub-rede que o controlador A. durante o bloqueio do controlador, o controlador A usa por padrão um endereço de gerenciamento de 169.254.128.101. Assim, você pode atribuir o laptop a uma sub-rede como "169.254.128.201".
 
 
-. Usando o endereço IP padrão 192.168.128.101 com nome de usuário *admin* e a senha em branco, configure o servidor de gerenciamento de chaves externo usando o `set storageArray externalKeyManagement` comando CLI e forneça o `serverAddress` e `serverPort` salvo do link:prepare-upgrade-controllers-task.html["Prepare-se para atualizar os controladores"]. Para obter informações sobre como usar esse comando, consulte https://docs.netapp.com/us-en/e-series-cli/index.html["Referência de interface de linha de comando"].
+. Usando a chave de segurança salva link:prepare-upgrade-controllers-task.html["Prepare-se para atualizar os controladores"]do , importe a chave externa para o endereço IP 169.254.128.101 com o nome de usuário *admin* e a senha permanecendo em branco.
 +
-*Exemplo:* `SMcli 192.168.128.101 -u admin -p "" -c "set storageArray externalKeyManagement serverAddress=<ServerIPAddress> serverPort=<serverPort>;"`
-
-+
-Como alternativa, você pode configurar o servidor de gerenciamento de chaves externo através da API REST através da seguinte chamada: `/storage-systems/{system-id}/external-key-server`
-
-. Usando o endereço IP padrão 192.168.128.101 com o nome de usuário *admin* e a senha restante em branco, importe os certificados usando o `storageArray keyManagementCertificate` comando CLI: Uma vez para o certificado do cliente e uma segunda vez para o certificado do servidor.
-+
-*Exemplo A:* `SMcli 192.168.128.101 -u admin -p "" -c "download storageArray keyManagementCertificate certificateType=client file=\"Directory&FileName\";"`
-
-+
-*Exemplo B:* `SMcli 192.168.128.101 -u admin -p "" -c "download storageArray keyManagementCertificate certificateType=server file=\"Directory&FileName\";"`
-
-+
-Como alternativa, você pode importar o certificado do servidor de chaves através da API REST através da seguinte chamada: `/storage-systems/{system-id}/external-key-server/certificate`
-
-. Usando a chave de segurança salva link:prepare-upgrade-controllers-task.html["Prepare-se para atualizar os controladores"]do , importe a chave externa para o endereço IP 192.168.128.101 com o nome de usuário *admin* e a senha permanecendo em branco.
-+
-*Exemplo:* `SMcli 192.168.128.101 -u admin -p "" -c "import storageArray securityKey file=\"Directory&FileName\" passPhrase=\"passPhraseString\";"`
+*Exemplo:* `SMcli 169.254.128.101 -k -u admin -p "" -c "import storageArray securityKey file=\"Directory&FileName\" passPhrase=\"passPhraseString\";"`
 
 +
 Como alternativa, você pode importar a chave externa através da API REST através da seguinte chamada: `/storage-systems/{system-id}/security-key/import`
 
-
-
++
 Os controladores continuarão com o processo de sincronização de código automático das unidades e reiniciarão. Após a reinicialização, os controladores estarão acessíveis através da configuração IP original.
+
+. (Opcional) se necessário, as unidades podem ser rekeyed executando o seguinte:
++
+*Exemplo:* `SMcli <original_controller _ip> -u admin -p "<original_array_password>" -c "create storageArray securityKey" passPhrase=\"passPhraseString\" file=\"filename\";”`
+
+
