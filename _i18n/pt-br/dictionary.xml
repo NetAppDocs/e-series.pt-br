@@ -829,7 +829,6 @@
   <block id="25f8ce0d97746c6603a4ce39527059c4" category="list-text">Você deve ativar o controle de fluxo *fim a fim*.</block>
   <block id="33d32d0aba4531ff91372042c7bd58ae" category="list-text">Se apropriado, você ativou quadros jumbo.</block>
   <block id="80c26039d6160bf38eddadb619ecf00a" category="admonition">Os canais de porta/LACP não são suportados nas portas do switch do controlador. O LACP do lado do host não é recomendado; o multipathing oferece os mesmos benefícios e, em alguns casos, melhores benefícios.</block>
-  <block id="f849cbf8f2231f3f35d369655c870a3e" category="doc">Configuração iSCSI Express</block>
   <block id="6e66b862960ebd7ec3afa00536df9e2b" category="summary">Instale os Utilitários de host unificado do Linux ao usar iSCSI.</block>
   <block id="f61f74351af7f480b4eb830a2f4c4ada" category="list-text">Faça download da versão do software SANtricity em<block ref="2ff36e7792a0e0257d19a11dce8cade8" category="inline-link-rx"></block>. Na guia *Downloads*, vá para menu:Downloads[e-Series SANtricity Storage Manager].</block>
   <block id="4147efbdc6fd2e6dc90c466022cf7306" category="summary">Você verifica as conexões de rede de Protocolo de Internet (IP) usando testes de ping para garantir que o host e a matriz sejam capazes de se comunicar.</block>
@@ -920,7 +919,6 @@
   <block id="d405d36a5a07f387a8a07ebe6eeb8c55" category="list-text">Execute o<block ref="64284c8d228536994c2b22912d2dfd88" prefix=" " category="inline-code"></block> comando para exibir as informações da porta.</block>
   <block id="4253eb4054c56db3b585ae3a53e1819f" category="inline-xref-macro">Folha de cálculo Iser over InfiniBand</block>
   <block id="210c9515d4a1e9c78e2608d073aeef56" category="list-text">Registe os GUIDs do iniciador no <block ref="00a1f89a34dac59e8a714860454ae51a" category="inline-xref-macro-rx"></block>.</block>
-  <block id="c96c96aa9e9942faabac2551c9847a4a" category="doc">Iser em InfiniBand Express Setup</block>
   <block id="3a12d0edc81531758f12c83024fbc77e" category="summary">LInstall Linux Unified Host Utilities ao usar iSER.</block>
   <block id="7650444ba1773a0c8db49e2de89e016e" category="summary">Use esta Planilha para gravar informações de configuração de storage iSER em Infiniband.</block>
   <block id="0f426cdc3f31f25b68a3addb44a42eef" category="doc">Registre seu iSER na configuração IB</block>
@@ -1049,8 +1047,6 @@
   <block id="c662d30c7d8344ca5094b8d63dc5eef2" category="paragraph">Você pode usar a ferramenta SMdevices para exibir volumes atualmente visíveis no host. Esta ferramenta faz parte do pacote nvme-cli, e pode ser usada como uma alternativa ao<block ref="b0f1705bbfcfb10368af21a019072318" prefix=" " category="inline-code"></block> comando.</block>
   <block id="32bf53c51f7fc63be42581f2a476221f" category="paragraph">Para exibir informações sobre cada caminho NVMe para um volume e-Series, use o<block ref="81fe64250dbcd40f4e6f64e7262c6011" prefix=" " category="inline-code"></block> comando.</block>
   <block id="23a74793fff16ab173be124697fd7e64" category="paragraph">A saída<block ref="0313a12b65aa20a048ec62b8cf470fd2" prefix=" " category="inline-code"></block> pode ser normal (o padrão se -o não for usado), coluna ou json.</block>
-  <block id="eade6022b2fef6a4e03ff35469374cb0" category="summary">Você pode usar o NVMe com o protocolo Fibre Channel.</block>
-  <block id="62896be8239b3396f0ed277cf184b062" category="doc">Configuração do NVMe em Fibre Channel Express</block>
   <block id="9a85d22d9e1c050e72e2e881a520bba5" category="summary">Configure o host para executar o failover.</block>
   <block id="96477deae8322871ba6c5133596fd5b1" category="doc">Configurar failover no host</block>
   <block id="3ce256baf4fa848e508f4000c29e19a8" category="paragraph">Para fornecer um caminho redundante para o storage array, você pode configurar o host para executar o failover.</block>
@@ -1167,8 +1163,6 @@
   <block id="dd5b930833e0c8dd64b64e8f609f510e" category="list-text">Use o<block ref="b0f1705bbfcfb10368af21a019072318" prefix=" " category="inline-code"></block> comando para ver uma nova lista dos dispositivos NVMe atualmente conetados. No exemplo abaixo, é<block ref="fefd27d5a94217470e63c84d9035d07a" prefix=" " category="inline-code"></block> e<block ref="fefd27d5a94217470e63c84d9035d07a" prefix=" " category="inline-code"></block>.</block>
   <block id="7974a85a6c6d440bbee88b27bf089223" category="summary">Use a ferramenta SMdevices, parte do pacote nvme-cli, para visualizar os volumes atualmente visíveis no host. Esta é uma alternativa ao comando nvme list.</block>
   <block id="9ba0e91b9dc1e138e7c9c64d8795890a" category="paragraph">Para exibir informações sobre cada caminho NVMe para um volume e-Series, use o<block ref="81fe64250dbcd40f4e6f64e7262c6011" prefix=" " category="inline-code"></block> comando. A saída<block ref="0313a12b65aa20a048ec62b8cf470fd2" prefix=" " category="inline-code"></block> pode ser normal (o padrão se -o não for usado), coluna ou json.</block>
-  <block id="041b8a1391f923a8043830be4a716cdd" category="summary">Você pode usar o NVMe com o protocolo de rede InfiniBand.</block>
-  <block id="97cdaaff2a74763683828420ccda083e" category="doc">Configuração do NVMe em InfiniBand Express</block>
   <block id="b0f1d70653db761a75c6f50a1fb48a15" category="doc">Configurar failover</block>
   <block id="7149b8af09961dfba911fe06ae6a3540" category="admonition"><block ref="0aaf04254af18646f3d246cd4a4b417d" category="inline-link-rx"></block>Consulte para garantir que todas as atualizações necessárias sejam instaladas, pois o multipathing pode não funcionar corretamente com as versões GA do SLES ou RHEL.</block>
   <block id="52b757f8b32ea9abd11ade22593e1b87" category="paragraph">O RHEL 7 e o SLES 12 usam o Mapeador de dispositivos Multipath (DMMP) para multipathing ao usar NVMe em Infiniband. O RHEL 8, RHEL9 e SLES 15 usam um failover NVMe nativo incorporado. Dependendo de qual sistema operacional você está executando, alguma configuração adicional de multipath é necessária para que ele seja executado corretamente.</block>
@@ -1258,9 +1252,6 @@
   <block id="6724b622f910a0db3c03e792b0240c06" category="admonition">O período de tempo limite de perda recomendado do controlador em segundos é de 60 minutos (3600 segundos). Substitua a configuração padrão de 600 segundos com 3600 segundos usando a<block ref="7b5c50977caf63926d443c9eae36a207" prefix=" " category="inline-code"></block> opção de linha de comando, como mostrado no exemplo a seguir.</block>
   <block id="2428a281171a181ce060c98d6e1838a8" category="list-text">Repita a etapa 3 para conetar o subsistema descoberto no segundo caminho.</block>
   <block id="16ca841d20a206f2a2f351c206d2f01f" category="paragraph">Para exibir informações sobre cada caminho NVMe para um volume e-Series, use o<block ref="81fe64250dbcd40f4e6f64e7262c6011" prefix=" " category="inline-code"></block> comando. O &lt;format&gt; de saída pode ser normal (o padrão se -o não for usado), coluna ou json.</block>
-  <block id="7e9eed90ab06645af09e14e4688144a5" category="summary">Você pode usar o NVMe com o protocolo de rede RDMA sobre Converged Ethernet (RoCE).</block>
-  <block id="e5acd4f564771f3dbba3bdeb6b6bcfe5" category="doc">NVMe em RoCE Express Setup</block>
-  <block id="d94efd3fa425e38d7761fba32eb7bc67" category="paragraph">Você pode usar o NVMe com o protocolo de rede RDMA over Converged Ethernet (RoCE).</block>
   <block id="816a290577d3afffcfc7b89e8312db70" category="admonition">Consulte o<block ref="0aaf04254af18646f3d246cd4a4b417d" category="inline-link-rx"></block> para garantir que todas as atualizações necessárias estejam instaladas, pois o multipathing pode não funcionar corretamente com as versões GA do SLES ou RHEL.</block>
   <block id="08fb030e8ad0e09b4e56de467f54c0b0" category="paragraph">RHEL 7 e SLES 12 usam o Mapeador de dispositivos Multipath (DMMP) para multipathing para NVMe sobre RoCE. RHEL 8, RHEL 9 e SLES 15 usam failover NVMe nativo incorporado. Dependendo de qual sistema operacional você está executando, alguma configuração adicional de multipath é necessária para que ele seja executado corretamente.</block>
   <block id="adfe61fc58186ce1f905fe93a482817f" category="list-text">Adicione a entrada de dispositivo NVMe e-Series à seção dispositivos do<block ref="dd5ff67ba72768d33f75e645aa2b8e56" prefix=" " category="inline-code"></block> arquivo, como mostrado no exemplo a seguir:</block>
@@ -1361,7 +1352,6 @@
   <block id="f839e1b7c3a21e269ed4802e2a8f478a" category="list-text">Transfira o utilitário HBA a partir do Web site do fornecedor HBA.</block>
   <block id="87e85b9ea37f21226023282c05abc3b0" category="list-text">Use o BIOS HBA para selecionar as configurações apropriadas para sua configuração.</block>
   <block id="3e59e5ab1adea8ed176d6a2c2a73cadf" category="paragraph">Consulte a coluna Notas do<block ref="0aaf04254af18646f3d246cd4a4b417d" category="inline-link-rx"></block> para obter recomendações.</block>
-  <block id="1914877215ade75b06ba34ce70bb51dd" category="summary">Configuração do SAS Express</block>
   <block id="bd97f9e0585f1ab3a70a824e4f5ffe79" category="summary">O utilitário de host unificado Linux 7,1 inclui ferramentas para gerenciar o storage do NetApp, incluindo políticas de failover e caminhos físicos.</block>
   <block id="3cae817c9d10810cbe26c194bfc5375b" category="paragraph">É apresentada a secção refinar critérios de pesquisa. Nesta seção, você pode selecionar o protocolo que se aplica, bem como outros critérios para a configuração, como sistema operacional, NetApp os e driver de vários caminhos de host. Selecione os critérios que você sabe que deseja para sua configuração e veja quais elementos de configuração compatíveis se aplicam. Conforme necessário, faça as atualizações para o seu sistema operativo e protocolo que são prescritas na ferramenta. As informações detalhadas para a configuração escolhida estão acessíveis na página Exibir configurações suportadas clicando na seta da página direita.</block>
   <block id="040c79518113c7a876f6f848766753d2" category="summary">Use esta Planilha para Registrar informações de configuração de armazenamento SAS.</block>
@@ -1399,7 +1389,6 @@
   <block id="6ee2d18851ba4498d7c9ba43881528c3" category="admonition">Antes de configurar o gerenciador de sub-rede, você deve instalar o pacote InfiniBand-diags para obter o GUID (globalmente exclusivo) por meio do<block ref="db1fff1f41e48ae933f89caa6a9035c4" prefix=" " category="inline-code"></block> comando. Consulte <block ref="59608be4b8a68b7f95e7aa6a8924d39f" category="inline-xref-macro-rx"></block> para obter informações sobre como instalar o pacote InfiniBand-diags.</block>
   <block id="e2c48d6f7dc54c69caaee62695c56d1b" category="paragraph">O pacote InfiniBand-diags inclui comandos para exibir o GUID (globalmente exclusivo) de cada porta InfiniBand (IB). A maioria das distribuições Linux com OFED/RDMA suportadas por meio dos pacotes incluídos também tem o pacote InfiniBand-diags, que inclui comandos para exibir informações sobre o adaptador de canal do host (HCA).</block>
   <block id="e8377a168400202c4d751db31f2af66a" category="list-text">Registe os GUIDs do iniciador no <block ref="637e124a730f0905ce6e480d5b773394" category="inline-xref-macro-rx"></block>.</block>
-  <block id="fe4b136586896fd70617258689052356" category="summary">SRP em InfiniBand Express Setup</block>
   <block id="b03d32ba1901ea3dd22914caff790143" category="doc">Instalar e configurar Linux Host Utilities</block>
   <block id="c4a120813372f7f07d6de687ff0fc6a6" category="paragraph">O pacote de utilitários de host unificado Linux inclui ferramentas para gerenciar o storage do NetApp, incluindo políticas de failover e caminhos físicos.</block>
   <block id="13fd378eeb7a101fc09f1cbecaf60c62" category="summary">Quando você instala o software SANtricity Storage Manager em sua estação de gerenciamento, uma interface gráfica de usuário e uma interface de linha de comando são instalados por padrão. Essas instruções presumem que você instalará a GUI do SANtricity Storage Manager em uma estação de gerenciamento e não no host de e/S.</block>
@@ -2453,11 +2442,8 @@
   <block id="a5de3e8b40f487e6069eec82667104bd" category="list-text">Se tiver prateleiras de acionamento opcionais, posicione a tampa da extremidade esquerda na frente da prateleira de acionamento de modo que os orifícios na tampa da extremidade fiquem alinhados com os fixadores no lado esquerdo da prateleira.</block>
   <block id="70e85bbe4f70fb42276c14a4911a013c" category="list-text">Encaixe a tampa da extremidade no lugar.</block>
   <block id="20743f255dc99f7c25751ab4970cf40b" category="list-text">Repita os passos acima para a tampa da extremidade direita.</block>
-  <block id="efe6d51a14336eb7344b08061d81c223" category="summary">Essas instruções descrevem como instalar e configurar seu novo sistema de armazenamento e fornecem links para conteúdo adicional.</block>
-  <block id="098f41693365f8de503868e97f04f4c4" category="doc">Instruções de instalação e configuração para E5724, EF570, EF280, E2812, E2824, DE212C e DE224C</block>
   <block id="815c920202dfa955587470fa70e3ffa2" category="paragraph">Você pode escolher um dos formatos a seguir para orientá-lo na instalação e configuração do seu novo sistema de armazenamento.</block>
   <block id="723175c2409960305a89cd41d1e21069" category="list-text">*PDF*</block>
-  <block id="82bf7451a207cfbac427edc3bb60fced" category="paragraph">Este é um PDF imprimível de instruções passo a passo com links ao vivo para conteúdo adicional.</block>
   <block id="e35e0085ae82287fbf393b7e0f257ed6" category="inline-link">POSTER PDF E5724, EF570, EF280, E2812, E2824, DE212C E DE224C</block>
   <block id="92932ce21f6d8397bd3ed1b919c23399" category="list-text"><block ref="92932ce21f6d8397bd3ed1b919c23399" category="inline-link-rx"></block></block>
   <block id="6cf19d164fc44f57a0be4ad960ba11ad" category="list-text">*Instruções online*</block>
@@ -2527,10 +2513,8 @@
   <block id="0baf6f230a3a157ff69a03f7d8f4c965" category="list-text">A desconexão e a reconexão só devem ser necessárias durante a configuração inicial ou se a bandeja for enviada para um local diferente.</block>
   <block id="f0e4d108bd327aa0295d08fc98aaafd0" category="list-text">Fixe a moldura frontal.</block>
   <block id="d9917739114ac3a4e015dfd5fd132dc7" category="admonition">Risco de danos no equipamento -- pare de empurrar a gaveta se sentir preso. Use as alavancas de liberação na parte frontal da gaveta para deslizar a gaveta para fora. Em seguida, reinsira cuidadosamente a gaveta na ranhura.</block>
-  <block id="01a6b4e59365da6ed554e20bb2ab5362" category="doc">Instruções de instalação e configuração para E2860, E5760 e DE460C</block>
   <block id="acad4c6327f126ff2312c8c5f305314c" category="inline-link">Poster PDF E2860, E5760 e DE460C</block>
   <block id="2c48a33acd785df15fd46846e4e29986" category="list-text"><block ref="2c48a33acd785df15fd46846e4e29986" category="inline-link-rx"></block></block>
-  <block id="a2f0a23d015da77ff81697442b8f6aad" category="paragraph">Estas são as instruções de configuração descritas neste site.</block>
   <block id="dd0cd2627ab9b3d2325944c8d107c1e2" category="inline-xref-macro">Prepare-se para instalar o E2860, o E5760 e o DE460C</block>
   <block id="ebfef8a6ede4f8f5584a3aa54e1585fa" category="list-text"><block ref="ebfef8a6ede4f8f5584a3aa54e1585fa" category="inline-xref-macro-rx"></block></block>
   <block id="04b5e92ac5655763e56e78e89fde93c5" category="summary">Para instalar o E2860, E5760 ou DE460, crie uma conta e registe o seu hardware.</block>
@@ -3021,14 +3005,11 @@
   <block id="3dbc4b1fda3f7e5b612f7b6c5b1c62db" category="paragraph">A substituição da fonte de alimentação está concluída. Pode retomar as operações normais.</block>
   <block id="9148c3ad76e0662ac4cda746c7b8fc25" category="summary">Cada recipiente do controlador inclui uma bateria que preserva os dados armazenados em cache se a energia CA falhar. Se o Guru de recuperação no Gestor do sistema SANtricity comunicar um estado de falha da bateria ou um estado de substituição da bateria necessário, tem de substituir a bateria afetada.</block>
   <block id="a64ff6813a8c7e2d19e29501ae213675" category="doc">Baterias</block>
-  <block id="a3c03452327012e5141c33e5726e73c7" category="summary">Os coletores consistem em três tipos diferentes: Coletores de ventilador de energia (fontes de alimentação) que fornecem uma fonte de alimentação redundante e resfriamento adequado em um compartimento de controladora de 12 ou 24 unidades ou compartimento de unidade; coletores de energia usados para redundância de energia em uma gaveta de controladora de 60 unidades ou compartimento de unidade; e coletores de ventilador usados para resfriamento da gaveta de controladora de 60 unidades ou compartimento de unidade.</block>
   <block id="798338ebd6f3a53b276c5e78ff045ac7" category="doc">Canisters</block>
   <block id="d015c621cb8f70215da69bcd912d785a" category="paragraph">Os coletores consistem em três tipos diferentes: Coletores de ventilador de energia (fontes de alimentação) que fornecem uma fonte de alimentação redundante e resfriamento adequado em um compartimento de controladora de 12 ou 24 unidades ou compartimento de unidades; coletores de energia usados para redundância de energia em um compartimento de controladora de 60 unidades ou compartimento de unidades; e coletores de ventilador usados para resfriamento do compartimento de controladora de 60 unidades ou compartimento de unidades.</block>
-  <block id="98c3987fb58d5d61350074733f52ec4f" category="summary">Um controlador consiste em uma placa, firmware e software. Controla as unidades e implementa as funções do System Manager. Esta seção descreve como converter para uma configuração duplex adicionando um segundo controlador e como substituir um controlador em uma configuração simplex e em uma configuração duplex.</block>
   <block id="cbfb14f470701bf93424d757c624369a" category="doc">Controladores</block>
   <block id="31e4246373ffda243d0dd3b43a351955" category="summary">Uma unidade é um dispositivo mecânico eletromagnético que fornece o meio de armazenamento físico para os dados.</block>
   <block id="63a6b9b3b5de50d32228700cfe042610" category="doc">Unidades</block>
-  <block id="00f9ce66241621004c58b2e973a895fd" category="summary">Uma placa de interface de host (HIC) pode ser instalada opcionalmente dentro de um recipiente de controlador. O controlador E2800 inclui portas de host integradas na própria placa controladora, bem como portas de host no HIC opcional. As portas de host que são incorporadas ao controlador são chamadas portas de host de placa base. As portas de host que são incorporadas ao HIC são chamadas portas HIC.</block>
   <block id="bb8c12c938368d891c8a41b75b8dbff5" category="doc">Placas de interface do host</block>
   <block id="fcbb93bbfdd8447e24085518b94cfeb8" category="paragraph">Uma placa de interface de host (HIC) pode ser instalada opcionalmente dentro de um recipiente de controlador. O controlador E2800 inclui portas de host integradas na própria placa controladora, bem como portas de host no HIC opcional. As portas de host que são incorporadas ao controlador são chamadas portas de host de placa base. As portas de host que são incorporadas ao HIC são chamadas portas HIC.</block>
   <block id="abc88e374cdcac67f20ea112fee599e0" category="summary">Você pode converter o protocolo de um host para um protocolo diferente para que a compatibilidade e a comunicação possam ser estabelecidas.</block>
@@ -4151,8 +4132,6 @@
   <block id="f28a4a013fd760d63b99d55a9ac99583" category="list-text">Ligue a alimentação do novo depósito da ventoinha de alimentação.</block>
   <block id="c01085e6cd0606ebdc3939310bd696ac" category="list-text">Se uma fonte de alimentação com falha ainda estiver sendo relatada, repita as etapas em <block ref="ea8874311efff004f4ccf043a598fb2e" category="inline-xref-macro-rx"></block> e em <block ref="1b7a0d310d8da3d5c98eb62f6d26c34f" category="inline-xref-macro-rx"></block>. Se o problema persistir, entre em Contato com o suporte técnico.</block>
   <block id="26c1b7afb317aa76d00864a1199c6488" category="summary">Uma bateria é incluída com um recipiente do controlador e preserva os dados em cache se a energia CA falhar.</block>
-  <block id="e977f6bbcbae61c33920c421cdc41ec2" category="summary">Um controlador consiste em uma placa, firmware e software. Controla as unidades e implementa as funções do System Manager. Esta seção descreve como substituir um controlador em uma configuração duplex.</block>
-  <block id="d3852022ece859a54c514fe09a6eef63" category="summary">Uma placa de interface de host (HIC) pode ser instalada opcionalmente dentro de um recipiente de controlador. O controlador E5700 inclui portas de host integradas na própria placa controladora, bem como portas de host no HIC opcional. As portas de host que são incorporadas ao controlador são chamadas portas de host de placa base. As portas de host que são incorporadas ao HIC são chamadas portas HIC.</block>
   <block id="7a4a43ed3b8a4107c8b5916a80b9e5bf" category="paragraph">Uma placa de interface de host (HIC) pode ser instalada opcionalmente dentro de um recipiente de controlador. O controlador E5700 inclui portas de host integradas na própria placa controladora, bem como portas de host no HIC opcional. As portas de host que são incorporadas ao controlador são chamadas portas de host de placa base. As portas de host que são incorporadas ao HIC são chamadas portas HIC.</block>
   <block id="6cf86791c35c323d57a81ad2db12c604" category="doc">Substitua o controlador na configuração duplex</block>
   <block id="109d77f9dedc4870c4f78abdbb308eaa" category="paragraph">Cada recipiente do controlador contém uma placa controladora, uma bateria e uma placa de interface do host (HIC) opcional. Quando substituir um recipiente do controlador, tem de remover a bateria e o HIC, se estiverem instalados, do recipiente do controlador original e, em seguida, instalá-los no recipiente do controlador de substituição.</block>
@@ -4503,17 +4482,12 @@
   <block id="6039362762ec0cd139275c6a6b7e11ab" category="list-text">Se nenhum dos volumes for retornado, você deverá retornar manualmente os volumes. Vá para menu:mais[redistribuir volumes].</block>
   <block id="4e5d0d09c85db1cb82166dc69b664d5a" category="list-text">Se apenas alguns dos volumes forem devolvidos aos seus proprietários preferidos após a distribuição automática ou a distribuição manual, você deverá verificar o Recovery Guru para problemas de conetividade do host.</block>
   <block id="f15676779c0881e1d4a27ae74206fdc4" category="list-text">Se não houver Recovery Guru presente ou se seguir as etapas do Recovery Guru, os volumes ainda não serão devolvidos aos seus proprietários preferenciais, entre em Contato com o suporte.</block>
-  <block id="f35307ec092e89906d40c7e7580fd73e" category="summary">Um controlador consiste em uma placa, firmware e software. Controla as unidades e implementa as funções do System Manager. Esta seção descreve como substituir uma única controladora ou ambas as controladoras no compartimento de controladoras EF300 ou EF600.</block>
-  <block id="9e82bbc678cd60ca1e23c9306295675e" category="summary">Você deve substituir um DIMM quando houver uma incompatibilidade de memória ou tiver um DIMM com falha.</block>
   <block id="4ec1b0ed9e4f78833f020b2b7ed423ce" category="doc">DIMMs</block>
   <block id="77bfec755a5e57d7ef372575d496401b" category="summary">Uma unidade é um dispositivo que fornece a Mídia de armazenamento físico para dados.</block>
   <block id="9ba44d804b4659e108d69ba4db8377f5" category="summary">Cada gaveta de unidade ou compartimento de controladora EF300 ou EF600 inclui cinco ventiladores para resfriar a controladora.</block>
   <block id="4604f841b0b16d3013cac1e2078e5b1b" category="doc">Fãs</block>
-  <block id="9ec28cb381dd9edd5e1a4ad5641fba96" category="summary">Uma placa de interface de host (HIC) deve ser instalada dentro de um recipiente de controlador. O controlador EF600 inclui portas de host no HIC opcional. As portas de host que são incorporadas ao HIC são chamadas portas HIC.</block>
   <block id="4340eb550bf9d82ec63ae6c684b4ce19" category="paragraph">Uma placa de interface do host (HIC) deve ser instalada dentro de um recipiente do controlador. O controlador EF600 inclui portas de host no HIC opcional. As portas de host que são incorporadas ao HIC são chamadas portas HIC.</block>
-  <block id="8efc2bb6da7e629c408a29a1c453f118" category="summary">Você pode converter o protocolo de um host para um protocolo diferente para que ele seja compatível e você pode converter o protocolo de suas conexões de host para um protocolo diferente para atender às suas necessidades de infraestrutura.</block>
   <block id="963fa086e22d0159155d22af7dbcbb0a" category="summary">Uma fonte de alimentação fornece uma fonte de alimentação redundante em um compartimento de controladora.</block>
-  <block id="51255c5d39d4b9a43a7f800db3b8a431" category="doc">Fontes de alimentação</block>
   <block id="04a3d4071a9450f7356dbc04b8b8747c" category="summary">Uma placa de expansão SAS pode ser instalada dentro de um recipiente do controlador. A controladora EF300 suporta expansão SAS.</block>
   <block id="e00394e86e0897378bd874e271fcd82c" category="doc">Placas de expansão SAS</block>
   <block id="5e1f9a9f3fe7461846141cef4f73476d" category="summary">Requisitos e considerações para a substituição do controlador EF300 ou EF600</block>
@@ -8439,19 +8413,14 @@
   <block id="6a177f60e2c78aeead82deed1b7f79bd" category="image-alt">Exemplo de cabeamento do compartimento de unidade</block>
   <block id="97d8dba52fc751664d17d634de384761" category="open-title">Conete o compartimento de unidades para E4000</block>
   <block id="5d48bd8c60ef301164497e794ae727ca" category="image-alt">Ícone de hardware IOM</block>
-  <block id="c5f2c8e37ae34577d9aa27dc0a6d9d6a" category="summary">Você pode usar o protocolo Fibre Channel com um host Linux em um sistema e-Series.</block>
   <block id="a51352079fbf62de5b216fbcf5f8547f" category="image-alt">Configuração de rede FC</block>
-  <block id="2c14a3be6c3b57db7707ac6ae99aeb97" category="summary">Você pode usar o protocolo iSCSI com um host Linux em um sistema e-Series.</block>
   <block id="035b18714bc5d7aa7c3b19a557b2784d" category="image-alt">Configuração de rede iSCSI</block>
-  <block id="279607469d0ed6f0d6a8dfabbc5b63e2" category="summary">Você pode usar o protocolo iSER over Infiniband com um host Linux em um sistema e-Series.</block>
   <block id="f6d2572a98e17f547b50d07bd60a4357" category="image-alt">Configuração de rede Iser over IB</block>
   <block id="e25b62b71db71b440f775e632a958e5e" category="image-alt">Exemplo de topologia de conexão direta</block>
   <block id="3d673c4735715944ce52ebdb6281a20d" category="image-alt">Exemplo de topologia de conexão de switch</block>
   <block id="5a60c0d89257784a23a8dd439204f7f1" category="image-alt">Exemplo de conexão direta NVMe em Infiniband</block>
   <block id="37370b7d172047a016f376cc6b5258c9" category="image-alt">Exemplo de conexão direta com NVMe em RoCE</block>
   <block id="65311bced825a83f85718b09cc4ab673" category="image-alt">Exemplo de conexão de switch NVMe sobre RoCE</block>
-  <block id="846fb8d171e9dfcce4fd56289d380608" category="summary">Você pode usar o protocolo SAS com um host Linux em um sistema e-Series.</block>
-  <block id="ecf0c5c7f835375b8d9275312b470c82" category="summary">Você pode usar o protocolo SRP over InfiniBand com um host Linux em um sistema e-Series.</block>
   <block id="025f0fcb18e01db2892910a53d657f57" category="image-alt">SRB sobre identificadores de porta IB</block>
   <block id="a9a8836056eb3cc8d01f51eb5c6e7eec" category="list-text">Para obter instruções sobre como criar datastores VMFS ou usar volumes como RDMs com o vSphere Client ou o vSphere Web Client, consulte<block ref="b15a5268225569436f01a761f08cccf7" category="inline-link-rx"></block>.</block>
   <block id="ebaab7c3245c99578b7dd1e67138cccf" category="list-text">Para obter instruções sobre como executar uma nova digitalização do armazenamento em um host ESXi, procure o<block ref="151d2130fd8b5e8e7d0d3b596c1bdeb5" category="inline-link-rx"></block> artigo sobre este tópico.</block>
@@ -8888,7 +8857,6 @@
   <block id="2f2564b7bd12fa4c137f3761c14d73a3" category="paragraph">Você pode substituir uma gaveta de unidades em um compartimento de controladora E4060 ou em um compartimento de unidades de DE460C TB.</block>
   <block id="3748f377726945770a9a282453272357" category="paragraph">As etapas para substituir uma gaveta de unidade com falha em um compartimento de controladora E4060 ou em um compartimento de unidades DE460C dependem se os volumes na gaveta estão protegidos pela proteção contra perda de gaveta. Se todos os volumes na gaveta da unidade estiverem em pools de discos ou grupos de volumes que tenham proteção contra perda de gaveta, você poderá executar este procedimento on-line. Caso contrário, você deve parar toda a atividade de e/S do host e desligar a gaveta antes de substituir a gaveta da unidade.</block>
   <block id="1103b7e629028daaccac02c0a8fc98d2" category="doc">Substitua a bateria no E4000</block>
-  <block id="543025215967bae569d97988a7e97cbc" category="paragraph">Tem de substituir a bateria afetada no seu aparelho E4000 se o Guru de recuperação no Gestor do sistema SANtricity indicar o estado "Falha na bateria" ou "Substituição da bateria necessária". Para proteger os seus dados, a bateria tem de ser substituída o mais rapidamente possível.</block>
   <block id="9af92606abb4b31a8818023a6515b3ec" category="list-text">Uma estação de gerenciamento com um navegador que pode acessar o Gerenciador de sistema do SANtricity para o controlador. (Para abrir a interface do System Manager, aponte o navegador para o nome de domínio ou endereço IP do controlador.)</block>
   <block id="ec6e5e75653734bb428b87afb93f7f41" category="section-title">Passo 1: Prepare-se para substituir a bateria</block>
   <block id="3df752ee7e92a3dba58c1061c5d0a4a6" category="list-text">Faça backup do banco de dados de configuração do storage array usando o Gerenciador de sistema do SANtricity.</block>
@@ -8928,15 +8896,7 @@
   <block id="7eed6664ecacefe81e2b660f47a5cfaf" category="list-text">Volte a instalar a tampa do recipiente do controlador e bloqueie-a no lugar.</block>
   <block id="aa4ecd2631b0a57f27425bbdf9cc91b7" category="paragraph">Depois de substituir os componentes no recipiente do controlador, volte a instalá-lo no chassis.</block>
   <block id="954c99d35fff8ed108602add34a47b93" category="list-text">Se ainda não o tiver feito, substitua a tampa no recipiente do controlador.</block>
-  <block id="9c17c595e56b6b01c7d703a94b943e71" category="list-text">Vire o recipiente do controlador ao contrário e alinhe a extremidade com a abertura no chassis.</block>
-  <block id="44df050c94969c9c5f783babbd55fb7e" category="list-text">Alinhe a extremidade do recipiente do controlador com a abertura no chassis e, em seguida, empurre cuidadosamente o recipiente do controlador até meio do sistema.</block>
-  <block id="40d0d24050f8aac90dc03655f2738fb3" category="admonition">Não introduza completamente o recipiente do controlador no chassis até receber instruções para o fazer.</block>
-  <block id="4e4cd7bd59f82bab02590366f27be3e5" category="list-text">Recable o sistema, conforme necessário.</block>
   <block id="7bfce735a4505a06fb1c4b7a2d076c1e" category="list-text">Se você removeu os conversores de Mídia (QSFPs ou SFPs), lembre-se de reinstalá-los se você estiver usando cabos de fibra ótica.</block>
-  <block id="5d971d684708429fbfc1d12fc0823b1c" category="list-text">Conclua a reinstalação do recipiente do controlador:</block>
-  <block id="b34c1b37f135bc5b382d7862f82e025c" category="list-text">Com a alavanca do came na posição aberta, empurre firmemente o recipiente do controlador até que ele atenda ao plano médio e esteja totalmente assentado e feche a alça do came para a posição travada.</block>
-  <block id="69008785977983cf8a33f9f78ff2b7c9" category="admonition">Não utilize força excessiva ao deslizar o recipiente do controlador para o chassis para evitar danificar os conetores.</block>
-  <block id="0332f86520cc7552e1fb152e32977600" category="paragraph">O controlador começa a arrancar assim que estiver sentado no chassis.</block>
   <block id="1245c13fabc810ad6fbb6f05277ad356" category="list-text">Se ainda não o tiver feito, reinstale o dispositivo de gerenciamento de cabos.</block>
   <block id="82cd534d691845f1af190a9df38d753d" category="list-text">Prenda os cabos ao dispositivo de gerenciamento de cabos com o gancho e a alça de loop.</block>
   <block id="91418c565341bd8a889226a195dd2fa2" category="section-title">Passo 5: Substituição completa da bateria</block>
@@ -9009,10 +8969,7 @@
   <block id="f4d6345a40a4387a35c3eb6ef8f51b15" category="section-title">Passo 8: Substituição completa do controlador</block>
   <block id="a7c932e7525739cefdfd19d17123207c" category="paragraph">Restabelecer a conexão com o compartimento do controlador, coletar dados de suporte e retomar as operações.</block>
   <block id="62241759bfd404c01951d43ae57f4bbe" category="open-title">Compartimento do controlador de alimentação (simplex)</block>
-  <block id="04803538074d9bd9b55f9adc380717f2" category="list-text">Instale o controlador de substituição no aparelho.</block>
   <block id="fe69546640a5330ecd9f461f1cdbd1ee" category="list-text">Vire o controlador ao contrário, de modo a que a tampa amovível fique virada para baixo.</block>
-  <block id="f5b18529473e7fbcbdcf4601ffe30597" category="list-text">Com a pega do came na posição aberta, deslize o controlador até ao aparelho.</block>
-  <block id="0dc7aaae2ab89a4fa299f4f2e42c1646" category="list-text">Mova a alavanca do came para a esquerda para bloquear o controlador no lugar.</block>
   <block id="85caa39a88f7091fb2db841ad6b83ffd" category="list-text">Volte a colocar os cabos.</block>
   <block id="2afc7927e5f45cc2a3ef83b60ea186cd" category="list-text">Ligue o compartimento do controlador.</block>
   <block id="4b55c79852e2203088ca03f4c8fb4b3c" category="list-text">Aguarde até que o controlador E4000 seja reiniciado.</block>
@@ -9102,7 +9059,6 @@
   <block id="1ea4267c90825f4bf9c52932b0bd8e1a" category="list-text">Volte a instalar a tampa do recipiente do controlador.</block>
   <block id="48a57bdd7334ad13cd1585ba2a663c46" category="section-title">Etapa 5: Reinstale o recipiente do controlador</block>
   <block id="af32241ae4a2afd71e33a8646b775b1f" category="paragraph">Volte a instalar o recipiente do controlador no chassis.</block>
-  <block id="0a5704c96cc972ac4c49e76417f83282" category="list-text">Empurre cuidadosamente o recipiente do controlador até meio para o sistema. Alinhe a extremidade do recipiente do controlador com a abertura no chassis e, em seguida, empurre cuidadosamente o recipiente do controlador até meio do sistema.</block>
   <block id="660a0f2c7dddd5ead3b175899a5d429c" category="section-title">Etapa 6: Substituição completa de DIMMs</block>
   <block id="315927c4ed1f1d8b1d0b704a5a67026e" category="list-text">Quando o controlador estiver novamente on-line, confirme se seu status é ideal e verifique os LEDs de atenção do compartimento do controlador.</block>
   <block id="805863d0c877d6358a86a2607e79ed0d" category="paragraph">Se o estado não for o ideal ou se algum dos LEDs de atenção estiver aceso, confirme se todos os cabos estão corretamente encaixados e o recipiente do controlador está instalado corretamente. Se necessário, remova e reinstale o recipiente do controlador. NOTA: Se não conseguir resolver o problema, contacte o suporte técnico.</block>
@@ -9145,7 +9101,6 @@
   <block id="fe831c9a1ec5f0798f7d995bb682d1af" category="list-text">Desaperte os parafusos de aperto manual do HIC e levante-os para cima.</block>
   <block id="cb588a37aac0cb396a69cd9c6fa260a7" category="list-text">Reinstale o HIC:</block>
   <block id="eef513f5198b93971d313eb80e4da6fb" category="list-text">Volte a instalar a tampa do módulo do controlador e bloqueie-a no lugar.</block>
-  <block id="528b8ab8a2997d60c930f6610d03301f" category="paragraph">Se você tiver uma configuração duplex, o controlador começará a inicializar assim que estiver sentado no chassi.</block>
   <block id="613ffef3aed34fbf482f6ca198dbe765" category="section-title">Passo 5: Substituição completa do HIC</block>
   <block id="fd3355f16365c925e530b446f01146af" category="paragraph">Ligue o controlador (simplex) ou coloque o controlador online (duplex), recolha dados de suporte e retome as operações.</block>
   <block id="3e741422cd2bc3082e4d5328242d9d60" category="doc">Atualize o HIC em E4000</block>
@@ -9418,7 +9373,6 @@
   <block id="04ec4caf2b80e886c69cd8966d5f5c92" category="paragraph">Saiba como se preparar para a instalação do seu sistema de armazenamento das séries EF300, EF600, EF300C ou EF600C.</block>
   <block id="a466a396cacf21d3516a87d8639c5255" category="paragraph">Antes de substituir uma bateria EF300, EF600, EF300C ou EF600C, reveja os requisitos e considerações.</block>
   <block id="0b5565f493a40cc2e5ace8909a568f68" category="paragraph">Pode substituir uma bateria num sistema de armazenamento EF300, EF600, EF300C ou EF600C.</block>
-  <block id="a3ec65b7c9b468046fdbe7dc19f94299" category="paragraph">Um controlador consiste em uma placa, firmware e software. Controla as unidades e implementa as funções do System Manager. Esta seção descreve como substituir uma única controladora ou ambas as controladoras no compartimento de controladoras EF300, EF600, EF300C ou EF600C.</block>
   <block id="89e4ff051c9e9c60c1d21fddb84ec42a" category="paragraph">Antes de substituir um EF300, EF600. Controlador EF300C ou EF600C, reveja os requisitos e considerações.</block>
   <block id="e0b68b674b62dc6569b4275513ebdb8f" category="paragraph">É possível substituir um único controlador no compartimento de controladoras EF300, EF600, EF300C ou EF600C.</block>
   <block id="136b14c506b51c3fdb848576b81df5a9" category="paragraph">Antes de substituir um DIMM em um storage de armazenamento EF300, EF600, EF600C ou EF300C, revise os requisitos e considerações.</block>
@@ -9494,4 +9448,7 @@
   <block id="baee5b8c18b240b4edfcc1ae3fe154f0" category="section-title">Novos recursos na versão 11.90R1</block>
   <block id="0b2fb9383075b5994701c94b27e4b6ee" category="paragraph">Esta versão apresenta os sistemas de storage all-flash NVMe EF300C e EF600C. O EF300C e o EF600C são versões flash de alta capacidade dos sistemas de storage EF300 e EF600 existentes. As unidades SSD NVMe de alta capacidade de tamanhos 30TB ou 60TB são compatíveis com o EF300C e o EF600C. O EF300C/EF600C é compatível para uso do Dynamic Disk Pool somente sem suporte a RAID legado.</block>
   <block id="8af7f744c39ae6285a380b6eb402fcb2" category="paragraph">Suporte para 12GB interfaces SAS em controladores E4000</block>
+  <block id="7a3a71e57296fe130d591f2dd4a7a06c" category="paragraph">Tem de substituir a bateria afetada no E4000 se o Guru de recuperação no Gestor do sistema SANtricity indicar o estado "Falha na bateria" ou "Substituição da bateria necessária". Para proteger os seus dados, a bateria tem de ser substituída o mais rapidamente possível.</block>
+  <block id="8c34b0fdf9a967369992b78c08820091" category="list-text">Com a pega do came na posição aberta, deslize o controlador até à prateleira.</block>
+  <block id="1b6c46128dc1faef9365a16d700d5e74" category="list-text">Instale o controlador de substituição na prateleira.</block>
 </blocks>

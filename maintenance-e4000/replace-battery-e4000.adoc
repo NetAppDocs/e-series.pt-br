@@ -11,7 +11,7 @@ summary:
 
 
 [role="lead"]
-Tem de substituir a bateria afetada no seu aparelho E4000 se o Guru de recuperação no Gestor do sistema SANtricity indicar o estado "Falha na bateria" ou "Substituição da bateria necessária". Para proteger os seus dados, a bateria tem de ser substituída o mais rapidamente possível.
+Tem de substituir a bateria afetada no E4000 se o Guru de recuperação no Gestor do sistema SANtricity indicar o estado "Falha na bateria" ou "Substituição da bateria necessária". Para proteger os seus dados, a bateria tem de ser substituída o mais rapidamente possível.
 
 A partir do Gestor do sistema SANtricity, reveja os detalhes no Guru de recuperação para confirmar que existe um problema com uma bateria e para garantir que não é necessário resolver primeiro outros itens.
 
@@ -258,28 +258,14 @@ Depois de substituir os componentes no recipiente do controlador, volte a instal
 .Passos
 . Se você ainda não está aterrado, aterre-se adequadamente.
 . Se ainda não o tiver feito, substitua a tampa no recipiente do controlador.
-. Vire o recipiente do controlador ao contrário e alinhe a extremidade com a abertura no chassis.
-. Alinhe a extremidade do recipiente do controlador com a abertura no chassis e, em seguida, empurre cuidadosamente o recipiente do controlador até meio do sistema.
+. Vire o controlador ao contrário, de modo a que a tampa amovível fique virada para baixo.
+. Com a pega do came na posição aberta, deslize o controlador até à prateleira.
+. Volte a colocar os cabos.
 +
 
-NOTE: Não introduza completamente o recipiente do controlador no chassis até receber instruções para o fazer.
+NOTE: Se você removeu os conversores de Mídia (QSFPs ou SFPs), lembre-se de reinstalá-los se você estiver usando cabos de fibra ótica.
 
-. Recable o sistema, conforme necessário.
-. Se você removeu os conversores de Mídia (QSFPs ou SFPs), lembre-se de reinstalá-los se você estiver usando cabos de fibra ótica.
-. Conclua a reinstalação do recipiente do controlador:
-+
-.. Com a alavanca do came na posição aberta, empurre firmemente o recipiente do controlador até que ele atenda ao plano médio e esteja totalmente assentado e feche a alça do came para a posição travada.
-+
-
-NOTE: Não utilize força excessiva ao deslizar o recipiente do controlador para o chassis para evitar danificar os conetores.
-
-+
-O controlador começa a arrancar assim que estiver sentado no chassis.
-
-.. Se ainda não o tiver feito, reinstale o dispositivo de gerenciamento de cabos.
-.. Prenda os cabos ao dispositivo de gerenciamento de cabos com o gancho e a alça de loop.
-
-
+. Prenda os cabos ao dispositivo de gerenciamento de cabos com o gancho e a alça de loop.
 
 
 

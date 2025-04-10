@@ -390,12 +390,17 @@ Restabelecer a conexão com o compartimento do controlador, coletar dados de sup
 .Compartimento do controlador de alimentação (simplex)
 --
 .Passos
-. Instale o controlador de substituição no aparelho.
+. Instale o controlador de substituição na prateleira.
 +
+.. Se você ainda não está aterrado, aterre-se adequadamente.
 .. Vire o controlador ao contrário, de modo a que a tampa amovível fique virada para baixo.
-.. Com a pega do came na posição aberta, deslize o controlador até ao aparelho.
-.. Mova a alavanca do came para a esquerda para bloquear o controlador no lugar.
+.. Com a pega do came na posição aberta, deslize o controlador até à prateleira.
 .. Volte a colocar os cabos.
++
+
+NOTE: Se você removeu os conversores de Mídia (QSFPs ou SFPs), lembre-se de reinstalá-los se você estiver usando cabos de fibra ótica.
+
+.. Prenda os cabos ao dispositivo de gerenciamento de cabos com o gancho e a alça de loop.
 .. Ligue o compartimento do controlador.
 .. Aguarde até que o controlador E4000 seja reiniciado.
 .. Determine como você atribuirá um endereço IP ao controlador de substituição.
@@ -490,12 +495,18 @@ O arquivo é salvo na pasta Downloads do seu navegador com o nome *support-data.
 .Colocar o controlador online (duplex)
 --
 .Passos
-. Instale o controlador de substituição no aparelho.
+. Instale o controlador de substituição na prateleira.
 +
+.. Se você ainda não está aterrado, aterre-se adequadamente.
+.. Se ainda não o tiver feito, substitua a tampa no recipiente do controlador.
 .. Vire o controlador ao contrário, de modo a que a tampa amovível fique virada para baixo.
-.. Com a pega do came na posição aberta, deslize o controlador até ao aparelho.
-.. Mova a alavanca do came para a esquerda para bloquear o controlador no lugar.
+.. Com a pega do came na posição aberta, deslize o controlador até à prateleira.
 .. Volte a colocar os cabos.
++
+
+NOTE: Se você removeu os conversores de Mídia (QSFPs ou SFPs), lembre-se de reinstalá-los se você estiver usando cabos de fibra ótica.
+
+.. Prenda os cabos ao dispositivo de gerenciamento de cabos com o gancho e a alça de loop.
 .. Se o controlador original usou DHCP para o endereço IP, localize o endereço MAC na etiqueta na parte de trás do controlador de substituição. Peça ao administrador da rede para associar o DNS/rede e o endereço IP do controlador removido com o endereço MAC do controlador de substituição.
 +
 

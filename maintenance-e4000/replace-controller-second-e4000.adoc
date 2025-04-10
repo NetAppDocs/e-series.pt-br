@@ -242,6 +242,7 @@ Quando você remove o controlador em branco, uma aba se move para o lugar para b
 
 Instale um segundo recipiente do controlador para alterar uma configuração simplex para uma configuração duplex.
 
+. Se você ainda não está aterrado, aterre-se adequadamente.
 . Vire o recipiente do controlador ao contrário, de forma a que a tampa amovível fique virada para baixo.
 . Alinhe a extremidade do módulo do controlador com a abertura no chassis e, em seguida, empurre cuidadosamente o módulo do controlador até meio do sistema.
 . Com a alavanca do came na posição aberta, empurre firmemente o módulo do controlador até que ele atenda ao plano médio e esteja totalmente assentado e, em seguida, feche a alavanca do came para a posição travada.
