@@ -1,7 +1,7 @@
 ---
 sidebar: sidebar 
 permalink: whats-new.html 
-keywords: whats new, new features, SANtricity 11.90 
+keywords: whats new, new features, SANtricity 11.90, SANtricity 11.80 
 summary: Novos recursos no SANtricity os. 
 ---
 = O que há de novo no SANtricity os
@@ -85,6 +85,12 @@ O recurso de bloqueio de login agora está disponível para Serviços Web
 Configurável somente pela API REST, uma nova configuração de bloqueio de login agora está disponível para serviços Web incorporados e proxy.
 
 |===
+
+
+== Novos recursos na versão 11.80.1R4
+
+Esta versão contém apenas pequenas alterações e não há novos recursos ou restrições. Para obter mais informações sobre as alterações nesta versão, consulte o arquivo README.
+
 
 
 == Novos recursos na versão 11.80.1R3
