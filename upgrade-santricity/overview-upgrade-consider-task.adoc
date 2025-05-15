@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: E-Series, eseries, E2800, E5700, EF300, EF600, SANtricity, drive firmware, upgrade SANtricity, upgrade OS, upgrade E-Series, upgrade firmware, upgrading, upgrade IOM firmware, upgrade NVSRAM, upgrade controller 
 summary: Analise as considerações de atualização para o software e firmware do controlador SANtricity os da matriz de armazenamento e para o firmware da unidade. 
 ---
-= Considerações sobre a atualização
+= Considerações para atualizar o software SANtricity
 :allow-uri-read: 
 :experimental: 
 :icons: font

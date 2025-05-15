@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: EF600, EF600C replace DIMM, drive failure 
 summary: Substitua uma unidade em um array EF600. 
 ---
-= Substitua a unidade em um array EF600
+= Substitua a unidade - EF600
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

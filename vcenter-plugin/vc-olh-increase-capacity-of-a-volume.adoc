@@ -4,7 +4,7 @@ permalink: vcenter-plugin/vc-olh-increase-capacity-of-a-volume.html
 keywords: vCenter plugin, Plugin for vCenter, SANtricity plugin for vCenter 
 summary: Redimensione um volume para aumentar sua capacidade reportada. 
 ---
-= Aumentar a capacidade de um volume
+= Aumentar a capacidade de um volume no plug-in de storage do SANtricity para vCenter
 :hardbreaks:
 :allow-uri-read: 
 :experimental: 

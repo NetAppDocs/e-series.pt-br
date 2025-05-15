@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: multipath software for Linux, express linux configuration, software configuration, linux host, 
 summary: Configurar o software multipath, que fornece um caminho redundante para o storage array no caso de um dos caminhos físicos ser interrompido. 
 ---
-= Configurar o software multipath
+= Configurar software multipath no e-Series - Linux (FC)
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

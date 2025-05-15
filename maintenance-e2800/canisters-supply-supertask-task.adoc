@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: E2800 replace 12-drive power supply, E2800 replace 24-drive power supply, replacing E2800 power supply, E2800, E-Series, eseries 
 summary: Substitua um compartimento de controladora ou um compartimento de unidade de E2800 12 ou 24 unidades, que inclui duas fontes de alimentação com ventiladores integrados. 
 ---
-= Substitua a fonte de alimentação E2800 (12 unidades ou 24 unidades)
+= Substitua a fonte de alimentação - E2800 (12 unidades ou 24 unidades)
 :allow-uri-read: 
 :experimental: 
 :icons: font

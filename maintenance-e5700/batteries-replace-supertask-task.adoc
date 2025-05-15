@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: E5700 battery, repair E5700 battery, replace E5700 battery, failed E5700 battery 
 summary: Substitua uma bateria com falha em um sistema de armazenamento E5700. 
 ---
-= Substitua a bateria E5700
+= Substitua a bateria - E5700
 :allow-uri-read: 
 :experimental: 
 :icons: font

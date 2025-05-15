@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: express Windows configuration, software configuration, Windows host, E2800, E5700, EF300, EF600, E-Series, eseries 
 summary: Verifique se a configuração do Windows é suportada. 
 ---
-= Verifique se a configuração do Windows é suportada
+= Verifique o suporte à configuração do Windows no e-Series
 :allow-uri-read: 
 :experimental: 
 :icons: font

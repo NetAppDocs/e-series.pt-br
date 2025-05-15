@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: E4000 replace drive, replacing E4000 drive, E4000 replace drive, replacing E4000 drive, E4000, E-Series, eseries 
 summary: Substitua uma unidade em um E4000 por um compartimento de 12 ou 24 unidades. 
 ---
-= Substitua a unidade em E4000 (compartimento de 12 ou 24 unidades)
+= Substitua a unidade - E4000 (compartimento de 12 ou 24 unidades)
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords:  
 summary:  
 ---
-= Adicione um segundo recipiente em E4000
+= Adicione um segundo recipiente - E4000
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

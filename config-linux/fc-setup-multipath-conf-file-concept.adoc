@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: multipath.conf file, express linux configuration, software configuration, linux host, 
 summary: Use o arquivo multipath.conf, que é o arquivo de configuração para o daemon multipath, multipathd. 
 ---
-= Configure o arquivo multipath.conf
+= Configurar o arquivo multipath.conf no e-Series - Linux (FC)
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

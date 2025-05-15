@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: log in API, log in Unified Manager 
 summary: Acesse e faça login na API de serviços da Web e no Unified Manager. 
 ---
-= Faça login na API e no Unified Manager
+= Faça login na API de proxy de serviços da Web da SANtricity e no Gerenciador unificado
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

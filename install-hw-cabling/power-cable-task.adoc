@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: cabling, cables, power cable, power cabling, power supply cabling, E-Series, eseries, E2800, E5700, EF300, EF600, DE212C, DE224C, DE460C 
 summary: Ligue as fontes de alimentação de cada componente a circuitos de alimentação separados. 
 ---
-= Cablagem de alimentação
+= Cabeamento de alimentação do seu sistema de storage (e-Series)
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

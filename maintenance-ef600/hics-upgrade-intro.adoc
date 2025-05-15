@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: EF600, EF300, EF300C, EF600C, upgrade HIC, upgrade HIC, increase host ports, change host protocol 
 summary: 'Você atualiza uma placa de interface de host (HIC) para aumentar o número de portas de host ou para alterar protocolos de host.' 
 ---
-= Atualize a placa de interface de host (HIC) EF300 ou EF600
+= Atualize a placa de interface do host (HIC) - EF300 e EF600
 :allow-uri-read: 
 :experimental: 
 :icons: font

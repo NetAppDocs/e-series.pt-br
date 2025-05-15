@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: replace SAS expansion card, replacing SAS card, drive tray expansion, expansion card, EF300C, EF600C, EF300, EF600 
 summary: Adicione uma placa de expansão SAS a controladores EF300 para permitir a expansão da bandeja de unidades. 
 ---
-= Adicione a placa de expansão SAS ao EF300 e EF600
+= Adicione uma placa de expansão SAS - EF300 e EF600
 :allow-uri-read: 
 :experimental: 
 :icons: font

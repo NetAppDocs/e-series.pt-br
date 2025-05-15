@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: display volumes host, express linux configuration, software configuration, linux host, E2800, E5700, EF300, EF600, E-Series, eseries, SMcli, SMdevices 
 summary: A ferramenta SMdevices, parte do pacote nvme-cli, permite visualizar os volumes atualmente visíveis no host. Esta ferramenta é uma alternativa ao comando nvme list. 
 ---
-= Exibir os volumes visíveis para o host
+= Exibir os volumes visíveis para o host no e-Series - Linux (NVMe sobre RoCE)
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

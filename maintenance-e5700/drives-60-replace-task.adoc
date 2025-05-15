@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: E5700 60-drive, replace E5700 60-drive, failed E5700 60-drive 
 summary: Substitua uma unidade em uma gaveta de E5700 60 unidades. 
 ---
-= Substitua a unidade no E5700 (compartimento de 60 unidades)
+= Substitua a unidade - E5700 (compartimento de 60 unidades)
 :allow-uri-read: 
 :experimental: 
 :icons: font

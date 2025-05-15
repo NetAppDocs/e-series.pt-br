@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: installation, download, install proxy, 
 summary: A instalação envolve o download do arquivo e, em seguida, a instalação do pacote proxy em um servidor Linux ou Windows. 
 ---
-= Instale ou atualize o arquivo Proxy de serviços da Web
+= Instale ou atualize o arquivo de proxy dos serviços da Web do SANtricity
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

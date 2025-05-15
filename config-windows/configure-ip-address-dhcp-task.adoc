@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: IP address, DHCP, express Windows configuration, software configuration, Windows host, E2800, E5700, EF300, EF600, E-Series, eseries 
 summary: 'Use o protocolo DHCP (Dynamic Host Configuration Protocol) para fornecer endereços IP no método expresso do Windows.' 
 ---
-= Configurar endereços IP usando DHCP
+= Configurar endereços IP usando DHCP no e-Series - Windows
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

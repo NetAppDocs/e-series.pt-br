@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: host protocol change, EF300, EF600, EF600C, EF300C 
 summary: Altere o protocolo da porta do host para um array EF300 ou EF600. 
 ---
-= Altere o protocolo de host para um EF300 ou EF600
+= Altere o protocolo do host - EF300 e EF600
 :allow-uri-read: 
 :experimental: 
 :icons: font

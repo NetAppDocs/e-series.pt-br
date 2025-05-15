@@ -4,7 +4,7 @@ permalink: vcenter-plugin/vc-olh-remove-storage-arrays-from-group.html
 keywords: vCenter plugin, Plugin for vCenter, SANtricity plugin for vCenter 
 summary: Remova um ou mais arrays de armazenamento gerenciados de um grupo se você não quiser mais gerenciá-lo de um grupo de armazenamento específico. 
 ---
-= Remova os storages de armazenamento do grupo
+= Remova os storage arrays de um grupo no plug-in de armazenamento do SANtricity para vCenter
 :hardbreaks:
 :allow-uri-read: 
 :experimental: 

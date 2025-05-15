@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: E5700 host interface card, E5700 HIC, upgrade E5700 HIC, update E5700 HIC, increase host ports 
 summary: Atualize um HIC em um E5700. 
 ---
-= Atualização da placa de interface do host E5700 (HIC)
+= Atualize a placa de interface do host (HIC) - 5700
 :allow-uri-read: 
 :experimental: 
 :icons: font

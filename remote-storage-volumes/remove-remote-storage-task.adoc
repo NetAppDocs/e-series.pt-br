@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: remove storage object, disconnect remote storage 
 summary: Você pode remover qualquer objeto de armazenamento remoto configurado através do Gerenciador de sistema do SANtricity. 
 ---
-= Remova o objeto de armazenamento remoto
+= Remova o objeto de armazenamento remoto para volumes de armazenamento remoto SANtricity
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

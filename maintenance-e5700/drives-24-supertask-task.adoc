@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: E5700 24-drive, replace E5700 24-drive, failed E5700 24-drive 
 summary: Substitua uma unidade em uma gaveta de E5700 24 unidades. 
 ---
-= Substitua a unidade no E5700 (compartimento de 24 unidades)
+= Substitua a unidade - E5700 (compartimento de 24 unidades)
 :allow-uri-read: 
 :experimental: 
 :icons: font

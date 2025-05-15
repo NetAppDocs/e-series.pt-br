@@ -4,7 +4,7 @@ permalink: rackmount-hardware.html
 keywords: rackmount, rack-mount, install in rack, rails 
 summary: Monte o hardware em rack. 
 ---
-= Hardware de montagem em rack
+= Hardware de montagem em rack (e-Series)
 :allow-uri-read: 
 :icons: font
 :imagesdir: ./media/

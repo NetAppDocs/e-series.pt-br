@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: iSCSI worksheet Linux, express linux configuration, software configuration, linux host, E2800, E5700, EF300, EF600, E-Series, eseries 
 summary: Utilize esta folha de cálculo para registar as informações de configuração do armazenamento iSCSI. 
 ---
-= Registe a sua configuração iSCSI
+= Grave a sua configuração iSCSI no e-Series - Linux
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

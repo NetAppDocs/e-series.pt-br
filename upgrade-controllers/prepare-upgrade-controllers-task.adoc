@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: E-Series, eseries, E4000, E2800, E5700, EF300, EF600, upgrade controller, upgrading controller, upgrade controller requirements, upgrade controller key management, prepare upgrade controller, upgrade controller preparation, preparing controller upgrade 
 summary: Prepare-se para atualizar controladores salvando a chave de segurança da unidade, coletando dados de suporte e colocando o controlador offline. 
 ---
-= Prepare-se para atualizar os controladores
+= Prepare-se para atualizar os controladores do e-Series
 :allow-uri-read: 
 :experimental: 
 :icons: font

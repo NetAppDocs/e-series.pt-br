@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: express Windows configuration, software configuration, Windows host, E2800, E5700, EF300, EF600, E-Series, eseries 
 summary: Use o fluxo de trabalho de configuração do Windows Express. 
 ---
-= Entenda o fluxo de trabalho do Windows
+= Compreender o fluxo de trabalho do Windows no e-Series
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

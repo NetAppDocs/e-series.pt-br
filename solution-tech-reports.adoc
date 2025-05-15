@@ -4,7 +4,7 @@ permalink: solution-tech-reports.html
 keywords: solution technical reports, e-series, hardware, santricity, os 
 summary: Relatórios técnicos do e-Series 
 ---
-= Navegue pelos relatórios técnicos da solução
+= Procurar relatórios técnicos da solução (e-Series)
 :allow-uri-read: 
 :icons: font
 :imagesdir: ./media/

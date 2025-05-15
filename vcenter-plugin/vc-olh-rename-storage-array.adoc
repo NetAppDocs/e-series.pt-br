@@ -4,7 +4,7 @@ permalink: vcenter-plugin/vc-olh-rename-storage-array.html
 keywords: vCenter plugin, Plugin for vCenter, SANtricity plugin for vCenter 
 summary: Altere o nome do storage array exibido na página Gerenciar. 
 ---
-= Renomeie o storage array
+= Renomeie um storage array no SANtricity Storage Plugin for vCenter
 :hardbreaks:
 :allow-uri-read: 
 :nofooter: 

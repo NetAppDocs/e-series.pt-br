@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords:  
 summary:  
 ---
-= Atualize o HIC em E4000
+= Atualize a placa de interface do host (HIC) - E4000
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

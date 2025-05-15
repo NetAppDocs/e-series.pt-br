@@ -4,7 +4,7 @@ permalink: vcenter-plugin/san-spvc-ic-storage-provisioning.html
 keywords: create volumes vCenter plugin, provision Plugin for vCenter, vCenter plugin storage provisioning, vCenter plugin host 
 summary: Use o Plugin para vCenter para criar volumes, atribuir volumes a hosts e atribuir volumes a datastores. 
 ---
-= Provisionamento de armazenamento no plugin
+= Provisione storage no plug-in de storage do SANtricity para vCenter
 :hardbreaks:
 :allow-uri-read: 
 :experimental: 

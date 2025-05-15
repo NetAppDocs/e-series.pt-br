@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: replace controller, replace canister, EF300, EF600, EF300C, EF600C 
 summary: Substitua um único controlador em um compartimento de controladora EF300 ou EF600. 
 ---
-= Substitua o controlador EF300 ou EF600
+= Substitua o controlador - EF300 e EF600
 :allow-uri-read: 
 :experimental: 
 :icons: font

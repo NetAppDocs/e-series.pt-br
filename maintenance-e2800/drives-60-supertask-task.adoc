@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: E2800 replace drive drawer, replacing E2800 drive drawer, E2800 replace drive drawer, replacing E2800 drive drawer, E2800, E-Series, eseries 
 summary: Substitua uma gaveta de unidades em uma gaveta de controladora E2860 ou em uma gaveta de unidades de DE460C TB. 
 ---
-= Substitua a gaveta da unidade no E2800 (compartimento de 60 unidades)
+= Substituir uma gaveta de unidades - E2800 (compartimento de 60 unidades)
 :allow-uri-read: 
 :experimental: 
 :icons: font

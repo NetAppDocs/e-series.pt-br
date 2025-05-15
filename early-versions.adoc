@@ -4,7 +4,7 @@ permalink: early-versions.html
 keywords: early versions, e-series, hardware, santricity, os 
 summary: Versões anteriores da documentação 
 ---
-= Versões anteriores
+= Hardware e software SANtricity da série e - versões anteriores
 :allow-uri-read: 
 :icons: font
 :imagesdir: ./media/

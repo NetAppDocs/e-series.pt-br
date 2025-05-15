@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords:  
 summary: Siga estes passos para instalar e configurar o seu sistema de armazenamento E4000. 
 ---
-= Instalar e configurar sistemas E4000
+= Instalação e configuração - E4000 sistemas de armazenamento
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

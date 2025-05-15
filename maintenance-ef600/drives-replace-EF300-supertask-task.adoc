@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: EF300, EF300C, replace drive, drive failure 
 summary: Substitua uma unidade em um array EF300. 
 ---
-= Substitua a unidade em um array EF300
+= Substitua a unidade - EF300
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

@@ -4,7 +4,7 @@ permalink: vcenter-plugin/vc-olh-view-ssd-cache-statistics.html
 keywords: vCenter plugin, Plugin for vCenter, SANtricity plugin for vCenter 
 summary: Exibir estatísticas do cache SSD, como leituras, gravações, acertos de cache, porcentagem de alocação de cache e porcentagem de utilização de cache. 
 ---
-= Exibir estatísticas de cache SSD
+= Veja as estatísticas de cache SSD no plug-in de armazenamento SANtricity para vCenter
 :hardbreaks:
 :allow-uri-read: 
 :experimental: 

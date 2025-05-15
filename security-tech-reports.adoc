@@ -4,7 +4,7 @@ permalink: security-tech-reports.html
 keywords: security technical reports, e-series, hardware, santricity, os 
 summary: Relatórios técnicos do e-Series 
 ---
-= Navegue pelos relatórios técnicos de segurança
+= Procurar relatórios técnicos de segurança (e-Series)
 :allow-uri-read: 
 :icons: font
 :imagesdir: ./media/

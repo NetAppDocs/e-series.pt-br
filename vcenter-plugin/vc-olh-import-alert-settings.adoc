@@ -4,7 +4,7 @@ permalink: vcenter-plugin/vc-olh-import-alert-settings.html
 keywords: vCenter plugin, Plugin for vCenter, SANtricity plugin for vCenter 
 summary: Importe configurações de alerta de um storage array para outros storage arrays. 
 ---
-= Importar definições de alerta
+= Importar configurações de alerta no plug-in de armazenamento do SANtricity para vCenter
 :hardbreaks:
 :allow-uri-read: 
 :experimental: 

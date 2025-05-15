@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: E-Series, eseries, E4000, E2800, E5700, EF300, EF600, E-series hardware, E-Series shelf, DE212C, DE224C, DE460C, NE224, 
 summary: Os sistemas e-Series estão disponíveis em diversos tamanhos de prateleira. 
 ---
-= Tipos de gaveta e-Series
+= Saiba mais sobre os tipos de prateleiras do e-Series
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

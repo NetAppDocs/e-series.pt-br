@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: multipath software for Windows, express Windows configuration, software configuration, Windows host, E2800, E5700, EF300, EF600, E-Series, eseries 
 summary: Instale o pacote DSM, que contém software multipath para Windows. 
 ---
-= Configurar o software multipath
+= Configurar o software multipath no e-Series - Windows
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

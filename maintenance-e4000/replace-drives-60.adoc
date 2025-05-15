@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: E4000 replace drive, replacing E4000 drive, E4000 replace drive, replacing E4000 drive, E4000 
 summary: Substitua uma unidade em um E2800 por um compartimento de 60 unidades. 
 ---
-= Substitua a unidade no E4000 (compartimento de 60 unidades)
+= Substitua a unidade - E4000 (compartimento de 60 unidades)
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

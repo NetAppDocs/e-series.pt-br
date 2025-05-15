@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords:  
 summary:  
 ---
-= Substitua a bateria no E4000
+= Substitua a bateria - E4000
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

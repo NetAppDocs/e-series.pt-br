@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: Cloud Connector backup 
 summary: Você pode acessar a opção backups no painel de navegação esquerdo do aplicativo SANtricity Cloud Connector. A opção cópias de segurança apresenta a página cópias de segurança, que permite criar novos trabalhos de cópia de segurança baseados em imagens ou ficheiros. 
 ---
-= Backups
+= Use o SANtricity Cloud Connector para criar e gerenciar backups de volume e-Series
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

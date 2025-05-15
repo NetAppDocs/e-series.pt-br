@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: E2800 replace 60-drive fan canister, replacing E2800 fan canister, E2800 replace fan, E2800, E-Series, eseries 
 summary: Substitua um recipiente do ventilador em um compartimento de controladora de 60 unidades ou compartimento de unidades. 
 ---
-= Substitua o recipiente do ventilador E2800 (60 unidades)
+= Substitua o recipiente da ventoinha - E2800 (60 unidades)
 :allow-uri-read: 
 :experimental: 
 :icons: font

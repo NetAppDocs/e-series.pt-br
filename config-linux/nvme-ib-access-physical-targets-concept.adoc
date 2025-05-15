@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: NVMe volume physical, SLES 15, express linux configuration, software configuration, linux host, E2800, E5700, EF300, EF600, E-Series, eseries 
 summary: 'Você pode configurar a e/S direcionada para o destino do dispositivo com base na sua versão do SLES (versão SUSE Linux).' 
 ---
-= Acessar volumes NVMe para destinos de dispositivos NVMe físicos
+= Acessar volumes NVMe para destinos de dispositivos NVMe físicos no e-Series - Linux (NVMe over InfiniBand)
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

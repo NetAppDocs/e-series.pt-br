@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: E-Series, eseries, E2800, E5700, EF300, EF600, SANtricity, drive firmware, upgrade SANtricity, upgrade OS, upgrade E-Series, upgrade firmware, upgrading, upgrade IOM firmware, upgrade NVSRAM, upgrade controller 
 summary: Você atualiza o firmware das suas unidades para se certificar de que você tem todos os recursos mais recentes e correções de bugs. 
 ---
-= Atualize o firmware da unidade
+= Atualizar o firmware da unidade e-Series e EF-Series
 :allow-uri-read: 
 :experimental: 
 :icons: font

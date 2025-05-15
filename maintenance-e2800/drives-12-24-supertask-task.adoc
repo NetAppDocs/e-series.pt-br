@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: E2800 replace drive, replacing E2800 drive, E2800 replace drive, replacing E2800 drive, E2800, E-Series, eseries 
 summary: Substitua uma unidade em um E2800 por um compartimento de 12 ou 24 unidades. 
 ---
-= Substitua a unidade em E2800 (compartimento de 12 ou 24 unidades)
+= Substituir uma unidade - E2800 (12 unidades ou 24 unidades)
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: EF600, EF300, EF600C, EF300C, replace fan, fan fail 
 summary: Substitua um ventilador em um EF300 ou EF600. 
 ---
-= Substitua uma ventoinha EF300 ou EF600
+= Substitua a ventoinha - EF300 ou EF600
 :allow-uri-read: 
 :experimental: 
 :icons: font

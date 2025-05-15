@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: E2800 battery fail, E2800 battery, E2800 battery replacement, replace E2800 battery, replacing E2800 battery, E2800, E-Series, eseries 
 summary: Para remover a bateria, primeiro remova o recipiente do controlador da prateleira do controlador. 
 ---
-= Remova o recipiente do controlador E2800
+= Retire o recipiente do controlador - E2800
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

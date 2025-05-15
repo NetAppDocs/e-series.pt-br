@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: FC worksheet Linux, express linux configuration, software configuration, linux host, 
 summary: Use esta Planilha para Registrar informações de configuração de armazenamento FC. 
 ---
-= Registre sua configuração FC
+= Registre sua configuração FC no e-Series - Linux
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

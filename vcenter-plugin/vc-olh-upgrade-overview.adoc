@@ -4,7 +4,7 @@ permalink: vcenter-plugin/vc-olh-upgrade-overview.html
 keywords: vCenter plugin, Plugin for vCenter, SANtricity plugin for vCenter 
 summary: Você pode gerenciar atualizações de software SANtricity e NVSRAM para vários storage arrays do mesmo tipo. 
 ---
-= Visão geral da atualização
+= Saiba mais sobre como gerenciar atualizações de software do SANtricity usando o plug-in de armazenamento para vCenter
 :hardbreaks:
 :allow-uri-read: 
 :nofooter: 

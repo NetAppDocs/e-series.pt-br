@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: host wwpn, HBA utility, express linux configuration, software configuration, linux host, 
 summary: 'Você instala um utilitário HBA FC para que você possa exibir o nome da porta mundial (WWPN) de cada porta host. Além disso, você pode usar o utilitário HBA para alterar as configurações recomendadas na coluna Notas da ferramenta de Matriz de interoperabilidade do NetApp para a configuração suportada.' 
 ---
-= Determine WWPNs do host e faça as configurações recomendadas
+= Determinar nomes de portas mundiais de host (WWPNs) no e-Series - Linux (FC)
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

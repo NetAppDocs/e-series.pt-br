@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: access System Manager Linux, express linux configuration, software configuration, linux host, 
 summary: Você usa o assistente de configuração no Gerenciador de sistema do SANtricity para configurar sua matriz de armazenamento. 
 ---
-= Acesse o Gerenciador de sistema do SANtricity e use o assistente de configuração
+= Configure seu storage usando o Gerenciador de sistemas do SANtricity - Linux (FC)
 :allow-uri-read: 
 :experimental: 
 :icons: font

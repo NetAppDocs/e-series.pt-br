@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: configure iSCSI networking, express linux configuration, software configuration, linux host, E2800, E5700, EF300, EF600, E-Series, eseries 
 summary: Configure a rede iSCSI no lado do host. 
 ---
-= Configurar a rede no lado do host
+= Configurar a rede do lado do host no e-Series - Linux (iSCSI)
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

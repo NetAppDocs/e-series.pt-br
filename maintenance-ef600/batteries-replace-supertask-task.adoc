@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: replace battery, battery fail, EF300C, EF600C, EF300, EF600 
 summary: Substitua uma bateria em uma matriz EF300 ou EF600. 
 ---
-= Substitua a bateria EF300 ou EF600
+= Substitua a bateria - EF300 e EF600
 :allow-uri-read: 
 :experimental: 
 :icons: font

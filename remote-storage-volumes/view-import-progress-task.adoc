@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: Remote Storage Volumes, RTV, remote volumes, remote storage E-Series 
 summary: Pode visualizar o estado de cada importação de armazenamento remoto a partir da secção de lista de resultados do ecrã armazenamento remoto do Gestor do sistema SANtricity. 
 ---
-= Gerenciar o progresso da importação
+= Gerenciar o progresso da importação para volumes de armazenamento remoto SANtricity
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: express linux configuration, software configuration, linux host, E2800, E5700, EF300, EF600, E-Series, eseries 
 summary: Revise os requisitos para usar o método Express para configurar um array e-Series e um host Linux. 
 ---
-= Suposições
+= Suposições (e-Series e Linux)
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: E-Series, eseries, E4000, E2800, E5700, EF300, EF600, upgrade controller, upgrading controller, upgrade controller, upgrade DIMMs 
 summary: Visão geral da atualização de um array e-Series com a substituição de controladores. 
 ---
-= Visão geral dos controladores de atualização
+= Saiba mais sobre como atualizar os controladores e-Series
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: workflow, guide, express, method, configuring, configure, storage, array, system, manager, host, understand 
 summary: Use o fluxo de trabalho de configuração do WVMware Express. 
 ---
-= Entenda o fluxo de trabalho da VMware
+= Entenda o fluxo de trabalho da VMware no e-Series
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: iSCSI, switches, IP network configuration, express Windows configuration, software configuration, Windows host, E2800, E5700, EF300, EF600, E-Series, eseries 
 summary: Para o protocolo iSCSI, configure os switches e configure a rede no lado da matriz e no lado do host. Em seguida, você verifica as conexões de rede IP. 
 ---
-= Executar tarefas específicas de iSCSI
+= Execute tarefas específicas de iSCSI no e-Series - Windows
 :allow-uri-read: 
 :experimental: 
 :icons: font

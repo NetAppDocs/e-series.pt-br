@@ -4,7 +4,7 @@ permalink: vcenter-plugin/vc-olh-remove-storage-arrays.html
 keywords: vCenter plugin, Plugin for vCenter, SANtricity plugin for vCenter 
 summary: Remova um ou mais arrays de armazenamento se você não quiser mais gerenciá-lo a partir do plug-in de armazenamento para vCenter. 
 ---
-= Remova matrizes de armazenamento
+= Remova os storage arrays no plug-in de armazenamento do SANtricity para vCenter
 :hardbreaks:
 :allow-uri-read: 
 :experimental: 

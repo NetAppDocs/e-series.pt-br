@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: E2800, E5700, connect power cables 
 summary: Conete os cabos de alimentação e ligue as gavetas de unidade. 
 ---
-= Faça o cabeamento das prateleiras
+= Ligue os cabos de alimentação - E2860, E5760 e DE460
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

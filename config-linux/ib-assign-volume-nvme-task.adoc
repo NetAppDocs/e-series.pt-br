@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: express linux configuration, assign volume, assign namespace, 
 summary: Você deve atribuir um volume a um host ou cluster de host para que ele possa ser usado para operações de e/S. Essa atribuição concede a um host ou cluster de host acesso a um ou mais namespaces em um storage array. 
 ---
-= Atribuir um volume
+= Atribuir um volume usando o Gerenciador de sistema do SANtricity - Linux (NVMe over InfiniBand)
 :allow-uri-read: 
 :experimental: 
 :icons: font

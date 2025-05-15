@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: E4000 replace drive drawer, replacing E4000 drive drawer, E4000 replace drive drawer, replacing E4000 drive drawer, E4000, E-Series, eseries 
 summary: Substitua uma gaveta de unidades em uma gaveta de controladora E2860 ou em uma gaveta de unidades de DE460C TB. 
 ---
-= Substitua a gaveta da unidade no E4000 (compartimento de 60 unidades)
+= Substitua a gaveta de unidades - E4000 (compartimento de 60 unidades)
 :allow-uri-read: 
 :experimental: 
 :icons: font

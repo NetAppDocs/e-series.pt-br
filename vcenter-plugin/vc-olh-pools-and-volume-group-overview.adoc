@@ -4,7 +4,7 @@ permalink: vcenter-plugin/vc-olh-pools-and-volume-group-overview.html
 keywords: vCenter plugin, Plugin for vCenter, SANtricity plugin for vCenter 
 summary: 'Para provisionar o armazenamento, você cria um pool ou um grupo de volumes que conterá as unidades de disco rígido (HDD) ou de disco de estado sólido (SSD) que você deseja usar em seu storage array.' 
 ---
-= Visão geral de pools e grupos de volumes
+= Saiba mais sobre pools de armazenamento e grupos de volume no plug-in de armazenamento do SANtricity para vCenter
 :hardbreaks:
 :allow-uri-read: 
 :nofooter: 

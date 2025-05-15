@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: E-Series, eseries, E2800, E5700, EF300, EF600, E-Series videos 
 summary: Acesse demonstrações em vídeo para saber mais sobre os sistemas e-Series. 
 ---
-= Vídeos e-Series
+= Acesse vídeos de demonstração do e-Series
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

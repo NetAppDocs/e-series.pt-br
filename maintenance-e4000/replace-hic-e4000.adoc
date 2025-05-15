@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords:  
 summary:  
 ---
-= Substitua o HIC em E4000
+= Substitua a placa de interface do host (HIC) - E4000
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

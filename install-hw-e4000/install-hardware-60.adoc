@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords:  
 summary: Saiba como instalar um sistema de armazenamento E4060 ou DE460C em um rack de dois pilares ou em um gabinete de sistema NetApp. 
 ---
-= Instalar hardware (E4060)
+= Instale o material de fixação - E4060
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

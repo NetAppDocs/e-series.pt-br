@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: E4000 connect power cables 
 summary: Conete os cabos de alimentação e ligue as gavetas de unidade. 
 ---
-= Cable as prateleiras (E4060)
+= Ligue os cabos de alimentação - E4060
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

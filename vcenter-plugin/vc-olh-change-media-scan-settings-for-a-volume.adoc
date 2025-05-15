@@ -4,7 +4,7 @@ permalink: vcenter-plugin/vc-olh-change-media-scan-settings-for-a-volume.html
 keywords: vCenter plugin, Plugin for vCenter, SANtricity plugin for vCenter 
 summary: Uma verificação de Mídia é uma operação em segundo plano que verifica todos os dados e informações de redundância no volume. Utilize esta opção para ativar ou desativar as definições de digitalização de multimédia para um ou mais volumes ou para alterar a duração da digitalização. 
 ---
-= Alterar as definições de digitalização de multimédia para um volume
+= Alterar as configurações de verificação de Mídia para um volume no plug-in de armazenamento do SANtricity para vCenter
 :hardbreaks:
 :allow-uri-read: 
 :experimental: 

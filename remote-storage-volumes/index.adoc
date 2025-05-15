@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: Remote Storage Volumes, RTV, remote volumes, remote storage E-Series 
 summary: Use o recurso volumes de armazenamento remoto para importar dados de um dispositivo de armazenamento remoto diretamente para um volume local da série e. 
 ---
-= Visão geral dos volumes de armazenamento remoto
+= Saiba mais sobre os volumes de armazenamento remoto SANtricity
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

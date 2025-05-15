@@ -4,7 +4,7 @@ permalink: vcenter-plugin/vc-olh-array-management-overview.html
 keywords: vCenter plugin, Plugin for vCenter, SANtricity plugin for vCenter 
 summary: Use o recurso Adicionar/descobrir para localizar e adicionar os storages de armazenamento que você deseja gerenciar na rede da sua organização. 
 ---
-= Visão geral do gerenciamento de array
+= Saiba mais sobre como gerenciar arrays de armazenamento no plug-in de armazenamento do SANtricity para vCenter
 :hardbreaks:
 :allow-uri-read: 
 :nofooter: 

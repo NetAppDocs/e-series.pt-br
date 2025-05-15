@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: subnet manager, express linux configuration, software configuration, linux host, E2800, E5700, EF300, EF600, E-Series, eseries 
 summary: Usar um switch InfiniBand para executar o gerenciador de sub-rede pode causar perda inesperada de caminho durante cargas elevadas. Para evitar a perda de caminho, configure o gerenciador de sub-rede em um ou mais hosts usando o opensm. 
 ---
-= Configurar o gestor de sub-rede
+= Configurar o gerenciador de sub-rede no e-Series - Linux (iSER over InfiniBand)
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

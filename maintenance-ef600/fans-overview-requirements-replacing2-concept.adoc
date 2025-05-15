@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: EF300, EF600, EF300C, EF600C replace fan, 
 summary: Reveja os requisitos e considerações antes de substituir os ventiladores EF300 ou EF600. 
 ---
-= Requisitos para a substituição do ventilador EF300 ou EF600
+= Requisitos para substituir a ventoinha - EF300 e EF600
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

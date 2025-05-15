@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: Web Services, WSP, SANtricity API, 
 summary: Saiba mais sobre a API de serviços da Web 
 ---
-= Visão geral dos serviços da Web e do Unified Manager
+= Saiba mais sobre os Serviços Web da SANtricity e o Gerenciador Unificado
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

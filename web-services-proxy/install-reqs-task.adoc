@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: installation, download, install proxy, 
 summary: Requisitos e considerações de instalação e atualização para o Web Services Proxy. 
 ---
-= Reveja os requisitos de instalação e atualização
+= Revise os requisitos de instalação e atualização do proxy de serviços da Web da SANtricity
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: cabling, cables, drive shelf cabling, controller shelf cabling, E-Series, eseries, E2800, E5700, EF300, EF600, E4000, DE212C, DE224C, DE460C 
 summary: 'Conectar cada controladora na gaveta de controladora a um módulo de e/S (IOM) em uma gaveta de unidade.' 
 ---
-= Cabeamento do compartimento de unidades
+= Compartimento do controlador de cabos para o compartimento de unidades (e-Series)
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

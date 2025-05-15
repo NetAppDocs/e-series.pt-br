@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: convert host protocol, EF600, EF300, EF600C, EF300C 
 summary: Reveja os requisitos e considerações antes de converter o protocolo de host EF300 ou EF600. 
 ---
-= Requisitos para a conversão do protocolo de host EF300 ou EF600
+= Requisitos para converter o protocolo de host - EF300 ou EF600
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: cabling, cables, ethernet cabling, ethernet cable, out of band, direct topology, fabric topology, E-Series, eseries, E2800, E5700, EF300, EF600, DE212C, DE224C, DE460C 
 summary: Conete seu sistema de storage a uma rede Ethernet para gerenciamento fora da banda. 
 ---
-= Cabeamento Ethernet para uma estação de gerenciamento
+= Cabeamento Ethernet para uma estação de gerenciamento (e-Series)
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

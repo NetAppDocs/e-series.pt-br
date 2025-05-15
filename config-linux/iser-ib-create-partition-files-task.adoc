@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: configure partitions Linux, configure filesystems linux, express linux configuration, linux host, 
 summary: Um novo LUN não tem partição ou sistema de arquivos quando o host Linux o descobre pela primeira vez. Você deve formatar o LUN antes que ele possa ser usado. 
 ---
-= Crie partições e sistemas de arquivos
+= Criar partições e sistemas de arquivos no e-Series - Linux (iSER over InfiniBand)
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

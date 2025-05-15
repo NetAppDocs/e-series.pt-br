@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: discover storage, host, express linux configuration, software configuration, linux host, E2800, E5700, EF300, EF600, E-Series, eseries 
 summary: Antes de definir cada host no Gerenciador de sistemas do SANtricity, você precisa descobrir as portas do controlador de destino do host e, em seguida, estabelecer conexões NVMe. 
 ---
-= Descubra e conete-se ao armazenamento a partir do host
+= Descubra e conecte-se ao storage a partir do host no e-Series - Linux (NVMe over InfiniBand)
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

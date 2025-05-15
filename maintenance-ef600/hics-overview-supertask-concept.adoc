@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: EF300, EF600, EF300C, EF600C, replace HIC, replace HIC, host interface card failed, HIC failure 
 summary: Reveja os requisitos e considerações antes de substituir um HIC EF300 ou EF600. 
 ---
-= Requisitos para atualizações HIC EF300 ou EF600
+= Requisitos para atualizar a placa de interface do host (HIC) - EF300 ou EF600
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

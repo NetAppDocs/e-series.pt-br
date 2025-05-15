@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: Web Services, WSP, roles WSP, user access WSP 
 summary: Você pode gerenciar o acesso do usuário à API de serviços da Web e ao Unified Manager para fins de segurança. 
 ---
-= Gerencie o acesso do usuário no Web Services Proxy
+= Gerencie o acesso do usuário no proxy de serviços da Web do SANtricity
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

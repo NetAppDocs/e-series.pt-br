@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: define Linux host, configure linux host, express linux configuration, linux host, 
 summary: Usando o Gerenciador de sistemas do SANtricity, você define os hosts que enviam dados para o storage array. Definir um host é uma das etapas necessárias para que o storage array saiba quais hosts estão conetados a ele e para permitir o acesso de e/S aos volumes. 
 ---
-= Definir um host
+= Criar um host usando o Gerenciador de sistema do SANtricity - Linux (NVMe sobre RoCE)
 :allow-uri-read: 
 :experimental: 
 :icons: font

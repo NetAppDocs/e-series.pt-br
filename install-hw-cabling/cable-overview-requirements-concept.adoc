@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: cabling, cabling requirements, drive shelf cabling, controller cabling, E-Series, eseries, E2800, E5700, EF300, EF600, DE212C, DE224C, DE460C 
 summary: O cabeamento das gavetas e-Series requer vários componentes. 
 ---
-= Requisitos
+= Requisitos para cabeamento do seu sistema de storage (e-Series)
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

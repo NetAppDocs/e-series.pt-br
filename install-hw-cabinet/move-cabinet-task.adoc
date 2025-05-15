@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: 3040 40U cabinet, cabinet installation, drive tray installation, controller installation, shelf installation, E2800, E5700, EF300, EF600 
 summary: Mova o gabinete para sua localização permanente. 
 ---
-= Mova o gabinete para sua localização permanente
+= Mover o gabinete 3040 40U para seu local permanente (e-Series)
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

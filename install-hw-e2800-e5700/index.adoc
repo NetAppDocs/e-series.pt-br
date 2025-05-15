@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: E2800, E5700, installation 
 summary: Instale e configure o array E2800 ou E5700. 
 ---
-= Instalar e configurar sistemas de armazenamento E2800 e E5700
+= Instalação e configuração - sistemas de armazenamento E2800 e E5700
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

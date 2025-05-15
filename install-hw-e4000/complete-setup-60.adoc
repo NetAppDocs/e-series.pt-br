@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords:  
 summary: Saiba como fazer o cabeamento dos controladores à sua rede e concluir a configuração e configuração do sistema de armazenamento. 
 ---
-= Configuração completa do sistema de armazenamento (E4060)
+= Configuração completa do sistema de armazenamento - E4060
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

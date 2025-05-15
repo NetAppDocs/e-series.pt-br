@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: Cloud Connector restore, 
 summary: Você pode acessar a opção Restaurar no painel de navegação esquerdo do aplicativo SANtricity Cloud Connector. A opção Restaurar exibe a página Restaurar, que permite criar novos trabalhos de restauração baseados em imagens ou arquivos. 
 ---
-= Restaurações
+= Crie novas restaurações baseadas em imagens ou arquivos no SANtricity Cloud Connector
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

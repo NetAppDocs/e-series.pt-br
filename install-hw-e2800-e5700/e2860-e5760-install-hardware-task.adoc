@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: E2800, E5700, installation 
 summary: Instale o E2800 ou E5700 em um rack de dois pilares ou em um gabinete do sistema NetApp. 
 ---
-= Instale o hardware
+= Instale o material de fixação - E2860, E5760 e DE460
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: modify Remote Storage Volumes settings, RTV settings, remote volume settings, remote storage E-Series 
 summary: Pode modificar as definições de ligação para qualquer importação de armazenamento remoto configurada através da opção Ver/Editar definições no ecrã armazenamento remoto do Gestor do sistema SANtricity. 
 ---
-= Modificar as definições de ligação de armazenamento remoto
+= Modifique as configurações de conexão de armazenamento remoto para volumes de armazenamento remoto SANtricity
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

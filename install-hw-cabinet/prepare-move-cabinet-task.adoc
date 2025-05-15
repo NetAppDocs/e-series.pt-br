@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: 3040 40U cabinet, cabinet installation, drive tray installation, controller installation, shelf installation, E2800, E5700, EF300, EF600 
 summary: Prepare-se para mover o gabinete. 
 ---
-= Prepare-se para mover o gabinete
+= Prepare-se para mover para o gabinete 3040 40U (e-Series)
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
