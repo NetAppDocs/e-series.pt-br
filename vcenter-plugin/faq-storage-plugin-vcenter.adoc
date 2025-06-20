@@ -1,0 +1,703 @@
+---
+sidebar: sidebar 
+permalink: vcenter-plugin/faq-storage-plugin-vcenter.html 
+keywords:  
+summary: Este FAQ pode ajudar se você está apenas procurando uma resposta rápida para uma pergunta. 
+---
+= Perguntas frequentes sobre o plugin de armazenamento SANtricity para vCenter
+:hardbreaks:
+:allow-uri-read: 
+:experimental: 
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ../media/
+
+
+[role="lead"]
+Este FAQ pode ajudar se você está apenas procurando uma resposta rápida para uma pergunta.
+
+
+
+== Que definições são importadas?
+
+O recurso Importar configurações é uma operação em lote que carrega configurações de uma matriz de armazenamento para várias matrizes de armazenamento.
+
+As configurações importadas durante essa operação dependem de como o storage de armazenamento de origem é configurado no System Manager. As seguintes configurações podem ser importadas para vários storages de armazenamento:
+
+* *Alertas por e-mail* -- as configurações incluem um endereço de servidor de e-mail e os endereços de e-mail dos destinatários do alerta.
+* *Alertas Syslog* -- as configurações incluem um endereço de servidor syslog e uma porta UDP.
+* *Alertas SNMP* -- as configurações incluem um nome de comunidade e endereço IP para o servidor SNMP.
+* *AutoSupport* -- as configurações incluem os recursos separados (AutoSupport Básico, OnDemand do AutoSupport e Diagnóstico remoto), a janela de manutenção, o método de entrega e o cronograma de envio.
+* *Serviços de diretório* -- a configuração inclui o nome de domínio e URL de um servidor LDAP (Lightweight Directory Access Protocol), juntamente com os mapeamentos para os grupos de usuários do servidor LDAP para as funções predefinidas do storage array.
+* *Configuração de armazenamento* -- as configurações incluem volumes (somente volumes espessos e somente não-repositórios), grupos de volumes, pools e atribuições de unidades hot spare.
+* * Configurações do sistema* -- as configurações incluem configurações de varredura de Mídia para um volume, cache SSD para controladores e balanceamento de carga automático (não inclui relatórios de conetividade do host).
+
+
+
+
+== Por que não vejo todos os meus storages?
+
+Durante a operação Importar configurações, alguns dos storages de armazenamento podem não estar disponíveis na caixa de diálogo seleção de destino.
+
+Os storage arrays podem não aparecer pelos seguintes motivos:
+
+* A versão do firmware é inferior a 8,50.
+* A matriz de armazenamento está offline.
+* O sistema não pode se comunicar com esse array (por exemplo, o array tem problemas de certificado, senha ou rede).
+
+
+
+
+== Por que esses volumes não estão associados a uma carga de trabalho?
+
+Os volumes não são associados a uma carga de trabalho se tiverem sido criados usando a interface de linha de comando (CLI) ou se tiverem sido migrados (importados/exportados) de um storage array diferente.
+
+
+
+== Como minha carga de trabalho selecionada afeta a criação de volume?
+
+Durante a criação de volume, você será solicitado a fornecer informações sobre o uso de uma carga de trabalho. O sistema usa essas informações para criar uma configuração de volume ideal para você, que pode ser editada conforme necessário. Opcionalmente, você pode pular esta etapa na sequência de criação de volume.
+
+Um workload é um objeto de storage compatível com uma aplicação. Você pode definir uma ou mais cargas de trabalho ou instâncias por aplicação. Para alguns aplicativos, o sistema configura a carga de trabalho para conter volumes com caraterísticas de volume subjacentes semelhantes. Essas características de volume são otimizadas com base no tipo de aplicação compatível com o workload. Por exemplo, se você criar uma carga de trabalho que suporte um aplicativo Microsoft SQL Server e, posteriormente, criar volumes para essa carga de trabalho, as caraterísticas de volume subjacentes serão otimizadas para oferecer suporte ao Microsoft SQL Server.
+
+* *Específico do aplicativo* -- quando você está criando volumes usando uma carga de trabalho específica do aplicativo, o sistema pode recomendar uma configuração de volume otimizada para minimizar a contenção entre e/S da carga de trabalho do aplicativo e outro tráfego da instância do aplicativo. As características de volume, como tipo de e/S, tamanho do segmento, propriedade da controladora e cache de leitura e gravação, são automaticamente recomendadas e otimizadas para cargas de trabalho criadas para os seguintes tipos de aplicativos.
++
+** Microsoft SQL Server
+** Microsoft Exchange Server
+** Aplicações de videovigilância
+** VMware ESXi (para volumes a serem usados com o Virtual Machine File System)
++
+Você pode revisar a configuração de volume recomendada e editar, adicionar ou excluir os volumes e caraterísticas recomendados pelo sistema usando a caixa de diálogo Adicionar/Editar volumes.
+
+
+
+* *Outros (ou aplicativos sem suporte específico à criação de volume)* -- outras cargas de trabalho usam uma configuração de volume que você deve especificar manualmente quando deseja criar uma carga de trabalho que não esteja associada a um aplicativo específico ou se não houver otimização integrada para o aplicativo que você pretende usar no storage array. Você deve especificar manualmente a configuração do volume usando a caixa de diálogo Adicionar/Editar volumes.
+
+
+
+
+== Por que não vejo todos os meus volumes, hosts ou clusters de host?
+
+Os volumes instantâneos com um volume base habilitado PARA DA não são elegíveis para serem atribuídos a um host que não seja capaz de Data Assurance (DA). Você deve desativar DA no volume base antes que um volume instantâneo possa ser atribuído a um host que não seja capaz de DA.
+
+Considere as seguintes diretrizes para o host ao qual você está atribuindo o volume de snapshot:
+
+* Um host não é capaz de DA se ele estiver conetado ao storage array por meio de uma interface de e/S que não seja capaz de DA.
+* Um cluster de host não é capaz de DA se tiver pelo menos um membro de host que não seja capaz de DA.
+
+
+
+NOTE: Não é possível desativar DA em um volume associado a snapshots (grupos de consistência, grupos de snapshot, imagens de snapshot e volumes de snapshot), cópias de volume e espelhos. Todos os objetos snapshot e capacidade reservada associados devem ser excluídos antes que DA possa ser desabilitada no volume base.
+
+
+
+== Por que não consigo excluir a carga de trabalho selecionada?
+
+Essa carga de trabalho consiste em um grupo de volumes que foram criados usando a interface de linha de comando (CLI) ou migrados (importados/exportados) de um storage array diferente. Como resultado, os volumes dessa carga de trabalho não são associados a uma carga de trabalho específica da aplicação, portanto, a carga de trabalho não pode ser excluída.
+
+
+
+== Como os workloads específicos da aplicação me ajudam a gerenciar meu storage array?
+
+As características de volume do workload específico do aplicativo determinam como a carga de trabalho interage com os componentes do storage array e ajudam a determinar a performance do ambiente em uma determinada configuração.
+
+Um aplicativo é um software como o SQL Server ou o Exchange. Você define um ou mais workloads para dar suporte a cada aplicação. Para alguns aplicativos, o sistema recomenda automaticamente uma configuração de volume que otimiza o armazenamento. Caraterísticas como tipo de e/S, tamanho do segmento, propriedade do controlador e cache de leitura e gravação estão incluídas na configuração do volume.
+
+
+
+== O que eu preciso fazer para reconhecer a capacidade expandida?
+
+Se você aumentar a capacidade de um volume, o host pode não reconhecer imediatamente o aumento da capacidade do volume.
+
+A maioria dos sistemas operacionais reconhece a capacidade de volume expandida e se expande automaticamente após a expansão de volume ser iniciada. No entanto, alguns podem não. Se o sistema operacional não reconhecer automaticamente a capacidade de volume expandido, talvez seja necessário realizar uma nova digitalização ou reinicialização do disco.
+
+Depois de expandir a capacidade do volume, você deve aumentar manualmente o tamanho do sistema de arquivos para corresponder. A forma como você faz isso depende do sistema de arquivos que você está usando.
+
+Consulte a documentação do sistema operacional do host para obter detalhes adicionais.
+
+
+
+== Quando eu gostaria de usar a seleção atribuir host mais tarde?
+
+Se você quiser acelerar o processo de criação de volumes, você pode pular a etapa de atribuição do host para que os volumes recém-criados sejam inicializados offline.
+
+Os volumes recém-criados devem ser inicializados. O sistema pode iniciá-los usando um de dois modos – um processo de inicialização em segundo plano formato disponível imediato (IAF) ou um processo offline.
+
+Quando você mapeia um volume para um host, ele força qualquer volume inicializando nesse grupo a transição para a inicialização em segundo plano. Esse processo de inicialização em segundo plano permite e/S de host concorrente, que às vezes pode ser demorado.
+
+Quando nenhum dos volumes de um grupo de volumes é mapeado, a inicialização offline é realizada. O processo off-line é muito mais rápido do que o processo em segundo plano.
+
+
+
+== O que eu preciso saber sobre os requisitos de tamanho de bloco de host?
+
+Para sistemas EF300 e EF600, um volume pode ser definido para suportar um tamanho de bloco de 512 bytes ou 4KiB (também chamado de "tamanho do setor"). Você deve definir o valor correto durante a criação do volume. Se possível, o sistema sugere o valor padrão apropriado.
+
+Antes de definir o tamanho do bloco de volume, leia as seguintes limitações e diretrizes.
+
+* Alguns sistemas operacionais e máquinas virtuais (especialmente VMware, neste momento) exigem um tamanho de bloco de 512 bytes e não suportam 4KiB, portanto, certifique-se de conhecer os requisitos do host antes de criar um volume. Normalmente, você pode obter o melhor desempenho definindo um volume para apresentar um tamanho de bloco de 4KiB KB; no entanto, certifique-se de que seu host permita blocos de 4KiB TB (ou "4Kn TB").
+* O tipo de unidades que você selecionar para o seu pool ou grupo de volumes também determina quais tamanhos de bloco de volume são suportados, da seguinte forma:
++
+** Se você criar um grupo de volumes usando unidades que gravam em blocos de 512 bytes, então você só poderá criar volumes com blocos de 512 bytes.
+** Se você criar um grupo de volumes usando unidades que gravam em blocos 4KiB, poderá criar volumes com blocos 512 ou 4KiB.
+
+
+* Se o array tiver uma placa de interface de host iSCSI, todos os volumes estarão limitados a blocos de 512 bytes (independentemente do tamanho do bloco do grupo de volumes). Isso se deve a uma implementação de hardware específica.
+* Não é possível alterar um tamanho de bloco depois de definido. Se você precisar alterar um tamanho de bloco, exclua o volume e recriá-lo.
+
+
+
+
+== Por que eu precisaria criar um cluster de host?
+
+Você precisa criar um cluster de host se quiser que dois ou mais hosts compartilhem o acesso ao mesmo conjunto de volumes. Normalmente, os hosts individuais têm software de cluster instalado neles para coordenar o acesso ao volume.
+
+
+
+== Como sei qual tipo de sistema operacional do host está correto?
+
+O campo Host Operating System Type (tipo de sistema operativo anfitrião) contém o sistema operativo do anfitrião. Você pode selecionar o tipo de host recomendado na lista suspensa.
+
+Os tipos de host que aparecem na lista suspensa dependem do modelo do storage array e da versão do firmware. As versões mais recentes exibem as opções mais comuns primeiro, que são as mais prováveis de serem apropriadas. A aparência nesta lista não implica que a opção seja totalmente suportada.
+
+
+NOTE: Para obter mais informações sobre o suporte ao host, consulte o http://mysupport.netapp.com/matrix["Ferramenta de Matriz de interoperabilidade do NetApp"^].
+
+Alguns dos seguintes tipos de host podem aparecer na lista:
+
+|===
+| Tipo de sistema operacional do host | Sistema operacional (SO) e driver multipath 
+
+
+| Linux DM-MP (Kernel 3,10 ou posterior) | Suporta sistemas operacionais Linux usando uma solução de failover multipath Device Mapper com um Kernel 3,10 ou posterior. 
+
+
+| VMware ESXi | Oferece suporte aos sistemas operacionais VMware ESXi que executam a arquitetura NMP (NMP) nativa usando o módulo SATP_ALUA interno de política de tipo de matriz de armazenamento da VMware. 
+
+
+| Windows (em cluster ou não em cluster) | Oferece suporte a configurações em cluster ou não em cluster do Windows que não estejam executando o driver de multipathing ATTO. 
+
+
+| ATTO Cluster (todos os sistemas operacionais) | Suporta todas as configurações de cluster usando o driver ATTO Technology, Inc., multipathing. 
+
+
+| Linux (Veritas DMP) | Suporta sistemas operacionais Linux usando uma solução de multipathing Veritas DMP. 
+
+
+| Linux (ATTO) | Suporta sistemas operacionais Linux usando um ATTO Technology, Inc., driver multipathing. 
+
+
+| Mac os | Suporta versões do Mac os usando um ATTO Technology, Inc., driver multipathing. 
+
+
+| Windows (ATTO) | Suporta sistemas operacionais Windows usando um ATTO Technology, Inc., driver multipathing. 
+
+
+| SVC DA IBM | Suporta uma configuração do IBM SAN volume Controller. 
+
+
+| Predefinição de fábrica | Reservado para a inicialização inicial do storage array. Se o tipo de sistema operacional do host estiver definido como padrão de fábrica, altere-o para corresponder ao sistema operacional do host e ao driver multipath executados no host conetado. 
+
+
+| Linux DM-MP (Kernal 3,9 ou anterior) | Suporta sistemas operacionais Linux usando uma solução de failover multipath Device Mapper com um Kernel 3,9 ou anterior. 
+
+
+| Janela agrupada (obsoleta) | Se o tipo de sistema operacional do host estiver definido para esse valor, use a configuração Windows (em cluster ou não em cluster). 
+|===
+
+
+== Como faço para corresponder as portas do host a um host?
+
+Se você estiver criando manualmente um host, primeiro deverá usar o utilitário HBA (adaptador de barramento de host) apropriado disponível no host para determinar os identificadores de porta de host associados a cada HBA instalado no host.
+
+Quando tiver essas informações, selecione os identificadores de porta do host que fizeram login no storage array na lista fornecida na caixa de diálogo criar host.
+
+
+CAUTION: Certifique-se de selecionar os identificadores de porta de host apropriados para o host que você está criando. Se você associar os identificadores de porta do host errados, poderá causar acesso não intencional de outro host a esses dados.
+
+
+
+== Qual é o cluster padrão?
+
+O cluster padrão é uma entidade definida pelo sistema que permite que qualquer identificador de porta de host não associado que tenha feito logon no storage array tenha acesso aos volumes atribuídos ao cluster padrão.
+
+Um identificador de porta de host não associado é uma porta de host que não está logicamente associada a um host específico, mas está fisicamente instalada em um host e conetada ao storage array.
+
+
+NOTE: Se você quiser que os hosts tenham acesso específico a determinados volumes no storage array, não use o cluster padrão. Em vez disso, você deve associar os identificadores de porta do host aos respetivos hosts. Esta tarefa pode ser feita manualmente durante a operação criar host. Em seguida, você atribui volumes a um host individual ou a um cluster de host.
+
+Você só deve usar o cluster padrão em situações especiais em que seu ambiente de armazenamento externo é propício para permitir que todos os hosts e todos os identificadores de porta de host conetados à matriz de armazenamento tenham acesso a todos os volumes (modo de acesso total) sem fazer especificamente os hosts conhecidos pela matriz de armazenamento ou pela interface de usuário.
+
+Inicialmente, você pode atribuir volumes apenas ao cluster padrão por meio da interface de linha de comando (CLI). No entanto, depois de atribuir pelo menos um volume ao cluster padrão, essa entidade (chamada cluster padrão) é exibida na interface do usuário, onde você pode gerenciar essa entidade.
+
+
+
+== O que é verificação de redundância?
+
+Uma verificação de redundância determina se os dados em um volume em um pool ou grupo de volumes são consistentes. Os dados de redundância são usados para reconstruir rapidamente informações em uma unidade de substituição se uma das unidades no pool ou grupo de volumes falhar.
+
+Você pode executar essa verificação somente em um pool ou grupo de volume de cada vez. Uma verificação de redundância de volume executa as seguintes ações:
+
+* Verifica os blocos de dados em um volume RAID 3, um volume RAID 5 ou um volume RAID 6 e, em seguida, verifica as informações de redundância para cada bloco. (O RAID 3 só pode ser atribuído a grupos de volume usando a interface de linha de comando.)
+* Compara os blocos de dados em unidades espelhadas RAID 1.
+* Retorna erros de redundância se os dados forem considerados inconsistentes pelo firmware do controlador.
+
+
+
+NOTE: Executar imediatamente uma verificação de redundância no mesmo pool ou grupo de volumes pode causar um erro. Para evitar esse problema, aguarde um a dois minutos antes de executar outra verificação de redundância no mesmo pool ou grupo de volume.
+
+
+
+== O que é a capacidade de preservação?
+
+Capacidade de preservação é a quantidade de capacidade (número de unidades) reservada em um pool para dar suporte a possíveis falhas de unidade.
+
+Quando um pool é criado, o sistema reserva automaticamente uma quantidade padrão de capacidade de preservação, dependendo do número de unidades no pool.
+
+Os pools usam capacidade de preservação durante a reconstrução, enquanto os grupos de volume usam unidades hot spare para o mesmo propósito. O método de capacidade de preservação é uma melhoria em relação às unidades hot spare porque permite que a reconstrução aconteça mais rapidamente. A capacidade de preservação é espalhada por várias unidades no pool em vez de em uma unidade no caso de uma unidade hot spare, portanto, você não está limitado pela velocidade ou disponibilidade de uma unidade.
+
+
+
+== Que nível RAID é melhor para a minha aplicação?
+
+Para maximizar o desempenho de um grupo de volumes, você deve selecionar o nível RAID apropriado.
+
+Você pode determinar o nível RAID apropriado conhecendo as porcentagens de leitura e gravação dos aplicativos que estão acessando o grupo de volumes. Use a página desempenho para obter essas porcentagens.
+
+
+
+=== Níveis de RAID e desempenho do aplicativo
+
+O RAID depende de uma série de configurações, chamadas níveis, para determinar como os dados de usuário e redundância são gravados e recuperados das unidades. Cada nível de RAID fornece recursos de desempenho diferentes. Os aplicativos com uma alta porcentagem de leitura terão bom desempenho usando volumes RAID 5 ou volumes RAID 6 devido ao excelente desempenho de leitura das configurações RAID 5 e RAID 6.
+
+Os aplicativos com uma baixa porcentagem de leitura (com uso intenso de gravação) não funcionam tão bem nos volumes RAID 5 ou RAID 6. O desempenho degradado é o resultado da maneira como um controlador grava dados e dados de redundância nas unidades em um grupo de volumes RAID 5 ou em um grupo de volumes RAID 6.
+
+Selecione um nível RAID com base nas seguintes informações.
+
+
+
+==== RAID 0
+
+*Descrição:*
+
+* Modo de distribuição não redundante.
+* O RAID 0 distribui os dados em todas as unidades do grupo de volumes.
+
+
+*Caraterísticas de proteção de dados:*
+
+* O RAID 0 não é recomendado para necessidades de alta disponibilidade. O RAID 0 é melhor para dados não críticos.
+* Se uma única unidade falhar no grupo de volumes, todos os volumes associados falharão e todos os dados serão perdidos.
+
+
+*Requisitos de número de unidade:*
+
+* É necessário um mínimo de uma unidade para RAID nível 0.
+* Os grupos de volume RAID 0 podem ter mais de 30 unidades.
+* Você pode criar um grupo de volumes que inclua todas as unidades no storage array.
+
+
+
+
+==== RAID 1 ou RAID 10
+
+*Descrição:*
+
+* Modo striping/mirror.
+
+
+*Como funciona:*
+
+* O RAID 1 usa o espelhamento de disco para gravar dados em dois discos duplicados simultaneamente.
+* O RAID 10 usa o particionamento de unidades para distribuir dados em um conjunto de pares de unidades espelhadas.
+
+
+*Caraterísticas de proteção de dados:*
+
+* RAID 1 e RAID 10 oferecem alto desempenho e a melhor disponibilidade de dados.
+* RAID 1 e RAID 10 usam espelhamento de unidade para fazer uma cópia exata de uma unidade para outra unidade.
+* Se uma das unidades em um par de unidades falhar, o storage array pode alternar instantaneamente para a outra unidade sem perda de dados ou serviço.
+* Uma única falha de unidade faz com que os volumes associados fiquem degradados. A unidade de espelho permite o acesso aos dados.
+* Uma falha de par de unidade em um grupo de volumes faz com que todos os volumes associados falhem e a perda de dados possa ocorrer.
+
+
+*Requisitos de número de unidade:*
+
+* É necessário um mínimo de duas unidades para RAID 1: Uma unidade para os dados do usuário e uma unidade para os dados espelhados.
+* Se você selecionar quatro ou mais unidades, o RAID 10 será configurado automaticamente no grupo de volumes: Duas unidades para dados de usuário e duas unidades para os dados espelhados.
+* Você deve ter um número par de unidades no grupo de volumes. Se você não tiver um número par de unidades e tiver algumas unidades não atribuídas restantes, vá para *pools & grupos de volume* para adicionar unidades adicionais ao grupo de volumes e tente novamente a operação.
+* Os grupos de volumes RAID 1 e RAID 10 podem ter mais de 30 unidades. É possível criar um grupo de volumes que inclua todas as unidades do storage array.
+
+
+
+
+==== RAID 5
+
+*Descrição:*
+
+* Modo de e/S elevado.
+
+
+*Como funciona:*
+
+* Os dados do usuário e as informações redundantes (paridade) são distribuídos pelas unidades.
+* A capacidade equivalente de uma unidade é usada para informações redundantes.
+
+
+* Recursos de proteção de dados*
+
+* Se uma única unidade falhar em um grupo de volumes RAID 5, todos os volumes associados ficarão degradados. As informações redundantes permitem que os dados ainda sejam acessados.
+* Se duas ou mais unidades falharem em um grupo de volumes RAID 5, todos os volumes associados falharão e todos os dados serão perdidos.
+
+
+*Requisitos de número de unidade:*
+
+* Você precisa ter no mínimo três unidades no grupo de volumes.
+* Normalmente, você está limitado a um máximo de 30 unidades no grupo de volumes.
+
+
+
+
+==== RAID 6
+
+*Descrição:*
+
+* Modo de e/S elevado.
+
+
+*Como funciona:*
+
+* Os dados do usuário e as informações redundantes (paridade dupla) são distribuídos entre as unidades.
+* A capacidade equivalente de duas unidades é usada para informações redundantes.
+
+
+*Caraterísticas de proteção de dados:*
+
+* Se uma ou duas unidades falharem em um grupo de volumes RAID 6, todos os volumes associados ficam degradados, mas as informações redundantes permitem que os dados ainda sejam acessados.
+* Se três ou mais unidades falharem em um grupo de volumes RAID 6, todos os volumes associados falharão e todos os dados serão perdidos.
+
+
+*Requisitos de número de unidade:*
+
+* Você precisa ter no mínimo cinco unidades no grupo de volumes.
+* Normalmente, você está limitado a um máximo de 30 unidades no grupo de volumes.
+
+
+
+NOTE: Não é possível alterar o nível RAID de um pool. A interface do usuário configura automaticamente pools como RAID 6.
+
+
+
+=== Níveis de RAID e proteção de dados
+
+RAID 1, RAID 5 e RAID 6 escrevem dados de redundância no suporte de dados da unidade para tolerância a falhas. Os dados de redundância podem ser uma cópia dos dados (espelhados) ou um código de correção de erros derivado dos dados. Você pode usar os dados de redundância para reconstruir rapidamente as informações em uma unidade de substituição se uma unidade falhar.
+
+Você configura um único nível RAID em um único grupo de volumes. Todos os dados de redundância para esse grupo de volumes são armazenados dentro do grupo de volumes. A capacidade do grupo de volumes é a capacidade agregada das unidades membros menos a capacidade reservada para dados de redundância. A quantidade de capacidade necessária para redundância depende do nível RAID usado.
+
+
+
+== Por que algumas unidades não estão aparecendo?
+
+Na caixa de diálogo Adicionar capacidade, nem todas as unidades estão disponíveis para adicionar capacidade a um pool ou grupo de volumes existente.
+
+As unidades não são qualificadas por nenhum dos seguintes motivos:
+
+* Uma unidade deve ser desatribuída e não ativada para segurança. As unidades que já fazem parte de outro pool, de outro grupo de volume ou configuradas como hot spare não são elegíveis. Se uma unidade não for atribuída, mas estiver ativada para segurança, você deverá apagar manualmente essa unidade para que ela se torne elegível.
+* Uma unidade que esteja em um estado não ótimo não é elegível.
+* Se a capacidade de uma unidade for muito pequena, ela não será elegível.
+* O tipo de Mídia da unidade deve corresponder em um pool ou grupo de volume. Não é possível misturar o seguinte:
++
+** Unidades de disco rígido (HDDs) com discos de estado sólido (SSDs)
+** NVMe com unidades SAS
+** Unidades com tamanhos de bloco de volume de 512 bytes e 4KiB
+
+
+* Se um pool ou grupo de volumes contiver todas as unidades com capacidade de segurança, as unidades com capacidade de segurança não serão listadas.
+* Se um pool ou grupo de volumes contiver todas as unidades FIPS (Federal Information Processing Standards), as unidades não FIPS não serão listadas.
+* Se um pool ou grupo de volumes contiver todas as unidades compatíveis com Data Assurance (DA) e houver pelo menos um volume habilitado PARA DA no pool ou grupo de volumes, uma unidade que não seja capaz de DA não é elegível, portanto, ela não pode ser adicionada a esse pool ou grupo de volumes. No entanto, se não houver um volume habilitado PARA DA no pool ou grupo de volumes, uma unidade que não seja capaz de DA pode ser adicionada a esse pool ou grupo de volumes. Se você decidir misturar essas unidades, lembre-se de que não é possível criar nenhum volume habilitado PARA DA.
+
+
+
+NOTE: A capacidade pode ser aumentada em seu storage array adicionando novas unidades ou excluindo pools ou grupos de volumes.
+
+
+
+== Por que não posso aumentar minha capacidade de preservação?
+
+Se você criou volumes em toda a capacidade utilizável disponível, talvez não consiga aumentar a capacidade de preservação.
+
+Capacidade de preservação é a quantidade de capacidade (número de unidades) reservada em um pool para dar suporte a possíveis falhas de unidade. Quando um pool é criado, o sistema reserva automaticamente uma quantidade padrão de capacidade de preservação, dependendo do número de unidades no pool. Se você tiver criado volumes em toda a capacidade utilizável disponível, não poderá aumentar a capacidade de preservação sem adicionar capacidade ao pool adicionando unidades ou excluindo volumes.
+
+Você pode alterar a capacidade de preservação de pools e grupos de volume. Selecione o pool que você deseja editar. Clique em *Exibir/Editar configurações* e selecione a guia *Configurações*.
+
+
+NOTE: A capacidade de preservação é especificada como um número de unidades, mesmo que a capacidade de preservação real seja distribuída entre as unidades no pool.
+
+
+
+== O que é o Data Assurance?
+
+A Data Assurance (DA) implementa a norma T10 Protection Information (PI), que aumenta a integridade dos dados verificando e corrigindo erros que possam ocorrer à medida que os dados são transferidos ao longo do caminho de e/S.
+
+O uso típico do recurso Data Assurance verificará a parte do caminho de e/S entre os controladores e as unidades. As capacidades DA são apresentadas no nível de grupo de volume e pool.
+
+Quando esse recurso está ativado, o storage de armazenamento anexa códigos de verificação de erros (também conhecidos como verificações de redundância cíclica ou CRCs) a cada bloco de dados no volume. Depois que um bloco de dados é movido, o storage array usa esses códigos CRC para determinar se ocorreram erros durante a transmissão. Os dados potencialmente corrompidos não são gravados no disco nem devolvidos ao host. Se você quiser usar o recurso DA, selecione um pool ou grupo de volume que seja capaz de DA quando criar um novo volume (procure *Sim* ao lado de *DA* na tabela de candidatos ao grupo de grupo de volume e pool).
+
+Certifique-se de atribuir esses volumes habilitados PARA DA a um host usando uma interface de e/S capaz de DA. As interfaces de e/S capazes de DA incluem Fibre Channel, SAS, iSCSI em TCP/IP, NVMe/FC, NVMe/IB, NVMe/RoCE e iSER em InfiniBand (extensões iSCSI para RDMA/IB). DA não é compatível com SRP em InfiniBand.
+
+
+
+== O que é segurança FDE/FIPS?
+
+A segurança FDE/FIPS refere-se a unidades com capacidade segura que criptografam dados durante gravações e descriptografam dados durante leituras usando uma chave de criptografia exclusiva.
+
+Essas unidades com capacidade de segurança evitam o acesso não autorizado aos dados em uma unidade que é fisicamente removida do storage array. As unidades com capacidade segura podem ser unidades com criptografia total de disco (FDE) ou unidades FIPS (Federal Information Processing Standard). As unidades FIPS foram submetidas a testes de certificação.
+
+
+NOTE: Para volumes que exigem suporte FIPS, use apenas unidades FIPS. A combinação de unidades FIPS e FDE em um grupo de volumes ou pool resultará no tratamento de todas as unidades como unidades FDE. Além disso, uma unidade FDE não pode ser adicionada ou usada como sobressalente em um grupo de volumes ou pool totalmente FIPS.
+
+
+
+== O que é seguro (Drive Security)?
+
+O Drive Security é um recurso que impede o acesso não autorizado aos dados em unidades habilitadas para segurança quando removido do storage array.
+
+Essas unidades podem ser unidades com criptografia total de disco (FDE) ou unidades FIPS (Federal Information Processing Standard).
+
+
+
+== Como posso visualizar e interpretar todas as estatísticas de cache SSD?
+
+Você pode ver estatísticas nominais e estatísticas detalhadas para cache SSD.
+
+As estatísticas nominais são um subconjunto das estatísticas detalhadas. As estatísticas detalhadas só podem ser visualizadas quando você exporta todas as estatísticas SSD para um arquivo .csv. Ao rever e interpretar as estatísticas, tenha em mente que algumas interpretações são derivadas olhando para uma combinação de estatísticas.
+
+
+
+=== Estatísticas nominais
+
+Para exibir estatísticas de cache SSD, vá para a página *Gerenciar*. Selecione menu:provisionamento[Configurar pools e grupos de volume]. Selecione o cache SSD para o qual deseja exibir estatísticas e, em seguida, selecione menu:mais[View Statistics]. As estatísticas nominais são apresentadas na caixa de diálogo View SSD Cache Statistics (Ver estatísticas de cache SSD).
+
+
+NOTE: Este recurso não está disponível no sistema de armazenamento EF600 ou EF300.
+
+A lista inclui estatísticas nominais, que são um subconjunto das estatísticas detalhadas.
+
+
+
+=== Estatísticas detalhadas
+
+As estatísticas detalhadas consistem nas estatísticas nominais, mais estatísticas adicionais. Essas estatísticas adicionais são salvas juntamente com as estatísticas nominais, mas, ao contrário das estatísticas nominais, elas não são exibidas na caixa de diálogo View SSD Cache Statistics (Exibir estatísticas de cache SSD). Você pode exibir as estatísticas detalhadas somente depois de exportar as estatísticas para um arquivo .csv.
+
+As estatísticas detalhadas são listadas após as estatísticas nominais.
+
+
+
+== O que é proteção contra perda de prateleira e proteção contra perda de gaveta?
+
+A proteção contra perda de gaveta e a proteção contra perda de gaveta são atributos de pools e grupos de volumes que permitem manter o acesso aos dados em caso de falha de gaveta ou gaveta única.
+
+
+
+=== Proteção contra perda de prateleira
+
+Um compartimento é o compartimento que contém as unidades ou as unidades e a controladora. A proteção contra perda de gaveta garante a acessibilidade aos dados nos volumes em um pool ou grupo de volumes se houver perda total de comunicação com um único compartimento de unidade. Um exemplo de perda total de comunicação pode ser perda de energia para o compartimento de unidades ou falha de ambos os módulos de e/S (IOMs).
+
+
+NOTE: A proteção contra perda de gaveta não é garantida se uma unidade já tiver falhado no pool ou grupo de volumes. Nessa situação, a perda de acesso a um compartimento de unidades e, consequentemente, outra unidade no pool ou grupo de volumes causa a perda de dados.
+
+Os critérios para a proteção contra perdas de prateleiras dependem do método de proteção, conforme descrito na tabela a seguir.
+
+|===
+| Nível | Critérios para proteção contra perdas de prateleira | Número mínimo de gavetas necessário 
+
+
+| Piscina | O pool deve incluir unidades de pelo menos cinco gavetas, e deve haver um número igual de unidades em cada gaveta. A proteção contra perda de prateleira não é aplicável às prateleiras de alta capacidade; se o sistema contiver prateleiras de alta capacidade, consulte proteção contra perda de gaveta. | 5 
+
+
+| RAID 6 | O grupo de volumes não contém mais do que duas unidades em uma única gaveta. | 3 
+
+
+| RAID 3 ou RAID 5 | Cada unidade no grupo de volume está localizada em uma gaveta separada. | 3 
+
+
+| RAID 1 | Cada unidade em um par RAID 1 deve estar localizada em uma gaveta separada. | 2 
+
+
+| RAID 0 | Não é possível obter proteção contra perdas de prateleira. | Não aplicável 
+|===
+
+
+=== Proteção contra perda de gaveta
+
+Uma gaveta é um dos compartimentos de uma prateleira que você puxa para fora para acessar as unidades. Apenas as prateleiras de alta capacidade têm gavetas. A proteção contra perda de gaveta garante a acessibilidade aos dados nos volumes em um pool ou grupo de volumes se ocorrer uma perda total de comunicação com uma única gaveta. Um exemplo de perda total de comunicação pode ser perda de energia para a gaveta ou falha de um componente interno dentro da gaveta.
+
+
+CAUTION: A proteção contra perda de gaveta não é garantida se uma unidade já tiver falhado no pool ou grupo de volume. Nesta situação, perder o acesso a uma gaveta (e, consequentemente, outra unidade no pool ou grupo de volume) causa perda de dados.
+
+Os critérios para a proteção contra perda de gaveta dependem do método de proteção, conforme descrito na seguinte tabela:
+
+|===
+| Nível | Critérios para proteção contra perda de gaveta | Número mínimo de gavetas necessário 
+
+
+| Piscina | Os candidatos ao pool devem incluir unidades de todas as gavetas, e deve haver um número igual de unidades em cada gaveta. O pool deve incluir unidades de pelo menos cinco gavetas e deve haver um número igual de unidades em cada gaveta. Um compartimento de 60 unidades pode obter proteção contra perda de gaveta quando o pool contém 15, 20, 25, 30, 35, 40, 45, 50, 55 ou 60 unidades. Incrementos em múltiplos de 5 podem ser adicionados ao pool após a criação inicial. | 5 
+
+
+| RAID 6 | O grupo de volumes não contém mais do que duas unidades em uma única gaveta. | 3 
+
+
+| RAID 3 ou 5 | Cada unidade do grupo de volume está localizada em uma gaveta separada | 3 
+
+
+| RAID 1 | Cada unidade em um par espelhado deve estar localizada em uma gaveta separada. | 2 
+
+
+| RAID 0 | Não é possível obter proteção contra perda de gaveta. | Não aplicável 
+|===
+
+
+== Como faço para manter a proteção contra perda de prateleira e gaveta?
+
+Para manter a proteção contra perda de gaveta e gaveta para um pool ou grupo de volumes, use os critérios especificados na tabela a seguir.
+
+|===
+| Nível | Critérios para proteção contra perda de prateleira/gaveta | Número mínimo de prateleiras / gavetas necessário 
+
+
+| Piscina | Para gavetas, o pool não deve conter mais de duas unidades em uma única gaveta. Para gavetas, o pool deve incluir um número igual de unidades de cada gaveta. | 6 para prateleiras 5 para gavetas 
+
+
+| RAID 6 | O grupo de volumes não contém mais do que duas unidades em um único compartimento ou gaveta. | 3 
+
+
+| RAID 3 ou RAID 5 | Cada unidade no grupo de volume está localizada em uma gaveta ou gaveta separada. | 3 
+
+
+| RAID 1 | Cada unidade em um par espelhado deve estar localizada em uma gaveta ou gaveta separada. | 2 
+
+
+| RAID 0 | Não é possível obter proteção contra perda de prateleira/gaveta. | Não aplicável 
+|===
+
+NOTE: A proteção contra perda de gaveta/gaveta não será mantida se uma unidade já tiver falhado no pool ou no grupo de volumes. Nessa situação, perder o acesso a um compartimento de unidades ou gaveta e, consequentemente, outra unidade no pool ou grupo de volume, causa perda de dados.
+
+
+
+== O que é a capacidade de otimização para pools?
+
+As unidades SSD terão vida útil mais longa e melhor desempenho máximo de gravação quando uma parte de sua capacidade não for alocada.
+
+Para unidades associadas a um pool, a capacidade não alocada é composta pela capacidade de preservação de um pool, pela capacidade livre (capacidade não usada por volumes) e por uma parte da capacidade utilizável reservada como capacidade de otimização adicional. A capacidade de otimização adicional garante um nível mínimo de capacidade de otimização, reduzindo a capacidade utilizável, e, como tal, não está disponível para criação de volume.
+
+Quando um pool é criado, uma capacidade de otimização recomendada é gerada, que fornece um equilíbrio de desempenho, vida útil do desgaste e capacidade disponível. O controle deslizante capacidade de otimização adicional localizado na caixa de diálogo Configurações do pool permite ajustes na capacidade de otimização do pool. O ajuste da barra deslizante proporciona um melhor desempenho e vida útil do desgaste à custa da capacidade disponível, ou da capacidade disponível adicional à custa do desempenho e da vida útil do desgaste da transmissão.
+
+
+NOTE: O controle deslizante capacidade de otimização adicional está disponível apenas para sistemas de armazenamento EF600 e EF300.
+
+
+
+== O que é a capacidade de otimização para grupos de volumes?
+
+As unidades SSD terão vida útil mais longa e melhor desempenho máximo de gravação quando uma parte de sua capacidade não for alocada.
+
+Para unidades associadas a um grupo de volumes, a capacidade não alocada é composta pela capacidade livre de um grupo de volumes (capacidade não usada por volumes) e uma parte da capacidade utilizável reservada como capacidade de otimização. A capacidade de otimização adicional garante um nível mínimo de capacidade de otimização, reduzindo a capacidade utilizável, e, como tal, não está disponível para criação de volume.
+
+Quando um grupo de volumes é criado, uma capacidade de otimização recomendada é gerada, que fornece um equilíbrio de desempenho, vida útil de desgaste e capacidade disponível. O controle deslizante capacidade de otimização adicional na caixa de diálogo Configurações do grupo de volume permite ajustes na capacidade de otimização de um grupo de volume. O ajuste da barra deslizante proporciona um melhor desempenho e vida útil do desgaste à custa da capacidade disponível, ou da capacidade disponível adicional à custa do desempenho e da vida útil do desgaste da transmissão.
+
+
+NOTE: O controle deslizante de capacidade de otimização adicional está disponível apenas para sistemas de armazenamento EF600 e EF300.
+
+
+
+== O que é capaz de provisionamento de recursos?
+
+O provisionamento de recursos é um recurso disponível nas matrizes de armazenamento EF300 e EF600, que permite que os volumes sejam colocados em uso imediatamente sem processo de inicialização em segundo plano.
+
+Um volume provisionado por recursos é um volume espesso em um grupo ou pool de volumes SSD, em que a capacidade da unidade é alocada (atribuída ao volume) quando o volume é criado, mas os blocos de unidades são deslocalizados (não mapeados). Em comparação, em um volume grosso tradicional, todos os blocos de unidades são mapeados ou alocados durante uma operação de inicialização de volume em segundo plano, a fim de inicializar os campos de informações de proteção do Data Assurance e tornar os dados e a paridade RAID consistentes em cada faixa RAID. Com um volume provisionado de recurso, não há inicialização em segundo plano com tempo. Em vez disso, cada stripe RAID é inicializado na primeira gravação em um bloco de volume no stripe.
+
+Os volumes provisionados por recursos são compatíveis apenas com grupos de volumes e pools de SSD, em que todas as unidades do grupo ou pool são compatíveis com a funcionalidade de recuperação de erro de ativação de bloco lógico (DULBE) desalocada ou não escrita do NVMe. Quando um volume provisionado por recurso é criado, todos os blocos de unidade atribuídos ao volume são desalocados (não mapeados). Além disso, os hosts podem desalocar blocos lógicos no volume usando o comando NVMe Dataset Management. A desalocação de blocos pode melhorar a vida útil do SSD e aumentar o desempenho máximo de gravação. A melhoria varia de acordo com cada modelo de unidade e capacidade.
+
+
+
+== O que eu preciso saber sobre o recurso volumes provisionados por recursos?
+
+O provisionamento de recursos é um recurso disponível nas matrizes de armazenamento EF300 e EF600, que permite que os volumes sejam colocados em uso imediatamente sem processo de inicialização em segundo plano.
+
+
+NOTE: O recurso provisionamento de recursos não está disponível no momento. Em algumas exibições, os componentes podem ser reportados como capazes de provisionamento de recursos, mas a capacidade de criar volumes provisionados por recursos foi desativada até que possa ser reativada em uma atualização futura.
+
+
+
+=== Volumes provisionados por recursos
+
+Um volume provisionado por recursos é um volume espesso em um grupo ou pool de volumes SSD, em que a capacidade da unidade é alocada (atribuída ao volume) quando o volume é criado, mas os blocos de unidades são deslocalizados (não mapeados). Em comparação, em um volume grosso tradicional, todos os blocos de unidades são mapeados ou alocados durante uma operação de inicialização de volume em segundo plano, a fim de inicializar os campos de informações de proteção do Data Assurance e tornar os dados e a paridade RAID consistentes em cada faixa RAID. Com um volume provisionado de recurso, não há inicialização em segundo plano com tempo. Em vez disso, cada stripe RAID é inicializado na primeira gravação em um bloco de volume no stripe.
+
+Os volumes provisionados por recursos são compatíveis apenas com grupos de volumes e pools de SSD, em que todas as unidades do grupo ou pool são compatíveis com a funcionalidade de recuperação de erro de ativação de bloco lógico (DULBE) desalocada ou não escrita do NVMe. Quando um volume provisionado por recurso é criado, todos os blocos de unidade atribuídos ao volume são desalocados (não mapeados). Além disso, os hosts podem desalocar blocos lógicos no volume usando o comando NVMe Dataset Management. A desalocação de blocos pode melhorar a vida útil do SSD e aumentar o desempenho máximo de gravação. A melhoria varia de acordo com cada modelo de unidade e capacidade.
+
+
+
+=== Ativar e desativar a funcionalidade
+
+O provisionamento de recursos é habilitado por padrão em sistemas onde as unidades suportam DULBE. Você pode desativar essa configuração padrão em pools e grupos de volume. A desativação do provisionamento de recursos é uma ação permanente para volumes existentes e não pode ser revertida (ou seja, não é possível reativar o provisionamento de recursos para esses grupos de volumes e pools).
+
+No entanto, se você quiser reativar o provisionamento de recursos novamente para quaisquer novos volumes criados, você pode fazê-lo no menu:Configurações[sistema]. Esteja ciente de que, quando você reativar o provisionamento de recursos, somente grupos de volumes e pools recém-criados serão afetados. Todos os grupos de volumes e pools existentes permanecerão inalterados. Se desejar, você também pode desativar o provisionamento de recursos novamente no menu:Configurações[sistema].
+
+
+
+== Qual é a diferença entre a chave de segurança interna e o gerenciamento de chaves de segurança externas?
+
+Ao implementar o recurso Segurança da unidade, você pode usar uma chave de segurança interna ou uma chave de segurança externa para bloquear dados quando uma unidade habilitada for removida do storage de armazenamento.
+
+Uma chave de segurança é uma cadeia de carateres, que é compartilhada entre as unidades e controladores habilitados para segurança em um storage array. As chaves internas são mantidas na memória persistente do controlador. As chaves externas são mantidas em um servidor de gerenciamento de chaves separado, usando um KMIP (Key Management Interoperability Protocol).
+
+
+
+== O que eu preciso saber antes de criar uma chave de segurança?
+
+Uma chave de segurança é compartilhada por controladores e unidades habilitadas para proteger dentro de um storage array. Se uma unidade habilitada para segurança for removida do storage array, a chave de segurança protegerá os dados contra acesso não autorizado.
+
+Você pode criar e gerenciar chaves de segurança usando um dos seguintes métodos:
+
+* Gerenciamento de chaves internas na memória persistente do controlador.
+* Gerenciamento de chaves externas em um servidor de gerenciamento de chaves externo.
+
+
+
+
+== Gerenciamento de chaves internas
+
+As chaves internas são mantidas e "ocultas" em um local não acessível na memória persistente do controlador. Antes de criar uma chave de segurança interna, você deve fazer o seguinte:
+
+. Instale unidades com capacidade segura no storage de armazenamento. Essas unidades podem ser unidades com criptografia total de disco (FDE) ou unidades FIPS (Federal Information Processing Standard).
+. Certifique-se de que a funcionalidade de Segurança da unidade está ativada. Se necessário, entre em Contato com o fornecedor de armazenamento para obter instruções sobre como ativar o recurso Segurança da unidade.
+
+
+Em seguida, você pode criar uma chave de segurança interna, que envolve a definição de um identificador e uma frase-passe. O identificador é uma cadeia de carateres associada à chave de segurança e é armazenada no controlador e em todas as unidades associadas à chave. A frase-passe é usada para criptografar a chave de segurança para fins de backup. Quando terminar, a chave de segurança é armazenada no controlador num local não acessível. Em seguida, você pode criar grupos de volume ou pools habilitados para segurança ou habilitar a segurança em grupos de volumes e pools existentes.
+
+
+
+=== Gerenciamento de chaves externas
+
+As chaves externas são mantidas em um servidor de gerenciamento de chaves separado, usando um KMIP (Key Management Interoperability Protocol). Antes de criar uma chave de segurança externa, você deve fazer o seguinte:
+
+. Instale unidades com capacidade segura no storage de armazenamento. Essas unidades podem ser unidades com criptografia total de disco (FDE) ou unidades FIPS (Federal Information Processing Standard).
+. Certifique-se de que a funcionalidade de Segurança da unidade está ativada. Se necessário, entre em Contato com o fornecedor de armazenamento para obter instruções sobre como ativar o recurso Segurança da unidade
+. Obtenha um arquivo de certificado de cliente assinado. Um certificado de cliente valida os controladores do storage array, para que o servidor de gerenciamento de chaves possa confiar em suas solicitações KMIP.
++
+.. Primeiro, você conclui e faz o download de uma solicitação de assinatura de certificado de cliente (CSR). Aceda ao menu:Definições[certificados > Gestão de chaves > CSR completo].
+.. Em seguida, você solicita um certificado de cliente assinado de uma CA confiável pelo servidor de gerenciamento de chaves. (Você também pode criar e baixar um certificado de cliente do servidor de gerenciamento de chaves usando o arquivo CSR baixado.)
+.. Depois de ter um arquivo de certificado de cliente, copie esse arquivo para o host onde você está acessando o System Manager.
+
+
+. Recupere um arquivo de certificado do servidor de gerenciamento de chaves e copie esse arquivo para o host onde você está acessando o System Manager. Um certificado do servidor de gerenciamento de chaves valida o servidor de gerenciamento de chaves, de modo que o storage array possa confiar em seu endereço IP. Você pode usar um certificado raiz, intermediário ou servidor para o servidor de gerenciamento de chaves.
+
+
+Em seguida, você pode criar uma chave externa, que envolve a definição do endereço IP do servidor de gerenciamento de chaves e o número da porta usada para comunicações KMIP. Durante esse processo, você também carrega arquivos de certificado. Quando terminar, o sistema se coneta ao servidor de gerenciamento de chaves com as credenciais inseridas. Em seguida, você pode criar grupos de volume ou pools habilitados para segurança ou habilitar a segurança em grupos de volumes e pools existentes.
+
+
+
+== Por que eu preciso definir uma frase-passe?
+
+A frase-passe é usada para criptografar e descriptografar o arquivo de chave de segurança armazenado no cliente de gerenciamento local. Sem a frase-passe, a chave de segurança não pode ser descriptografada e usada para desbloquear dados de uma unidade habilitada para segurança se for reinstalada em outra matriz de armazenamento.

@@ -28,7 +28,7 @@ NOTE: As portas de host no lado esquerdo inferior (e1a, e1b, E1C e e1d) e no lad
 --
 O exemplo a seguir mostra o cabeamento dos hosts de dados usando uma topologia de conexão direta.
 
-image:../media/drw_e4060_direct_topology_ieops-2048.svg["E4060 topologia direta, largura de 1000px mm"]
+image:../media/drw_labeled_e4060_direct_topology_ieops-2158.svg["E4060 topologia direta, largura de 1000px mm"]
 
 . Conete cada porta HBA do host às portas do host nos controladores (e1a, e1b, E1C, e1d ou e0a e e0b).
 
@@ -41,7 +41,7 @@ NOTE: Para obter exemplos adicionais de diagramas de cabeamento, https://docs.ne
 --
 O exemplo a seguir mostra o cabeamento dos hosts de dados usando uma topologia de malha.
 
-image:../media/drw_e4060_fabric_topology_ieops-2049.svg["E4060 topologia de tecido, largura de 1000pxmm"]
+image:../media/drw_e4060_fabric_topology_ieops-2159.svg["E4060 topologia de tecido, largura de 1000pxmm"]
 
 . Conete cada adaptador de host diretamente ao switch.
 . Conete cada switch diretamente às portas do host nos controladores (e1a, e1b, E1C, e1d ou e0a e e0b).

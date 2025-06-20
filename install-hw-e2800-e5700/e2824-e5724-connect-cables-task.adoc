@@ -18,13 +18,13 @@ Saiba como conectar os cabos de alimentação e ligar as gavetas de unidade.
 * Tome precauções antiestáticas.
 
 
-Este procedimento se aplica aos compartimentos de unidades IOM12 e IOM12B.
+Este procedimento se aplica às prateleiras de unidades IOM12, IOM12B e IOM12C.
 
 
-NOTE: Os módulos IOM12B só são suportados no SANtricity os 11.70.2 em diante. Certifique-se de que o firmware do controlador foi atualizado antes de instalar ou atualizar para um IOM12B.
+NOTE: Os módulos IOM12C são suportados somente no SANtricity OS 11.90R3 em diante. Certifique-se de que o firmware do controlador foi atualizado antes de instalar ou atualizar para um IOM12C.
 
 
-NOTE: Esse procedimento é para hot-swaps ou substituições de IOM de gaveta semelhantes. Isto significa que só pode substituir um módulo IOM12 por outro módulo IOM12 ou substituir um módulo IOM12B por outro módulo IOM12B. (Sua prateleira pode ter dois módulos IOM12 ou ter dois módulos IOM12B.)
+NOTE: Esse procedimento é para hot-swaps ou substituições de IOM de gaveta semelhantes. Isto significa que só pode substituir um módulo IOM12 por outro módulo IOM12 ou substituir um módulo IOM12C por outro módulo IOM12C. (Sua prateleira pode ter dois módulos IOM12 ou ter dois módulos IOM12C.)
 
 .Passos
 . Faça o cabeamento das prateleiras.

@@ -1,7 +1,7 @@
 ---
 sidebar: sidebar 
 permalink: whats-new.html 
-keywords: whats new, new features, SANtricity 11.90, SANtricity 11.80 
+keywords: whats new, new features, SANtricity, 11.9, 11.8 
 summary: Novos recursos no SANtricity os. 
 ---
 = O que há de novo no SANtricity os
@@ -14,6 +14,21 @@ summary: Novos recursos no SANtricity os.
 [role="lead"]
 A tabela a seguir descreve novos recursos nas versões mais recentes do SANtricity os para gerenciamento incorporado de controladoras E4000, EF300/EF300C, EF600/EF600C, E2800/EF280 e E5700/EF570.
 
+
+
+== Novos recursos na versão 11.90R3
+
+[cols="35h,~"]
+|===
+| Novo recurso | Descrição 
+
+
+ a| 
+Suporte do SANtricity OS para IOM12C e DCM3
+ a| 
+O suporte para prateleiras SAS-3 IOM12C e DCM3 agora está disponível para firmware de controlador 11.90R3 ou superior. As prateleiras IOM12C e DCM3 substituem as prateleiras IOM12B e DCM2.
+
+|===
 
 
 == Novos recursos na versão 11.90R2

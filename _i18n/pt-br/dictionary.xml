@@ -7,9 +7,6 @@
   <block id="8322d8f6737b683258acd6d9233af80a" category="list-text">Leia todos os passos antes de iniciar o procedimento.</block>
   <block id="8567550b0509793441808f6c97ce695d" category="list-text">Certifique-se de que a adição de um compartimento de unidade é o procedimento que você precisa.</block>
   <block id="bbe48fb854ea022537208eeeff822f91" category="paragraph-title">Sobre esta tarefa</block>
-  <block id="e9983c2bf51c9aa8f38dce44157b9a2a" category="paragraph">Este procedimento se aplica aos compartimentos de unidades IOM12 e IOM12B.</block>
-  <block id="f2ad0f8f286ab81e3d2722fa3c383e9b" category="admonition">Os módulos IOM12B só são suportados no SANtricity os 11.70.2 em diante. Certifique-se de que o firmware do controlador foi atualizado antes de instalar ou atualizar para um IOM12B.</block>
-  <block id="2af3ffb0914986412fbce97033362ada" category="admonition">Esse procedimento é para hot-swaps ou substituições de IOM de gaveta semelhantes. Isto significa que só pode substituir um módulo IOM12 por outro módulo IOM12 ou substituir um módulo IOM12B por outro módulo IOM12B. (Sua prateleira pode ter dois módulos IOM12 ou ter dois módulos IOM12B.)</block>
   <block id="5a1179aaa65f35de522ce2a2ea82749a" category="inline-link">Adição de gavetas de unidade IOM a uma gaveta de controladora E27XX, E56XX ou EF560 existente</block>
   <block id="a6f3f1b5a23e23fffe14cffdfdd4e3e6" category="paragraph">Se você estiver fazendo o cabeamento de uma gaveta de controladora mais antiga para um DE212C, DE224C ou DE460,<block ref="0198df91334a412ebbcbbf86e387ec1b" category="inline-link-rx"></block> consulte .</block>
   <block id="160e453c42b3cffabeeb1eac7a869cc4" category="admonition">Para manter a integridade do sistema, você deve seguir o procedimento exatamente na ordem apresentada.</block>
@@ -3048,8 +3045,6 @@
   <block id="643cf53889a851d94f18e68d68887ef7" category="summary">Reveja os requisitos e considerações de substituição do controlador E2800.</block>
   <block id="441651ab40068dac3a602bac4db9c3cc" category="paragraph">Antes de substituir ou adicionar um controlador E2800, reveja os requisitos e considerações.</block>
   <block id="2d33b45e8b3a1d29678e5d1898be8872" category="paragraph">Cada recipiente do controlador contém uma placa controladora, uma bateria e uma placa de interface do host (HIC) opcional. Você pode adicionar um segundo controlador a uma configuração simplex ou substituir um controlador com falha.</block>
-  <block id="d8877bd06791feeb2257a189554b10c0" category="paragraph">Esses procedimentos se aplicam aos compartimentos de unidades IOM12 e IOM12B.</block>
-  <block id="9d5445db77f905ba92077d0b48806948" category="admonition">Esses procedimentos são para hot-swaps ou substituições de IOM de gaveta semelhantes. Isto significa que só pode substituir um módulo IOM12 por outro módulo IOM12 ou substituir um módulo IOM12B por outro módulo IOM12B. (Sua prateleira pode ter dois módulos IOM12 ou ter dois módulos IOM12B.)</block>
   <block id="e0b4ad5fea96a69e322520c639ff0241" category="section-title">Requisitos para adicionar o segundo controlador</block>
   <block id="b5c3b2977348508969f89a874a523c3c" category="paragraph">Você pode adicionar um segundo canister de controladora à versão simplex das seguintes gavetas de controladora:</block>
   <block id="3a2fa91ff19a804d73a517b7fdbc6350" category="paragraph">As figuras mostram um exemplo de compartimento do controlador antes de adicionar um segundo controlador (um recipiente do controlador e um controlador em branco) e depois de adicionar um segundo controlador (dois recipientes de controlador).</block>
@@ -3310,7 +3305,6 @@
   <block id="c92ae1b66e0ea48f905922b70c51fcc0" category="summary">Substitua uma unidade em um E2800 por um compartimento de 60 unidades.</block>
   <block id="609be9ba4308b107932857f7cf158595" category="paragraph">Você pode substituir uma unidade em um E2800 por um compartimento de 60 unidades.</block>
   <block id="620f2aecd1b13cc9e4943a2b50b4a8b6" category="paragraph">O Guru de recuperação no Gerenciador de sistema do SANtricity monitora as unidades no storage array e pode notificá-lo de uma falha iminente de unidade ou de uma falha real de unidade. Quando uma unidade tiver falhado, o LED âmbar de atenção está aceso. Você pode trocar a quente uma unidade com falha enquanto o storage array está recebendo operações de e/S.</block>
-  <block id="ebc31fad1cf84954196a7706294df684" category="paragraph">Este procedimento se aplica aos compartimentos de unidades DCM e DCM2.</block>
   <block id="ee7607d86da8b65c01da2ac652fe4964" category="list-text">Se necessário, use o Gerenciador de sistema do SANtricity para localizar a unidade dentro do storage de armazenamento.</block>
   <block id="b6a12ef99e8b336ab9462d700e1e8a99" category="list-text">Se a prateleira tiver uma moldura, retire-a para que possa ver os LEDs.</block>
   <block id="b5524c42961e4cb39436d596734756bc" category="list-text">No menu de contexto da unidade, selecione *Ativar luz de localização*.</block>
@@ -4101,7 +4095,6 @@
   <block id="0ce1997215ff26fd5b9284736a764b25" category="paragraph">Quando você insere uma unidade pela primeira vez, seu LED de atenção pode estar ligado. No entanto, o LED deve apagar-se dentro de um minuto.</block>
   <block id="2a6f6b0e35b2bf4af51a4b0bfe47141a" category="summary">Substitua uma unidade em uma gaveta de E5700 60 unidades.</block>
   <block id="ff4525471962c2f80f88cc7bda612cda" category="paragraph">Você pode substituir uma unidade em um compartimento de 60 unidades.</block>
-  <block id="6dc10b003bcb8e0cbbcf076e7dbcdf2f" category="paragraph">Esta tarefa se aplica aos compartimentos de unidades DCM e DCM2.</block>
   <block id="eb4144f92a460ecd95ae1c09b9232c09" category="section-title">Passo 1: Prepare-se para substituir a unidade (60 unidades)</block>
   <block id="76b188eaa0ef9d72b9512f3fe3343776" category="paragraph">Prepare-se para substituir uma unidade em um compartimento de 60 unidades verificando o Guru de recuperação no Gerenciador de sistemas do SANtricity e executando quaisquer etapas de pré-requisito. Em seguida, você pode localizar o componente com falha.</block>
   <block id="831881f71c8feafb6a34cf32fd783117" category="section-title">Etapa 2: Remover a unidade com falha (60 unidades)</block>
@@ -6662,8 +6655,6 @@
   <block id="961886d373243f3f3f779b008441b5d2" category="cell">Suporta versões do Mac os usando um ATTO Technology, Inc., driver multipathing.</block>
   <block id="d93a7355c7e5ae529cbbd1c7386ef236" category="cell">Windows (ATTO)</block>
   <block id="1cef5a0ae504a39c3c685c81bb227bcc" category="cell">Suporta sistemas operacionais Windows usando um ATTO Technology, Inc., driver multipathing.</block>
-  <block id="fae9863ad38cf7cb4abba55837a6958e" category="cell">FlexArray (ALUA)</block>
-  <block id="80a4b6a6aea0733712df8ece7feeb565" category="cell">Suporta um sistema NetApp FlexArray usando ALUA para multipathing.</block>
   <block id="448462a9364fed0f780b5871c1332348" category="cell">SVC DA IBM</block>
   <block id="ba5b374a9253be7b2e7ff414763a91ee" category="cell">Suporta uma configuração do IBM SAN volume Controller.</block>
   <block id="fb83a625e5852c1ba47fe358f2d50ffc" category="cell">Predefinição de fábrica</block>
@@ -6672,7 +6663,6 @@
   <block id="02677c9d7a9295a0b7ff23da80ed17c2" category="cell">Suporta sistemas operacionais Linux usando uma solução de failover multipath Device Mapper com um Kernel 3,9 ou anterior.</block>
   <block id="e9745a54dc083bc4c6e7adb0ba4a88bf" category="cell">Janela agrupada (obsoleta)</block>
   <block id="ee99f98925e229fb230a1fca830d5dd4" category="cell">Se o tipo de sistema operacional do host estiver definido para esse valor, use a configuração Windows (em cluster ou não em cluster).</block>
-  <block id="4618a10c402a86f34f74700b56034c0f" category="summary">Mantenha a proteção contra perda de gaveta e gaveta para um pool ou grupo de volume</block>
   <block id="8a3f4e59944403d76cf4ffb618284325" category="doc">Como faço para manter a proteção contra perda de prateleira e gaveta?</block>
   <block id="5f18e254e37bfef58483cda02161565b" category="paragraph">Para manter a proteção contra perda de gaveta e gaveta para um pool ou grupo de volumes, use os critérios especificados na tabela a seguir.</block>
   <block id="a0db49ba470c1c9ae2128c3470339153" category="cell">Nível</block>
@@ -6704,7 +6694,6 @@
   <block id="9e971ad51fc8f2b7c76e66c3763a297d" category="section-title">Estatísticas detalhadas</block>
   <block id="c04291c09df8a463d080e99ac2b9584c" category="paragraph">As estatísticas detalhadas consistem nas estatísticas nominais, mais estatísticas adicionais. Essas estatísticas adicionais são salvas juntamente com as estatísticas nominais, mas, ao contrário das estatísticas nominais, elas não são exibidas na caixa de diálogo View SSD Cache Statistics (Exibir estatísticas de cache SSD). Você pode exibir as estatísticas detalhadas somente depois de exportar as estatísticas para um arquivo .csv.</block>
   <block id="b064d9a4ef763d5f96c5b8819d3aa98b" category="paragraph">As estatísticas detalhadas são listadas após as estatísticas nominais.</block>
-  <block id="e28ca758b5b6384ff2daa36accced63c" category="summary">Durante a criação de volume, você será solicitado a fornecer informações sobre o uso de uma carga de trabalho.</block>
   <block id="b5a3b95a88ff3f89275ca18c4736d4b8" category="doc">Como minha carga de trabalho selecionada afeta a criação de volume?</block>
   <block id="0c6710fd70e8f6dfb7dc7c5ef665fd39" category="paragraph">Durante a criação de volume, você será solicitado a fornecer informações sobre o uso de uma carga de trabalho. O sistema usa essas informações para criar uma configuração de volume ideal para você, que pode ser editada conforme necessário. Opcionalmente, você pode pular esta etapa na sequência de criação de volume.</block>
   <block id="ab699fec90fd6cda5e110bb5189e9178" category="paragraph">Um workload é um objeto de storage compatível com uma aplicação. Você pode definir uma ou mais cargas de trabalho ou instâncias por aplicação. Para alguns aplicativos, o sistema configura a carga de trabalho para conter volumes com caraterísticas de volume subjacentes semelhantes. Essas características de volume são otimizadas com base no tipo de aplicação compatível com o workload. Por exemplo, se você criar uma carga de trabalho que suporte um aplicativo Microsoft SQL Server e, posteriormente, criar volumes para essa carga de trabalho, as caraterísticas de volume subjacentes serão otimizadas para oferecer suporte ao Microsoft SQL Server.</block>
@@ -7196,7 +7185,6 @@
   <block id="592a2d22569029e2e9426d790ce24e3c" category="paragraph">A maioria dos sistemas operacionais reconhece a capacidade de volume expandida e se expande automaticamente após a expansão de volume ser iniciada. No entanto, alguns podem não. Se o sistema operacional não reconhecer automaticamente a capacidade de volume expandido, talvez seja necessário realizar uma nova digitalização ou reinicialização do disco.</block>
   <block id="e99388207555e1734196f354ee94b95c" category="paragraph">Depois de expandir a capacidade do volume, você deve aumentar manualmente o tamanho do sistema de arquivos para corresponder. A forma como você faz isso depende do sistema de arquivos que você está usando.</block>
   <block id="e65366bea33d160fbbbc4da1552c962c" category="paragraph">Consulte a documentação do sistema operacional do host para obter detalhes adicionais.</block>
-  <block id="e995e7f7f68380b2da6f062d6f736236" category="summary">Para sistemas EF300 e EF600, um volume pode ser definido para suportar um tamanho de bloco de 512 bytes ou 4KiB (também chamado de "tamanho do setor"). Você deve definir o valor correto durante a criação do volume.</block>
   <block id="fb5754cb7d8aec1ca725e7242d365730" category="doc">O que eu preciso saber sobre os requisitos de tamanho de bloco de host?</block>
   <block id="e5e425d8ab1cbef0e34a067f0d88d470" category="paragraph">Para sistemas EF300 e EF600, um volume pode ser definido para suportar um tamanho de bloco de 512 bytes ou 4KiB (também chamado de "tamanho do setor"). Você deve definir o valor correto durante a criação do volume. Se possível, o sistema sugere o valor padrão apropriado.</block>
   <block id="f4aa667b118a0a334c4fa467de995fc8" category="paragraph">Antes de definir o tamanho do bloco de volume, leia as seguintes limitações e diretrizes.</block>
@@ -7215,7 +7203,6 @@
   <block id="25d294940d1800f4d27d4ba80d924e94" category="section-title">Ativar e desativar a funcionalidade</block>
   <block id="e8ce4dc5c23425001ae843ebfc09d20d" category="paragraph">O provisionamento de recursos é habilitado por padrão em sistemas onde as unidades suportam DULBE. Você pode desativar essa configuração padrão em pools e grupos de volume. A desativação do provisionamento de recursos é uma ação permanente para volumes existentes e não pode ser revertida (ou seja, não é possível reativar o provisionamento de recursos para esses grupos de volumes e pools).</block>
   <block id="4435efc77a278305c3367a9af9389977" category="paragraph">No entanto, se você quiser reativar o provisionamento de recursos novamente para quaisquer novos volumes criados, você pode fazê-lo no menu:Configurações[sistema]. Esteja ciente de que, quando você reativar o provisionamento de recursos, somente grupos de volumes e pools recém-criados serão afetados. Todos os grupos de volumes e pools existentes permanecerão inalterados. Se desejar, você também pode desativar o provisionamento de recursos novamente no menu:Configurações[sistema].</block>
-  <block id="a755886af9ddc52625c98ff0c2403d42" category="summary">Uma chave de segurança é compartilhada por controladores e unidades habilitadas para proteger dentro de um storage array.</block>
   <block id="2a0d49e5c65d1c328eea1427c45f821e" category="doc">O que eu preciso saber antes de criar uma chave de segurança?</block>
   <block id="eb8e4643855758b3255653b9508bfb4a" category="paragraph">Uma chave de segurança é compartilhada por controladores e unidades habilitadas para proteger dentro de um storage array. Se uma unidade habilitada para segurança for removida do storage array, a chave de segurança protegerá os dados contra acesso não autorizado.</block>
   <block id="41f869dddf7c6279ec6063ce284c3e8e" category="paragraph">Você pode criar e gerenciar chaves de segurança usando um dos seguintes métodos:</block>
@@ -7256,7 +7243,6 @@
   <block id="ab657b168f9f9f26db5cdad700575835" category="doc">O que é a capacidade de preservação?</block>
   <block id="fcff84bb310bb8ffa3f789c4ff901f89" category="paragraph">Quando um pool é criado, o sistema reserva automaticamente uma quantidade padrão de capacidade de preservação, dependendo do número de unidades no pool.</block>
   <block id="a55c7dbc44748caead1da895f260af6f" category="paragraph">Os pools usam capacidade de preservação durante a reconstrução, enquanto os grupos de volume usam unidades hot spare para o mesmo propósito. O método de capacidade de preservação é uma melhoria em relação às unidades hot spare porque permite que a reconstrução aconteça mais rapidamente. A capacidade de preservação é espalhada por várias unidades no pool em vez de em uma unidade no caso de uma unidade hot spare, portanto, você não está limitado pela velocidade ou disponibilidade de uma unidade.</block>
-  <block id="27ff4e5987307be95b847357578a7d2c" category="summary">Uma verificação de redundância determina se os dados em um volume em um pool ou grupo de volumes são consistentes.</block>
   <block id="dbdb64210af00cba98b2ae65e68fc433" category="doc">O que é verificação de redundância?</block>
   <block id="527686381caf5b91f8b2570f0b90f7e1" category="paragraph">Uma verificação de redundância determina se os dados em um volume em um pool ou grupo de volumes são consistentes. Os dados de redundância são usados para reconstruir rapidamente informações em uma unidade de substituição se uma das unidades no pool ou grupo de volumes falhar.</block>
   <block id="072001db08ae65e793389aff41f4b0bf" category="list-text">Verifica os blocos de dados em um volume RAID 3, um volume RAID 5 ou um volume RAID 6 e, em seguida, verifica as informações de redundância para cada bloco. (O RAID 3 só pode ser atribuído a grupos de volume usando a interface de linha de comando.)</block>
@@ -7345,7 +7331,6 @@
   <block id="5f4e02ad30b579f165a04eef9d220da1" category="section-title">Níveis de RAID e proteção de dados</block>
   <block id="0475862d1c667ab31adb4ed6eecd172c" category="paragraph">RAID 1, RAID 5 e RAID 6 escrevem dados de redundância no suporte de dados da unidade para tolerância a falhas. Os dados de redundância podem ser uma cópia dos dados (espelhados) ou um código de correção de erros derivado dos dados. Você pode usar os dados de redundância para reconstruir rapidamente as informações em uma unidade de substituição se uma unidade falhar.</block>
   <block id="1afb2123a52041fd93ef7912eceff880" category="paragraph">Você configura um único nível RAID em um único grupo de volumes. Todos os dados de redundância para esse grupo de volumes são armazenados dentro do grupo de volumes. A capacidade do grupo de volumes é a capacidade agregada das unidades membros menos a capacidade reservada para dados de redundância. A quantidade de capacidade necessária para redundância depende do nível RAID usado.</block>
-  <block id="c7f22d49f002f26198a719f2496c2e98" category="summary">O recurso Importar configurações é uma operação em lote que carrega configurações de uma matriz de armazenamento para várias matrizes de armazenamento. As configurações importadas durante essa operação dependem de como o storage de armazenamento de origem é configurado no System Manager.</block>
   <block id="6aa467b445a7d222ea7a821c8df54a08" category="doc">Que definições são importadas?</block>
   <block id="5a336d7c8bb4d9fb626af7c0fffe68af" category="paragraph">O recurso Importar configurações é uma operação em lote que carrega configurações de uma matriz de armazenamento para várias matrizes de armazenamento.</block>
   <block id="5f54df5b09ce6e5e7ccff3fed9aea673" category="paragraph">As configurações importadas durante essa operação dependem de como o storage de armazenamento de origem é configurado no System Manager. As seguintes configurações podem ser importadas para vários storages de armazenamento:</block>
@@ -7375,7 +7360,6 @@
   <block id="0b7ad3551661b6155325a75aef700ecf" category="list-text">Se um pool ou grupo de volumes contiver todas as unidades compatíveis com Data Assurance (DA) e houver pelo menos um volume habilitado PARA DA no pool ou grupo de volumes, uma unidade que não seja capaz de DA não é elegível, portanto, ela não pode ser adicionada a esse pool ou grupo de volumes. No entanto, se não houver um volume habilitado PARA DA no pool ou grupo de volumes, uma unidade que não seja capaz de DA pode ser adicionada a esse pool ou grupo de volumes. Se você decidir misturar essas unidades, lembre-se de que não é possível criar nenhum volume habilitado PARA DA.</block>
   <block id="26fc92dce88a2f2b7f6d311212b712a2" category="admonition">A capacidade pode ser aumentada em seu storage array adicionando novas unidades ou excluindo pools ou grupos de volumes.</block>
   <block id="184ee7795269728284ddf4700779c94b" category="doc">Por que esses volumes não estão associados a uma carga de trabalho?</block>
-  <block id="4599f147525488978c059ab5443c5a94" category="summary">Os volumes nesse workload não são associados a um workload específico do aplicativo, portanto, o workload não pode ser excluído.</block>
   <block id="cc41a400b6ddab31b3cc4c347ea5b96a" category="doc">Por que não consigo excluir a carga de trabalho selecionada?</block>
   <block id="3bfd2179043341e09a4fc1cfd720d6ff" category="paragraph">Essa carga de trabalho consiste em um grupo de volumes que foram criados usando a interface de linha de comando (CLI) ou migrados (importados/exportados) de um storage array diferente. Como resultado, os volumes dessa carga de trabalho não são associados a uma carga de trabalho específica da aplicação, portanto, a carga de trabalho não pode ser excluída.</block>
   <block id="3cedad73b5b33c8b0c2b8d5beeed5264" category="summary">Se você criou volumes em toda a capacidade utilizável disponível, talvez não consiga aumentar a capacidade de preservação.</block>
@@ -7383,10 +7367,8 @@
   <block id="71396049ff539200dbba1007ca0cbc94" category="paragraph">Capacidade de preservação é a quantidade de capacidade (número de unidades) reservada em um pool para dar suporte a possíveis falhas de unidade. Quando um pool é criado, o sistema reserva automaticamente uma quantidade padrão de capacidade de preservação, dependendo do número de unidades no pool. Se você tiver criado volumes em toda a capacidade utilizável disponível, não poderá aumentar a capacidade de preservação sem adicionar capacidade ao pool adicionando unidades ou excluindo volumes.</block>
   <block id="fbd4c513da5cb1e1fe2c4db1adda28c8" category="paragraph">Você pode alterar a capacidade de preservação de pools e grupos de volume. Selecione o pool que você deseja editar. Clique em *Exibir/Editar configurações* e selecione a guia *Configurações*.</block>
   <block id="5f1d6366c7ffd99ff1b7c5f05e692914" category="admonition">A capacidade de preservação é especificada como um número de unidades, mesmo que a capacidade de preservação real seja distribuída entre as unidades no pool.</block>
-  <block id="490911223ced9bd35d325330312a99b5" category="summary">A frase-passe é usada para criptografar e descriptografar o arquivo de chave de segurança armazenado no cliente de gerenciamento local.</block>
   <block id="7e2fd80391cbb19f61be6028669d1143" category="doc">Por que eu preciso definir uma frase-passe?</block>
   <block id="2f42cd01026066a070aa52e53e4d963f" category="paragraph">A frase-passe é usada para criptografar e descriptografar o arquivo de chave de segurança armazenado no cliente de gerenciamento local. Sem a frase-passe, a chave de segurança não pode ser descriptografada e usada para desbloquear dados de uma unidade habilitada para segurança se for reinstalada em outra matriz de armazenamento.</block>
-  <block id="8289ad2daf4149715a39ad8d6af619b8" category="summary">Os volumes instantâneos com um volume base habilitado PARA DA não são elegíveis para serem atribuídos a um host que não seja capaz de Data Assurance (DA).</block>
   <block id="a75d3526ba8cd40a248e9da80d0ba8d2" category="doc">Por que não vejo todos os meus volumes, hosts ou clusters de host?</block>
   <block id="f956e41235aa6de0ef7cf1901fa9a994" category="paragraph">Os volumes instantâneos com um volume base habilitado PARA DA não são elegíveis para serem atribuídos a um host que não seja capaz de Data Assurance (DA). Você deve desativar DA no volume base antes que um volume instantâneo possa ser atribuído a um host que não seja capaz de DA.</block>
   <block id="92fc66f9534d94b4859793638454d6ee" category="paragraph">Considere as seguintes diretrizes para o host ao qual você está atribuindo o volume de snapshot:</block>
@@ -7399,7 +7381,6 @@
   <block id="c91bcce3104eb156b3cd15ae07870a24" category="list-text">A versão do firmware é inferior a 8,50.</block>
   <block id="d42c8b73b3ccc12638f610f2623a0c09" category="list-text">A matriz de armazenamento está offline.</block>
   <block id="05693bc32413083ba1ba81023c2fa739" category="list-text">O sistema não pode se comunicar com esse array (por exemplo, o array tem problemas de certificado, senha ou rede).</block>
-  <block id="968c500c45a669526a5ae69ef252eb12" category="summary">Você precisa criar um cluster de host se quiser que dois ou mais hosts compartilhem o acesso ao mesmo conjunto de volumes.</block>
   <block id="36ba1dd2062be041e65d76f318fc9563" category="doc">Por que eu precisaria criar um cluster de host?</block>
   <block id="605c94544e16797cd75e903049c8c75f" category="paragraph">Você precisa criar um cluster de host se quiser que dois ou mais hosts compartilhem o acesso ao mesmo conjunto de volumes. Normalmente, os hosts individuais têm software de cluster instalado neles para coordenar o acesso ao volume.</block>
   <block id="52877d65c00b08b2ad200ece4bbb448f" category="summary">Você pode gerenciar o acesso do usuário à API de serviços da Web e ao Unified Manager para fins de segurança.</block>
@@ -7839,7 +7820,6 @@
   <block id="69388a3aa77fde6c6db723db24c07886" category="paragraph">Para sistemas Linux que são compatíveis com o sistema de gerenciamento de pacotes RPM, você pode instalar o Web Services Proxy usando um arquivo RPM opcional.</block>
   <block id="44fdd30cd930ac3164eb732ccfc71839" category="list-text">Baixe o arquivo RPM para o servidor onde você deseja instalar o proxy e o Unified Manager.</block>
   <block id="6dcd1ebf4390170868ab9bcdfd967581" category="list-text">Introduza o seguinte comando:</block>
-  <block id="832e1d3c786f0b6f9f452d072f2d4b27" category="paragraph"><block ref="354464ae661582f620680bd9feceacaa" prefix="" category="inline-code"></block></block>
   <block id="e90cc19871614d9efbaffbaffd7e2d47" category="admonition">No comando acima,<block ref="699ac6f9ea1aed3b414789e971975c3a" prefix=" " category="inline-code"></block> representa o número da versão.</block>
   <block id="61a1961a01081f195fa287f838634c2f" category="summary">Saiba mais sobre a API de serviços da Web</block>
   <block id="1751b6eae613e7e242fd94649a3089b3" category="doc">Noções básicas de API</block>
@@ -8275,7 +8255,6 @@
   <block id="ce3948f2b44ee14a18d362f994260727" category="sidebar">Configurar hosts</block>
   <block id="f0ba1c2df528f80a7b9482044ac9d46b" category="sidebar">Configurar pools e grupos de volumes</block>
   <block id="37f5864db129acc269bc46cb006e8605" category="sidebar">Remova o plugin</block>
-  <block id="483a5da192f46e3cfe8391d3ef234fc4" category="sidebar">FAQs</block>
   <block id="979ea2ad56e327e601f7f385d923a6f7" category="sidebar">Soluções legadas</block>
   <block id="fa3d170e011f9d178479859be77bf32e" category="sidebar">Conector de nuvem</block>
   <block id="acd35904a6ced15ec9eaaacc8f6dbe00" category="sidebar">Configure o Cloud Connector pela primeira vez</block>
@@ -8480,9 +8459,7 @@
   <block id="5835021a0e70e0a13bc60ddff4162aca" category="paragraph"><block ref="5835021a0e70e0a13bc60ddff4162aca" category="inline-image-macro-rx" type="image"></block></block>
   <block id="17360156c8ceaa57309077e605e88697" category="image-alt">Fluxo de trabalho do processo de instalação E2800 e E5700</block>
   <block id="9388df48e85777aba8981c9e79739824" category="inline-image-macro">E4012 topologia direta, largura de 1000px mm</block>
-  <block id="9dcbe6d474a3385e1258eeebe1d96cfa" category="paragraph"><block ref="9dcbe6d474a3385e1258eeebe1d96cfa" category="inline-image-macro-rx" type="image"></block></block>
   <block id="e5115f367ddc4b23f2a5a9dce410d220" category="inline-image-macro">E4012 topologia de tecido, largura de 1000pxmm</block>
-  <block id="fe5422a7f743c4750aa826cb030729eb" category="paragraph"><block ref="fe5422a7f743c4750aa826cb030729eb" category="inline-image-macro-rx" type="image"></block></block>
   <block id="2f998d3759a46f941c16045d05799b20" category="inline-image-macro">Porta de gerenciamento do controlador E4000</block>
   <block id="419c5b2edef00ba85d62682d5ff0138c" category="paragraph"><block ref="419c5b2edef00ba85d62682d5ff0138c" category="inline-image-macro-rx" type="image"></block></block>
   <block id="f530fae0a98563bf22e6ee7a23163588" category="list-text">Siga as instruções do navegador para continuar e iniciar o Gerenciador de sistema do SANtricity. Se não conseguir estabelecer uma ligação, verifique se não está a receber a configuração de rede a partir de um servidor DHCP.</block>
@@ -8490,9 +8467,7 @@
   <block id="05f07938d9743df4b9673ac6e16d5eaf" category="list-text">Inicie sessão utilizando a palavra-passe que definiu anteriormente. O assistente Configurar definições de rede será apresentado.</block>
   <block id="61c8d556c74bbd20f07d7c1565d11a11" category="list-text">Na configuração de rede mais simples, conete seu controlador a um navegador da Web e use o Gerenciador de sistema SANtricity para gerenciar um único storage array da série E4000. Para acessar o System Manager, use os mesmos endereços IP usados para configurar suas portas de gerenciamento.</block>
   <block id="ed82e034d7d377cc12aa1d89cea33d43" category="inline-image-macro">E4060 topologia direta, largura de 1000px mm</block>
-  <block id="98e6536dfa926f6bd4a1900657c27282" category="paragraph"><block ref="98e6536dfa926f6bd4a1900657c27282" category="inline-image-macro-rx" type="image"></block></block>
   <block id="427b3e2ab20960e704a22e39fbcda634" category="inline-image-macro">E4060 topologia de tecido, largura de 1000pxmm</block>
-  <block id="72c6889744a45c86c32b640c76b2138a" category="paragraph"><block ref="72c6889744a45c86c32b640c76b2138a" category="inline-image-macro-rx" type="image"></block></block>
   <block id="ab2bd875f2f303555807a3b13a6b64bb" category="paragraph"><block ref="ab2bd875f2f303555807a3b13a6b64bb" category="inline-image-macro-rx" type="image"></block></block>
   <block id="ff2e827a53ef25671ffc7469bb5208a2" category="list-title">Exemplo A: Um compartimento de controladora E4000U com três compartimentos de disco DE212C/DE224CU em uma configuração SAS padrão.</block>
   <block id="ecf826f3b05c4b630ca5e118d6536932" category="list-title">Exemplo B: Um compartimento de controladora E4000U com um compartimento de disco DE212C/DE224CU em uma configuração SAS padrão.</block>
@@ -9710,4 +9685,22 @@
   <block id="ed389a9acb72de33be78325f147d7d8c" category="doc">Saiba mais sobre os Serviços Web da SANtricity e o Gerenciador Unificado</block>
   <block id="f14a1a04aab620524ee87bd0fd002ab1" category="doc">Saiba mais sobre a terminologia de proxy de serviços da Web da SANtricity</block>
   <block id="abf831fd1f3fab9981530f2ea36177b2" category="doc">Gerenciar a polling automática para as estatísticas de proxy dos serviços da Web do SANtricity</block>
+  <block id="dce708315880727f8ba7e84bab86b168" category="paragraph">Este procedimento se aplica às prateleiras de unidades IOM12, IOM12B e IOM12C.</block>
+  <block id="3f457ff9c17714d64ba75fd9d6d618f2" category="admonition">Os módulos IOM12C são suportados somente no SANtricity OS 11.90R3 em diante. Certifique-se de que o firmware do controlador foi atualizado antes de instalar ou atualizar para um IOM12C.</block>
+  <block id="8d93e2013316d1241b304432f0103be5" category="admonition">Esse procedimento é para hot-swaps ou substituições de IOM de gaveta semelhantes. Isto significa que só pode substituir um módulo IOM12 por outro módulo IOM12 ou substituir um módulo IOM12C por outro módulo IOM12C. (Sua prateleira pode ter dois módulos IOM12 ou ter dois módulos IOM12C.)</block>
+  <block id="e0f75caa67759a6c5e34cbad6ae84d57" category="admonition">Os módulos IOM12C só são suportados no SANtricity os 11.70.2 em diante. Certifique-se de que o firmware do controlador foi atualizado antes de instalar ou atualizar para um IOM12C.</block>
+  <block id="bbfd15448c83d50ee0a4a62cc152d856" category="paragraph"><block ref="bbfd15448c83d50ee0a4a62cc152d856" category="inline-image-macro-rx" type="image"></block></block>
+  <block id="f7178ecd56d859f9f7e4878779a236ea" category="paragraph"><block ref="f7178ecd56d859f9f7e4878779a236ea" category="inline-image-macro-rx" type="image"></block></block>
+  <block id="949ca69f081f10e2fc1938e0e24759c8" category="paragraph"><block ref="949ca69f081f10e2fc1938e0e24759c8" category="inline-image-macro-rx" type="image"></block></block>
+  <block id="142dc71d06d08da442f6fe84d80e526d" category="paragraph"><block ref="142dc71d06d08da442f6fe84d80e526d" category="inline-image-macro-rx" type="image"></block></block>
+  <block id="dea137ce87e98617e1e7f9c6f97eeeff" category="admonition">Esses procedimentos são para hot-swaps ou substituições de IOM de gaveta semelhantes. Isto significa que só pode substituir um módulo IOM12 por outro módulo IOM12 ou substituir um módulo IOM12C por outro módulo IOM12C. (Sua prateleira pode ter dois módulos IOM12 ou ter dois módulos IOM12C.)</block>
+  <block id="88db80c02306ca8e9bac2283b0d2f6bf" category="paragraph">Este procedimento se aplica às prateleiras de unidades DCM, DCM2 e DCM3.</block>
+  <block id="b2d2940e83701ff478975b36d255b487" category="paragraph">Esta tarefa se aplica às prateleiras de unidades DCM, DCM2 e DCM3.</block>
+  <block id="b1151aae9531d2f5e85d085e8878cea6" category="summary">Este FAQ pode ajudar se você está apenas procurando uma resposta rápida para uma pergunta.</block>
+  <block id="a318c851f3d3c0a7eeb1313f1422c3b3" category="doc">Perguntas frequentes sobre o plugin de armazenamento SANtricity para vCenter</block>
+  <block id="33f3664698fdab78efe7579f9849af32" category="paragraph"><block ref="b6ee0733cf8f7004d998d8fc49cc2022" prefix="" category="inline-code"></block></block>
+  <block id="a10a0fef1a8b50d16443976fedae1e16" category="section-title">Novos recursos na versão 11.90R3</block>
+  <block id="c78544d43a065eb825edb9e16bf0e9ad" category="paragraph">Suporte do SANtricity OS para IOM12C e DCM3</block>
+  <block id="94d90ce4793f949687897ec062d97b9c" category="paragraph">O suporte para prateleiras SAS-3 IOM12C e DCM3 agora está disponível para firmware de controlador 11.90R3 ou superior. As prateleiras IOM12C e DCM3 substituem as prateleiras IOM12B e DCM2.</block>
+  <block id="3a2a69a35a4560167d4c0478029a3f70" category="sidebar">Perguntas frequentes sobre o plugin de armazenamento para vCenter</block>
 </blocks>

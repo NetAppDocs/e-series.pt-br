@@ -23,10 +23,10 @@ Devido à complexidade deste procedimento, recomenda-se o seguinte:
 .Sobre esta tarefa
 Este procedimento se aplica à adição rápida de um compartimento de unidades DE212C, DE224C ou DE460C a um compartimento de controladora E4000.
 
-Este procedimento se aplica aos compartimentos de unidades IOM12 e IOM12B.
+Este procedimento se aplica às prateleiras de unidades IOM12, IOM12B e IOM12C.
 
 
-NOTE: Esse procedimento é para hot-swaps ou substituições de IOM de gaveta semelhantes. Isto significa que só pode substituir um módulo IOM12 por outro módulo IOM12 ou substituir um módulo IOM12B por outro módulo IOM12B. (Sua prateleira pode ter dois módulos IOM12 ou ter dois módulos IOM12B.)
+NOTE: Esse procedimento é para hot-swaps ou substituições de IOM de gaveta semelhantes. Isto significa que só pode substituir um módulo IOM12 por outro módulo IOM12 ou substituir um módulo IOM12C por outro módulo IOM12C. (Sua prateleira pode ter dois módulos IOM12 ou ter dois módulos IOM12C.)
 
 
 NOTE: Para manter a integridade do sistema, você deve seguir o procedimento exatamente na ordem apresentada.

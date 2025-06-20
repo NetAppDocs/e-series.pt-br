@@ -18,7 +18,7 @@ Saiba como conectar os cabos de alimentação e ligar as gavetas de unidade.
 * Tome precauções antiestáticas.
 
 
-Este procedimento se aplica aos compartimentos de unidades IOM12 e IOM12B.
+Este procedimento se aplica às prateleiras de unidades IOM12, IOM12B e IOM12C.
 
 .Passos
 . Faça o cabeamento das prateleiras.

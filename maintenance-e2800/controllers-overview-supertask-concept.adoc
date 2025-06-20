@@ -15,13 +15,13 @@ Antes de substituir ou adicionar um controlador E2800, reveja os requisitos e co
 
 Cada recipiente do controlador contém uma placa controladora, uma bateria e uma placa de interface do host (HIC) opcional. Você pode adicionar um segundo controlador a uma configuração simplex ou substituir um controlador com falha.
 
-Esses procedimentos se aplicam aos compartimentos de unidades IOM12 e IOM12B.
+Este procedimento se aplica às prateleiras de unidades IOM12, IOM12B e IOM12C.
 
 
-NOTE: Os módulos IOM12B só são suportados no SANtricity os 11.70.2 em diante. Certifique-se de que o firmware do controlador foi atualizado antes de instalar ou atualizar para um IOM12B.
+NOTE: Os módulos IOM12C são suportados somente no SANtricity OS 11.90R3 em diante. Certifique-se de que o firmware do controlador foi atualizado antes de instalar ou atualizar para um IOM12C.
 
 
-NOTE: Esses procedimentos são para hot-swaps ou substituições de IOM de gaveta semelhantes. Isto significa que só pode substituir um módulo IOM12 por outro módulo IOM12 ou substituir um módulo IOM12B por outro módulo IOM12B. (Sua prateleira pode ter dois módulos IOM12 ou ter dois módulos IOM12B.)
+NOTE: Esses procedimentos são para hot-swaps ou substituições de IOM de gaveta semelhantes. Isto significa que só pode substituir um módulo IOM12 por outro módulo IOM12 ou substituir um módulo IOM12C por outro módulo IOM12C. (Sua prateleira pode ter dois módulos IOM12 ou ter dois módulos IOM12C.)
 
 
 

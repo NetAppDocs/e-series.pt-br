@@ -16,7 +16,7 @@ Você pode substituir uma unidade em um E4000 por um compartimento de 60 unidade
 .Sobre esta tarefa
 O Guru de recuperação no Gerenciador de sistema do SANtricity monitora as unidades no storage array e pode notificá-lo de uma falha iminente de unidade ou de uma falha real de unidade. Quando uma unidade tiver falhado, o LED âmbar de atenção está aceso. Você pode trocar a quente uma unidade com falha enquanto o storage array está recebendo operações de e/S.
 
-Este procedimento se aplica aos compartimentos de unidades DCM e DCM2.
+Este procedimento se aplica às prateleiras de unidades DCM, DCM2 e DCM3.
 
 .Antes de começar
 * Reveja os requisitos de manuseamento da transmissão.
