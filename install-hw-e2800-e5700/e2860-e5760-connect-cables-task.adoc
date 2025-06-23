@@ -29,10 +29,14 @@ NOTE: Esse procedimento é para hot-swaps ou substituições de IOM de gaveta se
 .Passos
 . Faça o cabeamento das prateleiras.
 +
-Faça o cabo do sistema de acordo com a sua configuração. Se você precisar de mais opções de cabeamento do que os exemplos mostrados nesta seção, link:../install-hw-cabling/index.html["Cabeamento"]consulte .
+Faça o cabo do sistema de acordo com a sua configuração.
 
 +
-Para os exemplos mostrados nesta seção, você precisa dos seguintes cabos:
+
+NOTE: Se precisar de mais opções de cabeamento do que os exemplos fornecidos abaixo, consulte link:https://docs.netapp.com/us-en/e-series/install-hw-cabling/driveshelf-cable-task.html#cabling-e2800-and-e5700["Cabeamento"^] .
+
++
+Você precisa dos seguintes cabos:
 
 +
 |===
@@ -45,23 +49,20 @@ image:../media/sas_cable.png["Cabos SAS"]
 
 |===
 +
-.Exemplo A: Um compartimento de controladora E2860U com dois compartimentos de disco DE460CU em uma configuração SAS padrão.
-image:../media/example_a_2860.png["Controladora E2860 em uma configuração SAS"]
-
+.. *Exemplo A: Prateleira do controlador com duas prateleiras de disco DE460C em uma configuração SAS padrão*
 +
-.. Controlador de cabo A a IOM a da primeira gaveta de unidades.
-.. A OIM de cabo A da primeira gaveta de unidade para IOM A da segunda gaveta de unidade.
-.. Cabo IOM B da primeira gaveta de unidade para IOM B da segunda gaveta de unidade.
-.. Controlador de cabo B a IOM B do segundo compartimento de unidades.
+... Controlador de cabo A a IOM a da primeira gaveta de unidades.
+... A OIM de cabo A da primeira gaveta de unidade para IOM A da segunda gaveta de unidade.
+... Cabo IOM B da primeira gaveta de unidade para IOM B da segunda gaveta de unidade.
+... Controlador de cabo B a IOM B do segundo compartimento de unidades.
 
 
+.. *Exemplo B: Prateleira do controlador com uma prateleira de disco DE460C em uma configuração SAS padrão*
 +
-.Exemplo B: Um compartimento de controladora E2860U com um compartimento de disco de DE460C TB em uma configuração SAS padrão.
-image:../media/example_b_2860.png["Controladora E2860 em uma configuração SAS"]
+... Controlador de cabo A a IOM A..
+... Controlador de cabo B a IOM B.
 
-+
-.. Controlador de cabo A a IOM A..
-.. Controlador de cabo B a IOM B.
+
 
 
 . Alimente as gavetas de unidades.

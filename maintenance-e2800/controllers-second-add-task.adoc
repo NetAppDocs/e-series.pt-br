@@ -218,7 +218,7 @@ O arquivo é salvo na pasta Downloads do seu navegador com o nome *latest-upgrad
 ** Ao atualizar a NVSRAM da controladora, todas as configurações personalizadas aplicadas à NVSRAM existente são perdidas durante o processo de ativação. Você deve aplicar as configurações personalizadas à NVSRAM novamente depois que o processo de ativação for concluído.
 
 
-. Altere a configuração do storage array para duplex usando comandos CLI. Para usar a CLI, você pode abrir um prompt de comando se você baixou o pacote CLI ou abrir a janela Enterprise Management (EMW) se tiver o Storage Manager instalado.
+. Altere a configuração do storage array para duplex usando comandos CLI. Para usar a CLI, abra um prompt de comando se você baixou o pacote da CLI ou abra a Enterprise Management Window (EMW) se tiver o Storage Manager instalado.
 +
 ** A partir de um prompt de comando:
 +

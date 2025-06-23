@@ -37,5 +37,4 @@ O método expresso inclui as seguintes etapas, que também são descritas no lin
 * Ajuda on-line -- descreve como usar o Gerenciador de sistemas do SANtricity para concluir as tarefas de gerenciamento de storage e configuração. Está disponível dentro do produto.
 * https://kb.netapp.com/["Base de conhecimento da NetApp"^] (Um banco de dados de artigos) - fornece informações de solução de problemas, perguntas frequentes e instruções para uma ampla gama de produtos e tecnologias NetApp.
 * http://mysupport.netapp.com/matrix["Ferramenta de Matriz de interoperabilidade do NetApp"^] -- permite pesquisar configurações de produtos e componentes NetApp que atendam aos padrões e requisitos especificados pela NetApp.
-* http://mysupport.netapp.com/documentation/productlibrary/index.html?productID=61343["Documentação do NetApp: Utilitários do host"^] -- fornece documentação para a versão atual dos Utilitários do Windows Unified Host.
 

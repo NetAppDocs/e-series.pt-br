@@ -23,10 +23,14 @@ Este procedimento se aplica às prateleiras de unidades IOM12, IOM12B e IOM12C.
 .Passos
 . Faça o cabeamento das prateleiras.
 +
-Faça o cabo do sistema de acordo com a sua configuração. Se você precisar de mais opções de cabeamento do que os exemplos mostrados nesta seção, link:../install-hw-cabling/index.html["Cabeamento"]consulte .
+Faça o cabo do sistema de acordo com a sua configuração.
 
 +
-Para os exemplos mostrados nesta seção, você precisa dos seguintes cabos:
+
+NOTE: Se precisar de mais opções de cabeamento do que os exemplos fornecidos abaixo, consulte link:https://docs.netapp.com/us-en/e-series/install-hw-cabling/driveshelf-cable-task.html#cabling-e4000["Cabeamento"^] .
+
++
+Você precisa dos seguintes cabos:
 
 +
 |===
@@ -39,17 +43,20 @@ image:../media/sas_cable.png["Cabo SAS"]
 
 |===
 +
-.Exemplo A: Um compartimento de controladora E4060U com dois compartimentos de disco DE460CU em uma configuração SAS padrão.
-.. Controlador de cabo A a IOM a da primeira gaveta de unidades.
-.. A OIM de cabo A da primeira gaveta de unidade para IOM A da segunda gaveta de unidade.
-.. Cabo IOM B da primeira gaveta de unidade para IOM B da segunda gaveta de unidade.
-.. Controlador de cabo B a IOM B do segundo compartimento de unidades.
-
-
+.. *Exemplo A: Uma prateleira de controlador E4060 com duas prateleiras de disco DE460C em uma configuração SAS padrão*
 +
-.Exemplo B: Um compartimento de controladora E4060U com um compartimento de disco de DE460C TB em uma configuração SAS padrão.
-.. Controlador de cabo A a IOM A..
-.. Controlador de cabo B a IOM B.
+... Controlador de cabo A a IOM a da primeira gaveta de unidades.
+... A OIM de cabo A da primeira gaveta de unidade para IOM A da segunda gaveta de unidade.
+... Cabo IOM B da primeira gaveta de unidade para IOM B da segunda gaveta de unidade.
+... Controlador de cabo B a IOM B do segundo compartimento de unidades.
+
+
+.. *Exemplo B: Uma prateleira de controlador E4060 com uma prateleira de disco DE460C em uma configuração SAS padrão*
++
+... Controlador de cabo A a IOM A..
+... Controlador de cabo B a IOM B.
+
+
 
 
 . Alimente as gavetas de unidades.
