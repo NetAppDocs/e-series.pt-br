@@ -79,7 +79,7 @@ Selecione uma ou ambas as opções para ativar o suporte para redes IPv4G e IPv6
  a| 
 Tamanho MTU (disponível clicando em *Mostrar mais configurações de porta*.)
  a| 
-Se necessário, introduza um novo tamanho em bytes para a unidade máxima de transmissão (MTU). O tamanho padrão da MTU é de 1500 bytes por quadro. Tem de introduzir um valor entre 1500 e 4200.
+Se necessário, introduza um novo tamanho em bytes para a unidade máxima de transmissão (MTU). O tamanho padrão da MTU é de 1500 bytes por quadro. Tem de introduzir um valor entre 1500 e 9000.
 
 |===
 +
