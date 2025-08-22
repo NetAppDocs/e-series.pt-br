@@ -13,7 +13,7 @@ summary: Você pode configurar a e/S direcionada para o destino do dispositivo c
 [role="lead"]
 Você pode configurar a e/S direcionada para o destino do dispositivo com base no sistema operacional (e pelo método multipathing de extensão) que você está usando.
 
-Para RHEL 7 e SLES 12, I/o é direcionado para alvos de dispositivos virtuais pelo host Linux. O DM-MP gerencia os caminhos físicos subjacentes a esses alvos virtuais.
+Para o SLES 12, a E/S é direcionada para destinos de dispositivos virtuais pelo host Linux. O DM-MP gerencia os caminhos físicos subjacentes a esses destinos virtuais.
 
 
 

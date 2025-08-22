@@ -56,7 +56,7 @@ NOTE: Além da porta de rede pública, os iniciadores iSCSI devem usar duas ou m
 .. Determine os nomes das portas iSCSI usando o `ifconfig -a` comando.
 .. Defina o endereço IP para as portas do iniciador iSCSI. As portas do iniciador devem estar presentes na mesma sub-rede que as portas de destino iSCSI.
 +
-*Red Hat Enterprise Linux 7 e 8 (RHEL 7 e RHEL 8)*
+*Red Hat Enterprise Linux 8 (RHEL 8)*
 
 +
 Crie o arquivo de exemplo `/etc/sysconfig/network-scripts/ifcfg-<NIC port>` com o seguinte conteúdo.
