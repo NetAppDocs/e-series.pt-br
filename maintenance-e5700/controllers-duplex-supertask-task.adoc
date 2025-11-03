@@ -412,6 +412,28 @@ Quando a comunicação com o outro controlador é restabelecida:
 
 
 
+. Coloque o controlador on-line usando o Gerenciador de sistema do SANtricity.
++
+** A partir do SANtricity System Manager:
++
+... Selecione *hardware*.
+... Se o gráfico mostrar as unidades, selecione *Mostrar parte traseira da prateleira*.
+... Selecione o controlador que pretende colocar online.
+... Selecione *Place Online* no menu de contexto e confirme que deseja executar a operação.
++
+O sistema coloca o controlador online.
+
+
+
+** Como alternativa, você pode colocar os controladores online usando os seguintes comandos CLI:
++
+*Para o controlador A:* `set controller [a] availability=online;`
+
++
+*Para o controlador B:* `set controller [b] availability=online;`
+
+
+
 . Verifique os códigos no visor de sete segmentos do controlador à medida que este regressa online. Se o visor apresentar uma das seguintes sequências de repetição, retire imediatamente o controlador.
 +
 ** *OE*, *L0*, *_blank_* (controladores incompatíveis)

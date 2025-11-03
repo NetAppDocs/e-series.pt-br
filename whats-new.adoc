@@ -16,6 +16,12 @@ A tabela a seguir descreve novos recursos nas versões mais recentes do SANtrici
 
 
 
+== Novos recursos na versão 11.90R4
+
+Esta versão contém apenas pequenas alterações e não há novos recursos. Para obter mais informações sobre as alterações nesta versão, consulte o https://library.netapp.com/ecm/ecm_download_file/ECMLP3334464["Notas de versão do e-Series 11,90"^].
+
+
+
 == Novos recursos na versão 11.90R3
 
 [cols="35h,~"]
