@@ -71,6 +71,9 @@ defaults {
         enable_foreign nvme
 }
 ----
+
+NOTE: Isso não funcionará mais no RHEL 10. Funciona no RHEL 9 e versões anteriores, e no SLES 16 e versões anteriores.
+
 Exemplo de saída:
 
 [listing]

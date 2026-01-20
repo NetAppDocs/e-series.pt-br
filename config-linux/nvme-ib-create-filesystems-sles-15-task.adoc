@@ -4,14 +4,14 @@ sidebar: sidebar
 keywords: file systems, express linux configuration, software configuration, linux host, E2800, E5700, EF300, EF600, E-Series, eseries 
 summary: Para RHEL 8 e SLES 15, você cria um sistema de arquivos no dispositivo nvme nativo e monta o sistema de arquivos. 
 ---
-= Criar sistemas de arquivos no e-Series - Linux RHEL 8, RHEL 9 e SLES 15 (NVMe over InfiniBand)
+= Criar sistemas de arquivos na Série E - Linux RHEL 8, RHEL 9, RHEL 10, SLES 15 e SLES 16 (NVMe sobre InfiniBand)
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 
 
 [role="lead"]
-Para RHEL 8, RHEL 9, SLES 15, você cria um sistema de arquivos no dispositivo nvme nativo e monta o sistema de arquivos.
+Para RHEL 8, RHEL 9, RHEL 10, SLES 15 e SLES 16, você cria um sistema de arquivos no dispositivo nvme nativo e monta o sistema de arquivos.
 
 .Passos
 . Execute o `multipath -ll` comando para obter uma lista de dispositivos nvme.
