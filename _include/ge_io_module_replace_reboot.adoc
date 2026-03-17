@@ -1,0 +1,28 @@
+= 
+:allow-uri-read: 
+
+
+Após substituir um módulo de I/O, você deve reinicializar o controlador.
+
+.Passos
+. Reinicialize o controlador a partir do prompt do LOADER:
++
+`bye`
+
++
+
+NOTE: Reinicializar o controlador com defeito também reinicializa os módulos de E/S e outros componentes.
+
+. Restaure o controlador com defeito ao funcionamento normal realizando o giveback do seu armazenamento:
++
+`storage failover giveback -ofnode _impaired_node_name_`
+
+. Restaurar o giveback automático a partir do console do controlador em bom funcionamento:
++
+`storage failover modify -node local -auto-giveback true`
+
+. Se AutoSupport estiver ativado, restaure a criação automática de casos:
++
+`system node autosupport invoke -node * -type all -message MAINT=END`
+
+

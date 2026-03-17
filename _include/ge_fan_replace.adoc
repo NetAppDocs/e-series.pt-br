@@ -1,0 +1,30 @@
+= 
+:allow-uri-read: 
+
+
+.Passos
+. Identifique a ventoinha que você deve substituir verificando as mensagens de erro do console.
+. Remova a ventoinha com defeito:
++
+image::../media/drw_g_fan_replace_ieops-1903.svg[Substituição do ventilador]
+
++
+[cols="1,4"]
+|===
+
+
+ a| 
+image::../media/icon_round_1.png[Chamada número 1]
+| Segure ambos os lados do ventilador nos pontos de toque azuis. 
+
+
+ a| 
+image::../media/icon_round_2.png[Chamada número 2]
+| Puxe a ventoinha para cima e para fora do soquete. 
+|===
+. Desembale a ventoinha de substituição e coloque-a sobre uma superfície plana e antiestática perto do sistema de storage.
++
+Guarde o material da embalagem para usar quando devolver o ventilador com defeito.
+
+. Insira a ventoinha de substituição alinhando-a com as guias e, em seguida, pressione para baixo até que o conector da ventoinha esteja totalmente encaixado no soquete.
+

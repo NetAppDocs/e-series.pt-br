@@ -1,0 +1,54 @@
+---
+permalink: maintenance-ef50-ef80/controller-replace-offline-controller.html 
+sidebar: sidebar 
+keywords: ef50, ef80, offline the impaired controller 
+summary: Coloque o controlador com problema offline no seu sistema de storage EF50 ou EF80 para evitar perda de dados e garantir a estabilidade do sistema ao substituir o controlador. 
+---
+= Offline o controlador danificado - EF50 e EF80
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Coloque o controlador com problema offline no seu sistema de storage EF50 ou EF80 para evitar perda de dados e garantir a estabilidade do sistema ao substituir o controlador.
+
+.Antes
+* Você deve ter atendido aos link:controller-replace-requirements.html["requisitos"] para este procedimento.
+* Você deve ter concluído o link:controller-replace-prepare.html["preparação"] para este procedimento.
+
+
+.Sobre esta tarefa
+Sempre que você colocar um controlador offline, é necessário aguardar pelo menos um minuto antes de colocá-lo online novamente. Esse período de espera permite que o sistema de storage atualize o status do controlador e garanta que todos os dados em cache sejam gravados nas unidades.
+
+.Passos
+. Se o controlador com defeito ainda não estiver offline, coloque-o offline usando SANtricity System Manager:
++
+.. Selecione *Hardware* > *Controladores e componentes* para exibir os controladores.
+.. Selecione o controlador que você deseja colocar offline para exibir seu menu de conteúdo.
+.. Selecione *Colocar offline* e, em seguida, confirme que deseja realizar a operação.
++
+
+NOTE: Se você estiver acessando SANtricity System Manager usando o controlador que está tentando colocar offline, uma mensagem "SANtricity System Manager Indisponível" será exibida. Selecione *Conectar a uma conexão de rede alternativa* para acessar automaticamente SANtricity System Manager usando o outro controlador.
+
+
+
+. Aguarde até que o Gerenciador de sistema do SANtricity atualize o status do controlador para offline.
++
+
+CAUTION: Não inicie quaisquer outras operações até que o estado tenha sido atualizado.
+
+. Confirme se é seguro remover o componente defeituoso, usando o Recovery Guru:
++
+.. Selecione *Recheck*.
+.. Confirme se o campo *OK para remover* na área Detalhes exibe *Yes*.
++
+
+CAUTION: Se o campo *OK para remover* não exibir *Sim*, não prossiga com a remoção do componente defeituoso. Em vez disso, solucione o problema usando o Recovery Guru.
+
+
+
+
+
+.O que se segue?
+Após colocar o controlador com defeito offline, link:controller-replace-move-hardware.html["substitua o controlador defeituoso"].

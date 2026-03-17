@@ -1,0 +1,47 @@
+---
+permalink: install-hw-ef50-ef80/install-power-hardware.html 
+sidebar: sidebar 
+keywords: ef50, ef80, connect power cables 
+summary: Após conectar os cabos de espelhamento e de rede do host do controlador para o seu sistema de storage EF50 ou EF80, você liga os controladores. 
+---
+= Ligue o hardware - EF50 e EF80
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Após conectar os cabos de espelhamento entre controladores e as conexões do host para o seu sistema de storage EF50 ou EF80, você liga os controladores.
+
+.Antes de começar
+Tome precauções antiestáticas.
+
+.Passos
+. Conecte um cabo de alimentação em cada fonte de alimentação do controlador e, em seguida, conecte-os a fontes de energia em circuitos diferentes.
++
+
+NOTE: Se você estiver usando unidades de distribuição de energia (PDUs) de terceiro, não use tomadas elétricas diretamente atrás dos controladores, pois isso pode bloquear o acesso aos controladores.
+
++
+*Cabos de alimentação*
+
++
+image:../media/power_cable_inst-hw-ef600.png["Cabos de alimentação"]
+
++
+image::../media/drw_psu_layout_1_ieops-1886.svg[diagrama de conexão de energia do sistema de storage]
+
++
+** O sistema começa a inicializar. A inicialização inicial pode levar até oito minutos.
+** Os LEDs no chassi do sistema piscam e as ventoinhas ligam, o que indica que os controladores estão sendo ligados.
++
+Durante a inicialização é normal que as ventoinhas façam muito barulho.
+
+** O visor digital na parte frontal do chassi (atrás do painel) não acende.
+
+
+. Prenda os cabos de alimentação usando o dispositivo de fixação em cada fonte de alimentação.
+
+
+.O que se segue?
+Após ligar o seu sistema de storage, link:install-complete-setup.html["configuração completa do sistema de storage"].

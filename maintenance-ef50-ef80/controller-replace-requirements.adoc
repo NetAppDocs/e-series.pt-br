@@ -1,0 +1,48 @@
+---
+permalink: maintenance-ef50-ef80/controller-replace-requirements.html 
+sidebar: sidebar 
+keywords: ef50, ef80, prerequisite, replace the controller module 
+summary: Antes de substituir o controlador no seu sistema de storage EF50 ou EF80, certifique-se de que atende aos requisitos para uma substituição bem-sucedida. Isso inclui verificar se você tem um controlador com falha, verificar o estado do seu sistema de storage, obter as ferramentas para o procedimento e ter uma estação de gerenciamento e um navegador para acessar SANtricity System Manager. 
+---
+= Requisitos para substituir um controlador - EF50 e EF80
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Antes de substituir o controlador no seu sistema de storage EF50 ou EF80, certifique-se de que atende aos requisitos para uma substituição bem-sucedida. Isso inclui verificar se você tem um controlador com falha, verificar o estado do seu sistema de storage, adquirir os itens necessários para o procedimento e ter uma estação de gerenciamento e um navegador para acessar SANtricity System Manager.
+
+* Verifique se você tem um controlador com defeito. Você pode determinar isso de duas maneiras:
++
+** O Recovery Guru no SANtricity System Manager orientou você a substituir o controlador.
+** O LED âmbar de Atenção no controlador está aceso, indicando que o controlador tem uma falha.
+
+
+
+
+* Verifique se as seguintes condições do seu sistema de storage são verdadeiras para garantir que você possa substituir o controlador com defeito enquanto seu sistema de storage estiver ligado e executando operações de E/S do host:
++
+** O segundo controlador no chassi está com status Ótimo.
+** O campo *OK para remover* na área Detalhes do Recovery Guru no SANtricity System Manager exibe *Yes*, indicando que é seguro remover o controlador com defeito.
+
+
+* Certifique-se de que tem o seguinte:
++
+** Um controlador de substituição com o mesmo número de peça do controlador que você está substituindo.
+** Uma pulseira antiestática, ou você tomou outras precauções antiestáticas.
+** Uma superfície de trabalho plana e livre de estática.
+** Etiquetas para identificar cada cabo que você irá desconectar do controlador.
+** Uma estação de gerenciamento com um navegador que pode acessar SANtricity System Manager para o controlador.
++
+Você pode abrir a interface SANtricity System Manager apontando o navegador para o nome de domínio ou endereço IP do controlador.
+
++
+Opcionalmente, você pode usar a interface de linha de comando (CLI) para executar alguns dos procedimentos. Baixe o pacote da CLI (arquivo zip) usando SANtricity System Manager: *Configurações* > *Sistema* > *Complementos* e selecione *Command Line Interface*. Em seguida, você pode emitir comandos da CLI a partir de um prompt do sistema operacional, como o prompt C: do DOS.
+
+
+
+
+
+.O que se segue?
+Após atender aos requisitos para a substituição do controlador, link:controller-replace-prepare.html["prepare-se para a substituição do controlador"].

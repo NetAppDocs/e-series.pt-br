@@ -107,7 +107,10 @@ image::../media/28_dwg_2800_controller_attn_led_maint-e2800.gif[LED de cache ati
 +
 *(1)* _Cache ative LED_
 
-. Na página inicial do Gerenciador do sistema do SANtricity, selecione *Exibir operações em andamento*. Aguarde que todas as operações sejam concluídas antes de continuar com o próximo passo.
+. Na página inicial do Gerenciador do sistema do SANtricity, selecione *Exibir operações em andamento*.
++
+Aguarde que todas as operações sejam concluídas antes de continuar com o próximo passo.
+
 . Desligue o compartimento do controlador.
 +
 .. Desligue ambos os interruptores de energia no compartimento do controlador.

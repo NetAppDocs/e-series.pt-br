@@ -1,0 +1,40 @@
+= 
+:allow-uri-read: 
+
+
+Coloque o controlador com defeito de volta online.
+
+.Passos
+. Coloque o controlador online usando SANtricity System Manager:
++
+.. Selecione *Hardware* > *Controladores e componentes* para exibir os controladores.
+.. Selecione o controlador que você deseja colocar online para exibir seu menu de contexto.
+.. Selecione *Place online* e, em seguida, confirme que deseja realizar a operação.
++
+O sistema coloca o controlador online.
+
+
+
+. À medida que o controlador arranca, verifique os LEDs do controlador.
++
+Quando a comunicação com o outro controlador é restabelecida:
+
++
+** O LED âmbar de atenção permanece aceso.
+** Os LEDs do Host Link podem estar ligados, piscando ou desligados, dependendo da interface do host.
+
+
+. Quando o controlador voltar a ficar online:
++
+.. Confirme se o status é Ótimo.
+.. Confirme se o LED de atenção no controlador está apagado.
++
+Se o status não for Ótimo ou se algum dos LEDs de Atenção estiver aceso, confirme que todos os cabos estão conectados corretamente e que o controlador está instalado corretamente. Se necessário, remova e reinstale o controlador.
+
++
+
+NOTE: Caso não consiga resolver o problema, entre em contato https://mysupport.netapp.com/site/global/dashboard["Suporte à NetApp"^] antes de prosseguir com este procedimento. Se necessário, colete dados de suporte para o seu sistema de storage usando SANtricity System Manager.
+
+
+
+

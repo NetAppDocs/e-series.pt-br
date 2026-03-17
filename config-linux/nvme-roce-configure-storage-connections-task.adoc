@@ -28,7 +28,7 @@ Você pode acessar a configuração NVMe sobre RoCE na página *hardware* ou no 
 NOTE: As configurações e funções do NVMe em RoCE só aparecerão se a controladora do storage array incluir uma porta NVMe em RoCE.
 
 .Passos
-. Na interface do System Manager, selecione *hardware*.
+. No painel esquerdo da interface do System Manager, selecione *Hardware*.
 . Clique no controlador com a porta NVMe sobre RoCE que você deseja configurar.
 +
 É apresentado o menu de contexto do controlador.

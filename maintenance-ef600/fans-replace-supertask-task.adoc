@@ -163,7 +163,7 @@ Coloque o controlador on-line, colete dados de suporte e retome as operações.
 
 . Coloque o controlador online.
 +
-.. No System Manager, navegue até a página de hardware.
+.. No System Manager, navegue até a página *hardware*.
 .. Selecione *Mostrar parte posterior do controlador*.
 .. Selecione o controlador com o ventilador substituído.
 .. Selecione *Place on-line* na lista suspensa.

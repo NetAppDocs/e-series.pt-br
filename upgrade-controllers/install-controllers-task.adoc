@@ -58,6 +58,15 @@ Quando a trava se encaixa no lugar, a parte inferior da trava se encaixa em uma 
 
 == Passo 2: Instale o novo recipiente do controlador
 
+[role="tabbed-block"]
+====
+.Modelos de controladora EF280 e EF50
+--
+Para obter informações sobre a instalação dos novos controladores EF80 e EF50, consulte link:https://docs.netapp.com/us-en/e-series/maintenance-ef50-ef80/controller-replace-move-hardware.html#step-7-install-the-controller["EF50 e EF80 - Etapa 7: instale o controlador"^].
+
+--
+.Outros modelos de controladoras E-Series
+--
 Instale o novo recipiente do controlador na gaveta do controlador.
 
 .Passos
@@ -72,5 +81,7 @@ Se a configuração de cabeamento da unidade for a mesma que era com as controla
 
 
 
+--
+====
 .O que se segue?
 Se o recurso Segurança da unidade estiver ativado, vá para link:upgrade-unlock-drives-task.html["Desbloquear unidades"]. Caso contrário, vá link:complete-upgrade-controllers-task.html["Atualização completa da controladora"]para .

@@ -1,0 +1,55 @@
+= 
+:allow-uri-read: 
+
+
+.Sobre esta tarefa
+A ilustração a seguir mostra o funcionamento das alças do controlador (vistas do lado esquerdo de um controlador) durante a reinstalação do controlador e pode ser usada como referência para as etapas de reinstalação do controlador.
+
+image::../media/drw_g_and_t_handles_reinstall_ieops-1838.svg[Operação da alça do controlador para instalar um controlador]
+
+[cols="1,4"]
+|===
+
+
+ a| 
+image::../media/icon_round_1.png[Chamada número 1]
+ a| 
+Se você girou as alças do controlador para a posição vertical (próximas às abas) para afastá-las enquanto fazia a manutenção do controlador, gire-as para a posição horizontal.
+
+
+
+ a| 
+image::../media/icon_round_2.png[Chamada número 2]
+ a| 
+Empurre as alças para reinserir o controlador no chassi.
+
+
+
+ a| 
+image::../media/icon_round_3.png[Chamada número 3]
+ a| 
+Gire as alças para a posição vertical e trave no lugar com as travas de segurança.
+
+|===
+.Passos
+. Feche a tampa do controlador e gire o parafuso de aperto manual no sentido horário até ficar firme.
+. Insira o controlador no chassi:
++
+.. Alinhe a parte traseira do controlador com a abertura no chassi e pressione as alças com cuidado, mas firmeza, até que o controlador encontre o midplane e esteja totalmente encaixado.
++
+
+NOTE: Não utilize força excessiva ao deslizar o controlador no chassi; isso pode danificar os conectores.
+
+.. Gire as alças do controlador para cima e trave-as no lugar com as abas.
+
+
+. Reconecte o cabo de força à fonte de alimentação e prenda o cabo de força com o retentor do cabo de força.
++
+Assim que a energia for restabelecida na fonte de alimentação, o LED de status deverá ficar verde.
+
+. Reconecte todos os cabos ao controlador.
++
+
+NOTE: A reconexão dos cabos deve ser feita antes de colocar o controlador online. Isso é especialmente importante para as conexões dos cabos de espelhamento, pois garantem a redundância total do sistema e são usados para espelhamento de cache e envio de E/S.
+
+

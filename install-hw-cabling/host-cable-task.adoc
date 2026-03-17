@@ -14,6 +14,9 @@ summary: Você pode enviar um host diretamente a um controlador ou usar switches
 Você pode vincular um host diretamente a um controlador (topologia de conexão direta) ou usar switches (topologia de switch) para conectar um host a um controlador.
 
 
+NOTE: As seguintes informações não se aplicam a todos os sistemas de storage, para a fiação do host específica do seu sistema de storage, consulte link:../getting-started/getup-run-concept.html["Início rápido para e-Series"^] e clique no link para o seu sistema de storage específico.
+
+
 
 == Cabeamento para topologia de conexão direta
 

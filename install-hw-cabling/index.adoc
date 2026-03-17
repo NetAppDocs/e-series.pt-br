@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: cabling, cables, E-Series, eseries, E2800, E5700, EF300, EF600, DE212C, DE224C, DE460C 
 summary: Faça o cabeamento de um host diretamente para um controlador ou use switches. 
 ---
-= Cabeamento do seu sistema de storage (e-Series)
+= Cabeamento do seu sistema de storage - E-Series
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
@@ -22,6 +22,9 @@ As informações de cabeamento destinam-se a um instalador de hardware ou admini
 == Modelo de hardware aplicável
 
 As informações de cabeamento se aplicam aos seguintes modelos de hardware.
+
+
+NOTE: Se você não encontrar o seu rack de controladores (sistema de storage) listado abaixo, veja link:../getting-started/getup-run-concept.html["Início rápido para e-Series"^] e clique no link correspondente ao seu sistema de storage para acessar as informações de cabeamento.
 
 |===
 | *Prateleira do controlador* | *Prateleira de acionamento* 
@@ -51,7 +54,7 @@ DE460C
 
 == Informações adicionais sobre cabeamento
 
-Se você estiver fazendo cabeamento para a configuração a seguir, consulte https://mysupport.netapp.com/ecm/ecm_download_file/ECMLP2859057["Adição de gavetas de unidade IOM a uma gaveta de controladora E27XX, E56XX ou EF560 existente."^]
+Se você estiver instalando cabos para qualquer uma das seguintes configurações, consulte https://mysupport.netapp.com/ecm/ecm_download_file/ECMLP2859057["Adição de gavetas de unidade IOM a uma gaveta de controladora E27XX, E56XX ou EF560 existente."^]
 
 |===
 | *Prateleira do controlador* | *Prateleira de acionamento* 

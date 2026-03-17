@@ -1,0 +1,256 @@
+---
+permalink: maintenance-ef50-ef80/io-module-replace.html 
+sidebar: sidebar 
+keywords: ef50, ef80 replace io module, replace hic, replace host interface card 
+summary: Substitua um módulo de E/S com defeito em seu sistema de storage EF50 ou EF80 por um módulo de E/S do mesmo tipo para restaurar o sistema de storage ao seu estado operacional ideal. 
+---
+= Substitua um módulo de E/S - EF50 e EF80
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Substitua um módulo de E/S com defeito em seu sistema de storage EF50 ou EF80 por um módulo de E/S do mesmo tipo para restaurar o sistema de storage ao seu estado operacional ideal.
+
+.Sobre esta tarefa
+* Substitua um módulo de E/S preparando-o, colocando o controlador com defeito offline, substituindo o módulo de E/S com defeito, colocando o controlador online novamente e devolvendo a peça com defeito para NetApp.
+* O termo _módulo de E/S_ é usado em vez de placas de interface de host (HICs) neste procedimento.
+* Os LEDs indicadores de falha do módulo de E/S (para todos os quatro slots) não funcionam. Eles permanecem apagados o tempo todo; portanto, não podem ser usados para verificar uma condição de falha.
++
+Os LEDs indicadores de falha estão localizados nos controladores: os LEDs indicadores de falha dos slots 1 e 2 estão localizados à direita do slot 2. Os LEDs indicadores de falha dos slots 3 e 4 estão localizados à esquerda do slot 4.
+
+* O controlador com defeito não precisa ser removido do chassi porque os módulos de E/S são acessíveis com o controlador no lugar.
+* Você deve colocar o controlador com defeito offline antes de desconectar qualquer cabo do módulo de E/S.
+* Você pode ativar os LEDs de localização (azuis) do sistema de storage (na parte frontal do sistema de storage e em ambos os controladores) para auxiliar na localização física do sistema de storage afetado. Usando SANtricity System Manager, selecione *Hardware* > *Controladores e componentes*, selecione a guia *Compartimento do controlador* e, no menu de contexto, selecione *Ativar luz de localização*.
+
+
+
+
+== Etapa 1: prepare-se para substituir um módulo de E/S
+
+Prepare-se para substituir um módulo de E/S reunindo as ferramentas e equipamentos necessários e fazendo backup do banco de dados de configuração do sistema de storage.
+
+.Passos
+. Certifique-se de que tem o seguinte:
++
+** O módulo de E/S de substituição.
++
+Certifique-se de substituir o módulo de E/S com defeito por um módulo de E/S do mesmo tipo. Não é possível instalar um módulo de E/S de tipo diferente.
+
++
+Você deve ter o mesmo tipo e número de módulos de I/O em cada controlador do seu sistema de storage.
+
++
+
+CAUTION: *Possível perda de acesso aos dados* -- A presença de módulos de E/S incompatíveis ou não correspondentes faz com que os controladores entrem em bloqueio quando a alimentação é ligada.
+
+** Uma pulseira ESD ou você tomou outras precauções antiestáticas.
+** Uma superfície de trabalho plana e livre de estática.
+** Etiquetas para identificar cada cabo que está conectado ao módulo de E/S com defeito.
+** Uma estação de gerenciamento com um navegador que pode acessar SANtricity System Manager para o controlador com defeito.
++
+Para abrir a interface do System Manager, aponte o navegador para o nome de domínio ou endereço IP do controlador com falha.
+
+
+
+. Faça backup do banco de dados de configuração do sistema de storage usando SANtricity System Manager:
++
+Se ocorrer um problema ao remover um controlador, você pode usar o arquivo salvo para restaurar sua configuração. O sistema salva o estado atual do banco de dados de configuração RAID, que inclui todos os dados de grupos de volumes e pools de discos no controlador com defeito.
+
++
+.. Selecione *suporte* > *Centro de suporte* > *Diagnóstico*.
+.. Selecione *Collect Configuration Data*.
+.. Selecione *Collect*.
++
+O arquivo é salvo na pasta Downloads do seu navegador com o nome *configurationData-<arrayName>-<dateTime>.7z*.
+
+
+
+
+
+
+
+== Etapa 2: coloque o controlador offline
+
+Coloque o controlador com problema offline para que você possa realizar o restante deste procedimento com segurança.
+
+.Sobre esta tarefa
+Sempre que você colocar um controlador offline, é necessário aguardar pelo menos um minuto antes de colocá-lo online novamente. Esse período de espera permite que o sistema de storage atualize o status do controlador e garanta que todos os dados em cache sejam gravados nas unidades.
+
+.Passos
+. Se o controlador com defeito ainda não estiver offline, coloque-o offline usando SANtricity System Manager:
++
+.. Selecione *Hardware* > *Controladores e componentes* para exibir os controladores.
+.. Selecione o controlador que você deseja colocar offline para exibir seu menu de conteúdo.
+.. Selecione *Colocar offline* e, em seguida, confirme que deseja realizar a operação.
++
+
+NOTE: Se você estiver acessando SANtricity System Manager usando o controlador que está tentando colocar offline, uma mensagem "SANtricity System Manager Indisponível" será exibida. Selecione *Conectar a uma conexão de rede alternativa* para acessar automaticamente SANtricity System Manager usando o outro controlador.
+
+
+
+. Aguarde até que o Gerenciador de sistema do SANtricity atualize o status do controlador para offline.
++
+
+CAUTION: Não inicie quaisquer outras operações até que o estado tenha sido atualizado.
+
+. Confirme se é seguro remover o componente defeituoso, usando o Recovery Guru:
++
+.. Selecione *Recheck*.
+.. Confirme se o campo *OK para remover* na área Detalhes exibe *Yes*.
++
+
+CAUTION: Se o campo *OK para remover* não exibir *Sim*, não prossiga com a remoção do componente defeituoso. Em vez disso, solucione o problema usando o Recovery Guru.
+
+
+
+
+
+
+
+== Etapa 3: substituir o módulo de E/S
+
+Desconecte os cabos do módulo de E/S com defeito, substitua-o pelo módulo de E/S de substituição e, em seguida, conecte os cabos do módulo de E/S de substituição.
+
+.Passos
+. Se você ainda não está aterrado, aterre-se adequadamente.
+. Desconecte o cabeamento do módulo de E/S com defeito.
++
+Certifique-se de etiquetar os cabos para saber de onde vieram.
+
+. Remova o módulo de E/S com defeito do controlador:
++
+image::../media/drw_g_io_module_replace_ieops-1900.svg[Remover módulo de E/S]
+
++
+[cols="1,4"]
+|===
+
+
+ a| 
+image::../media/icon_round_1.png[Chamada número 1]
+ a| 
+Gire o parafuso de aperto manual do módulo de I/O no sentido anti-horário para soltar.
+
+
+
+ a| 
+image::../media/icon_round_2.png[Chamada número 2]
+ a| 
+Retire o módulo de E/S do controlador usando a aba da etiqueta da porta à esquerda e o parafuso de aperto manual.
+
+|===
+. Desembale o módulo de E/S de substituição e coloque-o em uma superfície plana e livre de estática perto do sistema de storage.
++
+Guarde os materiais da embalagem para usar quando devolver o módulo de I/O com defeito.
+
+. Instale o módulo de E/S de substituição no slot de destino:
++
+.. Alinhe o módulo de E/S com as bordas do slot.
+.. Empurre cuidadosamente o módulo de E/S até o fundo do slot, certificando-se de encaixar corretamente o módulo no conector.
++
+Você pode usar a aba à esquerda e o parafuso de aperto manual para empurrar o módulo de E/S.
+
+.. Gire o parafuso de aperto manual no sentido horário para apertar.
+
+
+. Conecte o módulo de I/O.
+
+
+
+
+== Passo 4: coloque o controlador online
+
+Coloque o controlador com defeito de volta online.
+
+.Passos
+. Coloque o controlador online usando SANtricity System Manager:
++
+.. Selecione *Hardware* > *Controladores e componentes* para exibir os controladores.
+.. Selecione o controlador que você deseja colocar online para exibir seu menu de contexto.
+.. Selecione *Place online* e, em seguida, confirme que deseja realizar a operação.
++
+O sistema coloca o controlador online.
+
+
+
+. À medida que o controlador arranca, verifique os LEDs do controlador.
++
+Quando a comunicação com o outro controlador é restabelecida:
+
++
+** O LED âmbar de atenção permanece aceso.
+** Os LEDs do Host Link podem estar ligados, piscando ou desligados, dependendo da interface do host.
+
+
+. Quando o controlador voltar a ficar online:
++
+.. Confirme se o status é Ótimo.
+.. Confirme se o LED de atenção no controlador está apagado.
++
+Se o status não for Ótimo ou se algum dos LEDs de Atenção estiver aceso, confirme que todos os cabos estão conectados corretamente e que o controlador está instalado corretamente. Se necessário, remova e reinstale o controlador.
+
++
+
+NOTE: Caso não consiga resolver o problema, entre em contato https://mysupport.netapp.com/site/global/dashboard["Suporte à NetApp"^] antes de prosseguir com este procedimento. Se necessário, colete dados de suporte para o seu sistema de storage usando SANtricity System Manager.
+
+
+
+
+
+
+
+== Etapa 5: conclua a substituição do módulo de E/S
+
+Utilizando SANtricity System Manager, certifique-se de que a versão mais recente do SANtricity OS esteja instalada, verifique se todos os volumes foram devolvidos aos seus controladores de propriedade e colete os dados de suporte para que você possa retomar as operações.
+
+.Passos
+. Certifique-se de que a versão mais recente do SANtricity OS esteja instalada no sistema de storage:
++
+.. Selecione *Support* > *Upgrade Center*
+.. Conforme necessário, instale a versão mais recente.
+
+
+. Verifique se todos os volumes foram devolvidos aos seus controladores de origem:
++
+[cols="1,2"]
+|===
+| Se... | Então... 
+
+
+ a| 
+Recovery Guru está presente e indica que os volumes não estão no caminho preferencial (não retornaram aos seus controladores proprietários)
+ a| 
+.. Redistribua os volumes para seus respectivos controladores, selecionando *Storage* > *Volumes* > *More* e, no menu suspenso, selecione *Redistribute volumes*.
+.. Verifique se todos os volumes foram redistribuídos para seus respectivos controladores, verificando se o Recovery Guru está presente e ainda indica que os volumes não estão no caminho preferencial.
+
+
+
+NOTE: Se os volumes ainda não forem devolvidos aos seus controladores proprietários, entre em contato https://mysupport.netapp.com/site/global/dashboard["Suporte à NetApp"].
+
+
+
+ a| 
+Recovery Guru não está presente (parece que todos os volumes foram devolvidos aos seus controladores originais)
+ a| 
+Verifique se todos os volumes foram devolvidos aos seus controladores proprietários selecionando *Armazenamento* > *Volumes* > *Mais* e, no menu suspenso, selecione *Alterar propriedade do volume* para visualizar os proprietários dos volumes.
+
+|===
+. Colete dados de suporte para seu sistema de storage:
++
+.. Selecione *suporte* > *Centro de suporte* > *Diagnóstico*.
+.. Selecione *coletar dados de suporte*.
+.. Selecione *Collect*.
++
+O arquivo é salvo na pasta Downloads do seu navegador com o nome *support-data.7z*.
+
+
+
+
+
+
+
+== Etapa 6: Devolva a peça defeituosa para NetApp
+
+Devolva a peça defeituosa para a NetApp, conforme descrito nas instruções de RMA que acompanham o kit. Consulte a  https://mysupport.netapp.com/site/info/rma["Devolução e substituições de peças"] página para obter mais informações.

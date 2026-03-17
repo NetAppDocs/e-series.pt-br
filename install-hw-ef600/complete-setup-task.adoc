@@ -137,6 +137,7 @@ A figura a seguir mostra um exemplo da localização da porta de gerenciamento d
 image:../media/ethernet_callout.png["EF600 portas de gerenciamento"]
 
 |===
+. Ligue o controlador B à rede.
 . Abra um navegador e use o endereço IP padrão (169.254.128.101) para estabelecer uma conexão com o controlador. O controlador envia de volta um certificado autoassinado. O navegador informa que a conexão não é segura.
 +
 
@@ -164,7 +165,6 @@ NOTE: Se perder a ligação ao controlador A, pode ligar um cabo ethernet ao con
 O assistente Configurar definições de rede será apresentado.
 
 . Use as configurações de rede fornecidas pelo administrador de rede no assistente *Configurar configurações de rede* para configurar as configurações de rede do controlador B e selecione *concluir*.
-. Ligue o controlador B à rede.
 . Valide as configurações de rede do controlador B inserindo o endereço IP configurado do controlador B em um navegador.
 +
 

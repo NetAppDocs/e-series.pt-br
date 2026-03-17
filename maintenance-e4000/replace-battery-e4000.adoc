@@ -142,7 +142,7 @@ O ficheiro é guardado na pasta Transferências do seu browser com o nome suppor
 ** A partir do SANtricity System Manager:
 +
 ... Selecione *hardware*.
-... Se o gráfico mostrar as unidades, selecione *Controller & Components* (controlador e componentes) para mostrar os controladores.
+... Se o gráfico mostrar as unidades, selecione *Controller & Components* para exibir os controladores
 ... Selecione o controlador que pretende colocar offline.
 ... No menu de contexto, selecione *colocar offline* e confirme que deseja executar a operação.
 +
@@ -341,8 +341,8 @@ NOTE: Se não conseguir resolver o problema, contacte o suporte técnico. Se nec
 
 . Verifique se todos os volumes foram devolvidos ao proprietário preferido.
 +
-.. Selecione *armazenamento de volumes*. Na página *todos os volumes*, verifique se os volumes são distribuídos aos seus proprietários preferidos. Selecione *mais
-.. Se todos os volumes forem propriedade do proprietário preferido, avance para o passo 5.
+.. Selecione *Storage › Volumes*. Na página *All Volumes*, verifique se os volumes estão distribuídos aos seus proprietários preferenciais. Selecione *More › Change ownership* para visualizar os proprietários dos volumes
+.. Se todos os volumes pertencerem ao proprietário preferencial, continue para a etapa 4.
 .. Se nenhum dos volumes for retornado, você deverá retornar manualmente os volumes. Vá para *mais
 .. Se apenas alguns dos volumes forem devolvidos aos seus proprietários preferidos após a distribuição automática ou manual, você deve verificar o Recovery Guru para problemas de conetividade do host.
 .. Se não houver Guru de recuperação presente ou se depois de seguir as etapas do guru de recuperação os volumes ainda não forem devolvidos aos seus proprietários preferidos, entre em Contato com o suporte.

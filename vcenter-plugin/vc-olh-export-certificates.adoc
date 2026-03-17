@@ -27,7 +27,7 @@ Para abrir o ficheiro exportado, tem de ter uma aplicação de visualizador de c
 ** *Trusted* -- mostra os certificados que o plug-in pode acessar para matrizes de armazenamento e outros servidores remotos, como um servidor LDAP. Os certificados podem ser emitidos a partir de uma autoridade de certificação (CA) ou podem ser autoassinados.
 
 
-. Selecione um certificado na página e, em seguida, clique nas elipses no final da linha.
+. Selecione um certificado na página e, em seguida, clique nas reticências no final da linha.
 . Clique em *Exportar* e salve o arquivo de certificado.
 . Abra o arquivo no aplicativo visualizador de certificados.
 

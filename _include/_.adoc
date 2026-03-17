@@ -1,0 +1,52 @@
+= 
+:allow-uri-read: 
+
+
+Substitua os módulos de E/S ou as tampas dos módulos de E/S em ambos os controladores.
+
+.Sobre esta tarefa
+Você começa com um controlador e, em seguida, repete os passos para o outro controlador.
+
+.Passos
+. Se você ainda não está aterrado, aterre-se adequadamente.
+. Em um dos controladores, remova o módulo de E/S ou o módulo de bloqueio de E/S do slot de destino.
++
+A ilustração a seguir mostra um módulo de blanking de E/S sendo removido.
+
++
+image::../media/drw_g_io_blanking_module_replace_ieops-1901.svg[Remover um módulo de bloqueio de E/S]
+
++
+[cols="1,4"]
+|===
+
+
+ a| 
+image:../media/icon_round_1.png["Chamada número 1"]
+ a| 
+No módulo de E/S ou no módulo de bloqueio de E/S, gire o parafuso de aperto manual no sentido anti-horário para soltar.
+
+
+
+ a| 
+image:../media/icon_round_2.png["Chamada número 2"]
+ a| 
+Retire o módulo de I/O ou o módulo de bloqueio de I/O do controlador usando a aba à esquerda e o parafuso de aperto manual.
+
+|===
+. Instale o novo módulo de E/S:
++
+.. Alinhe o módulo de E/S com as bordas da abertura do slot do controlador.
+.. Empurre cuidadosamente o módulo de E/S até o fundo do slot, certificando-se de encaixar corretamente o módulo no conector.
++
+Você pode usar a aba à esquerda e o parafuso de aperto manual para empurrar o módulo de E/S.
+
+.. Gire o parafuso de aperto manual no sentido horário para apertar.
+
+
+. Conecte o módulo de E/S à rede do host.
++
+Você pode usar a seção link:../install-hw-ef50-ef80/install-cable.html["Conecte o hardware"] do conteúdo de instalação e configuração do sistema para cabeamento de rede do host.
+
+. Repita estas etapas para adicionar um módulo de E/S ao outro controlador.
+

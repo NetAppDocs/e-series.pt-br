@@ -1,0 +1,76 @@
+---
+permalink: maintenance-ef50-ef80/controller-replace-online-controller.html 
+sidebar: sidebar 
+keywords: ef50, ef80, how to online the controller 
+summary: Após instalar o controlador de substituição para o seu sistema de storage EF50 ou EF80, confirme o endereço IP do controlador de substituição, coloque o controlador online e confirme que o status do sistema de storage está como Ótimo. 
+---
+= Substituição online do controlador - EF50 e EF80
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Após instalar o controlador de substituição para o seu sistema de storage EF50 ou EF80, confirme o endereço IP, coloque o controlador online e confirme que o status do sistema de storage está como Ótimo.
+
+.Passos
+. O próximo passo depende de o controlador com defeito ter usado DHCP para o endereço IP:
++
+[cols="1,2"]
+|===
+| Se... | Então... 
+
+
+ a| 
+O controlador com defeito não utilizou DHCP para o endereço IP
+ a| 
+O controlador de substituição adota o endereço IP do controlador com problema que você removeu.
+
+Vá para a próxima etapa.
+
+
+
+ a| 
+O controlador com defeito usou DHCP para o endereço IP
+ a| 
+Peça ao administrador de rede para associar o DNS/rede e o endereço IP do controlador com defeito ao endereço MAC do controlador substituto.
+
+|===
+. Coloque o controlador online usando SANtricity System Manager.
++
+.. Selecione *Hardware* > *Controladores e componentes* para exibir os controladores.
+.. Selecione o controlador que você substituiu para exibir o menu de conteúdo.
+.. Selecione *Place online*.
+
+
+. Assim que o controlador iniciar, verifique os LEDs do controlador para garantir que a comunicação com o outro controlador seja restabelecida:
++
+** O LED âmbar de atenção permanece aceso.
+** Os LEDs do Host Link podem estar ligados, piscando ou desligados, dependendo da interface do host.
+
+
+. Quando a controladora estiver novamente on-line, verifique se uma incompatibilidade de NVSRAM é relatada no Recovery Guru.
++
+Se for relatada uma incompatibilidade de NVSRAM, atualize a NVSRAM usando o seguinte comando SMcli. O  `-k`parâmetro é necessário se o array não for https seguro.
+
++
+[listing]
+----
+SMcli <controller A IP> <controller B IP> -u admin -p <password> -k -c "download storageArray NVSRAM file=\"C:\Users\testuser\Downloads\NVSRAM .dlp file>\" forceDownload=TRUE;"
+----
++
+
+NOTE: Se o comando SMcli não puder ser concluído, entre em contato https://www.netapp.com/company/contact-us/support/["Suporte à NetApp"^] ou faça login no https://mysupport.netapp.com["Site de suporte da NetApp"^] para criar um caso.
+
+. Confirme se o status do sistema de storage está como Ótimo e se os LEDs de atenção do controlador estão desligados.
++
+Se o status não for Ótimo ou se algum dos LEDs de Atenção estiver aceso, confirme que todos os cabos estão conectados corretamente e que o controlador está instalado corretamente. Se necessário, remova e reinstale o controlador.
+
++
+
+NOTE: Se você não conseguir resolver o problema, entre em contato https://www.netapp.com/company/contact-us/support/["Suporte à NetApp"^].
+
+
+
+.O que se segue?
+Após colocar o novo controlador online, link:controller-replace-complete-replacement.html["concluir a substituição do controlador"].

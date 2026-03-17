@@ -18,6 +18,6 @@ Você pode alterar o nome do storage array exibido na página Gerenciar do plug-
 
 .Passos
 . Na página *Gerenciar*, marque a caixa de seleção à esquerda do nome da matriz de armazenamento.
-. Selecione as elipses no canto direito da linha e selecione *Renomear storage array* no menu pop-up.
+. Selecione as reticências no canto direito da linha e, em seguida, selecione *Renomear array de storage* no menu pop-up.
 . Digite o novo nome e clique em *Salvar*.
 

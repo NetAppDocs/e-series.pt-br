@@ -66,6 +66,25 @@ Antes de atualizar para controladores E4000, desmarque o volume de acesso de tod
 
 
 
+* *Espelhamento de cabos EF50 e EF80*
++
+Os sistemas EF80 e EF50 utilizam conexões externas de alta velocidade de 200GbE/100GbE para permitir a comunicação entre os dois controladores. Cada controlador está equipado com uma placa de interface dedicada instalada no slot 4. Esta placa fornece duas portas e inclui dois cabos de 200GbE de 0,5m com o sistema.
+
++
+Utilize esses cabos para conectar as portas do controlador da seguinte forma:
+
++
+** Porta e4a no controlador A para porta e4a no controlador B
+** Porta e4b no controlador A para porta e4b no controlador B
++
+
+NOTE: É crucial conectar os cabos exatamente como descrito. Para mais informações, consulte  https://docs.netapp.com/us-en/e-series/install-hw-ef50-ef80/install-cable.html#step-1-cable-the-inter-controller-mirroring-connections["Conecte os cabos de espelhamento entre os controladores - EF50 e EF80"].
+
+
+
++
+Não utilize outras portas do host (Slot 1, Slot 2 ou Slot 3) para comunicação entre controladores, pois isso não é suportado. A fiação correta entre controladores é essencial para o funcionamento adequado dos arrays EF50 e EF80.
+
 
 
 
@@ -76,6 +95,60 @@ Revise os caminhos de atualização suportados para cada modelo de storage array
 
 [role="tabbed-block"]
 ====
+.Compatibilidade de upgrade dos controladores EF50 e EF80
+--
+[cols="h,d,d,d"]
+|===
+| Caminho de atualização | Bateria | Suporte a recursos | Gavetas SAS-3 
+
+
+| De EF300 para EF50 ou EF80  a| 
+Encomende uma nova bateria.
+ a| 
+* EF50 e EF80 suportam apenas configurações duplex
+* EF50 e EF80 suportam placas de interface de host Fibre Channel de 64Gb
+* O EF80 suporta placas de interface de host NVMe over RoCE e NVMe over Infiniband dual-200Gbe
+* EF50 e EF80 suportam até 24 unidades NVMe por controladora
+* EF50 e EF80 suportam configurações de unidades NVMe TLC e QLC
+* EF50 e EF80 não suportam portas de host da placa-mãe
+* EF50 e EF80 não suportam espelhamento síncrono ou assíncrono
+* EF50 e EF80 não suportam Remote Storage Volumes
+* EF50 e EF80 não suportam Thin Provisioned Volumes
+* O EF50 suporta até 2 Host Interface Cards e o EF80 suporta até 3 Host Interface Cards.
+
+
+
+NOTE: Ao atualizar do EF300 para o EF50 ou EF80, você pode configurar o protocolo do host por meio da interface de usuário do SANtricity System Manager. Para obter mais informações, consulte  https://docs.netapp.com/us-en/e-series/maintenance-ef50-ef80/io-module-change-protocol.html["Alterar o protocolo do módulo de E/S do host - EF50 e EF80"].
+ a| 
+* EF50 e EF80 não suportam expansão SAS.
+
+
+
+
+| De EF600 a EF80  a| 
+Encomende uma nova bateria.
+ a| 
+* EF80 suporta apenas configurações duplex
+* O EF80 suporta placas de interface de host Fibre Channel de 64 Gb
+* O EF80 suporta placas de interface de host NVMe over RoCE e NVMe over Infiniband dual-200Gbe
+* EF80 suporta até 24 unidades NVMe por controlador
+* EF50 e EF80 suportam configurações de unidades NVMe TLC e QLC
+* EF80 não suporta portas de host da placa-mãe
+* EF80 não suporta espelhamento síncrono ou assíncrono
+* EF80 não suporta volumes de armazenamento remoto
+* EF80 não suporta Thin Provisioned Volumes
+* EF80 suporta até 3 placas de interface de host.
++
+
+NOTE: Ao atualizar do EF600 para o EF80, você pode configurar o protocolo do host por meio da interface de usuário do SANtricity System Manager. Para mais informações, consulte  https://docs.netapp.com/us-en/e-series//maintenance-ef50-ef80/io-module-change-protocol.html["Alterar o protocolo do módulo de E/S do host - EF50 e EF80"].
+
+
+ a| 
+* EF80 não suporta expansão SAS.
+
+
+|===
+--
 .Compatibilidade de atualização do controlador E4000
 --
 [cols="h,d,d,d"]
@@ -191,7 +264,7 @@ Etapas adicionais são necessárias ao atualizar de E5500 ou E5600 para E2600, o
  a| 
 Os instantâneos legados não são suportados no E2700.
  a| 
-As controladoras 5400, E5500 e E5600 não devem ser colocadas nas gavetas SAS-3.
+As controladoras E5400, E5500 e E5600 não devem ser colocadas nas gavetas SAS-3.
 
 
 

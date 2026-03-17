@@ -58,7 +58,7 @@ NOTE: Se ocorrerem eventos críticos não resolvidos nas duas ou três semanas a
 
 . Se você tiver IOMs conetados ao seu hardware, execute as etapas a seguir. Caso contrário, vá para <<step2_install_drive_shelf,Etapa 2: Instale o compartimento de unidades e aplique energia.>>
 +
-.. Selecione *hardware*.
+.. Selecione o menu: Hardware [Controllers and components].
 .. Selecione o ícone *IOMs (ESMs)*.
 +
 image::../media/sam1130_ss_hardware_iom_icon.gif[Ícone de IOMs (ESMs)]
@@ -181,7 +181,7 @@ image::../media/hot_ef_0.png[Exemplo de cabeamento do compartimento de unidade]
 +
 image::../media/hot_ef_1.png[Exemplo de cabeamento do compartimento de unidade]
 
-. No Gerenciador do sistema SANtricity, clique em *hardware*.
+. No SANtricity System Manager, clique em menu:Hardware[Controllers and components].
 +
 
 NOTE: Neste ponto do procedimento, você tem apenas um caminho ativo para o compartimento da controladora.
@@ -227,7 +227,7 @@ Você conecta o compartimento de unidades ao controlador A, confirma o status IO
 +
 image::../media/hot_e4000_cabling_1.png[Cabeamento do compartimento de unidades]
 
-. No Gerenciador do sistema SANtricity, clique em *hardware*.
+. No SANtricity System Manager, clique em menu:Hardware[Controllers and components].
 +
 
 NOTE: Neste ponto do procedimento, você tem apenas um caminho ativo para o compartimento da controladora.
@@ -271,7 +271,7 @@ Você conclui o hot add verificando se há erros e confirmando que o compartimen
 .Passos
 . No Gerenciador do sistema SANtricity, clique em *Início*.
 . Se o link rotulado *Recover from problems* aparecer na parte superior central da página, clique no link e resolva quaisquer problemas indicados no Recovery Guru.
-. No Gerenciador do sistema SANtricity, clique em *hardware* e role para baixo, conforme necessário, para ver o compartimento de unidades recém-adicionado.
+. No SANtricity System Manager, clique em menu:Hardware[Controllers and components] e role para baixo, se necessário, para ver a gaveta de unidades recém-adicionada.
 . Para unidades que foram instaladas anteriormente em um sistema de storage diferente, adicione uma unidade de vez ao compartimento de unidades recém-instalado. Aguarde que cada unidade seja reconhecida antes de inserir a próxima unidade.
 +
 Quando uma unidade é reconhecida pelo sistema de armazenamento, a representação do slot da unidade na página *hardware* é exibida como um retângulo azul.

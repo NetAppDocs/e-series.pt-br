@@ -85,7 +85,7 @@ CAUTION: *Possível perda de dados* -- se você continuar este procedimento enqu
 +
 O LED verde Cache ative na parte de trás de cada controlador fica aceso quando os dados em cache precisam ser gravados nas unidades. Tem de esperar que este LED se desligue.
 
-. Na página inicial do Gerenciador do sistema do SANtricity, selecione *Exibir operações em andamento*. Aguarde que todas as operações sejam concluídas antes de continuar com o próximo passo.
+. No SANtricity System Manager, selecione menu:Storage[Operations in Progress]. Aguarde a conclusão de todas as operações antes de prosseguir para a próxima etapa.
 . Desligue o compartimento do controlador.
 +
 .. Identifique e, em seguida, desconete ambos os cabos de alimentação do compartimento do controlador.
@@ -265,7 +265,7 @@ Se o estado não for o ideal ou se algum dos LEDs de atenção estiver aceso, co
 
 NOTE: Se não conseguir resolver o problema, contacte o suporte técnico.
 
-. Clique em menu:hardware[suporte > Centro de Atualização] para garantir que a versão mais recente do SANtricity os esteja instalada.
+. Clique em menu:suporte[Centro de atualização] para garantir que a versão mais recente do SANtricity os esteja instalada.
 +
 Conforme necessário, instale a versão mais recente.
 

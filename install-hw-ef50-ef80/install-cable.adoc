@@ -1,0 +1,332 @@
+---
+permalink: install-hw-ef50-ef80/install-cable.html 
+sidebar: sidebar 
+keywords: ef50, ef80, cabling, cable, host cabling, direct-attached topology, fabric-attached topology 
+summary: 'Após instalar o hardware do seu sistema de storage EF50 ou EF80, conecte os cabos de espelhamento entre controladoras e as conexões de rede do host. (Você conectará as portas de gerenciamento posteriormente na seção Complete storage system setup.)' 
+---
+= Conecte o hardware - EF50 e EF80
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Após instalar o hardware do seu sistema de storage EF50 ou EF80, conecte os cabos de espelhamento entre controladoras e as conexões de rede do host. (Você conectará as portas de gerenciamento posteriormente na seção Complete storage system setup.)
+
+.Sobre esta tarefa
+* O termo _módulo de E/S_ é usado para se referir às placas de interface do host (HICs) neste procedimento.
+* Os diagramas de cabeamento possuem ícones de seta que indicam a orientação correta (para cima ou para baixo) da aba de puxar do conector do cabo ao inserir um conector em uma porta.
++
+Ao inserir o conector, você deve sentir um clique ao encaixá-lo no lugar; se não sentir o clique, remova-o, vire-o e tente novamente.
+
++
+image:../media/drw_cable_pull_tab_direction_ieops-1699.svg["Direção da aba de puxar o cabo"]
+
+
+
+
+
+== Passo 1: Conecte os cabos de espelhamento entre os controladores
+
+Conecte os controladores entre si por meio de cabos para habilitar o espelhamento entre controladores. As conexões de espelhamento entre controladores garantem total redundância do sistema e são usadas para espelhamento de cache e envio de E/S. O cabeamento é o mesmo para os sistemas de storage EF50 e EF80.
+
+
+NOTE: Independentemente da velocidade dos módulos de E/S de espelhamento entre controladores instalados no seu sistema de storage (100 GbE ou 200 GbE, conforme suportado pelo seu sistema de storage), utilize os cabos de 200 GbE incluídos. Se a velocidade dos módulos de E/S de espelhamento entre controladores for de 100 GbE, a conexão operará na velocidade inferior (100 GbE).
+
+.Passos
+. Conecte os controladores entre si:
++
+.. Conecte o cabo da porta e4a do controlador A à porta e4a do controlador B.
+.. Conecte o cabo da porta e4b do controlador A à porta e4b do controlador B.
++
+*Cabos Ethernet de 200 GbE*
+
++
+image::../media/oie_cable100_gbe_qsfp28.png[Cabo Ethernet de 100 GbE usado para espelhamento de conexões]
+
++
+image:../media/drw_ef50-ef80_mirroring_2p_100gbe_ieops-2659.svg["Cabos de conexão para espelhamento entre controladores EF50 e EF80"]
+
+
+
+
+
+
+
+== Passo 2: Conecte os cabos do host
+
+Conecte os cabos do host para o seu sistema de storage de acordo com sua topologia de rede: conexão direta ou conexão por malha.
+
+.Sobre esta tarefa
+* Dependendo do modelo do seu sistema de storage, o tipo de módulos de E/S do host instalados no sistema de storage pode ser Ethernet ou Fibre Channel (FC). Os exemplos de cabeamento neste procedimento mostram ambos os tipos de módulos de E/S do host conforme suportados pelos modelos de sistema de storage.
+* Os exemplos de cabeamento não mostram HBAs FC de 64 Gb de 4 portas nos hosts 1 e 2; no entanto, se você os tiver instalados, conecte todas as outras portas da mesma maneira que é mostrado para os HBAs de 2 portas.
+
+
+[role="tabbed-block"]
+====
+.Topologia de conexão direta
+--
+Os exemplos a seguir mostram a conexão de um sistema de storage aos hosts usando uma topologia de conexão direta.
+
+.EF50 com dois módulos de I/O FC de 4 portas 64Gb
+[%collapsible]
+=====
+.Sobre esta tarefa
+* O exemplo de cabeamento mostra os módulos de E/S do host nos slots 1 e 2. Este é o número máximo de módulos de E/S do host suportados pelo sistema de storage EF50. No entanto, apenas o módulo de E/S do host no slot 1 é obrigatório; o módulo de E/S do host no slot 2 é opcional.
++
+Se o seu sistema de storage tiver um módulo de E/S de host instalado, você pode ignorar a fiação para o módulo de E/S de host adicional e conectar os cabos apenas ao módulo de E/S de host instalado.
+
+* Um sistema de storage conectado diretamente possui dois caminhos separados para redundância: caminho A e caminho B.
++
+** A conectividade do Caminho A é mostrada com cabos azuis e portas azuis nos hosts e controladores. Ela conecta as portas HBA em cada host às portas a e c do controlador A.
+** A conectividade do Path B é mostrada com cabos vermelhos e portas vermelhas nos hosts e controladores. Ela conecta as portas HBA em cada host às portas a e c do controller B.
+
+
+* Embora o exemplo de cabeamento mostre as portas a e c do módulo de E/S conectadas aos hosts, você pode usar as portas a e b ou as portas c e d.
+
+
+.Passos
+. Conecte os hosts aos controladores:
++
+.. Cabo host 1 caminho A (azul) portas HBA para as portas a do controlador A (1a e 2a).
+.. Cabo host 1 caminho B (vermelho) portas HBA para as portas a do controlador B (1a e 2a).
+.. Cabo host 2 caminho A (azul) portas HBA para as portas c do controlador A (1c e 2c).
+.. Cabo host 2 caminho B (vermelho) portas HBA para as portas c do controlador B (1c e 2c).
++
+*Cabos FC de 64 Gb/s*
+
++
+image:../media/oie_cable_sfp_gbe_copper.png["Cabo fc de 64 Gb"]
+
++
+image:../media/drw_ef50_4p_64gb_fc_2hic_direct_ieops-2670.svg["Topologia EF50 direct-attached a hosts usando dois módulos de E/S FC de 4 portas e 64 Gb"]
+
+
+
+
+
+=====
+.EF80 com três módulos de I/O de 2 portas 200 GbE
+[%collapsible]
+=====
+.Sobre esta tarefa
+* O exemplo de cabeamento mostra os módulos de E/S do host nos slots 1, 2 e 3. Este é o número máximo de módulos de E/S do host suportados para o sistema de storage EF80. No entanto, apenas o módulo de E/S do host no slot 1 é obrigatório; os módulos de E/S do host nos slots 2 e 3 são opcionais.
++
+Se o seu sistema de storage tiver menos módulos de E/S de host instalados, você pode ignorar a fiação para os módulos de E/S de host adicionais e conectar os cabos apenas aos módulos de E/S de host instalados.
+
+* Um sistema de storage conectado diretamente possui dois caminhos separados para redundância: caminho A e caminho B.
++
+** A conectividade do Caminho A é mostrada com cabos azuis e portas azuis nos hosts e controladores. Ela conecta as portas HBA em cada host às portas a e b do controlador A.
+** A conectividade do Caminho B é mostrada com cabos vermelhos e portas vermelhas nos hosts e controladores. Ela conecta as portas HBA em cada host às portas a e b do controlador B.
+
+
+
+
+.Passos
+. Conecte os hosts aos controladores:
++
+.. Cabo host 1 caminho A (azul) portas HBA para as portas a do controlador A (e1a, e2a e e3a).
+.. Cabo host 1 caminho B (vermelho) portas HBA para as portas a do controlador B (e1a, e2a e e3a).
+.. Cabo host 2 caminho A (azul) portas HBA para as portas b do controlador A (e1b, e2b e e3b).
+.. Conecte o cabo host 2 caminho B (vermelho) portas HBA às portas b do controlador B (e1b, e2b e e3b).
++
+*Cabos de 200 GbE*
+
++
+image::../media/oie_cable_sfp_gbe_copper.png[Cabo 200 GbE]
+
++
+image:../media/drw_ef80_2p_200gbe_ib_3hic_direct_ieops-2680.svg["Topologia EF80 de conexão direta a hosts usando três módulos de E/S IB de 2 portas 200GbE"]
+
+
+
+
+
+=====
+.EF80 com três módulos de I/O FC de 64Gb e 4 portas
+[%collapsible]
+=====
+.Sobre esta tarefa
+* O exemplo de cabeamento mostra os módulos de E/S do host nos slots 1, 2 e 3. Este é o número máximo de módulos de E/S do host suportados para o sistema de storage EF80. No entanto, apenas o módulo de E/S do host no slot 1 é obrigatório; os módulos de E/S do host nos slots 2 e 3 são opcionais.
++
+Se o seu sistema de storage tiver menos módulos de E/S de host instalados, você pode ignorar a fiação para os módulos de E/S de host adicionais e conectar os cabos apenas aos módulos de E/S de host instalados.
+
+* Um sistema de storage conectado diretamente possui dois caminhos separados para redundância: caminho A e caminho B.
++
+** A conectividade do Caminho A é mostrada com cabos azuis e portas azuis nos hosts e controladores. Ela conecta as portas HBA em cada host às portas a e c do controlador A.
+** A conectividade do Path B é mostrada com cabos vermelhos e portas vermelhas nos hosts e controladores. Ela conecta as portas HBA em cada host às portas a e c do controller B.
+
+
+* Embora o exemplo de cabeamento mostre as portas a e c do módulo de E/S conectadas aos hosts, você pode usar as portas a e b ou as portas c e d.
+
+
+.Passos
+. Conecte os hosts aos controladores:
++
+.. Cabo host 1 caminho A (azul) portas HBA para as portas a do controlador A (1a, 2a e 3a).
+.. Cabo host 1 caminho B (vermelho) portas HBA para as portas a do controlador B (1a, 2a e 3a).
+.. Cabo host 2 caminho A (azul) portas HBA para as portas c do controlador A (1c, 2c e 3c).
+.. Conecte o cabo host 2 caminho B (vermelho) portas HBA às portas c do controlador B (1c, 2c e 3c).
++
+*Cabos FC de 64 Gb/s*
+
++
+image:../media/oie_cable_sfp_gbe_copper.png["Cabo fc de 64 Gb"]
+
++
+image:../media/drw_ef80_4p_64gb_fc_3hic_direct_ieops-2674.svg["Topologia EF80 direct-attached a hosts usando três módulos de io fc de 4 portas 64gb."]
+
+
+
+
+
+=====
+--
+.Topologia conectada à estrutura
+--
+Os exemplos a seguir mostram a conexão de um sistema de storage aos hosts usando uma topologia fabric-attached.
+
+.EF50 com dois módulos de I/O FC de 4 portas 64Gb
+[%collapsible]
+=====
+.Sobre esta tarefa
+* O exemplo de cabeamento mostra os módulos de E/S do host nos slots 1 e 2. Este é o número máximo de módulos de E/S do host suportados pelo sistema de storage EF50. No entanto, apenas o módulo de E/S do host no slot 1 é obrigatório; o módulo de E/S do host no slot 2 é opcional.
++
+Se o seu sistema de storage tiver um módulo de E/S de host instalado, você pode ignorar a fiação para o módulo de E/S de host adicional e conectar os cabos apenas ao módulo de E/S de host instalado.
+
+* Um sistema de storage conectado à fabric possui dois caminhos de switch separados para redundância: switch 1 path e switch 2 path.
++
+** A conectividade do caminho do switch 1 é mostrada com cabos azuis e portas azuis nos hosts e controladores. Ela conecta as portas HBA em cada host através do switch 1 às portas a e c do controlador A e do controlador B.
+** A conectividade do caminho do switch 2 é mostrada com cabos vermelhos e portas vermelhas nos hosts e controladores. Ela conecta as portas HBA em cada host através do switch 2 às portas b e d do controlador A e do controlador B.
+
+
+
+
+.Passos
+. Conecte os hosts aos switches.
++
+Você pode usar qualquer porta nos switches.
+
++
+.. Cabo host 1 e host 2 switch 1 path (azul) portas HBA para o switch 1.
+.. Cabo host 1 e host 2 switch 2 caminho (vermelho) portas HBA para o switch 2.
+
+
+. Conecte os switches aos controladores:
++
+.. Conecte o cabo do switch 1 (azul) às portas a e c do controlador A (1a, 2a, 1c e 2c).
+.. Conecte o cabo do switch 1 (azul) às portas a e c do controlador B (1a, 2a, 1c e 2c).
+.. Conecte o cabo do switch 2 (vermelho) às portas b e d do controlador A (1b, 2b, 1d e 2d).
+.. Conecte o cabo switch 2 (vermelho) às portas b e d do controlador B (1b, 2b, 1d e 2d).
++
+*Cabos FC de 64 Gb/s*
+
++
+image:../media/oie_cable_sfp_gbe_copper.png["Cabo fc de 64 Gb"]
+
++
+image:../media/drw_ef50_4p_64gb_fc_2hic_fabric_ieops-2673.svg["Topologia fabric-attached EF50 usando dois módulos de IO FC de 4 portas 64 Gb"]
+
+
+
+
+
+=====
+.EF80 com três módulos de I/O de 2 portas 200 GbE
+[%collapsible]
+=====
+.Sobre esta tarefa
+* O exemplo de cabeamento mostra os módulos de E/S do host nos slots 1, 2 e 3. Este é o número máximo de módulos de E/S do host suportados para o sistema de storage EF80. No entanto, apenas o módulo de E/S do host no slot 1 é obrigatório; os módulos de E/S do host nos slots 2 e 3 são opcionais.
++
+Se o seu sistema de storage tiver menos módulos de E/S de host instalados, você pode ignorar a fiação para os módulos de E/S de host adicionais e conectar os cabos apenas aos módulos de E/S de host instalados.
+
+* O exemplo de cabeamento mostra três HBAs em cada host. Se seus hosts tiverem menos de três HBAs, você pode ignorar o cabeamento para as HBAs adicionais e conectar apenas às HBAs instaladas.
+* Um sistema de storage conectado à fabric possui dois caminhos de switch separados para redundância: switch 1 path e switch 2 path.
++
+** A conectividade do caminho do switch 1 é mostrada com cabos azuis e portas azuis nos hosts e controladores. Ela conecta as portas HBA em cada host através do switch 1 às portas a do controlador A e do controlador B.
+** A conectividade do caminho do switch 2 é mostrada com cabos vermelhos e portas vermelhas nos hosts e controladores. Ela conecta as portas HBA em cada host através do switch 2 às portas b do controlador A e do controlador B.
+
+
+
+
+.Passos
+. Conecte os hosts aos switches:
++
+Você pode usar qualquer porta nos switches.
+
++
+.. Cabo host 1 e host 2 switch 1 path (azul) portas HBA para o switch 1.
+.. Cabo host 1 e host 2 switch 2 caminho (vermelho) portas HBA para o switch 2.
+
+
+. Conecte os switches aos controladores:
++
+.. Conecte o cabo do switch 1 (azul) às portas a do controlador A (e1a, e2a e e3a).
+.. Conecte o cabo do switch 1 (azul) às portas a do controlador B (e1a, e2a e e3a).
+.. Conecte o cabo do switch 2 (vermelho) às portas b do controlador A (e1b, e2b e e3b).
+.. Conecte o cabo do switch 2 (vermelho) às portas b do controlador B (e1b, e2b e e3b).
++
+*Cabos de 200 GbE*
+
++
+image::../media/oie_cable_sfp_gbe_copper.png[Cabo 200 GbE]
+
++
+image:../media/drw_ef80_2p_200gbe_ib_3hic_fabric_ieops-2679.svg["Topologia fabric-attached EF80 usando três módulos de io de 2 portas 200gbe"]
+
+
+
+
+
+=====
+.EF80 com três módulos de I/O FC de 64Gb e 4 portas
+[%collapsible]
+=====
+.Sobre esta tarefa
+* O exemplo de cabeamento mostra os módulos de E/S do host nos slots 1, 2 e 3. Este é o número máximo de módulos de E/S do host suportados para o sistema de storage EF80. No entanto, apenas o módulo de E/S do host no slot 1 é obrigatório; os módulos de E/S do host nos slots 2 e 3 são opcionais.
++
+Se o seu sistema de storage tiver menos módulos de E/S de host instalados, você pode ignorar a fiação para os módulos de E/S de host adicionais e conectar os cabos apenas aos módulos de E/S de host instalados.
+
+* O exemplo de cabeamento mostra três HBAs em cada host. Se seus hosts tiverem menos de três HBAs, você pode ignorar o cabeamento para as HBAs adicionais e conectar apenas às HBAs instaladas.
+* Um sistema de storage conectado à fabric possui dois caminhos de switch separados para redundância: switch 1 path e switch 2 path.
++
+** A conectividade do caminho do switch 1 é mostrada com cabos azuis e portas azuis nos hosts e controladores. Ela conecta as portas HBA em cada host através do switch 1 às portas a e c do controlador A e do controlador B.
+** A conectividade do caminho do switch 2 é mostrada com cabos vermelhos e portas vermelhas nos hosts e controladores. Ela conecta as portas HBA em cada host através do switch 2 às portas b e d do controlador A e do controlador B.
+
+
+
+
+.Passos
+. Conecte os hosts aos switches:
++
+Você pode usar qualquer porta nos switches.
+
++
+.. Cabo host 1 e host 2 switch 1 path (azul) portas HBA para o switch 1.
+.. Cabo host 1 e host 2 switch 2 caminho (vermelho) portas HBA para o switch 2.
+
+
+. Conecte os switches aos controladores:
++
+.. Conecte o cabo switch 1 (azul) às portas a e c do controlador A (1a, 2a, 3a, 1c, 2c e 3c).
+.. Conecte o cabo switch 1 (azul) às portas a e c do controlador B (1a, 2a, 3a, 1c, 2c e 3c).
+.. Conecte o cabo do switch 2 (vermelho) às portas b e d do controlador A (1b, 2b, 3b, 1d, 2d e 3d).
+.. Conecte o cabo de switch 2 (vermelho) às portas b e d do controlador B (1b, 2b, 3b, 1d, 2d e 3d).
++
+*Cabos FC de 64 Gb/s*
+
++
+image:../media/oie_cable_sfp_gbe_copper.png["Cabo fc de 64 Gb"]
+
++
+image:../media/drw_ef80_4p_64gb_fc_3hic_fabric_ieops-2675.svg["Topologia fabric-attached EF80 usando três módulos de IO FC de 4 portas e 64 Gb"]
+
+
+
+
+
+=====
+--
+====
+.O que se segue?
+Após conectar o espelhamento entre controladoras e as conexões do host para o seu sistema de storage, link:install-power-hardware.html["Ligue o seu sistema de storage"].

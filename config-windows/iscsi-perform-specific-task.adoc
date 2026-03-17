@@ -23,7 +23,7 @@ Você configura os switches de acordo com as recomendações do fornecedor para 
 .Antes de começar
 Certifique-se de que tem o seguinte:
 
-* Duas redes separadas para alta disponibilidade. Certifique-se de isolar o tráfego iSCSI para segmentos de rede separados usando VLANs ou duas redes separadas.
+* Duas redes separadas para alta disponibilidade. Certifique-se de isolar o seu tráfego iSCSI em segmentos de rede separados de outros tipos de tráfego, utilizando VLANs ou duas redes separadas.
 * Controle de fluxo de hardware de envio e recebimento ativado *fim a fim*.
 * Controle de fluxo de prioridade desativado.
 * Se apropriado, habilitado quadros jumbo.
@@ -72,7 +72,7 @@ Você usa a GUI do Gerenciador de sistema do SANtricity para configurar a rede i
 
 
 .Sobre esta tarefa
-Esta tarefa descreve como aceder à configuração da porta iSCSI a partir da página hardware. Também pode aceder à configuração a partir do menu:sistema[Definições > Configurar portas iSCSI].
+Esta tarefa descreve como acessar a configuração da porta iSCSI na página Hardware. Você também pode acessar a configuração pelo menu:Settings[Sistema > Configurar portas iSCSI].
 
 .Passos
 . No seu navegador, insira o seguinte URL: `+https://<DomainNameOrIPAddress>+`
@@ -90,11 +90,7 @@ Quando você abre o System Manager e não há pools, grupos de volumes, cargas d
 +
 Você usará o assistente mais tarde para concluir tarefas de configuração adicionais.
 
-. Selecione *hardware*.
-. Se o gráfico mostrar as unidades, clique em *Mostrar parte traseira da prateleira*.
-+
-O gráfico muda para mostrar os controladores em vez das unidades.
-
+. No painel esquerdo, selecione menu:Hardware[Controllers and components].
 . Clique no controlador com as portas iSCSI que pretende configurar.
 +
 É apresentado o menu de contexto do controlador.

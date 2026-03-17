@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: cabling, cables, ethernet cabling, ethernet cable, out of band, direct topology, fabric topology, E-Series, eseries, E2800, E5700, EF300, EF600, DE212C, DE224C, DE460C 
 summary: Conete seu sistema de storage a uma rede Ethernet para gerenciamento fora da banda. 
 ---
-= Cabeamento Ethernet para uma estação de gerenciamento (e-Series)
+= Cabeamento Ethernet para estação de gerenciamento - E-Series
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
@@ -13,9 +13,13 @@ summary: Conete seu sistema de storage a uma rede Ethernet para gerenciamento fo
 [role="lead"]
 Você pode conetar seu sistema de storage a uma rede Ethernet para gerenciamento de storage array fora da banda. Você deve usar cabos Ethernet para todas as conexões de gerenciamento de storage array.
 
+[NOTE]
+====
+Alguns sistemas de storage possuem apenas uma porta de gerenciamento Ethernet fora de banda em cada controlador.
 
-NOTE: O EF300, EF600 e E4000 têm apenas uma porta de gerenciamento ethernet fora da banda.
+Para obter instruções de cabeamento específicas para o seu sistema de storage, consulte link:../getting-started/getup-run-concept.html["Início rápido para e-Series"^] e clique no link correspondente ao seu sistema de storage.
 
+====
 
 
 == Topologia direta

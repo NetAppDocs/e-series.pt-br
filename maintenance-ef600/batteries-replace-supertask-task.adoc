@@ -122,7 +122,7 @@ Se este LED verde estiver ligado, o controlador ainda está a utilizar a bateria
 . Localize o separador "Press" (premir) na parte lateral do controlador.
 . Desengate a bateria premindo a patilha e apertando a caixa da bateria.
 +
-image::../media/batt_3.png["Prima a patilha para desbloquear a bateria]
+image::../media/batt_3.png[Pressione tab para destravar a bateria]
 
 . Apertar cuidadosamente a cablagem da bateria do alojamento da ficha. Puxe para cima, desligando a bateria da placa.
 +

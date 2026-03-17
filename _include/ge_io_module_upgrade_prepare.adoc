@@ -1,0 +1,42 @@
+= 
+:allow-uri-read: 
+
+
+.Passos
+. Agende uma janela de manutenção de inatividade para este procedimento. Você não poderá acessar dados no sistema de storage até que tenha concluído este procedimento com sucesso. Como ambos os controladores devem ter a mesma configuração de módulo de E/S quando estiverem ligados, a energia deve estar desligada ao atualizar os módulos de E/S.
+. Certifique-se de que tem o seguinte:
++
+** Os novos módulos de E/S para os quais você está atualizando.
++
+Certifique-se de que os módulos de E/S para os quais você está atualizando sejam compatíveis com seu sistema de storage, que você tenha o mesmo tipo e número de módulos de E/S para cada controlador e que você entenda a prioridade do slot (o novo módulo de E/S deve ser instalado no mesmo slot em cada controlador).
+
++
+
+CAUTION: *Possível perda de acesso aos dados* -- A presença de módulos de E/S incompatíveis ou não correspondentes faz com que os controladores entrem em bloqueio quando a alimentação é ligada.
+
++
+Caso necessário, você pode confirmar os módulos de E/S suportados e a prioridade de slots para o seu sistema de storage em https://hwu.netapp.com["NetApp Hardware Universe"^].
+
+** Cabos para conectar os novos módulos de I/O à sua rede.
+** Uma pulseira ESD ou você tomou outras precauções antiestáticas.
+** Uma superfície de trabalho plana e livre de estática.
+** Uma estação de gerenciamento com um navegador que pode acessar SANtricity System Manager para os controladores.
++
+Para abrir a interface do System Manager, aponte o navegador para o nome de domínio ou endereço IP do controlador de destino.
+
+
+
+. Faça backup do banco de dados de configuração do sistema de storage usando SANtricity System Manager:
++
+Se ocorrer um problema ao remover um controlador, você pode usar o arquivo salvo para restaurar sua configuração. O sistema salva o estado atual do banco de dados de configuração RAID, que inclui todos os dados de grupos de volumes e pools de discos no controlador com defeito.
+
++
+.. Selecione *suporte* > *Centro de suporte* > *Diagnóstico*.
+.. Selecione *Collect Configuration Data*.
+.. Selecione *Collect*.
++
+O arquivo é salvo na pasta Downloads do seu navegador com o nome *configurationData-<arrayName>-<dateTime>.7z*.
+
+
+
+

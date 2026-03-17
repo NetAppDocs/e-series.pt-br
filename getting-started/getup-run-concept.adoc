@@ -1,7 +1,7 @@
 ---
 permalink: getting-started/getup-run-concept.html 
 sidebar: sidebar 
-keywords: E-Series, eseries, E2800, E5700, EF300, EF600, E4000 
+keywords: E-Series, eseries, E2800, E5700, EF300, EF600, E4000, EF50, EF80 
 summary: Para começar a trabalhar com sistemas e-Series, você instala componentes de hardware, configura sistemas host e configura o storage. 
 ---
 = Início rápido para e-Series
@@ -15,9 +15,10 @@ Para começar a trabalhar com sistemas e-Series, você instala componentes de ha
 
 .image:https://raw.githubusercontent.com/NetAppDocs/common/main/media/number-1.png["Um"] Instale o hardware
 [role="quick-margin-para"]
-Para instalar o hardware e-Series, acesse as instruções de instalação e configuração do storage array e do tipo de compartimento:
+Para instalar o E-Series hardware, acesse as instruções de instalação e configuração para seu array de storage e tipo de shelf (se aplicável):
 
 [role="quick-margin-list"]
+* link:../install-hw-ef50-ef80/install-workflow.html["Sistema de storage EF50 ou EF80"^]
 * link:../install-hw-ef600/index.html["Séries EF600 ou EF300 com compartimento de 24 unidades"^]
 * https://library.netapp.com/ecm/ecm_download_file/ECMLP2842063["Série E2800/EF280 ou E5700/EF570 com compartimentos de 12 ou 24 unidades"^]
 * https://library.netapp.com/ecm/ecm_download_file/ECMLP2842061["Séries E2800 ou E5700 com compartimento de 60 unidades"^]
@@ -69,7 +70,8 @@ Para configurar o armazenamento, você pode acessar a interface baseada na Web, 
 Selecione a interface que deseja usar:
 
 [role="quick-margin-list"]
-* https://docs.netapp.com/us-en/e-series-santricity/system-manager/index.html["Ajuda online do Gestor de sistema do SANtricity para 11,9x"^]
+* https://docs.netapp.com/us-en/e-series-santricity/system-manager/index.html["Ajuda online do SANtricity System Manager para 12.0x"^]
+* https://docs.netapp.com/us-en/e-series-santricity-119/system-manager/index.html["Ajuda online do Gestor de sistema do SANtricity para 11,9x"^]
 * https://docs.netapp.com/us-en/e-series-santricity-118/system-manager/index.html["Ajuda online do Gestor de sistema do SANtricity para 11,8x"^]
 * https://docs.netapp.com/us-en/e-series-santricity-117/system-manager/index.html["Ajuda online do Gestor de sistema do SANtricity para 11,7x"^]
 * https://docs.netapp.com/us-en/e-series-santricity-116/index.html["Ajuda online do Gestor de sistema do SANtricity para 11,6x"^]

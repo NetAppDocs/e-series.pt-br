@@ -33,6 +33,7 @@ Essa tarefa não se aplica se você estiver convertendo um novo storage array qu
 Você deve configurar os switches usados para transportar tráfego iSCSI de acordo com as recomendações do fornecedor para iSCSI. Essas recomendações podem incluir diretivas de configuração, bem como atualizações de código.
 
 . A partir do Gestor do sistema SANtricity, selecione menu:hardware[Configurar portas iSCSI].
+. Clique no controlador desejado e selecione *Configurar portas iSCSI*.
 . Selecione as definições da porta.
 +
 Pode configurar a sua rede iSCSI de várias formas. Consulte o administrador da rede para obter dicas sobre como selecionar a melhor configuração para o seu ambiente.
@@ -49,9 +50,6 @@ NOTE: Se você precisar de instruções para adicionar hosts ou clusters de host
 A caixa de diálogo Configurações do host é exibida.
 
 .. Clique na guia *Host Ports*.
-+
-image::../media/sam1130_ss_host_settings_dialog_ports_tab_maint-e5700.gif[Caixa de diálogo Configurações do host]
-
 .. Clique em *Adicionar* e use a caixa de diálogo *Adicionar porta de host* para associar um novo identificador de porta de host ao host.
 +
 O comprimento do nome do identificador da porta do host é determinado pela tecnologia da interface do host. Os nomes do identificador da porta do host FC devem ter 16 carateres. Os nomes do identificador da porta do host iSCSI têm um máximo de 223 carateres. A porta deve ser única. Não é permitido um número de porta que já tenha sido configurado.
@@ -95,9 +93,6 @@ O zoneamento dos switches permite que os hosts se conetem ao armazenamento e lim
 A caixa de diálogo Configurações do host é exibida.
 
 .. Clique na guia *Host Ports*.
-+
-image::../media/sam1130_ss_host_settings_dialog_ports_tab_maint-e5700.gif[Caixa de diálogo Configurações do host]
-
 .. Clique em *Adicionar* e use a caixa de diálogo *Adicionar porta de host* para associar um novo identificador de porta de host ao host.
 +
 O comprimento do nome do identificador da porta do host é determinado pela tecnologia da interface do host. Os nomes do identificador da porta do host FC devem ter 16 carateres. Os nomes do identificador da porta do host iSCSI têm um máximo de 223 carateres. A porta deve ser única. Não é permitido um número de porta que já tenha sido configurado.

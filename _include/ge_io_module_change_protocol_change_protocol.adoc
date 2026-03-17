@@ -1,0 +1,23 @@
+= 
+:allow-uri-read: 
+
+
+.Passos
+. Selecione *Configurações* > *Sistema*.
+. Na seção *Configurações adicionais*, selecione *Alterar protocolo de E/S do host* para abrir essa página.
+. No campo *Host I/O Protocol*, selecione o menu suspenso e escolha o protocolo que deseja usar.
++
+A lista de protocolos é baseada nos módulos de E/S do host atualmente instalados.
+
+. Digite *CHANGE* no campo aberto para confirmar sua alteração.
+. Selecione o botão *Change*.
+. Aguarde até que os controladores concluam seu ciclo de reinicialização.
++
+Isso pode levar cerca de cinco minutos.
+
+. Quando os controladores voltarem a ficar online, confirme se o status deles é Ótimo usando SANtricity System Manager.
+. Recrie as definições de host.
++
+Para obter instruções, consulte o https://docs.netapp.com/us-en/e-series-santricity/sm-storage/create-host.html["Crie um host manualmente no SANtricity System Manager"^] procedimento.
+
+

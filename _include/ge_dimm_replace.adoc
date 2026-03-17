@@ -1,0 +1,69 @@
+= 
+:allow-uri-read: 
+
+
+.Passos
+. Se você ainda não está aterrado, aterre-se adequadamente.
+. Localize o DIMM defeituoso.
++
+
+NOTE: Consulte o  https://hwu.netapp.com["Netapp Hardware Universe"] ou o mapa FRU na tampa do controlador para obter a localização exata dos módulos DIMM.
+
+. Remova o DIMM defeituoso:
++
+image::../media/drw_g_dimm_ieops-1873.svg[Substituir DIMM]
+
++
+[cols="1,4"]
+|===
+
+
+ a| 
+image::../media/icon_round_1.png[Chamada número 1]
+ a| 
+Numeração e posições dos slots DIMM.
+
+
+NOTE: Dependendo do modelo do seu sistema de storage, você terá dois ou quatro DIMMs.
+
+
+
+ a| 
+image::../media/icon_round_2.png[Chamada número 2]
+ a| 
+** Observe a orientação do DIMM no soquete para que você possa inserir o DIMM de substituição usando a mesma orientação.
+** Ejetar o módulo DIMM defeituoso pressionando lentamente as duas abas de ejeção em ambas as extremidades do slot DIMM.
+
+
+
+IMPORTANT: Segure cuidadosamente o DIMM pelos cantos ou bordas para evitar pressão nos componentes da placa de circuito do DIMM.
+
+
+
+ a| 
+image::../media/icon_round_3.png[Chamada número 3]
+ a| 
+Levante o DIMM e retire-o do slot.
+
+As abas ejetoras permanecem na posição aberta.
+
+|===
+. Desembale o DIMM de substituição e coloque-o sobre uma superfície plana e antiestática perto do sistema de storage.
++
+Guarde o material da embalagem para usar quando devolver o DIMM defeituoso.
+
+. Instale o DIMM de substituição:
++
+.. Certifique-se de que as travas de ejeção do DIMM no conector estejam na posição aberta.
+.. Segure o DIMM pelos cantos e insira-o firmemente no slot.
++
+O entalhe na parte inferior do DIMM, entre os pinos, deve estar alinhado com a aba no slot.
+
++
+Quando inserido corretamente, o DIMM entra facilmente, mas fica bem justo no slot. Reinsira o DIMM se achar que não está inserido corretamente. Nunca force um DIMM no slot.
+
+.. Verifique visualmente o DIMM para garantir que esteja alinhado corretamente e totalmente inserido no slot.
+.. Pressione com cuidado, mas com firmeza, a borda superior do DIMM até que as abas de ejeção se encaixem nos entalhes em ambas as extremidades do DIMM.
+
+
+

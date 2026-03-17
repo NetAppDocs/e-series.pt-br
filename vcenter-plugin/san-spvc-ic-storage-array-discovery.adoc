@@ -65,7 +65,7 @@ Se você quiser importar certificados assinados pela CA, cancele o assistente de
 
 Você deve resolver quaisquer problemas de certificado antes de prosseguir com o processo de descoberta.
 
-. Se a caixa de diálogo resolver certificados autoassinados for aberta, revise as informações exibidas para os certificados não confiáveis. Para obter mais informações, você também pode clicar nas elipses na extremidade da tabela e selecionar *Exibir* no menu pop-up.
+. Se a caixa de diálogo Resolve Self-Signed Certificates for aberta, revise as informações exibidas para os certificados não confiáveis. Para mais informações, você também pode clicar nas reticências no final da tabela e selecionar *View* no menu pop-up.
 . Execute um dos seguintes procedimentos:
 +
 ** Se você confiar nas conexões com os storages de armazenamento descobertos, clique em *Next* e, em seguida, clique em *Yes* para confirmar e continuar para a próxima caixa de diálogo no assistente. Os certificados autoassinados são marcados como confiáveis e os storages de armazenamento serão adicionados ao plugin.

@@ -1,0 +1,163 @@
+---
+permalink: install-hw-ef50-ef80/install-complete-setup.html 
+sidebar: sidebar 
+keywords:  
+summary: Após ligar seu sistema de storage EF50 ou EF80, você conclui a configuração do sistema conectando e configurando a porta de gerenciamento em cada controlador para gerenciamento fora de banda do sistema de storage, configurando seu sistema de storage e, em seguida, verificando se o protocolo do módulo de E/S do host está correto. 
+---
+= Configuração completa do sistema de storage - EF50 e EF80
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Após ligar seu sistema de storage EF50 ou EF80, você conclui a configuração do sistema conectando e configurando a porta de gerenciamento em cada controlador para gerenciamento fora de banda do sistema de storage, configurando seu sistema de storage e, em seguida, verificando se o protocolo do módulo de E/S do host está correto.
+
+
+
+== Passo 1: Conecte e configure as portas de gerenciamento
+
+Conecte a porta de gerenciamento em cada controlador e, em seguida, configure as portas usando um servidor DHCP ou um endereço IP estático.
+
+[role="tabbed-block"]
+====
+.Opção 1: Servidor DHCP
+--
+Conecte o cabo e, em seguida, configure as portas de gerenciamento usando um servidor DHCP.
+
+.Antes de começar
+* Obtenha os endereços IP atribuídos para se conetar ao sistema de armazenamento a partir do administrador da rede.
+* Anote o endereço MAC na lateral de cada controlador. Você usa o endereço MAC para identificar qual endereço IP está atribuído a cada controlador.
+* Configure o servidor DHCP para associar um endereço IP, uma máscara de sub-rede e um endereço de gateway como uma concessão permanente para cada controlador.
+
+
+.Passos
+. Usando cabos Ethernet, conecte a porta de gerenciamento de cada controlador à sua rede.
++
+*1000BASE-T Cabos RJ-45*
+
++
+image::../media/oie_cable_rj45.png[Cabos RJ-45]
+
++
+image:../media/drw_ef50-ef80_wrench_to_network_ieops-2613.svg["Cabeamento da porta de gerenciamento do controlador ef50 e ef80 para a rede"]
+
+. Abra um navegador e conete-se ao sistema de armazenamento usando um dos endereços IP do controlador fornecidos pelo administrador da rede.
+
+
+--
+.Opção 2: Endereço IP estático
+--
+Conecte o cabo e, em seguida, configure manualmente as portas de gerenciamento inserindo o endereço IP e a máscara de sub-rede.
+
+.Antes de começar
+* Obtenha o endereço IP dos controladores, a máscara de sub-rede, o endereço de gateway e as informações do servidor DNS e NTP do administrador da rede.
+* Certifique-se de que o computador portátil que está a utilizar não está a receber a configuração de rede a partir de um servidor DHCP.
+
+
+.Passos
+. Usando um cabo Ethernet, conete a porta de gerenciamento do controlador A à porta Ethernet de um laptop.
++
+*1000BASE-T Cabos RJ-45*
+
++
+image::../media/oie_cable_rj45.png[Cabos RJ-45]
+
++
+image:../media/drw_ef50-ef80_wrench_to_laptop_ieops-2663.svg["Cabeamento da porta de gerenciamento do controlador ef50 and ef80"]
+
+. Abra um navegador e use o endereço IP padrão (169.254.128.101) para estabelecer uma conexão com o controlador.
++
+O controlador envia de volta um certificado autoassinado. O navegador informa que a conexão não é segura.
+
+. Siga as instruções do navegador para continuar e iniciar o Gerenciador de sistema do SANtricity.
++
+Se não conseguir estabelecer uma ligação, verifique se não está a receber a configuração de rede a partir de um servidor DHCP.
+
+. Defina a palavra-passe do sistema de armazenamento para iniciar sessão.
+. Use as configurações de rede fornecidas pelo administrador de rede no assistente *Configurar configurações de rede* para configurar as configurações de rede do controlador A e selecione *concluir*.
++
+
+NOTE: Como você redefine o endereço IP, o System Manager perde a conexão com o controlador.
+
+. Desconecte o cabo Ethernet do seu laptop (deixando-o conectado ao controlador A) e conecte-o à sua rede.
+. Abra um navegador em um computador conetado à rede e insira o endereço IP recém-configurado do controlador A.
++
+
+NOTE: Se você perder a conexão com o controlador A, poderá conectar um cabo Ethernet ao controlador B para restabelecer a conexão com o controlador A através do controlador B (169.254.128.102).
+
+. Faça login usando a senha que você definiu anteriormente. O assistente *Configure Network Settings* será exibido.
+. Use as configurações de rede fornecidas pelo administrador de rede no assistente *Configurar configurações de rede* para configurar as configurações de rede do controlador B e selecione *concluir*.
+. Ligue o controlador B à rede.
++
+Ambas as portas de gerenciamento do controlador agora estão conectadas à rede:
+
++
+image:../media/drw_ef50-ef80_wrench_to_network_ieops-2613.svg["Cabeamento da porta de gerenciamento do controlador ef50 e ef80 para a rede"]
+
+. Valide as configurações de rede do controlador B inserindo o endereço IP recém-configurado do controlador B em um navegador.
++
+
+NOTE: Se perder a ligação ao controlador B, pode utilizar a ligação previamente validada ao controlador A para restabelecer a ligação ao controlador B através do controlador A.
+
+
+
+--
+====
+
+
+== Etapa 2: configurar seu sistema de storage
+
+Use o SANtricity System Manager para configurar e gerenciar seu sistema de storage.
+
+.Antes de começar
+* Você deve ter conectado e configurado suas portas de gerenciamento à rede.
+* Verifique e registre sua senha e os endereços IP configurados.
+
+
+.Passos
+. Acesse SANtricity System Manager usando os endereços IP configurados.
+. Use SANtricity System Manager para gerenciar seu sistema de storage.
++
+Você pode consultar a ajuda online incluída com o SANtricity System Manager.
+
+
+
+
+
+== Etapa 3: verifique se o protocolo do módulo de E/S do host está correto
+
+Seu sistema de storage é fornecido com um protocolo padrão nos módulos de E/S do host. Se o protocolo padrão não for o protocolo que você deseja, você pode alterá-lo.
+
+.Passos
+. Verifique o protocolo padrão usado nos módulos de E/S do host em seu sistema de storage, usando SANtricity System Manager.
++
+.. Selecione *Configurações* > *Sistema*.
+.. Na seção *Configurações adicionais*, clique em *Alterar protocolo de E/S do host* para abrir essa página.
+.. Veja o protocolo de E/S padrão do host usado nos módulos de E/S do host em seu sistema de storage exibido no campo *Host I/O Protocol*.
+
+
+. O próximo passo depende de o protocolo padrão ser o protocolo que você deseja ou não:
++
+[cols="1,2"]
+|===
+| Se... | Então... 
+
+
+ a| 
+O protocolo padrão é o protocolo que você deseja
+ a| 
+Nenhuma ação é necessária.
+
+
+
+ a| 
+O protocolo padrão não é o protocolo que você deseja
+ a| 
+Você precisa alterá-lo usando o link:../maintenance-ef50-ef80/io-module-change-protocol.html["Alterar o protocolo do host"^] procedimento.
+
+
+NOTE: Alterar o protocolo da porta do host envolve preparar-se para a mudança de protocolo, interromper as operações de E/S do host, alterar o protocolo e então configurar o host para usar o novo protocolo.
+
+|===
+

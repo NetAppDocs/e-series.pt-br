@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: cabling, cables, power cable, power cabling, power supply cabling, E-Series, eseries, E2800, E5700, EF300, EF600, DE212C, DE224C, DE460C 
 summary: Ligue as fontes de alimentação de cada componente a circuitos de alimentação separados. 
 ---
-= Cabeamento de alimentação do seu sistema de storage (e-Series)
+= Cabeamento elétrico do seu sistema de storage - E-Series
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
@@ -24,9 +24,9 @@ A fonte de alimentação do seu sistema de storage deve ser capaz de acomodar os
 .Passo
 . Ligue um cabo de alimentação a cada uma das unidades de fonte de alimentação do seu sistema de armazenamento.
 . Conete os dois cabos de alimentação de cada compartimento a diferentes unidades de distribuição de energia (PDUs) no gabinete ou no rack.
-. Ligue ambos os interrutores de alimentação.
+. Ligue ambas as fontes de alimentação.
 +
 
-NOTE: Os sistemas de armazenamento EF300 e EF600 não têm interrutores de alimentação. Eles ligarão assim que os cabos forem conetados.
+NOTE: Dependendo do seu sistema de storage, as fontes de alimentação têm interruptores de energia ou não têm interruptores de energia e você deve conectar os cabos de alimentação para ligá-las.
 
 

@@ -1,0 +1,219 @@
+---
+permalink: maintenance-ef50-ef80/drive-replace.html 
+sidebar: sidebar 
+keywords: ef50, ef80, replace the drives 
+summary: Substitua uma unidade no seu sistema de storage EF50 ou EF80 quando uma unidade falhar ou precisar de uma atualização. 
+---
+= Substituir uma unidade - EF50 e EF80
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Substitua a unidade com falha enquanto o seu sistema de storage EF50 ou EF80 estiver recebendo operações de E/S para garantir o acesso contínuo aos dados e o desempenho do sistema.
+
+.Sobre esta tarefa
+* Substitua uma unidade preparando-a, substituindo-a, concluindo a substituição e, em seguida, devolvendo a peça com falha para a NetApp.
+* O Recovery Guru do SANtricity System Manager monitora as unidades no sistema de storage e pode notificá-lo sobre uma falha iminente de unidade ou uma falha real de unidade. Quando uma unidade com falha, seu LED de Atenção (âmbar) acende.
+
+
+
+
+== Passo 1: prepare-se para substituir a unidade
+
+Prepare-se para a substituição da unidade certificando-se de que a unidade com falha, confirmando que possui uma unidade de substituição compatível, garantindo que você tenha acesso ao SANtricity System Manager, tomando precauções contra descarga eletrostática e localizando fisicamente a unidade com falha.
+
+.Passos
+. Se o Guru de recuperação no Gerenciador de sistema do SANtricity o notificou de uma _falha iminente da unidade_, mas a unidade ainda não falhou, siga as instruções no Guru de recuperação para falhar a unidade.
+. Certifique-se de que você tenha uma unidade de substituição adequada para a configuração do seu sistema de storage.
++
+Se necessário, você pode usar SANtricity System Manager para confirmar:
+
++
+.. Selecione *Hardware* > *Drives*.
+.. Selecione a unidade com falha na imagem para exibir o menu de contexto e, em seguida, selecione *View settings*.
+.. Confirme se a unidade de substituição tem uma capacidade igual ou superior à unidade que está a substituir e que tem os recursos esperados.
++
+Por exemplo, se você estiver substituindo uma unidade com capacidade de segurança, certifique-se de que a unidade de substituição também seja compatível com segurança.
+
+
+
+. Certifique-se de ter uma estação de gerenciamento com um navegador que possa acessar SANtricity System Manager para qualquer um dos controladores.
++
+Para abrir a interface do System Manager, aponte o navegador para um dos nome de domínio ou endereço IP do controlador.
+
+. Prevenir a descarga eletrostática (ESD) durante o manuseio e a instalação de uma unidade:
++
+** Certifique-se de que você tenha uma pulseira de descarga eletrostática (ESD).
++
+Use sempre uma pulseira antiestática aterrada em uma superfície sem pintura no chassi do seu sistema de storage. Se não tiver uma pulseira antiestática, toque em uma superfície sem pintura no chassi do seu sistema de storage antes de manusear a unidade.
+
+** Mantenha a unidade no saco ESD até que esteja pronto para instalá-la.
+** Abra o saco ESD à mão ou corte a parte superior com uma tesoura. Não insira uma ferramenta de metal ou faca no saco ESD.
+** Certifique-se de ter uma superfície de trabalho plana e livre de estática.
+** Guarde o saco ESD e quaisquer materiais de embalagem para devolver a unidade com falha ou utilize embalagens aprovadas ao enviar uma unidade.
+** Evite campos magnéticos. Mantenha as unidades afastadas de dispositivos magnéticos.
++
+Os campos magnéticos podem destruir todos os dados na unidade e causar danos irreparáveis aos circuitos da unidade.
+
+
+
+. Evite danos físicos durante o manuseio e instalação de uma unidade:
++
+
+CAUTION: Os discos rígidos são frágeis; o manuseio inadequado é uma das principais causas de falha de unidade.
+
++
+** Utilize sempre as duas mãos ao remover, instalar ou transportar uma unidade.
+** Nunca force uma unidade em um compartimento de unidade. Sempre use uma pressão suave e firme para engatar completamente a trava da unidade.
+** Coloque as unidades em superfícies almofadadas e nunca empilhe as unidades umas sobre as outras.
+** Não bata as transmissões contra outras superfícies.
+
+
+. Você pode ativar os LEDs de localização (azuis) do sistema de storage (na parte frontal do sistema de storage e em ambos os controladores) para auxiliar na localização física do sistema de storage afetado. Usando SANtricity System Manager, selecione *Hardware* > *Controladores e componentes*, selecione a guia *Compartimento do controlador* e, no menu de contexto, selecione *Ativar luz de localização*.
+. Se necessário, você pode localizar fisicamente a unidade com falha em seu sistema de storage fazendo com que o LED de Atenção (âmbar) pisque. Usando SANtricity System Manager, selecione *Hardware* > *Drives*, selecione a unidade com falha no gráfico para exibir o menu de contexto e, em seguida, selecione *Turn on locator light*.
++
+
+NOTE: É necessário remover o painel da parte frontal do sistema de storage para visualizar os LEDs da unidade.
+
+
+
+
+
+== Etapa 2: substitua a unidade
+
+Substitua a unidade com falha por uma nova.
+
+
+NOTE: Você deve instalar a unidade de substituição o mais rápido possível após remover a unidade com falha.
+
+.Passos
+. Caso ainda não tenha sido removido, remova o painel da parte frontal do sistema de storage.
+. Remova a unidade com falha:
++
+
+NOTE: Se remover acidentalmente uma unidade ativa, aguarde pelo menos 60 segundos e, em seguida, reinstale-a. Para o procedimento de recuperação, consulte o software de gerenciamento de armazenamento.
+
++
+image::../media/drw_nvme_drive_replace_ieops-1904.svg[Remover unidade NVMe]
+
++
+[cols="1,4"]
+|===
+
+
+ a| 
+image::../media/icon_round_1.png[Chamada número 1]
+ a| 
+Pressione o botão de liberação preto na face da unidade para abrir a alavanca da came.
+
+
+
+ a| 
+image::../media/icon_round_2.png[Chamada número 2]
+ a| 
+Gire a alavanca da came para baixo para desengatar a unidade do midplane.
+
+
+
+ a| 
+image::../media/icon_round_3.png[Chamada número 3]
+ a| 
+.. Deslize parcialmente a unidade para fora do compartimento usando a alavanca de came.
+.. Aguarde 60 segundos para a unidade reduzir a rotação.
+.. Usando as duas mãos, remova completamente a unidade do compartimento da unidade.
+
+
+|===
+. Coloque a unidade sobre uma superfície acolchoada antiestática, longe de campos magnéticos.
+. Aguarde 60 segundos para que o software do sistema reconheça que a unidade foi removida.
+. Desembale a unidade de substituição e coloque-a sobre uma superfície plana e livre de estática próxima ao sistema de storage.
++
+Guarde os materiais da embalagem para usar quando devolver a unidade com falha.
+
+. Insira a unidade de substituição:
++
+.. Abra o manípulo do excêntrico.
+.. Usando as duas mãos, insira a unidade de substituição no compartimento de unidade aberto, empurre firmemente até que a unidade pare.
+.. Feche a alavanca da came para que a unidade fique totalmente encaixada no plano intermediário e a alavanca da came se encaixe no lugar com um clique.
++
+Certifique-se de fechar a alavanca da came lentamente para que ela se alinhe corretamente com a face da unidade.
+
++
+O LED verde na unidade acende quando a unidade está inserida corretamente.
+
+
+
+
+
+
+
+== Etapa 3: conclua a substituição da unidade
+
+Confirme se a unidade de substituição está funcionando corretamente e certifique-se de que a reconstrução da unidade foi iniciada.
+
+.Passos
+. Confirme se a unidade de substituição está funcionando corretamente verificando o comportamento do LED e, se não estiver, tome as medidas corretivas apropriadas.
++
+
+NOTE: Ao inserir uma unidade pela primeira vez, o LED de atenção pode acender. No entanto, o LED deve apagar-se em um minuto se a unidade de substituição estiver funcionando corretamente.
+
++
+[cols="1,2"]
+|===
+| Se o comportamento do LED da unidade de substituição mostrar... | Então... 
+
+
+ a| 
+O LED de alimentação está aceso ou piscando e o LED de atenção está apagado
+ a| 
+A unidade de substituição está funcionando corretamente.
+
+Vá para a próxima etapa.
+
+
+
+ a| 
+O LED de alimentação está desligado
+ a| 
+A unidade pode não estar instalada corretamente.
+
+.. Remova a unidade, aguarde 60 segundos e, em seguida, reinstale-a.
+.. Se o Guru de recuperação no Gerenciador de sistema do SANtricity ainda exibir um problema, selecione *Reverificar* para garantir que o problema foi resolvido.
+
+
+
+
+ a| 
+LED de atenção está aceso
+ a| 
+A nova unidade pode estar com defeito.
+
+.. Substitua a nova unidade por outra nova unidade.
+.. Se o Guru de recuperação no Gerenciador de sistema do SANtricity ainda exibir um problema, selecione *Reverificar* para garantir que o problema foi resolvido.
+
+
+|===
+. Se o Recovery Guru no SANtricity System Manager indicar que a reconstrução da unidade não foi iniciada automaticamente, inicie a reconstrução manualmente, quando instruído a fazê-lo pelo NetApp Support ou pelo Recovery Guru e use as seguintes etapas:
++
+
+NOTE: Dependendo da sua configuração, o controlador pode reconstruir automaticamente os dados para a nova unidade. Se o sistema de storage usar hot spare, o controlador pode precisar realizar uma reconstrução completa no hot spare antes de copiar os dados para a unidade de substituição. Esse processo de reconstrução aumenta o tempo necessário para concluir este procedimento.
+
++
+.. Selecione *Hardware* > *Drive*.
+.. Selecione a unidade de substituição na imagem para exibir o menu de contexto e, em seguida, selecione *Reconstruct*.
+.. Confirme se pretende efetuar esta operação.
++
+Quando a reconstrução da unidade for concluída, o grupo de volume está no estado ideal.
+
+
+
+. Reinstale o painel.
+
+
+
+
+== Passo 4: Devolva a peça defeituosa para NetApp
+
+Devolva a peça defeituosa para a NetApp, conforme descrito nas instruções de RMA que acompanham o kit. Consulte a  https://mysupport.netapp.com/site/info/rma["Devolução e substituições de peças"] página para obter mais informações.

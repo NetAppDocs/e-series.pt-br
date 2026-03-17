@@ -25,7 +25,7 @@ Use o Gerenciador de sistema SANtricity para determinar que tipo de transcetores
 .Passos
 . No Gerenciador do sistema SANtricity, selecione *suporte*.
 . Selecione o mosaico *Centro de suporte*.
-. Na guia recursos de suporte, localize e selecione o link *Storage Array Profile*.
+. Na página de Recursos de Suporte, localize e selecione o link *Storage Array Profile*.
 . Digite *SFP* na caixa de texto e clique em *Find*.
 . Para cada SFP listado no Perfil da matriz de armazenamento, localize a entrada para *taxa(s) de dados suportada(s)*.
 +

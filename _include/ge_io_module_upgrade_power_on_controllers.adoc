@@ -1,0 +1,29 @@
+= 
+:allow-uri-read: 
+
+
+.Passos
+. Conecte o cabo de alimentação em ambos os controladores.
++
+Os controladores começam a reinicializar.
+
+. Verifique os LEDs nos controladores para garantir que a comunicação entre os controladores foi restabelecida:
++
+** O LED de atenção permanece aceso.
+** Os LEDs do Host Link podem estar ligados, piscando ou desligados, dependendo da interface do host.
+
+
+. Quando os controladores estiverem online:
++
+.. Confirme se o status deles é Ótimo.
+.. Confirme se o LED de atenção em cada controlador está apagado.
++
+Se o status não for Ótimo ou se algum dos LEDs de atenção estiver aceso, confirme que todos os cabos estão corretamente encaixados.
+
++
+
+NOTE: Se não conseguir resolver o problema, entre em contato com  https://www.netapp.com/company/contact-us/support/["Suporte à NetApp"^]. Se necessário, colete dados de suporte para o seu sistema de storage usando SANtricity System Manager.
+
+
+
+

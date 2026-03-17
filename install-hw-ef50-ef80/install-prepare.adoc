@@ -1,0 +1,129 @@
+---
+permalink: install-hw-ef50-ef80/install-prepare.html 
+sidebar: sidebar 
+keywords:  
+summary: Prepare-se para instalar seu sistema de storage EF50 ou EF80 organizando o local, entendendo as precauções de içamento para o seu sistema de storage, desembalando as caixas e comparando o conteúdo com o packing slip, e registrando o sistema de storage para acessar os benefícios de suporte. 
+---
+= Prepare-se para a instalação - EF50 e EF80
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Prepare-se para instalar seu sistema de storage EF50 ou EF80 organizando o local, entendendo as precauções de içamento para o seu sistema de storage, desembalando as caixas e comparando o conteúdo com o packing slip, e registrando o sistema de storage para acessar os benefícios de suporte.
+
+
+
+== Etapa 1: preparar o local
+
+Certifique-se de que o local e o armário ou rack que você planeja usar atendam às especificações do seu sistema de storage.
+
+.Passos
+. Use  https://hwu.netapp.com["NetApp Hardware Universe"^] para confirmar se o seu local atende aos requisitos ambientais e elétricos para o seu sistema de storage.
+. Certifique-se de ter espaço adequado em gabinete ou rack para o seu sistema de storage e quaisquer switches.
++
+Caso necessário, consulte  https://hwu.netapp.com["NetApp Hardware Universe"^] para as dimensões exatas do seu sistema de storage.
+
++
+** 2U para um sistema de storage
+** 1U para a maioria dos switches
+
+
+. Instale todos os switches de rede necessários.
+. Certifique-se de que possui um navegador compatível para o software de gerenciamento:
++
+** Google Chrome (versão 89 e posterior)
+** Microsoft Edge (versão 90 e posterior)
+** Mozilla Firefox (versão 80 e posterior)
+** Safari (versão 14 e posterior)
+
+
+. Obtenha os seguintes equipamentos e ferramentas necessários para a instalação:
++
+** Pulseira de descarga eletrostática (ESD)
+** Chave de fenda Philips nº 2
+** Lanterna
+
+
+
+
+
+
+== Passo 2: compreenda as precauções de levantamento
+
+Antes de desembalar as caixas e, posteriormente, ao instalar seu sistema de storage, você deve entender o peso do seu sistema de storage para que possa tomar as precauções necessárias ao levantá-lo e movê-lo.
+
+Um sistema de storage EF50 ou EF80 pode pesar até 61,5 lbs (27,9 kg). Para levantar o sistema de storage, utilize duas pessoas ou um elevador hidráulico.
+
+image::../media/drw_g_lifting_weight_ieops-1831.svg[AFF A20 A30 A50 e C30 e C60 ícone de advertência de peso]
+
+
+
+== Passo 3: desembale as caixas
+
+Depois de se certificar de que o local e o armário ou rack que pretende utilizar cumprem as especificações do seu sistema de storage e de compreender as precauções de levantamento, desembale todas as caixas e compare o conteúdo com os itens na nota de entrega.
+
+.Passos
+. Abra cuidadosamente todas as caixas e disponha o conteúdo de forma organizada.
+. Compare o conteúdo que você desembalou com a nota de embalagem.
++
+Você pode obter o comprovante de envio escaneando o código QR na lateral da caixa de remessa.
+
++
+
+NOTE: Se houver alguma discrepância, anote-a para providências futuras.
+
++
+Os seguintes itens são alguns dos conteúdos que você pode ver nas caixas.
+
++
+Caso necessário, veja  https://hwu.netapp.com/["NetApp Hardware Universe"^] outros cabos compatíveis e identifique seu uso.
+
++
+[cols="9,9,5"]
+|===
+
+
+| *Hardware* | *Cabos* |  
+
+
+ a| 
+** Sistema de storage com unidades
+** Interrutores
+** Hardware para montagem em rack com instruções
+** Painel
+
+ a| 
+** Cabos Ethernet de espelhamento entre controladores
+** Cabos Ethernet de gerenciamento (cabos RJ-45)
+** Cabos de rede
+** Cabos de alimentação
+
+|  
+|===
+
+
+
+
+== Etapa 4: registre seu sistema de storage
+
+Depois de garantir que seu site atende às especificações do seu sistema de storage e de verificar se você possui todas as peças que encomendou, você deve registrar seu sistema de storage.
+
+. Crie uma conta e Registre seu hardware em http://mysupport.netapp.com/["Suporte à NetApp"^].
++
+O processo de registro requer o Número de Série (SN) de cada controlador. Você pode encontrar o número de série nos seguintes locais:
+
++
+** Em cada controlador
+** Na nota de embalagem
+** No seu e-mail de confirmação
++
+image::../media/drw_ef50-ef80_sn_label_ieops-2689.svg[Exemplo de etiqueta com número de série]
+
+
+
+
+
+.O que se segue?
+Após preparar para instalar seu sistema de storage, link:install-hardware.html["instale o hardware"].

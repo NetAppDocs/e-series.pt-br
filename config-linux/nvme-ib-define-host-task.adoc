@@ -24,7 +24,7 @@ Mantenha estas diretrizes em mente quando você define um host:
 
 
 .Passos
-. Selecione menu:armazenamento[hosts].
+. No painel esquerdo, selecione menu:Storage[Hosts].
 . Clique em menu:criar[Host].
 +
 A caixa de diálogo criar host é exibida.

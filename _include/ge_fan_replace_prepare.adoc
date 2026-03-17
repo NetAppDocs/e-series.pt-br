@@ -1,0 +1,32 @@
+= 
+:allow-uri-read: 
+
+
+.Passos
+. Verifique se o Recovery Guru indica que não é seguro remover a ventoinha defeituosa. Caso isso aconteça, entre em contato https://mysupport.netapp.com/site/global/dashboard["Suporte à NetApp"] antes de prosseguir com este procedimento.
+. Certifique-se de que tem o seguinte:
++
+** Uma ventoinha de substituição.
+** Uma pulseira ESD ou você tomou outras precauções antiestáticas.
+** Uma superfície de trabalho plana e livre de estática.
+** Etiquetas para identificar cada cabo que está conectado ao controlador com defeito.
+** Uma estação de gerenciamento com um navegador que pode acessar SANtricity System Manager para o controlador com defeito.
++
+Para abrir a interface do System Manager, aponte o navegador para o nome de domínio ou endereço IP do controlador com falha.
+
+
+
+. Faça backup do banco de dados de configuração do sistema de storage usando SANtricity System Manager:
++
+Se ocorrer um problema ao remover um controlador, você pode usar o arquivo salvo para restaurar sua configuração. O sistema salva o estado atual do banco de dados de configuração RAID, que inclui todos os dados de grupos de volumes e pools de discos no controlador com defeito.
+
++
+.. Selecione *suporte* > *Centro de suporte* > *Diagnóstico*.
+.. Selecione *Collect Configuration Data*.
+.. Selecione *Collect*.
++
+O arquivo é salvo na pasta Downloads do seu navegador com o nome *configurationData-<arrayName>-<dateTime>.7z*.
+
+
+
+

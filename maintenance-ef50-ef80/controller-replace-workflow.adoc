@@ -1,0 +1,38 @@
+---
+permalink: maintenance-ef50-ef80/controller-replace-workflow.html 
+sidebar: sidebar 
+keywords: ef50, ef80, replace the controller workflow 
+summary: Você pode substituir um controlador com defeito em seu sistema de storage EF50 ou EF80 atendendo aos requisitos do sistema de storage, preparando o sistema, colocando o controlador com defeito offline, substituindo o controlador, colocando o novo controlador online e concluindo o processo de substituição. 
+---
+= Fluxo de trabalho de substituição do controlador - EF50 e EF80
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Você pode substituir um controlador com defeito em seu sistema de storage EF50 ou EF80 atendendo aos requisitos do sistema de storage, preparando o sistema, colocando o controlador com defeito offline, substituindo o controlador, colocando o novo controlador online e concluindo o processo de substituição.
+
+.image:https://raw.githubusercontent.com/NetAppDocs/common/main/media/number-1.png["Um"]link:controller-replace-requirements.html["Analise os requisitos de substituição do controlador"]
+[role="quick-margin-para"]
+Verifique se o seu sistema de storage possui um controlador com falha, verifique o estado do seu sistema de storage, adquira as ferramentas para o procedimento e tenha uma estação de gerenciamento e um navegador para acessar SANtricity System Manager.
+
+.image:https://raw.githubusercontent.com/NetAppDocs/common/main/media/number-2.png["Dois"]link:controller-replace-prepare.html["Prepare-se para a substituição do controlador"]
+[role="quick-margin-para"]
+Desembale o controlador de substituição, anote o endereço MAC, confirme se o número de peça está correto e faça backup do banco de dados de configuração do sistema de storage.
+
+.image:https://raw.githubusercontent.com/NetAppDocs/common/main/media/number-3.png["Três"]link:controller-replace-offline-controller.html["Desative o controlador com problema"]
+[role="quick-margin-para"]
+Desligue o controlador com problema para evitar perda de dados e garantir a estabilidade do sistema ao substituir o controlador com problema.
+
+.image:https://raw.githubusercontent.com/NetAppDocs/common/main/media/number-4.png["Quatro"]link:controller-replace-move-hardware.html["Substitua o controlador com problema"]
+[role="quick-margin-para"]
+Verifique se todos os dados na memória cache foram gravados nas unidades, desconecte todos os cabos do controlador com defeito, remova o controlador, transfira os componentes para o controlador de substituição, instale o controlador de substituição e reconecte todos os cabos.
+
+.image:https://raw.githubusercontent.com/NetAppDocs/common/main/media/number-5.png["Cinco"]link:controller-replace-online-controller.html["Coloque online o controlador de substituição"]
+[role="quick-margin-para"]
+Confirme o endereço IP do controlador de substituição, coloque o controlador online e confirme que o status do sistema de storage está como Ótimo.
+
+.image:https://raw.githubusercontent.com/NetAppDocs/common/main/media/number-6.png["Seis"]link:controller-replace-complete-replacement.html["Conclua a substituição do controlador"]
+[role="quick-margin-para"]
+Certifique-se de que a versão mais recente do SANtricity OS esteja instalada, verifique se os volumes foram devolvidos aos seus controladores proprietários, colete os dados de suporte do sistema e devolva a peça com falha para NetApp.

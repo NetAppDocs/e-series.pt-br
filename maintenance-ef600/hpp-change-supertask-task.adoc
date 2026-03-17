@@ -34,7 +34,7 @@ image::../media/sam1130_ss_e2800_storage_array_profile_sn_smid_copy_maint-ef600.
 . Localize o *ID do submodelo do pacote de recursos*.
 +
 .. No Gerenciador do sistema SANtricity, selecione *suporte*.
-.. Selecione o mosaico *Centro de suporte*.
+.. Selecione o bloco *Support Resources*.
 .. Na guia recursos de suporte, localize e selecione o link *Storage Array Profile*.
 .. Digite *ID do submodelo do pacote de recursos* na caixa de texto e clique em *Localizar*.
 .. Localize a ID do submodelo do pacote de recursos para a configuração inicial.
@@ -642,7 +642,7 @@ CAUTION: *Possível perda de dados* -- se você continuar este procedimento enqu
 +
 O LED verde Cache ative na parte de trás de cada controlador fica aceso quando os dados em cache precisam ser gravados nas unidades. Tem de esperar que este LED se desligue.
 
-. Na página inicial do Gerenciador do sistema do SANtricity, selecione *Exibir operações em andamento*.
+. Na página inicial do SANtricity System Manager, selecione menu:Storage[Operations in Progress].
 . Aguarde que todas as operações sejam concluídas antes de continuar com o próximo passo.
 
 

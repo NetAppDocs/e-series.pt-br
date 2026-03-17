@@ -1,0 +1,81 @@
+= 
+:allow-uri-read: 
+
+
+Verifique se todos os dados na memória cache foram gravados nas unidades, desconecte todos os cabos do controlador com defeito e, em seguida, remova o controlador com defeito do chassi.
+
+.Passos
+. No controlador com defeito, certifique-se de que o LED NV Caching Active (verde) esteja apagado.
++
+Quando o LED NV Caching Active (verde) estiver apagado, quaisquer dados na memória cache foram gravados nas unidades e é seguro remover o controlador com defeito.
+
++
+
+NOTE: Se o LED NV Caching Active (verde) estiver aceso, os dados em cache estão sendo gravados nas unidades. Você deve aguardar a conclusão do processo e o LED NV Caching Active se apagar. No entanto, se o LED permanecer aceso por mais de cinco minutos, entre em contato  https://mysupport.netapp.com/site/global/dashboard["Suporte à NetApp"] antes de prosseguir com este procedimento.
+
++
+O LED NV Caching Active (verde) está localizado próximo ao ícone NV no controlador.
+
++
+image::../media/drw_g_nvmem_led_ieops-1839.svg[Localização do LED de status NV]
+
++
+[cols="1,4"]
+|===
+
+
+ a| 
+image::../media/icon_round_1.png[Chamada número 1]
+ a| 
+Ícone NV e LED NV Caching Active no controlador
+
+|===
+
+
+. Coloque uma pulseira antiestática ou tome outras precauções antiestáticas.
+. Identifique cada cabo conectado ao controlador com defeito.
+. Desconecte o cabo de força da fonte de alimentação do controlador com defeito.
++
+
+NOTE: A fonte de alimentação (PSU) não possui um interruptor de energia.
+
+. Desconecte todos os cabos do controlador com defeito.
+. Remova o controlador com defeito:
++
+A ilustração a seguir mostra o funcionamento das alças do controlador (do lado esquerdo do controlador) ao remover um controlador:
+
++
+image::../media/drw_g_and_t_handles_remove_ieops-1837.svg[Operação da alça do controlador para remover um controlador]
+
++
+[cols="1,4"]
+|===
+
+
+ a| 
+image::../media/icon_round_1.png[Chamada número 1]
+ a| 
+Em ambas as extremidades do controlador, empurre as linguetas de travamento verticais para fora para liberar as alças para a posição horizontal.
+
+
+
+ a| 
+image::../media/icon_round_2.png[Chamada número 2]
+ a| 
+** Puxe as alças em sua direção para desencaixar o controlador do midplane.
++
+Ao puxar, as alças se estendem do controlador e então você sentirá alguma resistência, continue puxando.
+
+** Deslize o controlador para fora do chassi enquanto apoia a parte inferior do controlador e coloque-o sobre uma superfície de trabalho plana e livre de estática.
+
+
+
+
+ a| 
+image::../media/icon_round_3.png[Chamada número 3]
+ a| 
+Se necessário, gire as alças para cima (próximas às abas) para tirá-las do caminho.
+
+|===
+. Abra a tampa do controlador girando o parafuso de aperto manual no sentido anti-horário para soltar e, em seguida, abra a tampa.
+

@@ -72,7 +72,7 @@ Se necessário, você deve resolver quaisquer problemas de certificado antes de 
 Durante a descoberta, se algum storage arrays mostrar um status de "certificados não confiáveis", a caixa de diálogo resolver certificados autoassinados será exibida. Pode resolver certificados não fidedignos nesta caixa de diálogo ou pode importar certificados de CA (link:vc-olh-import-certificates-for-arrays.html["Importar certificados para matrizes"]consulte ).
 
 .Passos
-. Se a caixa de diálogo resolver certificados autoassinados for aberta, revise as informações exibidas para os certificados não confiáveis. Para obter mais informações, você também pode clicar nas elipses na extremidade da tabela e selecionar *Exibir* no menu pop-up.
+. Se a caixa de diálogo Resolve Self-Signed Certificates for aberta, revise as informações exibidas para os certificados não confiáveis. Para mais informações, você também pode clicar nas reticências no final da tabela e selecionar *View* no menu pop-up.
 . Execute um dos seguintes procedimentos:
 +
 ** Se você confiar nas conexões com os storages de armazenamento descobertos, clique em *Next* e, em seguida, clique em *Yes* para confirmar e continuar para o próximo cartão no assistente. Os certificados autoassinados serão marcados como confiáveis e os storages de armazenamento serão adicionados ao plugin.

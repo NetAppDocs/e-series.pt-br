@@ -1,0 +1,47 @@
+---
+permalink: install-hw-ef50-ef80/install-hardware.html 
+sidebar: sidebar 
+keywords:  
+summary: Após preparar a instalação do seu sistema de storage EF50 ou EF80, instale o hardware de montagem em rack em um gabinete ou rack telco e, em seguida, instale e fixe o seu sistema de storage. 
+---
+= Instale o hardware - EF50 e EF80
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Após preparar a instalação do seu sistema de storage EF50 ou EF80, instale o hardware de montagem em rack em um gabinete ou rack telco e, em seguida, instale e fixe o seu sistema de storage.
+
+Se o seu sistema de storage veio em um gabinete, você pode pular este procedimento e ir para link:install-cable.html["Conecte o hardware"].
+
+.Antes de começar
+* Prepare uma área de trabalho plana e livre de estática.
+* Obtenha uma pulseira antiestática e tome precauções antiestáticas.
+* Certifique-se de que as instruções de instalação acompanham o hardware de montagem em rack. Caso contrário, consulte link:../rackmount-hardware.html["Hardware de montagem em rack"^].
+* Esteja ciente das precauções de levantamento associadas ao peso do seu sistema de storage. Consulte link:install-prepare.html#step-2-understand-the-lifting-precautions["Entenda as precauções de levantamento"^].
+* Entenda que o fluxo de ar através do sistema de storage entra pela frente, onde os discos estão instalados, e sai pela parte traseira, onde as portas estão localizadas.
+
+
+.Passos
+. Instale o hardware de montagem em rack do seu sistema de storage usando as instruções incluídas com o hardware de montagem em rack.
++
+
+CAUTION: Instale o hardware de montagem em rack no espaço disponível mais baixo do gabinete ou rack para evitar que o sistema de storage tombe quando for instalado.
+
+. Instale e fixe seu sistema de storage no armário ou rack de telecomunicações:
++
+.. Posicione o sistema de storage nos trilhos e, em seguida, apoiando o sistema de storage pela parte inferior, deslize-o até encaixá-lo no lugar.
+.. Fixe o sistema de storage ao gabinete ou rack telco utilizando os parafusos de montagem incluídos.
+
+
+. Fixe o painel à parte frontal do sistema de storage.
++
+.. Posicione o painel em frente ao sistema de storage de forma que os orifícios em cada extremidade se alinhem com os fixadores do sistema de storage.
+.. Encaixe a moldura no lugar.
+
+
+
+
+.O que se segue?
+Após instalar o hardware do seu sistema de storage, link:install-cable.html["conecte o hardware"].

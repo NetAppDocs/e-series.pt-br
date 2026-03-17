@@ -1,0 +1,210 @@
+---
+permalink: maintenance-ef50-ef80/io-module-change-protocol.html 
+sidebar: sidebar 
+keywords: host protocol change, EF50, EF80 
+summary: Você pode alterar o protocolo nos módulos de E/S do host em seu sistema de storage EF50 ou EF80 quando precisar de um protocolo diferente em seus módulos de E/S existentes, como parte de uma atualização de módulo de E/S, ou quando o protocolo padrão em novos controladores que fazem parte de uma nova instalação de sistema de storage ou atualização de controlador não for o protocolo desejado. 
+---
+= Alterar o protocolo do módulo de E/S do host - EF50 e EF80
+:allow-uri-read: 
+:experimental: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Você pode alterar o protocolo nos módulos de E/S do host em seu sistema de storage EF50 ou EF80 quando precisar de um protocolo diferente em seus módulos de E/S existentes, como parte de uma atualização de módulo de E/S, ou quando o protocolo padrão em novos controladores que fazem parte de uma nova instalação de sistema de storage ou atualização de controlador não for o protocolo desejado.
+
+.Antes de começar
+Se você estiver alterando o protocolo do host como parte de um procedimento de hardware (atualização do módulo de E/S, nova instalação do sistema ou atualização do controlador), é necessário ter concluído o procedimento de hardware aplicável.
+
+
+NOTE: O novo hardware deve já estar instalado porque o protocolo padrão e a lista de protocolos disponíveis (que você visualiza neste procedimento) são baseados nos módulos de E/S do host atualmente instalados.
+
+[cols="1,2"]
+|===
+| Se você estiver alterando o protocolo do host... | Então... 
+
+
+ a| 
+Nos seus módulos de E/S de host existentes (não é necessário instalar nenhum hardware novo)
+ a| 
+Continue com este procedimento.
+
+
+
+ a| 
+Como parte de uma atualização do módulo de E/S
+ a| 
+Atualize os módulos de E/S do host antes de prosseguir com este procedimento.
+
+Use o link:../maintenance-ef50-ef80/io-module-upgrade.html["Atualizar módulos de E/S para um EF50 ou EF80"]procedimento.
+
+
+
+ a| 
+Como parte de uma nova instalação do sistema de storage
+ a| 
+Conclua a instalação e configuração do sistema antes de prosseguir com este procedimento.
+
+Use o link:../install-hw-ef50-ef80/install-workflow.html["Instalação e configuração para um EF50 ou EF80"]procedimento.
+
+
+
+ a| 
+Como parte de uma atualização do controlador
+ a| 
+Conclua a atualização do controlador antes de prosseguir com este procedimento.
+
+Comece com o link:../upgrade-controllers/index.html["Saiba mais sobre como atualizar os controladores e-Series"] procedimento.
+
+|===
+.Sobre esta tarefa
+* Altere o protocolo nos módulos de E/S do host preparando, interrompendo as operações de E/S do host, alterando o protocolo e, em seguida, configurando o host para usar o novo protocolo.
+* O protocolo é alterado em todos os módulos de E/S do host em seu sistema de storage.
+* Ao alterar o protocolo nos módulos de E/S do host, você interrompe temporariamente o acesso do host a todos os volumes e torna o sistema de storage indisponível durante a reinicialização, que leva alguns minutos.
+
+
+
+
+== Etapa 1: prepare-se para a mudança de protocolo
+
+Prepare-se para alterar o protocolo nos módulos de E/S do host, verificando o protocolo atualmente em uso, determinando se é necessário alterá-lo e, em caso afirmativo, agendando uma janela de manutenção de downtime.
+
+.Passos
+. Caso não conheça o protocolo nos módulos de E/S do host em seu sistema de storage, verifique-o usando SANtricity System Manager.
++
+.. Selecione *Configurações* > *Sistema*.
+.. Na seção *Configurações adicionais*, selecione *Alterar protocolo de E/S do host* para abrir essa página.
+.. Veja o protocolo padrão exibido no campo *Host I/O Protocol*.
++
+
+NOTE: Se você quiser ver a lista de protocolos disponíveis para os módulos de E/S do host, selecione o menu suspenso no campo *Protocolo de E/S do Host*. A lista de protocolos é baseada nos módulos de E/S do host atualmente instalados.
+
+
+
+. O próximo passo depende de o protocolo padrão ser o protocolo que você deseja ou não:
++
+[cols="1,2"]
+|===
+| Se... | Então... 
+
+
+ a| 
+O protocolo padrão é o protocolo que você deseja
+ a| 
+Nenhuma ação é necessária. Você pode sair deste procedimento.
+
+
+
+ a| 
+O protocolo padrão não é o protocolo que você deseja
+ a| 
+Continue com este procedimento para alterar o protocolo.
+
+|===
+. Agende uma janela de manutenção de inatividade para este procedimento.
+
+
+
+
+== Etapa 2: pare as operações de E/S do host
+
+Você deve interromper todas as operações de E/S do host e, em seguida, excluir todos os hosts definidos do sistema de storage antes de alterar o protocolo.
+
+
+NOTE: Você não poderá acessar os dados no sistema de storage até que conclua com sucesso a alteração do protocolo.
+
+.Passos
+. Certifique-se de que não haja operações de E/S ocorrendo entre o sistema de storage e todos os hosts conectados. Por exemplo, você pode executar estas etapas:
++
+** Parar todos os processos que envolvem os LUNs mapeados do armazenamento para os hosts.
+** Garantir que nenhuma aplicação esteja gravando dados em LUNs mapeados do storage para os hosts.
+** Desmonte todos os sistemas de arquivos associados aos LUNs no sistema de storage.
++
+
+NOTE: Os passos exatos para interromper as operações de E/S do host dependem do sistema operacional do host e da configuração, o que está além do escopo destas instruções. Se você não tiver certeza de como interromper as operações de E/S do host em seu ambiente, considere desligar o host ou entre em contato https://mysupport.netapp.com/site/global/dashboard["Suporte à NetApp"^].
+
++
+
+CAUTION: *Possível perda de dados* -- se você continuar este procedimento enquanto as operações de e/S estão ocorrendo, você pode perder dados.
+
+
+
+. Em cada controlador, certifique-se de que o LED NV Caching Active (verde) esteja apagado.
++
+Quando o LED NV Caching Active (verde) estiver apagado, qualquer dado na memória cache foi gravado nas unidades e é seguro prosseguir com este procedimento.
+
++
+
+NOTE: Se o LED NV Caching Active (verde) estiver aceso, os dados em cache estão sendo gravados nas unidades. Você deve aguardar a conclusão do processo e o LED NV Caching Active (verde) se apagar. No entanto, se o LED permanecer aceso por mais de cinco minutos, entre em contato  https://mysupport.netapp.com/site/global/dashboard["Suporte à NetApp"] antes de prosseguir com este procedimento.
+
++
+O LED NV Caching Active (verde) está localizado próximo ao ícone NV no controlador.
+
++
+image::../media/drw_g_nvmem_led_ieops-1839.svg[Localização do LED de status NV]
+
++
+[cols="1,4"]
+|===
+
+
+ a| 
+image::../media/icon_round_1.png[Chamada número 1]
+ a| 
+Ícone NV e LED NV Caching Active no controlador
+
+|===
+. Confirme se as operações nos controladores foram concluídas, usando SANtricity System Manager:
++
+.. Selecione *Storage* > *Operations in progress* para ver a tela Overview.
+.. Aguarde até que todas as operações sejam concluídas e a tela Overview exiba *No operations currently in progress*, antes de prosseguir para a próxima etapa.
+
+
+. Exclua todos os hosts definidos do sistema de storage.
++
+Para obter instruções, consulte o https://docs.netapp.com/us-en/e-series-santricity/sm-storage/delete-host-or-host-cluster.html["Excluir um host ou cluster de hosts no SANtricity System Manager"^] procedimento.
+
+
+
+
+
+== Etapa 3: alterar o protocolo
+
+Utilizando SANtricity System Manager, altere o protocolo nos módulos de E/S do host, aguarde os controladores concluírem seu ciclo de reinicialização, confirme que o status deles está como Ótimo e, em seguida, recrie as definições do host.
+
+.Passos
+. Selecione *Configurações* > *Sistema*.
+. Na seção *Configurações adicionais*, selecione *Alterar protocolo de E/S do host* para abrir essa página.
+. No campo *Host I/O Protocol*, selecione o menu suspenso e escolha o protocolo que deseja usar.
++
+A lista de protocolos é baseada nos módulos de E/S do host atualmente instalados.
+
+. Digite *CHANGE* no campo aberto para confirmar sua alteração.
+. Selecione o botão *Change*.
+. Aguarde até que os controladores concluam seu ciclo de reinicialização.
++
+Isso pode levar cerca de cinco minutos.
+
+. Quando os controladores voltarem a ficar online, confirme se o status deles é Ótimo usando SANtricity System Manager.
+. Recrie as definições de host.
++
+Para obter instruções, consulte o https://docs.netapp.com/us-en/e-series-santricity/sm-storage/create-host.html["Crie um host manualmente no SANtricity System Manager"^] procedimento.
+
+
+
+
+
+== Etapa 4: configurar o host para usar o novo protocolo
+
+Após alterar o protocolo do host, você deve configurar o host para usar o novo protocolo.
+
+Para obter instruções passo a passo, consulte o guia apropriado para o seu sistema de storage:
+
+* link:../config-linux/index.html["Configuração expressa do Linux"]
+* link:../config-vmware/index.html["Configuração do VMware Express"]
+* link:../config-windows/index.html["Configuração expressa do Windows"]
++
+As definições específicas podem variar. Consulte o http://mysupport.netapp.com/matrix["Matriz de interoperabilidade do NetApp"^] para obter instruções específicas e configurações adicionais recomendadas para sua solução.
+
+

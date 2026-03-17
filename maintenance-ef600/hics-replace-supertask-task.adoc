@@ -64,8 +64,7 @@ O arquivo é salvo na pasta Downloads do seu navegador com o nome *configuration
 
 . Se o controlador ainda não estiver offline, coloque-o offline agora usando o Gerenciador de sistema do SANtricity.
 +
-.. Selecione *hardware*.
-.. Se o gráfico mostrar as unidades, selecione *Mostrar parte traseira da prateleira* para mostrar os controladores.
+.. Selecione o menu: Hardware [Controllers and components].
 .. Selecione o controlador que pretende colocar offline.
 .. No menu de contexto, selecione *colocar offline* e confirme que deseja executar a operação.
 +
@@ -228,7 +227,7 @@ Coloque o controlador on-line, colete dados de suporte e retome as operações.
 .Passos
 . Coloque o controlador online.
 +
-.. No System Manager, navegue até a página de hardware.
+.. No System Manager, navegue até a página *hardware*.
 .. Selecione *Mostrar parte posterior do controlador*.
 .. Selecione o controlador com a placa de interface do host substituída.
 .. Selecione *Place on-line* na lista suspensa.

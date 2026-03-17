@@ -1,0 +1,56 @@
+= 
+:allow-uri-read: 
+
+
+.Passos
+. Se você ainda não está aterrado, aterre-se adequadamente.
+. Localize a bateria NV.
+. Remova a bateria NV:
++
+image::../media/drw_g_nv_battery_replace_ieops-1864.svg[Substitua a bateria NV]
+
++
+[cols="1,4"]
+|===
+
+
+ a| 
+image::../media/icon_round_1.png[Chamada número 1]
+ a| 
+Levante a bateria NV para cima e para fora do compartimento.
+
+
+
+ a| 
+image::../media/icon_round_2.png[Chamada número 2]
+ a| 
+Remova o chicote de fios do seu retentor.
+
+
+
+ a| 
+image::../media/icon_round_3.png[Chamada número 3]
+ a| 
+.. Empurre e segure a aba do conector.
+.. Puxe o conector para cima e para fora do soquete.
++
+Ao puxar para cima, balance suavemente o conector de uma extremidade à outra (no sentido longitudinal) para desencaixá-lo.
+
+
+
+|===
+. Desembale a bateria NV de substituição e coloque-a em uma superfície plana e livre de estática perto do sistema de storage.
++
+Guarde o material da embalagem para usar quando devolver a bateria NV com falha.
+
+. Instale a bateria NV de substituição:
++
+.. Conecte o conector do fio na sua tomada.
+.. Passe a fiação pela lateral da fonte de alimentação, para dentro do seu suporte e depois pelo canal em frente ao compartimento da bateria NV.
+.. Coloque a bateria NV em seu compartimento.
++
+A bateria NV deve encaixar perfeitamente em seu compartimento.
+
+
+
+

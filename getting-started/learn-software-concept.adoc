@@ -94,7 +94,7 @@ Visualize dados de diagnóstico, gerencie atualizações e configure o AutoSuppo
 
 == Gerenciador unificado do SANtricity
 
-O Unified Manager é um software baseado na Web usado para gerenciar todo o seu domínio. Em uma visualização central, você pode ver o status de todos os arrays e-Series e EF-Series mais recentes, como E4000, E2800, EF280, EF300, E5700, EF570, EF600, EF300C e EF600C. Você também pode executar operações em lote em matrizes de armazenamento selecionadas.
+Unified Manager é um software baseado na Web usado para gerenciar todo o seu domínio. A partir de uma visão central, você pode ver o status de todos os arrays E-Series e EF-Series mais recentes, como EF50, EF80, E4000, E2800, EF280, EF300, E5700, EF570, EF600, EF300C e EF600C. Você também pode executar operações em lote nos arrays de storage selecionados.
 
 O Unified Manager é instalado em um servidor de gerenciamento juntamente com o Web Services Proxy. Para acessar o Unified Manager, abra um navegador e insira o URL apontando para o servidor onde o Proxy de Serviços Web está instalado.
 
@@ -170,4 +170,4 @@ Web Services inclui documentação de API que permite interagir diretamente com 
 
 == Interface de linha de comando (CLI)
 
-A interface de linha de comando (CLI) é um aplicativo de software que fornece uma maneira de configurar e monitorar matrizes de armazenamento. Usando a CLI, você pode executar comandos de um prompt do sistema operacional, como o prompt dos C:, um caminho do sistema operacional Linux ou um caminho do sistema operacional Solaris.
+A interface de linha de comando (CLI) é um aplicativo de software que fornece uma maneira de configurar e monitorar arrays de storage. Usando a CLI, você pode executar comandos a partir de um prompt do sistema operacional, como o  `DOS C:` prompt, um caminho do sistema operacional Linux ou um caminho do sistema operacional Solaris.

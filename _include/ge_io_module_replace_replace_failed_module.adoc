@@ -1,0 +1,48 @@
+= 
+:allow-uri-read: 
+
+
+.Passos
+. Se você ainda não está aterrado, aterre-se adequadamente.
+. Desconecte o cabeamento do módulo de E/S com defeito.
++
+Certifique-se de etiquetar os cabos para saber de onde vieram.
+
+. Remova o módulo de E/S com defeito do controlador:
++
+image::../media/drw_g_io_module_replace_ieops-1900.svg[Remover módulo de E/S]
+
++
+[cols="1,4"]
+|===
+
+
+ a| 
+image::../media/icon_round_1.png[Chamada número 1]
+ a| 
+Gire o parafuso de aperto manual do módulo de I/O no sentido anti-horário para soltar.
+
+
+
+ a| 
+image::../media/icon_round_2.png[Chamada número 2]
+ a| 
+Retire o módulo de E/S do controlador usando a aba da etiqueta da porta à esquerda e o parafuso de aperto manual.
+
+|===
+. Desembale o módulo de E/S de substituição e coloque-o em uma superfície plana e livre de estática perto do sistema de storage.
++
+Guarde os materiais da embalagem para usar quando devolver o módulo de I/O com defeito.
+
+. Instale o módulo de E/S de substituição no slot de destino:
++
+.. Alinhe o módulo de E/S com as bordas do slot.
+.. Empurre cuidadosamente o módulo de E/S até o fundo do slot, certificando-se de encaixar corretamente o módulo no conector.
++
+Você pode usar a aba à esquerda e o parafuso de aperto manual para empurrar o módulo de E/S.
+
+.. Gire o parafuso de aperto manual no sentido horário para apertar.
+
+
+. Conecte o módulo de I/O.
+

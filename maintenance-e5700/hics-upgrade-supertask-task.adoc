@@ -108,6 +108,9 @@ image::../media/e5700_ib_hic_w_cache_led_callouts_maint-e5700.gif[LED de cache a
 *(1)* _Cache ative LED_
 
 . Na página inicial do Gerenciador do sistema do SANtricity, selecione *Exibir operações em andamento*. Aguarde que todas as operações sejam concluídas antes de continuar com o próximo passo.
++
+Aguarde que todas as operações sejam concluídas antes de continuar com o próximo passo.
+
 . Desligue o compartimento do controlador.
 +
 .. Desligue ambos os interruptores de energia no compartimento do controlador.

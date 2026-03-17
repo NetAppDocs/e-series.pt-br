@@ -1,0 +1,84 @@
+---
+permalink: maintenance-ef50-ef80/controller-replace-prepare.html 
+sidebar: sidebar 
+keywords: ef50, ef80, prepare the impaired controller 
+summary: Prepare-se para substituir o controlador defeituoso em seu sistema de storage EF50 ou EF80, desembalando o controlador de substituição, confirmando se o número de peça está correto e fazendo backup do banco de dados de configuração. 
+---
+= Prepare-se para a substituição do controlador - EF50 e EF80
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Prepare-se para substituir o controlador com problema em seu sistema de storage EF50 ou EF80, desembalando o controlador de substituição, anotando seu endereço MAC, confirmando se o número de peça está correto e fazendo backup do banco de dados de configuração do sistema de storage.
+
+.Passos
+. Desembale o controlador de substituição e coloque-o em uma superfície plana e livre de estática.
++
+Guarde os materiais da embalagem para usar quando devolver o controlador com defeito.
+
+. Anote o endereço MAC na lateral do controlador de substituição.
++
+Você utiliza o endereço MAC posteriormente no procedimento de substituição do controlador.
+
+. Confirme se o número de peça no controlador de substituição é o mesmo que o número de peça de substituição do controlador no SANtricity System Manager:
++
+
+CAUTION: *Possível perda de acesso aos dados*: Se os dois números de peça não forem iguais, não tente este procedimento. A presença de controladores incompatíveis faz com que o controlador de substituição entre em bloqueio ao ser colocado online.
+
++
+.. Anote o número de peça na lateral do controlador de substituição.
+.. Localize o número de peça de substituição para o controlador com defeito exibido na área de detalhes do Recovery Guru.
++
+Se precisar encontrar esse número manualmente, siga estas etapas:
+
++
+... Selecione *Hardware* > *Controladores e componentes*.
+... Selecione o gráfico do controlador com defeito (Controlador A ou Controlador B) para visualizar o menu de contexto.
+... Selecione *Ver definições*.
+... No separador *base*, anote o *número de peça de substituição* para o controlador.
+
+
+.. Compare os dois números de peça para confirmar se são iguais.
+.. O próximo passo depende se os números de peça são iguais ou não:
++
+[cols="1,2"]
+|===
+| Se... | Então... 
+
+
+ a| 
+Os dois números de peça são iguais
+ a| 
+Continue para a próxima etapa.
+
+
+
+ a| 
+Os dois números de peça são diferentes
+ a| 
+Não é possível prosseguir com este procedimento.
+
+Entre em contato https://mysupport.netapp.com/site/global/dashboard["Suporte à NetApp"] para obter assistência.
+
+|===
+
+
+. Faça backup do banco de dados de configuração do sistema de storage usando SANtricity System Manager.
++
+Se ocorrer algum problema ao remover um controlador, você pode usar o arquivo salvo para restaurar sua configuração. O sistema salva o estado atual do banco de dados de configuração RAID, que inclui todos os dados de grupos de volumes e pools de discos no controlador.
+
++
+.. Selecione *suporte
+.. Selecione *Collect Configuration Data*.
+.. Selecione *Collect*.
++
+O arquivo é salvo na pasta Downloads do seu navegador com o nome *configurationData-<arrayName>-<dateTime>.7z*.
+
+
+
+
+
+.O que se segue?
+Após preparar a substituição do controlador, link:controller-replace-offline-controller.html["offline o controlador com problema"].

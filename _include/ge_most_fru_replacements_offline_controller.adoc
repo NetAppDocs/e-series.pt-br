@@ -1,0 +1,35 @@
+= 
+:allow-uri-read: 
+
+
+.Sobre esta tarefa
+Sempre que você colocar um controlador offline, é necessário aguardar pelo menos um minuto antes de colocá-lo online novamente. Esse período de espera permite que o sistema de storage atualize o status do controlador e garanta que todos os dados em cache sejam gravados nas unidades.
+
+.Passos
+. Se o controlador com defeito ainda não estiver offline, coloque-o offline usando SANtricity System Manager:
++
+.. Selecione *Hardware* > *Controladores e componentes* para exibir os controladores.
+.. Selecione o controlador que você deseja colocar offline para exibir seu menu de conteúdo.
+.. Selecione *Colocar offline* e, em seguida, confirme que deseja realizar a operação.
++
+
+NOTE: Se você estiver acessando SANtricity System Manager usando o controlador que está tentando colocar offline, uma mensagem "SANtricity System Manager Indisponível" será exibida. Selecione *Conectar a uma conexão de rede alternativa* para acessar automaticamente SANtricity System Manager usando o outro controlador.
+
+
+
+. Aguarde até que o Gerenciador de sistema do SANtricity atualize o status do controlador para offline.
++
+
+CAUTION: Não inicie quaisquer outras operações até que o estado tenha sido atualizado.
+
+. Confirme se é seguro remover o componente defeituoso, usando o Recovery Guru:
++
+.. Selecione *Recheck*.
+.. Confirme se o campo *OK para remover* na área Detalhes exibe *Yes*.
++
+
+CAUTION: Se o campo *OK para remover* não exibir *Sim*, não prossiga com a remoção do componente defeituoso. Em vez disso, solucione o problema usando o Recovery Guru.
+
+
+
+

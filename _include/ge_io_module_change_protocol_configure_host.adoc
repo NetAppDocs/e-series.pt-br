@@ -1,0 +1,13 @@
+= 
+:allow-uri-read: 
+
+
+Para obter instruções passo a passo, consulte o guia apropriado para o seu sistema de storage:
+
+* link:../config-linux/index.html["Configuração expressa do Linux"]
+* link:../config-vmware/index.html["Configuração do VMware Express"]
+* link:../config-windows/index.html["Configuração expressa do Windows"]
++
+As definições específicas podem variar. Consulte o http://mysupport.netapp.com/matrix["Matriz de interoperabilidade do NetApp"^] para obter instruções específicas e configurações adicionais recomendadas para sua solução.
+
+

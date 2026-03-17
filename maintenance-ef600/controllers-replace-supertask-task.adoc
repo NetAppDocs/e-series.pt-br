@@ -169,10 +169,16 @@ Remova a bateria do recipiente do controlador com falha para que possa instalá-
 . Localize o separador "Press" (premir) na parte lateral do controlador.
 . Desengate a bateria premindo a patilha e apertando a caixa da bateria.
 +
-image::../media/batt_3.png["Prima a patilha para desbloquear a bateria]
+image::../media/batt_3.png[Pressione tab para destravar a bateria]
 
-. Apertar cuidadosamente a cablagem da bateria do alojamento da ficha. Puxe para cima, desligando a bateria da placa.image:../media/batt_2.png["Retire a cablagem da bateria do alojamento do conetor"]
-. Levante a bateria para fora do controlador e coloque-a numa superfície plana e sem estática.image:../media/batt_4.png["Levante a bateria para fora do controlador"]
+. Apertar cuidadosamente a cablagem da bateria do alojamento da ficha. Puxe para cima, desligando a bateria da placa.
++
+image:../media/batt_2.png["Retire a cablagem da bateria do alojamento do conetor"]
+
+. Levante a bateria para fora do controlador e coloque-a numa superfície plana e sem estática.
++
+image:../media/batt_4.png["Levante a bateria para fora do controlador"]
+
 
 
 

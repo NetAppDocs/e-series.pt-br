@@ -41,7 +41,7 @@ Todos os volumes não atribuídos são exibidos, mas as funções para hosts com
 
 
 .Passos
-. Selecione menu:armazenamento[hosts].
+. No painel esquerdo da interface do SANtricity System Manager, selecione menu:Storage[Hosts].
 . Selecione o host ou cluster de host ao qual você deseja atribuir volumes e clique em *atribuir volumes*.
 +
 É apresentada uma caixa de diálogo que lista todos os volumes que podem ser atribuídos. Você pode classificar qualquer uma das colunas ou digitar algo na caixa *filtro* para facilitar a localização de volumes específicos.

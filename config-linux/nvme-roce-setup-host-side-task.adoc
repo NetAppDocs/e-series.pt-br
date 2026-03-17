@@ -55,6 +55,10 @@ Você precisa estar executando a versão mais recente e compatível do sistema o
 ----
 # yum install NetworkManager-initscripts-updown
 ----
++
+
+NOTE: Scripts de rede não estão disponíveis para RHEL 10.
+
 . Obtenha o host NQN, que será usado para configurar o host para um array.
 +
 [listing]

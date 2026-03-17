@@ -49,7 +49,7 @@ A caixa de diálogo Verificação do estado de pré-atualização abre-se e list
 +
 O progresso é mostrado na caixa de diálogo enquanto a verificação de integridade é executada.
 
-. Quando a verificação de integridade for concluída, você pode clicar nas elipses (...) à direita de cada linha para exibir mais informações e executar outras tarefas.
+. Quando a verificação de integridade for concluída, você pode clicar nas reticências (...) à direita de cada linha para visualizar mais informações e executar outras tarefas.
 +
 
 NOTE: Se algum array falhar na verificação de integridade, você pode pular esse array específico e continuar a atualização para os outros, ou você pode parar todo o processo e solucionar problemas dos arrays que não passaram.

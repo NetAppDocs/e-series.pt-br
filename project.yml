@@ -38,6 +38,7 @@ sidebar:
       url: "/getting-started/getup-run-concept.html"
   - title: Instale o hardware
     entries:
+    - section: install-hw-ef50-ef80
     - title: EF300 e EF600
       entries:
       - title: Visão geral
@@ -386,6 +387,8 @@ sidebar:
         url: "/config-vmware/iscsi-perform-specific-task.html"
       - title: Execute tarefas específicas de SAS
         url: "/config-vmware/sas-perform-specific-task.html"
+      - title: Executar tarefas específicas de NVMe over RoCE
+        url: "/config-vmware/nvme-roce-perform-specific-task.html"
       - title: Descubra o armazenamento no host
         url: "/config-vmware/discover-storage-host-task.html"
       - title: Configurar o armazenamento no host
@@ -456,6 +459,7 @@ sidebar:
         url: "/upgrade-santricity/upgrade-drive-firmware-task.html"
   - title: Manter os sistemas
     entries:
+    - section: maintenance-ef50-ef80
     - title: EF300 e EF600
       pdf-filename: EF300-EF600 Manutenção de sistemas
       entries:

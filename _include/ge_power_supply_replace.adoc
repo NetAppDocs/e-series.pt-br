@@ -1,0 +1,82 @@
+= 
+:allow-uri-read: 
+
+
+.Passos
+. Se você ainda não está aterrado, aterre-se adequadamente.
+. Desconecte o cabo de força da fonte de alimentação (PSU) abrindo o retentor do cabo de força e, em seguida, desconecte o cabo de força da fonte de alimentação (PSU).
++
+
+NOTE: A fonte de alimentação não possui interruptor de energia.
+
+. Remova a fonte de alimentação:
++
+image::../media/ef50-ef80_psu_ac_orange_tab_replace_ieops-2611.svg[Substitua a fonte de alimentação CA]
+
++
+[cols="1,4"]
+|===
+
+
+ a| 
+image::../media/icon_round_1.png[Chamada número 1]
+ a| 
+Gire a alça da fonte de alimentação para cima, até a posição horizontal, e então segure-a.
+
+
+
+ a| 
+image::../media/icon_round_2.png[Chamada número 2]
+ a| 
+Com o polegar, pressione a trava laranja para liberar a fonte de alimentação do controlador.
+
+
+
+ a| 
+image::../media/icon_round_3.png[Chamada número 3]
+ a| 
+Retire a fonte de alimentação do controlador enquanto usa a outra mão para sustentar o peso dela.
+
+
+CAUTION: A fonte de alimentação é curta. Sempre use as duas mãos para segurá-la ao removê-la do controlador, para que ela não se solte repentinamente e cause ferimentos.
+
+|===
+. Desembale a fonte de alimentação de substituição e coloque-a em uma superfície plana perto do sistema de storage.
++
+Guarde todos os materiais de embalagem para utilização quando devolver a fonte de alimentação com falha.
+
+. Instale a fonte de alimentação de substituição:
++
+.. Usando ambas as mãos, apoie e alinhe as bordas da fonte de alimentação com a abertura no controlador.
+.. Empurre cuidadosamente a fonte de alimentação para dentro do controlador até que a lingueta de travamento laranja se encaixe no lugar.
++
+Uma fonte de alimentação só se encaixa corretamente no conector interno e trava no lugar de uma única maneira.
+
++
+
+NOTE: Para evitar danificar o conector interno, não use força excessiva ao deslizar a fonte de alimentação para dentro do controlador.
+
+.. Gire a alavanca para baixo, de forma que ela não atrapalhe as operações normais.
+
+
+. Reconecte o cabo de força à fonte de alimentação e prenda o cabo de força com o suporte do cabo de força.
++
+Assim que a energia for restabelecida na PSU, o LED de status deverá ficar verde.
+
+. Confirme se o status da fonte de alimentação é Ótimo e se os LEDs de atenção do sistema de storage estão apagados.
++
+Se o status não for Ideal ou se algum dos LEDs de Atenção estiver aceso, confirme que o cabo de alimentação está conectado corretamente e que a fonte de alimentação está instalada corretamente. Se necessário, remova e reinstale a fonte de alimentação.
+
++
+
+NOTE: Caso não consiga resolver o problema, entre em contato https://mysupport.netapp.com/site/global/dashboard["Suporte à NetApp"] antes de prosseguir com este procedimento.
+
+. No SANtricity System Manager, clique em *Suporte > Upgrade Center* para garantir que a versão mais recente do SANtricity OS esteja instalada.
++
+Conforme necessário, instale a versão mais recente.
+
+. Devolva a peça com falha ao NetApp, conforme descrito nas instruções de RMA fornecidas com o kit.
++
+Contate o suporte técnico em  https://mysupport.netapp.com/site/global/dashboard["Suporte à NetApp"], 888-463-8277 (América do Norte), 00-800-44-638277 (Europa) ou +800-800-80-800 (Ásia/Pacífico) se precisar do número RMA ou de ajuda adicional com o procedimento de substituição.//2025-11-17 ontap-systems-internal/issues/1391
+
+

@@ -1,0 +1,45 @@
+= 
+:allow-uri-read: 
+
+
+.Passos
+. Resolva quaisquer outros problemas do sistema de storage.
++
+Usando SANtricity System Manager, revise os detalhes no Recovery Guru para ver se há outros problemas.
+
+. Certifique-se de que não há volumes em uso ou de que você tenha um driver multipath instalado em todos os hosts que usam esses volumes.
+. Certifique-se de que tem o seguinte:
++
+** Um módulo DIMM de substituição com o tamanho correto para a configuração do seu sistema de storage.
+** Uma pulseira ESD ou você tomou outras precauções antiestáticas.
+** Uma superfície de trabalho plana e livre de estática.
+** Etiquetas para identificar cada cabo que está conectado ao controlador com defeito.
+** Uma estação de gerenciamento com um navegador que pode acessar SANtricity System Manager para o controlador com defeito.
++
+Para abrir a interface do System Manager, aponte o navegador para o nome de domínio ou endereço IP do controlador com falha.
+
+
+
+. Prevenir a descarga eletrostática (ESD) durante o manuseio e a instalação de um DIMM:
++
+** Mantenha o DIMM no saco ESD até que esteja pronto para instalá-lo.
+** Abra o saco ESD à mão ou corte a parte superior com uma tesoura. Não insira uma ferramenta de metal ou faca no saco ESD.
+** Guarde o saco ESD e quaisquer materiais de embalagem para devolver o DIMM com defeito ou utilize embalagem aprovada ao enviar um DIMM.
+** Use sempre uma pulseira antiestática aterrada em uma superfície sem pintura no chassi do seu sistema de storage.
+** Evite campos magnéticos. Mantenha os DIMMs afastados de dispositivos magnéticos.
+
+
+. Faça backup do banco de dados de configuração do sistema de storage usando SANtricity System Manager:
++
+Se ocorrer um problema ao remover um controlador, você pode usar o arquivo salvo para restaurar sua configuração. O sistema salva o estado atual do banco de dados de configuração RAID, que inclui todos os dados de grupos de volumes e pools de discos no controlador com defeito.
+
++
+.. Selecione *suporte* > *Centro de suporte* > *Diagnóstico*.
+.. Selecione *Collect Configuration Data*.
+.. Selecione *Collect*.
++
+O arquivo é salvo na pasta Downloads do seu navegador com o nome *configurationData-<arrayName>-<dateTime>.7z*.
+
+
+
+
