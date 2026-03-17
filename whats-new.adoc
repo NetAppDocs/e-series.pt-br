@@ -16,10 +16,10 @@ A tabela a seguir descreve os novos recursos nas versões mais recentes do SANtr
 
 
 
-== Novidades na versão 12.0
+== Novidades na versão 12.00
 
 
-NOTE: A versão 12.0 do SANtricity OS é compatível apenas com os novos sistemas de storage all-flash EF80 e EF50.
+NOTE: A versão 12.00 do SANtricity OS é compatível apenas com os novos sistemas de storage all-flash EF80 e EF50.
 
 [cols="35h,~"]
 |===
