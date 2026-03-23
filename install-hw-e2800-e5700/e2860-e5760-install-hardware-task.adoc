@@ -43,7 +43,7 @@ image:../media/install_rails_inst-hw-e2800-e5700.png["Instale os trilhos"]
 . Instale a prateleira.
 +
 
-CAUTION: Uma prateleira vazia pesa aproximadamente 132 lb (60 kg). Um elevador mecanizado ou quatro pessoas usando alças de elevação são necessárias para mover com segurança uma prateleira vazia.
+CAUTION: Uma prateleira vazia pesa aproximadamente 134 lb (61 kg). É necessário um elevador mecânico ou quatro pessoas usando alças de elevação para mover uma prateleira vazia com segurança.
 
 +
 .. Se levantar a prateleira manualmente, fixe as quatro pegas de elevação. Empurre cada alça para cima até que ela se encaixe no lugar.

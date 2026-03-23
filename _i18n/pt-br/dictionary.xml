@@ -2380,7 +2380,6 @@
   <block id="50d72a9168ff12be707b9a6df88aff51" category="paragraph">Saiba como instalar um sistema de armazenamento E2860, E5760 ou DE460 em um rack de dois pilares ou em um gabinete de sistema NetApp.</block>
   <block id="1759ad5628dc48bcbb4047581abc3ad3" category="paragraph">Se as instruções foram incluídas com o hardware de montagem em rack, consulte-as para saber como instalar os trilhos. Para obter instruções adicionais de montagem em rack, <block ref="d52e431030e2f3e076bf966941775b1c" category="inline-link-macro-rx"></block>consulte .</block>
   <block id="2222f7f1fb65f3c37db013addee24d45" category="admonition">Para armários de orifício quadrado, primeiro você deve instalar as porcas de gaiola fornecidas para fixar a parte frontal e traseira da prateleira com parafusos.</block>
-  <block id="46e9881ea158268bc1b45e5e23f0d6d8" category="admonition">Uma prateleira vazia pesa aproximadamente 132 lb (60 kg). Um elevador mecanizado ou quatro pessoas usando alças de elevação são necessárias para mover com segurança uma prateleira vazia.</block>
   <block id="7f91b3bbd1281f9b80cef4d909c6db05" category="list-text">Se levantar a prateleira manualmente, fixe as quatro pegas de elevação. Empurre cada alça para cima até que ela se encaixe no lugar.</block>
   <block id="f8a163eecaf819af57298c9a255ffb1c" category="list-text">Apoiando a prateleira de baixo, deslize-a para dentro do gabinete. Se as pegas de elevação forem utilizadas, retire-as um conjunto de cada vez, à medida que a prateleira desliza para dentro do armário. Para remover as pegas, puxe para trás o trinco de desbloqueio, empurre-o para baixo e, em seguida, puxe-o para fora da prateleira.</block>
   <block id="8f57d3a728dbee93c91f52df708a0f03" category="list-text">Instale as unidades.</block>
@@ -8389,7 +8388,6 @@
   <block id="761cf09b3611d19694e4252d15e1966c" category="paragraph"><block ref="761cf09b3611d19694e4252d15e1966c" category="inline-image-macro-rx" type="image"></block></block>
   <block id="6c3dcb573d56a5a30ff50b77529d877d" category="paragraph"><block ref="6c3dcb573d56a5a30ff50b77529d877d" category="inline-image-macro-rx" type="image"></block></block>
   <block id="a001b169c43b4d43c428e192c798f2d8" category="summary">Saiba como instalar um sistema de armazenamento E4060 ou DE460C em um rack de dois pilares ou em um gabinete de sistema NetApp.</block>
-  <block id="0fad8e68b65c361bdee769f9dbd44528" category="admonition">Uma prateleira vazia pesa 253,33 lb (114,91 kg). Um elevador mecanizado ou quatro pessoas usando alças de elevação são necessárias para mover com segurança uma prateleira vazia.</block>
   <block id="003208e55218399fa55767bab82a621b" category="paragraph"><block ref="003208e55218399fa55767bab82a621b" category="inline-image-macro-rx" type="image"></block></block>
   <block id="b256a5fe8f6f56f5347aa122890f5806" category="inline-image-macro">Prateleiras seguras</block>
   <block id="9f0aa011ca589af7af02bb2e87f91985" category="paragraph"><block ref="9f0aa011ca589af7af02bb2e87f91985" category="inline-image-macro-rx" type="image"></block></block>
@@ -10690,4 +10688,5 @@
   <block id="d37b8d3a8d7d50a2d15245479531c53d" category="section-title">Novidades na versão 12.00</block>
   <block id="631e6d7ea44751bbf0471574f75f550e" category="admonition">A versão 12.00 do SANtricity OS é compatível apenas com os novos sistemas de storage all-flash EF80 e EF50.</block>
   <block id="dcf1521fe2188852a3d1ae5493b83c24" category="sidebar">SANtricity System Manager 12.00</block>
+  <block id="24fe914c4c521099e3e5332138db4935" category="admonition">Uma prateleira vazia pesa aproximadamente 134 lb (61 kg). É necessário um elevador mecânico ou quatro pessoas usando alças de elevação para mover uma prateleira vazia com segurança.</block>
 </blocks>
