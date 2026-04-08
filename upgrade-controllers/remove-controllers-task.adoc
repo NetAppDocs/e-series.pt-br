@@ -19,9 +19,9 @@ Depois de se preparar para a atualização, você pode remover os controladores 
 
 [role="tabbed-block"]
 ====
-.Modelos de controladora EF280 e EF50
+.Modelos de controladora EF80 e EF50
 --
-Para obter informações sobre como remover controladores dos sistemas de storage EF280 e EF50, consulte link:https://docs.netapp.com/us-en/e-series/maintenance-ef50-ef80/controller-replace-move-hardware.html#step-1-remove-the-controller["EF50 e EF80 - Passo 1: remova o controlador"^].
+Para obter informações sobre como remover controladores dos sistemas de storage EF80 e EF50, consulte link:https://docs.netapp.com/us-en/e-series/maintenance-ef50-ef80/controller-replace-move-hardware.html#step-1-remove-the-controller["EF50 e EF80 - Passo 1: remova o controlador"^].
 
 --
 .Outros modelos de controladoras E-Series
