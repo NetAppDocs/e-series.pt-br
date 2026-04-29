@@ -189,7 +189,7 @@ Isso pode levar cerca de cinco minutos.
 . Quando os controladores voltarem a ficar online, confirme se o status deles é Ótimo usando SANtricity System Manager.
 . Recrie as definições de host.
 +
-Para obter instruções, consulte o https://docs.netapp.com/us-en/e-series-santricity/sm-storage/create-host.html["Crie um host manualmente no SANtricity System Manager"^] procedimento.
+Para obter instruções, consulte o https://docs.netapp.com/us-en/e-series-santricity/sm-storage/create-host-manually.html["Crie um host manualmente no SANtricity System Manager"^] procedimento.
 
 
 

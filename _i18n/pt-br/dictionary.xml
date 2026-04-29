@@ -9831,7 +9831,6 @@
   <block id="f0e003d8e910aac92eb678b35d88e454" category="list-text">Quando os controladores voltarem a ficar online, confirme se o status deles é Ótimo usando SANtricity System Manager.</block>
   <block id="c86f60fc7fcc7f12bacc87413a01f8ea" category="list-text">Recrie as definições de host.</block>
   <block id="d5a35385e3c41cf9fd9e2f0a4a94c813" category="inline-link">Crie um host manualmente no SANtricity System Manager</block>
-  <block id="db8c72a9c6539d1e7ec1c1fb26b87ed0" category="paragraph">Para obter instruções, consulte o<block ref="a53958d29b83920c5f55ec43c9dba875" category="inline-link-rx"></block> procedimento.</block>
   <block id="1fc86e94ed7b025b1b598bb2f43d1407" category="paragraph">Para obter instruções passo a passo, consulte o guia apropriado para o seu sistema de storage:</block>
   <block id="83e4a7b7f356dd5b4fc5814e9fd775dd" category="list-text">Caso não conheça o protocolo nos módulos de E/S do host em seu sistema de storage, verifique-o usando SANtricity System Manager.</block>
   <block id="b285314b6b465f044f782ffdd9cc362d" category="list-text">Veja o protocolo padrão exibido no campo *Host I/O Protocol*.</block>
@@ -10692,4 +10691,5 @@
   <block id="5daddfd6f05e5067c7a89f1710325e32" category="paragraph">Esta versão contém apenas pequenas alterações e nenhum novo recurso. Para mais informações sobre as alterações nesta versão, consulte o E-Series SANtricity OS 12.0R1 README.</block>
   <block id="5de3bf25939bdfa37414108f0d590980" category="section-title">Novidades na versão 12.0</block>
   <block id="ff0fa97cb252835f443a15ae7e9b46d4" category="admonition">A versão 12.0 do SANtricity OS é compatível apenas com os novos sistemas de storage all-flash EF80 e EF50.</block>
+  <block id="c34bc836af57fee3bb2df387de995660" category="paragraph">Para obter instruções, consulte o<block ref="b1f1a9dce5288488396d4b3c3e74b2f3" category="inline-link-rx"></block> procedimento.</block>
 </blocks>
