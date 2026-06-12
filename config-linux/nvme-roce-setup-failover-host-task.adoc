@@ -14,96 +14,10 @@ summary: Configure o host para executar o failover.
 Para fornecer um caminho redundante para o storage array, você pode configurar o host para executar o failover.
 
 .Antes de começar
-Você deve instalar os pacotes necessários em seu sistema.
-
-* Para hosts Red Hat (RHEL), verifique se os pacotes estão instalados executando `rpm -q device-mapper-multipath`
-* Para hosts SLES, verifique se os pacotes estão instalados executando `rpm -q multipath-tools`
-
-
-
-NOTE: Consulte o https://mysupport.netapp.com/matrix["Ferramenta de Matriz de interoperabilidade do NetApp"^] para garantir que todas as atualizações necessárias estejam instaladas, pois o multipathing pode não funcionar corretamente com as versões GA do SLES ou RHEL.
+Consulte o  https://mysupport.netapp.com/matrix["Ferramenta de Matriz de interoperabilidade do NetApp"^] para garantir que todas as atualizações necessárias estejam instaladas, pois correções de bugs importantes podem ser necessárias para versões do SLES ou RHEL que não estão disponíveis na versão inicial.
 
 .Sobre esta tarefa
-O SLES 12 utiliza o Device Mapper Multipath (DMMP) para multipathing em NVMe sobre RoCE. RHEL 8, RHEL 9, RHEL 10, SLES 15 e SLES 16 utilizam um recurso de failover NVMe nativo integrado. Dependendo do sistema operacional que você estiver usando, algumas configurações adicionais de multipath serão necessárias para que ele funcione corretamente.
+Para SLES 15, SLES 16, RHEL 9 e RHEL 10, o Native NVMe Multipathing está habilitado por padrão e nenhuma configuração adicional é necessária.
 
-
-
-== Habilitar o Device Mapper Multipath (DMMP) para SLES 12
-
-Por padrão, o DM-MP está desabilitado no SLES. Conclua as etapas a seguir para ativar os componentes DM-MP no host.
-
-.Passos
-. Adicione a entrada de dispositivo NVMe e-Series à seção dispositivos do `/etc/multipath.conf` arquivo, como mostrado no exemplo a seguir:
-+
-[listing]
-----
-
-devices {
-        device {
-                vendor "NVME"
-                product "NetApp E-Series*"
-                path_grouping_policy group_by_prio
-                failback immediate
-                no_path_retry 30
-        }
-}
-----
-. Configure `multipathd` para iniciar na inicialização do sistema.
-+
-[listing]
-----
-# systemctl enable multipathd
-----
-. Inicie `multipathd` se não estiver em execução no momento.
-+
-[listing]
-----
-# systemctl start multipathd
-----
-. Verifique o estado de `multipathd` para se certificar de que está ativo e em execução:
-+
-[listing]
-----
-# systemctl status multipathd
-----
-
-
-
-
-== Configure o RHEL 8 com o Native NVMe Multipathing
-
-O NVMe Multipathing nativo é desativado por padrão no RHEL 8 e deve ser habilitado usando o procedimento a seguir.
-
-. Configure  `modprobe` a regra para ativar o Native NVMe Multipathing.
-+
-[listing]
-----
-# echo "options nvme_core multipath=y" >> /etc/modprobe.d/50-nvme_core.conf
-----
-. Remake `initramfs` com o novo `modprobe` parâmetro.
-+
-[listing]
-----
-# dracut -f
-----
-. Reinicie o servidor para ativá-lo com o Native NVMe Multipathing habilitado.
-+
-[listing]
-----
-# reboot
-----
-. Verifique se o NVMe Multipathing nativo está habilitado após o host inicializar o backup.
-+
-[listing]
-----
-# cat /sys/module/nvme_core/parameters/multipath
-----
-+
-.. Se o comando output for `N`, então o Native NVMe Multipathing ainda será desativado.
-.. Se o comando output for `Y`, então o Native NVMe Multipathing será ativado e todos os dispositivos NVMe que você descobrir o usarão.
-
-
-
-
-
-NOTE: Para SLES 15, SLES 16, RHEL 9 e RHEL 10, o Native NVMe Multipathing está habilitado por padrão e nenhuma configuração adicional é necessária.
+.O que se segue?
+Com o Multipathing NVMe nativo ativado, link:nvme-roce-access-physical-targets-concept.html["Acesse os volumes NVMe de um E-Series alvo a partir do host"].

@@ -317,16 +317,10 @@ sidebar:
           url: "/config-linux/nvme-roce-display-volumes-visible-host-task.html"
         - title: Configurar failover no host
           url: "/config-linux/nvme-roce-setup-failover-host-task.html"
-        - title: Acessar volumes NVMe para destinos de dispositivos virtuais
-          url: "/config-linux/nvme-roce-access-virtual-targets-concept.html"
         - title: Acessar volumes NVMe para destinos de dispositivos físicos
           url: "/config-linux/nvme-roce-access-physical-targets-concept.html"
-        - title: Criar sistemas de arquivos (SLES 12)
-          url: "/config-linux/nvme-roce-create-filesystems-sles-12-task.html"
-        - title: Criar sistemas de arquivos (RHEL 8, RHEL 9 e SLES 15)
+        - title: Criar sistemas de arquivos
           url: "/config-linux/nvme-roce-create-filesystems-sles-15-task.html"
-        - title: Verifique o acesso ao armazenamento no host
-          url: "/config-linux/nvme-roce-verify-storage-access-host-task.html"
         - title: Planilha de NVMe sobre RoCE para Linux
           url: "/config-linux/nvme-roce-worksheet-for-concept.html"
       - title: Configuração de NVMe em Fibre Channel

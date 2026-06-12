@@ -1152,7 +1152,6 @@
   <block id="4c1d5adaa07613c4825a0735b8cbc47c" category="paragraph">O administrador da rede pode fornecer as seguintes informações. Você usa essas informações no tópico, <block ref="ae1235fda6c5d8736e83d846c90aa042" category="inline-xref-macro-rx"></block>.</block>
   <block id="5896ee46616782f8df1ee0a020b031fa" category="paragraph">Documente os NQNs a serem usados pelas portas de matriz e cada porta de host.</block>
   <block id="f83d8dbcd02328e3d5b9105033a3d23f" category="summary">Você pode configurar a e/S direcionada para o destino do dispositivo com base na versão Linux.</block>
-  <block id="d08ede07772b1f8bc67cfab8cc986bec" category="paragraph">Você pode configurar a e/S direcionada para o destino do dispositivo com base no sistema operacional (e pelo método multipathing de extensão) que você está usando.</block>
   <block id="9565db23c5cf63228425a87e81f6ae0d" category="summary">Se o controlador incluir uma conexão para NVMe em RoCE (RDMA em Ethernet convergente), você poderá configurar as configurações da porta NVMe na página hardware ou na página sistema no Gerenciador de sistemas do SANtricity.</block>
   <block id="0d31f17993ecf74bf74442f4f7a3f7d0" category="paragraph">Se o controlador incluir uma conexão para NVMe em RoCE (RDMA em Ethernet convergente), você poderá configurar as configurações da porta NVMe na página hardware ou na página sistema no Gerenciador de sistemas do SANtricity.</block>
   <block id="1e803dda96065d3563d1217714087fd7" category="list-text">Uma porta de host NVMe em RoCE na controladora; caso contrário, as configurações NVMe em RoCE não estarão disponíveis no System Manager.</block>
@@ -1182,34 +1181,16 @@
   <block id="639ed89eb8d75c5f65d634e4ee670778" category="paragraph">Ativar prioridade ethernet (disponível clicando em *Mostrar mais definições*.)</block>
   <block id="be5555e7e670df8f8d0c725b9043fb16" category="summary">Você configura os switches de acordo com as recomendações do fornecedor para NVMe em RoCE. Essas recomendações podem incluir diretivas de configuração, bem como atualizações de código.</block>
   <block id="1016395fecd4787707233fc026c56bb5" category="paragraph">Você configura os switches de acordo com as recomendações do fornecedor para NVMe em RoCE. Essas recomendações podem incluir diretivas de configuração, bem como atualizações de código.</block>
-  <block id="b850731c1bffd8d6372e832c36232f3e" category="admonition">*RISCO DE PERDA DE DADOS.* Você deve habilitar o controle de fluxo para uso com o Global Pause Control no switch para eliminar o risco de perda de dados em um ambiente NVMe sobre RoCE.</block>
-  <block id="2947e68550fb96566fb0a799660394a2" category="list-text">Ative o controle de fluxo de quadro de pausa Ethernet *de ponta a ponta* como a configuração de melhores práticas.</block>
-  <block id="dcd56d80ecc0d78aefb3259c4aa4270b" category="summary">Para o SLES 15, você cria um sistema de arquivos no dispositivo nvme nativo e monta o sistema de arquivos.</block>
   <block id="b3e41b03ef621f7814aead1762d37e57" category="doc">Criar sistemas de arquivos (RHEL 8, RHEL 9 e SLES 15)</block>
   <block id="975fd0c9892b022cfeeec8b2a371f30b" category="paragraph">Selecione o tipo de interface do host que você deseja usar. Se o array configurado tiver apenas um tipo de interface de host disponível, essa configuração pode não estar disponível para selecionar.</block>
   <block id="365f3205f151d2c0162b586cda9fa899" category="paragraph">O alias padrão é <block ref="3e3bc02ef391331bd30bed4fb6fa717f" prefix="" category="inline-code"></block>. Por exemplo, o alias padrão para a primeira porta criada para<block ref="cfe1fdc942a88a194fce4471559bf004" prefix=" " category="inline-code"></block>.</block>
-  <block id="742a8771ffc60a44709348dec9c101db" category="admonition">O comando listado acima não persiste através da reinicialização. O<block ref="59c77c04d2cfe077f4d9c101d11c11ed" prefix=" " category="inline-code"></block> comando precisará ser executado após cada reinicialização para restabelecer as conexões NVMe.</block>
   <block id="6724b622f910a0db3c03e792b0240c06" category="admonition">O período de tempo limite de perda recomendado do controlador em segundos é de 60 minutos (3600 segundos). Substitua a configuração padrão de 600 segundos com 3600 segundos usando a<block ref="7b5c50977caf63926d443c9eae36a207" prefix=" " category="inline-code"></block> opção de linha de comando, como mostrado no exemplo a seguir.</block>
-  <block id="2428a281171a181ce060c98d6e1838a8" category="list-text">Repita a etapa 3 para conetar o subsistema descoberto no segundo caminho.</block>
   <block id="16ca841d20a206f2a2f351c206d2f01f" category="paragraph">Para exibir informações sobre cada caminho NVMe para um volume e-Series, use o<block ref="81fe64250dbcd40f4e6f64e7262c6011" prefix=" " category="inline-code"></block> comando. O &lt;format&gt; de saída pode ser normal (o padrão se -o não for usado), coluna ou json.</block>
-  <block id="816a290577d3afffcfc7b89e8312db70" category="admonition">Consulte o<block ref="0aaf04254af18646f3d246cd4a4b417d" category="inline-link-rx"></block> para garantir que todas as atualizações necessárias estejam instaladas, pois o multipathing pode não funcionar corretamente com as versões GA do SLES ou RHEL.</block>
-  <block id="adfe61fc58186ce1f905fe93a482817f" category="list-text">Adicione a entrada de dispositivo NVMe e-Series à seção dispositivos do<block ref="dd5ff67ba72768d33f75e645aa2b8e56" prefix=" " category="inline-code"></block> arquivo, como mostrado no exemplo a seguir:</block>
-  <block id="84fc3529eaf9395639e72cf55757289e" category="section-title">Configure o RHEL 8 com o Native NVMe Multipathing</block>
-  <block id="6eb3dae42ad866cc5b55556a35f53013" category="paragraph">O NVMe Multipathing nativo é desativado por padrão no RHEL 8 e deve ser habilitado usando o procedimento a seguir.</block>
-  <block id="5a6f78279dad9f7beea8ed58c714a952" category="list-text">Configure <block ref="96423e10b02c1107d4abf4af0c21d097" prefix=" " category="inline-code"></block> a regra para ativar o Native NVMe Multipathing.</block>
-  <block id="a12cca6acb7130ce2c5c45a411ad4854" category="list-text">Remake<block ref="50929bac7304e38629221d43c18db25e" prefix=" " category="inline-code"></block> com o novo<block ref="96423e10b02c1107d4abf4af0c21d097" prefix=" " category="inline-code"></block> parâmetro.</block>
-  <block id="2c010fb96f9be5bb3df13ff2c5a349a6" category="list-text">Reinicie o servidor para ativá-lo com o Native NVMe Multipathing habilitado.</block>
-  <block id="070373c9b8bfb5900abe9ee69cfae4e4" category="list-text">Verifique se o NVMe Multipathing nativo está habilitado após o host inicializar o backup.</block>
   <block id="c612d2b91ede7407a062457604df3133" category="summary">A configuração do iniciador NVMe em um ambiente RoCE inclui a instalação e configuração dos pacotes rdma-core e nvme-cli, configuração de endereços IP do iniciador e configuração da camada NVMe-of no host.</block>
   <block id="5efb38dd01fabddcbff948ba98eb16ed" category="list-text">Instale os pacotes rdma e nvme-cli:</block>
-  <block id="889869e1d3bab19951bb91f386d721de" category="list-text">Para RHEL 8 e RHEL 9, instale scripts de rede:</block>
   <block id="f402a19f86f854f295aa371b9abbbb90" category="list-text">Configure IPv4 endereços IP nas portas ethernet usadas para conetar o NVMe por RoCE. Para cada interface de rede, crie um script de configuração que contenha as diferentes variáveis para essa interface.</block>
   <block id="a4e34f0c64fbeb3078a510eb36f68d56" category="paragraph">As variáveis usadas nesta etapa são baseadas no hardware do servidor e no ambiente de rede. As variáveis incluem o<block ref="b0f2cffaf0617e46f90de0ece49b1f20" prefix=" " category="inline-code"></block> e<block ref="440cdde6c35c88ad8799575226adda15" prefix=" " category="inline-code"></block>. Estas são instruções de exemplo para SLES e RHEL:</block>
-  <block id="111d867a53d45d2348ae37042fdb7310" category="paragraph">*SLES 12 e SLES 15*</block>
-  <block id="7811a322c7116bb2055841124b0d8911" category="paragraph">Crie o arquivo de exemplo<block ref="3f3164e95f1a0a33561bc4e251b80643" prefix=" " category="inline-code"></block> com o seguinte conteúdo.</block>
   <block id="27a81685959fe491960811c61481c35d" category="paragraph">Em seguida, crie o arquivo de exemplo<block ref="2f85d47db6a2f9a2261d075933311a01" prefix=" " category="inline-code"></block> :</block>
-  <block id="f1d1c2a7d2a912bc6a5aa04e31b25d26" category="paragraph">Crie o arquivo de exemplo<block ref="84d4331157c88986f2059c78cd6ef5d2" prefix=" " category="inline-code"></block> com o seguinte conteúdo.</block>
-  <block id="51be39b7e050efbe3d29b5d8c0430aa5" category="paragraph">Em seguida, crie o arquivo de exemplo<block ref="d9ced338a40260ebc1310fd3ab4b5ab7" prefix=" " category="inline-code"></block> :</block>
   <block id="8ce810d5ab2863c317f14fafb62a5090" category="paragraph">Utilize a<block ref="94f122660e8e80af7b93d6609515bc99" prefix=" " category="inline-code"></block> ferramenta para ativar e editar uma ligação. Abaixo está um arquivo de exemplo<block ref="a8490166956a7c69a385a3a3169f183e" prefix=" " category="inline-code"></block> que a ferramenta irá gerar:</block>
   <block id="e5e4c27b43623332619bb7b742c025ee" category="paragraph">Abaixo está um arquivo de exemplo<block ref="4a417e605245176a0337befebb3390ec" prefix=" " category="inline-code"></block> que a ferramenta irá gerar:</block>
   <block id="28a17096963f5398d9b941a85c3ea321" category="list-text">Ativar as interfaces de rede:</block>
@@ -1218,8 +1199,6 @@
   <block id="c6179d2fb67eca2c2f51c1dd8a357e71" category="section-title">Verifique as restrições do NVMe sobre RoCE</block>
   <block id="4d3915f0eb3c916a8df33f24e29f1cf0" category="paragraph">Antes de usar o NVMe em RoCE, consulte o<block ref="0aaf04254af18646f3d246cd4a4b417d" category="inline-link-rx"></block> para verificar as restrições mais recentes de controladora, host e recuperação.</block>
   <block id="f384907c3dd58bb2d8f3b9ac157c0414" category="section-title">Restrições do interrutor</block>
-  <block id="adb2c486b4315072f95250add60ff3eb" category="paragraph">Antes de usar o namespace, verifique se o host pode gravar dados no namespace e lê-los de volta.</block>
-  <block id="0e7c59630bebf993c5d568dae4203bf0" category="paragraph">Você remove o arquivo e a pasta que você copiou.</block>
   <block id="2cda2abb38b68dfe292b9358bd33f81c" category="summary">Use esta Planilha para gravar informações de configuração de storage NVMe sobre RoCE.</block>
   <block id="fee43cd6cee66ab7fe964b5990f0af5a" category="paragraph">Você pode gerar e imprimir um PDF desta página e, em seguida, usar a seguinte Planilha para gravar informações de configuração de armazenamento NVMe sobre RoCE. Você precisa dessas informações para executar tarefas de provisionamento.</block>
   <block id="4e371876af3c4b06ed115abb1606ce3c" category="paragraph">Um exemplo de configuração que satisfaz os requisitos consiste em quatro sub-redes de rede da seguinte forma:</block>
@@ -4510,7 +4489,6 @@
   <block id="d2ab7f2f0a5b33496f422f7f99f93b07" category="list-text">Algumas substituições ou atualizações HIC podem exigir uma conversão de protocolo de porta de host. Siga as instruções na <block ref="efdbcf8658d5853e5683d8aef1bb4491" category="inline-xref-macro-rx"></block> para este requisito.</block>
   <block id="12d81cfc2d4212cb9a4099e19a0660cb" category="list-text">Os controladores EF300 devem ter a porta HIC 2 preenchida com um HIC para conetividade de host.</block>
   <block id="0473e45a7d7f9557ae9f5ca07ab2315a" category="summary">Substitua uma placa de interface de host (HIC) EF300 ou EF600 com falha.</block>
-  <block id="862acd5892fdfacc876441454483bc88" category="paragraph">Quando você substitui um HIC com falha, você deve desligar o storage, substituir o HIC e reaplicar a energia.</block>
   <block id="b41453ef0eae35f2df2004c1773786fb" category="list-text">Revisão <block ref="23b7aefccff24bae71374f469da3fa9d" category="inline-link-macro-rx"></block>.</block>
   <block id="a02dc1b9d7142c3522def499f6dfc937" category="list-text">Agende uma janela de manutenção de tempo de inatividade para este procedimento. Não é possível aceder aos dados na matriz de armazenamento até concluir com êxito este procedimento. Como ambos os controladores devem ter a mesma configuração HIC quando são ligados, a energia deve estar desligada quando você instala HICs.</block>
   <block id="a3910b9f5e509531bb5260b4c20c05a2" category="list-text">Placas de rede compatíveis com os controladores.</block>
@@ -4683,7 +4661,6 @@
   <block id="3d52e0419c7f8a010e6fc5f98c25da0f" category="list-text">Tem de seguir o <block ref="333b8feab226020b2ee6e03f5e462ace" category="inline-link-macro-rx"></block> para configurar o controlador.</block>
   <block id="ae1aaca96a065fbfcfe3174c8cf8c2dd" category="list-text">Tem de atualizar o firmware para a versão mais recente. Para atualizar o firmware, siga as instruções no <block ref="bf6a098eae1df274d91ef498db89d4bb" category="inline-link-macro-rx"></block>.</block>
   <block id="1ecabc0ac3185ab833d06fb1e3de2040" category="list-text">Você deve executar esta tarefa com os dois coletores do controlador.</block>
-  <block id="e4005cc04ad30971023ff0ce6398ae8e" category="list-text">Os controladores EF300 podem ter uma placa de expansão SAS instalada na porta 1 para permitir a expansão da bandeja de unidades.</block>
   <block id="f54101aa6702c025c4f74ec5ada7bae3" category="summary">Gerenciar o storage</block>
   <block id="14ad3096f7edeb7d23e22e3ab3539e0f" category="paragraph">Use os links abaixo para acessar a documentação que descreve como configurar, gerenciar e monitorar objetos de storage e sistemas de storage e-Series. Os links levam você a um site de documentação diferente.</block>
   <block id="6e8602d76e9fef34df4842cd3e73e25b" category="section-title">Referência do comando</block>
@@ -9224,13 +9201,10 @@
   <block id="d049f096e0cf1d889ec8cc31028f375f" category="doc">Verificar o suporte à configuração Linux e as restrições de revisão no e-Series (NVMe over InfiniBand)</block>
   <block id="ad6a9d04ac784c454bda19a77808e7a6" category="doc">Verificar o acesso ao storage no host no e-Series - Linux (NVMe over InfiniBand)</block>
   <block id="5f89e4391e734f9f4b02e1b568f48d4d" category="doc">Grave sua configuração NVMe over InfiniBand no e-Series - Linux</block>
-  <block id="cebaeb9ed83ac8d33e4baa8c1c2ea3cd" category="doc">Acessar volumes NVMe para destinos de dispositivos NVMe físicos no e-Series - Linux (NVMe em RoCE)</block>
   <block id="70a0aef5361fa5e17fc107247e1a4c28" category="doc">Configurar seu storage usando o Gerenciador de sistemas do SANtricity - Linux (NVMe sobre RoCE)</block>
-  <block id="5e72e88a41c656757d300eb4328a7218" category="doc">Acessar volumes NVMe para destinos de dispositivos virtuais no e-Series - Linux (NVMe sobre RoCE)</block>
   <block id="1d6c2bec0357042ed9103d8a757e052e" category="doc">Atribuir um volume usando o Gerenciador de sistema do SANtricity - Linux (NVMe sobre RoCE)</block>
   <block id="f4406895abc0e7fb7bba147a1b4018fc" category="doc">Configurar endereços IP usando DHCP no e-Series - Linux (NVMe sobre RoCE)</block>
   <block id="2e7f926937a19390a696edcd1611efd8" category="doc">Configurar o storage array NVMe em conexões RoCE no e-Series - Linux</block>
-  <block id="133ee7ce9eb1e935758f63664a8fc118" category="doc">Configurar o switch no e-Series - Linux (NVMe sobre RoCE)</block>
   <block id="1d775b87419a4b4faa9188d96fc9f1ef" category="doc">Criar um host usando o Gerenciador de sistema do SANtricity - Linux (NVMe sobre RoCE)</block>
   <block id="c06ab1417d3d38a6274ca96f4817729b" category="doc">Descubra e conecte-se ao storage a partir do host no e-Series - Linux (NVMe em RoCE)</block>
   <block id="d13fba07fdac58d9571d88a7346d4afc" category="doc">Exibir os volumes visíveis para o host no e-Series - Linux (NVMe sobre RoCE)</block>
@@ -9238,7 +9212,6 @@
   <block id="572a21343ba550460bb71fa935ac705f" category="doc">Configurar failover no host no e-Series - Linux (NVMe sobre RoCE)</block>
   <block id="af007fd6297be8fbbd67a572ddf4a294" category="doc">Configurar o iniciador NVMe sobre o RoCE no host no e-Series - Linux</block>
   <block id="e822c9e7b8dafd08970088f3f9f02ea6" category="doc">Verificar o suporte à configuração do Linux e revisar as restrições no e-Series (NVMe sobre RoCE)</block>
-  <block id="50328107f1322bdd15fcb668d29329c0" category="doc">Verificar o acesso ao storage no host no e-Series - Linux (NVMe sobre RoCE)</block>
   <block id="1d8081d0f5262d4fcb0996c8627dd7ac" category="doc">Grave seu NVMe em configuração RoCE no e-Series - Linux</block>
   <block id="a1f8e9c89527ab6eb3aa28c09b6aeefc" category="doc">Suposições (e-Series e Linux)</block>
   <block id="73c2afd8840846ab8905a188204d4b19" category="doc">Configure seu storage usando o Gerenciador de sistemas SANtricity - Linux (SAS)</block>
@@ -9571,7 +9544,6 @@
   <block id="6ef765942b756be59a09bba2c1bea181" category="summary">Para o SLES 12, você cria um sistema de arquivos no namespace e monta o sistema de arquivos.</block>
   <block id="5f72169c48d94cfdf13fa8e7156de8ee" category="doc">Criar sistemas de arquivos na Série E - Linux SLES 12 (NVMe sobre InfiniBand)</block>
   <block id="f3b72a76b6437fffe54c5f6a0e82669c" category="section-title">Ativar o Device Mapper Multipath (DMMP) SLES 12</block>
-  <block id="d3f59362d91c4f4d01ccdd309b5bb9fb" category="doc">Criar sistemas de arquivos na Série E - Linux SLES 12 (NVMe sobre RoCE)</block>
   <block id="01d7072c63a7f17dd56f882aa05c191e" category="paragraph">*SLES 12.x ou superior*</block>
   <block id="fd5ba176689e7b1be93aaa098be59948" category="sidebar">Criar sistemas de arquivos (SLES 12)</block>
   <block id="4090c38c724effbcef59a93b035aed46" category="cell"><block ref="4090c38c724effbcef59a93b035aed46" category="inline-link-rx"></block></block>
@@ -9591,8 +9563,6 @@
   <block id="5feeb9bdb446ab922f394a940c9ef4b8" category="paragraph">*SLES 12, SLES 15 ou SLES 16*</block>
   <block id="79b601d0ad8f64996a3f2d1444b5b84d" category="paragraph">*RHEL 8, RHEL 9 ou RHEL 10*</block>
   <block id="90f919900318df07a49ea42c3e35a350" category="paragraph">*RHEL 9, RHEL 10 ou SLES 16*</block>
-  <block id="9034687d4359fa9bd74cc1439c435374" category="doc">Criar sistemas de arquivos na Série E - Linux RHEL 8, RHEL 9, RHEL 10, SLES 15 e SLES 16 (NVMe sobre RoCE)</block>
-  <block id="39ec44e7fd4c2966d363390d0affe00e" category="paragraph">O SLES 12 utiliza o Device Mapper Multipath (DMMP) para multipathing em NVMe sobre RoCE. RHEL 8, RHEL 9, RHEL 10, SLES 15 e SLES 16 utilizam um recurso de failover NVMe nativo integrado. Dependendo do sistema operacional que você estiver usando, algumas configurações adicionais de multipath serão necessárias para que ele funcione corretamente.</block>
   <block id="980295b6698b8b2aea7adc1d9dafed8c" category="section-title">Novos recursos na versão 11.90R5</block>
   <block id="94bf3a177cda972f0b25d90290f4610c" category="paragraph">Esta versão contém apenas correções de defeitos e nenhum novo recurso. Para obter mais informações sobre as alterações nesta versão, consulte o E-Series SANtricity OS 11.90R5 README.</block>
   <block id="b2676fbb812b8574fa9249e68163593f" category="paragraph">Esta versão contém apenas pequenas alterações e nenhum novo recurso. Para mais informações sobre as alterações nesta versão, consulte o E-Series SANtricity OS 11.90R4 README.</block>
@@ -10692,4 +10662,85 @@
   <block id="5de3bf25939bdfa37414108f0d590980" category="section-title">Novidades na versão 12.0</block>
   <block id="ff0fa97cb252835f443a15ae7e9b46d4" category="admonition">A versão 12.0 do SANtricity OS é compatível apenas com os novos sistemas de storage all-flash EF80 e EF50.</block>
   <block id="c34bc836af57fee3bb2df387de995660" category="paragraph">Para obter instruções, consulte o<block ref="b1f1a9dce5288488396d4b3c3e74b2f3" category="inline-link-rx"></block> procedimento.</block>
+  <block id="a37cf4c23363931117c16cbe3dd30a4b" category="doc">Acessando volumes NVMe para um E-Series target a partir do host - Linux (NVMe sobre RoCE)</block>
+  <block id="91c251c2c332b36b4246d0eaed4acae3" category="paragraph">Para RHEL 9, RHEL 10, SLES 15 e SLES 16, uma solução de multipath NVMe nativa gerencia os caminhos físicos subjacentes ao único dispositivo NVMe aparente exibido pelo host. Portanto, direcionamos a E/S diretamente para o dispositivo NVMe do host, em vez de um dispositivo multipath como o Device Mapper Multipath (DMMP) baseado em SCSI. Os locais dos dispositivos NVMe são detalhados abaixo.</block>
+  <block id="4a1ca27394f764b4cd9f8c6e8533ee5e" category="section-title">Dispositivos NVMe são alvos de E/S</block>
+  <block id="2ea106abcbd25d43bb31cead5d6cc703" category="list-text">Digite o seguinte comando para localizar os volumes mapeados para este host a partir de um array de storage E-Series.</block>
+  <block id="af25994ac3ea2d881efa9bec5cdc65e0" category="paragraph">O comando a seguir fornece a localização de baixo nível do dispositivo NVMe no seu host, o nome do array ao qual o dispositivo está mapeado, o nome do volume, o NSID, o ID exclusivo do volume, o controlador proprietário atual e o tamanho do volume.</block>
+  <block id="87f3f3b7576f6e046569db7eee514036" category="list-text">Execute operações de E/S nos links em <block ref="4e113d7b9673c6f8c3a2b38f3f9aec2f" prefix=" " category="inline-code"></block>.</block>
+  <block id="b2d0c59be5cea399974b205866922a56" category="paragraph">Os links em<block ref="4e113d7b9673c6f8c3a2b38f3f9aec2f" prefix=" " category="inline-code"></block> são determinísticos e não sofrerão alterações. Evite usar a localização de baixo nível do dispositivo NVMe<block ref="e09c78c90a7982668482f4c02bad49a1" prefix=" " category="inline-code"></block> pois ela está sujeita a mudanças. O link entre esses dois locais pode ser encontrado usando o seguinte comando:</block>
+  <block id="38a322bb2690e6a3839def89744b6e58" category="list-text">Para visualizar os caminhos para os dispositivos NVMe, use o <block ref="f3d48156832e70ac41335c007fa76798" prefix=" " category="inline-code"></block> comando.</block>
+  <block id="2b52202747e5d866f7692787ad97416d" category="paragraph">As operações de E/S <block ref="324b592ebf16794a0c88511b40085a76" prefix=" " category="inline-code"></block> serão encaminhadas diretamente através <block ref="75822cee5451c71c71532e7dea089384" prefix=" " category="inline-code"></block> do dispositivo que possui todos os caminhos virtualizados internamente, utilizando a solução de multipath NVMe nativa.</block>
+  <block id="32c842f3838e64510515c659b107d965" category="list-text">*Opcional* - Para visualizar as informações de caminho para failover nativo por meio dos comandos legados do Device Mapper Multipath (DMMP), use o <block ref="3d80983fc82ff72fd51e5d1f7e90c56d" prefix=" " category="inline-code"></block> comando.</block>
+  <block id="87f3eda4ba2b39d6f55a2475bdef8112" category="admonition">Para visualizar as informações de caminho por meio dos comandos DMMP legados, o seguinte deve ser configurado no <block ref="dd5ff67ba72768d33f75e645aa2b8e56" prefix=" " category="inline-code"></block> file:</block>
+  <block id="6ca857f7a44a21cfffda914cf9549710" category="paragraph">*Exemplo de saída*</block>
+  <block id="d925294acf6cb6ef91e5d98ace2d5286" category="admonition">Este comando funciona apenas no RHEL 9 ou anterior e no SLES 16 ou anterior.</block>
+  <block id="de6e64b760ba6d4a951a91029d9af1be" category="inline-link-macro">criar os sistemas de arquivos</block>
+  <block id="85d7f7a216b72b512bd684ee912b615d" category="paragraph">Com a E/S funcionando nos dispositivos NVMe, <block ref="9cfee2fd581a69f81eddcb97710151e2" category="inline-link-macro-rx"></block>.</block>
+  <block id="101528bb025ec003638eca5db1448f0e" category="inline-link-macro">configurar os switches</block>
+  <block id="82c979cf70ade4d4c5b87f279cbd9d98" category="paragraph">Após configurar o armazenamento no SANtricity System Manager, <block ref="61d34af3399690d23b3b2b8ff78675df" category="inline-link-macro-rx"></block>.</block>
+  <block id="de0d53bbf1edbee26d780fa7aeaf2e27" category="inline-link-macro">Exibir os volumes visíveis para o host</block>
+  <block id="95768500acbdfe29034666ed6f603d70" category="paragraph">Após atribuir um volume, <block ref="57fe0f9d4870c536c92e9d8404a56348" category="inline-link-macro-rx"></block>.</block>
+  <block id="11c339ff6823eac9bead2964d19ab996" category="inline-link-macro">configurar seu armazenamento usando SANtricity System Manager</block>
+  <block id="83f8c80e4b638ab6478d3f406c93eacf" category="paragraph">Após configurar os endereços IP usando DHCP, <block ref="b8100642f6482c6074045d99e3e82190" category="inline-link-macro-rx"></block>.</block>
+  <block id="602a463bd066a3f8d89c69bb3529b46c" category="inline-link-macro">Descubra e conecte o armazenamento no host</block>
+  <block id="d2255594b7c9d2d3a436cb625ac23fdb" category="paragraph">Após configurar as definições da porta NVMe sobre RoCE, <block ref="e588c9f2f098167c40ebed2b8ba01272" category="inline-link-macro-rx"></block>.</block>
+  <block id="de51b9f78104212ea19cafcc1aa1af7f" category="doc">Configurar os switches em E-Series - Linux (NVMe sobre RoCE)</block>
+  <block id="78c66e16ff4598c6116cedf599cf6e72" category="admonition">*RISCO DE PERDA DE DADOS.* Você deve executar NVMe/RoCE em um ambiente sem perdas. Habilite o controle de fluxo de ponta a ponta usando o Global Pause Frame based Flow Control ou Priority Flow Control (PFC) em sua rede para eliminar o risco de perda de dados.</block>
+  <block id="7c64bbe6789d9c78deb6d523dad71fa5" category="section-title">Quadros de pausa globais</block>
+  <block id="feb7f0d00fab57efe3a43429ed8663f5" category="paragraph">Os quadros de pausa globais são a forma mais básica de controle de fluxo e a mais simples de implementar. Quando o tráfego sobrecarrega uma porta de rede, são gerados quadros de pausa que interrompem todo o tráfego nessa porta até que o tráfego anterior seja processado o suficiente para que a porta de rede possa continuar operando sem descartar o tráfego de entrada.</block>
+  <block id="aa4809645ae2edf02eefcd695d7a00e6" category="list-text">Habilite o controle de fluxo baseado em Global Pause Frame *end to end* usando a documentação fornecida pelo fornecedor do seu switch.</block>
+  <block id="d0b94711326f99d06e367599f8a7ce03" category="list-text">Certifique-se de que o controle de fluxo baseado em Global Pause Frame esteja habilitado em todas as portas de switch conectadas aos seus hosts, arrays e links entre switches neste ambiente.</block>
+  <block id="1b2ecdcdede85794b40178ec60af3584" category="section-title">Controle de fluxo prioritário</block>
+  <block id="8ff4cbc015c6379b46657d889607c395" category="paragraph">O Controle de Fluxo por Prioridade (PFC, na sigla em inglês) é uma forma mais complexa de controle de fluxo que atribui diferentes níveis de prioridade a diferentes tipos de tráfego. Quando o tráfego recebido em uma prioridade é excessivo, ele é pausado enquanto o tráfego correspondente a outros níveis de prioridade pode continuar, ajudando a evitar que o tráfego intenso de certos tipos prejudique outros tipos de tráfego.</block>
+  <block id="ec570ac6dacd2df8316bc2f708847efc" category="paragraph">Neste momento, você deve estar usando um array de storage E-Series EF600 com HICs Ethernet de 200 Gb/s (PN 111-04583) executando a versão 11.80.1 ou um array de storage E-Series EF80 executando com qualquer HIC NVMe/RoCE compatível. Os parâmetros PFC estão codificados no array e exigem que o tráfego NVMe/RoCE seja marcado como prioridade 3 com um valor DSCP de <block ref="f0935e4cd5920aa6c7c996a5ee53a70f" prefix=" " category="inline-code"></block>.</block>
+  <block id="559dcf4177cfdf7eb85f326141ca50cd" category="list-text">Consulte a documentação do fornecedor do seu switch para obter mais informações sobre como configurar sua rede usando os valores de PFC.</block>
+  <block id="b85cf23585c90efd9af6fcd73fa75295" category="inline-link-macro">Configurar o iniciador NVMe sobre RoCE no host</block>
+  <block id="7bbf28624b17361ccea54892632c858e" category="paragraph">Após configurar os switches, <block ref="95b7a1ba3f9889c0b414ce2ba47c4931" category="inline-link-macro-rx"></block>.</block>
+  <block id="83441cd37c158260b27f7f62519460ff" category="summary">Para RHEL 9, RHEL 10, SLES 15 e SLES 16, você cria um sistema de arquivos no dispositivo nvme nativo e monta o sistema de arquivos.</block>
+  <block id="ef584eac1f2cf237a03edcb6114915c0" category="doc">Criar sistemas de arquivos na E-Series - Linux (NVMe sobre RoCE)</block>
+  <block id="9f6bf7ed685a3543bdade472419ab06c" category="inline-link-macro">acessando volumes NVMe para um E-Series target a partir do host</block>
+  <block id="abd87e5f00edf2b2787374cf4c27e685" category="paragraph">Certifique-se de ter concluído a <block ref="06eb211a3ddd2abaa7174ce99ee6cecc" category="inline-link-macro-rx"></block> tarefa para garantir que os dispositivos NVMe estejam configurados corretamente e acessíveis.</block>
+  <block id="143a64ab567fb05e3f04c1990fb26e2d" category="inline-link-macro">Registre suas informações de configuração do NVMr sobre RoCE</block>
+  <block id="45f8638141f7f3362b5761694a8dd890" category="paragraph">Após criar os sistemas de arquivos, <block ref="3aac06a217018608c5d3787062e117d2" category="inline-link-macro-rx"></block>.</block>
+  <block id="ae296683b084f21dae03165b7c5b3d3c" category="paragraph">Selecione a seguinte opção na lista suspensa:</block>
+  <block id="027e3fb95a6f5a358243389e12e6a725" category="inline-link-macro">atribuir um volume através do SANtricity System Manager</block>
+  <block id="9ebf6320aef24a2fcd5852a6b6ce9155" category="paragraph">Após criar o host, <block ref="526e349e337a81b9e987d9fbe46dee03" category="inline-link-macro-rx"></block>.</block>
+  <block id="4c2527c1f1efb4ee865370b5b8f43d49" category="list-text">Verifique se você consegue pingar do host para cada porta HIC do array usando a taxa MTU esperada com o seguinte comando:</block>
+  <block id="c2aadac3fc92ca45c9b6f4b5ff6db019" category="list-text">Repita o passo 2 para quaisquer outras conexões.</block>
+  <block id="634a1a0e9d1d711a949d1cd0da3665d2" category="admonition">O comando listado acima não persiste após reinicializar. O<block ref="9058603c510faa501774cf55475bb088" prefix=" " category="inline-code"></block> comando precisará ser executado após cada reinicialização para restabelecer as conexões NVMe.</block>
+  <block id="e01d8563f5c2302999b20f4ce80e1a47" category="admonition">A profundidade de fila recomendada é 1024. Substitua a configuração padrão de 128 por 1024 usando a opção de linha de comando `-Q 1024`, conforme mostrado no exemplo a seguir.</block>
+  <block id="1302a8c05ad12b5ba7967d87980ee185" category="list-text">Repita o passo 4 para conectar o subsistema descoberto no segundo caminho.</block>
+  <block id="c3b56ab2f3dce17086e81b05a252d5ea" category="list-text">**Opcional** - Configure seu host para descobrir e se conectar automaticamente aos alvos a cada inicialização.</block>
+  <block id="53d87b975f9abfb4c3b01ba95507cbd2" category="list-text">Adicione os parâmetros de descoberta das etapas 2 e 3 a<block ref="5649a0d7bf9e7c1fa5839cc07ded7d52" prefix=" " category="inline-code"></block> usando o seguinte procedimento e formato:</block>
+  <block id="8838d21d0f89c8b4a9251ef4ec424710" category="list-text">Habilite o serviço nvmf-autoconnect após preencher o arquivo <block ref="5649a0d7bf9e7c1fa5839cc07ded7d52" prefix=" " category="inline-code"></block> usando o seguinte comando:</block>
+  <block id="1dfe3ec5fc291f6376bf8f94e2b256cc" category="inline-link-macro">definir o host</block>
+  <block id="14b61b2287a0d2e64e69529d05643a20" category="paragraph">Após estabelecer as conexões, <block ref="34ace76cf2ac63d76b3bcce4e204b033" category="inline-link-macro-rx"></block>.</block>
+  <block id="e9342fba6a32664bb9aafae389c32fe9" category="inline-link-macro">Configure o failover no host</block>
+  <block id="2091e734a83920984189f3ef4f835343" category="paragraph">Após visualizar os volumes visíveis, <block ref="d8b9f99d455f0040fb666314b5365fe8" category="inline-link-macro-rx"></block>.</block>
+  <block id="ef8d227bb009bfb15f0cbcce8a8e8745" category="paragraph">Consulte o <block ref="0aaf04254af18646f3d246cd4a4b417d" category="inline-link-rx"></block> para garantir que todas as atualizações necessárias estejam instaladas, pois correções de bugs importantes podem ser necessárias para versões do SLES ou RHEL que não estão disponíveis na versão inicial.</block>
+  <block id="5b9eb26b4b035236abf0a3ea65d7d9b6" category="inline-link-macro">Acesse os volumes NVMe de um E-Series alvo a partir do host</block>
+  <block id="76542a9b8e953f18508546161670f6bc" category="paragraph">Com o Multipathing NVMe nativo ativado, <block ref="642f530d4ad60fe27c47d6e8ef759cde" category="inline-link-macro-rx"></block>.</block>
+  <block id="f6e6e8c29a45760976198e39adf15365" category="paragraph">Você deve estar executando o sistema operacional RHEL 9, RHEL 10, SLES 15 ou SLES 16 com o service pack mais recente compatível. Consulte o <block ref="0aaf04254af18646f3d246cd4a4b417d" category="inline-link-rx"></block> para obter uma lista completa dos requisitos mais recentes.</block>
+  <block id="954ba35dda35e5557a7bdafc244bd9f5" category="paragraph">*SLES 15 ou SLES 16*</block>
+  <block id="2d868d12f62d608e46bfb64fc85c2eda" category="paragraph">*RHEL 9 e RHEL 10*</block>
+  <block id="e33d0f4356bfb2aacc32f1d3bc275dc4" category="inline-link-macro">Documentação NVIDIA DOCA</block>
+  <block id="c39371c3af006ddc69324348f0dcd446" category="admonition">Se você estiver usando um NVIDIA HCA e desejar usar o driver DOCA externo, consulte o <block ref="3fc20dc98826e6d1feeb2407afd6d4f9" category="inline-link-macro-rx"></block> para obter informações sobre como instalá-lo corretamente nesse ambiente.</block>
+  <block id="87469c22c8c9e004a1d89d93af518553" category="list-text">Para RHEL 9, instale os scripts de rede:</block>
+  <block id="ff8e4ff2d7f1e133b74bc3ae6b7f881d" category="paragraph">*SLES 15*</block>
+  <block id="7a41d7c09bba5ee85d880614cd71da91" category="paragraph">Crie o arquivo de exemplo <block ref="3f3164e95f1a0a33561bc4e251b80643" prefix=" " category="inline-code"></block> com o seguinte conteúdo, onde MTU é definido para o valor mais alto que pode ser alcançado sem fragmentação de pacotes (normalmente 9000).</block>
+  <block id="da045e78afba8cddf53b901c68953ec8" category="paragraph">*RHEL 9, RHEL 10 ou SLES 16*</block>
+  <block id="551da226d12cccc393d4622e3de46942" category="list-text">Alternativamente, você pode carregar o <block ref="84210bdbe25e211d594fd7255d9817df" prefix=" " category="inline-code"></block>kernel sem reinicializar executando este comando:</block>
+  <block id="ce8a4a1f94b22076a940274b38fc77df" category="list-text">Verifique se o <block ref="84210bdbe25e211d594fd7255d9817df" prefix=" " category="inline-code"></block>módulo do kernel está carregado, execute este comando:</block>
+  <block id="c88f40946ec4743c09d44d18d84ca0e6" category="inline-link-macro">configurar as definições da porta NVMe sobre RoCE</block>
+  <block id="d91aaa5c628f1c0e6776888411923daf" category="paragraph">Após configurar o iniciador NVMe sobre RoCE no host, <block ref="b8d91f2d9373f904708452fd558487b9" category="inline-link-macro-rx"></block>.</block>
+  <block id="56dd88f73dc9e3fe0f4f088112d50bf6" category="admonition">*RISCO DE PERDA DE DADOS.* Você deve executar NVMe sobre RoCE em um ambiente sem perdas. Habilite controle de fluxo de ponta a ponta usando Quadros de Pausa Global ou Controle de Fluxo Prioritário (PFC) em sua rede para eliminar o risco de perda de dados. O PFC exige que o tráfego NVMe sobre RoCE seja marcado como tráfego de Prioridade 3 com um valor DSCP de<block ref="f0935e4cd5920aa6c7c996a5ee53a70f" prefix=" " category="inline-code"></block>.</block>
+  <block id="cfc9a52b36b4bac1175d85feda4737d6" category="inline-link-macro">configurar endereços IP usando DHCP</block>
+  <block id="ab76f1b6a91823d84cc28d97a438ee49" category="paragraph">Após verificar a compatibilidade com a configuração do Linux e revisar as restrições, <block ref="26e7ddc4a99218cc55e1c183bc759716" category="inline-link-macro-rx"></block>.</block>
+  <block id="70d9e3c68d42d6ec42ab792e06c44357" category="inline-link-macro">NVMe</block>
+  <block id="1791f8465d11d224647d11ee0eab3955" category="list-text"><block ref="1791f8465d11d224647d11ee0eab3955" category="inline-link-macro-rx"></block></block>
+  <block id="68df22b283edf6918b272ee1e4eef450" category="paragraph">Ao substituir um HIC com defeito, é necessário desconectar um controlador para colocar o sistema em um estado não redundante, substituir o HIC e reconectar o controlador.</block>
+  <block id="7f3980e2c518e011140305dfa2c7cc40" category="list-text">Agende uma janela de manutenção de downtime para este procedimento. Você não poderá acessar os dados no array de storage até que este procedimento seja concluído com sucesso. Como ambos os controladores devem ter a mesma configuração HIC quando estão ligados, você deve desconectar um controlador para colocar o sistema em um estado não redundante ao instalar os HICs.</block>
+  <block id="79a7b3d475a1ce35fef4a7398f3e40b8" category="list-text">Para controladores EF300, a placa de expansão SAS deve ser instalada na porta 1 para permitir a expansão da bandeja de unidades.</block>
+  <block id="805eb1d81197f7063faa2748049cf91c" category="sidebar">Criar sistemas de arquivos</block>
 </blocks>

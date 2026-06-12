@@ -46,7 +46,7 @@ Antes de usar o NVMe em RoCE, consulte o https://mysupport.netapp.com/matrix["Fe
 === Restrições do interrutor
 
 
-CAUTION: *RISCO DE PERDA DE DADOS.* Você deve habilitar o controle de fluxo para uso com o Global Pause Control no switch para eliminar o risco de perda de dados em um ambiente NVMe sobre RoCE.
+CAUTION: *RISCO DE PERDA DE DADOS.* Você deve executar NVMe sobre RoCE em um ambiente sem perdas. Habilite controle de fluxo de ponta a ponta usando Quadros de Pausa Global ou Controle de Fluxo Prioritário (PFC) em sua rede para eliminar o risco de perda de dados. O PFC exige que o tráfego NVMe sobre RoCE seja marcado como tráfego de Prioridade 3 com um valor DSCP de `106`.
 
 
 
@@ -55,3 +55,6 @@ CAUTION: *RISCO DE PERDA DE DADOS.* Você deve habilitar o controle de fluxo par
 * Espelhamento assíncrono e síncrono não são compatíveis.
 * O thin Provisioning (a criação de thin volumes) não é suportado.
 
+
+.O que se segue?
+Após verificar a compatibilidade com a configuração do Linux e revisar as restrições, link:nvme-roce-configure-ip-address-dhcp-task.html["configurar endereços IP usando DHCP"].

@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: NVMe volume physical, express linux configuration, software configuration, linux host, E2800, E5700, EF300, EF600, E-Series, eseries 
 summary: Você pode configurar a e/S direcionada para o destino do dispositivo com base na versão Linux. 
 ---
-= Acessar volumes NVMe para destinos de dispositivos NVMe físicos no e-Series - Linux (NVMe em RoCE)
+= Acessando volumes NVMe para um E-Series target a partir do host - Linux (NVMe sobre RoCE)
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
@@ -13,75 +13,96 @@ summary: Você pode configurar a e/S direcionada para o destino do dispositivo c
 [role="lead"]
 Você pode configurar a e/S direcionada para o destino do dispositivo com base no sistema operacional (e pelo método multipathing de extensão) que você está usando.
 
-Para RHEL 8, RHEL 9 e SLES 15, e/S é direcionado para os destinos de dispositivos NVMe físicos pelo host Linux. Uma solução de multipathing NVMe nativa gerencia os caminhos físicos subjacentes ao único dispositivo físico aparente exibido pelo host.
+Para RHEL 9, RHEL 10, SLES 15 e SLES 16, uma solução de multipath NVMe nativa gerencia os caminhos físicos subjacentes ao único dispositivo NVMe aparente exibido pelo host. Portanto, direcionamos a E/S diretamente para o dispositivo NVMe do host, em vez de um dispositivo multipath como o Device Mapper Multipath (DMMP) baseado em SCSI. Os locais dos dispositivos NVMe são detalhados abaixo.
 
 
 
-== Dispositivos NVMe físicos são destinos de I/O.
+== Dispositivos NVMe são alvos de E/S
 
-É melhor prática executar I/o para os links em `/dev/disk/by-id/nvme-eui.[uuid#]` vez de diretamente para o caminho físico do dispositivo nvme `/dev/nvme[subsys#]n[id#]` . O link entre esses dois locais pode ser encontrado usando o seguinte comando:
+. Digite o seguinte comando para localizar os volumes mapeados para este host a partir de um array de storage E-Series.
++
+O comando a seguir fornece a localização de baixo nível do dispositivo NVMe no seu host, o nome do array ao qual o dispositivo está mapeado, o nome do volume, o NSID, o ID exclusivo do volume, o controlador proprietário atual e o tamanho do volume.
 
++
+[listing]
+----
+# nvme netapp smdevices
+/dev/nvme0n1, Array Name creG63-FN, Volume Name 1, NSID 1, Volume ID 00001b7f606ec75100a0980000ed289e, Controller B, 1.10TB
+/dev/nvme0n2, Array Name creG63-FN, Volume Name 2, NSID 2, Volume ID 0000128a6a0d045500a0980000ed27f4, Controller A, 536.87GB
+/dev/nvme0n3, Array Name creG63-FN, Volume Name 3, NSID 3, Volume ID 00001b81606ec75b00a0980000ed289e, Controller B, 536.87GB
+/dev/nvme0n4, Array Name creG63-FN, Volume Name 4, NSID 4, Volume ID 0000128c6a0d045700a0980000ed27f4, Controller A, 214.75GB
+----
+. Execute operações de E/S nos links em  `/dev/disk/by-id/nvme-eui.[Volume ID#]`.
++
+Os links em `/dev/disk/by-id/nvme-eui.[Volume ID#]` são determinísticos e não sofrerão alterações. Evite usar a localização de baixo nível do dispositivo NVMe `(/dev/nvme[subsys#]n[id#])` pois ela está sujeita a mudanças. O link entre esses dois locais pode ser encontrado usando o seguinte comando:
+
++
 [listing]
 ----
 # ls /dev/disk/by-id/ -l
-lrwxrwxrwx 1 root root 13 Oct 18 15:14 nvme-eui.0000320f5cad32cf00a0980000af4112 -> ../../nvme0n1
-----
-A execução de e/S `/dev/disk/by-id/nvme-eui.[uuid#]` será passada diretamente pela `/dev/nvme[subsys#]n[id#]` qual tem todos os caminhos virtualizados por baixo dela usando a solução de multipathing NVMe nativa.
 
-Você pode exibir seus caminhos executando:
+lrwxrwxrwx 1 root root 13 May 19 15:07 nvme-eui.0000128a6a0d045500a0980000ed27f4 -> ../../nvme0n2
+lrwxrwxrwx 1 root root 13 May 19 15:07 nvme-eui.0000128c6a0d045700a0980000ed27f4 -> ../../nvme0n4
+lrwxrwxrwx 1 root root 13 May 19 15:07 nvme-eui.00001b7f606ec75100a0980000ed289e -> ../../nvme0n1
+lrwxrwxrwx 1 root root 13 May 19 15:07 nvme-eui.00001b81606ec75b00a0980000ed289e -> ../../nvme0n3
+----
+. Para visualizar os caminhos para os dispositivos NVMe, use o  `nvme list-subsys` comando.
++
+As operações de E/S  `/dev/disk/by-id/nvme-eui.[uuid#]` serão encaminhadas diretamente através 
+`/dev/nvme[subsys#]n[id#]`` do dispositivo que possui todos os caminhos virtualizados internamente, utilizando a solução de multipath NVMe nativa.
 
-[listing]
-----
-# nvme list-subsys
-----
-Exemplo de saída:
-
-[listing]
-----
-nvme-subsys0 - NQN=nqn.1992-08.com.netapp:5700.600a098000a522500000000589aa8a6
-\
-+- nvme0 rdma traddr=192.4.21.131 trsvcid=4420 live
-+- nvme1 rdma traddr=192.4.22.141 trsvcid=4420 live
-----
-Se você especificar um dispositivo de namespace ao usar o `nvme list-subsys` comando, ele fornecerá informações adicionais sobre os caminhos para esse namespace:
-
++
 [listing]
 ----
 # nvme list-subsys /dev/nvme0n1
-nvme-subsys0 - NQN=nqn.1992-08.com.netapp:5700.600a098000af44620000000058d5dd96
+nvme-subsys0 - NQN=nqn.1992-08.com.netapp:EF80.600a098000ed28cb0000000062b24855
+               hostnqn=nqn.2014-08.org.nvmexpress:uuid:5257c202-9d94-ea11-b761-00000000003c
 \
- +- nvme0 rdma traddr=192.168.130.101 trsvcid=4420 live non-optimized
- +- nvme1 rdma traddr=192.168.131.101 trsvcid=4420 live non-optimized
- +- nvme2 rdma traddr=192.168.130.102 trsvcid=4420 live optimized
- +- nvme3 rdma traddr=192.168.131.102 trsvcid=4420 live optimized
+ +- nvme0 tcp traddr=10.10.10.101,trsvcid=4420,src_addr=10.10.10.100 live non-optimized
+ +- nvme1 tcp traddr=10.10.10.11,trsvcid=4420,src_addr=10.10.10.100 live non-optimized
+ +- nvme2 tcp traddr=10.10.20.201,trsvcid=4420,src_addr=10.10.20.200 live optimized
+ +- nvme3 tcp traddr=10.10.20.21,trsvcid=4420,src_addr=10.10.20.200 live optimized
+ +- nvme4 tcp traddr=10.10.20.39,trsvcid=4420,src_addr=10.10.20.200 live non-optimized
+ +- nvme5 tcp traddr=10.10.20.31,trsvcid=4420,src_addr=10.10.20.200 live non-optimized
+ +- nvme6 tcp traddr=10.10.10.49,trsvcid=4420,src_addr=10.10.10.100 live optimized
+ +- nvme7 tcp traddr=10.10.10.41,trsvcid=4420,src_addr=10.10.10.100 live optimized
 ----
-Também há ganchos nos comandos multipath para permitir que você visualize as informações de caminho para failover nativo por meio deles também:
-
+. *Opcional* - Para visualizar as informações de caminho para failover nativo por meio dos comandos legados do Device Mapper Multipath (DMMP), use o  `multipath -ll` comando.
++
 [listing]
 ----
 #multipath -ll
 ----
++
 
-NOTE: Para visualizar as informações do caminho, o seguinte deve ser definido em /etc/multipath.conf:
+NOTE: Para visualizar as informações de caminho por meio dos comandos DMMP legados, o seguinte deve ser configurado no  `/etc/multipath.conf` file:
 
++
 [listing]
 ----
-
 defaults {
-        enable_foreign nvme
+    enable_foreign nvme
 }
 ----
++
+*Exemplo de saída*
 
-NOTE: Isso não funcionará mais no RHEL 10. Funciona no RHEL 9 e versões anteriores, e no SLES 16 e versões anteriores.
-
-Exemplo de saída:
-
++
 [listing]
 ----
-eui.0000a0335c05d57a00a0980000a5229d [nvme]:nvme0n9 NVMe,Netapp E-Series,08520001
+eui.0000a0335c05d57a00a0980000a5229d [nvme]:nvme0n9 NVMe,Netapp E-
+Series,08520001
 size=4194304 features='n/a' hwhandler='ANA' wp=rw
 |-+- policy='n/a' prio=50 status=optimized
 | `- 0:0:1 nvme0c0n1 0:0 n/a optimized    live
 `-+- policy='n/a' prio-10 status=non-optimized
 `- 0:1:1 nvme0c1n1 0:0 n/a non-optimized    live
 ----
++
+
+NOTE: Este comando funciona apenas no RHEL 9 ou anterior e no SLES 16 ou anterior.
+
+
+
+.O que se segue?
+Com a E/S funcionando nos dispositivos NVMe, link:nvme-roce-create-filesystems-sles-15-task.html["criar os sistemas de arquivos"].

@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: configure switch, express linux configuration, software configuration, linux host, E2800, E5700, EF300, EF600, E-Series, eseries 
 summary: Você configura os switches de acordo com as recomendações do fornecedor para NVMe em RoCE. Essas recomendações podem incluir diretivas de configuração, bem como atualizações de código. 
 ---
-= Configurar o switch no e-Series - Linux (NVMe sobre RoCE)
+= Configurar os switches em E-Series - Linux (NVMe sobre RoCE)
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
@@ -14,9 +14,31 @@ summary: Você configura os switches de acordo com as recomendações do fornece
 Você configura os switches de acordo com as recomendações do fornecedor para NVMe em RoCE. Essas recomendações podem incluir diretivas de configuração, bem como atualizações de código.
 
 
-CAUTION: *RISCO DE PERDA DE DADOS.* Você deve habilitar o controle de fluxo para uso com o Global Pause Control no switch para eliminar o risco de perda de dados em um ambiente NVMe sobre RoCE.
+CAUTION: *RISCO DE PERDA DE DADOS.* Você deve executar NVMe/RoCE em um ambiente sem perdas. Habilite o controle de fluxo de ponta a ponta usando o Global Pause Frame based Flow Control ou Priority Flow Control (PFC) em sua rede para eliminar o risco de perda de dados.
+
+
+
+== Quadros de pausa globais
+
+Os quadros de pausa globais são a forma mais básica de controle de fluxo e a mais simples de implementar. Quando o tráfego sobrecarrega uma porta de rede, são gerados quadros de pausa que interrompem todo o tráfego nessa porta até que o tráfego anterior seja processado o suficiente para que a porta de rede possa continuar operando sem descartar o tráfego de entrada.
 
 .Passos
-. Ative o controle de fluxo de quadro de pausa Ethernet *de ponta a ponta* como a configuração de melhores práticas.
+. Habilite o controle de fluxo baseado em Global Pause Frame *end to end* usando a documentação fornecida pelo fornecedor do seu switch.
+. Certifique-se de que o controle de fluxo baseado em Global Pause Frame esteja habilitado em todas as portas de switch conectadas aos seus hosts, arrays e links entre switches neste ambiente.
+
+
+
+
+== Controle de fluxo prioritário
+
+O Controle de Fluxo por Prioridade (PFC, na sigla em inglês) é uma forma mais complexa de controle de fluxo que atribui diferentes níveis de prioridade a diferentes tipos de tráfego. Quando o tráfego recebido em uma prioridade é excessivo, ele é pausado enquanto o tráfego correspondente a outros níveis de prioridade pode continuar, ajudando a evitar que o tráfego intenso de certos tipos prejudique outros tipos de tráfego.
+
+Neste momento, você deve estar usando um array de storage E-Series EF600 com HICs Ethernet de 200 Gb/s (PN 111-04583) executando a versão 11.80.1 ou um array de storage E-Series EF80 executando com qualquer HIC NVMe/RoCE compatível. Os parâmetros PFC estão codificados no array e exigem que o tráfego NVMe/RoCE seja marcado como prioridade 3 com um valor DSCP de  `106`.
+
+.Passos
+. Consulte a documentação do fornecedor do seu switch para obter mais informações sobre como configurar sua rede usando os valores de PFC.
 . Consulte o administrador da rede para obter dicas sobre como selecionar a melhor configuração para o seu ambiente.
 
+
+.O que se segue?
+Após configurar os switches, link:nvme-roce-setup-host-side-task.html["Configurar o iniciador NVMe sobre RoCE no host"].

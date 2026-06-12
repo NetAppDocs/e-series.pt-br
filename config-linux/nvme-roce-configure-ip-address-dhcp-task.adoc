@@ -51,3 +51,6 @@ Se a matriz de armazenamento não conseguir obter endereços IP atribuídos pelo
 O administrador de rede precisa dos endereços MAC para determinar o endereço IP de cada controlador. Você precisará dos endereços IP para se conetar ao seu sistema de armazenamento por meio do navegador.
 
 
+
+.O que se segue?
+Após configurar os endereços IP usando DHCP, link:nvme-roce-access-sam-setup-wizard-task.html["configurar seu armazenamento usando SANtricity System Manager"].

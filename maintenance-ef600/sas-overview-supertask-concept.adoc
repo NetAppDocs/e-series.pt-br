@@ -21,6 +21,6 @@ Se você pretende adicionar uma placa de expansão SAS a um EF300, EF600, EF300C
 * Você tem uma chave de fenda Phillips nº 1.
 * Você tem etiquetas para identificar cada cabo que está conetado ao recipiente do controlador.
 * Você tem uma estação de gerenciamento com um navegador que pode acessar o Gerenciador de sistema do SANtricity para o controlador. (Para abrir a interface do System Manager, aponte o navegador para o nome de domínio ou endereço IP do controlador.)
-* Os controladores EF300 podem ter uma placa de expansão SAS instalada na porta 1 para permitir a expansão da bandeja de unidades.
+* Para controladores EF300, a placa de expansão SAS deve ser instalada na porta 1 para permitir a expansão da bandeja de unidades.
 * Para fazer o cabeamento da expansão SAS, consulte link:../install-hw-cabling/index.html["Cabeamento de hardware e-Series"] para obter instruções.
 

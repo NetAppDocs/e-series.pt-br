@@ -15,11 +15,11 @@ summary: 'Substitua uma placa de interface de host (HIC) EF300 ou EF600 com falh
 Siga este procedimento para substituir uma placa de interface de host (HIC) com falha em um array EF300, EF600, EF300C ou EF600C.
 
 .Sobre esta tarefa
-Quando você substitui um HIC com falha, você deve desligar o storage, substituir o HIC e reaplicar a energia.
+Ao substituir um HIC com defeito, é necessário desconectar um controlador para colocar o sistema em um estado não redundante, substituir o HIC e reconectar o controlador.
 
 .Antes de começar
 * Revisão link:hics-overview-supertask-concept.html["Requisitos para atualizações HIC EF300 ou EF600"].
-* Agende uma janela de manutenção de tempo de inatividade para este procedimento. Não é possível aceder aos dados na matriz de armazenamento até concluir com êxito este procedimento. Como ambos os controladores devem ter a mesma configuração HIC quando são ligados, a energia deve estar desligada quando você instala HICs.
+* Agende uma janela de manutenção de downtime para este procedimento. Você não poderá acessar os dados no array de storage até que este procedimento seja concluído com sucesso. Como ambos os controladores devem ter a mesma configuração HIC quando estão ligados, você deve desconectar um controlador para colocar o sistema em um estado não redundante ao instalar os HICs.
 * Certifique-se de que tem o seguinte:
 +
 ** Placas de rede compatíveis com os controladores.
