@@ -15,6 +15,7 @@ Use o recurso volumes de armazenamento remoto do SANtricity para importar dados 
 
 
 
+[[configuration-overview]]
 == Visão geral da configuração
 
 O recurso volumes de armazenamento remoto está disponível com o Gerenciador de sistema do SANtricity em IDs de submodelo selecionados. Para usar esse recurso, você deve configurar um sistema de storage remoto e um sistema de storage e-Series para se comunicar entre si.
@@ -31,6 +32,7 @@ NOTE: Atualmente, os volumes de armazenamento remoto SANtricity não são suport
 
 
 
+[[find-more-information]]
 == Encontre mais informações
 
 * Ajuda online, disponível na interface do utilizador do System Manager ou no https://docs.netapp.com/us-en/e-series-santricity/index.html["Site de documentação do software SANtricity"^].

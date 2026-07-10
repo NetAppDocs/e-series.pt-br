@@ -22,6 +22,7 @@ Substitua o módulo de ventoinha no seu sistema de storage EF50 ou EF80 quando u
 
 
 
+[[step-1-prepare-to-replace-a-fan]]
 == Passo 1: prepare-se para substituir um ventilador
 
 Prepare-se para substituir uma ventoinha confirmando que está tudo certo para substituí-la, reunindo as ferramentas e equipamentos necessários e fazendo backup do banco de dados de configuração do sistema de storage.
@@ -57,6 +58,7 @@ O arquivo é salvo na pasta Downloads do seu navegador com o nome *configuration
 
 
 
+[[step-2-place-the-controller-offline]]
 == Etapa 2: coloque o controlador offline
 
 Coloque o controlador com problema offline para que você possa realizar o restante deste procedimento com segurança.
@@ -95,6 +97,7 @@ CAUTION: Se o campo *OK para remover* não exibir *Sim*, não prossiga com a rem
 
 
 
+[[step-3-remove-the-controller]]
 == Passo 3: remover o controlador
 
 Verifique se todos os dados na memória cache foram gravados nas unidades, desconecte todos os cabos do controlador com defeito e, em seguida, remova o controlador com defeito do chassi.
@@ -177,6 +180,7 @@ Se necessário, gire as alças para cima (próximas às abas) para tirá-las do 
 
 
 
+[[step-4-replace-a-fan]]
 == Passo 4: substituir o ventilador
 
 Localize a ventoinha defeituosa dentro do controlador com problema e substitua-a.
@@ -210,6 +214,7 @@ Guarde o material da embalagem para usar quando devolver o ventilador com defeit
 
 
 
+[[step-5-reinstall-the-controller]]
 == Passo 5: reinstale o controlador
 
 Reinstale o controlador no chassi, reconecte o cabo de força e todos os seus cabos.
@@ -268,6 +273,7 @@ NOTE: A reconexão dos cabos deve ser feita antes de colocar o controlador onlin
 
 
 
+[[step-6-place-the-controller-online]]
 == Passo 6: coloque o controlador online
 
 Coloque o controlador com defeito de volta online.
@@ -309,6 +315,7 @@ NOTE: Caso não consiga resolver o problema, entre em contato https://mysupport.
 
 
 
+[[step-7-complete-the-fan-replacement]]
 == Etapa 7: conclua a substituição do ventilador
 
 Utilizando SANtricity System Manager, certifique-se de que a versão mais recente do SANtricity OS esteja instalada, verifique se todos os volumes foram devolvidos aos seus controladores de propriedade e colete os dados de suporte para que você possa retomar as operações.
@@ -359,6 +366,7 @@ O arquivo é salvo na pasta Downloads do seu navegador com o nome *support-data.
 
 
 
+[[step-8-return-the-failed-part-to-netapp]]
 == Etapa 8: Devolva a peça defeituosa para NetApp
 
 Devolva a peça defeituosa para a NetApp, conforme descrito nas instruções de RMA que acompanham o kit. Consulte a  https://mysupport.netapp.com/site/info/rma["Devolução e substituições de peças"] página para obter mais informações.

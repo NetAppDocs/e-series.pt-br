@@ -40,6 +40,7 @@ CAUTION: *Possível perda de acesso a dados* -- nunca instale um HIC em um recip
 
 
 
+[[step-1-place-controller-shelf-offline]]
 == Passo 1: Coloque o compartimento do controlador offline
 
 Coloque o compartimento da controladora offline para que você possa atualizar os HICs com segurança.
@@ -96,6 +97,7 @@ O LED verde Cache ative na parte de trás de cada controlador fica aceso quando 
 
 
 
+[[step-2-remove-controller-canister]]
 == Etapa 2: Remova o recipiente do controlador
 
 Remova o recipiente do controlador para que você possa atualizar o novo HIC.
@@ -129,6 +131,7 @@ image::../media/remove_controller_6.png[Use duas mãos para suportar o peso do c
 
 
 
+[[step-3-remove-the-hic]]
 == Passo 3: Remova o HIC
 
 Remova o HIC original para que você possa substituí-lo por um atualizado.
@@ -177,6 +180,7 @@ NOTE: A imagem acima é um exemplo, a aparência do seu HIC pode diferir.
 
 
 
+[[step-4-upgrade-the-hic]]
 == Passo 4: Atualize o HIC
 
 Depois de remover o HIC antigo, instale o novo.
@@ -219,6 +223,7 @@ NOTE: Não use uma chave de fenda, ou você pode apertar demais os parafusos.
 
 
 
+[[step-5-reinstall-controller-canister]]
 == Etapa 5: Reinstale o recipiente do controlador
 
 Depois de atualizar o HIC, reinstale o recipiente do controlador na prateleira do controlador.
@@ -241,6 +246,7 @@ Se você estiver usando mais de um protocolo de host, certifique-se de instalar 
 
 
 
+[[step-6-complete-the-hic-upgrade]]
 == Passo 6: Conclua a atualização do HIC
 
 Coloque o controlador on-line, colete dados de suporte e retome as operações.

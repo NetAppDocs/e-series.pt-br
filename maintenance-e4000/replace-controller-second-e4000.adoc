@@ -29,6 +29,7 @@ Certifique-se de que tem o seguinte:
 
 
 
+[[step-1-verify-the-new-controllers-part-number]]
 == Etapa 1: Verifique o número de peça do novo controlador
 
 Confirme se o novo controlador tem o mesmo número de peça que o controlador atualmente instalado.
@@ -67,6 +68,7 @@ O arquivo é salvo na pasta *Downloads* do seu navegador com o nome *configurati
 
 
 
+[[step-2-install-host-interface-card]]
 == Passo 2: Instale a placa de interface do host
 
 Se o controlador atualmente instalado incluir uma placa de interface do host (HIC), você deve instalar o mesmo modelo de HIC no segundo recipiente do controlador.
@@ -90,6 +92,7 @@ CAUTION: Tenha cuidado para não apertar excessivamente os parafusos, pois isso 
 
 
 
+[[step-3-collect-support-data]]
 == Passo 3: Coletar dados de suporte
 
 Colete dados de suporte antes e depois de substituir um componente para garantir que você possa enviar um conjunto completo de logs para o suporte técnico caso a substituição não resolva o problema.
@@ -128,6 +131,7 @@ CAUTION: *Possível perda de dados* – se você continuar este procedimento enq
 
 
 
+[[step-4-change-configuration-to-duplex]]
 == Etapa 4: Altere a configuração para duplex
 
 Antes de adicionar uma segunda controladora ao compartimento da controladora, você deve alterar a configuração para duplex instalando um novo arquivo NVSRAM e usando a interface de linha de comando para definir o storage array como duplex. A versão duplex do arquivo NVSRAM está incluída no arquivo de download do software SANtricity os (firmware da controladora).
@@ -224,6 +228,7 @@ Depois que o controlador reiniciar, uma mensagem de erro "controlador alternativ
 
 
 
+[[step-5-remove-the-controller-blank]]
 == Passo 5: Remova o controlador em branco
 
 Remova o controlador em branco antes de instalar o segundo controlador. Uma controladora em branco é instalada nas gavetas de controladores que têm apenas uma controladora.
@@ -238,6 +243,7 @@ Quando você remove o controlador em branco, uma aba se move para o lugar para b
 
 
 
+[[step-6-install-the-second-controller-canister]]
 == Passo 6: Instale o segundo recipiente do controlador
 
 Instale um segundo recipiente do controlador para alterar uma configuração simplex para uma configuração duplex.
@@ -256,6 +262,7 @@ NOTE: Não utilize força excessiva ao deslizar o módulo do controlador para de
 
 
 
+[[step-7-complete-adding-a-second-controller]]
 == Passo 7: Complete a adição de um segundo controlador
 
 Conclua o processo de adição de um segundo controlador confirmando que ele está funcionando corretamente, reinstale o arquivo NVSRAM duplex, distribua volumes entre os controladores e colete dados de suporte.

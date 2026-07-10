@@ -4,6 +4,7 @@
 
 
 
+[[step-1-prepare-to-replace-the-drive]]
 == Passo 1: prepare-se para substituir a unidade
 
 Prepare-se para a substituição da unidade certificando-se de que a unidade com falha, confirmando que possui uma unidade de substituição compatível, garantindo que você tenha acesso ao SANtricity System Manager, tomando precauções contra descarga eletrostática e localizando fisicamente a unidade com falha.
@@ -65,6 +66,7 @@ NOTE: É necessário remover o painel da parte frontal do sistema de storage par
 
 
 
+[[step-2-replace-the-drive]]
 == Etapa 2: substitua a unidade
 
 Substitua a unidade com falha por uma nova.
@@ -133,6 +135,7 @@ O LED verde na unidade acende quando a unidade está inserida corretamente.
 
 
 
+[[step-3-complete-the-drive-replacement]]
 == Etapa 3: conclua a substituição da unidade
 
 Confirme se a unidade de substituição está funcionando corretamente e certifique-se de que a reconstrução da unidade foi iniciada.
@@ -198,6 +201,7 @@ Quando a reconstrução da unidade for concluída, o grupo de volume está no es
 
 
 
+[[step-4-return-the-failed-part-to-netapp]]
 == Passo 4: Devolva a peça defeituosa para NetApp
 
 Devolva a peça defeituosa para a NetApp, conforme descrito nas instruções de RMA que acompanham o kit. Consulte a  https://mysupport.netapp.com/site/info/rma["Devolução e substituições de peças"] página para obter mais informações.

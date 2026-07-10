@@ -38,6 +38,7 @@ CAUTION: *Possíveis danos ao equipamento* -- se você executar este procediment
 
 
 
+[[step-1-prepare-to-replace-fan-canister]]
 == Passo 1: Prepare-se para substituir o recipiente do ventilador
 
 Prepare-se para substituir um recipiente do ventilador em um compartimento de controladora de 60 unidades ou compartimento de unidades, coletando dados de suporte sobre seu storage array e localizando o componente com falha.
@@ -89,6 +90,7 @@ image::../media/28_dwg_e2860_de460c_single_fan_canister_with_led_callout_maint-e
 
 
 
+[[step-2-remove-failed-fan-canister-and-install-new-one]]
 == Passo 2: Remova o recipiente do ventilador com falha e instale um novo
 
 Remova um recipiente do ventilador com falha para que você possa substituí-lo por um novo.
@@ -120,6 +122,7 @@ image::../media/28_dwg_e2860_de460c_fan_canister_handle_with_callout_maint-e2800
 
 
 
+[[step-3-complete-fan-canister-replacement]]
 == Passo 3: Substituição completa do recipiente do ventilador
 
 Confirme se o novo recipiente da ventoinha está a funcionar corretamente, recolha dados de suporte e retome as operações normais.

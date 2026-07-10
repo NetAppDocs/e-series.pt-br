@@ -15,12 +15,14 @@ Você pode atualizar seu storage array com a substituição de controladores exi
 
 
 
+[[controller-components]]
 == Componentes do controlador
 
 Um controlador consiste em uma placa, firmware e software. Ele controla as unidades e também implementa as funções do software de gerenciamento.
 
 
 
+[[when-to-use-this-procedure]]
 == Quando utilizar este procedimento
 
 Normalmente, você usa esse procedimento quando deseja atualizar todos os controladores para um modelo ou plataforma diferente. Esse procedimento envolve a substituição de todos os controladores em uma bandeja de unidades e controlador

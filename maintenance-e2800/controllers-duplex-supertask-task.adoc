@@ -35,6 +35,7 @@ Certifique-se de que tem o seguinte:
 
 
 
+[[step-1-prepare-to-replace-controller-duplex]]
 == Passo 1: Prepare-se para substituir o controlador (duplex)
 
 Prepare-se para substituir o controlador, verificando se o recipiente do controlador de substituição tem o número de peça correto da FRU, fazendo backup da configuração e coletando dados de suporte. Se o controlador ainda estiver online, você deve colocá-lo off-line.
@@ -138,12 +139,14 @@ CAUTION: Não inicie quaisquer outras operações até que o estado tenha sido a
 
 
 
+[[step-2-remove-failed-controller-duplex]]
 == Etapa 2: Remover o controlador com falha (duplex)
 
 Substitua o recipiente com falha por um novo.
 
 
 
+[[step-2a-remove-controller-canister-duplex]]
 === Etapa 2a: Remover o recipiente do controlador (duplex)
 
 Remova o recipiente do controlador com falha para que você possa substituí-lo por um novo.
@@ -200,6 +203,7 @@ Se você estiver removendo o recipiente do controlador de um compartimento do co
 
 
 
+[[step-2b-remove-battery-duplex]]
 === Etapa 2b: Remover a bateria (duplex)
 
 Retire a bateria para que possa instalar o novo controlador.
@@ -235,6 +239,7 @@ image::../media/28_dwg_e2800_remove_battery_maint-e2800.gif[Remova a bateria do 
 
 
 
+[[step-2c-remove-host-interface-card-duplex]]
 === Etapa 2c: Remover a placa de interface do host (duplex)
 
 Se o recipiente do controlador incluir uma placa de interface do host (HIC), você deve remover o HIC do recipiente do controlador original, para que você possa reutilizá-lo no novo recipiente do controlador.
@@ -268,12 +273,14 @@ image::../media/28_dwg_e2800_hic_thumbscrews_maint-e2800.gif[Remova o HIC da pla
 
 
 
+[[step-3-install-new-controller-duplex]]
 == Passo 3: Instalar novo controlador (duplex)
 
 Instale um novo recipiente do controlador para substituir o que falhou. Execute esta tarefa somente se o storage array tiver dois controladores (configuração duplex).
 
 
 
+[[step-3a-install-battery-duplex]]
 === Passo 3a: Instale a bateria (duplex)
 
 Tem de instalar a bateria no recipiente do controlador de substituição. Pode instalar a bateria que retirou do recipiente do controlador original ou instalar uma bateria nova que tenha encomendado.
@@ -319,6 +326,7 @@ image:../media/28_dwg_e2800_battery_flange_not_ok_maint-e2800.gif["Flange metál
 
 
 
+[[step-3b-install-host-interface-card-duplex]]
 === Passo 3b: Instale a placa de interface do host (duplex)
 
 Se tiver removido um HIC do recipiente do controlador original, tem de instalar esse HIC no novo recipiente do controlador.
@@ -355,6 +363,7 @@ image::../media/28_dwg_e2800_hic_faceplace_screws_maint-e2800.gif[Reinstale a pl
 
 
 
+[[step-3c-install-new-controller-canister-duplex]]
 === Passo 3c: Instale o novo recipiente do controlador (duplex)
 
 Depois de instalar a bateria e a placa de interface do host (HIC), se uma foi instalada inicialmente, você pode instalar o novo recipiente do controlador na prateleira do controlador.
@@ -395,6 +404,7 @@ NOTE: Se o controlador original não tiver utilizado DHCP para o endereço IP, o
 
 
 
+[[step-4-complete-controller-replacement-duplex]]
 == Passo 4: Substituição completa do controlador (duplex)
 
 Coloque o controlador on-line, colete dados de suporte e retome as operações.

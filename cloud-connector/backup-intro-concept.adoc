@@ -20,6 +20,7 @@ NOTE: Todos os carimbos de data/hora para trabalhos de backup e restauração li
 
 
 
+[[create-a-new-image-based-backup]]
 == Crie um novo backup baseado em imagem
 
 Você pode criar novos backups baseados em imagem por meio da função criar na página backups do aplicativo SANtricity Cloud Connector.
@@ -73,6 +74,7 @@ A cópia de segurança do volume e-Series selecionado é iniciada e o estado da 
 
 
 
+[[create-a-new-folderfile-based-backup]]
 == Crie um novo backup baseado em pasta/arquivo
 
 Você pode criar novos backups baseados em pasta/arquivo por meio da função criar na página backups do aplicativo SANtricity Cloud Connector.
@@ -136,6 +138,7 @@ A cópia de segurança para o volume selecionado da série e é iniciada e o est
 
 
 
+[[run-full-and-incremental-backups]]
 == Execute backups completos e incrementais
 
 Você pode executar backups completos e incrementais através da função Executar na página backups. Backups incrementais estão disponíveis apenas para backups baseados em arquivos.
@@ -170,6 +173,7 @@ A solicitação de backup é iniciada.
 
 
 
+[[delete-a-backup-job]]
 == Eliminar um trabalho de cópia de segurança
 
 A função Delete (Eliminar) elimina os dados de cópia de segurança no local de destino especificado para a cópia de segurança selecionada juntamente com o conjunto de cópias de segurança.

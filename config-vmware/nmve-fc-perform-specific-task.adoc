@@ -15,6 +15,7 @@ Para o protocolo NVMe sobre Fibre Channel, você configura os switches e determi
 
 
 
+[[step-1-configure-the-nvmefc-switches]]
 == Etapa 1: Configurar os switches NVMe/FC
 
 A configuração (zoneamento) dos switches NVMe sobre Fibre Channel (FC) permite que os hosts se conetem ao storage array e limita o número de caminhos. Você pode definir a zona dos switches usando a interface de gerenciamento dos switches.
@@ -41,6 +42,7 @@ Cada porta do iniciador deve estar em uma zona separada com todas as portas de d
 
 
 
+[[step-2-determine-the-host-ports-wwpns-nvmefc-vmware]]
 == Etapa 2: Determine as portas do host WWPNs--NVMe/FC VMware
 
 Para configurar o zoneamento FC, você deve determinar o nome da porta mundial (WWPN) de cada porta do iniciador.
@@ -66,6 +68,7 @@ Emulex Corporation Emulex LPe16000 16Gb PCIe Fibre Channel Adapter
 
 
 
+[[step-3-enable-hba-drivers]]
 == Passo 3: Ative drivers HBA
 
 O suporte para NVMe deve estar habilitado nos drivers Broadcom/Emulex e Marvell/Qlogic HBA.
@@ -92,6 +95,7 @@ esxcfg-module -s "ql2xnvmesupport=1" qlnativefc
 
 
 
+[[step-4-record-your-configuration]]
 == Passo 4: Registre sua configuração
 
 Você pode gerar e imprimir um PDF desta página e, em seguida, usar a seguinte Planilha para gravar informações de configuração de armazenamento NVMe sobre Fibre Channel. Você precisa dessas informações para executar tarefas de provisionamento.
@@ -102,6 +106,7 @@ image::../media/port_identifiers_host_and_target_conf-vmw.gif[Identificadores de
 
 
 
+[[host-identifiers]]
 === Identificadores de host
 
 |===
@@ -134,6 +139,7 @@ Porta de host 1 para a zona de switch FC 1
 |===
 
 
+[[target-identifiers]]
 === Identificadores de destino
 
 |===
@@ -191,6 +197,7 @@ Controlador B, porta 2 para o switch FC 2
 |===
 
 
+[[mapping-host]]
 === Host de mapeamento
 
 |===

@@ -15,6 +15,7 @@ Para o protocolo SAS, você determina os endereços da porta do host e faz as co
 
 
 
+[[step-1-determine-sas-host-identifiers-vmware]]
 == Etapa 1: Determinar identificadores de host SAS - VMware
 
 Localize os endereços SAS usando o utilitário HBA e, em seguida, use o BIOS HBA para fazer as configurações apropriadas.
@@ -36,6 +37,7 @@ Para obter as definições apropriadas, consulte a coluna Notas do http://mysupp
 
 
 
+[[step-2-record-your-configuration]]
 == Passo 2: Registre sua configuração
 
 Pode gerar e imprimir um PDF desta página e, em seguida, utilizar a seguinte folha de cálculo para registar as informações de configuração de armazenamento específicas do protocolo. Você precisa dessas informações para executar tarefas de provisionamento.
@@ -44,6 +46,7 @@ image::../media/sas_topology_diagram_conf-vmw.gif[Diagrama: Topologia SAS]
 
 
 
+[[host-identifiers]]
 === Identificadores de host
 
 |===
@@ -92,12 +95,14 @@ Porta 2 do host (iniciador) conetada ao controlador B, porta 1
 |===
 
 
+[[target-identifiers]]
 === Identificadores de destino
 
 As configurações recomendadas consistem em duas portas de destino.
 
 
 
+[[mapping-host-name]]
 === Mapeando o nome do host
 
 |===

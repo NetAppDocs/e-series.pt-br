@@ -15,13 +15,14 @@ Confira os links abaixo para acessar relatórios técnicos de segurança relacio
 
 
 
+[[security-trs]]
 == Segurança TRs
 
 [cols="9,9,9"]
 |===
 
 
-| https://www.netapp.com/pdf.html?item=/media/17162-tr4474pdf.pdf["*TR-4474: Guia de recursos de Segurança da Unidade SANtricity*"] | https://www.netapp.com/pdf.html?item=/media/17079-tr4712pdf.pdf["*TR-4712: Recursos de Segurança de Gerenciamento do SANtricity*"] | https://www.netapp.com/pdf.html?item=/media/17218-tr4813pdf.pdf["*TR-4813: Gerenciando certificados para sistemas e-Series*"] 
+| https://www.netapp.com/pdf.html?item=/media/17162-tr4474.pdf["*TR-4474: Guia de recursos de Segurança da Unidade SANtricity*"] | https://www.netapp.com/pdf.html?item=/media/17079-tr4712.pdf["*TR-4712: Recursos de Segurança de Gerenciamento do SANtricity*"] | https://www.netapp.com/pdf.html?item=/media/17218-tr4813.pdf["*TR-4813: Gerenciando certificados para sistemas e-Series*"] 
 
 
 | Descreve o recurso de criptografia de disco completo para sistemas e-Series, incluindo suporte a unidades validadas FIPS 140-2 e suporte ao gerenciamento de chaves internas e externas. | Descreve os recursos de segurança do SANtricity para sistemas de storage NetApp e-Series E2800, E5700, EF280, EF570, EF300 e EF600. | Descreve como gerenciar certificados de segurança com os controladores e aplicativos e-Series mais recentes. 

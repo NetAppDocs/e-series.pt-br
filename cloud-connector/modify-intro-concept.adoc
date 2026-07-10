@@ -16,6 +16,7 @@ A opção Configurações permite modificar as configurações atuais do aplicat
 
 
 
+[[modify-s3-account-settings]]
 == Modifique as configurações da conta S3
 
 Você pode modificar as configurações S3 existentes para o aplicativo SANtricity Cloud Connector na janela Configurações de conta do S3.
@@ -46,6 +47,7 @@ As configurações de conta S3 modificadas são aplicadas.
 
 
 
+[[manage-storage-arrays]]
 == Gerenciar storage arrays
 
 Você pode adicionar ou remover matrizes de armazenamento do proxy de serviços da Web registrado no host do SANtricity Cloud Connector na página Gerenciar matrizes de armazenamento.
@@ -88,6 +90,7 @@ O storage array selecionado é removido do host do SANtricity Cloud Connector.
 
 
 
+[[modify-web-services-proxy-settings]]
 == Modificar as configurações do proxy dos serviços da Web
 
 Você pode modificar as configurações de proxy de serviços da Web existentes para o aplicativo SANtricity Cloud Connector na janela Configurações de proxy de serviços da Web.
@@ -113,6 +116,7 @@ O proxy de serviços da Web usado com o SANtricity Cloud Connector precisa ter o
 
 
 
+[[change-santricity-cloud-connector-password]]
 == Altere a senha do SANtricity Cloud Connector
 
 Você pode alterar a senha do aplicativo SANtricity Cloud Connector na tela alterar senha.

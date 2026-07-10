@@ -36,6 +36,7 @@ CAUTION: *Possível perda de acesso a dados* -- nunca instale um HIC em um recip
 
 
 
+[[step-1-prepare-to-replace-hic]]
 == Passo 1: Prepare-se para substituir o HIC
 
 Desligue o compartimento do controlador (simplex) ou coloque o controlador afetado offline (duplex) para que possa substituir as HICs com segurança.
@@ -206,6 +207,7 @@ CAUTION: Não inicie quaisquer outras operações até que o estado tenha sido a
 ====
 
 
+[[step-2-remove-controller-canister]]
 == Etapa 2: Remova o recipiente do controlador
 
 Retire o recipiente do controlador do sistema e, em seguida, retire a tampa do recipiente do controlador.
@@ -227,6 +229,7 @@ image::../media/drw_E4000_open_controller_module_cover_IEOPS-870.png[Abra a tamp
 
 
 
+[[step-3-replace-the-hic]]
 == Passo 3: Substitua o HIC
 
 Substitua o HIC.
@@ -261,6 +264,7 @@ Não use uma chave de fenda, ou você pode apertar demais os parafusos.
 
 
 
+[[step-4-reinstall-controller-canister]]
 == Etapa 4: Reinstale o recipiente do controlador
 
 Volte a instalar o recipiente do controlador no chassis.
@@ -280,6 +284,7 @@ NOTE: Se você removeu os conversores de Mídia (QSFPs ou SFPs), lembre-se de re
 
 
 
+[[step-5-complete-hic-replacement]]
 == Passo 5: Substituição completa do HIC
 
 Ligue o controlador (simplex) ou coloque o controlador online (duplex), recolha dados de suporte e retome as operações.

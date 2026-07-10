@@ -49,6 +49,7 @@ CAUTION: *Possível perda de acesso a dados* -- se um volume já estiver em esta
 
 
 
+[[step-1-prepare-to-replace-drive-drawer-60-drive]]
 == Passo 1: Prepare-se para substituir a gaveta da unidade (60 unidades)
 
 Prepare-se para substituir uma gaveta de unidades determinando se você pode executar o procedimento de substituição enquanto o compartimento de unidades está on-line ou se precisa parar a atividade de e/S do host e desligar qualquer uma das gavetas ligadas. Se você estiver substituindo uma gaveta em uma prateleira com proteção contra perda de gaveta, não há necessidade de interromper a atividade de e/S do host e desligar qualquer uma das prateleiras.
@@ -150,6 +151,7 @@ Você pode executar o procedimento Substituir enquanto a gaveta da unidade está
 
 
 
+[[step-2-remove-cable-chains]]
 == Passo 2: Remova as correntes dos cabos
 
 Remova ambas as correntes de cabo para que possa remover e substituir uma gaveta de unidade com falha. As correntes de cabo esquerda e direita permitem que as gavetas deslizem para dentro e para fora.
@@ -289,6 +291,7 @@ O LED pode permanecer aceso durante um minuto depois de reinstalar a ventoinha e
 
 
 
+[[step-3-remove-failed-drive-drawer-60-drive]]
 == Etapa 3: Remover a gaveta de unidade com falha (60 unidades)
 
 Remova uma gaveta de unidade com falha para substituí-la por uma nova.
@@ -343,6 +346,7 @@ image::../media/92_pht_de6600_drive_drawer_release_lever_maint-e5700.gif[Solte a
 
 
 
+[[step-4-install-new-drive-drawer-60-drive]]
 == Passo 4: Instale uma nova gaveta de unidade (60 unidades)
 
 Instale uma nova gaveta de unidade para substituir a que falhou.
@@ -383,6 +387,7 @@ CAUTION: *Risco de danos no equipamento* -- pare de empurrar a gaveta da unidade
 
 
 
+[[step-5-attach-cable-chains]]
 == Passo 5: Fixe as correntes dos cabos
 
 Fixe as correntes de cabos para que possa reinstalar as unidades com segurança na gaveta da unidade.
@@ -466,6 +471,7 @@ O LED pode permanecer aceso durante um minuto depois de reinstalar a ventoinha e
 
 
 
+[[step-6-complete-drive-drawer-replacement-60-drive]]
 == Passo 6: Substituição completa da gaveta da unidade (60 unidades)
 
 Conclua a substituição da gaveta da unidade reinserindo as unidades e recolocando a moldura frontal na ordem correta.

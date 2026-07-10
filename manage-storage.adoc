@@ -15,18 +15,21 @@ Use os links abaixo para acessar a documentação que descreve como configurar, 
 
 
 
+[[online-help-for-system-manager]]
 == Ajuda online para System Manager
 
 Acesse o https://docs.netapp.com/us-en/e-series-santricity/system-manager/index.html["Ajuda online do Gestor de sistema SANtricity"^], onde você pode encontrar informações sobre como Planejar, configurar, gerenciar e solucionar problemas do storage array.
 
 
 
+[[online-help-for-unified-manager]]
 == Ajuda on-line do Unified Manager
 
 Acesse o https://docs.netapp.com/us-en/e-series-santricity/unified-manager/index.html["Ajuda online do SANtricity Unified Manager"^], onde você pode aprender a executar comandos de gerenciamento de armazenamento em vários storages de armazenamento de rede.
 
 
 
+[[command-reference]]
 == Referência do comando
 
 Acesse o https://docs.netapp.com/us-en/e-series-cli/index.html["Referência do comando"^], onde você pode aprender a configurar e monitorar seus storage arrays usando comandos de interface de linha de comando (CLI).

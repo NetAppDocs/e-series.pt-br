@@ -20,6 +20,7 @@ As etapas para concluir a substituição da bateria dependem se você tem uma co
 
 
 
+[[place-controller-online-duplex]]
 == Colocar o controlador online (duplex)
 
 Coloque o controlador on-line para confirmar que o storage array está funcionando corretamente. Em seguida, você pode coletar dados de suporte e retomar as operações.
@@ -98,6 +99,7 @@ A substituição da bateria está concluída. Pode retomar as operações normai
 
 
 
+[[power-up-controller-simplex]]
 == Controlador de ativação (simplex)
 
 Ligue o compartimento do controlador para confirmar que está a funcionar corretamente. Em seguida, você pode coletar dados de suporte e retomar as operações.

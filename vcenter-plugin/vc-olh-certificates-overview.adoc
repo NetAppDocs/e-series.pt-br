@@ -18,6 +18,7 @@ O gerenciamento de certificados no plug-in de armazenamento para vCenter permite
 
 
 
+[[what-are-certificates]]
 == O que são certificados?
 
 Certificados são arquivos digitais que identificam entidades online, como sites e servidores, para comunicações seguras na internet. Eles garantem que as comunicações da Web sejam transmitidas de forma criptografada, privada e inalterada, apenas entre o servidor e o cliente especificados. Com o plug-in de armazenamento para vCenter, você pode gerenciar certificados para o navegador em um sistema de gerenciamento de host e os controladores nos arrays de armazenamento descobertos.
@@ -31,6 +32,7 @@ NOTE: Embora os certificados assinados pela CA forneçam melhor proteção de se
 
 
 
+[[signed-certificates]]
 == Certificados assinados
 
 Um certificado assinado é validado por uma autoridade de certificação (CA), que é uma organização de terceiros confiável. Os certificados assinados incluem detalhes sobre o proprietário da entidade (normalmente, um servidor ou site), data de emissão e expiração do certificado, domínios válidos para a entidade e uma assinatura digital composta por letras e números.
@@ -46,6 +48,7 @@ A CA toma medidas para verificar sua identidade durante o processo de inscriçã
 
 
 
+[[self-signed-certificates]]
 == Certificados autoassinados
 
 Cada controladora no storage inclui um certificado pré-instalado e autoassinado. Um certificado autoassinado é semelhante a um certificado assinado pela CA, exceto que ele é validado pelo proprietário da entidade em vez de um terceiro. Como um certificado assinado pela CA, um certificado autoassinado contém sua própria chave privada e também garante que os dados sejam criptografados e enviados por uma conexão HTTPS entre um servidor e um cliente.
@@ -54,12 +57,14 @@ Os certificados autoassinados não são "confiáveis" pelos navegadores. Cada ve
 
 
 
+[[management-certificate]]
 == Certificado de gestão
 
 Quando você abre o plugin, o navegador tenta verificar se o host de gerenciamento é uma fonte confiável, verificando se há um certificado digital. Se o navegador não localizar um certificado assinado pela CA, ele abrirá uma mensagem de aviso. A partir daí, você pode continuar para o site para aceitar o certificado autoassinado para essa sessão. Você também pode obter certificados digitais assinados de uma CA para que você não veja mais a mensagem de aviso.
 
 
 
+[[trusted-certificates]]
 == Certificados confiáveis
 
 Durante uma sessão de plug-in, você pode ver mensagens de segurança adicionais quando você tenta acessar um controlador que não tem um certificado assinado pela CA. Nesse caso, você pode confiar permanentemente no certificado autoassinado ou importar os certificados assinados pela CA para os controladores para que o plug-in possa autenticar solicitações de clientes recebidas desses controladores.

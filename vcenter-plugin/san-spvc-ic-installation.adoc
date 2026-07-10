@@ -19,6 +19,7 @@ Siga estas etapas para instalar o plug-in de armazenamento para vCenter e verifi
 
 
 
+[[review-installation-prerequisites]]
 == Reveja os pré-requisitos de instalação
 
 Certifique-se de que seus sistemas atendem aos requisitos do link:san-spvc-ic-reqs.html["Reveja os requisitos de instalação e atualização"].
@@ -28,6 +29,7 @@ NOTE: O processo de atualização não preserva os arquivos *vcenter.properties*
 
 
 
+[[install-the-plugin-software]]
 == Instale o software do plugin
 
 Para instalar o software do plugin:
@@ -60,6 +62,7 @@ NOTE: Se necessário, você pode alterar as configurações de Validação de ce
 
 
 
+[[register-the-plugin-with-a-vcenter-server-appliance]]
 == Registre o plug-in com um vCenter Server Appliance
 
 Depois que o software do plugin é instalado, Registre o plugin com um vCSA.
@@ -83,6 +86,7 @@ Os registos são guardados no `%install_dir%/working/logs/vc-registration.log`.
 
 
 
+[[verify-the-plugin-registration]]
 == Verifique o Registro do plugin
 
 Depois que o plug-in for instalado e o script de Registro for executado, verifique se o plug-in foi registrado com sucesso no vCenter Server Appliance.

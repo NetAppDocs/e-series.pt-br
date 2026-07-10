@@ -15,6 +15,7 @@ Você pode gerar e imprimir um PDF desta página e, em seguida, usar a seguinte 
 
 
 
+[[direct-connect-topology]]
 == Topologia de conexão direta
 
 Em uma topologia de conexão direta, um ou mais hosts são conetados diretamente ao controlador.
@@ -33,6 +34,7 @@ image::../media/nvme_fc_direct_topology.png[Exemplo de topologia de conexão dir
 
 
 
+[[switch-connect-topology]]
 == Topologia de conexão do switch
 
 Em uma topologia de malha, um ou mais switches são usados. Consulte https://mysupport.netapp.com/matrix["Ferramenta de Matriz de interoperabilidade do NetApp"^] a para obter uma lista de comutadores suportados.
@@ -41,6 +43,7 @@ image::../media/nvme_fc_fabric_topology.png[Exemplo de topologia de conexão de 
 
 
 
+[[host-identifiers]]
 == Identificadores de host
 
 Localize e documente o iniciador NQN de cada host.
@@ -62,6 +65,7 @@ Host (iniciador) 2
 |===
 
 
+[[target-nqn]]
 == NQN alvo
 
 Documente o NQN de destino para o storage array.
@@ -77,6 +81,7 @@ Controlador de array (destino)
 |===
 
 
+[[target-nqns]]
 == NQNs de destino
 
 Documente os NQNs a serem usados pelas portas de matriz.
@@ -110,6 +115,7 @@ Controlador B, porta 2
 |===
 
 
+[[mapping-host-name]]
 == Mapeando o nome do host
 
 

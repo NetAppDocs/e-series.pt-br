@@ -18,6 +18,7 @@ Para gerenciar o armazenamento com o plug-in de armazenamento para vCenter, voc�
 
 
 
+[[manual-host-creation]]
 == Criação manual do host
 
 A criação de um host é uma das etapas necessárias para que o storage array saiba quais hosts estão conetados a ele e para permitir o acesso de e/S aos volumes. Um host pode ser criado manualmente.
@@ -27,6 +28,7 @@ A criação de um host é uma das etapas necessárias para que o storage array s
 
 
 
+[[how-volumes-are-assigned]]
 == Como os volumes são atribuídos
 
 Para que um host envie e/S para um volume, você deve atribuir o volume a ele. Você pode selecionar um cluster de host ou host quando criar um volume ou atribuir um volume a um cluster de host ou host posteriormente. Um cluster de host é um grupo de hosts. Você cria um cluster de host para facilitar a atribuição dos mesmos volumes a vários hosts.

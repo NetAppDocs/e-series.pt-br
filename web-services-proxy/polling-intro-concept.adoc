@@ -15,6 +15,7 @@ Você pode configurar a polling automática para todas as estatísticas de disco
 
 
 
+[[overview-of-statistics]]
 == Visão geral das estatísticas
 
 As estatísticas fornecem informações sobre as taxas de coleta de dados e o desempenho dos sistemas de armazenamento.
@@ -31,12 +32,14 @@ Você pode recuperar estatísticas em bruto, independentemente de a polling auto
 
 
 
+[[statistics-functionality]]
 == Funcionalidade de estatísticas
 
 O Web Services Proxy fornece endpoints de API que permitem a recuperação de estatísticas de controlador e interface RAW e analisadas a partir de modelos de hardware suportados e versões de software.
 
 
 
+[[raw-statistics-apis]]
 === APIs de Estatísticas do Raw
 
 * `+/storage-systems/{system-id}/controller-statistics+`
@@ -47,6 +50,7 @@ O Web Services Proxy fornece endpoints de API que permitem a recuperação de es
 
 
 
+[[analyzed-statistics-apis]]
 === APIs de estatísticas analisadas
 
 * `+/storage-systems/{id}/analysed-controller-statistics/+`
@@ -69,6 +73,7 @@ NOTE: Quando o sistema é iniciado, não há coleta de estatísticas anterior a 
 
 
 
+[[configure-polling-intervals]]
 == Configurar intervalos de polling
 
 Para configurar intervalos de polling, você modifica o arquivo wsconfig.xml para especificar um intervalo de polling em segundos.

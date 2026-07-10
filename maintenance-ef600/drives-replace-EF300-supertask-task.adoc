@@ -21,6 +21,7 @@ O EF300 e o EF300C dão suporte à expansão SAS com compartimentos de 24 unidad
 
 
 
+[[replace-drive-in-an-ef300-24-drive-shelf]]
 == Substituir a unidade em um EF300 (compartimento de 24 unidades)
 
 Siga este procedimento para substituir uma unidade em um compartimento de 24 unidades.
@@ -42,6 +43,7 @@ O Guru de recuperação no Gerenciador de sistema do SANtricity monitora as unid
 
 
 
+[[step-1-prepare-to-replace-drive-24-drive]]
 === Passo 1: Prepare-se para substituir a unidade (24 unidades)
 
 Prepare-se para substituir uma unidade verificando o Guru de recuperação no Gerenciador de sistema do SANtricity e completando quaisquer etapas de pré-requisito. Em seguida, você pode localizar o componente com falha.
@@ -71,6 +73,7 @@ NOTE: Se você estiver substituindo uma unidade em uma prateleira que tenha um p
 
 
 
+[[step-2-remove-failed-drive-24-drive]]
 === Etapa 2: Remover a unidade com falha (24 unidades)
 
 Remova uma unidade com falha para substituí-la por uma nova.
@@ -101,6 +104,7 @@ NOTE: Se remover acidentalmente uma unidade ativa, aguarde pelo menos 60 segundo
 
 
 
+[[step-3-install-new-drive-24-drive]]
 === Passo 3: Instale a nova unidade (24 unidades)
 
 Você instala uma nova unidade para substituir a que falhou. Instale a unidade de substituição o mais rapidamente possível depois de remover a unidade com falha. Caso contrário, existe o risco de o equipamento sobreaquecer.
@@ -120,6 +124,7 @@ NOTE: Dependendo da sua configuração, o controlador pode reconstruir automatic
 
 
 
+[[step-4-complete-drive-replacement-24-drive]]
 === Passo 4: Substituição completa da unidade (24 unidades)
 
 Confirme se a nova unidade está a funcionar corretamente.
@@ -160,6 +165,7 @@ A substituição da unidade está concluída. Pode retomar as operações normai
 
 
 
+[[replace-drive-in-an-ef300-60-drive-shelf]]
 == Substituir a unidade em um EF300 (compartimento de 60 unidades)
 
 Siga este procedimento para substituir uma unidade em um compartimento de 60 unidades.
@@ -180,6 +186,7 @@ O Guru de recuperação no Gerenciador de sistema do SANtricity monitora as unid
 
 
 
+[[step-1-prepare-to-replace-drive-60-drive]]
 === Passo 1: Prepare-se para substituir a unidade (60 unidades)
 
 Prepare-se para substituir uma unidade verificando o Guru de recuperação no Gerenciador de sistema do SANtricity e completando quaisquer etapas de pré-requisito. Em seguida, você pode localizar o componente com falha.
@@ -237,6 +244,7 @@ image::../media/28_dwg_e2860_de460c_attention_led_drive_maint-e5700.gif[LED de a
 
 
 
+[[step-2-remove-failed-drive-60-drive]]
 === Etapa 2: Remover a unidade com falha (60 unidades)
 
 Remova uma unidade com falha para substituí-la por uma nova.
@@ -274,6 +282,7 @@ NOTE: Se remover acidentalmente uma unidade ativa, aguarde pelo menos 60 segundo
 
 
 
+[[step-3-install-new-drive-60-drive]]
 === Passo 3: Instale a nova unidade (60 unidades)
 
 Instale uma nova unidade para substituir a que falhou.
@@ -303,6 +312,7 @@ Dependendo da sua configuração, o controlador pode reconstruir automaticamente
 
 
 
+[[step-4-complete-drive-replacement-60-drive]]
 === Passo 4: Substituição completa da unidade (60 unidades)
 
 Confirme se a nova unidade está a funcionar corretamente.

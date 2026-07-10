@@ -15,6 +15,7 @@ Para concluir a substituição do controlador do seu sistema de storage EF50 ou 
 
 
 
+[[step-1-ensure-latest-version-of-santricity-os-verify-volume-ownership-and-collect-support-data]]
 == Etapa 1: certifique-se de estar usando a versão mais recente do SANtricity OS, verifique a propriedade do volume e colete os dados de suporte
 
 Utilizando SANtricity System Manager, certifique-se de que a versão mais recente do SANtricity OS esteja instalada, verifique se todos os volumes foram devolvidos aos seus controladores de propriedade e colete os dados de suporte para que você possa retomar as operações.
@@ -65,6 +66,7 @@ O arquivo é salvo na pasta Downloads do seu navegador com o nome *support-data.
 
 
 
+[[step-2-return-the-failed-part-to-netapp]]
 == Passo 2: devolva a peça defeituosa para NetApp
 
 Devolva a peça defeituosa para a NetApp, conforme descrito nas instruções de RMA que acompanham o kit. Consulte a  https://mysupport.netapp.com/site/info/rma["Devolução e substituições de peças"] página para obter mais informações.

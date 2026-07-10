@@ -31,7 +31,7 @@ NOTE: Interfaces adicionais e sistemas operacionais podem ser suportados. Para o
 
 
  a| 
-Este site _não_ inclui informações para versões _anteriores a_ versão 11,50 do software ou versão 8,50 do firmware. Para versões anteriores, vá para a https://www.netapp.com/us/documentation/eseries-santricity.aspx["Recursos de documentos e-Series e SANtricity"^] página.
+Este site _não_ inclui informações para versões _anteriores à_ versão de software 11.50 ou versão de firmware 8.50. Para versões anteriores, acesse a página  https://docs.netapp.com/us-en/e-series-santricity/early-versions.html#software-documentation-for-earlier-releases["Documentação do E-Series e SANtricity para versões anteriores"^].
 
 Para obter informações sobre os requisitos de preparação do local, https://hwu.netapp.com/["NetApp Hardware Universe"^] visite .
 

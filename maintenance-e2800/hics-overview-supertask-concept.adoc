@@ -16,6 +16,7 @@ Antes de adicionar, atualizar ou substituir uma placa de interface de host (HIC)
 
 
 
+[[procedure-overview]]
 == Descrição geral do procedimento
 
 As etapas para substituir um HIC dependem se você tem um ou dois controladores, como segue:
@@ -50,6 +51,7 @@ Dois controladores (E2860, E2812 ou E2824 duplex)
 |===
 
 
+[[requirements-for-adding-upgrading-or-replacing-a-hic]]
 == Requisitos para adicionar, atualizar ou substituir um HIC
 
 Se você planeja adicionar, atualizar ou substituir uma placa de interface de host (HIC), tenha em mente os seguintes requisitos.

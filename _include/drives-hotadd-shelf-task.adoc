@@ -27,6 +27,7 @@ NOTE: Para manter a integridade do sistema, você deve seguir o procedimento exa
 
 
 
+[[step-1-prepare-to-add-the-drive-shelf]]
 == Etapa 1: Prepare-se para adicionar o compartimento de unidades
 
 Para se preparar para adicionar um compartimento de unidade em tempo real, você deve verificar se há eventos críticos e verificar o status das IOMs.
@@ -81,6 +82,8 @@ A caixa de diálogo Configurações do componente do compartimento é exibida co
 
 
 
+[[step-2-install-the-drive-shelf-and-apply-power]]
+[[step2_install_drive_shelf]]
 == Etapa 2: Instale o compartimento de unidades e aplique energia
 
 Instale um novo compartimento de unidade ou um compartimento de unidade instalado anteriormente, ligue a alimentação e verifique se há LEDs que exijam atenção.
@@ -100,6 +103,7 @@ NOTE: Consulte as instruções de instalação do seu modelo para obter o proced
 
 
 
+[[step-3-cable-your-system]]
 == Passo 3: Faça o cabo do seu sistema
 
 Se você estiver fazendo o cabeamento de uma gaveta de controladora mais antiga para um DE212C, DE224C ou DE460, https://mysupport.netapp.com/ecm/ecm_download_file/ECMLP2859057["Adição de gavetas de unidade IOM a uma gaveta de controladora E27XX, E56XX ou EF560 existente"^] consulte .
@@ -264,6 +268,7 @@ NOTE: O status ideal indica que o erro de perda de redundância associado ao nov
 ====
 
 
+[[step-4-complete-hot-add]]
 == Passo 4: Complete hot add
 
 Você conclui o hot add verificando se há erros e confirmando que o compartimento de unidade recém-adicionado usa o firmware mais recente.

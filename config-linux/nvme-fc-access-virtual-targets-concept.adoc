@@ -17,6 +17,7 @@ Para o SLES 12, a E/S é direcionada para destinos de dispositivos virtuais pelo
 
 
 
+[[virtual-devices-are-io-targets]]
 == Os dispositivos virtuais são alvos de e/S.
 
 Certifique-se de que você está executando e/S apenas para os dispositivos virtuais criados pelo DM-MP e não para os caminhos físicos do dispositivo. Se você estiver executando e/S para os caminhos físicos, o DM-MP não poderá gerenciar um evento de failover e a e/S falhará.
@@ -30,6 +31,7 @@ Pode aceder a estes dispositivos de bloqueio através `dm` do dispositivo ou do 
 ----
 
 
+[[example]]
 == Exemplo
 
 A saída de exemplo a seguir `nvme list` do comando mostra o nome do nó do host e sua correlação com o ID do namespace.

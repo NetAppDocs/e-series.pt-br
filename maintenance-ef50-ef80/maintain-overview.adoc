@@ -17,6 +17,7 @@ Os procedimentos de manutenção pressupõem que seu sistema de storage EF50 ou 
 
 
 
+[[system-components]]
 == Componentes do sistema
 
 Para o seu sistema de storage EF50 ou EF80, você pode realizar procedimentos de manutenção nos seguintes componentes.

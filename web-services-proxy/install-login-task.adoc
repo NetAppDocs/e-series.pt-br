@@ -15,6 +15,7 @@ Os Serviços Web incluem documentação de API, que permite que você interaja d
 
 
 
+[[log-in-to-web-services-api]]
 == Faça login na API de serviços da Web
 
 Depois de instalar o Web Services Proxy, você pode acessar a documentação da API interativa em um navegador.
@@ -99,6 +100,7 @@ A documentação interativa usa JavaScript para fazer a solicitação diretament
 
 
 
+[[log-in-to-unified-manager]]
 == Faça login no Unified Manager
 
 Depois de instalar o Web Services Proxy, você pode acessar o Unified Manager para gerenciar vários sistemas de armazenamento em uma interface baseada na Web.

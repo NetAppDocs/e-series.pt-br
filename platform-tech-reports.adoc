@@ -15,6 +15,7 @@ Confira os links abaixo para acessar relatórios técnicos relacionados às plat
 
 
 
+[[ef50-ef80-and-e4000-platform-trs]]
 == EF50, EF80 e E4000 Platform TRs
 
 [cols="9,9,9"]
@@ -28,13 +29,14 @@ Confira os links abaixo para acessar relatórios técnicos relacionados às plat
 |===
 
 
+[[legacy-platform-trs]]
 == TRs da plataforma legada
 
 [cols="9,9,9,9"]
 |===
 
 
-| https://www.netapp.com/pdf.html?item=/media/17009-tr4800pdf.pdf["*TR-4800: Visão geral dos storages EF600*"^] | https://www.netapp.com/pdf.html?item=/media/21363-tr-4877.pdf["TR-4877: Os storages EF300 apresentam visão geral"^] | https://www.netapp.com/pdf.html?item=/media/17026-tr4725pdf.pdf["*TR-4725: Visão geral dos storages E2800*"^] | https://www.netapp.com/pdf.html?item=/media/17120-tr4724pdf.pdf["TR-4724: Os storages E5700 apresentam visão geral"^] 
+| https://www.netapp.com/pdf.html?item=/media/17009-tr4800.pdf["*TR-4800: Visão geral dos storages EF600*"^] | https://www.netapp.com/pdf.html?item=/media/21363-tr-4877.pdf["TR-4877: Os storages EF300 apresentam visão geral"^] | https://www.netapp.com/pdf.html?item=/media/17026-tr4725.pdf["*TR-4725: Visão geral dos storages E2800*"^] | https://www.netapp.com/pdf.html?item=/media/17120-tr4724.pdf["TR-4724: Os storages E5700 apresentam visão geral"^] 
 
 
 | Descreve os recursos de hardware e software do array all-flash EF600 e os novos recursos do sistema operacional SANtricity. | Descreve os recursos de hardware e software do array all-flash EF300 e os novos recursos do sistema operacional SANtricity. | Descreve os recursos de hardware e software do array híbrido E2800 e os recursos mais recentes do SANtricity OS. | Descreve as informações do produto E5700, incluindo os novos recursos de hardware e software introduzidos com a versão mais recente do SANtricity. 

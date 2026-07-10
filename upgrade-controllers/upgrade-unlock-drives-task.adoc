@@ -21,6 +21,7 @@ Siga o procedimento apropriado para:
 
 
 
+[[internal-key-management]]
 == Gerenciamento de chaves internas
 
 Siga estas etapas para o gerenciamento de chaves internas quando todas as unidades estiverem bloqueadas.
@@ -51,6 +52,7 @@ Os controladores continuarão com o processo de sincronização de código autom
 
 
 
+[[external-key-management]]
 == Gerenciamento de chaves externas
 
 Siga estas etapas para gerenciamento de chaves externas quando todas as unidades estiverem bloqueadas.

@@ -18,6 +18,7 @@ O recurso Importar configurações é uma operação em lote que permite replica
 
 
 
+[[settings-available-for-import]]
 == Definições disponíveis para importação
 
 As seguintes configurações podem ser importadas de uma matriz para outra:
@@ -43,6 +44,7 @@ As seguintes configurações podem ser importadas de uma matriz para outra:
 
 
 
+[[configuration-workflow]]
 == Fluxo de trabalho de configuração
 
 Para importar configurações, siga este fluxo de trabalho:
@@ -55,12 +57,14 @@ Para importar configurações, siga este fluxo de trabalho:
 
 
 
+[[requirements-for-replicating-storage-configurations]]
 == Requisitos para replicação de configurações de storage
 
 Antes de importar uma configuração de armazenamento de um storage array para outro, revise os requisitos e as diretrizes.
 
 
 
+[[shelves]]
 === Compartimentos
 
 * Os compartimentos em que os controladores residem devem ser idênticos nos arrays de origem e destino.
@@ -70,6 +74,7 @@ Antes de importar uma configuração de armazenamento de um storage array para o
 
 
 
+[[controllers]]
 === Controladores
 
 * O tipo de controlador pode ser diferente entre os arrays de origem e destino, mas o tipo de compartimento RBOD deve ser idêntico.
@@ -80,6 +85,7 @@ Antes de importar uma configuração de armazenamento de um storage array para o
 
 
 
+[[status]]
 === Estado
 
 * Os arrays de destino devem estar no status ideal.
@@ -88,6 +94,7 @@ Antes de importar uma configuração de armazenamento de um storage array para o
 
 
 
+[[storage]]
 === Armazenamento
 
 * A capacidade da unidade pode variar entre os arrays de origem e destino, desde que a capacidade de volume no destino seja maior do que a origem. (Um array de destino pode ter unidades de capacidade mais novas e maiores que não seriam totalmente configuradas em volumes pela operação de replicação.)

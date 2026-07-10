@@ -19,6 +19,7 @@ Para provisionar o storage, crie volumes, atribua volumes aos hosts e atribua vo
 
 
 
+[[step-1-create-volumes]]
 == Passo 1: Crie volumes
 
 Os volumes são recipientes de dados que gerenciam e organizam o espaço de armazenamento em seu storage array. Você cria volumes a partir da capacidade de armazenamento disponível em seu storage array, o que ajuda a organizar os recursos do sistema. O conceito de "volumes" é semelhante ao uso de pastas/diretórios em um computador para organizar arquivos para acesso rápido.
@@ -180,6 +181,7 @@ Com capacidade segura
 
 
 
+[[step-2-create-host-access-and-assign-volumes]]
 == Etapa 2: Criar acesso ao host e atribuir volumes
 
 Um host pode ser criado manualmente:
@@ -189,6 +191,7 @@ Um host pode ser criado manualmente:
 
 
 
+[[manually-creating-the-host]]
 === Criando manualmente o host
 
 .Antes de começar
@@ -293,12 +296,14 @@ O sistema executa as seguintes ações:
 
 
 
+[[step-3-create-a-datastore-in-vsphere-client]]
 == Etapa 3: Crie um datastore no vSphere Client
 
 Para criar um datastore no vSphere Client, consulte o https://docs.vmware.com/en/VMware-vSphere/7.0/com.vmware.vsphere.storage.doc/GUID-5AC611E0-7CEB-4604-A03C-F600B1BA2D23.html["Crie um datastore VMFS no vSphere Client"^] tópico no VMware Doc Center.
 
 
 
+[[increase-capacity-of-existing-datastore-by-increasing-volume-capacity]]
 === Aumente a capacidade do datastore existente aumentando a capacidade do volume
 
 Você pode aumentar a capacidade reportada (a capacidade relatada aos hosts) de um volume usando a capacidade livre disponível no pool ou no grupo de volumes.
@@ -337,6 +342,7 @@ Esta caixa de diálogo exibe a capacidade atual reportada do volume e a capacida
 
 
 
+[[increase-capacity-of-existing-datastore-by-adding-volumes]]
 === Aumente a capacidade do datastore existente adicionando volumes
 
 . Você pode aumentar a capacidade de um datastore adicionando volumes. Siga as etapas em <<Passo 1: Crie volumes>>.

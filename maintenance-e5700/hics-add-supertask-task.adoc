@@ -38,6 +38,7 @@ Para obter informações sobre hardware compatível, consulte a https://mysuppor
 
 
 
+[[step-1-prepare-to-add-hic]]
 == Passo 1: Prepare-se para adicionar HIC
 
 Prepare-se para adicionar um HIC fazendo backup do banco de dados de configuração do storage array, coletando dados de suporte e parando as operações de e/S do host. Em seguida, você pode desligar o compartimento do controlador.
@@ -121,6 +122,7 @@ Aguarde que todas as operações sejam concluídas antes de continuar com o pró
 
 
 
+[[step-2-remove-controller-canister]]
 == Etapa 2: Remova o recipiente do controlador
 
 Retire o recipiente do controlador para que possa adicionar o novo HIC.
@@ -181,6 +183,7 @@ Se você estiver removendo o recipiente do controlador de uma prateleira do cont
 
 
 
+[[step-3-install-a-hic]]
 == Passo 3: Instale um HIC
 
 Instale a placa de interface do host (HIC) para aumentar o número de portas do host em seu storage array.
@@ -235,6 +238,7 @@ image::../media/28_dwg_e2800_hic_faceplace_screws_maint-e5700.gif[Instale o HIC 
 
 
 
+[[step-4-reinstall-controller-canister]]
 == Etapa 4: Reinstale o recipiente do controlador
 
 Reinstale o recipiente do controlador na prateleira do controlador depois de instalar o novo HIC.
@@ -277,6 +281,7 @@ CAUTION: Não ligue os cabos de dados às novas portas HIC neste momento.
 
 
 
+[[step-5-complete-hic-addition]]
 == Passo 5: Complete a adição de HIC
 
 Verifique os LEDs do controlador e o visor de sete segmentos e, em seguida, confirme se o estado do controlador é o ideal.

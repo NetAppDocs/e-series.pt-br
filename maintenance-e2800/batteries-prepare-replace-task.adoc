@@ -25,6 +25,7 @@ As etapas para se preparar para a substituição da bateria dependem se você te
 
 
 
+[[place-controller-offline-duplex]]
 == Colocar o controlador offline (duplex)
 
 Se você tiver uma configuração duplex, você deve colocar o controlador afetado off-line para que você possa remover com segurança a bateria com falha. O controlador que você não está colocando off-line deve estar on-line (no estado ideal).
@@ -101,6 +102,7 @@ CAUTION: Não inicie quaisquer outras operações até que o estado tenha sido a
 
 
 
+[[power-down-the-controller-shelf-simplex]]
 == Desligue o compartimento do controlador (simplex)
 
 Se você tiver uma configuração simplex, desligue o compartimento do controlador para que você possa remover com segurança a bateria com falha.

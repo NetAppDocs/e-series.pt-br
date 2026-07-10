@@ -19,6 +19,7 @@ Você pode configurar permissões de acesso para o plug-in de armazenamento para
 
 
 
+[[review-required-vsphere-privileges]]
 == Revisão necessária do vSphere Privileges
 
 Para acessar o plugin dentro do vSphere Client, você deve ser atribuído a uma função que tenha o vSphere Privileges apropriado. Os usuários com o privilégio "Configurar datastore" vSphere têm acesso de leitura e gravação ao plug-in, enquanto os usuários com o privilégio "navegar datastore" têm acesso somente leitura. Se um usuário não tiver nenhum desses Privileges, o plugin exibirá uma mensagem "insuficiente Privileges".
@@ -34,6 +35,7 @@ Para acessar o plugin dentro do vSphere Client, você deve ser atribuído a uma 
 |===
 
 
+[[configure-storage-administrator-roles]]
 == Configurar funções de administrador de armazenamento
 
 Para fornecer Privileges de leitura/escrita para usuários de plugins, você pode criar, clonar ou editar uma função. Para obter mais informações sobre como configurar funções no vSphere Client, consulte o seguinte tópico no VMware Doc Center:
@@ -43,6 +45,7 @@ Para fornecer Privileges de leitura/escrita para usuários de plugins, você pod
 
 
 
+[[access-role-actions]]
 === Ações de função de acesso
 
 . Na página inicial do vSphere Client, selecione *Administrator* na área de controle de acesso.
@@ -63,6 +66,7 @@ O assistente apropriado é exibido, dependendo da seleção acima.
 
 
 
+[[create-a-new-role]]
 === Crie uma nova função
 
 . Na lista Privileges (permissões de acesso), selecione as permissões de acesso a essa função.
@@ -76,6 +80,7 @@ Para permitir o acesso somente leitura ao plugin, selecione menu:datastore[Brows
 
 
 
+[[clone-a-role]]
 === Clonar uma função
 
 . Nomeie a função e forneça uma descrição.
@@ -92,6 +97,7 @@ Para permitir o acesso somente leitura ao plugin, selecione menu:datastore[Brows
 
 
 
+[[edit-an-existing-role]]
 === Editar uma função existente
 
 . Na lista Privileges (permissões de acesso), selecione as permissões de acesso a essa função.
@@ -105,6 +111,7 @@ Para permitir o acesso somente leitura ao plugin, selecione menu:datastore[Brows
 
 
 
+[[set-permissions-for-vcenter-server-appliance]]
 == Definir permissões para o vCenter Server Appliance
 
 Depois de definir o Privileges para uma função, você deve adicionar uma permissão ao vCenter Server Appliance. Essa permissão permite que um determinado usuário ou grupo acesse o plugin.

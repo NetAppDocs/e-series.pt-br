@@ -15,6 +15,7 @@ Você pode gerar e imprimir um PDF desta página e, em seguida, usar a seguinte 
 
 
 
+[[host-identifiers]]
 == Identificadores de host
 
 
@@ -63,6 +64,7 @@ n/a.
 |===
 
 
+[[recommended-configuration]]
 == Configuração recomendada
 
 As configurações recomendadas consistem em duas portas de host (iniciador) e quatro portas de destino.
@@ -71,6 +73,7 @@ image::../media/port_identifiers_ib_iser.gif[Configuração de rede Iser over IB
 
 
 
+[[target-iqn]]
 == Objetivo IQN
 
 Documente o IQN de destino para o storage array. Você usará essas informações no xref:iser-ib-configure-network-attached-hosts-task.adoc[Configurar a rede para hosts conetados ao armazenamento].
@@ -90,6 +93,7 @@ Controlador de array (destino)
 |===
 
 
+[[network-configuration]]
 == Configuração de rede
 
 Documentar a configuração de rede que será usada para os hosts e o storage na malha InfiniBand. Essas instruções assumem que duas sub-redes serão usadas para redundância total.
@@ -98,6 +102,7 @@ O administrador da rede pode fornecer as seguintes informações. Você usa essa
 
 
 
+[[subnet-a]]
 === Sub-rede A
 
 Defina a sub-rede a ser utilizada.
@@ -157,6 +162,7 @@ Host 1, porta 1
 |===
 
 
+[[subnet-b]]
 === Sub-rede B
 
 Defina a sub-rede a ser utilizada.
@@ -216,6 +222,7 @@ Host 1, porta 2
 |===
 
 
+[[mapping-host-name]]
 == Mapeando o nome do host
 
 

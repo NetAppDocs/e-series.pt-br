@@ -15,6 +15,7 @@ Você pode configurar o AutoSupport (ASUP), que coleta dados e envia esses dados
 
 
 
+[[overview-of-autosupport-asup]]
 == Visão geral do AutoSupport (ASUP)
 
 O recurso AutoSupport (ASUP) transmite automaticamente mensagens para o NetApp com base em critérios manuais e baseados em horários.
@@ -94,12 +95,14 @@ Esses arquivos contêm dados de perfil Webservices e dados estatísticos de moni
 |===
 
 
+[[configure-autosupport]]
 == Configurar o AutoSupport
 
 O AutoSupport é ativado por padrão na instalação; no entanto, você pode alterar essa configuração ou modificar os tipos de entrega.
 
 
 
+[[enable-or-disable-autosupport]]
 === Ative ou desative o AutoSupport
 
 O recurso AutoSupport está ativado ou desativado durante a instalação inicial do proxy de serviços da Web, mas você pode alterar essa configuração no arquivo ASUPConfig.
@@ -123,6 +126,7 @@ NOTE: A entrada timestamp é supérflua.
 
 
 
+[[configure-autosupport-delivery-method]]
 === Configurar o método de entrega do AutoSupport
 
 Você pode configurar o recurso AutoSupport para usar os métodos de entrega HTTPS ou SMTP. HTTPS é o método de entrega padrão.

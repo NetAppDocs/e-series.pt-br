@@ -34,6 +34,7 @@ Quando você substitui um HIC, você coloca o controlador off-line, remova o rec
 
 
 
+[[step-1-place-controller-offline]]
 == Passo 1: Coloque o controlador offline
 
 As etapas para colocar um controlador off-line dependem se você tem um controlador (simplex) ou dois controladores (duplex). Vá para as instruções apropriadas para:
@@ -44,6 +45,7 @@ As etapas para colocar um controlador off-line dependem se você tem um controla
 
 
 
+[[duplex-place-controller-offline]]
 === Duplex: Coloque o controlador offline
 
 Se você tiver uma configuração duplex, siga esta etapa para colocar o controlador off-line para que você possa remover com segurança o HIC com falha.
@@ -118,6 +120,7 @@ CAUTION: Não inicie quaisquer outras operações até que o estado tenha sido a
 
 
 
+[[simplex-power-down-the-controller-shelf]]
 === Simplex: Desligue a prateleira do controlador
 
 Se você tiver uma configuração simplex, desligue o compartimento do controlador para que você possa remover com segurança o HIC com falha.
@@ -188,6 +191,7 @@ O LED verde Cache ative na parte de trás do controlador fica aceso quando os da
 
 
 
+[[step-2-remove-controller-canister]]
 == Etapa 2: Remova o recipiente do controlador
 
 Remova o recipiente do controlador para que você possa adicionar a nova placa de interface do host (HIC).
@@ -248,6 +252,7 @@ Se você estiver removendo o recipiente do controlador de um compartimento do co
 
 
 
+[[step-3-install-a-hic]]
 == Passo 3: Instale um HIC
 
 Instale um HIC para substituir o com falha por um novo HIC.
@@ -302,6 +307,7 @@ image::../media/28_dwg_e2800_hic_faceplace_screws_maint-e2800.gif[Volte a instal
 
 
 
+[[step-4-reinstall-controller-canister]]
 == Etapa 4: Reinstale o recipiente do controlador
 
 Depois de instalar o HIC, reinstale o recipiente do controlador na prateleira do controlador.
@@ -344,12 +350,14 @@ NOTE: Não ligue os cabos de dados às novas portas HIC neste momento.
 
 
 
+[[step-5-place-controller-online]]
 == Passo 5: Coloque o controlador online
 
 As etapas para colocar um controlador on-line dependem se você tem um controlador (simplex) ou dois controladores (duplex).
 
 
 
+[[duplex-place-controller-online]]
 === Duplex: Coloque o controlador online
 
 Para uma configuração duplex, coloque o controlador on-line, colete dados de suporte e retome as operações.
@@ -439,6 +447,7 @@ Entre em Contato com o suporte técnico em http://mysupport.netapp.com["Suporte 
 
 
 
+[[simplex-power-up-the-controller-shelf]]
 === Simplex: Ligue o compartimento do controlador
 
 Para uma configuração simplex, aplique energia ao compartimento do controlador, colete dados de suporte e retome as operações.

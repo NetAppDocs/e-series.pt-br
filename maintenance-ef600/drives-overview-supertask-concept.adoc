@@ -18,6 +18,7 @@ CAUTION: Esteja ciente de que as unidades em seu storage array são frágeis; o 
 
 
 
+[[drive-replacement-requirements]]
 == Requisitos de substituição da unidade
 
 Siga estas regras para evitar danificar as unidades do seu storage de armazenamento:
@@ -48,6 +49,7 @@ Os campos magnéticos podem destruir todos os dados na unidade e causar danos ir
 
 
 
+[[drive-staggering-in-24-drive-controller-shelf]]
 == Impulsione o número impressionante de unidades no compartimento de controladora de 24 unidades
 
 As gavetas padrão de 24 unidades exigem escalonamento de unidades. A figura a seguir mostra como as unidades são numeradas em cada gaveta (o painel frontal da gaveta foi removido).

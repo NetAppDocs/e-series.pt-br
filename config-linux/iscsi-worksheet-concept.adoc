@@ -15,6 +15,7 @@ Pode gerar e imprimir um PDF desta página e, em seguida, utilizar a seguinte fo
 
 
 
+[[recommended-configuration]]
 == Configuração recomendada
 
 As configurações recomendadas consistem em duas portas de iniciador e quatro portas de destino com uma ou mais VLANs.
@@ -23,6 +24,7 @@ image::../media/50001_01_conf-lin.gif[Configuração de rede iSCSI]
 
 
 
+[[target-iqn]]
 == Objetivo IQN
 
 |===
@@ -38,6 +40,7 @@ Porta de destino
 |===
 
 
+[[mapping-host-name]]
 == Mapeando o nome do host
 
 |===

@@ -33,6 +33,7 @@ Cada recipiente do controlador inclui uma bateria que preserva os dados armazena
 
 
 
+[[step-1-place-controller-offline]]
 == Passo 1: Coloque o controlador offline
 
 Faça backup dos dados e coloque o controlador afetado offline.
@@ -79,6 +80,7 @@ NOTE: Não inicie quaisquer outras operações até que o estado tenha sido atua
 
 
 
+[[step-2-remove-controller-canister]]
 == Etapa 2: Remova o recipiente do controlador
 
 Substitua a bateria com falha por uma nova.
@@ -109,6 +111,7 @@ image::../media/remove_controller_6.png[Use duas mãos para suportar o peso do c
 
 
 
+[[step-3-remove-failed-battery]]
 == Passo 3: Remova a bateria com falha
 
 Retire a bateria com falha do controlador.
@@ -141,6 +144,7 @@ CAUTION: Para cumprir com os regulamentos da Associação Internacional de Trans
 
 
 
+[[step-4-install-new-battery]]
 == Passo 4: Instale a bateria nova
 
 Depois de remover a bateria com falha do recipiente do controlador, siga este passo para instalar a nova bateria.
@@ -163,6 +167,7 @@ A bateria encaixa no lugar.
 
 
 
+[[step-5-reinstall-controller-canister]]
 == Etapa 5: Reinstale o recipiente do controlador
 
 Reinstale o controlador na gaveta do controlador.
@@ -181,6 +186,7 @@ image::../media/remove_controller_7.png[Instale o controlador na gaveta]
 
 
 
+[[step-6-complete-battery-replacement]]
 == Passo 6: Substituição completa da bateria
 
 Coloque o controlador on-line, colete dados de suporte e retome as operações.

@@ -27,6 +27,7 @@ Os LEDs indicadores de falha estão localizados nos controladores: os LEDs indic
 
 
 
+[[step-1-prepare-to-replace-an-io-module]]
 == Etapa 1: prepare-se para substituir um módulo de E/S
 
 Prepare-se para substituir um módulo de E/S reunindo as ferramentas e equipamentos necessários e fazendo backup do banco de dados de configuração do sistema de storage.
@@ -71,6 +72,7 @@ O arquivo é salvo na pasta Downloads do seu navegador com o nome *configuration
 
 
 
+[[step-2-place-the-controller-offline]]
 == Etapa 2: coloque o controlador offline
 
 Coloque o controlador com problema offline para que você possa realizar o restante deste procedimento com segurança.
@@ -109,6 +111,7 @@ CAUTION: Se o campo *OK para remover* não exibir *Sim*, não prossiga com a rem
 
 
 
+[[step-3-replace-the-io-module]]
 == Etapa 3: substituir o módulo de E/S
 
 Desconecte os cabos do módulo de E/S com defeito, substitua-o pelo módulo de E/S de substituição e, em seguida, conecte os cabos do módulo de E/S de substituição.
@@ -160,6 +163,7 @@ Você pode usar a aba à esquerda e o parafuso de aperto manual para empurrar o 
 
 
 
+[[step-4-place-the-controller-online]]
 == Passo 4: coloque o controlador online
 
 Coloque o controlador com defeito de volta online.
@@ -201,6 +205,7 @@ NOTE: Caso não consiga resolver o problema, entre em contato https://mysupport.
 
 
 
+[[step-5-complete-the-io-module-replacement]]
 == Etapa 5: conclua a substituição do módulo de E/S
 
 Utilizando SANtricity System Manager, certifique-se de que a versão mais recente do SANtricity OS esteja instalada, verifique se todos os volumes foram devolvidos aos seus controladores de propriedade e colete os dados de suporte para que você possa retomar as operações.
@@ -251,6 +256,7 @@ O arquivo é salvo na pasta Downloads do seu navegador com o nome *support-data.
 
 
 
+[[step-6-return-the-failed-part-to-netapp]]
 == Etapa 6: Devolva a peça defeituosa para NetApp
 
 Devolva a peça defeituosa para a NetApp, conforme descrito nas instruções de RMA que acompanham o kit. Consulte a  https://mysupport.netapp.com/site/info/rma["Devolução e substituições de peças"] página para obter mais informações.

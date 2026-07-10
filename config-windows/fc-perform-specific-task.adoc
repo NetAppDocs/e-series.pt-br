@@ -15,6 +15,7 @@ Para o protocolo Fibre Channel, você configura os switches e determina os ident
 
 
 
+[[step-1-configure-the-fc-switches-windows]]
 == Passo 1: Configurar os switches FC --Windows
 
 Configurar (zonear) os switches Fibre Channel (FC) permite que os hosts se conetem ao storage array e limita o número de caminhos. Você pode definir a zona dos switches usando a interface de gerenciamento dos switches.
@@ -38,6 +39,7 @@ Você deve zona por WWPN, não por porta física. Cada porta do iniciador deve e
 
 
 
+[[step-2-determine-host-wwpns-and-make-recommended-settings-fc-windows]]
 == Passo 2: Determine WWPNs do host e faça as configurações recomendadas - FC, Windows
 
 Você instala um utilitário HBA FC para que você possa exibir o nome da porta mundial (WWPN) de cada porta de host. Além disso, pode utilizar o utilitário HBA para alterar as definições recomendadas na coluna Notas da http://mysupport.netapp.com/matrix["Ferramenta de Matriz de interoperabilidade do NetApp"^] para a configuração suportada.
@@ -64,6 +66,7 @@ As configurações apropriadas para sua configuração são listadas na coluna N
 
 
 
+[[step-3-record-your-configuration]]
 == Passo 3: Registre sua configuração
 
 Você pode gerar e imprimir um PDF desta página e, em seguida, usar a seguinte Planilha para Registrar informações de configuração de armazenamento FC. Você precisa dessas informações para executar tarefas de provisionamento.
@@ -74,6 +77,7 @@ image::../media/port_identifiers_host_and_target_conf-win.gif[Identificadores de
 
 
 
+[[host-identifiers]]
 === Identificadores de host
 
 |===
@@ -106,6 +110,7 @@ Porta de host 1 para a zona de switch FC 1
 |===
 
 
+[[target-identifiers]]
 === Identificadores de destino
 
 |===
@@ -163,6 +168,7 @@ Controlador B, porta 2 para o switch FC 2
 |===
 
 
+[[mapping-host-name]]
 === Mapeando o nome do host
 
 |===

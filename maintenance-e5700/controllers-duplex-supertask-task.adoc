@@ -36,6 +36,7 @@ Certifique-se de que tem o seguinte:
 
 
 
+[[step-1-prepare-to-replace-controller-duplex]]
 == Passo 1: Prepare-se para substituir o controlador (duplex)
 
 Prepare-se para substituir um recipiente do controlador, verificando se o recipiente do controlador de substituição tem o número de peça correto da FRU, fazendo backup da configuração e coletando dados de suporte. Se o controlador ainda estiver online, você deve colocá-lo off-line.
@@ -143,6 +144,7 @@ CAUTION: Não inicie quaisquer outras operações até que o estado tenha sido a
 
 
 
+[[step-2-remove-controller-canister-duplex]]
 == Etapa 2: Remover o recipiente do controlador (duplex)
 
 Remova um recipiente do controlador para substituir o recipiente com falha por um novo.
@@ -199,6 +201,7 @@ Se você estiver removendo o recipiente do controlador de uma prateleira do cont
 
 
 
+[[step-3-remove-battery-duplex]]
 == Etapa 3: Remover a bateria (duplex)
 
 Retire a bateria para que possa instalar o novo controlador.
@@ -234,6 +237,7 @@ image::../media/28_dwg_e2800_remove_battery_maint-e5700.gif[Retire a bateria]
 
 
 
+[[step-4-remove-host-interface-card-duplex]]
 == Etapa 4: Remover a placa de interface do host (duplex)
 
 Se o recipiente do controlador incluir uma placa de interface do host (HIC), remova o HIC do recipiente do controlador original para que você possa reutilizá-lo no novo recipiente do controlador.
@@ -267,6 +271,7 @@ image::../media/28_dwg_e2800_hic_thumbscrews_maint-e5700.gif[Remover HIC da plac
 
 
 
+[[step-5-install-battery-duplex]]
 == Passo 5: Instale a bateria (duplex)
 
 Instale a bateria no recipiente do controlador de substituição. Pode instalar a bateria que retirou do recipiente do controlador original ou instalar uma bateria nova que tenha encomendado.
@@ -312,6 +317,7 @@ image:../media/28_dwg_e2800_battery_flange_not_ok_maint-e5700.gif["Flange metál
 
 
 
+[[step-6-install-host-interface-card-duplex]]
 == Passo 6: Instale a placa de interface do host (duplex)
 
 Se tiver removido um HIC do recipiente do controlador original, tem de instalar esse HIC no novo recipiente do controlador.
@@ -348,6 +354,7 @@ image::../media/28_dwg_e2800_hic_faceplace_screws_maint-e5700.gif[Voltar a insta
 
 
 
+[[step-7-install-new-controller-canister-duplex]]
 == Passo 7: Instale o novo recipiente do controlador (duplex)
 
 Depois de instalar a bateria e a placa de interface do host (HIC), se uma foi instalada inicialmente, você pode instalar o novo recipiente do controlador na prateleira do controlador.
@@ -388,6 +395,7 @@ NOTE: Se o controlador original não tiver utilizado DHCP para o endereço IP, o
 
 
 
+[[step-8-complete-controller-replacement-duplex]]
 == Passo 8: Substituição completa do controlador (duplex)
 
 Coloque o controlador on-line, colete dados de suporte e retome as operações.

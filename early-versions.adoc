@@ -15,6 +15,7 @@ Confira os links abaixo para acessar a documentação de versões anteriores do 
 
 
 
+[[hardware-documentation-for-earlier-releases]]
 == Documentação de hardware para versões anteriores
 
 * https://library.netapp.com/ecm/ecm_download_file/ECMLP2484026["Instalar bandejas de unidades e controlador E2712, E2724, E5612, E5624 e bandejas de unidades de expansão DE1600 e DE5600"^]
@@ -29,10 +30,12 @@ Confira os links abaixo para acessar a documentação de versões anteriores do 
 
 
 
+[[software-documentation-for-earlier-releases]]
 == Documentação de software para versões anteriores
 
 
 
+[[santricity-release-11-9]]
 === SANtricity Release 11.9
 
 * https://docs.netapp.com/us-en/e-series-santricity-119/index.html["Ajuda do System Manager"^]
@@ -41,6 +44,7 @@ Confira os links abaixo para acessar a documentação de versões anteriores do 
 
 
 
+[[santricity-release-11-8]]
 === SANtricity versão 11,8
 
 * https://docs.netapp.com/us-en/e-series-santricity-118/index.html["Ajuda do System Manager"^]
@@ -49,6 +53,7 @@ Confira os links abaixo para acessar a documentação de versões anteriores do 
 
 
 
+[[santricity-release-11-7]]
 === SANtricity versão 11,7
 
 * https://docs.netapp.com/us-en/e-series-santricity-117/index.html["Ajuda do System Manager"^]
@@ -57,6 +62,7 @@ Confira os links abaixo para acessar a documentação de versões anteriores do 
 
 
 
+[[santricity-release-11-6]]
 === SANtricity versão 11,6
 
 * https://docs.netapp.com/us-en/e-series-santricity-116/index.html["Ajuda do System Manager"^]
@@ -65,6 +71,7 @@ Confira os links abaixo para acessar a documentação de versões anteriores do 
 
 
 
+[[santricity-release-11-5]]
 === SANtricity versão 11,5
 
 * https://docs.netapp.com/us-en/e-series-santricity-115/index.html["Ajuda do System Manager"^]
@@ -72,6 +79,7 @@ Confira os links abaixo para acessar a documentação de versões anteriores do 
 
 
 
+[[santricity-release-11-4]]
 === SANtricity versão 11,4
 
 * https://mysupport.netapp.com/ecm/ecm_get_file/ECMLP2862590["AJUDA AMW (E2700, E5600/EF560)"^]

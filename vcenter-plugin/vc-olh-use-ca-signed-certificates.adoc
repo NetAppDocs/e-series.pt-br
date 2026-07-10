@@ -26,6 +26,7 @@ O uso de certificados assinados pela CA é um procedimento de três etapas:
 
 
 
+[[step-1-complete-a-csr-file]]
 == Passo 1: Complete um arquivo CSR
 
 Você deve primeiro gerar um arquivo de solicitação de assinatura de certificado (CSR), que identifica sua organização e o sistema host onde o plug-in está sendo executado. Como alternativa, você pode gerar um arquivo CSR usando uma ferramenta como OpenSSL e pular para <<Passo 2: Envie o arquivo CSR>>.
@@ -55,6 +56,7 @@ Você deve primeiro gerar um arquivo de solicitação de assinatura de certifica
 
 
 
+[[step-2-submit-csr-file]]
 == Passo 2: Envie o arquivo CSR
 
 Depois de criar um arquivo de solicitação de assinatura de certificado (CSR), você envia o arquivo CSR gerado para uma CA para receber certificados de gerenciamento assinados para o sistema que hospeda o plug-in.
@@ -76,6 +78,7 @@ Sempre que você gera um CSR, o sistema cria um par de chaves privadas e públic
 
 
 
+[[step-3-import-management-certificates]]
 == Passo 3: Importar certificados de gestão
 
 Depois de receber certificados assinados da Autoridade de Certificação (CA), importe os certificados para o sistema host onde o plug-in está instalado.

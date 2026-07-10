@@ -18,6 +18,7 @@ Para provisionar o armazenamento no plug-in de armazenamento para vCenter, você
 
 
 
+[[provisioning]]
 == Provisionamento
 
 O hardware físico é provisionado em componentes lógicos para que os dados possam ser organizados e facilmente recuperados. Há dois tipos de agrupamentos suportados:
@@ -39,6 +40,7 @@ Você pode ter pools ou grupos de volume no mesmo sistema de armazenamento, mas 
 
 
 
+[[pools]]
 == Piscinas
 
 Os pools foram projetados para agregar unidades de disco rígido físicas em um grande espaço de armazenamento e oferecer proteção RAID aprimorada para ele. Um pool cria muitos conjuntos de RAID virtuais a partir do número total de unidades atribuídas ao pool e distribui os dados uniformemente entre todas as unidades participantes. Se uma unidade for perdida ou adicionada, o sistema reequilibra dinamicamente os dados em todas as unidades ativas.
@@ -47,12 +49,14 @@ Os pools funcionam como outro nível RAID, virtualizando a arquitetura RAID subj
 
 
 
+[[drive-matching]]
 === Correspondência de condução
 
 Você pode escolher entre HDD ou SSDs para uso em pools. No entanto, assim como nos grupos de volumes, todas as unidades do pool precisam usar a mesma tecnologia. Os controladores selecionam automaticamente quais unidades incluir, portanto, você deve ter certeza de que tem um número suficiente de unidades para a tecnologia escolhida.
 
 
 
+[[managing-failed-drives]]
 === Gerenciamento de unidades com falha
 
 Os pools têm uma capacidade mínima de 11 unidades. No entanto, uma unidade de capacidade é reservada para capacidade extra em caso de falha da unidade. Essa capacidade extra é chamada de "capacidade de preservação".
@@ -63,6 +67,7 @@ Depois que o pool é criado, você pode alterar o valor da capacidade de preserv
 
 
 
+[[volume-groups]]
 == Grupos de volume
 
 Os grupos de volume definem como a capacidade é alocada no sistema de storage para volumes. As unidades de disco são organizadas em grupos RAID e os volumes residem nas unidades de um grupo RAID. Portanto, as configurações do grupo de volume identificam quais unidades fazem parte do grupo e qual nível RAID é usado.
@@ -71,6 +76,7 @@ Quando você cria um grupo de volumes, os controladores selecionam automaticamen
 
 
 
+[[drive-matching]]
 === Correspondência de condução
 
 Você deve corresponder as unidades no grupo de volumes para tamanho e desempenho. Se houver unidades menores e maiores no grupo de volumes, todas as unidades serão reconhecidas como o menor tamanho de capacidade. Se houver unidades mais lentas e mais rápidas no grupo de volumes, todas as unidades são reconhecidas na velocidade mais lenta. Esses fatores afetam o desempenho e a capacidade geral do sistema de storage.
@@ -79,6 +85,7 @@ Não é possível misturar diferentes tecnologias de unidade (unidades HDD e SSD
 
 
 
+[[managing-failed-drives]]
 === Gerenciamento de unidades com falha
 
 Os grupos de volume usam unidades hot spare como modo de espera no caso de uma unidade falhar nos volumes RAID 1/10, RAID 3, RAID 5 ou RAID 6 contidos em um grupo de volumes. Uma unidade hot spare não contém dados e adiciona outro nível de redundância à sua matriz de armazenamento.
@@ -87,10 +94,12 @@ Se uma unidade falhar no storage de armazenamento, a unidade hot spare será aut
 
 
 
+[[decide-whether-to-use-pools-or-volume-groups]]
 == Decida se deseja usar pools ou grupos de volume
 
 
 
+[[choose-a-pool]]
 === Escolha uma piscina
 
 * Se você precisar de reconstruções de unidades mais rápidas e administração simplificada de storage e/ou tiver um workload altamente aleatório.
@@ -99,6 +108,7 @@ Se uma unidade falhar no storage de armazenamento, a unidade hot spare será aut
 
 
 
+[[choose-a-volume-group]]
 === Escolha um grupo de volumes
 
 * Se você precisar de largura de banda máxima do sistema, a capacidade de ajustar as configurações de storage e um workload altamente sequencial.
@@ -111,6 +121,7 @@ NOTE: Como os pools podem coexistir com grupos de volume, um storage array pode 
 
 
 
+[[automatic-versus-manual-pool-creation]]
 == Criação automática versus manual de pool
 
 Dependendo da sua configuração de armazenamento, você pode permitir que o sistema crie pools automaticamente ou você mesmo pode criá-los manualmente. Um pool é um conjunto de unidades agrupadas logicamente.
@@ -119,6 +130,7 @@ Antes de criar e gerenciar pools, consulte as seções a seguir para saber como 
 
 
 
+[[automatic-creation]]
 === Criação automática
 
 Quando o sistema deteta capacidade não atribuída no storage array, ele inicia a criação automática de pool quando o sistema deteta capacidade não atribuída em um storage array. Ele solicita automaticamente que você crie um ou mais pools ou adicione a capacidade não atribuída a um pool existente ou a ambos.
@@ -135,6 +147,7 @@ A criação automática de pool ocorre quando uma destas condições é verdadei
 
 
 
+[[manual-creation]]
 === Criação manual
 
 Você pode querer criar um pool manualmente quando a criação automática não puder determinar a melhor configuração. Esta situação pode ocorrer por uma das seguintes razões:

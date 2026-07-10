@@ -18,6 +18,7 @@ As etapas que você pode precisar concluir dependem dos protocolos de início e 
 
 
 
+[[complete-fc-to-iscsi-conversion]]
 == Conversão FC completa para iSCSI
 
 Se você já tinha portas de host FC e converteu para iSCSI, talvez seja necessário modificar sua configuração existente para oferecer suporte ao iSCSI. O procedimento a seguir só é aplicável se não houver iSCSI HIC presente.
@@ -71,6 +72,7 @@ A conversão do protocolo de host está concluída. Pode retomar as operações 
 
 
 
+[[complete-iscsi-to-fc-conversion]]
 == Conversão iSCSI completa para FC
 
 Se você já tinha portas de host iSCSI e converteu para FC, talvez seja necessário modificar sua configuração existente para oferecer suporte ao FC. O seguinte procedimento só é aplicável se não existir FC HIC.
@@ -114,6 +116,7 @@ A conversão do protocolo de host está concluída. Pode retomar as operações 
 
 
 
+[[complete-conversion-for-ib-iser-tofrom-ib-srp-nvme-over-ib-nvme-over-roce-or-nvme-over-fc]]
 == Conversão completa de IB-iSER para IB-SRP, NVMe em IB, NVMe em RoCE ou NVMe em FC
 
 Depois de aplicar a chave do pacote de recursos para converter o protocolo usado pela porta InfiniBand iSER HIC para/de SRP, NVMe em InfiniBand, NVMe em RoCE ou NVMe em Fibre Channel, é necessário configurar o host para usar o protocolo apropriado.

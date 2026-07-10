@@ -17,6 +17,7 @@ Os procedimentos nesta seção pressupõem que o sistema E5700 já foi implantad
 
 
 
+[[system-components]]
 == Componentes do sistema
 
 Para o sistema de armazenamento E5700, pode executar procedimentos de manutenção nos seguintes componentes.

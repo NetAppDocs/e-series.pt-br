@@ -18,6 +18,7 @@ Cada recipiente do controlador inclui uma bateria que preserva os dados armazena
 
 
 
+[[recovery-guru-alerts]]
 == Alertas do Recovery Guru
 
 Se o Guru de recuperação no Gerenciador de sistema do SANtricity relatar um dos seguintes status, você deve substituir a bateria afetada:
@@ -30,6 +31,7 @@ A partir do Gestor do sistema SANtricity, reveja os detalhes no Guru de recupera
 
 
 
+[[procedure-overview]]
 == Descrição geral do procedimento
 
 Para proteger seus dados, você deve substituir uma bateria com falha o mais rápido possível.
@@ -46,6 +48,7 @@ Segue-se uma descrição geral dos passos necessários para substituir uma bater
 
 
 
+[[duplex-or-simplex-configuration]]
 == Configuração duplex ou simplex
 
 As etapas para substituir uma bateria dependem se você tem um ou dois controladores, como segue:
@@ -80,6 +83,7 @@ Um controlador (simplex)
 |===
 
 
+[[requirements-for-replacing-a-battery]]
 == Requisitos para substituir uma bateria
 
 Se você pretende substituir uma bateria com falha, você deve ter:

@@ -20,6 +20,7 @@ NOTE: Todos os carimbos de data/hora para trabalhos de backup e restauração li
 
 
 
+[[create-a-new-image-based-restore]]
 == Crie uma nova restauração baseada em imagem
 
 Você pode criar novas restaurações baseadas em imagens por meio da função criar na página Restaurar do aplicativo SANtricity Cloud Connector.
@@ -54,6 +55,7 @@ A restauração do volume do host de destino selecionado é iniciada e o status 
 
 
 
+[[create-a-new-file-based-restore]]
 == Crie uma nova restauração baseada em arquivo
 
 Você pode criar novas restaurações baseadas em arquivos através da função criar na página Restaurar do aplicativo SANtricity Cloud Connector.
@@ -92,6 +94,7 @@ A restauração do volume do host de destino selecionado é iniciada e o status 
 
 
 
+[[delete-a-restore]]
 == Eliminar uma restauração
 
 Você pode usar a função Excluir para excluir um item de restauração selecionado da seção da lista de resultados da página Restaurar.

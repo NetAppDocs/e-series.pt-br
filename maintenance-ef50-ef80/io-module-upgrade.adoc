@@ -29,6 +29,7 @@ Não é necessário remover os controladores do chassi porque os módulos de E/S
 
 
 
+[[step-1-prepare-to-upgrade-io-modules]]
 == Etapa 1: prepare-se para atualizar os módulos de E/S
 
 Prepare-se para atualizar os módulos de E/S agendando uma janela de manutenção de inatividade, reunindo as ferramentas e equipamentos necessários e fazendo backup do banco de dados de configuração do sistema de storage.
@@ -74,6 +75,7 @@ O arquivo é salvo na pasta Downloads do seu navegador com o nome *configuration
 
 
 
+[[step-2-power-off-both-controllers]]
 == Passo 2: desligue ambos os controladores
 
 Desligue ambos os controladores no sistema de storage para que você possa atualizar com segurança os módulos de I/O em ambos os controladores.
@@ -143,6 +145,7 @@ image::../media/icon_round_1.png[Chamada número 1]
 
 
 
+[[step-3-upgrade-the-io-modules]]
 == Etapa 3: atualize os módulos de E/S
 
 Desconecte os cabos dos módulos de E/S que deseja atualizar (a menos que tenha módulos de bloqueio de E/S), substitua os módulos de E/S ou os módulos de bloqueio de E/S pelos novos módulos de E/S e, em seguida, conecte os novos módulos de E/S.
@@ -201,6 +204,7 @@ Você pode usar a seção link:../install-hw-ef50-ef80/install-cable.html["Conec
 
 
 
+[[step-4-power-on-both-controllers]]
 == Passo 4: ligue ambos os controladores
 
 Ligue ambos os controladores.
@@ -233,6 +237,7 @@ NOTE: Se não conseguir resolver o problema, entre em contato com  https://www.n
 
 
 
+[[step-5-complete-the-io-module-upgrade]]
 == Etapa 5: conclua a atualização do módulo de E/S
 
 Usando SANtricity System Manager, certifique-se de que a versão mais recente do SANtricity OS está instalada, verifique se todos os volumes foram devolvidos aos seus controladores proprietários, colete dados de suporte para que você possa retomar as operações e, se necessário, verifique e altere o protocolo do módulo de I/O do host.

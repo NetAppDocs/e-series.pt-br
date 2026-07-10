@@ -18,6 +18,7 @@ O plug-in de armazenamento do SANtricity para vCenter oferece gerenciamento inte
 
 
 
+[[available-tasks]]
 == Tarefas disponíveis
 
 Você pode usar o plugin para executar as seguintes tarefas:
@@ -41,12 +42,14 @@ image:../media/vcenter_communication2.png["Ambiente de comunicação do vCenter"
 
 
 
+[[interface-overview]]
 == Visão geral da interface
 
 Quando você faz login no plugin, a página principal abre para *Gerenciar - todos*. Nesta página, você pode visualizar e gerenciar todos os storages de armazenamento descobertos em sua rede.
 
 
 
+[[navigation-sidebar]]
 === Barra lateral de navegação
 
 A barra lateral de navegação exibe o seguinte:
@@ -64,6 +67,7 @@ NOTE: Algumas operações não estão disponíveis quando um storage array tem u
 
 
 
+[[supported-browsers]]
 === Navegadores suportados
 
 O plug-in de armazenamento para vCenter pode ser acessado de vários tipos de navegadores. Os seguintes navegadores e versões são suportados.
@@ -75,12 +79,14 @@ O plug-in de armazenamento para vCenter pode ser acessado de vários tipos de na
 
 
 
+[[user-roles-and-permissions]]
 === Funções e permissões do usuário
 
 Para acessar tarefas no plug-in de armazenamento para vCenter, o usuário deve ter permissões de leitura e gravação. Por padrão, todas as IDs de usuário definidas do VMware vCenter não têm permissões para executar tarefas no plug-in.
 
 
 
+[[configuration-overview]]
 == Visão geral da configuração
 
 A configuração envolve as seguintes etapas:
@@ -94,6 +100,7 @@ A configuração envolve as seguintes etapas:
 
 
 
+[[find-more-information]]
 == Encontre mais informações
 
 Para obter mais informações sobre como gerenciar datastores no vSphere Client, https://docs.vmware.com/en/VMware-vSphere/index.html["Documentação do VMware vSphere"^] consulte .

@@ -53,6 +53,7 @@ NOTE: O LED de atenção âmbar do controlador será desligado sempre que existi
 
 
 
+[[step-1-prepare-to-replace-controller]]
 == Passo 1: Prepare-se para substituir o controlador
 
 Prepare-se para substituir um recipiente do controlador com falha, verificando se o recipiente do controlador de substituição tem o número de peça correto da FRU, fazendo backup da configuração e coletando dados de suporte.
@@ -119,6 +120,7 @@ CAUTION: Não inicie quaisquer outras operações até que o estado tenha sido a
 
 
 
+[[step-2-remove-failed-controller]]
 == Passo 2: Remover controlador com falha
 
 Remova um recipiente do controlador para substituir o recipiente com falha por um novo.
@@ -127,6 +129,7 @@ Este é um procedimento de várias etapas que requer que você remova os seguint
 
 
 
+[[step-2a-remove-controller-canister]]
 === Etapa 2a: Remova o recipiente do controlador
 
 Remova o recipiente do controlador com falha para que você possa substituí-lo por um novo.
@@ -160,6 +163,7 @@ image::../media/remove_controller_6.png[Use duas mãos para suportar o peso do c
 
 
 
+[[step-2b-remove-battery]]
 === Passo 2b: Remova a bateria
 
 Remova a bateria do recipiente do controlador com falha para que possa instalá-la no novo recipiente do controlador.
@@ -183,6 +187,7 @@ image:../media/batt_4.png["Levante a bateria para fora do controlador"]
 
 
 
+[[step-2c-remove-the-hic]]
 === Passo 2c: Remova o HIC
 
 Se o recipiente do controlador incluir um HIC, tem de remover o HIC do recipiente do controlador original. Caso contrário, você pode pular esta etapa.
@@ -218,6 +223,7 @@ image::../media/hic_4.png[Remova o HIC da placa controladora]
 
 
 
+[[step-2d-remove-power-supply]]
 === Passo 2D: Remova a fonte de alimentação
 
 Remova a fonte de alimentação para que possa instalá-la no novo controlador.
@@ -246,6 +252,7 @@ CAUTION: Ao remover uma fonte de alimentação, utilize sempre duas mãos para s
 
 
 
+[[step-2e-remove-dimms]]
 === Etapa 2e: Remova DIMMs
 
 Remova os DIMMs para que você possa instalá-los no novo controlador.
@@ -272,6 +279,7 @@ image::../media/dimim_3.png[Remova a DIMM]
 
 
 
+[[step-2f-remove-fans]]
 === Passo 2f: Remova os ventiladores
 
 Remova os ventiladores para que você possa instalá-los no novo controlador.
@@ -286,6 +294,7 @@ image::../media/fan_2.png[Retire a ventoinha]
 
 
 
+[[step-3-install-new-controller]]
 == Passo 3: Instale o novo controlador
 
 Instale um novo recipiente do controlador para substituir o que falhou.
@@ -294,6 +303,7 @@ Este é um procedimento de várias etapas que requer a instalação dos seguinte
 
 
 
+[[step-3a-install-battery]]
 === Passo 3a: Instale a bateria
 
 Instale a bateria no recipiente do controlador de substituição.
@@ -317,6 +327,7 @@ A bateria encaixa no lugar.
 
 
 
+[[step-3b-install-the-hic]]
 === Passo 3b: Instale o HIC
 
 Se tiver removido um HIC do recipiente do controlador original, tem de instalar esse HIC no novo recipiente do controlador. Caso contrário, você pode pular esta etapa.
@@ -355,6 +366,7 @@ NOTE: A imagem acima é um exemplo; a aparência do seu HIC pode diferir.
 
 
 
+[[step-3c-install-power-supply]]
 === Passo 3c: Instale a fonte de alimentação
 
 Instale a fonte de alimentação no recipiente do controlador de substituição.
@@ -375,6 +387,7 @@ image::../media/psup_4.png[Instale a fonte de alimentação no controlador]
 
 
 
+[[step-3d-install-dimms]]
 === Passo 3D: Instale DIMMs
 
 Instale os DIMMs no novo recipiente do controlador.
@@ -407,6 +420,7 @@ image::../media/dimm_5.png[Pressione as travas para cima no slot DIMM para fixar
 
 
 
+[[step-3e-install-fans]]
 === Passo 3e: Instale os ventiladores
 
 Instale as ventoinhas no recipiente do controlador de substituição.
@@ -424,6 +438,7 @@ image::../media/fan_3_a.png[Instale o ventilador no controlador]
 
 
 
+[[step-3f-install-new-controller-canister]]
 === Passo 3f: Instale o novo recipiente do controlador
 
 Por último, instale o novo recipiente do controlador na gaveta do controlador.
@@ -451,6 +466,7 @@ NOTE: Se o controlador original não usou DHCP para o endereço IP, o novo contr
 
 
 
+[[step-4-complete-controller-replacement]]
 == Passo 4: Substituição completa do controlador
 
 Coloque o controlador on-line, colete dados de suporte e retome as operações.

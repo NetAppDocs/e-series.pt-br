@@ -15,6 +15,7 @@ Prepare-se para instalar seu sistema de storage EF50 ou EF80 organizando o local
 
 
 
+[[step-1-prepare-the-site]]
 == Etapa 1: preparar o local
 
 Certifique-se de que o local e o armário ou rack que você planeja usar atendam às especificações do seu sistema de storage.
@@ -50,6 +51,7 @@ Caso necessário, consulte  https://hwu.netapp.com["NetApp Hardware Universe"^] 
 
 
 
+[[step-2-understand-the-lifting-precautions]]
 == Passo 2: compreenda as precauções de levantamento
 
 Antes de desembalar as caixas e, posteriormente, ao instalar seu sistema de storage, você deve entender o peso do seu sistema de storage para que possa tomar as precauções necessárias ao levantá-lo e movê-lo.
@@ -60,6 +62,7 @@ image::../media/drw_g_lifting_weight_ieops-1831.svg[AFF A20 A30 A50 e C30 e C60 
 
 
 
+[[step-3-unpack-the-boxes]]
 == Passo 3: desembale as caixas
 
 Depois de se certificar de que o local e o armário ou rack que pretende utilizar cumprem as especificações do seu sistema de storage e de compreender as precauções de levantamento, desembale todas as caixas e compare o conteúdo com os itens na nota de entrega.
@@ -106,6 +109,7 @@ Caso necessário, veja  https://hwu.netapp.com/["NetApp Hardware Universe"^] out
 
 
 
+[[step-4-register-your-storage-system]]
 == Etapa 4: registre seu sistema de storage
 
 Depois de garantir que seu site atende às especificações do seu sistema de storage e de verificar se você possui todas as peças que encomendou, você deve registrar seu sistema de storage.

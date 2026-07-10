@@ -16,6 +16,7 @@ Como primeira etapa, você deve verificar se sua configuração do Linux é supo
 
 
 
+[[verify-the-linux-configuration-is-supported]]
 == Verifique se a configuração do Linux é suportada
 
 Para garantir uma operação confiável, você cria um plano de implementação e, em seguida, usa a ferramenta de Matriz de interoperabilidade (IMT) do NetApp para verificar se toda a configuração é suportada.
@@ -37,12 +38,14 @@ As informações detalhadas para a configuração escolhida estão acessíveis n
 
 
 
+[[review-restrictions-for-nvme-over-fc]]
 == Rever restrições para NVMe sobre FC
 
 Antes de usar o NVMe em Fibre Channel, consulte o https://mysupport.netapp.com/matrix["Ferramenta de Matriz de interoperabilidade do NetApp"^] para verificar as restrições mais recentes de controladora, host e recuperação.
 
 
 
+[[storage-and-disaster-recovery-restrictions]]
 === Restrições de armazenamento e recuperação de desastres
 
 * Espelhamento assíncrono e síncrono não são compatíveis.

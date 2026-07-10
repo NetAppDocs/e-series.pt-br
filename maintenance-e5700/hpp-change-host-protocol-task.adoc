@@ -24,6 +24,7 @@ Para uma matriz de armazenamento E5700, você pode converter as portas de host d
 
 
 
+[[step-1-determine-whether-you-have-dual-protocol-sfps]]
 == Passo 1: Determine se você tem SFPs de protocolo duplo
 
 Use o Gerenciador de sistema SANtricity para determinar que tipo de transcetores SFP você tem. Como esses SFPs podem ser usados com protocolos FC e iSCSI, eles são chamados de SFPs _dual-Protocol_ ou _Unified_.
@@ -91,6 +92,7 @@ NOTE: SFPs FC de 8Gbps GB NÃO são compatíveis com as controladoras E28xx ou E
 
 
 
+[[step-2-obtain-the-feature-pack]]
 == Passo 2: Obtenha o pacote de recursos
 
 Para obter o pacote de recursos, é necessário o número de série do compartimento do controlador, um Código de ativação de recursos e o Identificador de ativação de recursos para o storage array.
@@ -1108,6 +1110,7 @@ NOTE: O site de ativação de recursos Premium inclui um link para ""instruçõe
 
 
 
+[[step-3-stop-host-io]]
 == Etapa 3: Parar a e/S do host
 
 Pare todas as operações de e/S do host antes de converter o protocolo das portas do host. Não é possível acessar dados no storage array até concluir a conversão com êxito.
@@ -1141,6 +1144,7 @@ O LED verde Cache ative *(1)* na parte de trás de cada controlador está ligado
 
 
 
+[[step-4-change-the-feature-pack]]
 == Passo 4: Altere o pacote de recursos
 
 Altere o pacote de recursos para converter o protocolo de host das portas de host da placa base, as portas IB HIC ou ambos os tipos de portas.

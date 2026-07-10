@@ -15,6 +15,7 @@ Seu sistema precisa atender aos requisitos de compatibilidade do SANtricity Clou
 
 
 
+[[host-hardware-requirements]]
 == Requisitos de hardware de host
 
 Seu hardware precisa atender aos seguintes requisitos mínimos:
@@ -27,6 +28,7 @@ Você deve instalar o proxy de serviços da Web do SANtricity para usar o SANtri
 
 
 
+[[supported-browsers]]
 == Navegadores suportados
 
 Os seguintes navegadores são compatíveis com o aplicativo SANtricity Cloud Connector (versões mínimas anotadas):
@@ -43,6 +45,7 @@ NOTE: A documentação da API para o aplicativo SANtricity Cloud Connector não 
 
 
 
+[[compatible-storage-arrays-and-controller-firmware]]
 == Matrizes de armazenamento compatíveis e firmware do controlador
 
 Você deve verificar a compatibilidade de seus storages de armazenamento e firmware antes de usar o aplicativo SANtricity Cloud Connector.
@@ -51,6 +54,7 @@ Para obter uma lista completa e atualizada de todos os storages de armazenamento
 
 
 
+[[compatible-operating-systems]]
 == Sistemas operacionais compatíveis
 
 O aplicativo SANtricity Cloud Connector 4,0 é compatível com e compatível com os seguintes sistemas operacionais:
@@ -78,6 +82,7 @@ SUSE Linux Enterprise Server (SLES)
 |===
 
 
+[[supported-file-systems]]
 == Sistemas de arquivos suportados
 
 Você deve usar sistemas de arquivos compatíveis para executar backups e restaurações por meio da aplicação SANtricity Cloud Connector.

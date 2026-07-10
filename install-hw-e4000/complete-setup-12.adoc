@@ -15,6 +15,7 @@ Saiba como fazer o cabeamento dos controladores à sua rede e concluir a configu
 
 
 
+[[step-1-cable-the-data-hosts]]
 == Passo 1: Faça o cabeamento dos hosts de dados
 
 Faça o cabeamento do sistema de acordo com a topologia da rede.
@@ -51,6 +52,7 @@ image:../media/drw_e4012_fabric_topology_ieops-2157.svg["E4012 topologia de teci
 ====
 
 
+[[step-2-connect-and-configure-the-management-connection]]
 == Passo 2: Conete e configure a conexão de gerenciamento
 
 Você pode configurar as portas de gerenciamento do controlador usando um servidor DHCP ou um endereço IP estático.
@@ -123,6 +125,7 @@ NOTE: Se perder a ligação ao controlador B, pode utilizar a ligação previame
 ====
 
 
+[[step-3-configure-and-manage-your-storage-system]]
 == Passo 3: Configurar e gerenciar seu sistema de armazenamento
 
 Depois de instalar o hardware, use o software SANtricity para configurar e gerenciar o sistema de storage.

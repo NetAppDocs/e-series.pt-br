@@ -18,18 +18,21 @@ Use o recurso Adicionar/descobrir para localizar e adicionar os arrays de armaze
 
 
 
+[[considerations-for-discovering-arrays]]
 == Considerações para descobrir arrays
 
 Para que o plugin exiba e gerencie recursos de armazenamento, você deve descobrir os storages que deseja gerenciar na rede da sua organização. Você pode descobrir e adicionar um único array ou vários arrays.
 
 
 
+[[multiple-storage-arrays]]
 === Vários storage arrays
 
 Se você optar por descobrir vários storages, insira um intervalo de endereços IP de rede e, em seguida, o sistema tentará conexões individuais para cada endereço IP nesse intervalo. Qualquer matriz de armazenamento alcançada com sucesso aparece no plugin e você pode adicioná-los ao seu domínio de gerenciamento.
 
 
 
+[[single-storage-array]]
 === Array de storage único
 
 Se você optar por descobrir um único array, insira o endereço IP único de um dos controladores no storage array e adicione esse array ao seu domínio de gerenciamento.
@@ -39,12 +42,14 @@ NOTE: O plugin deteta e exibe apenas o único endereço IP ou endereço IP dentr
 
 
 
+[[user-credentials]]
 === Credenciais do usuário
 
 Você deve fornecer a senha de administrador para cada storage que deseja adicionar.
 
 
 
+[[certificates]]
 === Certificados
 
 Como parte do processo de descoberta, o sistema verifica se os storages descobertos estão usando certificados por uma fonte confiável. O sistema usa dois tipos de autenticação baseada em certificado para todas as conexões que estabelece com o com o navegador:
@@ -55,6 +60,7 @@ Como parte do processo de descoberta, o sistema verifica se os storages descober
 
 
 
+[[storage-array-status]]
 == Status do storage array
 
 Quando você abre o plug-in de armazenamento para vCenter, a comunicação com cada storage array é estabelecida e o status de cada storage array é exibido.
@@ -87,6 +93,7 @@ Na página *Manage - All*, você pode visualizar o status da matriz de armazenam
 |===
 
 
+[[plugin-interface-compared-to-system-manager]]
 == Interface do plugin em comparação com o System Manager
 
 Você pode usar o plug-in de armazenamento para vCenter para tarefas operacionais básicas em sua matriz de armazenamento; no entanto, pode haver momentos em que você precisa iniciar o System Manager para executar tarefas não disponíveis no plug-in.

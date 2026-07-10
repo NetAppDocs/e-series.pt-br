@@ -22,6 +22,7 @@ Para obter instruções de cabeamento específicas para o seu sistema de storage
 ====
 
 
+[[direct-topology]]
 == Topologia direta
 
 Uma topologia direta coneta seu controlador diretamente a uma rede Ethernet.
@@ -33,6 +34,7 @@ image::../media/74167.gif[Conexões diretas de gerenciamento de armazenamento]
 
 
 
+[[fabric-topology]]
 == Topologia de malha
 
 Uma topologia de malha usa um switch para conectar seu controlador a uma rede Ethernet.

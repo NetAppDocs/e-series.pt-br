@@ -15,6 +15,7 @@ O sistema de storage e-Series deve ser configurado para se comunicar com o siste
 
 
 
+[[configure-remote-storage-device-and-e-series-array]]
 == Configurar dispositivo de storage remoto e array e-Series
 
 Antes de prosseguir para o Gerenciador de sistema do SANtricity para configurar o recurso volumes de armazenamento remoto, faça o seguinte:
@@ -38,6 +39,7 @@ NOTE: Recomendado: Faça backup do volume de origem remoto antes de iniciar o pr
 
 
 
+[[cable-the-storage-arrays]]
 == Faça o cabeamento das matrizes de armazenamento
 
 Como parte do processo de configuração, os storage arrays e o host de e/S devem ser cabeados para a interface compatível com iSCSI.
@@ -48,6 +50,7 @@ image:../media/remote_target_volumes_iscsi_use_case_1.png["Cablagem de armazenam
 
 
 
+[[configure-the-iscsi-ports]]
 == Configurar as portas iSCSI
 
 Você deve configurar as portas iSCSI para garantir a comunicação entre o destino (storage local e-Series) e a origem (storage de storage remoto).

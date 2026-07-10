@@ -16,6 +16,7 @@ Para remover o Proxy de serviços da Web e o Unified Manager, você pode usar qu
 
 
 
+[[graphical-mode-uninstall]]
 == Desinstalação do modo gráfico
 
 Você pode executar a desinstalação no modo Gráfico para Windows ou Linux. No modo gráfico, os prompts aparecem em uma interface de estilo Windows.
@@ -48,6 +49,7 @@ A barra de progresso do Desinstalador é exibida e mostra o progresso.
 
 
 
+[[console-mode-uninstall]]
 == Desinstalação do modo de console
 
 Você pode executar a desinstalação no modo Console para Windows ou Linux. No modo Console, os prompts aparecem na janela do terminal.
@@ -66,6 +68,7 @@ O processo de desinstalação é iniciado.
 
 
 
+[[silent-mode-uninstall]]
 == Desinstalação do modo silencioso
 
 Você pode executar a desinstalação no modo silencioso para Windows ou Linux. No modo silencioso, nenhuma mensagem de retorno ou scripts aparecem na janela do terminal.
@@ -83,6 +86,7 @@ O processo de desinstalação é executado, mas nenhuma mensagem de retorno ou s
 
 
 
+[[rpm-command-uninstall-linux-only]]
 == Desinstalação do comando RPM (somente Linux)
 
 Você pode usar um comando RPM para desinstalar o Proxy de Serviços Web de um sistema Linux.

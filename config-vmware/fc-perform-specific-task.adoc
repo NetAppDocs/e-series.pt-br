@@ -18,6 +18,7 @@ NOTE: Para EF300 e EF600, você deve definir o tamanho do bloco para 512 bytes p
 
 
 
+[[step-1-configure-the-fc-switches-vmware]]
 == Etapa 1: Configurar os switches FC--VMware
 
 Configurar (zonear) os switches Fibre Channel (FC) permite que os hosts se conetem ao storage array e limita o número de caminhos. Você pode definir a zona dos switches usando a interface de gerenciamento dos switches.
@@ -44,6 +45,7 @@ Cada porta do iniciador deve estar em uma zona separada com todas as portas de d
 
 
 
+[[step-2-determine-the-host-port-wwpns-fc]]
 == Etapa 2: Determine a porta do host WWPNs--FC
 
 Para configurar o zoneamento FC, você deve determinar o nome da porta mundial (WWPN) de cada porta do iniciador.
@@ -69,6 +71,7 @@ Emulex Corporation Emulex LPe16000 16Gb PCIe Fibre Channel Adapter
 
 
 
+[[step-3-record-your-configuration]]
 == Passo 3: Registre sua configuração
 
 Você pode gerar e imprimir um PDF desta página e, em seguida, usar a seguinte Planilha para Registrar informações de configuração de armazenamento FC. Você precisa dessas informações para executar tarefas de provisionamento.
@@ -79,6 +82,7 @@ image::../media/port_identifiers_host_and_target_conf-vmw.gif[Identificadores de
 
 
 
+[[host-identifiers]]
 === Identificadores de host
 
 |===
@@ -111,6 +115,7 @@ Porta de host 1 para a zona de switch FC 1
 |===
 
 
+[[target-identifiers]]
 === Identificadores de destino
 
 |===
@@ -168,6 +173,7 @@ Controlador B, porta 2 para o switch FC 2
 |===
 
 
+[[mapping-host]]
 === Host de mapeamento
 
 |===

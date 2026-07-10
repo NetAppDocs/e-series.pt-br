@@ -17,6 +17,7 @@ Cada recipiente do controlador contém uma placa controladora e uma bateria. Voc
 
 
 
+[[requirements-for-adding-second-controller]]
 == Requisitos para adicionar o segundo controlador
 
 Você pode adicionar um segundo recipiente de controlador à versão simplex do compartimento de controladores E4000. Antes de adicionar um segundo controlador, tem de ter:
@@ -42,6 +43,7 @@ Opcionalmente, você pode usar a interface de linha de comando (CLI) para execut
 
 
 
+[[requirements-for-replacing-controller]]
 == Requisitos para substituição do controlador
 
 Ao substituir um recipiente do controlador com falha, você deve remover a bateria, HIC e DIMMs do recipiente do controlador original e instalá-los no recipiente do controlador de substituição.
@@ -66,6 +68,7 @@ Opcionalmente, você pode usar a interface de linha de comando (CLI) para execut
 
 
 
+[[duplex-configuration-requirements]]
 === Requisitos de configuração duplex
 
 Se o compartimento da controladora tiver duas controladoras (configuração duplex), você poderá substituir um coletor de controladora enquanto o storage array estiver ligado e executando operações de e/S do host, contanto que as seguintes condições sejam verdadeiras:
@@ -76,6 +79,7 @@ Se o compartimento da controladora tiver duas controladoras (configuração dupl
 
 
 
+[[simplex-configuration-requirements]]
 === Requisitos de configuração simplex
 
 Se você tiver apenas um recipiente de controlador (configuração simplex), os dados no storage de armazenamento não estarão acessíveis até que você substitua o recipiente do controlador. Você precisa parar as operações de e/S de host e desligar o storage array.

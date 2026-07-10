@@ -32,6 +32,7 @@ A descoberta de array é um procedimento de várias etapas:
 
 
 
+[[step-1-enter-network-addresses-for-discovery]]
 == Etapa 1: Insira endereços de rede para descoberta
 
 Como o primeiro passo para descobrir matrizes de armazenamento, introduza um único endereço IP ou um intervalo de endereços IP para pesquisar na sub-rede local. O recurso Adicionar/descobrir abre um assistente que orienta você pelo processo de descoberta.
@@ -65,6 +66,7 @@ O sistema executa uma verificação de credenciais em cada array que você está
 
 
 
+[[step-2-resolve-untrusted-certificates-during-discovery]]
 == Etapa 2: Resolva certificados não confiáveis durante a descoberta
 
 Se necessário, você deve resolver quaisquer problemas de certificado antes de prosseguir com o processo de descoberta.
@@ -83,6 +85,7 @@ Durante a descoberta, se algum storage arrays mostrar um status de "certificados
 
 
 
+[[step-3-provide-passwords]]
 == Passo 3: Forneça senhas
 
 Como a última etapa para a descoberta, você deve inserir as senhas dos storages que deseja adicionar ao seu domínio de gerenciamento.

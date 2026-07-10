@@ -15,6 +15,7 @@ O método expresso Linux para instalar seu storage array e acessar o Gerenciador
 
 
 
+[[procedure-overview]]
 == Descrição geral do procedimento
 
 O método Linux Express inclui as seguintes etapas.
@@ -37,6 +38,7 @@ O método Linux Express inclui as seguintes etapas.
 
 
 
+[[find-more-information]]
 == Encontre mais informações
 
 * Ajuda on-line -- descreve como usar o Gerenciador de sistemas do SANtricity para concluir as tarefas de gerenciamento de storage e configuração. Está disponível dentro do produto.

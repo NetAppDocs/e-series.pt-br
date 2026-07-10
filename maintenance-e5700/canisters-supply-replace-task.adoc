@@ -38,6 +38,7 @@ Você pode substituir uma fonte de alimentação enquanto seu storage array esti
 
 
 
+[[step-1-prepare-to-replace-power-supply]]
 == Passo 1: Prepare-se para substituir a fonte de alimentação
 
 Prepare-se para substituir uma fonte de alimentação em um compartimento de controladora de 24 unidades ou compartimento de unidades.
@@ -93,6 +94,7 @@ Se o LED de atenção image:../media/drw_sas_fault_icon_maint-e5700.gif["Ícone 
 
 
 
+[[step-2-remove-failed-power-supply]]
 == Etapa 2: Remova a fonte de alimentação com falha
 
 Remova uma fonte de alimentação com falha para que você possa substituí-la por uma nova.
@@ -125,6 +127,7 @@ Ao remover a fonte de alimentação, uma aba roda para bloquear o compartimento 
 
 
 
+[[step-3-install-new-power-supply]]
 == Passo 3: Instale a nova fonte de alimentação
 
 Instale uma nova fonte de alimentação para substituir a que falhou.
@@ -151,6 +154,7 @@ CAUTION: Não utilize força excessiva ao deslizar a fonte de alimentação para
 
 
 
+[[step-4-complete-power-supply-replacement]]
 == Passo 4: Substituição completa da fonte de alimentação
 
 Confirme se a nova fonte de alimentação está funcionando corretamente, colete dados de suporte e retome as operações normais.

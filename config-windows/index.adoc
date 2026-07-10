@@ -15,6 +15,7 @@ O método Windows Express para instalar sua matriz de armazenamento e acessar o 
 
 
 
+[[procedure-overview]]
 == Descrição geral do procedimento
 
 O método expresso inclui as seguintes etapas, que também são descritas no link:understand-windows-concept.html["Fluxo de trabalho do Windows"].
@@ -32,6 +33,7 @@ O método expresso inclui as seguintes etapas, que também são descritas no lin
 
 
 
+[[find-more-information]]
 == Encontre mais informações
 
 * Ajuda on-line -- descreve como usar o Gerenciador de sistemas do SANtricity para concluir as tarefas de gerenciamento de storage e configuração. Está disponível dentro do produto.

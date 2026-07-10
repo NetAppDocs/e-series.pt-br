@@ -16,12 +16,14 @@ Para garantir uma atualização bem-sucedida, reveja as considerações de atual
 
 
 
+[[controller-upgrades-single-or-multiple]]
 == Atualizações de controladora (única ou múltipla)
 
 Revise essas principais considerações antes de atualizar os controladores.
 
 
 
+[[current-versions]]
 === Versões atuais
 
 Você pode visualizar as versões atuais do seu software e firmware, da seguinte forma:
@@ -32,6 +34,7 @@ Você pode visualizar as versões atuais do seu software e firmware, da seguinte
 
 
 
+[[components-included-in-the-upgrade]]
 === Componentes incluídos na atualização
 
 Os seguintes componentes estão incluídos no processo de atualização do SANtricity os:
@@ -44,6 +47,7 @@ Os seguintes componentes estão incluídos no processo de atualização do SANtr
 
 
 
+[[components-to-upgrade-separately]]
 === Componentes a atualizar separadamente
 
 Os seguintes componentes devem ser atualizados separadamente:
@@ -58,6 +62,7 @@ Os seguintes componentes devem ser atualizados separadamente:
 
 
 
+[[dual-controllers-and-io-processing]]
 === Controladores duplos e processamento de e/S.
 
 Se um storage array contiver dois controladores e você tiver um driver multipath instalado, o storage array poderá continuar processando e/S durante a atualização. Durante a atualização, ocorre o seguinte processo:
@@ -72,6 +77,7 @@ Após a conclusão da atualização, talvez seja necessário redistribuir manual
 
 
 
+[[health-check]]
 === Verificação de integridade
 
 Uma verificação de integridade é executada como parte do processo de atualização. Essa verificação de integridade avalia todos os componentes do storage array para garantir que a atualização possa prosseguir. As seguintes condições podem impedir a atualização:
@@ -91,6 +97,7 @@ Você também pode executar a verificação de integridade de pré-atualização
 
 
 
+[[immediate-or-staged-upgrade]]
 === Atualização imediata ou faseada
 
 Você pode ativar a atualização imediatamente ou colocá-la em fase posterior. Você pode optar por ativar mais tarde por estes motivos:
@@ -101,18 +108,21 @@ Você pode ativar a atualização imediatamente ou colocá-la em fase posterior.
 
 
 
+[[drive-firmware-upgrade]]
 == Upgrade do formware da unidade
 
 Reveja estas considerações-chave antes de atualizar o firmware da unidade.
 
 
 
+[[drive-compatibility]]
 === Compatibilidade de unidades
 
 Cada arquivo de firmware da unidade contém informações sobre o tipo de unidade em que o firmware é executado. Pode transferir o ficheiro de firmware especificado apenas para uma unidade compatível. O System Manager verifica automaticamente a compatibilidade durante o processo de atualização.
 
 
 
+[[drive-upgrade-methods]]
 === Métodos de atualização da unidade
 
 Existem dois tipos de métodos de atualização de firmware de unidade: On-line e off-line.

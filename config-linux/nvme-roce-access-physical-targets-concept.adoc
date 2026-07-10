@@ -17,6 +17,7 @@ Para RHEL 9, RHEL 10, SLES 15 e SLES 16, uma solução de multipath NVMe nativa 
 
 
 
+[[nvme-devices-are-io-targets]]
 == Dispositivos NVMe são alvos de E/S
 
 . Digite o seguinte comando para localizar os volumes mapeados para este host a partir de um array de storage E-Series.

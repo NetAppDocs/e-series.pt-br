@@ -15,6 +15,7 @@ Após ligar seu sistema de storage EF50 ou EF80, você conclui a configuração 
 
 
 
+[[step-1-cable-and-configure-the-management-ports]]
 == Passo 1: Conecte e configure as portas de gerenciamento
 
 Conecte a porta de gerenciamento em cada controlador e, em seguida, configure as portas usando um servidor DHCP ou um endereço IP estático.
@@ -106,6 +107,7 @@ NOTE: Se perder a ligação ao controlador B, pode utilizar a ligação previame
 ====
 
 
+[[step-2-configure-your-storage-system]]
 == Etapa 2: configurar seu sistema de storage
 
 Use o SANtricity System Manager para configurar e gerenciar seu sistema de storage.
@@ -125,6 +127,7 @@ Você pode consultar a ajuda online incluída com o SANtricity System Manager.
 
 
 
+[[step-3-verify-the-host-io-module-protocol-is-correct]]
 == Etapa 3: verifique se o protocolo do módulo de E/S do host está correto
 
 Seu sistema de storage é fornecido com um protocolo padrão nos módulos de E/S do host. Se o protocolo padrão não for o protocolo que você deseja, você pode alterá-lo.

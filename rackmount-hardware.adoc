@@ -17,6 +17,7 @@ Para sistemas de armazenamento mais recentes, você pode verificar o hardware de
 
 
 
+[[adjustable-support-rails]]
 == Calhas de suporte ajustáveis
 
 Acesso https://mysupport.netapp.com/ecm/ecm_download_file/ECMP1652045["Instalação de calhas de suporte ajustáveis"^] para instalar uma bandeja de unidades e controlador ou uma bandeja de unidades fornecida separadamente (ainda não instalada no gabinete). Este procedimento é aplicável às seguintes bandejas de 2U (9 cm ou 3,5 polegadas):
@@ -28,18 +29,21 @@ Acesso https://mysupport.netapp.com/ecm/ecm_download_file/ECMP1652045["Instalaç
 
 
 
+[[two-post-rack-2u]]
 == Rack de dois pilares -- 2U
 
  https://mysupport.netapp.com/ecm/ecm_download_file/ECMM1280302["Instalação de equipamentos 2U em um rack de dois pilares"^]Acesso .
 
 
 
+[[four-post-rack-or-cabinet-2u]]
 == Rack de quatro colunas ou gabinete -- 2U
 
  https://mysupport.netapp.com/ecm/ecm_download_file/ECMLP2484194["Instalação de um gabinete de 2U 12 unidades em um rack ou gabinete de quatro colunas"^]Acesso .
 
 
 
+[[four-post-rack-superrail]]
 == Rack de quatro colunas -- SuperRail
 
 Acessar https://docs.netapp.com/us-en/ontap-systems/platform-supplemental/superrail-install.html["Instale SuperRail em um rack de quatro postes"^].

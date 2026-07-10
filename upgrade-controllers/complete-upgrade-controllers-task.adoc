@@ -18,6 +18,7 @@ Se você estiver atualizando controladores em uma bandeja de unidades e controla
 
 
 
+[[step-1-power-on-controller]]
 == Passo 1: Ligar o controlador
 
 Você deve ligar o compartimento do controlador para confirmar que ele está funcionando corretamente.
@@ -95,6 +96,7 @@ Troca de controladora com gerenciamento de chaves externas e todas as unidades p
 
 
 
+[[step-2-check-status-of-controllers-and-trays]]
 == Etapa 2: Verificar o status dos controladores e bandejas
 
 Você pode usar os LEDs e o software de gerenciamento de armazenamento para verificar o status de seus controladores e bandejas.
@@ -119,6 +121,7 @@ Depois que o controlador concluir com êxito a reinicialização, você poderá 
 
 
 
+[[step-3-validate-controller-software-version]]
 == Passo 3: Valide a versão do software do controlador
 
 Você deve garantir que suas novas controladoras estejam sendo executadas com o nível correto de sistema operacional (firmware da controladora) e NVSRAM.

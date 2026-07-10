@@ -26,6 +26,7 @@ Certifique-se de que tem o seguinte:
 
 
 
+[[step-1-install-battery]]
 == Passo 1: Instale a bateria
 
 Instale a bateria que retirou do recipiente do controlador original ou uma nova bateria que encomendou.
@@ -56,6 +57,7 @@ Quando a trava se encaixa no lugar, a parte inferior da trava se encaixa em uma 
 
 
 
+[[step-2-install-new-controller-canister]]
 == Passo 2: Instale o novo recipiente do controlador
 
 [role="tabbed-block"]

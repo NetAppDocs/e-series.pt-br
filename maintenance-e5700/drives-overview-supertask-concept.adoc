@@ -15,12 +15,14 @@ Antes de substituir uma unidade, reveja os requisitos e considerações.
 
 
 
+[[shelf-types]]
 == Tipos de prateleiras
 
 Você pode substituir uma unidade em um compartimento de 24 unidades, em um compartimento de 60 unidades ou em uma gaveta de unidades.
 
 
 
+[[24-drive-shelves]]
 === compartimentos de 24 unidades
 
 As figuras mostram como as unidades são numeradas em cada tipo de prateleira (o painel frontal ou as tampas das extremidades da prateleira foram removidas).
@@ -34,6 +36,7 @@ NOTE: Seu storage array do E5724 pode incluir uma ou mais bandejas de unidades d
 
 
 
+[[60-drive-shelves]]
 === compartimentos de 60 unidades
 
 O compartimento de controladora E5760 e o compartimento de unidade DE460C consistem em cinco gavetas de unidade que contêm 12 slots de unidade. A gaveta de unidades 1 está na parte superior e a gaveta de unidades 5 está na parte inferior.
@@ -49,6 +52,7 @@ NOTE: O storage array do E5760 pode incluir uma ou mais bandejas de unidades de 
 
 
 
+[[drive-drawer]]
 === Gaveta da unidade
 
 Você pode substituir uma gaveta de unidades em um compartimento de controladora E5760 e um compartimento de unidades de DE460C TB. Cada uma dessas gavetas de 60 unidades tem cinco gavetas de unidade.
@@ -61,6 +65,7 @@ image::../media/92_dwg_de6600_drawer_with_hdds_no_callouts_maint-e5700.gif[Gavet
 
 
 
+[[requirements-for-handling-drives]]
 == Requisitos para manuseio de acionamentos
 
 

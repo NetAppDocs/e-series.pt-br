@@ -15,12 +15,14 @@ Saiba como conetar os cabos do controlador à rede e, em seguida, concluir a con
 
 
 
+[[step-1-cable-the-data-hosts]]
 == Passo 1: Faça o cabeamento dos hosts de dados
 
 Faça o cabeamento do sistema de storage de acordo com a topologia da rede.
 
 
 
+[[option-1-direct-attach-topology]]
 === Opção 1: Topologia de conexão direta
 
 O exemplo a seguir mostra o cabeamento dos hosts de dados usando uma topologia de conexão direta.
@@ -37,6 +39,7 @@ image:../media/direct_topo.png["Cabeamento de topologia de conexão direta"]
 |===
 
 
+[[option-2-fabric-topology]]
 === Opção 2: Topologia de malha
 
 O exemplo a seguir mostra o cabeamento dos hosts de dados usando uma topologia de malha.
@@ -54,12 +57,14 @@ image:../media/fabric_topo.png["Cabeamento de topologia de malha"]
 |===
 
 
+[[step-2-connect-and-configure-the-management-connection]]
 == Passo 2: Conete e configure a conexão de gerenciamento
 
 Você pode configurar as portas de gerenciamento do controlador usando um servidor DHCP ou um endereço IP estático.
 
 
 
+[[option-1-dhcp-server]]
 === Opção 1: Servidor DHCP
 
 Saiba como configurar as portas de gerenciamento com um servidor DHCP.
@@ -99,6 +104,7 @@ image:../media/ethernet_callout.png["EF600 portas de gerenciamento"]
 
 
 
+[[option-2-static-ip-address]]
 === Opção 2: Endereço IP estático
 
 Saiba como configurar manualmente as portas de gerenciamento inserindo o endereço IP e a máscara de sub-rede.
@@ -174,6 +180,7 @@ NOTE: Se perder a ligação ao controlador B, pode utilizar a ligação previame
 
 
 
+[[step-3-configure-storage-system]]
 == Passo 3: Configurar o sistema de armazenamento
 
 Depois de instalar o hardware EF300 ou EF600, use o software SANtricity para configurar e gerenciar seu sistema de storage.

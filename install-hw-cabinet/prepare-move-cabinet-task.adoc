@@ -15,6 +15,7 @@ Prepare-se para mover o gabinete de sua localização em sua área de recebiment
 
 
 
+[[step-1-estimate-cabinet-weight]]
 == Passo 1: Estimar o peso do gabinete
 
 O gabinete transporta de forma confiável e segura até 909,1 kg (2000 lb) de capacidade. Você precisa saber o peso aproximado do gabinete para que você possa movê-lo com segurança.
@@ -259,6 +260,7 @@ CAUTION: *Possíveis danos aos componentes da bandeja* -- não coloque uma bande
 
 
 
+[[step-2-acclimate-cabinet]]
 == Passo 2: Gabinete aclimate
 
 Certifique-se de que o gabinete e as bandejas são aclimatados ao ambiente interno antes de remover os materiais de embalagem.
@@ -274,6 +276,7 @@ CAUTION: *Possíveis danos aos componentes da bandeja* -- se a temperatura exter
 
 
 
+[[step-3-remove-packing-materials]]
 == Passo 3: Remover materiais de embalagem
 
 Remova os materiais de embalagem somente depois que o gabinete tiver aclimatado à temperatura interna.
@@ -285,6 +288,7 @@ Remova os materiais de embalagem somente depois que o gabinete tiver aclimatado 
 
 
 
+[[step-4-check-shipping-contents]]
 == Passo 4: Verifique o conteúdo do transporte
 
 Verifique o conteúdo de envio para se certificar de que todos os equipamentos chegaram ao local.
@@ -297,6 +301,7 @@ Verifique o conteúdo de envio para se certificar de que todos os equipamentos c
 
 
 
+[[step-5-remove-heavy-components-from-cabinet]]
 == Passo 5: Remova componentes pesados do gabinete
 
 Remova alguns dos componentes mais pesados que estão localizados na parte superior do gabinete para garantir a máxima estabilidade.

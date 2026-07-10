@@ -26,6 +26,7 @@ NOTE: Os storage arrays EF600 e EF300 não são compatíveis com recursos de esp
 
 
 
+[[santricity-system-manager]]
 == Gerente do sistema da SANtricity
 
 O System Manager é um software de gerenciamento baseado na Web incorporado a cada controlador. Para acessar a interface do usuário, aponte um navegador para o endereço IP do controlador. Um assistente de configuração ajuda você a começar com a configuração do sistema.
@@ -92,6 +93,7 @@ Visualize dados de diagnóstico, gerencie atualizações e configure o AutoSuppo
 |===
 
 
+[[santricity-unified-manager]]
 == Gerenciador unificado do SANtricity
 
 Unified Manager é um software baseado na Web usado para gerenciar todo o seu domínio. A partir de uma visão central, você pode ver o status de todos os arrays E-Series e EF-Series mais recentes, como EF50, EF80, E4000, E2800, EF280, EF300, E5700, EF570, EF600, EF300C e EF600C. Você também pode executar operações em lote nos arrays de storage selecionados.
@@ -160,6 +162,7 @@ Configurar a autenticação de usuário que exige que os usuários façam login 
 |===
 
 
+[[santricity-web-services-proxy]]
 == Proxy de Serviços Web da SANtricity
 
 O Web Services Proxy é um servidor de API RESTful que pode gerenciar centenas de arrays e-Series novos e legados. O proxy é instalado separadamente em um servidor Windows ou Linux.
@@ -168,6 +171,7 @@ Web Services inclui documentação de API que permite interagir diretamente com 
 
 
 
+[[command-line-interface-cli]]
 == Interface de linha de comando (CLI)
 
 A interface de linha de comando (CLI) é um aplicativo de software que fornece uma maneira de configurar e monitorar arrays de storage. Usando a CLI, você pode executar comandos a partir de um prompt do sistema operacional, como o  `DOS C:` prompt, um caminho do sistema operacional Linux ou um caminho do sistema operacional Solaris.

@@ -32,6 +32,7 @@ Esta tarefa se aplica às prateleiras de unidades DCM, DCM2 e DCM3.
 
 
 
+[[step-1-prepare-to-replace-drive-60-drive]]
 == Passo 1: Prepare-se para substituir a unidade (60 unidades)
 
 Prepare-se para substituir uma unidade em um compartimento de 60 unidades verificando o Guru de recuperação no Gerenciador de sistemas do SANtricity e executando quaisquer etapas de pré-requisito. Em seguida, você pode localizar o componente com falha.
@@ -89,6 +90,7 @@ image::../media/28_dwg_e2860_de460c_attention_led_drive_maint-e5700.gif[LED de a
 
 
 
+[[step-2-remove-failed-drive-60-drive]]
 == Etapa 2: Remover a unidade com falha (60 unidades)
 
 Remova uma unidade com falha para substituí-la por uma nova.
@@ -126,6 +128,7 @@ NOTE: Se remover acidentalmente uma unidade ativa, aguarde pelo menos 60 segundo
 
 
 
+[[step-3-install-new-drive-60-drive]]
 == Passo 3: Instale a nova unidade (60 unidades)
 
 Instale uma nova unidade para substituir a que falhou.
@@ -155,6 +158,7 @@ Dependendo da sua configuração, o controlador pode reconstruir automaticamente
 
 
 
+[[step-4-complete-drive-replacement-60-drive]]
 == Passo 4: Substituição completa da unidade (60 unidades)
 
 Confirme se a nova unidade está a funcionar corretamente.

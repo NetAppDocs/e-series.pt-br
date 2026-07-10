@@ -15,12 +15,14 @@ Você pode gerenciar o acesso do usuário à API de serviços da Web e ao Unifie
 
 
 
+[[overview-of-access-management]]
 == Visão geral do gerenciamento de acesso
 
 O gerenciamento de acesso inclui logins baseados em função, criptografia de senha, autenticação básica e integração LDAP.
 
 
 
+[[role-based-access]]
 === Acesso baseado em função
 
 O controle de acesso baseado em função (RBAC) associa usuários predefinidos a funções. Cada função concede permissões a um nível específico de funcionalidade.
@@ -118,6 +120,7 @@ O usuário ro (somente leitura) inclui somente a função storage.monitor. Esta 
 |===
 
 
+[[password-encryption]]
 === Encriptação de palavra-passe
 
 Para cada senha, você pode aplicar um processo de criptografia adicional usando a codificação de senha SHA256 existente. Este processo de criptografia adicional aplica um conjunto aleatório de bytes a cada senha (Salt) para cada criptografia de hash SHA256. A criptografia Salt SHA256 é aplicada a todas as senhas recém-criadas.
@@ -127,12 +130,14 @@ NOTE: Antes da versão 3,0 do Web Services Proxy, as senhas eram criptografadas 
 
 
 
+[[basic-authentication]]
 === Autenticação básica
 
 Por padrão, a autenticação básica é ativada, o que significa que o servidor retorna um desafio básico de autenticação. Esta definição pode ser alterada no ficheiro wsconfig.xml.
 
 
 
+[[ldap]]
 === LDAP
 
 O LDAP (Lightweight Directory Access Protocol), um protocolo de aplicação para aceder e manter serviços de informações de diretórios distribuídos, está ativado para o Proxy de Serviços Web. A integração LDAP permite a autenticação do usuário e o mapeamento de funções para grupos.
@@ -141,12 +146,14 @@ Para obter informações sobre como configurar a funcionalidade LDAP, consulte a
 
 
 
+[[configure-user-access]]
 == Configurar o acesso do utilizador
 
 Você pode gerenciar o acesso do usuário aplicando criptografia adicional a senhas, definindo autenticação básica e definindo acesso baseado em função.
 
 
 
+[[apply-additional-encryption-to-passwords]]
 === Aplique criptografia adicional a senhas
 
 Para obter o mais alto nível de segurança, você pode aplicar criptografia adicional a senhas usando a codificação de senha SHA256 existente.
@@ -170,6 +177,7 @@ NOTE: Como alternativa, você pode cortar e hash senhas de usuários locais semp
 
 
 
+[[configure-basic-authentication]]
 === Configurar a autenticação básica
 
 Por padrão, a autenticação básica está ativada, o que significa que o servidor retorna um desafio básico de autenticação. Se desejar, você pode alterar essa configuração no arquivo wsconfig.xml.
@@ -190,6 +198,7 @@ Por exemplo: `<env key="enable-basic-auth">true</env>`
 
 
 
+[[configure-role-based-access]]
 === Configurar o acesso baseado em função
 
 Para limitar o acesso do usuário a funções específicas, você pode modificar quais funções são especificadas para cada conta de usuário.

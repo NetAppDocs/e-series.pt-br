@@ -29,6 +29,7 @@ Certifique-se de que tem o seguinte:
 
 
 
+[[step-1-place-controller-offline]]
 == Passo 1: Coloque o controlador offline
 
 Coloque o recipiente do controlador offline para que possa substituir com segurança o ventilador avariado.
@@ -75,6 +76,7 @@ NOTE: Não inicie quaisquer outras operações até que o estado tenha sido atua
 
 
 
+[[step-2-remove-controller-canister]]
 == Etapa 2: Remova o recipiente do controlador
 
 Remova o recipiente do controlador para que você possa substituir o ventilador com falha por um novo.
@@ -105,6 +107,7 @@ image::../media/remove_controller_6.png[Use duas mãos para suportar o peso do c
 
 
 
+[[step-3-remove-failed-fan]]
 == Passo 3: Remover o ventilador com falha
 
 Você remove um ventilador com falha para que você possa substituí-lo por um novo.
@@ -123,6 +126,7 @@ image::../media/fan_2.png[Retire a ventoinha]
 
 
 
+[[step-4-install-new-fan]]
 == Passo 4: Instale um novo ventilador
 
 Instale um novo ventilador para substituir o que falhou.
@@ -139,6 +143,7 @@ image::../media/fan_3_a.png[Instale o ventilador no controlador]
 
 
 
+[[step-5-reinstall-controller-canister]]
 == Etapa 5: Reinstale o recipiente do controlador
 
 Depois de instalar o novo ventilador, reinstale o recipiente do controlador na prateleira do controlador.
@@ -157,6 +162,7 @@ image::../media/remove_controller_7.png[Instale o controlador na gaveta]
 
 
 
+[[step-6-complete-fan-replacement]]
 == Passo 6: Substituição completa do ventilador
 
 Coloque o controlador on-line, colete dados de suporte e retome as operações.

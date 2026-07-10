@@ -16,12 +16,14 @@ A tabela a seguir descreve os novos recursos nas versões mais recentes do SANtr
 
 
 
+[[new-features-in-version-12-0r1]]
 == Novos recursos na versão 12.0R1
 
 Esta versão contém apenas pequenas alterações e nenhum novo recurso. Para mais informações sobre as alterações nesta versão, consulte o E-Series SANtricity OS 12.0R1 README.
 
 
 
+[[new-features-in-version-12-0]]
 == Novidades na versão 12.0
 
 
@@ -70,18 +72,21 @@ Um novo editor de scripts já está disponível no SANtricity System Manager. O 
 |===
 
 
+[[new-features-in-version-11-90r5]]
 == Novos recursos na versão 11.90R5
 
 Esta versão contém apenas correções de defeitos e nenhum novo recurso. Para obter mais informações sobre as alterações nesta versão, consulte o E-Series SANtricity OS 11.90R5 README.
 
 
 
+[[new-features-in-version-11-90r4]]
 == Novos recursos na versão 11.90R4
 
 Esta versão contém apenas pequenas alterações e nenhum novo recurso. Para mais informações sobre as alterações nesta versão, consulte o E-Series SANtricity OS 11.90R4 README.
 
 
 
+[[new-features-in-version-11-90r3]]
 == Novos recursos na versão 11.90R3
 
 [cols="35h,~"]
@@ -97,12 +102,14 @@ O suporte para prateleiras SAS-3 IOM12C e DCM3 agora está disponível para firm
 |===
 
 
+[[new-features-in-version-11-90r2]]
 == Novos recursos na versão 11.90R2
 
 Esta versão contém apenas pequenas alterações e não há novos recursos. Para obter mais informações sobre as alterações nesta versão, consulte o https://library.netapp.com/ecm/ecm_download_file/ECMLP3334464["Notas de versão do e-Series 11,90"^].
 
 
 
+[[new-features-in-version-11-90r1]]
 == Novos recursos na versão 11.90R1
 
 [cols="35h,~"]
@@ -125,6 +132,7 @@ A controladora E4000 agora oferece suporte a placas de interface de host SAS de 
 |===
 
 
+[[new-features-in-version-11-90]]
 == Novos recursos na versão 11,90
 
 [cols="35h,~"]
@@ -168,24 +176,28 @@ Configurável somente pela API REST, uma nova configuração de bloqueio de logi
 |===
 
 
+[[new-features-in-version-11-80-1r4]]
 == Novos recursos na versão 11.80.1R4
 
 Esta versão contém apenas pequenas alterações e não há novos recursos ou restrições. Para obter mais informações sobre as alterações nesta versão, consulte o arquivo README.
 
 
 
+[[new-features-in-version-11-80-1r3]]
 == Novos recursos na versão 11.80.1R3
 
 Esta versão contém apenas pequenas alterações e não há novos recursos ou restrições. Para obter mais informações sobre as alterações nesta versão, consulte o arquivo README.
 
 
 
+[[new-features-in-version-11-80-1r2]]
 == Novos recursos na versão 11.80.1R2
 
 Esta versão contém apenas pequenas alterações e não há novos recursos ou restrições. Para obter mais informações sobre as alterações nesta versão, consulte o arquivo README.
 
 
 
+[[new-features-in-version-11-80-1r1]]
 == Novos recursos na versão 11.80.1R1
 
 [cols="35h,~"]
@@ -201,6 +213,7 @@ O comprimento do tamanho da chave do certificado de gerenciamento para o SANtric
 |===
 
 
+[[new-features-in-version-11-80-1]]
 == Novos recursos na versão 11.80.1
 
 [cols="35h,~"]
@@ -244,6 +257,7 @@ O Web Services Proxy foi atualizado para a versão 6,1 para compatibilidade com 
 |===
 
 
+[[new-features-in-version-11-80]]
 == Novos recursos na versão 11,80
 
 [cols="35h,~"]

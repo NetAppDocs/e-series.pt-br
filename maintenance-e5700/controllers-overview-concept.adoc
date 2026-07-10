@@ -18,6 +18,7 @@ Cada recipiente do controlador contém uma placa controladora, uma bateria e uma
 
 
 
+[[procedure-overview]]
 == Descrição geral do procedimento
 
 Quando substituir um recipiente do controlador com falha, tem de remover a bateria e o HIC, se estiverem instalados, do recipiente do controlador original e instalá-los no recipiente do controlador de substituição.
@@ -59,6 +60,7 @@ NOTE: Esse procedimento é para hot-swaps ou substituições de IOM de gaveta se
 
 
 
+[[requirements-for-replacing-a-failed-controller]]
 == Requisitos para substituir um controlador com falha
 
 Antes de substituir um controlador, tem de ter:
@@ -84,6 +86,7 @@ Opcionalmente, você pode usar a interface de linha de comando (CLI) para execut
 
 
 
+[[duplex-configuration-requirements]]
 == Requisitos de configuração duplex
 
 Para um compartimento de controladora com dois controladores (configuração duplex), você pode substituir um coletor de controladora enquanto seu storage array estiver ligado e executando operações de e/S de host, contanto que as seguintes condições sejam verdadeiras:

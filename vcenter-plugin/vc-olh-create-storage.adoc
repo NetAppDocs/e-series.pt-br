@@ -19,6 +19,7 @@ No plug-in de armazenamento para vCenter, você cria armazenamento criando prime
 
 
 
+[[step-1-create-workloads]]
 == Etapa 1: Crie cargas de trabalho
 
 Um workload é um objeto de storage compatível com uma aplicação. Você pode definir uma ou mais cargas de trabalho ou instâncias por aplicação.
@@ -47,6 +48,7 @@ A caixa de diálogo criar carga de trabalho de aplicativo é exibida.
 
 
 
+[[step-2-create-volumes]]
 == Passo 2: Crie volumes
 
 Você cria volumes para adicionar capacidade de storage a um workload específico da aplicação e para tornar os volumes criados visíveis para um host ou cluster de host específico.
@@ -60,6 +62,7 @@ O processo para criar um volume é um procedimento de várias etapas.
 
 
 
+[[step-2a-select-host-for-a-volume]]
 === Passo 2a: Selecione host para um volume
 
 Na primeira etapa, você pode selecionar um host específico ou cluster de host para o volume ou pode optar por atribuir o host posteriormente.
@@ -101,6 +104,7 @@ A caixa de diálogo Selecionar carga de trabalho é exibida.
 
 
 
+[[step-2b-select-a-workload-for-a-volume]]
 === Etapa 2b: Selecione uma carga de trabalho para um volume
 
 Na segunda etapa, você seleciona uma carga de trabalho para personalizar a configuração do storage array para um aplicativo específico, como VMware.
@@ -132,6 +136,7 @@ Tenha em mente estas diretrizes:
 
 
 
+[[step-2c-add-or-edit-volumes]]
 === Passo 2c: Adicionar ou editar volumes
 
 Na terceira etapa, você define a configuração do volume.
@@ -329,6 +334,7 @@ Recurso provisionado (somente EF300 e EF600)
 
 
 
+[[step-2d-review-volume-configuration]]
 === etapa 2D: Revise a configuração do volume
 
 Na última etapa, você analisa um resumo dos volumes que pretende criar e faz as alterações necessárias.

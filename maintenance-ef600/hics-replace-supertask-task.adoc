@@ -38,6 +38,7 @@ CAUTION: *Possível perda de acesso a dados* -- nunca instale um HIC em um recip
 
 
 
+[[step-1-place-the-controller-offline]]
 == Passo 1: Coloque o controlador offline
 
 Coloque o controlador afetado offline para que possa substituir as placas de rede (HICs) em segurança.
@@ -83,6 +84,7 @@ NOTE: Não inicie quaisquer outras operações até que o estado tenha sido atua
 
 
 
+[[step-2-remove-controller-canister]]
 == Etapa 2: Remova o recipiente do controlador
 
 Remova o recipiente do controlador para que você possa substituir a placa de interface do host com falha.
@@ -116,6 +118,7 @@ image::../media/remove_controller_6.png[Use duas mãos para suportar o peso do c
 
 
 
+[[step-3-remove-the-hic]]
 == Passo 3: Remova o HIC
 
 Remova o HIC original para que você possa substituí-lo por um atualizado.
@@ -164,6 +167,7 @@ NOTE: A imagem acima é um exemplo; a aparência do seu HIC pode diferir.
 
 
 
+[[step-4-replace-the-hic]]
 == Passo 4: Substitua o HIC
 
 Depois de remover o HIC antigo, instale um novo HIC.
@@ -198,6 +202,7 @@ Não use uma chave de fenda, ou você pode apertar demais os parafusos.
 
 
 
+[[step-5-reinstall-controller-canister]]
 == Etapa 5: Reinstale o recipiente do controlador
 
 Depois de substituir o HIC, reinstale o recipiente do controlador na prateleira do controlador.
@@ -220,6 +225,7 @@ Se você estiver usando mais de um protocolo de host, certifique-se de instalar 
 
 
 
+[[step-6-complete-hic-replacement]]
 == Passo 6: Substituição completa do HIC
 
 Coloque o controlador on-line, colete dados de suporte e retome as operações.

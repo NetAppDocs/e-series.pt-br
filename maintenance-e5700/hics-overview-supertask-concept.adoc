@@ -15,6 +15,7 @@ Antes de adicionar, atualizar ou substituir uma placa de interface de host (HIC)
 
 
 
+[[procedure-overview]]
 == Descrição geral do procedimento
 
 Você pode adicionar, atualizar ou substituir um HIC no compartimento de controladora E5724 e no compartimento de controladora E5760.
@@ -30,6 +31,7 @@ A seguir, uma visão geral das etapas para substituir um HIC em um controlador E
 
 
 
+[[requirements-for-adding-upgrading-or-replacing-a-hic]]
 == Requisitos para adicionar, atualizar ou substituir um HIC
 
 Se você planeja adicionar, atualizar ou substituir uma placa de interface de host (HIC), tenha em mente os seguintes requisitos.

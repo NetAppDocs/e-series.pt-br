@@ -1353,7 +1353,6 @@
   <block id="2899cc08c13a8183ac48e7da9b12cf2f" category="list-text"><block ref="2899cc08c13a8183ac48e7da9b12cf2f" category="inline-link-macro-rx"></block></block>
   <block id="aebb270a0f1270c10fb5b2e56830535a" category="list-text"><block ref="18f041f08534fbeb53ae160ad78cfbc4" category="inline-link-rx"></block> (Um banco de dados de artigos) - fornece informações de solução de problemas, perguntas frequentes e instruções para uma ampla gama de produtos e tecnologias NetApp.</block>
   <block id="8bdb84c095cd42085dcbf03a378418f7" category="inline-link">Guia de configuração da VMware para integração iSCSI SANtricity da série e com o ESXi 6.X.</block>
-  <block id="eb72855c2604e5d3f7f36945024d001c" category="list-text"><block ref="b742d0734e0a1b1acd85c7093d734f44" category="inline-link-rx"></block> -- fornece detalhes técnicos sobre a integração iSCSI com VMware.</block>
   <block id="0f2f72ef3f176b98134caf100a06cf5f" category="inline-link">Máximos de configuração do VMware</block>
   <block id="094bf2c199fb9ef7ac29e64a12fd7cad" category="inline-link">Requisitos e limitações do storage VMware NVMe</block>
   <block id="8f853bc18ffad192705726f50eff4144" category="list-text"><block ref="6e8a1449bb92590a7f42c1a30534b1da" category="inline-link-rx"></block>.</block>
@@ -1380,7 +1379,6 @@
   <block id="7da05d75fd1c28b0ff4d04d30f85aa5b" category="list-text">A senha para a GUI do System Manager, o controle de acesso baseado em função (RBAC) ou LDAP e um serviço de diretório é configurada para o acesso de segurança apropriado ao storage array. Consulte a ajuda on-line do Gerenciador de sistemas do SANtricity para obter mais informações sobre o Gerenciamento de Acesso.</block>
   <block id="21075a2c147c20a9ef54f587da0a2a84" category="paragraph">Esta tarefa descreve como aceder à configuração da porta iSCSI a partir da página hardware. Também pode aceder à configuração a partir do menu:sistema[Definições &gt; Configurar portas iSCSI].</block>
   <block id="d112a4595d7d618458e0e407fe3798c1" category="inline-link">Guia de configuração da VMware para integração iSCSI SANtricity da série e com ESXi 6.x e 7.x</block>
-  <block id="5821a61234ba1fdfba2e6ba9b392cafa" category="admonition">Para obter informações adicionais sobre como configurar a rede do lado do array na configuração do VMware, consulte o seguinte relatório técnico:<block ref="4c256e5f3e11bff89d951ec9e05da858" category="inline-link-rx"></block>.</block>
   <block id="7bed2562bdc586ec3d67d6662e168cc9" category="paragraph"><block ref="75421680cf281bbdcd7897f4506943b8" prefix="" category="inline-code"></block> é o endereço de uma das controladoras de storage array.</block>
   <block id="c19209cfbefda33b942ed6c39ecb5ddf" category="paragraph">Na primeira vez que o Gerenciador do sistema SANtricity é aberto em uma matriz que não foi configurada, o prompt Definir senha do administrador é exibido. O gerenciamento de acesso baseado em função configura quatro funções locais: administração, suporte, segurança e monitor. Os três últimos papéis têm senhas aleatórias que não podem ser adivinhadas. Depois de definir uma senha para a função de administrador, você pode alterar todas as senhas usando as credenciais de administrador. Consulte a ajuda on-line do Gerenciador de sistema do SANtricity para obter mais informações sobre as quatro funções de usuário locais.</block>
   <block id="d8055035001bdb0000b27f355301370e" category="section-title">Etapa 4: Configurar rede do lado do host--iSCSI</block>
@@ -1418,7 +1416,6 @@
   <block id="ecd504285de8fe1f6f2b5cd34da3b24d" category="list-text">Você não está usando o VMware como convidado virtualizado.</block>
   <block id="ba373ff39579ffa9771935c160aa9e42" category="list-text">Você está usando versões de driver e firmware FC HBA, conforme listado no<block ref="49d81d143d5c8b402603532056154481" category="inline-link-rx"></block>.</block>
   <block id="f0d1919c36085f0e1fce2bd2aada33c1" category="list-text">Você está usando as versões de driver e firmware HBA SAS, conforme listado no<block ref="49d81d143d5c8b402603532056154481" category="inline-link-rx"></block>.</block>
-  <block id="f7a1f25c147fdef63a935b6fc10cf5a0" category="paragraph">Se essas suposições não estiverem corretas para sua instalação ou se você quiser obter mais informações de fundo conceituais, consulte o seguinte relatório técnico:<block ref="691af5827a322478f9c39bcb9ec0d331" category="inline-link-rx"></block></block>
   <block id="4182da09b2e38e1306891b2c7db5433d" category="summary">Para o protocolo SAS, você determina os endereços da porta do host e faz as configurações recomendadas.</block>
   <block id="782074a892923ea9433c10e2d684625e" category="doc">Execute tarefas específicas de SAS</block>
   <block id="063b0df0c14bee863fd6d206304aaf27" category="section-title">Etapa 1: Determinar identificadores de host SAS - VMware</block>
@@ -1594,15 +1591,12 @@
   <block id="1a1ac7a0c3f35e22cacb2c550a2df1d9" category="inline-link">*TR-4839: Espelhamento síncrono e assíncrono SANtricity*</block>
   <block id="d509b57060f226bd7e2c44a452f89f7b" category="cell"><block ref="d509b57060f226bd7e2c44a452f89f7b" category="inline-link-rx"></block></block>
   <block id="4ad675687f473ec16e280e823a6f3390" category="inline-link">*TR-4747: Visão geral do recurso e guia de implantação do SANtricity Snapshot*</block>
-  <block id="876a07b4a179bcb94de902848f25e8a0" category="cell"><block ref="876a07b4a179bcb94de902848f25e8a0" category="inline-link-rx"></block></block>
   <block id="aa798eeebd2e602192497fec8d5a7af0" category="cell">Descreve a arquitetura da solução e como usar o sistema de storage e-Series para importar dados de um dispositivo de storage remoto existente.</block>
   <block id="1e63a15616a71c16975a6ce6873851d7" category="cell">Descreve o recurso de espelhamento síncrono e assíncrono do SANtricity.</block>
   <block id="0d31bf4155130c7e1b044f877c983556" category="cell">Descreve o recurso SANtricity Snapshot, incluindo instruções de navegação GUI usando o Gerenciador de sistema do SANtricity.</block>
   <block id="20b51996662da655011d140b6ce13e08" category="inline-link">*TR-4652: SANtricity Dynamic Disk Pools*</block>
   <block id="c84200fc0d3d1c17f835b93cac2a4073" category="inline-link">*TR-4737: Balanceamento de carga automático SANtricity*</block>
-  <block id="9e438ddc696936eea7043d42a5d772c2" category="cell"><block ref="9e438ddc696936eea7043d42a5d772c2" category="inline-link-rx"></block></block>
   <block id="b855ed13871c8956bc535c1dcafa14d2" category="inline-link">*TR-4736: API de Serviços Web da SANtricity*</block>
-  <block id="4326d77c3acc0dbfc96e7f9272191ffd" category="cell"><block ref="4326d77c3acc0dbfc96e7f9272191ffd" category="inline-link-rx"></block></block>
   <block id="70f747e2b25caced64506b369bc562c5" category="cell">Descreve como os administradores de storage podem agrupar conjuntos de discos semelhantes em uma topologia de pool em que todas as unidades do pool participam do fluxo de trabalho de e/S.</block>
   <block id="958efa95bcd23aab2dfe387642f119c1" category="cell">Descreve uma visão geral do comportamento do recurso ALB, seus principais parâmetros de configuração e seus aprimoramentos de interoperabilidade do host.</block>
   <block id="43d61efb5c5b9a22659cb0751fa61930" category="cell">A descreve uma visão geral dos Serviços Web da SANtricity, uma API usada para configurar e gerenciar sistemas de storage e-Series.</block>
@@ -1665,7 +1659,6 @@
   <block id="ab37896fbb014d28bb0820e9643aceec" category="list-text">*Tipos de interface* - Fibre Channel, iSCSI, iSER, SAS e NVMe.</block>
   <block id="3474f87ae20afc5b78f412345a99408d" category="list-text">*Sistemas operacionais instalados em hosts* - Linux, VMware e Windows.</block>
   <block id="6e466b5767b863e58337ef3d9b28ac15" category="admonition">Interfaces adicionais e sistemas operacionais podem ser suportados. Para obter mais informações, entre em Contato com o suporte técnico.</block>
-  <block id="2df66eecc8cd9c51e0161166dfb25f4e" category="paragraph">Este site _não_ inclui informações para versões _anteriores a_ versão 11,50 do software ou versão 8,50 do firmware. Para versões anteriores, vá para a<block ref="7a0dfab887be5b186aa694d5066574fe" category="inline-link-rx"></block> página.</block>
   <block id="e5e09031843479ef9ef8cbbd4c2f404c" category="inline-link">NetApp Hardware Universe</block>
   <block id="44e714ce1f6e8ee0800c0869d6ef25c7" category="paragraph">Para obter informações sobre os requisitos de preparação do local,<block ref="bb9c67b5a4c15a85b5e6aa6c9afd0285" category="inline-link-rx"></block> visite .</block>
   <block id="ae57e705c83e0b20d768cee453b91d4c" category="summary">Os storage arrays e-Series estão disponíveis em várias configurações e modelos.</block>
@@ -2201,7 +2194,6 @@
   <block id="de79e6b334ef3f5c38431ae360ff09f6" category="paragraph">E2712, E2724, E5612, E5624, EF560</block>
   <block id="f2a12ad5f52528054619d431dc7c3054" category="paragraph">E2760, E5660</block>
   <block id="5c8edef9c398c6792341850977901070" category="inline-link">Descrições e Guia de implantação dos recursos de espelhamento síncrono e assíncrono</block>
-  <block id="c08a9596d55b45e7eb8325bd878b47d5" category="paragraph">Para obter informações sobre o cabeamento para oferecer suporte a recursos de espelhamento, consulte o<block ref="4c6cd7be794e0089961c4cc00b012a2c" category="inline-link-rx"></block>.</block>
   <block id="24a41762ea380b3a02f5c695d2bce024" category="summary">Ligue as fontes de alimentação de cada componente a circuitos de alimentação separados.</block>
   <block id="3cb25ff73e5ada2c147cb1af657aba0a" category="doc">Cablagem de alimentação</block>
   <block id="35ba145aad1f0d8daff6e20fb955e961" category="paragraph">Tem de ligar as fontes de alimentação de cada componente a circuitos de alimentação separados.</block>
@@ -4854,11 +4846,8 @@
   <block id="7cf4c38c0fce601af2070f2a55c1ed72" category="list-text">*Disconnect* – selecione *Disconnect* para quebrar a relação entre os volumes de origem e destino para uma operação de importação que tenha parado, concluído ou falhado.</block>
   <block id="58e0dda41aec654996f2661ca9ee6f7b" category="section-title">Segurança TRs</block>
   <block id="d46165f424a559168595411d0e129de6" category="inline-link">*TR-4474: Guia de recursos de Segurança da Unidade SANtricity*</block>
-  <block id="7aeb5576c50c1baeaf78d974491ebf2e" category="cell"><block ref="7aeb5576c50c1baeaf78d974491ebf2e" category="inline-link-rx"></block></block>
   <block id="5671444c44b849b5c9fe3625aca83a32" category="inline-link">*TR-4712: Recursos de Segurança de Gerenciamento do SANtricity*</block>
-  <block id="3fbbca07210386bb17ab330852008ab0" category="cell"><block ref="3fbbca07210386bb17ab330852008ab0" category="inline-link-rx"></block></block>
   <block id="ab8408b6fd9cba5084539eb227cd6e7a" category="inline-link">*TR-4813: Gerenciando certificados para sistemas e-Series*</block>
-  <block id="5121e9a4ab6f5ca2bcf73d97f25849ac" category="cell"><block ref="5121e9a4ab6f5ca2bcf73d97f25849ac" category="inline-link-rx"></block></block>
   <block id="eb61863f24474705952b6b8529693268" category="cell">Descreve o recurso de criptografia de disco completo para sistemas e-Series, incluindo suporte a unidades validadas FIPS 140-2 e suporte ao gerenciamento de chaves internas e externas.</block>
   <block id="4f9496e09027a6c99404d536d6528ce0" category="cell">Descreve os recursos de segurança do SANtricity para sistemas de storage NetApp e-Series E2800, E5700, EF280, EF570, EF300 e EF600.</block>
   <block id="72a5b80ae6deeca3b9add8212e4901c5" category="cell">Descreve como gerenciar certificados de segurança com os controladores e aplicativos e-Series mais recentes.</block>
@@ -4870,7 +4859,6 @@
   <block id="39a9002fa4dcf0afc27b1355c1567969" category="cell">Descreve como configurar o Access Management, incluindo o controle de acesso baseado em funções (RBAC), o LDAP (Lightweight Directory Access Protocol) e a SAML (Security Assertion Markup Language).</block>
   <block id="2f9304fe9b427489507405bef9a0bb9f" category="section-title">Splunk</block>
   <block id="158f8674c1793cce2d98e8cbcb20b6bf" category="inline-link">*TR-4623: E5700 com Splunk Enterprise*</block>
-  <block id="2cf8e7dfbbc127c7fc8a9b5579f49087" category="cell"><block ref="2cf8e7dfbbc127c7fc8a9b5579f49087" category="inline-link-rx"></block></block>
   <block id="d6bc9f7e61ad87366a99e2b38a35d217" category="inline-link">*TR-4903: EF300 com Splunk Enterprise*</block>
   <block id="48611860e08a7021a7a32db63f370c03" category="cell"><block ref="48611860e08a7021a7a32db63f370c03" category="inline-link-rx"></block></block>
   <block id="273dcb16af41ba30a29aa8335c08a790" category="inline-link">*TR-4930: EF600 com Splunk Enterprise*</block>
@@ -4880,24 +4868,19 @@
   <block id="709b2345a804dd3959ae288cc98408cf" category="cell">Descreve a arquitetura integrada do array all-flash EF600 e o design do Splunk. Este documento também resume os resultados do teste de desempenho obtidos em uma ferramenta de simulação de eventos de log de máquina Splunk.</block>
   <block id="bf8e2974cd692b57a29e42874b662b52" category="section-title">Bancos de dados empresariais</block>
   <block id="4b23b3afe3be27a8aef7f52e987e9e75" category="inline-link">*TR-4764: Guia de práticas recomendadas para Microsoft SQL Server com NetApp EF-Series*</block>
-  <block id="c6aff4e6a6907e8ad632932a56bba161" category="cell"><block ref="c6aff4e6a6907e8ad632932a56bba161" category="inline-link-rx"></block></block>
   <block id="44249e3e6f499b6ef16f3c604a4060f0" category="inline-link">*TR-4794: Bancos de dados Oracle no NetApp EF-Series*</block>
-  <block id="116671a22501aac3b12ba87e23615719" category="cell"><block ref="116671a22501aac3b12ba87e23615719" category="inline-link-rx"></block></block>
   <block id="1be89425e0cebd7d4e13e5744baebbbd" category="cell">Ajuda administradores de storage e administradores de banco de dados a implantarem com sucesso o Microsoft SQL Server no storage EF-Series do NetApp.</block>
   <block id="ea2848b98724bc7c864ab419f1efd076" category="cell">Ajuda administradores de storage e administradores de banco de dados a implantarem o Oracle com sucesso no storage EF-Series do NetApp.</block>
   <block id="8a7d992e887a76abe4703518ec317a4c" category="section-title">Backup e recuperação</block>
   <block id="569680cec832ec2d53d80483c8dbc439" category="inline-link">*TR-4320: Melhores práticas com a CommVault Data Platform V11*</block>
   <block id="0cd4f7215cb7ec8c6f73c51d9dc39a48" category="inline-link">*TR-4471: Melhores práticas com o Veeam Backup and Replication*</block>
   <block id="5941ff1b3a4ffc80a4b2f0ae157b8b6d" category="inline-link">*TR-4704: Implantação do Veritas NetBackup com o armazenamento NetApp Série e*</block>
-  <block id="d5da5f4acb6ce9cd96c756f74b96e9a0" category="cell"><block ref="d5da5f4acb6ce9cd96c756f74b96e9a0" category="inline-link-rx"></block></block>
   <block id="12d1a4b387bfcab1922f0a411bb84852" category="cell">Descreve a arquitetura de referência e as práticas recomendadas ao usar o storage NetApp e-Series em um ambiente CommVault Data Platform V11.</block>
   <block id="a1b3500cdb406a82f102b18ae88f8421" category="cell">Descreve a arquitetura de referência e as práticas recomendadas ao usar o storage do NetApp e-Series em um ambiente do Veeam Backup &amp; Replication 9,5.</block>
   <block id="ac8df2201a6c1727b46dd8779e1c479e" category="cell">Descreve a implantação do Veritas NetBackup no storage NetApp e-Series.</block>
   <block id="4b1723f1cc6cad1502f558faf333c23d" category="section-title">VSS</block>
   <block id="faacb27f48573fe7471c6c5407114769" category="inline-link">*TR-4825: Guia de melhores práticas de vigilância por vídeo da série e da NetApp*</block>
-  <block id="1cb1ebb36d511709a2d47a00b912e28e" category="cell"><block ref="1cb1ebb36d511709a2d47a00b912e28e" category="inline-link-rx"></block></block>
   <block id="133e06e6567e2be753a017c1d83c75be" category="inline-link">*TR-4818: Virtualização de sistemas de gerenciamento de vídeo com armazenamento NetApp e-Series*</block>
-  <block id="9f78f0c3a696ac09970d273359d55850" category="cell"><block ref="9f78f0c3a696ac09970d273359d55850" category="inline-link-rx"></block></block>
   <block id="3a3bcd9a696371d87aa6a1357bd3bca8" category="inline-link">*TR-4848: Solução de gravação de vídeo da Bosch com a matriz de armazenamento em disco NetApp e-Series E2800*</block>
   <block id="38a88b97f187a582e7a91f2bdabb2776" category="cell"><block ref="38a88b97f187a582e7a91f2bdabb2776" category="inline-link-rx"></block></block>
   <block id="642678f34e43644119ca55a845b8eb4b" category="cell">Descreve as práticas recomendadas para a implantação de arrays e-Series em ambientes de vigilância por vídeo.</block>
@@ -9028,10 +9011,7 @@
   <block id="68b5d7bbc938636a6430a66ddd3590d0" category="section-title">Ajuda on-line do Unified Manager</block>
   <block id="703be4c8c3307cd5e44163a39538eb58" category="inline-link">Ajuda online do SANtricity Unified Manager</block>
   <block id="4c0bdc96ec6314c064f33faae57a0c02" category="paragraph">Acesse o<block ref="d6978b00f819ec3b99c59933f313d81f" category="inline-link-rx"></block>, onde você pode aprender a executar comandos de gerenciamento de armazenamento em vários storages de armazenamento de rede.</block>
-  <block id="5b4f9cf27402df2737b167e7393669c2" category="cell"><block ref="5b4f9cf27402df2737b167e7393669c2" category="inline-link-rx"></block></block>
-  <block id="034410ce2cd58a6a56e6772fadec879b" category="cell"><block ref="034410ce2cd58a6a56e6772fadec879b" category="inline-link-rx"></block></block>
   <block id="6c33c8a01a7b3f83682789dc2c3e0a6e" category="cell"><block ref="6c33c8a01a7b3f83682789dc2c3e0a6e" category="inline-link-rx"></block></block>
-  <block id="ec476342469d41cbc06b7065ffea021e" category="cell"><block ref="ec476342469d41cbc06b7065ffea021e" category="inline-link-rx"></block></block>
   <block id="ba463c26bea3a95ca7381fd32b63eb98" category="sidebar">Folha de dados E4000</block>
   <block id="b30b3ed54d36ae2fd1e5c231ba1b18c0" category="list-text">Confirme se os LEDs Cache ative na parte traseira do controlador e na placa frontal do controlador estão desligados.</block>
   <block id="53ec2a2a971455f492adc2f07e6c780d" category="paragraph">Se qualquer LED estiver ligado, o controlador ainda está a utilizar a alimentação da bateria. Todos os LEDs devem estar desligados antes de continuar com este procedimento.</block>
@@ -10743,4 +10723,25 @@
   <block id="7f3980e2c518e011140305dfa2c7cc40" category="list-text">Agende uma janela de manutenção de downtime para este procedimento. Você não poderá acessar os dados no array de storage até que este procedimento seja concluído com sucesso. Como ambos os controladores devem ter a mesma configuração HIC quando estão ligados, você deve desconectar um controlador para colocar o sistema em um estado não redundante ao instalar os HICs.</block>
   <block id="79a7b3d475a1ce35fef4a7398f3e40b8" category="list-text">Para controladores EF300, a placa de expansão SAS deve ser instalada na porta 1 para permitir a expansão da bandeja de unidades.</block>
   <block id="805eb1d81197f7063faa2748049cf91c" category="sidebar">Criar sistemas de arquivos</block>
+  <block id="2cbe497ead02b07696b7f8ba715273d8" category="list-text"><block ref="14ce0b3b3110401a1b39acf80b50aa21" category="inline-link-rx"></block> Fornece detalhes técnicos sobre a integração do iSCSI com o VMware.</block>
+  <block id="db8fd25422dfd9e476a6d254489d6885" category="admonition">Para obter informações adicionais sobre como configurar a rede em sua configuração VMware, consulte o seguinte relatório técnico:<block ref="4ac86815341f0906d3774739def67837" category="inline-link-rx"></block>.</block>
+  <block id="f269f736f01b5a3ba3b44794e8ee27c6" category="paragraph">Caso essas premissas não sejam adequadas para a sua instalação, ou se você quiser mais informações conceituais, consulte o seguinte relatório técnico:<block ref="4977c7b19f138570e684730359b29046" category="inline-link-rx"></block></block>
+  <block id="4a75d0ce3a7cec59194f5da10fc68b01" category="cell"><block ref="4a75d0ce3a7cec59194f5da10fc68b01" category="inline-link-rx"></block></block>
+  <block id="3da4716e359d926374c1e38750cb4042" category="cell"><block ref="3da4716e359d926374c1e38750cb4042" category="inline-link-rx"></block></block>
+  <block id="ddfa60f0509e2e068f8ef6bfd7673cc1" category="cell"><block ref="ddfa60f0509e2e068f8ef6bfd7673cc1" category="inline-link-rx"></block></block>
+  <block id="13178170438c003ae2aa2be18f8906c8" category="inline-link">Documentação do E-Series e SANtricity para versões anteriores</block>
+  <block id="ca706c2fc37c15773a41828815e2598e" category="paragraph">Este site _não_ inclui informações para versões _anteriores à_ versão de software 11.50 ou versão de firmware 8.50. Para versões anteriores, acesse a página <block ref="f4862ea0f3425290e53b9b2a7ea1bbb6" category="inline-link-rx"></block>.</block>
+  <block id="38d182558c93c49cb0f7c3e674c84809" category="paragraph">Para obter informações sobre a cablagem necessária para suportar as funcionalidades de espelhamento, consulte o <block ref="0676c92dfb7980c8f661feef8914b234" category="inline-link-rx"></block>.</block>
+  <block id="59afa1b325e9b68dee4cd5c8f27d0f60" category="cell"><block ref="59afa1b325e9b68dee4cd5c8f27d0f60" category="inline-link-rx"></block></block>
+  <block id="177b521773d98f6fa93c6166c87a492a" category="cell"><block ref="177b521773d98f6fa93c6166c87a492a" category="inline-link-rx"></block></block>
+  <block id="676b0fd9f88ed51de190d1cb66b949be" category="cell"><block ref="676b0fd9f88ed51de190d1cb66b949be" category="inline-link-rx"></block></block>
+  <block id="0997d04e7d8852e63947caa54f2a478a" category="cell"><block ref="0997d04e7d8852e63947caa54f2a478a" category="inline-link-rx"></block></block>
+  <block id="727697529ac79d12e4d3e026354cb756" category="cell"><block ref="727697529ac79d12e4d3e026354cb756" category="inline-link-rx"></block></block>
+  <block id="b6e9fc34b1b5c07d8fadd79fa351f4b0" category="cell"><block ref="b6e9fc34b1b5c07d8fadd79fa351f4b0" category="inline-link-rx"></block></block>
+  <block id="6fbcc04415dc1d7f1a17864715ced47d" category="cell"><block ref="6fbcc04415dc1d7f1a17864715ced47d" category="inline-link-rx"></block></block>
+  <block id="7a025c6da9dacd6ebf8b1115962ed2c2" category="cell"><block ref="7a025c6da9dacd6ebf8b1115962ed2c2" category="inline-link-rx"></block></block>
+  <block id="32528c8831f732a871241bcfd3cf1298" category="cell"><block ref="32528c8831f732a871241bcfd3cf1298" category="inline-link-rx"></block></block>
+  <block id="22839016e944bb39ae944b854e55b7ef" category="cell"><block ref="22839016e944bb39ae944b854e55b7ef" category="inline-link-rx"></block></block>
+  <block id="6a7c8d63e9ff78bb1b7b5d797d0587e5" category="cell"><block ref="6a7c8d63e9ff78bb1b7b5d797d0587e5" category="inline-link-rx"></block></block>
+  <block id="1ed965aef797c8ec8dad05a7ba9680f3" category="cell"><block ref="1ed965aef797c8ec8dad05a7ba9680f3" category="inline-link-rx"></block></block>
 </blocks>

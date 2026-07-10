@@ -51,6 +51,7 @@ NOTE: Se precisar de informações sobre como substituir um compartimento de exp
 
 
 
+[[step-1-prepare-to-replace-drive-drawer]]
 == Passo 1: Prepare-se para substituir a gaveta da unidade
 
 Determine se você pode executar o procedimento de substituição enquanto o compartimento de unidade está on-line ou se precisa interromper a atividade de e/S do host e desligar qualquer uma das gavetas ligadas.
@@ -151,6 +152,7 @@ image::../media/28_dwg_2800_controller_attn_led_maint-e2800.gif[LED de cache ati
 
 
 
+[[step-2-remove-cable-chains]]
 == Passo 2: Remova as correntes dos cabos
 
 Remova ambas as correntes de cabo para que possa remover e substituir uma gaveta de unidade com falha.
@@ -292,6 +294,7 @@ O LED pode permanecer aceso durante um minuto depois de reinstalar a ventoinha e
 
 
 
+[[step-3-remove-failed-drive-drawer]]
 == Passo 3: Remova a gaveta da unidade com falha
 
 Remova uma gaveta de unidade com falha para substituí-la por uma nova.
@@ -346,6 +349,7 @@ image::../media/92_pht_de6600_drive_drawer_release_lever_maint-e2800.gif[Solte a
 
 
 
+[[step-4-install-new-drive-drawer]]
 == Passo 4: Instale a nova gaveta da unidade
 
 Instale uma nova gaveta de unidade para substituir a que falhou.
@@ -385,6 +389,7 @@ CAUTION: *Risco de danos no equipamento* -- pare de empurrar a gaveta da unidade
 
 
 
+[[step-5-attach-cable-chains]]
 == Passo 5: Fixe as correntes dos cabos
 
 Fixe as correntes de cabos para que possa reinstalar as unidades com segurança na gaveta da unidade.
@@ -469,6 +474,7 @@ O LED pode permanecer aceso durante um minuto depois de reinstalar a ventoinha e
 
 
 
+[[step-6-complete-drive-drawer-replacement]]
 == Passo 6: Substituição completa da gaveta da unidade
 
 Reinsira as unidades e recoloque a moldura frontal na ordem correta.

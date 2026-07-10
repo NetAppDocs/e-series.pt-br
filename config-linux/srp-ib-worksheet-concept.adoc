@@ -17,6 +17,7 @@ image::../media/port_identifiers_ib_srp.gif[SRB sobre identificadores de porta I
 
 
 
+[[host-identifiers]]
 == Identificadores de host
 
 
@@ -70,12 +71,14 @@ Porta de host 2 para switch IB 2 (caminho "B")
 |===
 
 
+[[recommended-configuration]]
 == Configuração recomendada
 
 As configurações recomendadas consistem em duas portas de iniciador e quatro portas de destino.
 
 
 
+[[mapping-host-name]]
 == Mapeando o nome do host
 
 

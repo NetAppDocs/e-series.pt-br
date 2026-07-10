@@ -15,6 +15,7 @@ Antes de converter o protocolo da porta do host no E5700, revise os requisitos.
 
 
 
+[[host-ports-you-can-change]]
 == Portas de host que você pode alterar
 
 
@@ -26,6 +27,7 @@ image::../media/e5700_with_2_port_100g_edr_infiniband_hic_w_callouts.gif[Portas 
 
 
 
+[[requirements]]
 == Requisitos
 
 * Tem de programar uma janela de manutenção de tempo de inatividade para este procedimento.
@@ -38,6 +40,7 @@ image::../media/e5700_with_2_port_100g_edr_infiniband_hic_w_callouts.gif[Portas 
 
 
 
+[[considerations-for-changing-the-host-protocol]]
 == Considerações para alterar o protocolo do host
 
 As considerações para alterar o protocolo do host dependem dos protocolos de início e término das portas do host da placa base e das portas HIC.
@@ -49,6 +52,7 @@ NOTE: As considerações a seguir se aplicam somente se você estiver convertend
 
 
 
+[[converting-from-fc-to-iscsi]]
 === Conversão de FC para iSCSI
 
 * O espelhamento assíncrono requer o storage array local e o storage array remoto para usar o mesmo protocolo.
@@ -75,6 +79,7 @@ CAUTION: Se não desativar as relações de espelhamento síncrono antes de conv
 
 
 
+[[converting-from-iscsi-to-fc]]
 === Conversão de iSCSI para FC
 
 * O espelhamento assíncrono requer o storage array local e o storage array remoto para usar o mesmo protocolo. Se estiver atualmente a utilizar o espelhamento assíncrono com as portas de base, tem de desativar o espelhamento assíncrono antes de alterar o protocolo.
@@ -83,6 +88,7 @@ CAUTION: Se não desativar as relações de espelhamento síncrono antes de conv
 
 
 
+[[converting-ib-iser-tofrom-ib-srp]]
 === Conversão de IB-iSER para/do IB-SRP
 
 * Você não precisa fazer alterações no hardware ao converter de/para iSER para SRP.
@@ -102,6 +108,7 @@ NOTE: Depois de ter sido desativado, A DA não pode ser reativada no volume.
 
 
 
+[[mirroring-operations-need-same-host-protocol]]
 === As operações de espelhamento precisam do mesmo protocolo de host
 
 As operações de espelhamento não são afetadas se as portas do host que estão sendo usadas para espelhamento manterem o mesmo protocolo depois de aplicar o pacote de recursos. Mesmo assim, antes de aplicar o pacote de recursos, você deve confirmar que todos os grupos de consistência de espelho estão sincronizados. Depois de aplicar o pacote de recursos, você deve testar a comunicação entre o storage de armazenamento local e o storage de armazenamento remoto. Consulte a ajuda on-line do Gerenciador de sistemas do SANtricity se você tiver dúvidas sobre como fazer isso.

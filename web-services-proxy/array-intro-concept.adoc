@@ -16,12 +16,14 @@ Para gerenciar sistemas de storage na rede, primeiro você deve descobri-los e a
 
 
 
+[[discover-storage-systems]]
 == Descubra os sistemas de armazenamento
 
 Você pode definir a deteção automática ou descobrir manualmente os sistemas de storage.
 
 
 
+[[automatically-discover-storage-systems]]
 === Descobrir automaticamente os sistemas de storage
 
 Você pode especificar que os sistemas de armazenamento são detetados automaticamente na rede, modificando as configurações no arquivo wsconfig.xml. Por padrão, a deteção automática IPv6 está desativada e o IPv4 está ativado.
@@ -56,6 +58,7 @@ NOTE: Quando os caminhos são configurados, mas não configurados para que o ser
 
 
 
+[[discover-and-add-storage-systems-using-api-endpoints]]
 === Descubra e adicione sistemas de storage usando endpoints de API
 
 Você pode usar endpoints de API para descobrir e adicionar sistemas de storage à lista gerenciada. Esse procedimento cria uma conexão de gerenciamento entre o sistema de storage e a API.
@@ -248,6 +251,7 @@ Não são necessários parâmetros.
 
 
 
+[[scale-up-the-number-of-managed-storage-systems]]
 == Faça a escalabilidade vertical do número de sistemas de storage gerenciados
 
 Por padrão, a API pode gerenciar até 100 sistemas de storage. Se você precisar gerenciar mais, você deve aumentar os requisitos de memória para o servidor.

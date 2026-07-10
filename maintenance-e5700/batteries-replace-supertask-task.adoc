@@ -32,6 +32,7 @@ Cada recipiente do controlador E5700 inclui uma bateria que preserva os dados em
 
 
 
+[[step-1-place-controller-offline-duplex]]
 == Passo 1: Coloque o controlador offline (duplex)
 
 Se você tiver uma configuração duplex, coloque o controlador afetado offline para que você possa remover a bateria com falha com segurança. O controlador que você não está colocando off-line deve estar on-line (no estado ideal).
@@ -108,6 +109,7 @@ CAUTION: Não inicie quaisquer outras operações até que o estado tenha sido a
 
 
 
+[[step-2-remove-controller-canister]]
 == Etapa 2: Remova o recipiente do controlador
 
 Antes de poder remover a bateria com falha, tem de remover o recipiente do controlador.
@@ -161,6 +163,7 @@ Se você estiver removendo o recipiente do controlador de uma prateleira do cont
 
 
 
+[[step-3-remove-failed-battery]]
 == Passo 3: Remova a bateria com falha
 
 Depois de remover o recipiente do controlador da prateleira do controlador, retire a bateria.
@@ -201,6 +204,7 @@ CAUTION: Para cumprir com os regulamentos da Associação Internacional de Trans
 
 
 
+[[step-4-install-new-battery]]
 == Passo 4: Instale a bateria nova
 
 Depois de remover a bateria com falha, instale uma nova.
@@ -249,6 +253,7 @@ image:../media/28_dwg_e2800_battery_flange_not_ok_maint-e5700.gif["Flange da bat
 
 
 
+[[step-5-re-install-controller-canister]]
 == Passo 5: Reinstale o recipiente do controlador
 
 Depois de instalar a nova bateria, reinstale o recipiente do controlador na prateleira do controlador.
@@ -281,6 +286,7 @@ image::../media/28_dwg_e2860_add_controller_canister_maint-e5700.gif[Reinstale o
 
 
 
+[[step-6-place-controller-online-duplex]]
 == Passo 6: Coloque o controlador on-line (duplex)
 
 Para uma configuração duplex, coloque o controlador on-line, colete dados de suporte e retome as operações.

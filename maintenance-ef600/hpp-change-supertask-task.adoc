@@ -16,6 +16,7 @@ Siga este procedimento para alterar o protocolo da porta do host em um array EF3
 
 
 
+[[step-1-obtain-the-feature-pack-key]]
 == Passo 1: Obtenha a chave do pacote de recursos
 
 Para obter a chave do pacote de recursos, é necessário o número de série do compartimento do controlador, um Código de ativação de recursos e o Identificador de ativação de recursos para o storage array.
@@ -616,6 +617,7 @@ NOTE: O site de ativação de recursos Premium inclui um link para ""instruçõe
 
 
 
+[[step-2-stop-host-io]]
 == Etapa 2: Parar a e/S do host
 
 Pare todas as operações de e/S do host antes de converter o protocolo das portas do host.
@@ -648,6 +650,7 @@ O LED verde Cache ative na parte de trás de cada controlador fica aceso quando 
 
 
 
+[[step-3-change-the-feature-pack]]
 == Passo 3: Altere o pacote de recursos
 
 Altere o pacote de recursos para converter o protocolo de host de suas portas de host.

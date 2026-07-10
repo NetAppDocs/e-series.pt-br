@@ -15,52 +15,56 @@ Confira os links abaixo para acessar os relatórios técnicos da solução relac
 
 
 
+[[splunk]]
 == Splunk
 
 [cols="9,9,9"]
 |===
 
 
-| https://www.netapp.com/pdf.html?item=/media/16851-tr-4623pdf.pdf["*TR-4623: E5700 com Splunk Enterprise*"^] | https://www.netapp.com/media/57104-tr-4903.pdf["*TR-4903: EF300 com Splunk Enterprise*"^] | https://www.netapp.com/pdf.html?item=/media/72003-tr-4930.pdf["*TR-4930: EF600 com Splunk Enterprise*"^] 
+| https://www.netapp.com/pdf.html?item=/media/16851-tr-4623.pdf["*TR-4623: E5700 com Splunk Enterprise*"^] | https://www.netapp.com/media/57104-tr-4903.pdf["*TR-4903: EF300 com Splunk Enterprise*"^] | https://www.netapp.com/pdf.html?item=/media/72003-tr-4930.pdf["*TR-4930: EF600 com Splunk Enterprise*"^] 
 
 
 | Descreve a arquitetura integrada do sistema E5700 e o design do Splunk. Este documento também resume os resultados do teste de desempenho obtidos em uma ferramenta de simulação de eventos de log de máquina Splunk. | Descreve a arquitetura integrada do array all-flash EF300 e o design do Splunk. Este documento também resume os resultados do teste de desempenho obtidos em uma ferramenta de simulação de eventos de log de máquina Splunk. | Descreve a arquitetura integrada do array all-flash EF600 e o design do Splunk. Este documento também resume os resultados do teste de desempenho obtidos em uma ferramenta de simulação de eventos de log de máquina Splunk. 
 |===
 
 
+[[enterprise-databases]]
 == Bancos de dados empresariais
 
 [cols="9,9,9"]
 |===
 
 
-| https://www.netapp.com/pdf.html?item=/media/17086-tr4764pdf.pdf["*TR-4764: Guia de práticas recomendadas para Microsoft SQL Server com NetApp EF-Series*"^] | https://www.netapp.com/pdf.html?item=/media/17248-tr4794pdf.pdf["*TR-4794: Bancos de dados Oracle no NetApp EF-Series*"^] |  
+| https://www.netapp.com/pdf.html?item=/media/17086-tr4764.pdf["*TR-4764: Guia de práticas recomendadas para Microsoft SQL Server com NetApp EF-Series*"^] | https://www.netapp.com/pdf.html?item=/media/17248-tr4794.pdf["*TR-4794: Bancos de dados Oracle no NetApp EF-Series*"^] |  
 
 
 | Ajuda administradores de storage e administradores de banco de dados a implantarem com sucesso o Microsoft SQL Server no storage EF-Series do NetApp. | Ajuda administradores de storage e administradores de banco de dados a implantarem o Oracle com sucesso no storage EF-Series do NetApp. |  
 |===
 
 
+[[backup-recovery]]
 == Backup e recuperação
 
 [cols="9,9,9"]
 |===
 
 
-| https://www.netapp.com/media/79676-tr-4950.pdf["*TR-4320: Melhores práticas com a CommVault Data Platform V11*"^] | https://www.netapp.com/media/79436-tr-4948.pdf["*TR-4471: Melhores práticas com o Veeam Backup and Replication*"^] | https://www.netapp.com/pdf.html?item=/media/16433-tr-4704pdf.pdf["*TR-4704: Implantação do Veritas NetBackup com o armazenamento NetApp Série e*"^] 
+| https://www.netapp.com/media/79676-tr-4950.pdf["*TR-4320: Melhores práticas com a CommVault Data Platform V11*"^] | https://www.netapp.com/media/79436-tr-4948.pdf["*TR-4471: Melhores práticas com o Veeam Backup and Replication*"^] | https://www.netapp.com/pdf.html?item=/media/16433-tr-4704.pdf["*TR-4704: Implantação do Veritas NetBackup com o armazenamento NetApp Série e*"^] 
 
 
 | Descreve a arquitetura de referência e as práticas recomendadas ao usar o storage NetApp e-Series em um ambiente CommVault Data Platform V11. | Descreve a arquitetura de referência e as práticas recomendadas ao usar o storage do NetApp e-Series em um ambiente do Veeam Backup & Replication 9,5. | Descreve a implantação do Veritas NetBackup no storage NetApp e-Series. 
 |===
 
 
+[[vss]]
 == VSS
 
 [cols="9,9,9"]
 |===
 
 
-| https://www.netapp.com/pdf.html?item=/media/17200-tr4825pdf.pdf["*TR-4825: Guia de melhores práticas de vigilância por vídeo da série e da NetApp*"^] | https://www.netapp.com/pdf.html?item=/media/6143-tr4818pdf.pdf["*TR-4818: Virtualização de sistemas de gerenciamento de vídeo com armazenamento NetApp e-Series*"^] | https://www.netapp.com/pdf.html?item=/media/19400-tr-4848.pdf["*TR-4848: Solução de gravação de vídeo da Bosch com a matriz de armazenamento em disco NetApp e-Series E2800*"^] 
+| https://www.netapp.com/pdf.html?item=/media/17200-tr4825.pdf["*TR-4825: Guia de melhores práticas de vigilância por vídeo da série e da NetApp*"^] | https://www.netapp.com/pdf.html?item=/media/6143-tr4818.pdf["*TR-4818: Virtualização de sistemas de gerenciamento de vídeo com armazenamento NetApp e-Series*"^] | https://www.netapp.com/pdf.html?item=/media/19400-tr-4848.pdf["*TR-4848: Solução de gravação de vídeo da Bosch com a matriz de armazenamento em disco NetApp e-Series E2800*"^] 
 
 
 | Descreve as práticas recomendadas para a implantação de arrays e-Series em ambientes de vigilância por vídeo. | Descreve como projetar e implantar sistemas de gerenciamento de vídeo com o storage NetApp e-Series. | Descreve a arquitetura da solução de vigilância por vídeo e inclui detalhes sobre os componentes e as práticas recomendadas de storage. 
@@ -73,6 +77,7 @@ Confira os links abaixo para acessar os relatórios técnicos da solução relac
 |===
 
 
+[[hpc]]
 == HPC
 
 [cols="9,9,9"]

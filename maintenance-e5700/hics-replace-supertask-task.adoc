@@ -33,6 +33,7 @@ Quando você substitui um HIC, coloca o controlador offline (para configuraçõe
 
 
 
+[[step-1-place-controller-offline-duplex]]
 == Passo 1: Coloque o controlador offline (duplex)
 
 Se você tiver uma configuração duplex, você deve colocar o controlador afetado off-line para que você possa remover com segurança o HIC com falha.
@@ -105,6 +106,7 @@ NOTE: Não inicie quaisquer outras operações até que o estado tenha sido atua
 
 
 
+[[step-2-remove-controller-canister]]
 == Etapa 2: Remova o recipiente do controlador
 
 Retire o recipiente do controlador para que possa adicionar o novo HIC.
@@ -165,6 +167,7 @@ Se você estiver removendo o recipiente do controlador de uma prateleira do cont
 
 
 
+[[step-3-install-a-hic]]
 == Passo 3: Instale um HIC
 
 Instale um novo HIC para substituir o que falhou.
@@ -219,6 +222,7 @@ image::../media/28_dwg_e2800_hic_faceplace_screws_maint-e5700.gif[Instale a plac
 
 
 
+[[step-4-reinstall-controller-canister]]
 == Etapa 4: Reinstale o recipiente do controlador
 
 Depois de instalar o HIC, reinstale o recipiente do controlador na prateleira do controlador.
@@ -261,6 +265,7 @@ NOTE: Não ligue os cabos de dados às novas portas HIC neste momento.
 
 
 
+[[step-5-place-controller-online-duplex]]
 == Passo 5: Coloque o controlador on-line (duplex)
 
 Se você tiver uma configuração duplex, coloque o controlador on-line para confirmar que o storage array está funcionando corretamente, colete dados de suporte e retome as operações.

@@ -30,6 +30,7 @@ Se uma fonte de alimentação falhar, você deve substituí-la o mais rápido po
 
 
 
+[[step-1-remove-failed-power-supply]]
 == Etapa 1: Remova a fonte de alimentação com falha
 
 Remova uma fonte de alimentação com falha para que você possa substituí-la por uma nova.
@@ -62,6 +63,7 @@ image::../media/psup_3.png[Deslize a fonte de alimentação para fora]
 
 
 
+[[step-2-install-new-power-supply-and-complete-the-replacement]]
 == Passo 2: Instale uma nova fonte de alimentação e complete a substituição
 
 Depois de remover a fonte de alimentação com falha, instale uma nova.

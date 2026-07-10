@@ -26,6 +26,7 @@ image:../media/drw_cable_pull_tab_direction_ieops-1699.svg["Direção da aba de 
 
 
 
+[[step-1-cable-the-inter-controller-mirroring-connections]]
 == Passo 1: Conecte os cabos de espelhamento entre os controladores
 
 Conecte os controladores entre si por meio de cabos para habilitar o espelhamento entre controladores. As conexões de espelhamento entre controladores garantem total redundância do sistema e são usadas para espelhamento de cache e envio de E/S. O cabeamento é o mesmo para os sistemas de storage EF50 e EF80.
@@ -53,6 +54,7 @@ image:../media/drw_ef50-ef80_mirroring_2p_100gbe_ieops-2659.svg["Cabos de conex�
 
 
 
+[[step-2-cable-the-host-connections]]
 == Passo 2: Conecte os cabos do host
 
 Conecte os cabos do host para o seu sistema de storage de acordo com sua topologia de rede: conexão direta ou conexão por malha.

@@ -38,6 +38,7 @@ Para obter informações sobre o hardware compatível, consulte a https://mysupp
 
 
 
+[[step-1-prepare-to-upgrade-host-interface-cards]]
 == Passo 1: Prepare-se para atualizar as placas de interface do host
 
 Prepare-se para atualizar as placas de interface de host (HICs) fazendo backup do banco de dados de configuração do storage array, coletando dados de suporte e parando as operações de e/S do host. Em seguida, você pode desligar o compartimento do controlador.
@@ -121,6 +122,7 @@ Aguarde que todas as operações sejam concluídas antes de continuar com o pró
 
 
 
+[[step-2-remove-controller-canister]]
 == Etapa 2: Remova o recipiente do controlador
 
 Você remove o recipiente do controlador para que você possa atualizar a nova placa de interface do host (HIC). Ao remover um recipiente do controlador, tem de desligar todos os cabos. Em seguida, você pode deslizar o recipiente do controlador para fora da prateleira do controlador.
@@ -185,6 +187,7 @@ Se você estiver removendo o recipiente do controlador de um compartimento do co
 
 
 
+[[step-3-remove-a-host-interface-card]]
 == Passo 3: Remova uma placa de interface do host
 
 Remova a placa de interface do host original (HIC) para que você possa substituí-la por uma atualizada.
@@ -232,6 +235,7 @@ image::../media/28_dwg_e2800_hic_thumbscrews_maint-e2800.gif[Retire o HIC do con
 
 
 
+[[step-4-install-host-interface-card]]
 == Passo 4: Instale a placa de interface do host
 
 Instale a nova placa de interface de host (HIC) para aumentar o número de portas de host em seu storage array.
@@ -272,6 +276,7 @@ Não utilize uma chave de fendas ou aperte demasiado os parafusos.
 
 
 
+[[step-5-reinstall-controller-canister]]
 == Etapa 5: Reinstale o recipiente do controlador
 
 Reinstale o recipiente do controlador na prateleira do controlador depois de instalar a nova placa de interface do host (HIC).
@@ -315,6 +320,7 @@ NOTE: Não ligue os cabos de dados às novas portas HIC neste momento.
 
 
 
+[[step-6-complete-host-interface-card-upgrade]]
 == Passo 6: Atualização completa da placa de interface do host
 
 Conclua o processo de atualização de uma placa de interface do host verificando os LEDs do controlador e a exibição de sete segmentos e confirmando que o status do controlador é ideal.

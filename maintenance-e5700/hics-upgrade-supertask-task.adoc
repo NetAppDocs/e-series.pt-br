@@ -38,6 +38,7 @@ Para obter informações sobre o hardware compatível, consulte a https://mysupp
 
 
 
+[[step-1-prepare-to-upgrade-hics]]
 == Passo 1: Prepare-se para atualizar HICs
 
 Prepare-se para atualizar um HIC fazendo backup do banco de dados de configuração do storage array, coletando dados de suporte e parando as operações de e/S do host. Em seguida, você pode desligar o compartimento do controlador.
@@ -121,6 +122,7 @@ Aguarde que todas as operações sejam concluídas antes de continuar com o pró
 
 
 
+[[step-2-remove-controller-canister]]
 == Etapa 2: Remova o recipiente do controlador
 
 Remova o recipiente do controlador para que você possa atualizar o novo HIC.
@@ -185,6 +187,7 @@ Se você estiver removendo o recipiente do controlador de uma prateleira do cont
 
 
 
+[[step-3-remove-a-hic]]
 == Passo 3: Remova um HIC
 
 Remova o HIC original para que você possa substituí-lo por um atualizado.
@@ -232,6 +235,7 @@ image::../media/28_dwg_e2800_hic_thumbscrews_maint-e5700.gif[Remova o HIC da pla
 
 
 
+[[step-4-install-the-new-hic]]
 == Passo 4: Instale o novo HIC
 
 Instale o novo HIC anfitrião.
@@ -272,6 +276,7 @@ Não utilize uma chave de fendas ou aperte demasiado os parafusos.
 
 
 
+[[step-5-reinstall-controller-canister]]
 == Etapa 5: Reinstale o recipiente do controlador
 
 Depois de instalar o novo HIC, reinstale o recipiente do controlador na prateleira do controlador.
@@ -315,6 +320,7 @@ NOTE: Não ligue os cabos de dados às novas portas HIC neste momento.
 
 
 
+[[step-6-complete-the-hic-upgrade]]
 == Passo 6: Conclua a atualização do HIC
 
 Verifique os LEDs do controlador e o visor de sete segmentos e confirme se o estado do controlador é ideal.

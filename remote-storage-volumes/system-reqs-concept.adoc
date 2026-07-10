@@ -15,10 +15,12 @@ Antes de configurar o recurso volumes de armazenamento remoto, revise os seguint
 
 
 
+[[hardware-requirements]]
 == Requisitos de hardware
 
 
 
+[[supported-protocols]]
 === Protocolos compatíveis
 
 Para a versão inicial do recurso volumes de armazenamento remoto, o suporte só está disponível para protocolos iSCSI e IPv4.
@@ -27,6 +29,7 @@ Consulte o http://mysupport.netapp.com/matrix["Ferramenta de Matriz de interoper
 
 
 
+[[storage-system-requirements]]
 === Requisitos do sistema de storage
 
 O sistema de storage e-Series deve incluir:
@@ -41,12 +44,14 @@ O sistema remoto pode ser um sistema de storage e-Series ou um sistema de outro 
 
 
 
+[[volume-requirements]]
 == Requisitos de volume
 
 Os volumes utilizados para importações devem satisfazer os requisitos de tamanho, estado e outros critérios.
 
 
 
+[[remote-storage-volume]]
 === Volume de armazenamento remoto
 
 O volume de origem de uma importação é chamado de "volume de armazenamento remoto". Este volume deve satisfazer os seguintes critérios:
@@ -73,6 +78,7 @@ Cada volume de armazenamento remoto está associado a apenas um objeto de armaze
 
 
 
+[[target-volume-candidates]]
 === Candidatos ao volume-alvo
 
 O volume de destino é o volume de destino no sistema e-Series local.
@@ -93,6 +99,7 @@ O System Manager verifica automaticamente esses requisitos como parte do assiste
 
 
 
+[[restrictions]]
 == Restrições
 
 O recurso de armazenamento remoto tem as seguintes restrições:
@@ -111,6 +118,7 @@ O recurso de armazenamento remoto tem as seguintes restrições:
 
 
 
+[[preparation-for-production-imports]]
 == Preparação para importações de produção
 
 Você deve executar uma importação de teste ou "Dry run" antes das importações de produção para verificar a configuração adequada do armazenamento e da malha.

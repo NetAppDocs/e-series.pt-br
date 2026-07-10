@@ -15,6 +15,7 @@ Depois de se preparar para a atualização, você pode remover os controladores 
 
 
 
+[[step-1-remove-controller]]
 == Passo 1: Remova o controlador
 
 [role="tabbed-block"]
@@ -79,6 +80,7 @@ image:../media/28_dwg_e2824_remove_controller_canister_upg-hw.gif["Remova o reci
 ====
 
 
+[[step-2-remove-battery]]
 == Passo 2: Remova a bateria
 
 Retire a bateria apenas se pretender utilizar a bateria do recipiente do controlador antigo no novo recipiente do controlador.

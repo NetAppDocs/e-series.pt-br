@@ -18,6 +18,7 @@ CAUTION: *RISCO DE PERDA DE DADOS.* Você deve executar NVMe/RoCE em um ambiente
 
 
 
+[[global-pause-frames]]
 == Quadros de pausa globais
 
 Os quadros de pausa globais são a forma mais básica de controle de fluxo e a mais simples de implementar. Quando o tráfego sobrecarrega uma porta de rede, são gerados quadros de pausa que interrompem todo o tráfego nessa porta até que o tráfego anterior seja processado o suficiente para que a porta de rede possa continuar operando sem descartar o tráfego de entrada.
@@ -29,6 +30,7 @@ Os quadros de pausa globais são a forma mais básica de controle de fluxo e a m
 
 
 
+[[priority-flow-control]]
 == Controle de fluxo prioritário
 
 O Controle de Fluxo por Prioridade (PFC, na sigla em inglês) é uma forma mais complexa de controle de fluxo que atribui diferentes níveis de prioridade a diferentes tipos de tráfego. Quando o tráfego recebido em uma prioridade é excessivo, ele é pausado enquanto o tráfego correspondente a outros níveis de prioridade pode continuar, ajudando a evitar que o tráfego intenso de certos tipos prejudique outros tipos de tráfego.

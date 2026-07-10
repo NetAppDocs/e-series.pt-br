@@ -38,6 +38,7 @@ CAUTION: Este procedimento deve ser feito com ambos os coletores do controlador.
 
 
 
+[[step-1-place-controller-shelf-offline]]
 == Passo 1: Coloque o compartimento do controlador offline
 
 Coloque o compartimento da controladora offline para que você possa adicionar com segurança a placa de expansão SAS.
@@ -94,6 +95,7 @@ O LED verde Cache ative na parte de trás de cada controlador fica aceso quando 
 
 
 
+[[step-2-remove-controller-canister]]
 == Etapa 2: Remova o recipiente do controlador
 
 Remova o recipiente do controlador para que você possa adicionar a nova placa de expansão SAS.
@@ -124,6 +126,7 @@ image::../media/remove_controller_6.png[Use duas mãos para suportar o peso do c
 
 
 
+[[step-3-add-the-new-sas-expansion-card]]
 == Etapa 3: Adicione a nova placa de expansão SAS
 
 Instale a placa de expansão SAS para permitir a expansão da bandeja de unidades.
@@ -149,6 +152,7 @@ Não use uma chave de fenda, ou você pode apertar demais os parafusos.
 
 
 
+[[step-4-reinstall-the-controller-canister]]
 == Etapa 4: Reinstale o recipiente do controlador
 
 Depois de instalar a nova placa de expansão SAS, reinstale o recipiente do controlador na gaveta do controlador.
@@ -167,6 +171,7 @@ image::../media/remove_controller_7.png[Instale o controlador na gaveta]
 
 
 
+[[step-5-complete-sas-expansion-card-addition]]
 == Etapa 5: Concluir a adição da placa de expansão SAS
 
 Coloque o controlador on-line, colete dados de suporte e retome as operações.

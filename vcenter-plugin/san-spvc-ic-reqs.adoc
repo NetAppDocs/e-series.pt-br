@@ -15,6 +15,7 @@ Antes de instalar ou atualizar o plug-in de armazenamento SANtricity para vCente
 
 
 
+[[installation-requirements]]
 == Requisitos de instalação
 
 Você pode instalar e configurar o plug-in de armazenamento para vCenter em um sistema host do Windows. A instalação do plugin inclui os seguintes requisitos.
@@ -63,6 +64,7 @@ O plug-in de armazenamento para vCenter é um produto gratuito e autônomo que n
 |===
 
 
+[[upgrade-considerations]]
 == Considerações sobre a atualização
 
 Se você estiver atualizando de uma versão anterior, esteja ciente de que o plug-in deve ser desregistrado do vCSA antes da atualização.

@@ -17,6 +17,7 @@ Um controlador consiste em uma placa, firmware e software. Controla as unidades 
 
 
 
+[[controller-replacement-requirements]]
 == Requisitos de substituição do controlador
 
 Antes de substituir um controlador, tem de ter:
@@ -30,6 +31,7 @@ Antes de substituir um controlador, tem de ter:
 
 
 
+[[replacement-while-powered-on]]
 == Substituição quando ligado
 
 Você pode substituir um coletor de controladora enquanto seu storage array estiver ativado e executando operações de e/S de host, se as seguintes condições forem verdadeiras:

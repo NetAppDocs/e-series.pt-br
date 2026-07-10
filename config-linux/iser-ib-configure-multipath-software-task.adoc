@@ -38,6 +38,7 @@ Você usa a ferramenta device mapper multipath (DM-MP) para instalações Linux.
 ----
 . Salve a versão do kernel executando o `uname -r` comando.
 +
+[[step4]]
 [listing]
 ----
 # uname -r

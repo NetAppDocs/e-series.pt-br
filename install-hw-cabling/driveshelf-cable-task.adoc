@@ -25,6 +25,7 @@ Se você estiver fazendo o cabeamento de uma gaveta de controladora mais antiga 
 
 
 
+[[cabling-e2800-and-e5700]]
 == Cabeamento E2800 e E5700
 
 As informações a seguir se aplicam ao cabeamento de um compartimento de controladora E2800, E2800B, EF280, E5700, EF5700B ou EF570 em um compartimento de unidades de DE212C, DE224C ou DE460.
@@ -52,6 +53,7 @@ image::../media/60_cabling.png[Um compartimento de controladora e compartimentos
 ====
 
 
+[[cabling-ef300-and-ef600]]
 == Cabeamento EF300 e EF600
 
 As informações a seguir se aplicam ao cabeamento de um compartimento de controladora EF300, EF600, EF300C ou EF600CU em um compartimento de unidades de DE212C, DE224C ou DE460 U.
@@ -82,6 +84,7 @@ image::../media/ef_to_de460c.png[Um compartimento de controladora e compartiment
 ====
 
 
+[[cabling-e4000]]
 == Cabeamento E4000
 
 As informações a seguir se aplicam ao cabeamento de um compartimento de controladora E4000U a um compartimento de unidades de DE212CU, DE224CU ou DE460U.

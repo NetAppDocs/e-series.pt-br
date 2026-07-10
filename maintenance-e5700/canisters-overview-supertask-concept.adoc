@@ -17,6 +17,7 @@ Os coletores consistem em três tipos diferentes: Coletores de ventilador de ene
 
 
 
+[[power-supply]]
 == Fonte de alimentação
 
 
@@ -26,6 +27,7 @@ Cada compartimento de controladora ou compartimento de unidade de 24 unidades in
 
 
 
+[[shelf-types-for-a-power-supply]]
 === Tipos de prateleiras para uma fonte de alimentação
 
 Você pode substituir uma fonte de alimentação nas seguintes prateleiras:
@@ -44,6 +46,7 @@ Os tópicos __replace power supply__ não descrevem como substituir um recipient
 
 
 
+[[requirements-for-replacing-a-power-supply]]
 === Requisitos para substituir uma fonte de alimentação
 
 Se você pretende substituir uma fonte de alimentação, tenha em mente os seguintes requisitos.
@@ -64,12 +67,14 @@ NOTE: Se a segunda fonte de alimentação (recipiente da ventoinha de alimentaç
 
 
 
+[[power-canister]]
 == Depósito de alimentação
 
 Cada compartimento de controladora ou compartimento de unidade de 60 unidades inclui dois coletores de energia para redundância de energia.
 
 
 
+[[shelf-types-for-a-power-canister]]
 === Tipos de prateleira para um recipiente de alimentação
 
 Você pode substituir um recipiente de energia nas seguintes prateleiras:
@@ -90,6 +95,7 @@ image::../media/28_dwg_e2860_de460c_psu_maint-e5700.gif[Depósito de alimentaç�
 
 
 
+[[requirements-for-replacing-a-power-canister]]
 === Requisitos para a substituição de um recipiente de alimentação
 
 Se você pretende substituir um recipiente de energia, tenha em mente os seguintes requisitos.
@@ -112,12 +118,14 @@ NOTE: Se o segundo recipiente de alimentação na prateleira não tiver o estado
 
 
 
+[[fan-canister]]
 == Recipiente da ventoinha
 
 Cada compartimento de controladora de 60 unidades ou compartimento de unidade inclui dois coletores de ventilador.
 
 
 
+[[shelf-types-for-a-fan-canister]]
 === Tipos de prateleira para um recipiente do ventilador
 
 Você pode substituir um recipiente de ventilador nas seguintes prateleiras:
@@ -141,6 +149,7 @@ CAUTION: *Possíveis danos ao equipamento* -- se substituir um recipiente do ven
 
 
 
+[[requirements-for-replacing-a-fan-canister]]
 === Requisitos para a substituição de um recipiente do ventilador
 
 Se você pretende substituir um recipiente de ventilador, tenha em mente os seguintes requisitos.

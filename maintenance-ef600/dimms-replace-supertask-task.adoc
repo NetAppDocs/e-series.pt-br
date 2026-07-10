@@ -33,6 +33,7 @@ Para substituir um DIMM, você deve verificar o tamanho do cache do controlador,
 
 
 
+[[step-1-determine-if-you-need-to-replace-a-dimm]]
 == Etapa 1: Determine se você precisa substituir um DIMM
 
 Verifique o tamanho do cache do controlador antes de substituir os DIMMS.
@@ -50,6 +51,7 @@ Verifique o tamanho do cache do controlador antes de substituir os DIMMS.
 
 
 
+[[step-2-place-controller-offline]]
 == Passo 2: Coloque o controlador offline
 
 Coloque o controlador offline para que possa remover e substituir os DIMMs com segurança.
@@ -96,6 +98,7 @@ NOTE: Não inicie quaisquer outras operações até que o estado tenha sido atua
 
 
 
+[[step-3-remove-controller-canister]]
 == Etapa 3: Remova o recipiente do controlador
 
 Você remove o recipiente do controlador com falha para que você possa substituir seus DIMMs por novos.
@@ -126,6 +129,7 @@ image::../media/remove_controller_6.png[Use duas mãos para suportar o peso do c
 
 
 
+[[step-4-remove-dimms]]
 == Etapa 4: Remova DIMMs
 
 Se houver uma incompatibilidade de memória presente, substitua os DIMMs no controlador.
@@ -160,6 +164,7 @@ O número e a colocação dos DIMMs do sistema dependem do modelo do sistema.
 
 
 
+[[step-5-install-new-dimms]]
 == Passo 5: Instale novos DIMMs
 
 Instale um novo DIMM para substituir o antigo.
@@ -189,6 +194,7 @@ image::../media/dimm_5.png[Insira OS DIMMS no slot e fixe-os com abas]
 
 
 
+[[step-6-reinstall-controller-canister]]
 == Etapa 6: Reinstale o recipiente do controlador
 
 Depois de instalar os novos DIMMs, reinstale o recipiente do controlador na gaveta do controlador.
@@ -208,6 +214,7 @@ image::../media/remove_controller_7.png[Instale o DIMM no slot do controlador]
 
 
 
+[[step-7-complete-dimms-replacement]]
 == Etapa 7: Substituição completa de DIMMs
 
 Coloque o controlador on-line, colete dados de suporte e retome as operações.

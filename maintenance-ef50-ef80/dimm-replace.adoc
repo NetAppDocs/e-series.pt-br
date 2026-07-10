@@ -21,6 +21,7 @@ Substitua um DIMM em seu sistema de storage EF50 ou EF80 quando ele apresentar f
 
 
 
+[[step-1-determine-if-you-need-to-replace-a-dimm]]
 == Etapa 1: Determine se você precisa substituir um DIMM
 
 Substitua um DIMM quando ele apresentar falha, relatar que não está em um estado ideal ou tiver uma capacidade incompatível.
@@ -47,6 +48,7 @@ Se nenhuma dessas condições estiver presente, você não precisa substituir um
 
 
 
+[[step-2-prepare-to-replace-a-dimm]]
 == Passo 2: Prepare-se para substituir um DIMM
 
 Prepare-se para substituir um DIMM certificando-se de que não há outros problemas no sistema de storage que você precise resolver, verifique se os volumes estão no estado correto, reúna as ferramentas e equipamentos necessários, tome precauções para evitar descarga eletrostática e faça backup do banco de dados de configuração do sistema de storage.
@@ -95,6 +97,7 @@ O arquivo é salvo na pasta Downloads do seu navegador com o nome *configuration
 
 
 
+[[step-3-place-the-controller-offline]]
 == Etapa 3: coloque o controlador offline
 
 Coloque o controlador com problema offline para que você possa realizar o restante deste procedimento com segurança.
@@ -133,6 +136,7 @@ CAUTION: Se o campo *OK para remover* não exibir *Sim*, não prossiga com a rem
 
 
 
+[[step-4-remove-the-controller]]
 == Etapa 4: remova o controlador
 
 Verifique se todos os dados na memória cache foram gravados nas unidades, desconecte todos os cabos do controlador com defeito e, em seguida, remova o controlador com defeito do chassi.
@@ -215,6 +219,7 @@ Se necessário, gire as alças para cima (próximas às abas) para tirá-las do 
 
 
 
+[[step-5-replace-a-dimm]]
 == Passo 5: substituir um módulo DIMM
 
 Localize o DIMM defeituoso dentro do controlador com problema e substitua-o.
@@ -287,6 +292,7 @@ Quando inserido corretamente, o DIMM entra facilmente, mas fica bem justo no slo
 
 
 
+[[step-6-reinstall-the-controller]]
 == Passo 6: reinstale o controlador
 
 Reinstale o controlador no chassi, reconecte o cabo de força e todos os seus cabos.
@@ -345,6 +351,7 @@ NOTE: A reconexão dos cabos deve ser feita antes de colocar o controlador onlin
 
 
 
+[[step-7-place-the-controller-online]]
 == Passo 7: coloque o controlador online
 
 Coloque o controlador com defeito de volta online.
@@ -386,6 +393,7 @@ NOTE: Caso não consiga resolver o problema, entre em contato https://mysupport.
 
 
 
+[[step-8-complete-the-dimm-replacement]]
 == Etapa 8: conclua a substituição do DIMM
 
 Utilizando SANtricity System Manager, certifique-se de que a versão mais recente do SANtricity OS esteja instalada, verifique se todos os volumes foram devolvidos aos seus controladores de propriedade e colete os dados de suporte para que você possa retomar as operações.
@@ -436,6 +444,7 @@ O arquivo é salvo na pasta Downloads do seu navegador com o nome *support-data.
 
 
 
+[[step-9-return-the-failed-part-to-netapp]]
 == Etapa 9: devolva a peça defeituosa para NetApp
 
 Devolva a peça defeituosa para a NetApp, conforme descrito nas instruções de RMA que acompanham o kit. Consulte a  https://mysupport.netapp.com/site/info/rma["Devolução e substituições de peças"] página para obter mais informações.

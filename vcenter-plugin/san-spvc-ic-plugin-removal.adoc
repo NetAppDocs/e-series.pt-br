@@ -20,6 +20,7 @@ Estas são duas etapas distintas que você pode executar em qualquer ordem. No e
 
 
 
+[[unregister-the-plugin-from-a-vcenter-server-appliance]]
 == DesRegistre o plug-in de um vCenter Server Appliance
 
 Para cancelar o Registro do plug-in de um vCenter Server Appliance, selecione um destes métodos:
@@ -30,6 +31,7 @@ Para cancelar o Registro do plug-in de um vCenter Server Appliance, selecione um
 
 
 
+[[method-1-execute-the-registration-script]]
 === Método 1: Execute o script de Registro
 
 . Abra um prompt através da linha de comando e navegue até o seguinte diretório:
@@ -57,6 +59,7 @@ Os registos são guardados no `%install_dir%/working/logs/vc-registration.log`.
 
 
 
+[[method-2-use-the-vcenter-server-mob-pages]]
 === Método 2: Use as páginas MOB do vCenter Server
 
 . Abra um navegador da Web e insira o seguinte url:
@@ -78,6 +81,7 @@ NOTE: Esse procedimento desRegistra o plugin do vCenter Server Appliance; no ent
 
 
 
+[[remove-the-plugin-webserver-from-the-application-host]]
 == Remova o servidor web do plugin do host do aplicativo
 
 Para remover o software do plugin do host do aplicativo, siga estas etapas:

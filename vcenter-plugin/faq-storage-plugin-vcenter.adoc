@@ -19,6 +19,7 @@ Este FAQ pode ajudar se você está apenas procurando uma resposta rápida para 
 
 
 
+[[what-settings-are-imported]]
 == Que definições são importadas?
 
 O recurso Importar configurações é uma operação em lote que carrega configurações de uma matriz de armazenamento para várias matrizes de armazenamento.
@@ -36,6 +37,7 @@ As configurações importadas durante essa operação dependem de como o storage
 
 
 
+[[why-do-i-not-see-all-of-my-storage-arrays]]
 == Por que não vejo todos os meus storages?
 
 Durante a operação Importar configurações, alguns dos storages de armazenamento podem não estar disponíveis na caixa de diálogo seleção de destino.
@@ -49,12 +51,14 @@ Os storage arrays podem não aparecer pelos seguintes motivos:
 
 
 
+[[why-are-these-volumes-not-associated-with-a-workload]]
 == Por que esses volumes não estão associados a uma carga de trabalho?
 
 Os volumes não são associados a uma carga de trabalho se tiverem sido criados usando a interface de linha de comando (CLI) ou se tiverem sido migrados (importados/exportados) de um storage array diferente.
 
 
 
+[[how-does-my-selected-workload-impact-volume-creation]]
 == Como minha carga de trabalho selecionada afeta a criação de volume?
 
 Durante a criação de volume, você será solicitado a fornecer informações sobre o uso de uma carga de trabalho. O sistema usa essas informações para criar uma configuração de volume ideal para você, que pode ser editada conforme necessário. Opcionalmente, você pode pular esta etapa na sequência de criação de volume.
@@ -77,6 +81,7 @@ Você pode revisar a configuração de volume recomendada e editar, adicionar ou
 
 
 
+[[why-do-i-not-see-all-my-volumes-hosts-or-host-clusters]]
 == Por que não vejo todos os meus volumes, hosts ou clusters de host?
 
 Os volumes instantâneos com um volume base habilitado PARA DA não são elegíveis para serem atribuídos a um host que não seja capaz de Data Assurance (DA). Você deve desativar DA no volume base antes que um volume instantâneo possa ser atribuído a um host que não seja capaz de DA.
@@ -92,12 +97,14 @@ NOTE: Não é possível desativar DA em um volume associado a snapshots (grupos 
 
 
 
+[[why-can-i-not-delete-the-selected-workload]]
 == Por que não consigo excluir a carga de trabalho selecionada?
 
 Essa carga de trabalho consiste em um grupo de volumes que foram criados usando a interface de linha de comando (CLI) ou migrados (importados/exportados) de um storage array diferente. Como resultado, os volumes dessa carga de trabalho não são associados a uma carga de trabalho específica da aplicação, portanto, a carga de trabalho não pode ser excluída.
 
 
 
+[[how-do-application-specific-workloads-help-me-manage-my-storage-array]]
 == Como os workloads específicos da aplicação me ajudam a gerenciar meu storage array?
 
 As características de volume do workload específico do aplicativo determinam como a carga de trabalho interage com os componentes do storage array e ajudam a determinar a performance do ambiente em uma determinada configuração.
@@ -106,6 +113,7 @@ Um aplicativo é um software como o SQL Server ou o Exchange. Você define um ou
 
 
 
+[[what-do-i-need-to-do-to-recognize-the-expanded-capacity]]
 == O que eu preciso fazer para reconhecer a capacidade expandida?
 
 Se você aumentar a capacidade de um volume, o host pode não reconhecer imediatamente o aumento da capacidade do volume.
@@ -118,6 +126,7 @@ Consulte a documentação do sistema operacional do host para obter detalhes adi
 
 
 
+[[when-would-i-want-to-use-the-assign-host-later-selection]]
 == Quando eu gostaria de usar a seleção atribuir host mais tarde?
 
 Se você quiser acelerar o processo de criação de volumes, você pode pular a etapa de atribuição do host para que os volumes recém-criados sejam inicializados offline.
@@ -130,6 +139,7 @@ Quando nenhum dos volumes de um grupo de volumes é mapeado, a inicialização o
 
 
 
+[[what-do-i-need-to-know-about-host-block-size-requirements]]
 == O que eu preciso saber sobre os requisitos de tamanho de bloco de host?
 
 Para sistemas EF300 e EF600, um volume pode ser definido para suportar um tamanho de bloco de 512 bytes ou 4KiB (também chamado de "tamanho do setor"). Você deve definir o valor correto durante a criação do volume. Se possível, o sistema sugere o valor padrão apropriado.
@@ -149,12 +159,14 @@ Antes de definir o tamanho do bloco de volume, leia as seguintes limitações e 
 
 
 
+[[why-would-i-need-to-create-a-host-cluster]]
 == Por que eu precisaria criar um cluster de host?
 
 Você precisa criar um cluster de host se quiser que dois ou mais hosts compartilhem o acesso ao mesmo conjunto de volumes. Normalmente, os hosts individuais têm software de cluster instalado neles para coordenar o acesso ao volume.
 
 
 
+[[how-do-i-know-which-host-operating-system-type-is-correct]]
 == Como sei qual tipo de sistema operacional do host está correto?
 
 O campo Host Operating System Type (tipo de sistema operativo anfitrião) contém o sistema operativo do anfitrião. Você pode selecionar o tipo de host recomendado na lista suspensa.
@@ -207,6 +219,7 @@ Alguns dos seguintes tipos de host podem aparecer na lista:
 |===
 
 
+[[how-do-i-match-the-host-ports-to-a-host]]
 == Como faço para corresponder as portas do host a um host?
 
 Se você estiver criando manualmente um host, primeiro deverá usar o utilitário HBA (adaptador de barramento de host) apropriado disponível no host para determinar os identificadores de porta de host associados a cada HBA instalado no host.
@@ -218,6 +231,7 @@ CAUTION: Certifique-se de selecionar os identificadores de porta de host apropri
 
 
 
+[[what-is-the-default-cluster]]
 == Qual é o cluster padrão?
 
 O cluster padrão é uma entidade definida pelo sistema que permite que qualquer identificador de porta de host não associado que tenha feito logon no storage array tenha acesso aos volumes atribuídos ao cluster padrão.
@@ -233,6 +247,7 @@ Inicialmente, você pode atribuir volumes apenas ao cluster padrão por meio da 
 
 
 
+[[what-is-redundancy-check]]
 == O que é verificação de redundância?
 
 Uma verificação de redundância determina se os dados em um volume em um pool ou grupo de volumes são consistentes. Os dados de redundância são usados para reconstruir rapidamente informações em uma unidade de substituição se uma das unidades no pool ou grupo de volumes falhar.
@@ -249,6 +264,7 @@ NOTE: Executar imediatamente uma verificação de redundância no mesmo pool ou 
 
 
 
+[[what-is-preservation-capacity]]
 == O que é a capacidade de preservação?
 
 Capacidade de preservação é a quantidade de capacidade (número de unidades) reservada em um pool para dar suporte a possíveis falhas de unidade.
@@ -259,6 +275,7 @@ Os pools usam capacidade de preservação durante a reconstrução, enquanto os 
 
 
 
+[[what-raid-level-is-best-for-my-application]]
 == Que nível RAID é melhor para a minha aplicação?
 
 Para maximizar o desempenho de um grupo de volumes, você deve selecionar o nível RAID apropriado.
@@ -267,6 +284,7 @@ Você pode determinar o nível RAID apropriado conhecendo as porcentagens de lei
 
 
 
+[[raid-levels-and-application-performance]]
 === Níveis de RAID e desempenho do aplicativo
 
 O RAID depende de uma série de configurações, chamadas níveis, para determinar como os dados de usuário e redundância são gravados e recuperados das unidades. Cada nível de RAID fornece recursos de desempenho diferentes. Os aplicativos com uma alta porcentagem de leitura terão bom desempenho usando volumes RAID 5 ou volumes RAID 6 devido ao excelente desempenho de leitura das configurações RAID 5 e RAID 6.
@@ -389,6 +407,7 @@ NOTE: Não é possível alterar o nível RAID de um pool. A interface do usuári
 
 
 
+[[raid-levels-and-data-protection]]
 === Níveis de RAID e proteção de dados
 
 RAID 1, RAID 5 e RAID 6 escrevem dados de redundância no suporte de dados da unidade para tolerância a falhas. Os dados de redundância podem ser uma cópia dos dados (espelhados) ou um código de correção de erros derivado dos dados. Você pode usar os dados de redundância para reconstruir rapidamente as informações em uma unidade de substituição se uma unidade falhar.
@@ -397,6 +416,7 @@ Você configura um único nível RAID em um único grupo de volumes. Todos os da
 
 
 
+[[why-are-some-drives-not-showing-up]]
 == Por que algumas unidades não estão aparecendo?
 
 Na caixa de diálogo Adicionar capacidade, nem todas as unidades estão disponíveis para adicionar capacidade a um pool ou grupo de volumes existente.
@@ -423,6 +443,7 @@ NOTE: A capacidade pode ser aumentada em seu storage array adicionando novas uni
 
 
 
+[[why-can-i-not-increase-my-preservation-capacity]]
 == Por que não posso aumentar minha capacidade de preservação?
 
 Se você criou volumes em toda a capacidade utilizável disponível, talvez não consiga aumentar a capacidade de preservação.
@@ -436,6 +457,7 @@ NOTE: A capacidade de preservação é especificada como um número de unidades,
 
 
 
+[[what-is-data-assurance]]
 == O que é o Data Assurance?
 
 A Data Assurance (DA) implementa a norma T10 Protection Information (PI), que aumenta a integridade dos dados verificando e corrigindo erros que possam ocorrer à medida que os dados são transferidos ao longo do caminho de e/S.
@@ -448,6 +470,7 @@ Certifique-se de atribuir esses volumes habilitados PARA DA a um host usando uma
 
 
 
+[[what-is-fdefips-security]]
 == O que é segurança FDE/FIPS?
 
 A segurança FDE/FIPS refere-se a unidades com capacidade segura que criptografam dados durante gravações e descriptografam dados durante leituras usando uma chave de criptografia exclusiva.
@@ -459,6 +482,7 @@ NOTE: Para volumes que exigem suporte FIPS, use apenas unidades FIPS. A combina�
 
 
 
+[[what-is-secure-capable-drive-security]]
 == O que é seguro (Drive Security)?
 
 O Drive Security é um recurso que impede o acesso não autorizado aos dados em unidades habilitadas para segurança quando removido do storage array.
@@ -467,6 +491,7 @@ Essas unidades podem ser unidades com criptografia total de disco (FDE) ou unida
 
 
 
+[[how-do-i-view-and-interpret-all-ssd-cache-statistics]]
 == Como posso visualizar e interpretar todas as estatísticas de cache SSD?
 
 Você pode ver estatísticas nominais e estatísticas detalhadas para cache SSD.
@@ -475,6 +500,7 @@ As estatísticas nominais são um subconjunto das estatísticas detalhadas. As e
 
 
 
+[[nominal-statistics]]
 === Estatísticas nominais
 
 Para exibir estatísticas de cache SSD, vá para a página *Gerenciar*. Selecione menu:provisionamento[Configurar pools e grupos de volume]. Selecione o cache SSD para o qual deseja exibir estatísticas e, em seguida, selecione menu:mais[View Statistics]. As estatísticas nominais são apresentadas na caixa de diálogo View SSD Cache Statistics (Ver estatísticas de cache SSD).
@@ -486,6 +512,7 @@ A lista inclui estatísticas nominais, que são um subconjunto das estatísticas
 
 
 
+[[detailed-statistics]]
 === Estatísticas detalhadas
 
 As estatísticas detalhadas consistem nas estatísticas nominais, mais estatísticas adicionais. Essas estatísticas adicionais são salvas juntamente com as estatísticas nominais, mas, ao contrário das estatísticas nominais, elas não são exibidas na caixa de diálogo View SSD Cache Statistics (Exibir estatísticas de cache SSD). Você pode exibir as estatísticas detalhadas somente depois de exportar as estatísticas para um arquivo .csv.
@@ -494,12 +521,14 @@ As estatísticas detalhadas são listadas após as estatísticas nominais.
 
 
 
+[[what-is-shelf-loss-protection-and-drawer-loss-protection]]
 == O que é proteção contra perda de prateleira e proteção contra perda de gaveta?
 
 A proteção contra perda de gaveta e a proteção contra perda de gaveta são atributos de pools e grupos de volumes que permitem manter o acesso aos dados em caso de falha de gaveta ou gaveta única.
 
 
 
+[[shelf-loss-protection]]
 === Proteção contra perda de prateleira
 
 Um compartimento é o compartimento que contém as unidades ou as unidades e a controladora. A proteção contra perda de gaveta garante a acessibilidade aos dados nos volumes em um pool ou grupo de volumes se houver perda total de comunicação com um único compartimento de unidade. Um exemplo de perda total de comunicação pode ser perda de energia para o compartimento de unidades ou falha de ambos os módulos de e/S (IOMs).
@@ -529,6 +558,7 @@ Os critérios para a proteção contra perdas de prateleiras dependem do método
 |===
 
 
+[[drawer-loss-protection]]
 === Proteção contra perda de gaveta
 
 Uma gaveta é um dos compartimentos de uma prateleira que você puxa para fora para acessar as unidades. Apenas as prateleiras de alta capacidade têm gavetas. A proteção contra perda de gaveta garante a acessibilidade aos dados nos volumes em um pool ou grupo de volumes se ocorrer uma perda total de comunicação com uma única gaveta. Um exemplo de perda total de comunicação pode ser perda de energia para a gaveta ou falha de um componente interno dentro da gaveta.
@@ -558,6 +588,7 @@ Os critérios para a proteção contra perda de gaveta dependem do método de pr
 |===
 
 
+[[how-do-i-maintain-shelf-and-drawer-loss-protection]]
 == Como faço para manter a proteção contra perda de prateleira e gaveta?
 
 Para manter a proteção contra perda de gaveta e gaveta para um pool ou grupo de volumes, use os critérios especificados na tabela a seguir.
@@ -585,6 +616,7 @@ NOTE: A proteção contra perda de gaveta/gaveta não será mantida se uma unida
 
 
 
+[[what-is-optimization-capacity-for-pools]]
 == O que é a capacidade de otimização para pools?
 
 As unidades SSD terão vida útil mais longa e melhor desempenho máximo de gravação quando uma parte de sua capacidade não for alocada.
@@ -598,6 +630,7 @@ NOTE: O controle deslizante capacidade de otimização adicional está disponív
 
 
 
+[[what-is-optimization-capacity-for-volume-groups]]
 == O que é a capacidade de otimização para grupos de volumes?
 
 As unidades SSD terão vida útil mais longa e melhor desempenho máximo de gravação quando uma parte de sua capacidade não for alocada.
@@ -611,6 +644,7 @@ NOTE: O controle deslizante de capacidade de otimização adicional está dispon
 
 
 
+[[what-is-resource-provisioning-capable]]
 == O que é capaz de provisionamento de recursos?
 
 O provisionamento de recursos é um recurso disponível nas matrizes de armazenamento EF300 e EF600, que permite que os volumes sejam colocados em uso imediatamente sem processo de inicialização em segundo plano.
@@ -621,6 +655,7 @@ Os volumes provisionados por recursos são compatíveis apenas com grupos de vol
 
 
 
+[[what-do-i-need-to-know-about-the-resource-provisioned-volumes-feature]]
 == O que eu preciso saber sobre o recurso volumes provisionados por recursos?
 
 O provisionamento de recursos é um recurso disponível nas matrizes de armazenamento EF300 e EF600, que permite que os volumes sejam colocados em uso imediatamente sem processo de inicialização em segundo plano.
@@ -630,6 +665,7 @@ NOTE: O recurso provisionamento de recursos não está disponível no momento. E
 
 
 
+[[resource-provisioned-volumes]]
 === Volumes provisionados por recursos
 
 Um volume provisionado por recursos é um volume espesso em um grupo ou pool de volumes SSD, em que a capacidade da unidade é alocada (atribuída ao volume) quando o volume é criado, mas os blocos de unidades são deslocalizados (não mapeados). Em comparação, em um volume grosso tradicional, todos os blocos de unidades são mapeados ou alocados durante uma operação de inicialização de volume em segundo plano, a fim de inicializar os campos de informações de proteção do Data Assurance e tornar os dados e a paridade RAID consistentes em cada faixa RAID. Com um volume provisionado de recurso, não há inicialização em segundo plano com tempo. Em vez disso, cada stripe RAID é inicializado na primeira gravação em um bloco de volume no stripe.
@@ -638,6 +674,7 @@ Os volumes provisionados por recursos são compatíveis apenas com grupos de vol
 
 
 
+[[enabling-and-disabling-the-feature]]
 === Ativar e desativar a funcionalidade
 
 O provisionamento de recursos é habilitado por padrão em sistemas onde as unidades suportam DULBE. Você pode desativar essa configuração padrão em pools e grupos de volume. A desativação do provisionamento de recursos é uma ação permanente para volumes existentes e não pode ser revertida (ou seja, não é possível reativar o provisionamento de recursos para esses grupos de volumes e pools).
@@ -646,6 +683,7 @@ No entanto, se você quiser reativar o provisionamento de recursos novamente par
 
 
 
+[[what-is-the-difference-between-internal-security-key-and-external-security-key-management]]
 == Qual é a diferença entre a chave de segurança interna e o gerenciamento de chaves de segurança externas?
 
 Ao implementar o recurso Segurança da unidade, você pode usar uma chave de segurança interna ou uma chave de segurança externa para bloquear dados quando uma unidade habilitada for removida do storage de armazenamento.
@@ -654,6 +692,7 @@ Uma chave de segurança é uma cadeia de carateres, que é compartilhada entre a
 
 
 
+[[what-do-i-need-to-know-before-creating-a-security-key]]
 == O que eu preciso saber antes de criar uma chave de segurança?
 
 Uma chave de segurança é compartilhada por controladores e unidades habilitadas para proteger dentro de um storage array. Se uma unidade habilitada para segurança for removida do storage array, a chave de segurança protegerá os dados contra acesso não autorizado.
@@ -666,6 +705,7 @@ Você pode criar e gerenciar chaves de segurança usando um dos seguintes métod
 
 
 
+[[internal-key-management]]
 == Gerenciamento de chaves internas
 
 As chaves internas são mantidas e "ocultas" em um local não acessível na memória persistente do controlador. Antes de criar uma chave de segurança interna, você deve fazer o seguinte:
@@ -678,6 +718,7 @@ Em seguida, você pode criar uma chave de segurança interna, que envolve a defi
 
 
 
+[[external-key-management]]
 === Gerenciamento de chaves externas
 
 As chaves externas são mantidas em um servidor de gerenciamento de chaves separado, usando um KMIP (Key Management Interoperability Protocol). Antes de criar uma chave de segurança externa, você deve fazer o seguinte:
@@ -698,6 +739,7 @@ Em seguida, você pode criar uma chave externa, que envolve a definição do end
 
 
 
+[[why-do-i-need-to-define-a-pass-phrase]]
 == Por que eu preciso definir uma frase-passe?
 
 A frase-passe é usada para criptografar e descriptografar o arquivo de chave de segurança armazenado no cliente de gerenciamento local. Sem a frase-passe, a chave de segurança não pode ser descriptografada e usada para desbloquear dados de uma unidade habilitada para segurança se for reinstalada em outra matriz de armazenamento.

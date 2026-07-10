@@ -18,6 +18,7 @@ As etapas dependem dos protocolos inicial e final das portas do host da placa ba
 
 
 
+[[complete-fc-to-iscsi-conversion]]
 == Conversão FC completa para iSCSI
 
 Se você tiver convertido todas as portas de host de FC para iSCSI, deverá configurar a rede iSCSI.
@@ -62,6 +63,7 @@ A opção *Delete* não remove fisicamente a porta do host. Essa opção remove 
 
 
 
+[[complete-iscsi-to-fc-conversion]]
 == Conversão iSCSI completa para FC
 
 Se você tiver convertido todas as portas de host de iSCSI para FC, deverá configurar a rede FC.
@@ -97,6 +99,7 @@ A opção *Delete* não remove fisicamente a porta do host. Essa opção remove 
 
 
 
+[[complete-fc-to-fciscsi-conversion]]
 == Conversão completa de FC para FC/iSCSI
 
 Se você já tinha todas as portas de host FC e converteu algumas delas para iSCSI, talvez seja necessário modificar sua configuração existente para oferecer suporte ao iSCSI.
@@ -105,6 +108,7 @@ Pode utilizar uma das seguintes opções para utilizar as novas portas iSCSI. As
 
 
 
+[[option-1-move-fc-hosts-and-add-new-iscsi-hosts]]
 === Opção 1: Mover hosts FC e adicionar novos hosts iSCSI
 
 . Mova todos os hosts FC das novas portas iSCSI para as portas que permanecem FC.
@@ -115,6 +119,7 @@ Pode utilizar uma das seguintes opções para utilizar as novas portas iSCSI. As
 
 
 
+[[option-2-convert-fc-hosts-to-iscsi]]
 === Opção 2: Converter hosts FC para iSCSI
 
 . Encerre os hosts FC conectados às portas convertidas.
@@ -134,6 +139,7 @@ Pode utilizar uma das seguintes opções para utilizar as novas portas iSCSI. As
 
 
 
+[[complete-iscsi-to-fciscsi-conversion]]
 == Conversão iSCSI completa para FC/iSCSI
 
 Se você já tinha todas as portas de host iSCSI e converteu algumas delas para FC, talvez seja necessário modificar sua configuração existente para oferecer suporte ao FC.
@@ -142,6 +148,7 @@ Você pode usar uma das opções a seguir para usar as novas portas FC. As etapa
 
 
 
+[[option-1-move-iscsi-hosts-and-add-new-fc-hosts]]
 === Opção 1: Mover hosts iSCSI e adicionar novos hosts FC
 
 . Mova todos os hosts iSCSI das novas portas FC para as portas que permanecem iSCSI.
@@ -152,6 +159,7 @@ Você pode usar uma das opções a seguir para usar as novas portas FC. As etapa
 
 
 
+[[option-2-convert-iscsi-hosts-to-fc]]
 === Opção 2: Converter hosts iSCSI para FC
 
 . Encerre os hosts iSCSI conetados às portas convertidas.
@@ -171,6 +179,7 @@ Você pode usar uma das opções a seguir para usar as novas portas FC. As etapa
 
 
 
+[[complete-fciscsi-to-fc-conversion]]
 == Conversão completa de FC/iSCSI para FC
 
 Se você já tivesse uma combinação de portas de host FC e portas de host iSCSI e convertido todas as portas para FC, talvez seja necessário modificar sua configuração existente para usar as novas portas FC.
@@ -179,6 +188,7 @@ Você pode usar uma das opções a seguir para usar as novas portas FC. As etapa
 
 
 
+[[option-1-remove-iscsi-hosts-and-add-fc-hosts]]
 === Opção 1: Remover hosts iSCSI e adicionar hosts FC
 
 . Se você ainda não estiver usando SFPs de protocolo duplo, remova quaisquer SFPs iSCSI e substitua-os por SFPs FC ou SFPs de protocolo duplo.
@@ -189,6 +199,7 @@ Você pode usar uma das opções a seguir para usar as novas portas FC. As etapa
 
 
 
+[[option-2-convert-iscsi-hosts-to-fc]]
 === Opção 2: Converter hosts iSCSI para FC
 
 . Encerre os hosts iSCSI conetados às portas que você converteu.
@@ -208,6 +219,7 @@ Você pode usar uma das opções a seguir para usar as novas portas FC. As etapa
 
 
 
+[[complete-fciscsi-to-iscsi-conversion]]
 == Conversão FC/iSCSI completa para iSCSI
 
 Se você já tivesse uma combinação de portas de host FC e portas de host iSCSI e convertido todas as portas para iSCSI, talvez seja necessário modificar sua configuração existente para usar as novas portas iSCSI.
@@ -216,6 +228,7 @@ Pode utilizar uma das seguintes opções para utilizar as novas portas iSCSI. As
 
 
 
+[[option-1-remove-fc-hosts-and-add-iscsi-hosts]]
 === Opção 1: Remover hosts FC e adicionar hosts iSCSI
 
 . Se você ainda não estiver usando SFPs de protocolo duplo, remova quaisquer SFPs FC e substitua-os por SFPs iSCSI ou SFPs de protocolo duplo.
@@ -225,6 +238,7 @@ Pode utilizar uma das seguintes opções para utilizar as novas portas iSCSI. As
 
 
 
+[[option-2-convert-fc-hosts-to-iscsi]]
 === Opção 2: Converter hosts FC para iSCSI
 
 . Encerre os hosts FC conectados às portas que você converteu.

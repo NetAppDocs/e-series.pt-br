@@ -15,6 +15,7 @@ Antes de substituir uma unidade E4000, reveja os requisitos e considerações.
 
 
 
+[[shelf-types]]
 == Tipos de prateleiras
 
 É possível substituir uma unidade em um compartimento de unidades ou compartimento de unidades de 12, 24 ou 60 unidades.
@@ -24,6 +25,7 @@ NOTE: As gavetas padrão de 24 unidades exigem escalonamento de unidades. Ao ins
 
 
 
+[[drive-handling]]
 == Condução
 
 As unidades do seu storage de armazenamento são frágeis. O manuseio inadequado da unidade é uma das principais causas de falha da unidade.

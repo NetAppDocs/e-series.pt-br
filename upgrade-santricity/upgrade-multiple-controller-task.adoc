@@ -33,6 +33,7 @@ CAUTION: Se estiver a atualizar o SANtricity os num dispositivo StorageGRID (por
 
 
 
+[[step-1-perform-pre-upgrade-health-check]]
 == Passo 1: Execute a verificação de integridade pré-atualização
 
 Uma verificação de integridade é executada como parte do processo de atualização, mas você também pode executar uma verificação de integridade separadamente antes de começar. A verificação de integridade avalia os componentes do storage array para garantir que a atualização possa prosseguir.
@@ -58,6 +59,7 @@ NOTE: Se algum array falhar na verificação de integridade, você pode pular es
 
 
 
+[[step-2-download-software-files-from-support-site]]
 == Passo 2: Baixe arquivos de software do site de suporte
 
 Nesta etapa, você acessa o site de suporte da NetApp para salvar os novos arquivos de software do pacote para download (DLP) no sistema host de gerenciamento.
@@ -85,6 +87,7 @@ NOTE: O firmware assinado digitalmente é necessário na versão 8,42 e superior
 
 
 
+[[step-3-transfer-software-files-to-the-controllers]]
 == Passo 3: Transfira arquivos de software para os controladores
 
 Você carrega o arquivo de software do SANtricity os e o arquivo NVSRAM no repositório para que ele seja acessível ao Centro de Atualização do Gerenciador Unificado.
@@ -163,6 +166,7 @@ O arquivo é salvo na pasta Downloads do navegador com o nome``upgrade_log-<date
 
 
 
+[[step-4-activate-staged-software-files-optional]]
 == Passo 4: Ativar arquivos de software em estágios (opcional)
 
 Você pode optar por ativar o arquivo de software imediatamente ou esperar até um momento mais conveniente. Este procedimento pressupõe que optou por ativar o ficheiro de software posteriormente.

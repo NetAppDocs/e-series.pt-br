@@ -38,6 +38,7 @@ CAUTION: *Possível perda de acesso a dados* -- nunca instale um HIC em um recip
 
 
 
+[[step-1-place-controller-shelf-offline]]
 == Passo 1: Coloque o compartimento do controlador offline
 
 Coloque o compartimento da controladora offline para que você possa atualizar os HICs com segurança.
@@ -98,6 +99,8 @@ O LED verde Cache ative na parte de trás de cada controlador fica aceso quando 
 
 
 
+[[step-2-remove-controller-canister]]
+[[step2_remove_controller_canister]]
 == Etapa 2: Remova o recipiente do controlador
 
 Retire o recipiente do controlador do sistema e, em seguida, retire a tampa do recipiente do controlador.
@@ -119,6 +122,8 @@ image::../media/drw_E4000_open_controller_module_cover_IEOPS-870.png[Abra a tamp
 
 
 
+[[step-3-upgrade-the-hic]]
+[[step3_upgrade_hic]]
 == Passo 3: Atualize o HIC
 
 Retire e substitua o HIC.
@@ -146,6 +151,8 @@ image::../media/drw_E4000_replace_HIC_source_IEOPS-864.png[Remova o HIC do módu
 
 
 
+[[step-4-reinstall-controller-canister]]
+[[step4_reinstall_controller]]
 == Etapa 4: Reinstale o recipiente do controlador
 
 Volte a instalar o recipiente do controlador no chassis.
@@ -166,6 +173,7 @@ NOTE: Se você removeu os conversores de Mídia (QSFPs ou SFPs), lembre-se de re
 
 
 
+[[step-5-complete-the-hic-upgrade]]
 == Passo 5: Conclua a atualização do HIC
 
 Coloque ambos os controladores on-line, colete dados de suporte e retome as operações.
