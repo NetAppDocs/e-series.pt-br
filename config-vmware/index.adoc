@@ -26,7 +26,7 @@ O método expresso inclui as seguintes etapas, que também são descritas no lin
 ** link:fc-perform-specific-task.html["Fibre Channel"]
 ** link:iscsi-perform-specific-task.html["ISCSI"]
 ** link:sas-perform-specific-task.html["SAS"]
-** link:nvme-perform-specific-task.html["NVMe"]
+** link:nvme-roce-perform-specific-task.html["NVMe em RoCE"]
 
 
 . Crie volumes lógicos no storage array.

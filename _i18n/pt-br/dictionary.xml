@@ -10717,8 +10717,6 @@
   <block id="56dd88f73dc9e3fe0f4f088112d50bf6" category="admonition">*RISCO DE PERDA DE DADOS.* Você deve executar NVMe sobre RoCE em um ambiente sem perdas. Habilite controle de fluxo de ponta a ponta usando Quadros de Pausa Global ou Controle de Fluxo Prioritário (PFC) em sua rede para eliminar o risco de perda de dados. O PFC exige que o tráfego NVMe sobre RoCE seja marcado como tráfego de Prioridade 3 com um valor DSCP de<block ref="f0935e4cd5920aa6c7c996a5ee53a70f" prefix=" " category="inline-code"></block>.</block>
   <block id="cfc9a52b36b4bac1175d85feda4737d6" category="inline-link-macro">configurar endereços IP usando DHCP</block>
   <block id="ab76f1b6a91823d84cc28d97a438ee49" category="paragraph">Após verificar a compatibilidade com a configuração do Linux e revisar as restrições, <block ref="26e7ddc4a99218cc55e1c183bc759716" category="inline-link-macro-rx"></block>.</block>
-  <block id="70d9e3c68d42d6ec42ab792e06c44357" category="inline-link-macro">NVMe</block>
-  <block id="1791f8465d11d224647d11ee0eab3955" category="list-text"><block ref="1791f8465d11d224647d11ee0eab3955" category="inline-link-macro-rx"></block></block>
   <block id="68df22b283edf6918b272ee1e4eef450" category="paragraph">Ao substituir um HIC com defeito, é necessário desconectar um controlador para colocar o sistema em um estado não redundante, substituir o HIC e reconectar o controlador.</block>
   <block id="7f3980e2c518e011140305dfa2c7cc40" category="list-text">Agende uma janela de manutenção de downtime para este procedimento. Você não poderá acessar os dados no array de storage até que este procedimento seja concluído com sucesso. Como ambos os controladores devem ter a mesma configuração HIC quando estão ligados, você deve desconectar um controlador para colocar o sistema em um estado não redundante ao instalar os HICs.</block>
   <block id="79a7b3d475a1ce35fef4a7398f3e40b8" category="list-text">Para controladores EF300, a placa de expansão SAS deve ser instalada na porta 1 para permitir a expansão da bandeja de unidades.</block>
@@ -10744,4 +10742,5 @@
   <block id="22839016e944bb39ae944b854e55b7ef" category="cell"><block ref="22839016e944bb39ae944b854e55b7ef" category="inline-link-rx"></block></block>
   <block id="6a7c8d63e9ff78bb1b7b5d797d0587e5" category="cell"><block ref="6a7c8d63e9ff78bb1b7b5d797d0587e5" category="inline-link-rx"></block></block>
   <block id="1ed965aef797c8ec8dad05a7ba9680f3" category="cell"><block ref="1ed965aef797c8ec8dad05a7ba9680f3" category="inline-link-rx"></block></block>
+  <block id="030083a432b10805a22ebd213eb3faf3" category="list-text"><block ref="030083a432b10805a22ebd213eb3faf3" category="inline-link-macro-rx"></block></block>
 </blocks>
