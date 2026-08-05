@@ -72,6 +72,29 @@ Um novo editor de scripts já está disponível no SANtricity System Manager. O 
 |===
 
 
+[[new-features-in-version-11-90r6]]
+== Novos recursos na versão 11.90R6
+
+[cols="35h,~"]
+|===
+| Novo recurso | Descrição 
+
+
+ a| 
+Suporte atualizado para versão de firmware IOM/DCM
+ a| 
+Novas versões de firmware IOM/DCM agora são compatíveis com os seguintes modelos IOM/DCM:
+
+* IOM12A - v0412
+* IOM12B - v0212
+* IOM12C - v0112
+* IOM12G - v0212
+* DCM3 - v01.12.09.02
+
+
+|===
+
+
 [[new-features-in-version-11-90r5]]
 == Novos recursos na versão 11.90R5
 
