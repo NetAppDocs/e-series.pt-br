@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: express linux configuration, software configuration, linux host, E2800, E5700, EF300, EF600, E-Series, eseries 
 summary: Você usa o assistente de configuração no Gerenciador de sistema do SANtricity para configurar sua matriz de armazenamento. 
 ---
-= Configurar seu storage usando o Gerenciador de sistema do SANtricity - Linux (SRP em InfiniBand)
+= Configure o storage E-Series usando o assistente de configuração para SRP sobre InfiniBand
 :allow-uri-read: 
 :experimental: 
 :icons: font

@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: E4000 replace canister, replacing E4000 canister, E4000 replace fan, replacing E4000 fan, E4000, E-Series, eseries 
 summary: Rever os tipos e requisitos do recipiente E4000. 
 ---
-= Substitua o recipiente da ventoinha - E4000 (60 unidades)
+= Substitua o compartimento do ventilador em uma shelf de 60 unidades do E4000
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
@@ -54,13 +54,12 @@ O arquivo é salvo na pasta Downloads do seu navegador com o nome *support-data.
 
 . A partir do Gerenciador do sistema do SANtricity, determine qual o recipiente do ventilador falhou.
 +
-.. Selecione *hardware*.
+.. Selecione o menu: Hardware [Controllers and components].
 .. Olhe para o ícone do ventilador image:../media/sam1130_ss_hardware_fan_icon_maint-e2800.gif["Ícone da ventoinha"]à direita das listas suspensas *Shelf* para determinar qual prateleira tem o recipiente do ventilador com falha.
 +
 Se um componente tiver falhado, este ícone fica vermelho.
 
-.. Quando encontrar a prateleira com um ícone vermelho, selecione *Controller & Components*.
-.. Selecione o recipiente da ventoinha ou o ícone da ventoinha vermelha.
+.. Ao encontrar a prateleira com um ícone vermelho, selecione o fan canister ou o ícone vermelho do ventilador.
 .. No separador *ventiladores*, observe os Estados dos coletores do ventilador para determinar qual o recipiente do ventilador deve ser substituído.
 +
 Um componente com um estado *Failed* deve ser substituído.

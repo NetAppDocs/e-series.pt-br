@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: access System Manager Windows, express Windows configuration, software configuration, Windows host, E2800, E5700, EF300, EF600, E-Series, eseries 
 summary: Você usa o assistente de configuração no Gerenciador de sistema do SANtricity para configurar sua matriz de armazenamento. 
 ---
-= Configure seu armazenamento usando o Gerenciador de sistema do SANtricity - Windows
+= Configurar o storage E-Series usando o SANtricity System Manager no Windows
 :allow-uri-read: 
 :experimental: 
 :icons: font

@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: E5700 maintenance, repair E5700, replace E5700 components, E5724, EF570, E5760 
 summary: Mantenha o hardware E5700 
 ---
-= Manter o hardware - 5700
+= Manutenção do hardware E5700
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
@@ -14,6 +14,9 @@ summary: Mantenha o hardware E5700
 Talvez seja necessário executar procedimentos de manutenção no hardware. Os procedimentos específicos para a manutenção dos componentes do sistema E5700 estão nesta seção.
 
 Os procedimentos nesta seção pressupõem que o sistema E5700 já foi implantado no ambiente e-Series.
+
+
+NOTE: Os sistemas de storage E5700 são produtos de fim de disponibilidade (EOA) e não estão mais disponíveis para compra, mas ainda têm suporte. As informações nesta seção são fornecidas apenas para referência.
 
 
 

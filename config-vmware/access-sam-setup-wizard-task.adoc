@@ -1,10 +1,10 @@
 ---
 permalink: config-vmware/access-sam-setup-wizard-task.html 
 sidebar: sidebar 
-keywords: access System Manager vmware, express vmware configuration,software configuration, vmware host, E2800, E5700, EF300, EF600, E-Series, eseries 
+keywords: access System Manager vmware, express vmware configuration, software configuration, vmware host, E2800, E5700, EF300, EF600, EF50, EF80, E4000, E-Series, eseries 
 summary: Você usa o assistente de configuração no Gerenciador de sistema do SANtricity para configurar sua matriz de armazenamento. 
 ---
-= Configure seu storage usando o Gerenciador de sistema do SANtricity - VMware
+= Configure o storage E-Series usando o SANtricity System Manager para VMware
 :allow-uri-read: 
 :experimental: 
 :icons: font
@@ -91,6 +91,6 @@ O assistente de configuração é iniciado se não houver pools, grupos de volum
 . Se ainda não criou um volume, crie um acedendo ao menu:armazenamento[volumes > criar > volume].
 +
 
-NOTE: Para EF300 e EF600, você deve definir o tamanho do bloco para 512 bytes para garantir a compatibilidade com o VMware. Consulte a ajuda on-line do Gerenciador de sistemas do SANtricity para obter mais informações sobre como definir um volume para 512 bytes.
+NOTE: Para garantir a compatibilidade com o VMware, os volumes devem ser configurados para utilizar emulação de 512 bytes (512e) ao usar unidades de 4096 bytes. Consulte a ajuda online do SANtricity System Manager para obter mais informações sobre como configurar um volume para usar emulação de 512 bytes (512e).
 
 

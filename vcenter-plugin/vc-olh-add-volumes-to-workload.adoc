@@ -4,7 +4,7 @@ permalink: vcenter-plugin/vc-olh-add-volumes-to-workload.html
 keywords: vCenter plugin, Plugin for vCenter, SANtricity plugin for vCenter 
 summary: Adicione volumes não atribuídos a um workload novo ou existente. 
 ---
-= Adicione volumes ao workload no plug-in de storage do SANtricity para vCenter
+= Adicionar volumes a uma carga de trabalho no SANtricity Storage Plugin para vCenter
 :hardbreaks:
 :allow-uri-read: 
 :experimental: 

@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: EF300, EF600, EF300C, EF600C installation, 
 summary: Instale o EF300 ou EF600 em um rack de dois pilares ou em um gabinete do sistema NetApp. 
 ---
-= Instale o material de fixação - EF300, EF600, EF300C e EF600C
+= Instale o hardware para o seu sistema de storage EF300 ou EF600
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

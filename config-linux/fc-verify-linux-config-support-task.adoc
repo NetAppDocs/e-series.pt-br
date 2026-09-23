@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: express linux configuration, software configuration, linux host, 
 summary: Verifique se a configuração do Linux é suportada. 
 ---
-= Verificar o suporte à configuração do Linux no e-Series (FC)
+= Verifique o suporte à configuração FC do Linux no storage E-Series
 :allow-uri-read: 
 :experimental: 
 :icons: font

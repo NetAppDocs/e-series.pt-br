@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: EF300 maintenance, EF600 maintenance, repairing EF300, repairing EF600, EF600C, EF300C replace EF300 components, replace EF600 components 
 summary: Mantenha o hardware EF300 e EF600 
 ---
-= Mantenha o hardware - EF300 e EF600
+= Manutenção de hardware para os sistemas EF300 e EF600
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
@@ -51,6 +51,13 @@ Você deve substituir um DIMM (módulo de memória dual in-line) quando houver u
 https://docs.netapp.com/us-en/e-series/maintenance-ef600/drives-overview-supertask-concept.html["Unidades"]
  a| 
 Uma unidade é um dispositivo que fornece a Mídia de armazenamento físico para dados.
+
+
+
+ a| 
+link:drive-drawer-de460c-replace.html["Gaveta da unidade"]
+ a| 
+Uma gaveta para unidades de disco é um dos cinco componentes de uma shelf de unidades DE460C que comporta até 12 unidades de disco.
 
 
 

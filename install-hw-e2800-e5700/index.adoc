@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: E2800, E5700, installation 
 summary: Instale e configure o array E2800 ou E5700. 
 ---
-= Instalação e configuração - sistemas de armazenamento E2800 e E5700
+= Fluxograma de instalação e configuração para os sistemas de storage E2800 e E5700
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
@@ -14,6 +14,9 @@ summary: Instale e configure o array E2800 ou E5700.
 Saiba como instalar e configurar o sistema de armazenamento E2800 ou E5700.
 
 Você pode escolher um dos formatos a seguir para orientá-lo na instalação e configuração do seu novo sistema de armazenamento.
+
+
+NOTE: Os sistemas de storage E2800 e E5700 são produtos de fim de disponibilidade (EOA) e não estão mais disponíveis para compra, mas ainda têm suporte. As informações nesta seção são fornecidas apenas para referência.
 
 * *PDF*
 +

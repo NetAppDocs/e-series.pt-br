@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: host protocol change, EF300, EF600, EF600C, EF300C 
 summary: Altere o protocolo da porta do host para um array EF300 ou EF600. 
 ---
-= Altere o protocolo do host - EF300 e EF600
+= Altere o tipo de protocolo do host em um sistema de storage EF300 ou EF600
 :allow-uri-read: 
 :experimental: 
 :icons: font
@@ -35,7 +35,7 @@ image::../media/sam1130_ss_e2800_storage_array_profile_sn_smid_copy_maint-ef600.
 . Localize o *ID do submodelo do pacote de recursos*.
 +
 .. No Gerenciador do sistema SANtricity, selecione *suporte*.
-.. Selecione o bloco *Support Resources*.
+.. Selecione a aba *Recursos de suporte*.
 .. Na guia recursos de suporte, localize e selecione o link *Storage Array Profile*.
 .. Digite *ID do submodelo do pacote de recursos* na caixa de texto e clique em *Localizar*.
 .. Localize a ID do submodelo do pacote de recursos para a configuração inicial.
@@ -669,8 +669,7 @@ A migração do pacote de recursos começa. Ambos os controladores reiniciam aut
 
 . Confirme se as portas do host têm o protocolo que você espera.
 +
-.. No Gerenciador do sistema SANtricity, selecione *hardware*.
-.. Clique em *Mostrar parte posterior da prateleira*.
+.. No SANtricity System Manager, selecione menu: Hardware [Controladores e componentes].
 .. Selecione o gráfico para o controlador A ou controlador B.
 .. Selecione *View settings* no menu de contexto.
 .. Selecione a guia *interfaces de host*.

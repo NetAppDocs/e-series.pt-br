@@ -1,0 +1,107 @@
+---
+permalink: config-linux/nvme-tcp-discover-connect-storage-host-task.html 
+sidebar: sidebar 
+keywords: discover storage, host, express linux configuration, software configuration, linux host, E2800, E5700, EF300, EF600, E-Series, eseries 
+summary: Antes de definir cada host no Gerenciador de sistemas do SANtricity, você precisa descobrir as portas do controlador de destino do host e, em seguida, estabelecer conexões NVMe. 
+---
+= Descubra e conecte-se ao storage E-Series a partir de um host Linux
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Antes de definir cada host no Gerenciador de sistemas do SANtricity, você precisa descobrir as portas do controlador de destino do host e, em seguida, estabelecer conexões NVMe.
+
+.Passos
+. Verifique se você consegue pingar do host para cada porta HIC do array usando o seguinte comando:
++
+[listing]
+----
+ping <IP of array HIC port>
+----
+. Descubra os subsistemas disponíveis no destino NVMe-of para todos os caminhos usando o seguinte comando:
++
+[listing]
+----
+nvme discover -t tcp -a target_ip_address
+----
++
+Neste comando `target_ip_address`, é o endereço IP da porta de destino.
+
++
+
+NOTE: O `nvme discover` comando descobre todas as portas do controlador no subsistema, independentemente do acesso do host.
+
++
+[listing]
+----
+# nvme discover -t tcp -a 192.168.134.101
+Discovery Log Number of Records 12, Generation counter 0
+=====Discovery Log Entry 0======
+trtype:  tcp
+adrfam:  ipv6
+subtype: nvme subsystem
+treq:    not specified
+portid:  0
+trsvcid: 4420
+subnqn:  nqn.1992-08.com.netapp:EF80.6d039ea0005d29280000000069ddb538
+traddr:  fe80:0:0:0:200:ff:fe00:1
+eflags:  none
+sectype: none
+=====Discovery Log Entry 1======
+trtype:  tcp
+adrfam:  ipv6
+subtype: nvme subsystem
+treq:    not specified
+portid:  0
+trsvcid: 4420
+subnqn:  nqn.1992-08.com.netapp:EF80.6d039ea0005d29280000000069ddb538
+traddr:  fd23:0:0:0:192:168:131:101
+eflags:  none
+sectype: none
+----
+. Repita o passo 2 para quaisquer outras conexões.
+. Conecte-se ao subsistema descoberto no primeiro caminho usando o comando: `nvme connect -t tcp -n discovered_sub_nqn -a target_ip_address -Q queue_depth_setting -l controller_loss_timeout_period`
++
+
+NOTE: O comando listado acima não persiste após reinicializar. O `nvme connect` comando precisará ser executado após cada reinicialização para restabelecer as conexões NVMe.
+
++
+
+NOTE: As conexões não são estabelecidas para qualquer porta descoberta inacessível pelo host.
+
++
+
+NOTE: Se você especificar um número de porta usando este comando, a conexão falhará. A porta padrão é a única porta configurada para conexões.
+
++
+
+NOTE: Por padrão, a profundidade da fila está definida como `128`. Não altere esse valor padrão, pois o NVMe sobre TCP requer uma profundidade de fila de `128`.
+
++
+[listing]
+----
+# nvme connect -t tcp -a 192.168.134.101 -n nqn.1992-08.com.netapp:EF80.6d039ea0005d29280000000069ddb538 -Q 128 -l 3600
+----
+. Repita o passo 4 para quaisquer outras conexões.
+. **Opcional** - Configure seu host para descobrir e se conectar automaticamente aos alvos a cada inicialização.
++
+.. Adicione os parâmetros de descoberta das etapas 2 e 3 a `/etc/nvme/discovery.conf` usando o seguinte procedimento e formato:
++
+[listing]
+----
+# echo "--transport=tcp --traddr=target_ip_address --trsvcid=4420" | sudo tee -a /etc/nvme/discovery.conf
+----
+.. Habilite o serviço nvmf-autoconnect após preencher o arquivo  `/etc/nvme/discovery.conf` usando o seguinte comando:
++
+[listing]
+----
+sudo systemctl enable nvmf-autoconnect.service
+----
+
+
+
+
+.O que se segue?
+Após estabelecer as conexões, link:nvme-tcp-define-host-task.html["definir o host"].

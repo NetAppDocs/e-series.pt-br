@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords:  
 summary:  
 ---
-= Adicione um segundo recipiente - E4000
+= Adicione um segundo canister de controlador a um array E4000
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
@@ -39,7 +39,7 @@ Confirme se o novo controlador tem o mesmo número de peça que o controlador at
 . Localize o endereço MAC e as etiquetas de número de peça FRU na parte traseira do recipiente do controlador.
 . A partir do Gerenciador do sistema SANtricity, localize o número de peça de substituição para o recipiente do controlador instalado.
 +
-.. Selecione *hardware*.
+.. Selecione o menu: Hardware [Controllers and components].
 .. Localize o compartimento do controlador, que está marcado com o ícone do controlador.
 .. Clique no ícone do controlador image:../media/sam1130_ss_hardware_controller_icon_maint-e2800.gif["Gif do ícone do controlador"].
 .. Selecione o controlador e clique em *seguinte*.
@@ -324,7 +324,7 @@ A transferência da operação de controlo começa.
 . Após a reinicialização dos controladores, distribua opcionalmente volumes entre o controlador A e o novo controlador B.
 +
 .. Selecione *armazenamento de volumes*.
-.. Na guia todos os volumes, selecione *mais
+.. Na aba Todos os Volumes, selecione *ícone de reticências › Alterar propriedade*.
 .. Digite o seguinte comando na caixa de texto: `change ownership`
 +
 O botão alterar propriedade está ativado.

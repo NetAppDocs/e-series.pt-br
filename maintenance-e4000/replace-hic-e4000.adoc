@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords:  
 summary:  
 ---
-= Substitua a placa de interface do host (HIC) - E4000
+= Substitua uma placa de interface de host E4000
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
@@ -116,7 +116,7 @@ CAUTION: *Possível perda de dados* – se você continuar este procedimento enq
 +
 O LED verde Cache ative na parte de trás do controlador fica aceso quando os dados em cache precisam ser gravados nas unidades. Tem de esperar que este LED se desligue.
 
-. Na página inicial do Gerenciador do sistema do SANtricity, selecione *Exibir operações em andamento*.
+. Na página inicial do SANtricity System Manager, selecione menu:Storage[Operations in Progress].
 . Confirme se todas as operações foram concluídas antes de continuar com a próxima etapa.
 . Desligue ambos os interruptores de energia no compartimento do controlador.
 . Aguarde que todos os LEDs na prateleira do controlador se desliguem.
@@ -137,7 +137,7 @@ Guarde os materiais de embalagem a utilizar ao enviar o recipiente do controlado
 Quando um controlador tem uma falha e precisa ser substituído, o número de peça de substituição é exibido na área Detalhes do Recovery Guru. Se você precisar encontrar esse número manualmente, siga estas etapas:
 
 +
-.. Selecione *hardware*.
+.. Selecione o menu: Hardware [Controllers and components].
 .. Localize o compartimento do controlador, que está marcado com o ícone do controlador.
 .. Clique no ícone do controlador.
 .. Selecione o controlador e clique em *seguinte*.
@@ -176,8 +176,7 @@ save storageArray dbmDatabase sourceLocation=onboard contentType=all file="filen
 +
 ** A partir do SANtricity System Manager:
 +
-... Selecione *hardware*.
-... Se o gráfico mostrar as unidades, selecione *Mostrar parte traseira da prateleira* para mostrar os controladores.
+... Selecione o menu: Hardware [Controllers and components].
 ... Selecione o controlador que pretende colocar offline.
 ... No menu de contexto, selecione *colocar offline* e confirme que deseja executar a operação.
 +
@@ -328,8 +327,7 @@ O arquivo é salvo na pasta Downloads do seu navegador com o nome *support-data.
 +
 ** A partir do SANtricity System Manager:
 +
-... Selecione *hardware*.
-... Se o gráfico mostrar as unidades, selecione *Mostrar parte traseira da prateleira*.
+... Selecione o menu: Hardware [Controllers and components].
 ... Selecione o controlador que pretende colocar online.
 ... Selecione *Place Online* no menu de contexto e confirme que deseja executar a operação.
 +
@@ -356,9 +354,9 @@ NOTE: Se não conseguir resolver o problema, contacte o suporte técnico. Se nec
 
 . Verifique se todos os volumes foram devolvidos ao proprietário preferido.
 +
-.. Selecione *armazenamento de volumes*. Na página *todos os volumes*, verifique se os volumes são distribuídos aos seus proprietários preferidos. Selecione *mais
+.. Selecione *Storage › Volumes*. Na página *All Volumes*, verifique se os volumes estão distribuídos aos seus proprietários preferenciais. Selecione *ellipse icon › Change ownership* para visualizar os proprietários dos volumes.
 .. Se todos os volumes forem propriedade do proprietário preferido, avance para o passo 5.
-.. Se nenhum dos volumes for retornado, você deverá retornar manualmente os volumes. Vá para *mais
+.. Se nenhum dos volumes for devolvido, você deve devolvê-los manualmente. Vá para *ícone de reticências › Redistribuir volumes*.
 .. Se apenas alguns dos volumes forem devolvidos aos seus proprietários preferidos após a distribuição automática ou manual, você deve verificar o Recovery Guru para problemas de conetividade do host.
 .. Se não houver Guru de recuperação presente ou se depois de seguir as etapas do guru de recuperação os volumes ainda não forem devolvidos aos seus proprietários preferidos, entre em Contato com o suporte.
 

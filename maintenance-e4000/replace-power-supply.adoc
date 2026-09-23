@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: E4000 replace canister, replacing E4000 canister, E4000 replace power supply, replacing E4000 power supply, E4000 replace fan, replacing E4000 fan, E4000, E-Series, eseries 
 summary: Rever os tipos e requisitos do recipiente E4000. 
 ---
-= Substitua a fonte de alimentação - E4000
+= Substituir a fonte de alimentação em um sistema de storage E4000
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
@@ -52,13 +52,12 @@ O arquivo é salvo na pasta Downloads do seu navegador com o nome *support-data.
 Você pode encontrar essas informações na área Detalhes do Recovery Guru, ou você pode revisar as informações exibidas para o shelf.
 
 +
-.. Selecione *hardware*.
+.. Selecione o menu: Hardware [Controllers and components].
 .. Observe os ícones de energia image:../media/sam1130_ss_hardware_power_icon_maint-e2800.gif["Ícone de alimentação"] e ventilador image:../media/sam1130_ss_hardware_fan_icon_maint-e2800.gif["Ícone da ventoinha"]à direita das listas suspensas *Shelf* para determinar qual prateleira tem a fonte de alimentação com falha.
 +
 Se um componente tiver falhado, um ou ambos os ícones ficam vermelhos.
 
-.. Quando encontrar a prateleira com um ícone vermelho, selecione *Controller & Components*.
-.. Selecione uma das fontes de alimentação.
+.. Ao encontrar a prateleira com um ícone vermelho, selecione qualquer uma das fontes de alimentação.
 .. Nos separadores *fontes de alimentação* e *ventoinhas*, observe os Estados dos coletores dos ventiladores de alimentação, das fontes de alimentação e dos ventiladores para determinar qual fonte de alimentação deve ser substituída.
 +
 Um componente com um estado *Failed* deve ser substituído.

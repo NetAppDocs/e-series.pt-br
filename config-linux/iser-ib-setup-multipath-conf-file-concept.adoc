@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: multipath.conf file, express linux configuration, software configuration, linux host, E2800, E5700, EF300, EF600, E-Series, eseries 
 summary: Use o arquivo multipath.conf, que é o arquivo de configuração para o daemon multipath, multipathd. 
 ---
-= Configurar o arquivo multipath.conf no e-Series - Linux (iSER over InfiniBand)
+= Como o arquivo multipath.conf funciona para hosts Linux E-Series usando iSER sobre IB
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

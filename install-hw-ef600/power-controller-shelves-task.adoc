@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: EF300, EF600, EF300C, EF600C, installation, power on, power cables 
 summary: Conete os cabos de alimentação e ligue as gavetas de unidade. 
 ---
-= Ligue as gavetas da controladora - EF300, EF600, EF300C e EF600C
+= Ligue os módulos de controle do seu sistema de storage EF300 ou EF600
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

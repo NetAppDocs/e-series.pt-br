@@ -4,14 +4,14 @@ sidebar: sidebar
 keywords: ef50, ef80, cabling, cable, host cabling, direct-attached topology, fabric-attached topology 
 summary: 'Após instalar o hardware do seu sistema de storage EF50 ou EF80, conecte os cabos de espelhamento entre controladoras e as conexões de rede do host. (Você conectará as portas de gerenciamento posteriormente na seção Complete storage system setup.)' 
 ---
-= Conecte o hardware - EF50 e EF80
+= Conecte o hardware para os sistemas de storage EF50 e EF80
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 
 
 [role="lead"]
-Após instalar o hardware do seu sistema de storage EF50 ou EF80, conecte os cabos de espelhamento entre controladoras e as conexões de rede do host. (Você conectará as portas de gerenciamento posteriormente na seção Complete storage system setup.)
+Após instalar o hardware do seu sistema de storage EF50 ou EF80, conecte o espelhamento entre controladoras, as conexões de rede do host e os gabinetes SAS, se aplicável. (Você conectará as portas de gerenciamento posteriormente na seção de configuração completa do sistema de storage.)
 
 .Sobre esta tarefa
 * O termo _módulo de E/S_ é usado para se referir às placas de interface do host (HICs) neste procedimento.
@@ -60,7 +60,10 @@ image:../media/drw_ef50-ef80_mirroring_2p_100gbe_ieops-2659.svg["Cabos de conex�
 Conecte os cabos do host para o seu sistema de storage de acordo com sua topologia de rede: conexão direta ou conexão por malha.
 
 .Sobre esta tarefa
-* Dependendo do modelo do seu sistema de storage, o tipo de módulos de E/S do host instalados no sistema de storage pode ser Ethernet ou Fibre Channel (FC). Os exemplos de cabeamento neste procedimento mostram ambos os tipos de módulos de E/S do host conforme suportados pelos modelos de sistema de storage.
+* Dependendo do modelo do seu sistema de storage e da versão do SANtricity em execução, diferentes tipos de módulos de E/S de host são suportados. Os exemplos de cabeamento neste procedimento mostram módulos de E/S de host Ethernet e Fibre Channel (FC).
++
+Para ver todos os módulos de E/S do host e as prioridades de slot suportados para o modelo do seu sistema de storage, consulte link:https://hwu.netapp.com["NetApp Hardware Universe"^].
+
 * Os exemplos de cabeamento não mostram HBAs FC de 64 Gb de 4 portas nos hosts 1 e 2; no entanto, se você os tiver instalados, conecte todas as outras portas da mesma maneira que é mostrado para os HBAs de 2 portas.
 
 
@@ -330,5 +333,93 @@ image:../media/drw_ef80_4p_64gb_fc_3hic_fabric_ieops-2675.svg["Topologia fabric-
 =====
 --
 ====
+
+
+[[step-3-cable-the-sas-shelf-connections]]
+== Etapa 3: Conecte os cabos SAS das prateleiras SAS
+
+Os procedimentos a seguir mostram como conectar os controladores a uma shelf DE460C ou a uma pilha de três shelves DE460C.
+
+.Sobre esta tarefa
+* Os exemplos de cabeamento mostram os shelves DE460C; no entanto, o mesmo cabeamento se aplica a todos os shelves SAS suportados. Consulte link:https://hwu.netapp.com["NetApp Hardware Universe"^] para os shelves SAS suportados.
+* Para saber o número máximo de prateleiras suportadas pelo seu sistema de storage e todas as suas opções de cabeamento, como óptico, consulte link:https://hwu.netapp.com["NetApp Hardware Universe"^].
+* Os procedimentos de cabeamento mostram controladoras com um módulo de E/S SAS no slot 3. Esta é a única configuração de módulo de E/S SAS suportada para o SANtricity 12.10.
+* As ilustrações de cabeamento mostram o cabeamento do controlador A em azul e o cabeamento do controlador B em vermelho.
+* Você sempre conecta os cabos dos controladores e de um ou mais compartimentos de forma que haja duas conexões de cabo para o caminho do lado A (IOMA) e para o caminho do lado B (IOMB), conforme mostrado nas ilustrações de cabeamento.
+* Você utiliza os cabos de armazenamento que acompanham seu sistema de storage, que podem ser do seguinte tipo:
++
+*cabo mini-SAS HD*
+
++
+image::../media/oie_cable_mini_sas_hd_to_mini_sas_hd.svg[Cabo mini-SAS HD]
+
+
+
+[role="tabbed-block"]
+====
+.Opção 1: uma prateleira DE460C
+--
+Conecte cada controlador a cada módulo IOM12 no shelf DE460C de forma que os controladores tenham um caminho do lado A (IOMA) e um caminho do lado B (IOMB) para o shelf.
+
+.Passos
+. Conecte o cabo da porta 3a do controlador A à porta 1 do IOMA da prateleira.
+. Conecte o cabo da porta 3b do controlador A à porta 2 do IOMA da prateleira.
+. Conecte o cabo da porta 3c do controlador A à porta 3 do IOMB da prateleira.
+. Conecte o cabo da porta 3d do controlador A à porta 4 do IOMB da prateleira.
+. Conecte o cabo da porta 3a do controlador B à porta 3 do IOMA da prateleira.
+. Conecte a porta 3b do controlador B à porta 4 do IOMA da prateleira.
+. Conecte a porta 3c do controlador B à porta 1 do IOMB da prateleira.
+. Conecte a porta 3d do controlador B à porta 2 do IOMB da prateleira.
+
+
+Quando você terminar de passar os cabos no compartimento, a fiação deve ficar como a seguir:
+
+image:../media/drw_ef50-ef80_1_de460c_cabling_ieops-2981.svg["conecte as portas do controlador a uma prateleira DE460C"]
+
+--
+.Opção 2: três prateleiras DE460C
+--
+Conecte as três prateleiras entre si (conexões prateleira a prateleira) e, em seguida, conecte cada controlador a cada extremidade da pilha de prateleiras (prateleira 1 e prateleira 3) de forma que os controladores tenham um caminho do lado A (IOMA) e um caminho do lado B (IOMB) para a pilha de prateleiras.
+
+. Conecte os cabos entre as prateleiras para o caminho IOMA:
++
+.. Conecte o cabo da porta 1 do IOMA da prateleira 1 à porta 4 do IOMA da prateleira 2.
+.. Conecte o cabo da porta IOMA 2 do shelf 1 à porta IOMA 3 do shelf 2.
+.. Conecte o cabo da porta 1 do IOMA da prateleira 2 à porta 4 do IOMA da prateleira 3.
+.. Cabo da prateleira 2 porta IOMA 2 para a prateleira 3 porta IOMA 3.
+
+
+. Conecte os cabos entre as prateleiras para o caminho IOMB:
++
+.. Conecte o cabo da porta 1 do IOMB da prateleira 1 à porta 3 do IOMB da prateleira 2.
+.. Conecte o cabo da porta IOMB 2 do shelf 1 à porta IOMB 4 do shelf 2.
+.. Conecte o cabo da porta IOMB 1 da prateleira 2 à porta IOMB 3 da prateleira 3.
+.. Conecte o cabo da porta 2 do IOMB da prateleira 2 à porta 4 do IOMB da prateleira 3.
+
+
+. Conecte o controlador A à prateleira 3 (caminho IOMA) e 1 (caminho IOMB):
++
+.. Cabo do controlador A porta 3a para a prateleira 3 porta IOMA 1
+.. Conecte o cabo da porta 3b do controlador A à porta 2 do IOMA da prateleira 3.
+.. Conecte o cabo da porta 3c do controlador A à porta 3 do IOMB da prateleira 1.
+.. Conecte o cabo da porta 3d do controlador A à porta 4 do IOMB da prateleira 1.
+
+
+. Cabo do controlador B para a prateleira 1 (caminho IOMA) e 3 (caminho IOMB):
++
+.. Cabo da porta 3a do controlador B para a porta 3 do IOMA da prateleira 1.
+.. Cabo da porta 3b do controlador B para a porta 4 do IOMA da prateleira 1.
+.. Cabo da porta 3c do controlador B para a porta 1 do IOMB da prateleira 3.
+.. Cabo da porta 3d do controlador B para a porta 2 do IOMB da prateleira 3.
+
+
+
+
+Quando você terminar de passar os cabos pelas prateleiras, a fiação deverá ficar assim:
+
+image:../media/drw_ef50-ef80_3_de460c_cabling_ieops-2992.svg["cable os controladores às prateleiras DE460C 1 e 3"]
+
+--
+====
 .O que se segue?
-Após conectar o espelhamento entre controladoras e as conexões do host para o seu sistema de storage, link:install-power-hardware.html["Ligue o seu sistema de storage"].
+Após a instalação dos cabos do seu sistema de storage, link:install-power-hardware.html["Ligue o seu sistema de storage"].

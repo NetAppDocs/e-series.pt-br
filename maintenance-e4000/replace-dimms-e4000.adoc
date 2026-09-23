@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords:  
 summary:  
 ---
-= Substitua os DIMMs - E4000
+= Substitua os módulos DIMM em um sistema de storage E4000
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
@@ -144,8 +144,7 @@ O arquivo é salvo na pasta Downloads do seu navegador com o nome *configuration
 
 . Se o controlador ainda não estiver offline, coloque-o offline agora usando o Gerenciador de sistema do SANtricity.
 +
-.. Selecione *hardware*.
-.. Se o gráfico mostrar as unidades, selecione *Mostrar parte traseira da prateleira* para mostrar os controladores.
+.. Selecione o menu: Hardware [Controllers and components]
 .. Selecione o controlador que pretende colocar offline.
 .. No menu de contexto, selecione *colocar offline* e confirme que deseja executar a operação.
 +
@@ -325,9 +324,9 @@ Se o estado não for o ideal ou se algum dos LEDs de atenção estiver aceso, co
 
 . Verifique se todos os volumes foram devolvidos ao proprietário preferido.
 +
-.. Selecione *armazenamento de volumes*. Na página *todos os volumes*, verifique se os volumes são distribuídos aos seus proprietários preferidos. Selecione *mais
+.. Selecione *Storage › Volumes*. Na página *All Volumes*, verifique se os volumes estão distribuídos aos seus proprietários preferenciais. Selecione *ellipse icon › Change ownership* para visualizar os proprietários dos volumes.
 .. Se todos os volumes forem propriedade do proprietário preferido, avance para o passo 6.
-.. Se nenhum dos volumes for retornado, você deverá retornar manualmente os volumes. Vá para *mais
+.. Se nenhum dos volumes for devolvido, você deve devolvê-los manualmente. Vá para *ícone de reticências › Redistribuir volumes*.
 .. Se não houver Recovery Guru presente ou se seguir as etapas Recovery Guru, os volumes ainda não serão retornados aos proprietários preferenciais, entre em Contato com o suporte.
 
 

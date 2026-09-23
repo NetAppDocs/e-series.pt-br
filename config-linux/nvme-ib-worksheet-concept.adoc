@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: NVMe over Infiniband worksheet Linux, express linux configuration, software configuration, linux host, E2800, E5700, EF300, EF600, E-Series, eseries 
 summary: Use esta Planilha para gravar informações de configuração de storage NVMe em Infiniband. 
 ---
-= Grave sua configuração NVMe over InfiniBand no e-Series - Linux
+= Planilha de configuração NVMe over InfiniBand para E-Series
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
@@ -172,7 +172,9 @@ Defina a sub-rede a ser utilizada.
 
 
  a| 
+{nbsp}
  a| 
+{nbsp}
 
 |===
 Documente as IQNs a serem usadas pelas portas de matriz e cada porta de host.

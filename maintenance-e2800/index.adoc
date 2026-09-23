@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: E2800 maintenance, E2800 repair, replace E2800 components, replacing E2800 components, 
 summary: Efectue a manutenção nos componentes E2800. 
 ---
-= Manter o hardware - E2800
+= Faça a manutenção de hardware para um sistema de storage E2800
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
@@ -14,6 +14,9 @@ summary: Efectue a manutenção nos componentes E2800.
 Talvez seja necessário executar procedimentos de manutenção no hardware. Os procedimentos específicos para a manutenção dos componentes do sistema E2800 estão nesta seção.
 
 Os procedimentos nesta seção pressupõem que o sistema E2800 já foi implantado no ambiente e-Series.
+
+
+NOTE: Os sistemas de storage E2800 são produtos de fim de disponibilidade (EOA) e não estão mais disponíveis para compra, mas ainda têm suporte. As informações nesta seção são fornecidas apenas para referência.
 
 
 

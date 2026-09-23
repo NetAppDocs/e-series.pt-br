@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords:  
 summary:  
 ---
-= Substitua o controlador - E4000
+= Substitua o controlador em um sistema de storage E4000
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
@@ -126,7 +126,7 @@ Guarde os materiais de embalagem a utilizar ao enviar o recipiente do controlado
 Quando um controlador tem uma falha e precisa ser substituído, o número de peça de substituição é exibido na área Detalhes do Recovery Guru. Se você precisar encontrar esse número manualmente, siga estas etapas:
 
 +
-.. Selecione *hardware*.
+.. Selecione o menu: Hardware [Controllers and components].
 .. Localize o compartimento do controlador, que está marcado com o ícone do controlador.
 .. Clique no ícone do controlador.
 .. Selecione o controlador e clique em *seguinte*.
@@ -178,8 +178,7 @@ O arquivo é salvo na pasta Downloads do seu navegador com o nome *support-data.
 +
 ** A partir do SANtricity System Manager:
 +
-... Selecione *hardware*.
-... Se o gráfico mostrar as unidades, selecione *Mostrar parte traseira da prateleira* para mostrar os controladores.
+... Selecione o menu: Hardware [Controller and components].
 ... Selecione o controlador que pretende colocar offline.
 ... No menu de contexto, selecione *colocar offline* e confirme que deseja executar a operação.
 +
@@ -479,7 +478,7 @@ local:
 
 . No Gerenciador de sistemas do SANtricity, confirme se o novo controlador é o ideal.
 +
-.. Selecione *hardware*.
+.. Selecione o menu: Hardware [Controller and components].
 .. Para o compartimento do controlador, selecione *Mostrar parte posterior da prateleira*.
 .. Selecione o recipiente do controlador que você substituiu.
 .. Selecione *Ver definições*.
@@ -547,7 +546,7 @@ NOTE: Se não conseguir resolver o problema, contacte o suporte técnico.
 . Se necessário, redistribua todos os volumes de volta ao proprietário preferido usando o Gerenciador de sistemas do SANtricity.
 +
 .. Selecione *armazenamento de volumes*.
-.. Selecione *mais
+.. Selecione *ícone de reticências › Redistribuir volumes*.
 
 
 . Clique em *hardware* para garantir que a versão mais recente do software SANtricity os (firmware do controlador) esteja instalada.

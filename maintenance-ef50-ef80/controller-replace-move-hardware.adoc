@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: ef50, ef80, move the controller module hardware 
 summary: Substitua o controlador defeituoso em seu sistema de storage EF50 ou EF80 removendo o controlador, transferindo os componentes para o controlador de substituição e instalando o controlador de substituição. 
 ---
-= Substitua o controlador - EF50 e EF80
+= Substitua o controlador nos sistemas de storage EF50 e EF80
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

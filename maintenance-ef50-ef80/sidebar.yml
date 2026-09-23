@@ -25,6 +25,8 @@ entries:
   url: "/maintenance-ef50-ef80/dimm-replace.html"
 - title: Drive
   url: "/maintenance-ef50-ef80/drive-replace.html"
+- title: Gaveta da unidade
+  url: "/maintenance-ef50-ef80/drive-drawer-de460c-replace.html"
 - title: Ventoinha
   url: "/maintenance-ef50-ef80/fan-replace.html"
 - title: Módulo de E/S

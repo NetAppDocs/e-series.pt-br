@@ -4,20 +4,21 @@
 
 .Passos
 . Agende uma janela de manutenção de inatividade para este procedimento. Você não poderá acessar dados no sistema de storage até que tenha concluído este procedimento com sucesso. Como ambos os controladores devem ter a mesma configuração de módulo de E/S quando estiverem ligados, a energia deve estar desligada ao atualizar os módulos de E/S.
+. Atualize o firmware para a versão mais recente. Para atualizar o firmware, siga as instruções em link:../upgrade-santricity/index.html["Atualizando o SANtricity os"^]
 . Certifique-se de que tem o seguinte:
 +
 ** Os novos módulos de E/S para os quais você está atualizando.
 +
-Certifique-se de que os módulos de E/S para os quais você está atualizando sejam compatíveis com seu sistema de storage, que você tenha o mesmo tipo e número de módulos de E/S para cada controlador e que você entenda a prioridade do slot (o novo módulo de E/S deve ser instalado no mesmo slot em cada controlador).
+Certifique-se de que os módulos de E/S para os quais você está atualizando sejam compatíveis com seu sistema de storage e versão do SANtricity, que você tenha o mesmo tipo e número de módulos de E/S para cada controlador e que você entenda a prioridade dos slots (o novo módulo de E/S deve ser instalado no mesmo slot em cada controlador).
+
++
+Você pode confirmar os módulos de E/S suportados e a prioridade de slots para o seu sistema de storage em  https://hwu.netapp.com["NetApp Hardware Universe"^].
 
 +
 
 CAUTION: *Possível perda de acesso aos dados* -- A presença de módulos de E/S incompatíveis ou não correspondentes faz com que os controladores entrem em bloqueio quando a alimentação é ligada.
 
-+
-Caso necessário, você pode confirmar os módulos de E/S suportados e a prioridade de slots para o seu sistema de storage em https://hwu.netapp.com["NetApp Hardware Universe"^].
-
-** Cabos para conectar os novos módulos de I/O à sua rede.
+** Cabos para conectar os novos módulos de E/S à sua rede ou aos compartimentos de expansão SAS.
 ** Uma pulseira ESD ou você tomou outras precauções antiestáticas.
 ** Uma superfície de trabalho plana e livre de estática.
 ** Uma estação de gerenciamento com um navegador que pode acessar SANtricity System Manager para os controladores.

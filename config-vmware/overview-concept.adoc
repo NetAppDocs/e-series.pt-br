@@ -1,10 +1,10 @@
 ---
 permalink: config-vmware/overview-concept.html 
 sidebar: sidebar 
-keywords: express vmware configuration, software configuration, vmware host, E2800, E5700, EF300, EF600, E-Series, eseries 
+keywords: express vmware configuration, software configuration, vmware host, E2800, E5700, EF300, EF600, EF50, EF80, E4000, E-Series, eseries 
 summary: Revise os requisitos para usar o método expresso para configurar um array e-Series e um host VMware. 
 ---
-= Suposições (e-Series e VMware)
+= Pressupostos de configuração expressa do VMware para E-Series
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
@@ -64,12 +64,13 @@ Provisionamento de storage
  a| 
 * Você não usará volumes compartilhados.
 * Você criará pools em vez de grupos de volume.
+* Para garantir a compatibilidade com o VMware, os volumes devem ser configurados para utilizar emulação de 512 bytes (512e) ao usar unidades de 4096 bytes. Consulte a ajuda online do SANtricity System Manager para obter mais informações sobre como configurar um volume para usar emulação de 512 bytes (512e).
 
 
 
 
  a| 
-Protocolo: FC
+Protocolo: Fibre Channel (FCP)
  a| 
 * Você fez todas as conexões FC do lado do host e ativou o zoneamento do switch.
 * Você está usando HBAs e switches FC compatíveis com NetApp.
@@ -102,6 +103,26 @@ Protocolo: SAS
  a| 
 * Você está usando HBAs SAS compatíveis com NetApp.
 * Você está usando as versões de driver e firmware HBA SAS, conforme listado no http://mysupport.netapp.com/matrix["Ferramenta de Matriz de interoperabilidade do NetApp"^].
+
+
+
+
+ a| 
+Protocolo: NVMe sobre RoCE (RDMA sobre Ethernet convergente)
+ a| 
+* Você está usando switches Ethernet compatíveis com tráfego RDMA
+* Você configurou os switches Ethernet para Ethernet sem perda usando o Controle de Fluxo Prioritário (PFC) baseado em Differentiated Services Code Point (DSCP).
+* Você está usando as versões de driver e firmware RDMA listadas em  http://mysupport.netapp.com/matrix["Ferramenta de Matriz de interoperabilidade do NetApp"^].
+
+
+
+
+ a| 
+Protocolo: NVMe sobre TCP
+ a| 
+* Você está usando switches Ethernet compatíveis com tráfego TCP
+* Você configurou os switches Ethernet de acordo com a recomendação do fornecedor para TCP.
+* Você está usando as versões de driver de rede e firmware listadas em  http://mysupport.netapp.com/matrix["Ferramenta de Matriz de interoperabilidade do NetApp"^].
 
 
 |===

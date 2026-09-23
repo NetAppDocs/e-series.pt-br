@@ -1,7 +1,7 @@
 ---
 permalink: config-vmware/verify-vmware-config-support-task.html 
 sidebar: sidebar 
-keywords: express vmware configuration, software configuration, vmware host, E2800, E5700, EF300, EF600, E-Series, eseries 
+keywords: express vmware configuration, software configuration, vmware host, E2800, E5700, EF300, EF600, EF50, EF80, E4000, E-Series, eseries 
 summary: Verifique se a configuração do VMware é suportada. 
 ---
 = Verifique o suporte à configuração do VMware no e-Series
@@ -30,10 +30,11 @@ Para garantir uma operação confiável, você cria um plano de implementação 
 
  a| 
 ** Talvez seja necessário instalar drivers prontos para uso para garantir a funcionalidade e a capacidade de suporte adequados. Você pode instalar drivers HBA usando o shell ESXi ou uma conexão SSH remota ao host ESXi. Para acessar o host usando qualquer um desses métodos, você deve habilitar o shell ESXi e o acesso SSH. Para obter mais informações sobre o shell ESXi, consulte a base de dados de Conhecimento da VMware sobre como usar o shell ESXi no ESXi. Para obter os comandos de instalação, consulte as instruções que acompanham os drivers HBA.
-** Cada fornecedor HBA tem métodos específicos para atualizar o código de inicialização e o firmware. Alguns desses métodos podem incluir o uso de um plug-in do vCenter ou a instalação do provedor CIM no host ESXi. Plugins do vCenter podem ser usados para obter informações sobre o HBA específico do fornecedor. Consulte a seção de suporte do site do fornecedor para obter as instruções e o software necessários para atualizar o código de inicialização ou o firmware do HBA. Consulte o _Guia de compatibilidade VMware_ ou o site do fornecedor HBA para obter o código de inicialização ou firmware correto.
+** Cada fornecedor de HBA possui métodos específicos para atualizar o código de inicialização e firmware. Alguns desses métodos podem incluir o uso de um plugin do vCenter ou a instalação de um provedor CIM no host ESXi. Plugins do vCenter podem ser usados para obter informações sobre o HBA específico do fornecedor. Consulte a seção de suporte do site do fornecedor para obter as instruções e o software necessários para atualizar o código de inicialização ou firmware do HBA. Consulte o  https://compatibilityguide.broadcom.com/search?program=io&persona=live&column=brandName&order=asc["_Guia de compatibilidade da VMware_"] ou o site do fornecedor do HBA para obter o código de inicialização ou firmware correto.
+** Analise os alertas e informações associados à configuração selecionada para qualquer sistema operacional, sistema operacional convidado, HBA ou outras configurações ou informações relacionadas que possam precisar ser aplicadas à sua configuração.
 
  a| 
-FC
+FCP
  a| 
 Driver, firmware e código de inicialização do adaptador de barramento do host (HBA)
 
@@ -50,6 +51,27 @@ Driver de placa de interface de rede (NIC), firmware e código de inicializaçã
 SAS
  a| 
 Driver, firmware e código de inicialização do adaptador de barramento do host (HBA)
+
+
+
+ a| 
+NVMe sobre FC
+ a| 
+Driver, firmware e código de inicialização do adaptador de barramento do host (HBA)
+
+
+
+ a| 
+NVMe em RoCE
+ a| 
+Driver RDMA (Remote Direct Memory Access), firmware e bootcode
+
+
+
+ a| 
+NVMe sobre TCP
+ a| 
+Driver de placa de interface de rede (NIC), firmware e código de inicialização
 
 |===
 

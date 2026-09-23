@@ -2,9 +2,9 @@
 permalink: maintenance-e4000/drive-drawer-60.html 
 sidebar: sidebar 
 keywords: E4000 replace drive drawer, replacing E4000 drive drawer, E4000 replace drive drawer, replacing E4000 drive drawer, E4000, E-Series, eseries 
-summary: Substitua uma gaveta de unidades em uma gaveta de controladora E2860 ou em uma gaveta de unidades de DE460C TB. 
+summary: Você pode substituir uma gaveta de unidades em um compartimento de controladora E4060 ou em um compartimento de unidades de DE460C TB. 
 ---
-= Substitua a gaveta de unidades - E4000 (compartimento de 60 unidades)
+= Substitua a gaveta de unidades em uma shelf E4000 de 60 unidades
 :allow-uri-read: 
 :experimental: 
 :icons: font
@@ -15,7 +15,7 @@ summary: Substitua uma gaveta de unidades em uma gaveta de controladora E2860 ou
 Você pode substituir uma gaveta de unidades em um compartimento de controladora E4060 ou em um compartimento de unidades de DE460C TB.
 
 .Sobre esta tarefa
-As etapas para substituir uma gaveta de unidade com falha em um compartimento de controladora E4060 ou em um compartimento de unidades DE460C dependem se os volumes na gaveta estão protegidos pela proteção contra perda de gaveta. Se todos os volumes na gaveta da unidade estiverem em pools de discos ou grupos de volumes que tenham proteção contra perda de gaveta, você poderá executar este procedimento on-line. Caso contrário, você deve parar toda a atividade de e/S do host e desligar a gaveta antes de substituir a gaveta da unidade.
+Os passos para substituir uma gaveta de unidade com falha em um shelf de controladora E4060 ou em um shelf de unidade DE460C dependem de os volumes na gaveta estarem protegidos pela Drawer Loss Protection. Se todos os volumes na gaveta de unidade estiverem em disk pools ou grupos de volumes que tenham Drawer Loss Protection, você pode executar este procedimento online. Caso contrário, você deve executar este procedimento offline, interrompendo toda a atividade de I/O do host e desligando todo o sistema de storage (shelf de controladora e todos os shelves de expansão) antes de substituir uma gaveta de unidade.
 
 .Antes de começar
 * Certifique-se de que o compartimento de unidades atenda a todas estas condições:
@@ -46,14 +46,14 @@ CAUTION: *Possível perda de acesso a dados* -- se um volume já estiver em esta
 
 
 
-NOTE: Se precisar de informações sobre como substituir um compartimento de expansão do e-Series DE460c, consulte o https://kb.netapp.com/on-prem/E-Series/Hardware-KBs/How_to_replace_an_E_Series_DE460c_controller_expansion_shelf["Base de dados de Conhecimento da NetApp"^].
+NOTE: Se você precisar de informações sobre como substituir um E-Series DE460C compartimento de expansão, consulte o  https://kb.netapp.com/on-prem/E-Series/Hardware-KBs/How_to_replace_an_E_Series_DE460c_controller_expansion_shelf["Base de dados de Conhecimento da NetApp"^].
 
 
 
 [[step-1-prepare-to-replace-drive-drawer]]
 == Passo 1: Prepare-se para substituir a gaveta da unidade
 
-Determine se você pode executar o procedimento de substituição enquanto o compartimento de unidade está on-line ou se precisa interromper a atividade de e/S do host e desligar qualquer uma das gavetas ligadas.
+Determine se você pode realizar o procedimento de substituição com o compartimento de unidades online ou se precisa interromper a atividade de E/S do host e desligar qualquer um dos compartimentos que estiverem ligados (realizar o procedimento offline).
 
 Se você estiver substituindo uma gaveta em uma prateleira com proteção contra perda de gaveta, não há necessidade de interromper a atividade de e/S do host e desligar qualquer uma das prateleiras.
 
@@ -64,11 +64,11 @@ Se você estiver substituindo uma gaveta em uma prateleira com proteção contra
 ** Se a alimentação estiver ligada, avance para o passo seguinte.
 
 
-. Acesse a CLI e digite o seguinte comando:
+. Acesse a interface de linha de comando e, em seguida, digite o seguinte comando para colocar a gaveta de destino em modo de serviço:
 +
 [listing]
 ----
-SMcli <ctlr_IP1\> -p "array_password" -c "set tray [trayID] drawer [drawerID]
+SMcli <ctlr_IP1\> -k -u "array_username" -p "array_password" -c "set tray [trayID] drawer [drawerID]
 serviceAllowedIndicator=on;"
 ----
 +
@@ -76,6 +76,7 @@ local:
 
 +
 ** `<ctlr_IP1>` é o identificador do controlador.
+**  `array_username` é o nome de usuário do array de storage. Você deve colocar o valor de  `array_username` entre aspas duplas ("").
 **  `array_password` é a palavra-passe para a matriz de armazenamento. Você deve incluir o valor de `array_password` entre aspas duplas ("").
 ** `[trayID]` é o identificador do compartimento de unidades que contém a gaveta de unidades que você deseja substituir. Os valores de ID do compartimento de unidades são de 0 a 99. Você deve incluir o valor `trayID` entre parênteses retos.
 ** `[drawerID]` é o identificador da gaveta da unidade que você deseja substituir. Os valores de ID da gaveta são 1 (gaveta superior) a 5 (gaveta inferior). Você deve incluir o valor `drawerID` entre parênteses retos.
@@ -87,7 +88,7 @@ Esse comando garante que você possa remover a gaveta mais alta no compartimento
 +
 [listing]
 ----
-SMcli <ctlr_IP1\> -p "safety-1" -c "set tray [10] drawer [1]
+SMcli <ctlr_IP1\> -k -u "array_username" -p "array_password" -c "set tray [10] drawer [1]
 serviceAllowedIndicator=forceOnWarning;"
 ----
 . Determine se você precisa interromper a atividade de e/S do host, da seguinte forma:
@@ -120,7 +121,7 @@ CAUTION: *Possível perda de dados* -- se você continuar este procedimento enqu
 +
 O LED verde Cache ative na parte de trás de cada controlador fica aceso quando os dados em cache precisam ser gravados nas unidades. Tem de esperar que este LED se desligue.
 
-. Na página inicial do Gerenciador do sistema do SANtricity, selecione *Exibir operações em andamento*.
+. No painel esquerdo do SANtricity System Manager, selecione menu:Storage[Operations in Progress].
 . Aguarde que todas as operações sejam concluídas antes de continuar com o próximo passo.
 . Desligue as prateleiras, usando um dos seguintes procedimentos:
 +
@@ -160,7 +161,7 @@ As extremidades metálicas nas correntes de cabos deslizam para os trilhos de gu
 
 
 
-CAUTION: *Possíveis danos ao hardware* -- se a bandeja da unidade estiver ligada, a corrente do cabo será energizada até que ambas as extremidades sejam desconetadas. Para evitar o curto-circuito do equipamento, não permita que o conetor da corrente do cabo desligado toque no chassis metálico se a outra extremidade da corrente do cabo ainda estiver ligada.
+CAUTION: *Possível dano ao hardware* -- Se o compartimento de unidades estiver ligado, a cadeia de cabos permanecerá energizada até que ambas as extremidades sejam desconectadas. Para evitar curto-circuito no equipamento, não permita que o conector da cadeia de cabos desconectado toque no chassi se a outra extremidade da cadeia de cabos ainda estiver conectada.
 
 .Passos
 . Verifique se o compartimento de unidades e o compartimento de controladora não têm mais atividade de e/S e estão desligados ou se você emitiu o `Set Drawer Attention Indicator` comando CLI.
@@ -176,8 +177,8 @@ image::../media/28_dwg_e2860_de460c_fan_canister_handle_with_callout_maint-e2800
 +
 *(1)* _pega do recipiente do ventilador_
 
-.. Usando a alça, puxe o recipiente do ventilador para fora da bandeja de unidades e coloque-o de lado.
-.. Se a bandeja estiver ligada, certifique-se de que a ventoinha esquerda atinge a velocidade máxima.
+.. Usando a alça, puxe o compartimento do ventilador para fora do compartimento da unidade e coloque-o de lado.
+.. Se a prateleira estiver ligada, certifique-se de que a ventoinha esquerda atinge a velocidade máxima.
 +
 
 CAUTION: *Possíveis danos ao equipamento devido ao sobreaquecimento* -- se a bandeja estiver ligada, não remova ambos os ventiladores ao mesmo tempo. Caso contrário, o equipamento pode sobreaquecer.
@@ -271,7 +272,7 @@ CAUTION: *Possíveis danos ao equipamento devido ao sobreaquecimento* -- se a pr
 .. Para desligar a corrente do cabo, puxe na sua direção aproximadamente 1 polegadas (2,5 cm). Deixe o conetor da corrente do cabo dentro da calha-guia vertical.
 +
 
-CAUTION: *Possíveis danos ao hardware* -- se a bandeja da unidade estiver ligada, a corrente do cabo será energizada até que ambas as extremidades sejam desconetadas. Para evitar o curto-circuito do equipamento, não permita que o conetor da corrente do cabo desligado toque no chassis metálico se a outra extremidade da corrente do cabo ainda estiver ligada.
+CAUTION: *Possível dano ao hardware* -- Se o compartimento de unidades estiver ligado, a cadeia de cabos permanecerá energizada até que ambas as extremidades sejam desconectadas. Para evitar curto-circuito no equipamento, não permita que o conector da cadeia de cabos desconectado toque no chassi se a outra extremidade da cadeia de cabos ainda estiver conectada.
 
 
 
@@ -393,7 +394,7 @@ Ao fixar uma corrente de cabo, inverta a ordem que utilizou ao desligar a corren
 .Passos
 . Certifique-se de que:
 +
-** Uma nova gaveta de unidade instalada.
+** Uma nova gaveta de unidade foi instalada.
 ** Você tem duas correntes de cabo de substituição, marcadas como ESQUERDA e DIREITA (no conetor horizontal ao lado da gaveta da unidade).
 
 
@@ -470,7 +471,7 @@ O LED pode permanecer aceso durante um minuto depois de reinstalar a ventoinha e
 [[step-6-complete-drive-drawer-replacement]]
 == Passo 6: Substituição completa da gaveta da unidade
 
-Reinsira as unidades e recoloque a moldura frontal na ordem correta.
+Reinsira as unidades na ordem correta, reinstale a gaveta de unidades na prateleira de unidades, recoloque o painel frontal, religue a alimentação (se necessário) e, em seguida, reconstrua manualmente as unidades (se necessário).
 
 
 CAUTION: * Possível perda de acesso a dados * - você deve instalar cada unidade em seu local original na gaveta da unidade.
@@ -533,6 +534,10 @@ CAUTION: *Risco de mau funcionamento do equipamento* -- Certifique-se de fechar 
 
 
 
+
+. Se você realizou o procedimento de substituição da gaveta de unidades online e, se alguma unidade na gaveta de substituição estiver com falha, você deve reconstruir as unidades manualmente.
++
+Usando o SANtricity System Manager, conclua o link:https://docs.netapp.com/us-en/e-series-santricity/sm-hardware/reconstruct-drive-manually.html["Reconstruir uma unidade manualmente"^] procedimento.
 
 
 

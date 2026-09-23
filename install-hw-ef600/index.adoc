@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: EF300, EF600, EF300C, EF600C installation 
 summary: Instale e configure o array EF300 e EF600. 
 ---
-= Instale e configure - EF300, EF600, EF300C e EF600C
+= Fluxograma de instalação e configuração para os sistemas de storage EF300 e EF600
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

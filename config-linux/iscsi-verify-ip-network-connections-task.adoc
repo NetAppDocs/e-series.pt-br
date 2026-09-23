@@ -2,9 +2,9 @@
 permalink: config-linux/iscsi-verify-ip-network-connections-task.html 
 sidebar: sidebar 
 keywords: express linux configuration, software configuration, linux host, E2800, E5700, EF300, EF600, E-Series, eseries 
-summary: 'Você verifica as conexões de rede de Protocolo de Internet (IP) usando testes de ping para garantir que o host e a matriz sejam capazes de se comunicar.' 
+summary: 'Você verifica as conexões de rede IP (Internet Protocol) usando testes de ping para garantir que o host e o array possam se comunicar.' 
 ---
-= Verificar conexões de rede IP no e-Series - Linux (iSCSI)
+= Verifique as conexões de rede IP em hosts Linux E-Series
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

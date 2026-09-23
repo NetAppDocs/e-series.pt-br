@@ -3,7 +3,9 @@
 
 
 .Sobre esta tarefa
-Você começa com um controlador e, em seguida, repete os passos para o outro controlador.
+* Você começa com um controlador e, em seguida, repete os passos para o outro controlador.
+* A ilustração mostra a remoção de um módulo de E/S do slot 2. Dependendo do tipo de módulo de E/S para o qual você está atualizando, o slot pode ser diferente.
+
 
 .Passos
 . Se você ainda não está aterrado, aterre-se adequadamente.
@@ -47,9 +49,11 @@ Você pode usar a aba à esquerda e o parafuso de aperto manual para empurrar o 
 .. Gire o parafuso de aperto manual no sentido horário para apertar.
 
 
-. Conecte o módulo de E/S à rede do host.
+. Conecte o módulo de E/S à rede do host ou ao compartimento de expansão SAS.
 +
-Você pode usar a seção link:../install-hw-ef50-ef80/install-cable.html["Conecte o hardware"^] do conteúdo de instalação e configuração do sistema para o cabeamento de rede do host.
+** Para o cabeamento de rede do host, você pode usar a link:../install-hw-ef50-ef80/install-cable.html["Conecte o hardware"^] seção do conteúdo de instalação e configuração do sistema para cabeamento de rede do host.
+** Para a fiação do compartimento de expansão SAS, você pode usar o link:../install-hw-cabling/hotadd-drive-shelf-task.html["Adicione a quente um compartimento para unidades de disco em um sistema de storage E-Series"^] procedimento.
+
 
 . Repita estas etapas para atualizar um módulo de E/S no outro controlador.
 

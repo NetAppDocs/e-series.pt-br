@@ -2,9 +2,9 @@
 permalink: config-linux/nvme-fc-configure-ip-address-dhcp-task.html 
 sidebar: sidebar 
 keywords: IP address, DHCP, express linux configuration, software configuration, linux host, E2800, E5700, EF300, EF600, E-Series, eseries 
-summary: 'Use o protocolo DHCP (Dynamic Host Configuration Protocol) para fornecer endereços IP.' 
+summary: 'Use o Protocolo de Configuração Dinâmica de Hosts (DHCP) para fornecer endereços IP.' 
 ---
-= Configurar endereços IP usando DHCP no e-Series - Linux (NVMe sobre FC)
+= Configure endereços IP usando DHCP para hosts Linux NVMe over FC E-Series
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

@@ -1,10 +1,10 @@
 ---
 permalink: config-vmware/iscsi-perform-specific-task.html 
 sidebar: sidebar 
-keywords: iscsi, express vmware configuration, software configuration, vmware host, E2800, E5700, EF300, EF600, E-Series, eseries 
+keywords: iscsi, express vmware configuration, software configuration, vmware host, E2800, E5700, EF300, EF600, EF50, EF80, E4000, E-Series, eseries 
 summary: Para o protocolo iSCSI, configure os switches e configure a rede no lado da matriz e no lado do host. Em seguida, você verifica as conexões de rede IP. 
 ---
-= Execute tarefas específicas de iSCSI no e-Series - VMware
+= Configure os switches iSCSI e a rede para VMware no storage E-Series
 :allow-uri-read: 
 :experimental: 
 :icons: font
@@ -15,9 +15,41 @@ summary: Para o protocolo iSCSI, configure os switches e configure a rede no lad
 Para o protocolo iSCSI, configure os switches e configure a rede no lado da matriz e no lado do host. Em seguida, você verifica as conexões de rede IP.
 
 
+NOTE: Para garantir a compatibilidade com o VMware, os volumes devem ser configurados para utilizar emulação de 512 bytes (512e) ao usar unidades de 4096 bytes. Consulte a ajuda online do SANtricity System Manager para obter mais informações sobre como configurar um volume para usar emulação de 512 bytes (512e).
 
-[[step-1-configure-the-switches-iscsi-vmware]]
-== Etapa 1: Configurar os switches - iSCSI, VMware
+
+
+[[step-1-record-your-configuration]]
+== Etapa 1: registre sua configuração
+
+Você pode gerar e imprimir um PDF desta página e, em seguida, usar a planilha a seguir para registrar suas informações de configuração de storage específicas do protocolo. Você precisará dessas informações ao executar tarefas de provisionamento.
+
+A ilustração mostra um host conectado a um array de storage E-Series, separados por VLANs e/ou sub-redes exclusivas. Uma VLAN/sub-rede é indicada pela linha azul; a outra VLAN/sub-rede é indicada pela linha vermelha. Cada VLAN/sub-rede contém pelo menos uma porta iniciadora e metade das portas de destino. O número de portas do host e/ou do controlador varia de acordo com o número de interfaces de rede e o modelo do controlador. Você pode ter mais portas disponíveis (até 6 por controlador).
+
+image::../media/50001_01_conf-vmw.gif[Identificador de porta iSCSI]
+
+
+
+[[host-mapping-information]]
+=== Informações de mapeamento de host
+
+[cols="35h,~"]
+|===
+| Mapeando o nome do host |  
+
+
+| Tipo de SO de host |  
+
+
+| IQN do host |  
+
+
+| Objetivo IQN |  
+|===
+
+
+[[step-2-configure-the-switches]]
+== Passo 2: configure os switches
 
 Você configura os switches de acordo com as recomendações do fornecedor para iSCSI. Essas recomendações podem incluir diretivas de configuração, bem como atualizações de código.
 
@@ -25,9 +57,9 @@ Você configura os switches de acordo com as recomendações do fornecedor para 
 Certifique-se de que tem o seguinte:
 
 * Duas redes separadas para alta disponibilidade. Certifique-se de isolar o tráfego iSCSI para segmentos de rede separados.
-* Controle de fluxo de hardware de envio e recebimento ativado *fim a fim*.
+* Ativou o controle de fluxo de hardware *completamente* de envio e recebimento.
 * Controle de fluxo de prioridade desativado.
-* Se apropriado, habilitado quadros jumbo.
+* Se for apropriado, habilite os quadros jumbo (recomendado).
 
 
 
@@ -38,31 +70,29 @@ Consulte a documentação do fornecedor do switch.
 
 
 
-[[step-2-configure-networking-iscsi-vmware]]
-== Etapa 2: Configurar rede - VMware iSCSI
+[[step-3-configure-networking]]
+== Etapa 3: configurar rede
 
 Pode configurar a sua rede iSCSI de várias formas, dependendo dos requisitos de armazenamento de dados. Consulte o administrador da rede para obter dicas sobre como selecionar a melhor configuração para o seu ambiente.
 
 .Antes de começar
 Certifique-se de que tem o seguinte:
 
-* Controle de fluxo de hardware de envio e recebimento ativado *fim a fim*.
+* Ativou o controle de fluxo de hardware *completamente* de envio e recebimento.
 * Controle de fluxo de prioridade desativado.
-* Se apropriado, habilitado quadros jumbo.
+* Se for apropriado, habilite os quadros jumbo (recomendado).
 +
-Se você estiver usando quadros jumbo dentro da SAN IP por razões de desempenho, certifique-se de configurar o array, switches e hosts para usar quadros jumbo. Consulte a documentação do sistema operacional e do switch para obter informações sobre como habilitar quadros jumbo nos hosts e nos switches. Para ativar quadros jumbo no array, execute as etapas na Etapa 3.
+Se você estiver usando jumbo frames no SAN IP por motivos de desempenho, certifique-se de configurar o array, os switches e os hosts para usar jumbo frames. Consulte a documentação do seu sistema operacional e dos switches para obter informações sobre como habilitar jumbo frames nos hosts e nos switches. Para habilitar jumbo frames no array, siga os passos descritos na Etapa 4.
 
 
 
 .Sobre esta tarefa
-Ao Planejar sua rede iSCSI, lembre-se de que o https://configmax.broadcom.com/home["Máximos de configuração do VMware"^] guia afirma que o máximo de caminhos de armazenamento iSCSI suportados é 8. Você deve considerar esse requisito para evitar configurar muitos caminhos.
+Ao planejar sua rede iSCSI, lembre-se de que o  https://configmax.broadcom.com/guest["Guia de máximos de configuração do VMware"^] estabelece que o número máximo de caminhos iSCSI suportados para um LUN é 32 e o número máximo de placas de interface de rede (NICs) que podem ser associadas ou vinculadas por porta à pilha de software iSCSI por servidor é 8. Você deve considerar esse requisito para evitar configurar muitos caminhos.
 
 Por padrão, o iniciador de software iSCSI da VMware cria uma única sessão por destino iSCSI quando você não está usando a vinculação de porta iSCSI.
 
 
-NOTE: A vinculação de porta iSCSI da VMware é um recurso que força todas as portas VMkernel vinculadas a fazer logon em todas as portas de destino acessíveis nos segmentos de rede configurados. Destina-se a ser utilizado com matrizes que apresentem um único endereço de rede para o destino iSCSI. A NetApp recomenda que a ligação de porta iSCSI não seja utilizada. Para obter informações adicionais, consulte o https://support.broadcom.com/["Base de Conhecimento da VMware"] para obter o artigo sobre considerações sobre o uso de vinculação de porta iSCSI de software no ESX/ESXi. Se o host ESXi estiver conetado ao armazenamento de outro fornecedor, o NetApp recomenda que você use portas iSCSI vmkernel separadas para evitar qualquer conflito com a vinculação de porta.
-
-Para a prática recomendada, você não deve usar vinculação de porta em storage arrays e-Series. Consulte https://www.netapp.com/media/17017-tr4789.pdf["TR-4789:Guia de configuração VMware para integração iSCSI SANtricity da série e com ESXi 6.x e 7.x."^] para obter mais informações.
+NOTE: A vinculação de portas iSCSI da VMware é um recurso que força todas as portas VMkernel vinculadas a se conectarem a todas as portas de destino acessíveis nos segmentos de rede configurados. Ela foi projetada para ser usada com arrays que apresentam um único endereço de rede para o destino iSCSI. NetApp recomenda que a vinculação de portas iSCSI não seja usada. Para obter mais informações, consulte  https://techdocs.broadcom.com/us/en/vmware-cis/vsphere/vsphere/9-1/vsphere-storage/configuring-iscsi-and-iser-adapters-and-storage-with-esxi/setting-up-network-for-iscsi-and-iser-with-esxi/best-practices-for-configuring-networking-with-software-iscsi.html["Melhores práticas para usar o vínculo de porta iSCSI por software no ESX/ESXi"^]. Se o host ESXi estiver conectado ao storage de outro fornecedor, NetApp recomenda que você use portas VMkernel iSCSI separadas para evitar qualquer conflito com a vinculação de portas.
 
 Para garantir uma boa configuração de multipathing, use vários segmentos de rede para a rede iSCSI. Coloque pelo menos uma porta do lado do host e pelo menos uma porta de cada controlador de array em um segmento de rede e um grupo idêntico de portas do lado do host e do lado do array em outro segmento de rede. Sempre que possível, use vários switches Ethernet para fornecer redundância adicional.
 
@@ -74,8 +104,8 @@ NOTE: Muitos switches de rede precisam ser configurados acima de 9.000 bytes par
 
 
 
-[[step-3-configure-array-side-networking-iscsi-vmware]]
-== Etapa 3: Configurar rede do lado da matriz--iSCSI, VMware
+[[step-4-configure-array-side-networking]]
+== Etapa 4: Configurar rede do lado do array
 
 Você usa a GUI do Gerenciador de sistema do SANtricity para configurar a rede iSCSI no lado da matriz.
 
@@ -134,10 +164,10 @@ Para ver todas as configurações de porta, clique no link *Mostrar mais configu
  a| 
 Velocidade da porta ethernet configurada
  a| 
-Selecione a velocidade pretendida. As opções que aparecem na lista suspensa dependem da velocidade máxima que sua rede pode suportar (por exemplo, 10 Gbps).
+Selecione a velocidade desejada. As opções que aparecem na lista suspensa dependem da velocidade máxima que sua rede pode suportar (por exemplo, 25 Gbps).
 
 
-NOTE: As placas de interface de host iSCSI de 25GB GB opcionais disponíveis nos controladores não negociam automaticamente as velocidades. Você deve definir a velocidade de cada porta para 10 GB ou 25 GB. Todas as portas devem ser definidas para a mesma velocidade.
+NOTE: As placas de interface de host iSCSI disponíveis nos controladores não negociam velocidades automaticamente. Você deve definir a velocidade de cada porta para 1 Gb, 10 Gb ou 25 Gb. Todas as portas devem ser configuradas com a mesma velocidade.
 
 
 
@@ -162,7 +192,7 @@ Tamanho MTU (disponível clicando em *Mostrar mais configurações de porta*.)
  a| 
 Se necessário, introduza um novo tamanho em bytes para a unidade máxima de transmissão (MTU).
 
-O tamanho padrão da unidade máxima de transmissão (MTU) é de 1500 bytes por quadro. Tem de introduzir um valor entre 1500 e 9000.
+O tamanho padrão da Unidade Máxima de Transmissão (MTU) é de 1500 bytes por quadro. Você deve inserir um valor entre 1500 e 9000. Para habilitar quadros jumbo, defina esse valor para 9000 bytes.
 
 
 
@@ -200,34 +230,57 @@ Selecione esta opção e, em seguida, introduza um endereço estático nos campo
 
 
 
-[[step-4-configure-host-side-networking-iscsi]]
-== Etapa 4: Configurar rede do lado do host--iSCSI
+[[step-5-configure-host-side-networking]]
+== Etapa 5: Configurar a rede do lado do host
 
 A configuração de rede iSCSI no lado do host permite que o iniciador iSCSI VMware estabeleça uma sessão com o array.
 
 .Sobre esta tarefa
-Neste método expresso de configuração de rede iSCSI no lado do host, você permite que o host ESXi carregue tráfego iSCSI em quatro caminhos redundantes para o armazenamento.
+Esta tarefa configura a rede iSCSI no lado do host e estabelece sessões iSCSI com o array de storage.
 
 Depois de concluir esta tarefa, o host é configurado com um único vSwitch contendo ambas as portas VMkernel e vmnics.
 
-Para obter informações adicionais sobre como configurar redes iSCSI para VMware, consulte o https://docs.vmware.com/en/VMware-vSphere/index.html["Documentação do VMware vSphere"^] para sua versão do vSphere.
+Para obter informações adicionais sobre como configurar a rede iSCSI para VMware, consulte  https://techdocs.broadcom.com/us/en/vmware-cis/vsphere/vsphere/9-1/vsphere-storage/configuring-iscsi-and-iser-adapters-and-storage-with-esxi.html["Configurando adaptadores iSCSI e storage com o ESXi"^].
+
+
+NOTE: Anote o Nome Qualificado iSCSI (IQN) durante este processo a partir do adaptador iSCSI de software adicionado. Isso será necessário posteriormente ao configurar os mapeamentos de host.
+
+.Antes de começar
+Certifique-se de que tem o seguinte:
+
+* Switch(es) configurados que serão usados para transportar o tráfego de storage iSCSI.
+* Envio e recebimento de controle de fluxo de hardware completamente habilitados no switch.
+* Controle de fluxo prioritário desativado no switch.
+* Configuração iSCSI do lado do array concluída.
+* Pelo menos duas portas NIC do host para tráfego iSCSI.
+
 
 .Passos
-. Configure os switches que serão usados para transportar tráfego de armazenamento iSCSI.
-. Ative o controle de fluxo de hardware Enviar e receber *de ponta a ponta*.
-. Desativar o controle de fluxo de prioridade.
-. Conclua a configuração iSCSI do lado da matriz.
-. Use duas portas NIC para tráfego iSCSI.
-. Use o cliente vSphere ou o cliente da Web vSphere para executar a configuração do lado do host.
+. Use o vSphere Client ou o vSphere Web Client para realizar a configuração do lado do host. Consulte  https://techdocs.broadcom.com/us/en/vmware-cis/vsphere/vsphere/9-1/vsphere-storage/configuring-iscsi-and-iser-adapters-and-storage-with-esxi.html["Configurando adaptadores iSCSI e storage com o ESXi"^].
 +
 As interfaces variam em funcionalidade e o fluxo de trabalho exato varia.
 
+. Configure a rede para iSCSI. Consulte  https://techdocs.broadcom.com/us/en/vmware-cis/vsphere/vsphere/9-1/vsphere-storage/configuring-iscsi-and-iser-adapters-and-storage-with-esxi/setting-up-network-for-iscsi-and-iser-with-esxi.html["Configurando a rede para iSCSI com ESX"^].
++
+.. Não é recomendável usar a vinculação de portas. A vinculação de portas iSCSI da VMware é um recurso que força todas as portas VMkernel vinculadas a se conectarem a todas as portas de destino acessíveis nos segmentos de rede configurados. Ela foi projetada para ser usada com arrays que apresentam um único endereço de rede para o destino iSCSI. NetApp recomenda que a vinculação de portas iSCSI não seja usada. Para obter mais informações, consulte  https://techdocs.broadcom.com/us/en/vmware-cis/vsphere/vsphere/9-1/vsphere-storage/configuring-iscsi-and-iser-adapters-and-storage-with-esxi/setting-up-network-for-iscsi-and-iser-with-esxi/best-practices-for-configuring-networking-with-software-iscsi.html["Melhores práticas para usar o vínculo de porta iSCSI por software no ESX/ESXi"^]. Se o host ESXi estiver conectado ao storage de outro fornecedor, NetApp recomenda que você use portas VMkernel iSCSI separadas para evitar qualquer conflito com a vinculação de portas.
+.. NetApp recomenda o mapeamento de vários adaptadores em um vSphere Standard Switch, utilizando adaptadores ativos/em espera para redundância. Consulte  https://techdocs.broadcom.com/us/en/vmware-cis/vsphere/vsphere/9-1/vsphere-storage/configuring-iscsi-and-iser-adapters-and-storage-with-esxi/setting-up-network-for-iscsi-and-iser-with-esxi/multiple-network-adapters-in-iscsi-or-iser-configuration.html["Vários adaptadores de rede na configuração iSCSI"^].
+.. Habilite Jumbo Frames com iSCSI, se desejar. Consulte  https://techdocs.broadcom.com/us/en/vmware-cis/vsphere/vsphere/9-1/vsphere-storage/configuring-iscsi-and-iser-adapters-and-storage-with-esxi/using-jumbo-frames-with-iscsi-and-iser.html["Utilizando Jumbo Frames com iSCSI no ESX"^].
+
+
+. Adicione um adaptador iSCSI por software. Consulte  https://techdocs.broadcom.com/us/en/vmware-cis/vsphere/vsphere/9-1/vsphere-storage/configuring-iscsi-and-iser-adapters-and-storage-with-esxi/configure-the-software-iscsi-adapter-with-esxi/add-or-remove-the-software-iscsi-adapter.html["Adicionar ou remover o adaptador iSCSI de software"^].
++
+.. Anote o IQN do host e adicione um alias iSCSI (opcional). Consulte  https://techdocs.broadcom.com/us/en/vmware-cis/vsphere/vsphere/9-1/vsphere-storage/configuring-iscsi-and-iser-adapters-and-storage-with-esxi/modify-general-properties-for-iscsi-and-iser-adapters-on-esxi-hosts.html["Modificar propriedades gerais do iSCSI em hosts ESX"^].
+.. Configure os parâmetros CHAP, caso esteja usando segredos CHAP. Consulte  https://techdocs.broadcom.com/us/en/vmware-cis/vsphere/vsphere/9-1/vsphere-storage/configuring-iscsi-and-iser-adapters-and-storage-with-esxi/configuring-chap-parameters-for-iscsi-or-iser-storage-adapters-with-esxi.html["Configurando os parâmetros CHAP para adaptadores iSCSI em um host ESX"^].
 
 
 
 
-[[step-5-verify-ip-network-connections-iscsi-vmware]]
-== Etapa 5: Verificar conexões de rede IP - iSCSI, VMware
+Após a adição bem-sucedida, as conexões podem ser visualizadas na seção Adaptadores de Armazenamento no vSphere Client. Caso a adição não seja bem-sucedida, pule para a etapa 6 para verificar a comunicação com as portas e corrigir quaisquer configurações de conexão.
+
+
+
+[[step-6-verify-ip-network-connections]]
+== Etapa 6: verificar conexões de rede IP
 
 Você verifica as conexões de rede IP (Internet Protocol) usando testes de ping para garantir que o host e o array possam se comunicar.
 
@@ -260,7 +313,7 @@ Reply from 192.0.2.8: bytes=8972 time=2ms TTL=64
 Reply from 192.0.2.8: bytes=8972 time=2ms TTL=64
 Ping statistics for 192.0.2.8:
   Packets: Sent = 4, Received = 4, Lost = 0 (0% loss),
-Approximate round trip times in milli-seconds:
+Approximate round trip times in milliseconds:
   Minimum = 2ms, Maximum = 2ms, Average = 2ms
 ----
 
@@ -270,61 +323,5 @@ Approximate round trip times in milli-seconds:
 
 NOTE: Se o comando falhar com a mensagem `sendto() failed (Message too long)`, verifique o tamanho da MTU (suporte a quadros jumbo) para as interfaces Ethernet no servidor host, no controlador de armazenamento e nas portas do switch.
 
-. Regresse ao procedimento de configuração iSCSI para concluir a deteção de destino.
+. Se a descoberta na etapa 5 não for bem-sucedida, retorne ao procedimento de configuração de rede do lado do host iSCSI para concluir a descoberta da sessão.
 
-
-
-
-[[step-6-record-your-configuration]]
-== Passo 6: Registre sua configuração
-
-Pode gerar e imprimir um PDF desta página e, em seguida, utilizar a seguinte folha de cálculo para registar as informações de configuração de armazenamento específicas do protocolo. Você precisa dessas informações para executar tarefas de provisionamento.
-
-
-
-[[recommended-configuration]]
-=== Configuração recomendada
-
-As configurações recomendadas consistem em duas portas de iniciador e quatro portas de destino com uma ou mais VLANs.
-
-image::../media/50001_01_conf-vmw.gif[Identificador de porta iSCSI]
-
-
-
-[[target-iqn]]
-=== Objetivo IQN
-
-|===
-| Legenda n.º | Conexão da porta de destino | IQN 
-
-
- a| 
-2
- a| 
-Porta de destino
- a| 
-
-|===
-
-
-[[mapping-host-name]]
-=== Mapeando o nome do host
-
-|===
-| Legenda n.º | Informações do host | Nome e tipo 
-
-
- a| 
-1
- a| 
-Mapeando o nome do host
- a| 
-
-
-
- a| 
- a| 
-Tipo de SO de host
- a| 
-
-|===

@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: EF600, EF300, EF600C, EF300C, replace fan, fan fail 
 summary: Substitua um ventilador em um EF300 ou EF600. 
 ---
-= Substitua a ventoinha - EF300 ou EF600
+= Substitua a ventoinha em um sistema de storage EF300 ou EF600
 :allow-uri-read: 
 :experimental: 
 :icons: font
@@ -56,7 +56,7 @@ O arquivo é salvo na pasta Downloads do seu navegador com o nome *configuration
 
 . Se o controlador ainda não estiver offline, coloque-o offline agora usando o Gerenciador de sistema do SANtricity.
 +
-.. Selecione *hardware*.
+.. Selecione o menu: Hardware [Drives].
 .. Se o gráfico mostrar as unidades, selecione *Mostrar parte traseira da prateleira* para mostrar os controladores.
 .. Selecione o controlador que pretende colocar offline.
 .. No menu de contexto, selecione *colocar offline* e confirme que deseja executar a operação.
@@ -169,8 +169,7 @@ Coloque o controlador on-line, colete dados de suporte e retome as operações.
 
 . Coloque o controlador online.
 +
-.. No System Manager, navegue até a página *hardware*.
-.. Selecione *Mostrar parte posterior do controlador*.
+.. No SANtricity System Manager, selecione menu:Hardware[Controladores e componentes].
 .. Selecione o controlador com o ventilador substituído.
 .. Selecione *Place on-line* na lista suspensa.
 

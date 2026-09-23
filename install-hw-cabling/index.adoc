@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: cabling, cables, E-Series, eseries, E2800, E5700, EF300, EF600, DE212C, DE224C, DE460C 
 summary: Faça o cabeamento de um host diretamente para um controlador ou use switches. 
 ---
-= Cabeamento do seu sistema de storage - E-Series
+= Saiba mais sobre cabeamento para sistemas de storage E-Series
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
@@ -75,4 +75,4 @@ E2760, E5660
 DE460C
 
 |===
-Para obter informações sobre a cablagem necessária para suportar as funcionalidades de espelhamento, consulte o  https://www.netapp.com/pdf.html?item=/media/17133-tr4656.pdf["Descrições e Guia de implantação dos recursos de espelhamento síncrono e assíncrono"^].
+Para obter informações sobre a cablagem necessária para suportar as funcionalidades de espelhamento, consulte o  https://www.netapp.com/pdf.html?item=/media/19405-tr-4839.pdf["Descrições e Guia de implantação dos recursos de espelhamento síncrono e assíncrono"^].

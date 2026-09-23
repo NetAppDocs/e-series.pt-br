@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: replace EF300 HIC, replace EF600 HIC, host interface card failed, HIC failure 
 summary: 'Substitua uma placa de interface de host (HIC) EF300 ou EF600 com falha.' 
 ---
-= Substitua a placa de interface do host (HIC) com falha - EF300 ou EF600
+= Substitua um HIC com defeito em um sistema de storage EF300 ou EF600
 :allow-uri-read: 
 :experimental: 
 :icons: font
@@ -16,6 +16,9 @@ Siga este procedimento para substituir uma placa de interface de host (HIC) com 
 
 .Sobre esta tarefa
 Ao substituir um HIC com defeito, é necessário desconectar um controlador para colocar o sistema em um estado não redundante, substituir o HIC e reconectar o controlador.
+
+
+NOTE: Os arrays de storage EF300 e EF600 não precisam ser desligados ao substituir um HIC do mesmo tipo de protocolo (por exemplo, substituir um HIC Fibre Channel por outro HIC Fibre Channel).
 
 .Antes de começar
 * Revisão link:hics-overview-supertask-concept.html["Requisitos para atualizações HIC EF300 ou EF600"].
@@ -262,7 +265,7 @@ Conforme necessário, instale a versão mais recente.
 
 . Verifique se todos os volumes foram devolvidos ao proprietário preferido.
 +
-.. Selecione menu:armazenamento[volumes]. Na página *todos os volumes*, verifique se os volumes são distribuídos aos seus proprietários preferidos. Selecione menu:mais[alterar propriedade] para ver os proprietários de volume.
+.. Selecione o menu: Storage [Volumes]. Na página *All Volumes*, verifique se os volumes estão distribuídos aos seus proprietários preferenciais. Selecione o *ícone de reticências* > *Alterar propriedade* para visualizar os proprietários dos volumes.
 .. Se todos os volumes forem propriedade do proprietário preferido, avance para o passo 6.
 .. Se nenhum dos volumes for retornado, você deverá retornar manualmente os volumes. Vá para menu:mais[redistribuir volumes].
 .. Se apenas alguns dos volumes forem devolvidos aos seus proprietários preferidos após a distribuição automática ou a distribuição manual, você deverá verificar o Recovery Guru para problemas de conetividade do host.

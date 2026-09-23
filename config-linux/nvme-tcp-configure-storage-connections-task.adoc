@@ -1,0 +1,140 @@
+---
+permalink: config-linux/nvme-tcp-configure-storage-connections-task.html 
+sidebar: sidebar 
+keywords: NVMe over TCP, express linux configuration, software configuration, linux host, E2800, E5700, EF300, EF600, E-Series, eseries 
+summary: Se o seu controlador incluir uma conexão para NVMe sobre TCP, você pode configurar as configurações da porta NVMe na página Hardware ou na página Sistema no SANtricity System Manager. 
+---
+= Configure as conexões NVMe over TCP do storage E-Series para hosts Linux
+:allow-uri-read: 
+:experimental: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Se o seu controlador incluir uma conexão para NVMe sobre TCP, você pode configurar as configurações da porta NVMe na página Hardware ou na página Sistema no SANtricity System Manager.
+
+.Antes de começar
+Certifique-se de que tem o seguinte:
+
+* Uma porta de host NVMe sobre TCP no seu controlador; caso contrário, as configurações de NVMe sobre TCP não estarão disponíveis no System Manager.
+* O endereço IP da conexão do host.
+
+
+.Sobre esta tarefa
+Você pode acessar a configuração NVMe over TCP na página *Hardware* ou no menu:Settings[System]. Esta tarefa descreve como configurar as portas na página Hardware.
+
+
+NOTE: As configurações e funções do NVMe over TCP aparecem somente se o controlador do seu array de storage incluir uma porta NVMe over TCP.
+
+.Passos
+. No painel esquerdo da interface do System Manager, selecione *Hardware*.
+. Clique no controlador com a porta NVMe sobre TCP que você deseja configurar.
++
+É apresentado o menu de contexto do controlador.
+
+. Selecione *Configurar NVMe sobre portas TCP*.
++
+A caixa de diálogo *Configurar NVMe sobre portas TCP* é aberta.
+
+. Na lista suspensa, selecione a porta que deseja configurar e clique em *Avançar*.
+. Selecione as definições de configuração da porta que pretende utilizar e, em seguida, clique em *seguinte*.
++
+Para ver todas as configurações de porta, clique no link *Mostrar mais configurações de porta* à direita da caixa de diálogo.
+
++
+|===
+| Definição da porta | Descrição 
+
+
+ a| 
+Velocidade da porta ethernet configurada
+ a| 
+Selecione a velocidade desejada. As opções que aparecem na lista suspensa dependem da velocidade máxima que sua rede pode suportar (por exemplo, 10 Gbps). Os valores possíveis incluem:
+
+** Negociação automática
+** 10 Gbps
+** 25 Gbps
+** 40 Gbps
+** 50 Gbps
+** 100 Gbps
+** 200 Gbps
+
+
+
+NOTE: A velocidade da porta NVMe over TCP configurada deve corresponder à capacidade de velocidade do SFP na porta selecionada.
+
+
+
+ a| 
+Modo de correção de erros de encaminhamento (FEC) configurado
+ a| 
+Selecione o modo FEC desejado. As opções que aparecem na lista suspensa dependem da velocidade selecionada no momento e listam apenas as opções compatíveis com essa velocidade. Nem todos os modos FEC estão disponíveis para todas as velocidades. Os valores possíveis incluem:
+
+** Nenhum
+** Reed-Solomon
+** Código de incêndio
+** Automático
+
+
+
+
+ a| 
+Ativar IPv4 e/ou ativar IPv6
+ a| 
+Selecione uma ou ambas as opções para ativar o suporte para redes IPv4G e IPv6G.
+
+
+
+ a| 
+Tamanho MTU (disponível clicando em *Mostrar mais configurações de porta*.)
+ a| 
+Se necessário, introduza um novo tamanho em bytes para a unidade máxima de transmissão (MTU). O tamanho padrão da MTU é de 1500 bytes por quadro. Tem de introduzir um valor entre 1500 e 9000.
+
+|===
++
+Se você selecionou *Ativar IPv4*, uma caixa de diálogo será aberta para selecionar IPv4 configurações depois de clicar em *Avançar*. Se você selecionou *Ativar IPv6*, uma caixa de diálogo será aberta para selecionar IPv6 configurações depois de clicar em *Avançar*. Se você selecionou ambas as opções, a caixa de diálogo para configurações IPv4 será aberta primeiro e, depois de clicar em *Avançar*, a caixa de diálogo para configurações IPv6 será aberta.
+
+. Configure as definições IPv4 e/ou IPv6, automática ou manualmente. Para ver todas as configurações de porta, clique no link *Mostrar mais configurações* à direita da caixa de diálogo.
++
+|===
+| Definição da porta | Descrição 
+
+
+ a| 
+Obter automaticamente a configuração do servidor DHCP
+ a| 
+Selecione esta opção para obter a configuração automaticamente.
+
+
+
+ a| 
+Especifique manualmente a configuração estática
+ a| 
+Selecione esta opção e, em seguida, introduza um endereço estático nos campos. Para IPv4, inclua a máscara de sub-rede e o gateway. Para IPv6, inclua os endereços IP roteáveis e o endereço IP do roteador.
+
+
+NOTE: Se houver apenas um endereço IP roteável, defina o endereço restante para 0:0:0:0:0:0:0:0.
+
+
+
+ a| 
+Ative o suporte a VLAN (disponível clicando em *Mostrar mais configurações*.)
+ a| 
+
+NOTE: Essa opção está disponível apenas em um ambiente iSCSI. Ela não está disponível em um ambiente NVMe sobre TCP.
+
+
+
+ a| 
+Ativar prioridade ethernet (disponível clicando em *Mostrar mais definições*.)
+ a| 
+
+NOTE: Essa opção está disponível apenas em um ambiente iSCSI. Ela não está disponível em um ambiente NVMe sobre TCP.
+
+|===
+. Clique em *Finish*.
+
+
+.O que se segue?
+Após configurar as definições da porta NVMe sobre TCP, link:nvme-tcp-discover-connect-storage-host-task.html["Descubra e conecte o armazenamento no host"].

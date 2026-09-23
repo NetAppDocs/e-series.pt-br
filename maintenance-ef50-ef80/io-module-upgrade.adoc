@@ -2,16 +2,16 @@
 permalink: maintenance-ef50-ef80/io-module-upgrade.html 
 sidebar: sidebar 
 keywords: ef50, ef80, upgrade io module, upgrade hic, upgrade host interface card 
-summary: Você pode atualizar os módulos de E/S em seu sistema de storage EF50 ou EF80 para aumentar o número de portas de host, melhorando a conectividade de rede e expandindo a capacidade do seu sistema de lidar com o tráfego de dados. 
+summary: Você pode atualizar os módulos de E/S em seu sistema de storage EF50 ou EF80 para aumentar o número de portas de host para melhorar a conectividade de rede, expandir a capacidade do seu sistema de lidar com tráfego de dados e conectar gabinetes de expansão SAS. 
 ---
-= Atualizar módulos de E/S - EF50 e EF80
+= Atualize os módulos de E/S em um sistema de storage EF50 ou EF80
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 
 
 [role="lead"]
-Você pode atualizar os módulos de E/S em seu sistema de storage EF50 ou EF80 para aumentar o número de portas de host, melhorando a conectividade de rede e expandindo a capacidade do seu sistema de lidar com o tráfego de dados.
+Você pode atualizar os módulos de E/S em seu sistema de storage EF50 ou EF80 para aumentar o número de portas de host para melhorar a conectividade de rede, expandir a capacidade do seu sistema de lidar com tráfego de dados e conectar gabinetes de expansão SAS.
 
 .Sobre esta tarefa
 * O termo _módulo de E/S_ é usado em vez de placas de interface de host (HICs) neste procedimento.
@@ -32,24 +32,25 @@ Não é necessário remover os controladores do chassi porque os módulos de E/S
 [[step-1-prepare-to-upgrade-io-modules]]
 == Etapa 1: prepare-se para atualizar os módulos de E/S
 
-Prepare-se para atualizar os módulos de E/S agendando uma janela de manutenção de inatividade, reunindo as ferramentas e equipamentos necessários e fazendo backup do banco de dados de configuração do sistema de storage.
+Prepare-se para atualizar os módulos de E/S agendando uma janela de manutenção, atualizando o firmware, reunindo as ferramentas e equipamentos necessários e fazendo backup do banco de dados de configuração do sistema de storage.
 
 .Passos
 . Agende uma janela de manutenção de inatividade para este procedimento. Você não poderá acessar dados no sistema de storage até que tenha concluído este procedimento com sucesso. Como ambos os controladores devem ter a mesma configuração de módulo de E/S quando estiverem ligados, a energia deve estar desligada ao atualizar os módulos de E/S.
+. Atualize o firmware para a versão mais recente. Para atualizar o firmware, siga as instruções em link:../upgrade-santricity/index.html["Atualizando o SANtricity os"^]
 . Certifique-se de que tem o seguinte:
 +
 ** Os novos módulos de E/S para os quais você está atualizando.
 +
-Certifique-se de que os módulos de E/S para os quais você está atualizando sejam compatíveis com seu sistema de storage, que você tenha o mesmo tipo e número de módulos de E/S para cada controlador e que você entenda a prioridade do slot (o novo módulo de E/S deve ser instalado no mesmo slot em cada controlador).
+Certifique-se de que os módulos de E/S para os quais você está atualizando sejam compatíveis com seu sistema de storage e versão do SANtricity, que você tenha o mesmo tipo e número de módulos de E/S para cada controlador e que você entenda a prioridade dos slots (o novo módulo de E/S deve ser instalado no mesmo slot em cada controlador).
+
++
+Você pode confirmar os módulos de E/S suportados e a prioridade de slots para o seu sistema de storage em  https://hwu.netapp.com["NetApp Hardware Universe"^].
 
 +
 
 CAUTION: *Possível perda de acesso aos dados* -- A presença de módulos de E/S incompatíveis ou não correspondentes faz com que os controladores entrem em bloqueio quando a alimentação é ligada.
 
-+
-Caso necessário, você pode confirmar os módulos de E/S suportados e a prioridade de slots para o seu sistema de storage em https://hwu.netapp.com["NetApp Hardware Universe"^].
-
-** Cabos para conectar os novos módulos de I/O à sua rede.
+** Cabos para conectar os novos módulos de E/S à sua rede ou aos compartimentos de expansão SAS.
 ** Uma pulseira ESD ou você tomou outras precauções antiestáticas.
 ** Uma superfície de trabalho plana e livre de estática.
 ** Uma estação de gerenciamento com um navegador que pode acessar SANtricity System Manager para os controladores.
@@ -151,7 +152,9 @@ image::../media/icon_round_1.png[Chamada número 1]
 Desconecte os cabos dos módulos de E/S que deseja atualizar (a menos que tenha módulos de bloqueio de E/S), substitua os módulos de E/S ou os módulos de bloqueio de E/S pelos novos módulos de E/S e, em seguida, conecte os novos módulos de E/S.
 
 .Sobre esta tarefa
-Você começa com um controlador e, em seguida, repete os passos para o outro controlador.
+* Você começa com um controlador e, em seguida, repete os passos para o outro controlador.
+* A ilustração mostra a remoção de um módulo de E/S do slot 2. Dependendo do tipo de módulo de E/S para o qual você está atualizando, o slot pode ser diferente.
+
 
 .Passos
 . Se você ainda não está aterrado, aterre-se adequadamente.
@@ -195,9 +198,11 @@ Você pode usar a aba à esquerda e o parafuso de aperto manual para empurrar o 
 .. Gire o parafuso de aperto manual no sentido horário para apertar.
 
 
-. Conecte o módulo de E/S à rede do host.
+. Conecte o módulo de E/S à rede do host ou ao compartimento de expansão SAS.
 +
-Você pode usar a seção link:../install-hw-ef50-ef80/install-cable.html["Conecte o hardware"^] do conteúdo de instalação e configuração do sistema para o cabeamento de rede do host.
+** Para o cabeamento de rede do host, você pode usar a link:../install-hw-ef50-ef80/install-cable.html["Conecte o hardware"^] seção do conteúdo de instalação e configuração do sistema para cabeamento de rede do host.
+** Para a fiação do compartimento de expansão SAS, você pode usar o link:../install-hw-cabling/hotadd-drive-shelf-task.html["Adicione a quente um compartimento para unidades de disco em um sistema de storage E-Series"^] procedimento.
+
 
 . Repita estas etapas para atualizar um módulo de E/S no outro controlador.
 
@@ -207,7 +212,7 @@ Você pode usar a seção link:../install-hw-ef50-ef80/install-cable.html["Conec
 [[step-4-power-on-both-controllers]]
 == Passo 4: ligue ambos os controladores
 
-Ligue ambos os controladores.
+Ligue ambos os controladores, verifique se a comunicação entre os controladores foi restabelecida e, em seguida, confirme se os controladores estão funcionando corretamente.
 
 .Passos
 . Conecte o cabo de alimentação em ambos os controladores.
@@ -297,3 +302,6 @@ O arquivo é salvo na pasta Downloads do seu navegador com o nome *support-data.
 
 . Se você precisar verificar e alterar o protocolo do módulo de E/S do host, use o procedimento xref:io-module-change-protocol.html[Altere o protocolo do módulo de E/S do host para um EF50 ou EF80].
 
+
+.O que vem a seguir
+O processo de atualização dos módulos de E/S do seu sistema de storage foi concluído. Você pode retomar as operações normais.

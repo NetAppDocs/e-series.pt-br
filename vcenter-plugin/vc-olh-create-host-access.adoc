@@ -38,6 +38,7 @@ A página Configurar hosts será exibida.
 +
 A caixa de diálogo criar host é exibida.
 
+. Clique em *+Adicionar Porta do Host* para acessar o campo Portas do Host e adicionar os identificadores de porta do host. Você pode adicionar um ou mais identificadores de porta do host para associar ao host.
 . Selecione as configurações para o host, conforme apropriado.
 +
 .Detalhes do campo

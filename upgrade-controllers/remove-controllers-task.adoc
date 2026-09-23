@@ -27,6 +27,9 @@ Para obter informações sobre como remover controladores dos sistemas de storag
 --
 .Outros modelos de controladoras E-Series
 --
+[discrete]
+=== Modelos de controlador E4000, E2800 e E5700
+
 Remova o recipiente do controlador para que você possa atualizá-lo com um novo. Você deve desconetar todos os cabos e remover quaisquer transcetores SFP. Em seguida, você pode deslizar o recipiente do controlador para fora da prateleira do controlador.
 
 .Antes de começar
@@ -73,6 +76,39 @@ image:../media/28_dwg_e2824_remove_controller_canister_upg-hw.gif["Remova o reci
 
 . Coloque o recipiente antigo do controlador numa superfície plana e livre de estática perto da bandeja de unidades e controlador com as alavancas de libertação para cima. Posicione o recipiente do controlador de forma a que possa aceder à tampa superior.
 . (Condicional) se você estiver atualizando controladores em uma bandeja de unidades e controlador duplex, repita todas as etapas para remover o segundo recipiente do controlador.
+. Se pretender utilizar a bateria do controlador antigo no novo controlador, vá para a parte seguinte da secção; caso contrário, vá link:install-controllers-task.html["Instale novos controladores"]para .
+
+
+[discrete]
+=== Modelos de controladora EF600 e EF300
+
+Remova o compartimento do controlador para que você possa substituí-lo por um novo.
+
+.Passos
+. Coloque uma pulseira antiestática ou tome outras precauções antiestáticas.
+. Identifique cada cabo que esteja conetado ao recipiente do controlador.
+. Desligue todos os cabos do recipiente do controlador.
++
+
+CAUTION: Para evitar um desempenho degradado, não torça, dobre, aperte ou pise nos cabos.
+
+. Se o recipiente do controlador tiver um HIC que usa transcetores SFP, remova os SFPs.
++
+Como você precisa remover o HIC do antigo compartimento do controlador, você também deve remover todos os SFPs das portas do HIC. Ao reconectar os cabos, você pode transferir esses SFPs para o novo compartimento do controlador.
+
+. Aperte as alças em ambos os lados do controlador e puxe para trás até que ele se solte da prateleira.
++
+image::../media/remove_controller_5.png[Aperte as alças para remover o controlador]
+
+. Utilizando as duas mãos e as pegas, deslize o recipiente do controlador para fora da prateleira. Quando a parte frontal do controlador estiver livre do compartimento, use duas mãos para puxá-lo completamente.
++
+
+CAUTION: Utilize sempre duas mãos para suportar o peso de um recipiente do controlador.
+
++
+image::../media/remove_controller_6.png[Use duas mãos para suportar o peso do controlador enquanto você remove]
+
+. Coloque o recipiente do controlador numa superfície plana e sem estática.
 . Se pretender utilizar a bateria do controlador antigo no novo controlador, vá para a parte seguinte da secção; caso contrário, vá link:install-controllers-task.html["Instale novos controladores"]para .
 
 

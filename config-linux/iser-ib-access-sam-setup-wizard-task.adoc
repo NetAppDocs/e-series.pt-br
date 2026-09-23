@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: access System Manager Linux, express linux configuration, software configuration, linux host, E2800, E5700, EF300, EF600, E-Series, eseries 
 summary: Você usa o assistente de configuração no Gerenciador de sistema do SANtricity para configurar sua matriz de armazenamento. 
 ---
-= Configurar seu storage usando o SANtricity System Manager - Linux (iSER over InfiniBand)
+= Configure o storage E-Series usando o SANtricity System Manager para hosts Linux iSER
 :allow-uri-read: 
 :experimental: 
 :icons: font

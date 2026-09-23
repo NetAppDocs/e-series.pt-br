@@ -3,27 +3,46 @@
 
 
 .Antes de começar
-Devido à complexidade deste procedimento, recomenda-se o seguinte:
+* Devido à complexidade deste procedimento, leia todas as etapas antes de iniciar o procedimento.
++
+Ao adicionar um compartimento de expansão a um ou mais compartimentos existentes, para manter a integridade do sistema durante o procedimento, você deve sempre manter um caminho ativo. Você deve seguir o procedimento exatamente na ordem apresentada.
 
-* Leia todos os passos antes de iniciar o procedimento.
++
+Para cabear o novo compartimento, você deve refazer os cabos das conexões do controlador para o compartimento do lado A (compartimento IOM A) e adicionar conexões entre compartimentos, verificar se o caminho do lado A está ativo, refazer os cabos das conexões do controlador para o compartimento do lado B (compartimento IOMB) e adicionar conexões entre compartimentos, e então verificar se a redundância foi restabelecida.
+
++
+
+NOTE: Se você estiver instalando um compartimento de expansão que já foi instalado anteriormente em um sistema de storage, este procedimento requer etapas adicionais que você deve seguir.
+
 * Certifique-se de que a adição de um compartimento de unidade é o procedimento que você precisa.
+* Verifique se o seu sistema de storage está executando uma versão do SANtricity que suporta compartimentos de expansão SAS e se você não excede o número máximo de compartimentos SAS suportados.
++
+Para obter informações sobre as versões suportadas do SANtricity e o número máximo de compartimentos de expansão SAS suportados para o seu sistema de storage, consulte o NetApp Hardware Universe: https://hwu.netapp.com/Controller/Index?platformTypeId=2357027["Hardware Universe"^].
+
++
+
+NOTE: Os sistemas de storage EF50 e EF80 que executam o SANtricity 12.10 ou posterior suportam compartimentos de expansão SAS.
+
+* Seu sistema de storage deve ter portas SAS disponíveis. Isso significa que os módulos de E/S SAS já devem estar instalados. Se não estiverem, use o procedimento aplicável para instalar os módulos de E/S SAS e, em seguida, retorne a este procedimento para adicionar o compartimento de expansão a quente.
++
+** Para os sistemas de storage EF50 e EF80, use o link:../maintenance-ef50-ef80/io-module-upgrade.html["Atualizar módulos de E/S"^] procedimento.
+** Para sistemas de storage mais antigos, utilize o procedimento _SAS expansion cards_ para o modelo do seu sistema de storage na seção _Maintain systems_.
+
+
 
 
 .Sobre esta tarefa
-Este procedimento se aplica à adição rápida de um compartimento de unidades DE212C, DE224C ou DE460C a um compartimento de controladora E2800, E2800B, EF280, EF300, E5700B, EF570, E5700, EF600, EF300C, EF600C ou E4000.
+* Este procedimento se aplica a um compartimento de controlador E2800, E2800B, EF280, E5700, E5700B, EF570, EF300, EF600, EF300C, EF600C, E4000, EF50 ou EF80.
++
 
-Este procedimento se aplica às prateleiras de unidades IOM12, IOM12B e IOM12C.
+NOTE: Se você estiver instalando cabos em um compartimento de controladora mais antigo, consulte  https://mysupport.netapp.com/ecm/ecm_download_file/ECMLP2859057["Adição de gavetas de unidade IOM a uma gaveta de controladora E27XX, E56XX ou EF560 existente"^].
 
+* Este procedimento aplica-se à adição a quente de compartimentos de unidades DE212C, DE224C ou DE460C com módulos IOM12, IOM12B ou IOM12C.
++
 
 NOTE: Os módulos IOM12C são suportados somente no SANtricity OS 11.90R3 em diante. Certifique-se de que o firmware do controlador foi atualizado antes de instalar ou atualizar para um IOM12C.
 
 
-NOTE: Esse procedimento é para hot-swaps ou substituições de IOM de gaveta semelhantes. Isto significa que só pode substituir um módulo IOM12 por outro módulo IOM12 ou substituir um módulo IOM12C por outro módulo IOM12C. (Sua prateleira pode ter dois módulos IOM12 ou ter dois módulos IOM12C.)
-
-Se você estiver fazendo o cabeamento de uma gaveta de controladora mais antiga para um DE212C, DE224C ou DE460, https://mysupport.netapp.com/ecm/ecm_download_file/ECMLP2859057["Adição de gavetas de unidade IOM a uma gaveta de controladora E27XX, E56XX ou EF560 existente"^] consulte .
-
-
-NOTE: Para manter a integridade do sistema, você deve seguir o procedimento exatamente na ordem apresentada.
 
 
 
@@ -103,13 +122,121 @@ NOTE: Consulte as instruções de instalação do seu modelo para obter o proced
 
 
 
-[[step-3-cable-your-system]]
-== Passo 3: Faça o cabo do seu sistema
+[[step-3-cable-the-drive-shelf]]
+== Passo 3: Conecte o cabo ao compartimento de expansão
 
-Se você estiver fazendo o cabeamento de uma gaveta de controladora mais antiga para um DE212C, DE224C ou DE460, https://mysupport.netapp.com/ecm/ecm_download_file/ECMLP2859057["Adição de gavetas de unidade IOM a uma gaveta de controladora E27XX, E56XX ou EF560 existente"^] consulte .
+Para conectar o compartimento de expansão ao seu sistema de storage, você conecta cada controlador de forma que eles tenham um caminho do lado A (IOMA) e um caminho do lado B (IOMB) para o único compartimento de expansão ou para a cadeia de compartimentos de expansão (conforme aplicável). E se você tiver uma cadeia de compartimentos de expansão, você conecta os compartimentos de expansão entre si (conexões entre compartimentos) através do caminho do lado A e do caminho do lado B.
+
+Você sempre conecta os cabos dos controladores e de um ou mais compartimentos de forma que haja duas conexões de cabo para o caminho do lado A (IOMA) e para o caminho do lado B (IOMB), conforme mostrado nas ilustrações de cabeamento.
 
 [role="tabbed-block"]
 ====
+.Conecte o compartimento de unidades para o EF50 ou o EF80
+--
+Este procedimento instrui você sobre como adicionar a SAS compartimento de expansão ao seu sistema de storage EF50 ou EF80 e como recabeá-lo para adicionar a quente uma segunda prateleira; no entanto, este procedimento também pode ser aplicado ao adicionar prateleiras adicionais.
+
+.Antes de começar
+Atualizou o firmware para a versão mais recente. Para atualizar o firmware, siga as instruções no link:../upgrade-santricity/index.html["Atualizando o SANtricity os"].
+
+.Sobre esta tarefa
+* Se você estiver adicionando um compartimento de expansão extra a um ou mais compartimentos de expansão já existentes, o seguinte se aplica:
++
+** Este procedimento consiste em refazer a fiação das conexões do controlador ao compartimento, de forma que você sempre mantenha um caminho ativo para o compartimento do controlador.
++
+Para manter um caminho ativo durante este procedimento, você refaz a fiação das conexões do controlador para o compartimento do lado A (shelf IOMA) e adiciona conexões entre compartimentos, verifica se o caminho do lado A está ativo, refaz a fiação das conexões do controlador para o compartimento do lado B (shelf IOMB) e adiciona conexões entre compartimentos e, em seguida, verifica se a redundância foi restabelecida.
+
+** Você sempre move os cabos do último compartimento de expansão da cadeia para os mesmos IOMs e portas IOM no novo compartimento de expansão e, em seguida, conecta o novo compartimento de expansão ao compartimento de expansão anterior, o último da cadeia (conexões entre compartimentos de expansão).
+
+
+* Este procedimento inclui etapas para adicionar até dois compartimentos de expansão com o equipamento em funcionamento. No entanto, se você estiver adicionando um compartimento de expansão adicional, comece pela etapa 2 e aplique as etapas ao compartimento de expansão adicional.
+* Este procedimento mostra controladores com um módulo de E/S SAS no slot 3. Para ver todas as configurações de módulo de E/S SAS suportadas, consulte link:https://hwu.netapp.com["NetApp Hardware Universe"^].
+* Nas ilustrações de cabeamento, as conexões do controlador A são mostradas em azul e as conexões do controlador B em vermelho. As linhas tracejadas (azul e vermelha) representam o cabeamento existente que você está movendo para realizar as etapas de cabeamento. As portas e linhas cinza representam o cabeamento existente que permanece no local enquanto você realiza as etapas de cabeamento.
+
+
+.Passos
+. Para adicionar dinamicamente um compartimento de expansão SAS que seja o compartimento de expansão SAS inicial, conclua as seguintes subetapas; caso contrário, vá para a próxima etapa.
++
+.. Conecte a porta 3a do controlador A à porta 1 do shelf IOMA.
+.. Conecte a porta 3b do controlador A à porta 2 do compartimento IOMA.
+.. Conecte a porta 3c do controlador A à porta 3 do compartimento IOMB.
+.. Conecte a porta 3d do controlador A à porta 4 do compartimento IOMB.
+.. Conecte a porta 3a do controlador B à porta 3 do compartimento IOMA.
+.. Conecte a porta 3b do controlador B à porta 4 do IOMA do compartimento.
+.. Conecte a porta 3c do controlador B à porta 1 do IOMB do compartimento.
+.. Conecte a porta 3d do controlador B à porta 2 do IOMB do compartimento.
++
+Quando você terminar de passar os cabos no compartimento, a fiação deve ficar como a seguir:
+
++
+image::../media/drw_ef50-ef80_1_de460c_cabling_ieops-2981.svg[cable o compartimento inicial]
+
+
+
+. Para adicionar a quente um segundo compartimento de expansão SAS (compartimento 2), recabe as conexões do controlador para o compartimento no lado A e adicione as conexões entre compartimentos no lado A, conforme descrito a seguir; caso contrário, vá para a próxima etapa.
++
+.. Desconecte o cabo da porta IOMA 1 do compartimento 1 e reconecte-o à porta IOMA 1 do compartimento 2.
+.. Desconecte o cabo da porta IOMA 2 do compartimento 1 e reconecte-o à porta IOMA 2 do compartimento 2.
+.. Conecte a porta IOMA 1 do compartimento 1 à porta IOMA 4 do compartimento 2.
+.. Conecte a porta IOMA 2 do compartimento 1 à porta IOMA 3 do compartimento 2.
++
+Quando você terminar de reconectar os cabos do lado A, a fiação deverá ficar como a seguir:
+
++
+image::../media/drw_ef50-ef80_2nd_de460c_cabling_hotadd_a-side_ieops-2998.svg[adicione o segundo compartimento de expansão e refaça o cabeamento das conexões do lado A]
+
+
+
+. No SANtricity System Manager, clique em menu:Hardware[Controllers and components].
++
+
+NOTE: Se você estiver adicionando um segundo SAS compartimento de expansão, neste ponto do procedimento, você terá apenas um caminho ativo para o compartimento do controlador.
+
+. Role para baixo, conforme necessário, para ver todos os compartimentos de unidades no novo sistema de storage. Se o novo compartimento de unidades não for exibido, resolva o problema de conexão.
+. Selecione o ícone *ESMs/IOMs* para o novo compartimento de unidades.
++
+image::../media/sam1130_ss_hardware_iom_icon.gif[Ícone ESMs/IOMs]
+
++
+A caixa de diálogo *Shelf Component Settings* é exibida.
+
+. Selecione a guia *ESMs/IOMs* na caixa de diálogo *Configurações do componente de prateleira*.
+. Selecione *Mostrar mais opções* e verifique o seguinte:
++
+** Se você estiver adicionando o primeiro compartimento de expansão SAS, IOM/ESM A e IOM/ESM B serão listados. Se você estiver adicionando um segundo compartimento de expansão SAS, IOM/ESM A será listado.
+** A taxa de dados atual é de 12 Gbps para um compartimento de unidades SAS-3.
+** As comunicações do cartão estão OK.
+
+
+. Se você estiver adicionando um segundo compartimento de expansão SAS, recableie as conexões do controlador para o compartimento do lado B e adicione as conexões entre os compartimentos do lado B, conforme descrito a seguir; caso contrário, vá para a etapa 10.
++
+.. Desconecte o cabo da porta IOMB 1 do compartimento 1 e reconecte-o à porta IOMB 1 do compartimento 2.
+.. Desconecte o cabo da porta IOMB 2 do compartimento 1 e reconecte-o à porta IOMB 2 do compartimento 2.
+.. Conecte a porta IOMB 1 do compartimento 1 à porta IOMB 3 do compartimento 2.
+.. Conecte a porta IOMB 2 do compartimento 1 à porta IOMB 4 do compartimento 2.
++
+Quando você terminar de recabelar as conexões do lado B, a fiação deverá ficar como a seguinte:
+
++
+image::../media/drw_ef50-ef80_2nd_de460c_cabling_hotadd_b-side_ieops-3007.svg[Adicione o segundo compartimento de expansão e refaça a fiação das conexões do lado B]
+
+
+
+. Se você estiver adicionando um segundo SAS compartimento de expansão, após concluir o recabeamento dos dois compartimentos, o cabeamento deverá ter a seguinte aparência:
++
+
+NOTE: Se você estiver adicionando a quente um terceiro compartimento a uma pilha de dois compartimentos, o cabeamento deve ser semelhante à ilustração na link:../install-hw-ef50-ef80/install-cable.html#step-3-cable-the-sas-shelf-connections["Opção 2: aba com três compartimentos DE460C"^] seção _Cable the SAS shelf connections_ para novas instalações de sistema.
+
++
+image::../media/drw_ef50-ef80_2nd_de460c_cabling_hotadd_final_ieops-3012.svg[Exemplo de cabeamento para dois compartimentos de expansão adicionados a quente]
+
+. Se ainda não estiver selecionado, selecione a guia *ESMs/IOMs* na caixa de diálogo *Configurações do componente de prateleira* e, em seguida, selecione *Mostrar mais opções*. Verifique se as comunicações do cartão são *SIM*.
++
+
+NOTE: O status ideal indica que o erro de perda de redundância associado ao novo compartimento de unidades foi resolvido e o sistema de armazenamento está estabilizado.
+
+
+
+--
 .Conete o compartimento de unidades para E2800 ou E5700
 --
 Você conecta o compartimento de unidades ao controlador A, confirma o status IOM e, em seguida, conecta o compartimento de unidades à controladora B.
@@ -268,8 +395,117 @@ NOTE: O status ideal indica que o erro de perda de redundância associado ao nov
 ====
 
 
-[[step-4-complete-hot-add]]
-== Passo 4: Complete hot add
+[[step-4-assign-drive-shelf-ids]]
+== Etapa 4: Atribua IDs aos compartimentos de expansão
+
+Ligue os compartimentos e, em seguida, atribua IDs exclusivos a cada compartimento.
+
+.Sobre esta tarefa
+* Atribuir um ID de compartimento exclusivo a cada compartimento garante que ele seja distinto dentro do seu sistema de storage.
++
+Um ID de compartimento válido é de 01 a 99.
+
++
+As prateleiras internas (storage), que estão integradas nos controladores, recebem um ID de prateleira fixo de 00.
+
+* Você deve reinicializar o compartimento (desligue o interruptor de energia em cada uma das fontes de alimentação do compartimento SAS, aguarde pelo menos 10 segundos e, em seguida, ligue novamente) para que o ID do compartimento entre em vigor.
+
+
+.Passos
+. Remova a tampa da extremidade esquerda para acessar o botão laranja de identificação do compartimento no painel frontal.
++
+image::../media/drw_shelf_id_sas_ieops-2187.svg[Alterar ID do compartimento SAS]
+
++
+[cols="20%,80%"]
+|===
+
+
+ a| 
+image::../media/icon_round_1.png[Chamada número 1]
+ a| 
+Tampa da extremidade da prateleira
+
+
+
+ a| 
+image::../media/icon_round_2.png[Chamada número 2]
+ a| 
+Placa frontal do compartimento
+
+
+
+ a| 
+image::../media/icon_round_3.png[[Chamada número 3]
+ a| 
+Botão de identificação da prateleira
+
+
+
+ a| 
+image::../media/icon_round_4.png[[Chamada número 4]
+ a| 
+Número de identificação da prateleira
+
+|===
+. Altere o primeiro número do ID do compartimento:
++
+.. Pressione e mantenha pressionado o botão de identificação do compartimento de expansão até que o primeiro número no visor digital pisque e, em seguida, solte o botão.
++
+O número pode demorar até 15 segundos para piscar. Isso ativa o modo de programação do ID do compartimento.
+
++
+
+NOTE: Se o indicador de identificação demorar mais de 15 segundos para piscar, pressione e segure o botão de identificação do compartimento novamente, certificando-se de pressioná-lo completamente.
+
+.. Pressione e solte o botão de identificação do compartimento para avançar o número até atingir o número desejado de 0 a 9.
++
+Cada ciclo de pressionamento e liberação pode durar apenas um segundo.
+
++
+O primeiro número continua piscando.
+
+
+
+. Altere o segundo número do ID do compartimento:
++
+.. Pressione e mantenha pressionado o botão até que o segundo número no visor digital pisque.
++
+Pode levar até três segundos para o número piscar.
+
++
+O primeiro número no visor digital para de piscar.
+
+.. Pressione e solte o botão de identificação do compartimento para avançar o número até atingir o número desejado de 0 a 9.
++
+O segundo número continua piscando.
+
+
+
+. Confirme o número desejado e saia do modo de programação pressionando e mantendo pressionado o botão de identificação do compartimento de expansão até que o segundo número pare de piscar.
++
+Pode levar até três segundos para o número parar de piscar.
+
++
+Os dois números no visor digital começam a piscar e o LED âmbar acende após cerca de cinco segundos, alertando você de que o ID do compartimento pendente ainda não entrou em vigor.
+
+. Desligue e ligue o compartimento por pelo menos 10 segundos para que o ID do compartimento entre em vigor.
++
+.. Desligue o interruptor de alimentação de cada uma das fontes de alimentação.
+.. Aguarde 10 segundos.
+.. Ligue o interruptor de alimentação em cada uma das fontes de alimentação para concluir o ciclo de energia.
++
+Quando a fonte de alimentação é ligada, o LED bicolor deve acender em verde.
+
+
+
+. Recoloque a tampa da extremidade esquerda.
+
+
+
+
+[[step-5-complete-the-hot-add]]
+== Etapa 5: conclua o adicionar sem desligamento
 
 Você conclui o hot add verificando se há erros e confirmando que o compartimento de unidade recém-adicionado usa o firmware mais recente.
 
@@ -293,4 +529,5 @@ O firmware IOM/ESM é atualizado automaticamente para a versão mais recente, a 
 
 
 
+.O que se segue?
 O procedimento de adição a quente está concluído. Pode retomar as operações normais.

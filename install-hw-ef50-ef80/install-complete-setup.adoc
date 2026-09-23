@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords:  
 summary: Após ligar seu sistema de storage EF50 ou EF80, você conclui a configuração do sistema conectando e configurando a porta de gerenciamento em cada controlador para gerenciamento fora de banda do sistema de storage, configurando seu sistema de storage e, em seguida, verificando se o protocolo do módulo de E/S do host está correto. 
 ---
-= Configuração completa do sistema de storage - EF50 e EF80
+= Configuração completa do sistema de storage para os sistemas EF50 e EF80
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

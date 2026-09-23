@@ -2,9 +2,9 @@
 permalink: config-linux/ib-assign-volume-nvme-task.html 
 sidebar: sidebar 
 keywords: express linux configuration, assign volume, assign namespace, 
-summary: Você deve atribuir um volume a um host ou cluster de host para que ele possa ser usado para operações de e/S. Essa atribuição concede a um host ou cluster de host acesso a um ou mais namespaces em um storage array. 
+summary: 'É necessário atribuir um volume (namespace) a um host ou cluster de host para que ele possa ser usado para operações de e/S. Essa atribuição concede a um host ou cluster de host acesso a um ou mais namespaces em um storage array.' 
 ---
-= Atribuir um volume usando o Gerenciador de sistema do SANtricity - Linux (NVMe over InfiniBand)
+= Atribua um volume NVMe over InfiniBand do storage E-Series usando o SANtricity System Manager
 :allow-uri-read: 
 :experimental: 
 :icons: font

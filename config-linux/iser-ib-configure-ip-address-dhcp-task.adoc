@@ -2,9 +2,9 @@
 permalink: config-linux/iser-ib-configure-ip-address-dhcp-task.html 
 sidebar: sidebar 
 keywords: IP address, DHCP, express linux configuration, software configuration, linux host, E2800, E5700, EF300, EF600, E-Series, eseries 
-summary: 'Use o protocolo DHCP (Dynamic Host Configuration Protocol) para fornecer endereços IP.' 
+summary: 'Use o Protocolo de Configuração Dinâmica de Hosts (DHCP) para fornecer endereços IP.' 
 ---
-= Configurar endereços IP usando DHCP em e-Series - Linux (iSER over InfiniBand)
+= Configure endereços IP usando DHCP para hosts Linux iSER E-Series
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

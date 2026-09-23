@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: E4000 replace 60-drive power canister, replacing E4000 power canister, E4000, E-Series, eseries 
 summary: Substitua uma gaveta de controladora de 60 unidades ou uma gaveta de unidade, que inclui dois coletores de energia para redundância de energia. 
 ---
-= Substitua o depósito de alimentação - E4000 (60 unidades)
+= Substitua o cartucho de energia em uma shelf de 60 unidades E4000
 :allow-uri-read: 
 :experimental: 
 :icons: font
@@ -56,13 +56,12 @@ O arquivo é salvo na pasta Downloads do seu navegador com o nome *support-data.
 
 . A partir do Gestor do sistema SANtricity, determine qual o recipiente de alimentação com falha.
 +
-.. Selecione *hardware*.
+.. Selecione o menu: Hardware [Controllers and components].
 .. Olhe para o ícone de energia image:../media/sam1130_ss_hardware_power_icon_maint-e2800.gif["Ícone de alimentação"]à direita da lista suspensa *Shelf* para determinar qual prateleira tem o recipiente de energia com falha.
 +
 Se um componente tiver falhado, este ícone fica vermelho.
 
-.. Quando encontrar a prateleira com um ícone vermelho, selecione *Controller & Components*.
-.. Selecione o recipiente de alimentação ou o ícone de alimentação vermelho.
+.. Ao encontrar a prateleira com um ícone vermelho, selecione o power canister ou o ícone vermelho de energia.
 .. No separador *fontes de alimentação*, observe os Estados dos coletores de alimentação para determinar qual o recipiente de alimentação deve ser substituído.
 +
 Um componente com um estado *Failed* deve ser substituído.

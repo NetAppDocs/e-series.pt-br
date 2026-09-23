@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: ef50, ef80, how to complete the controller replacement process 
 summary: Para concluir a substituição do controlador do seu sistema de storage EF50 ou EF80, certifique-se de que o firmware do sistema de storage esteja atualizado, verifique se os volumes foram devolvidos aos seus proprietários, colete os dados de suporte do sistema e devolva a peça com falha para NetApp. 
 ---
-= Conclua a substituição do controlador - EF50 e EF80
+= Conclua a substituição do controlador nos sistemas de storage EF50 e EF80
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

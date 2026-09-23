@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: failover, express linux configuration, software configuration, linux host, E2800, E5700, EF300, EF600, E-Series, eseries 
 summary: Configure o host para executar o failover. 
 ---
-= Configurar failover no host no e-Series - Linux (NVMe sobre RoCE)
+= Configure o failover em um host Linux usando NVMe sobre RoCE no storage E-Series
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
@@ -18,6 +18,60 @@ Consulte o  https://mysupport.netapp.com/matrix["Ferramenta de Matriz de interop
 
 .Sobre esta tarefa
 Para SLES 15, SLES 16, RHEL 9 e RHEL 10, o Native NVMe Multipathing está habilitado por padrão e nenhuma configuração adicional é necessária.
+
+
+
+[[configure-nvme-io-policy]]
+== Configurar política de E/S NVMe
+
+.Sobre esta tarefa
+O multipathing nativo do NVMe no Linux pode usar a  `numa` política de E/S padrão. Para configurações NVMe-over-Fabrics do E-Series/EF-Series, a política de E/S recomendada é  `round-robin`, que distribui a E/S uniformemente entre todos os caminhos disponíveis.
+
+.Passos
+. Verifique a política atual de E/S NVMe:
++
+[listing]
+----
+# cat /sys/module/nvme_core/parameters/iopolicy
+numa
+----
+. Defina a  `round-robin`política de E/S usando um dos seguintes métodos:
++
+** *Persistente (recomendado)* — Crie um arquivo de regras udev:
++
+.<code>/etc/udev/rules.d/71-nvme-io-policy.rules</code>
+[listing]
+----
+ACTION=="add|change", SUBSYSTEM=="nvme-subsystem", ATTR{iopolicy}="round-robin"
+----
++
+Em seguida, recarregue e aplique as regras:
+
++
+[listing]
+----
+udevadm control --reload
+udevadm trigger --subsystem-match=nvme-subsystem
+----
+** *Configuração global na inicialização* — Adicione o seguinte parâmetro do kernel à configuração do seu bootloader:
++
+[listing]
+----
+nvme_core.iopolicy=round-robin
+----
+** *Não persistente (online, sem interrupção de E/S)* — aplicar imediatamente sem reinicializar:
++
+[listing]
+----
+echo "round-robin" > /sys/class/nvme-subsystem/nvme-subsys0/iopolicy
+----
++
+
+NOTE: Essa configuração não persiste após reinicializações.
+
+
+
+
 
 .O que se segue?
 Com o Multipathing NVMe nativo ativado, link:nvme-roce-access-physical-targets-concept.html["Acesse os volumes NVMe de um E-Series alvo a partir do host"].

@@ -16,6 +16,67 @@ A tabela a seguir descreve os novos recursos nas versões mais recentes do SANtr
 
 
 
+[[new-features-in-version-12-10]]
+== Novidades na versão 12.10
+
+[cols="35h,~"]
+|===
+| Novo recurso | Descrição 
+
+
+ a| 
+Suporte à expansão SAS para sistemas de storage EF50 e EF80
+ a| 
+Os sistemas de storage EF50 e EF80 agora suportam expansão SAS, permitindo maior capacidade de storage e flexibilidade. Com a expansão SAS, você pode conectar gabinetes de storage adicionais aos sistemas EF50 e EF80, permitindo que você dimensione seu ambiente de storage conforme necessário. Esse recurso é particularmente benéfico para organizações que exigem soluções de storage de alta capacidade e desejam maximizar o investimento nas plataformas EF50 e EF80.
+
+
+
+ a| 
+Suporte a NVMe sobre TCP para storage E-Series
+ a| 
+Os sistemas de storage E-Series agora suportam NVMe sobre TCP, oferecendo uma opção adicional de interface de host para acesso ao storage de alto desempenho. O NVMe sobre TCP permite uma comunicação eficiente e de baixa latência entre o sistema de storage e os hosts conectados, aproveitando os benefícios do protocolo NVMe em redes TCP/IP padrão. Esse suporte aumenta a versatilidade dos sistemas E-Series, permitindo que as organizações os implementem em ambientes onde o NVMe sobre TCP é preferido ou exigido.
+
+
+
+ a| 
+Melhorias na interface de usuário para o SANtricity System Manager
+ a| 
+A interface de usuário do SANtricity System Manager recebeu melhorias adicionais para aprimorar a navegação, usabilidade e a experiência geral do usuário. Essas melhorias incluem layout e organização atualizados das tarefas de gerenciamento, além de fluxos de trabalho mais intuitivos para operações comuns de gerenciamento de storage.
+
+
+
+ a| 
+Suporte expandido para a plataforma E-Series para a nova interface de usuário do SANtricity System Manager
+ a| 
+A nova interface de usuário do SANtricity System Manager, que foi introduzida na versão 12.00 do SANtricity para os sistemas de storage EF80 e EF50, foi expandida para oferecer suporte a plataformas adicionais de storage E-Series. Isso significa que usuários que gerenciam uma gama mais ampla de sistemas de storage E-Series agora podem se beneficiar da interface modernizada e dos recursos aprimorados de usabilidade. O suporte expandido inclui compatibilidade com modelos selecionados de sistemas de storage E-Series, permitindo que você aproveite a navegação aprimorada e as tarefas de gerenciamento simplificadas em mais partes da sua infraestrutura de storage.
+
+
+
+ a| 
+Suporte para unidades de desempenho e capacidade mistos para sistemas EF80 e EF50
+ a| 
+Os sistemas de armazenamento EF80 e EF50 agora suportam unidades SSD NVMe de Performance e de Capacity no mesmo array de storage, desde que haja um número mínimo de unidades (6 para Performance, 12 para Capacity). As unidades de Performance e de Capacity devem permanecer em pools e grupos de volume separados.
+
+
+
+ a| 
+Aumento do limite de caracteres para nomes de volumes padrão e finos
+ a| 
+O limite de caracteres para nomes de volumes padrão e finos foi aumentado de 30 para 60 caracteres.
+
+
+NOTE: Não há suporte para downgrades para a versão 11.90 ou anterior do software SANtricity OS caso existam volumes padrão ou thin com nomes maiores que 30 caracteres. Se você pretende fazer o downgrade para a versão 11.90 ou anterior do software SANtricity OS, altere os nomes de quaisquer volumes padrão ou thin que possuam nomes maiores que 30 caracteres antes de efetuar o downgrade.
+
+
+
+ a| 
+O tempo limite mínimo de inatividade para a interface de usuário do SANtricity System Manager agora é de 10 minutos.
+ a| 
+O limite de tempo de inatividade para a interface de usuário do SANtricity System Manager foi atualizado para um mínimo de 10 minutos. Anteriormente, o limite mínimo de tempo de inatividade era de 15 minutos. Essa alteração contribui para aprimorar a segurança, garantindo que a interface de usuário faça logout automaticamente após 10 minutos de inatividade.
+
+|===
+
+
 [[new-features-in-version-12-0r1]]
 == Novos recursos na versão 12.0R1
 

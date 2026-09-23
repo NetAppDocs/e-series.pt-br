@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: EF300, EF600, EF300C, EF600C, installation, create account, register hardware 
 summary: Para instalar um EF300 ou EF600, crie uma conta e registe o seu hardware. 
 ---
-= Prepare-se para instalar - EF300, EF600, EF300C e EF600C
+= Prepare-se para instalar seu sistema de storage EF300 ou EF600
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
@@ -21,7 +21,16 @@ Se você estiver fazendo o cabeamento do EF300 para expansão SAS, consulte as s
 
 
 .Passos
-. Crie uma conta e Registre seu hardware em http://mysupport.netapp.com/["Suporte à NetApp"^].
+. Registre seu sistema:
++
+
+NOTE: Você pode registrar seu sistema agora ou mais tarde. Mais tarde, na inicialização do sistema, você será solicitado a registrar seu sistema.
+
++
+.. Crie uma conta em  http://mysupport.netapp.com/["Suporte à NetApp"^] se você ainda não tiver uma.
+.. Registre seu sistema seguindo as instruções no artigo da Base de Conhecimento NetApp https://kb.netapp.com/nss/System_Registration/How_to_register_a_new_system_on_the_NetApp_Support_Site["Como registrar um novo sistema"^].
+
+
 . Certifique-se de que os itens a seguir estão na caixa que você recebeu.
 +
 |===
@@ -41,7 +50,7 @@ Hardware de montagem em rack
 
 |===
 +
-A tabela a seguir identifica os tipos de cabos que você pode receber. Se receber um cabo não listado na tabela, consulte https://hwu.netapp.com/["Hardware Universe"] para localizar o cabo e identificar a respetiva utilização.
+A tabela a seguir identifica os tipos de cabos que você pode receber. Se você receber um cabo que não esteja listado na tabela, consulte link:https://hwu.netapp.com["NetApp Hardware Universe"^] para localizar o cabo e identificar sua utilização.
 
 +
 |===

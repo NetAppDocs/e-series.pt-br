@@ -29,6 +29,7 @@ O método Linux Express inclui as seguintes etapas.
 ** SRP em Infiniband
 ** NVMe em Infiniband
 ** NVMe em RoCE
+** NVMe sobre TCP
 ** NVMe em Fibre Channel
 
 

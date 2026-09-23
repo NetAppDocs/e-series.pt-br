@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords:  
 summary: Prepare-se para instalar seu sistema de storage EF50 ou EF80 organizando o local, entendendo as precauções de içamento para o seu sistema de storage, desembalando as caixas e comparando o conteúdo com o packing slip, e registrando o sistema de storage para acessar os benefícios de suporte. 
 ---
-= Prepare-se para a instalação - EF50 e EF80
+= Prepare-se para instalar um sistema de storage EF50 ou EF80
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
@@ -21,10 +21,10 @@ Prepare-se para instalar seu sistema de storage EF50 ou EF80 organizando o local
 Certifique-se de que o local e o armário ou rack que você planeja usar atendam às especificações do seu sistema de storage.
 
 .Passos
-. Use  https://hwu.netapp.com["NetApp Hardware Universe"^] para confirmar se o seu local atende aos requisitos ambientais e elétricos para o seu sistema de storage.
+. Utilize link:https://hwu.netapp.com["NetApp Hardware Universe"^] para confirmar se o seu local atende aos requisitos ambientais e elétricos para o seu sistema de storage.
 . Certifique-se de ter espaço adequado em gabinete ou rack para o seu sistema de storage e quaisquer switches.
 +
-Caso necessário, consulte  https://hwu.netapp.com["NetApp Hardware Universe"^] para as dimensões exatas do seu sistema de storage.
+Caso necessário, consulte link:https://hwu.netapp.com["NetApp Hardware Universe"^] para as dimensões exatas do seu sistema de storage.
 
 +
 ** 2U para um sistema de storage
@@ -81,7 +81,7 @@ NOTE: Se houver alguma discrepância, anote-a para providências futuras.
 Os seguintes itens são alguns dos conteúdos que você pode ver nas caixas.
 
 +
-Caso necessário, veja  https://hwu.netapp.com/["NetApp Hardware Universe"^] outros cabos compatíveis e identifique seu uso.
+Caso necessário, veja link:https://hwu.netapp.com["NetApp Hardware Universe"^] para outros cabos compatíveis e identifique seu uso.
 
 +
 [cols="9,9,5"]
@@ -114,9 +114,12 @@ Caso necessário, veja  https://hwu.netapp.com/["NetApp Hardware Universe"^] out
 
 Depois de garantir que seu site atende às especificações do seu sistema de storage e de verificar se você possui todas as peças que encomendou, você deve registrar seu sistema de storage.
 
-. Crie uma conta e Registre seu hardware em http://mysupport.netapp.com/["Suporte à NetApp"^].
+
+NOTE: Você pode registrar seu sistema de storage agora ou mais tarde. Mais tarde, na inicialização do sistema, você será solicitado a registrar seu sistema.
+
+. Anote o número de série (SN) de cada controlador.
 +
-O processo de registro requer o Número de Série (SN) de cada controlador. Você pode encontrar o número de série nos seguintes locais:
+Você pode encontrar o número de série nos seguintes locais:
 
 +
 ** Em cada controlador
@@ -127,6 +130,8 @@ image::../media/drw_ef50-ef80_sn_label_ieops-2689.svg[Exemplo de etiqueta com n�
 
 
 
+. Crie uma conta em  http://mysupport.netapp.com/["Suporte à NetApp"^] se você ainda não tiver uma.
+. Registre seu sistema seguindo as instruções no artigo da Base de Conhecimento NetApp https://kb.netapp.com/nss/System_Registration/How_to_register_a_new_system_on_the_NetApp_Support_Site["Como registrar um novo sistema"^].
 
 
 .O que se segue?

@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: replace controller, replace canister, EF300, EF600, EF300C, EF600C 
 summary: Substitua um único controlador em um compartimento de controladora EF300 ou EF600. 
 ---
-= Substitua o controlador - EF300 e EF600
+= Substitua o controlador em um array EF300 ou EF600
 :allow-uri-read: 
 :experimental: 
 :icons: font
@@ -69,7 +69,7 @@ Guarde os materiais de embalagem a utilizar ao enviar o recipiente do controlado
 Quando um controlador tem uma falha e precisa ser substituído, o número de peça de substituição é exibido na área Detalhes do Recovery Guru. Se você precisar encontrar esse número manualmente, siga estas etapas:
 
 +
-.. Selecione *hardware*.
+.. Selecione o menu: Hardware [Controllers and components].
 .. Localize o compartimento do controlador, que está marcado com o ícone do controlador image:../media/sam1130_ss_hardware_controller_icon_maint-ef600.gif[""].
 .. Clique no ícone do controlador.
 .. Selecione o controlador e clique em *seguinte*.
@@ -100,8 +100,7 @@ O arquivo é salvo na pasta Downloads do seu navegador com o nome *configuration
 
 . Se o controlador ainda não estiver offline, coloque-o offline agora usando o Gerenciador de sistema do SANtricity.
 +
-.. Selecione *hardware*.
-.. Se o gráfico mostrar as unidades, selecione *Mostrar parte traseira da prateleira* para mostrar os controladores.
+.. Selecione o menu: Hardware [Controllers and components].
 .. Selecione o controlador que pretende colocar offline.
 .. No menu de contexto, selecione *colocar offline* e confirme que deseja executar a operação.
 

@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: express linux configuration, software configuration, linux host, 
 summary: Antes de usar o volume, verifique se o host pode gravar dados no volume e lê-los de volta. 
 ---
-= Verificar o acesso ao storage no host no e-Series - Linux (FC)
+= Verifique o acesso ao storage FC em um host Linux no storage E-Series
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
