@@ -9111,7 +9111,6 @@
   <block id="dce708315880727f8ba7e84bab86b168" category="paragraph">Este procedimento se aplica às prateleiras de unidades IOM12, IOM12B e IOM12C.</block>
   <block id="3f457ff9c17714d64ba75fd9d6d618f2" category="admonition">Os módulos IOM12C são suportados somente no SANtricity OS 11.90R3 em diante. Certifique-se de que o firmware do controlador foi atualizado antes de instalar ou atualizar para um IOM12C.</block>
   <block id="8d93e2013316d1241b304432f0103be5" category="admonition">Esse procedimento é para hot-swaps ou substituições de IOM de gaveta semelhantes. Isto significa que só pode substituir um módulo IOM12 por outro módulo IOM12 ou substituir um módulo IOM12C por outro módulo IOM12C. (Sua prateleira pode ter dois módulos IOM12 ou ter dois módulos IOM12C.)</block>
-  <block id="e0f75caa67759a6c5e34cbad6ae84d57" category="admonition">Os módulos IOM12C só são suportados no SANtricity os 11.70.2 em diante. Certifique-se de que o firmware do controlador foi atualizado antes de instalar ou atualizar para um IOM12C.</block>
   <block id="bbfd15448c83d50ee0a4a62cc152d856" category="paragraph"><block ref="bbfd15448c83d50ee0a4a62cc152d856" category="inline-image-macro-rx" type="image"></block></block>
   <block id="f7178ecd56d859f9f7e4878779a236ea" category="paragraph"><block ref="f7178ecd56d859f9f7e4878779a236ea" category="inline-image-macro-rx" type="image"></block></block>
   <block id="949ca69f081f10e2fc1938e0e24759c8" category="paragraph"><block ref="949ca69f081f10e2fc1938e0e24759c8" category="inline-image-macro-rx" type="image"></block></block>
@@ -10796,7 +10795,6 @@
   <block id="63caec46d73c7fc7cfb31576f03448b3" category="list-text">Adicione o adaptador de software NVMe over TCP.</block>
   <block id="38e873b40f9f1fadf5b58bb3e7881a0a" category="paragraph">Para obter mais informações, consulte <block ref="83ec1ea21d3b4612b4378c8e0322370e" category="inline-link-macro-rx"></block>.</block>
   <block id="35364a0d878a8e2835e056f68bbe94ca" category="list-text">Adicionar controladores NVMe para NVMe sobre TCP.</block>
-  <block id="85711dc46edb07fe18d562b7bd2afd62" category="paragraph">Para obter mais informações, consulte <block ref="138a9b696f8791e3b3cb78426f306288" category="inline-link-macro-rx"></block>.</block>
   <block id="6ffa0472c7a35ad33e212ebdffd65a85" category="paragraph">Neste exemplo, o endereço IP do destino NVMe over TCP é 192.29.11.111.</block>
   <block id="6ecdef344e2ba5fc1740960e5ecc14b7" category="list-text">Emita um comando <block ref="bb8dcb7aca9e5a9c6d0064e07e54900b" prefix=" " category="inline-code"></block> a partir do endereço iniciador de cada host (o endereço IP da porta Ethernet do host usada para NVMe over TCP) para cada porta NVMe over TCP do controlador. Execute esta ação a partir de cada servidor host na configuração, alterando os endereços IP conforme necessário.</block>
   <block id="ef85308abea9690943da10064f1e07e0" category="list-text">Caso a descoberta na etapa 5 não tenha sido bem-sucedida, retorne ao procedimento de configuração de rede NVMe over TCP no lado do host para concluir a adição dos controladores de destino.</block>
@@ -11179,4 +11177,5 @@
   <block id="1994aa7db9e9fad5a648e62ba534a9a8" category="sidebar">Planilha de NVMe sobre TCP para Linux</block>
   <block id="13b5a4ce04bdd18c6dbe66e0aff43c56" category="sidebar">Executar tarefas específicas de NVMe sobre FC</block>
   <block id="12100775087ee0a5c3fb85e5dbaf178d" category="sidebar">Executar tarefas específicas de NVMe sobre TCP</block>
+  <block id="7baca5088011490565ae0a1cf6125785" category="paragraph">Para obter mais informações, consulte <block ref="540ffd17fd5ec0a460640b11d1bd0a3b" category="inline-link-macro-rx"></block>.</block>
 </blocks>
