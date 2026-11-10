@@ -16,6 +16,13 @@ A tabela a seguir descreve os novos recursos nas versões mais recentes do SANtr
 
 
 
+[[new-features-in-version-12-10r1]]
+== Novos recursos na versão 12.10R1
+
+Esta versão contém apenas pequenas alterações e nenhum novo recurso. Para mais informações sobre as alterações nesta versão, consulte o E-Series SANtricity OS 12.10R1 README.
+
+
+
 [[new-features-in-version-12-10]]
 == Novidades na versão 12.10
 
